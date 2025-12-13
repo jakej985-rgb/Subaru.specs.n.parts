@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:SubaruParts.App.ViewModels"
+             x:Class="SubaruParts.App.Pages.EnginePickerPage"
+             Title="Select Engine"
+             BackgroundColor="{StaticResource PageBackgroundColor}">
+
+    <CollectionView ItemsSource="{Binding Engines}"
+                    SelectionMode="Single"
+                    SelectionChangedCommand="{Binding EngineSelectedCommand}"
+                    SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Style="{StaticResource CardStyle}">
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Code}"
+                               FontSize="24"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource PrimaryTextColor}"/>
+                        <Label Text="{Binding YearRange}"
+                               FontSize="14"
+                               TextColor="{StaticResource SecondaryTextColor}"/>
+                        <Label Text="{Binding Notes}"
+                               FontSize="12"
+                               TextColor="{StaticResource SecondaryTextColor}"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
