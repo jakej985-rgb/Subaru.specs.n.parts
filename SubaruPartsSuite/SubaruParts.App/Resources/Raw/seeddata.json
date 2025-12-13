@@ -1,0 +1,172 @@
+{
+  "Engines": [
+    {
+      "Id": 1,
+      "Code": "EJ22",
+      "Phase": "1",
+      "YearRange": "1990-1998",
+      "Notes": "Legacy, Impreza naturally aspirated"
+    },
+    {
+      "Id": 2,
+      "Code": "EJ25D",
+      "Phase": "1",
+      "YearRange": "1996-1999",
+      "Notes": "Legacy GT, Outback, Forester DOHC"
+    }
+  ],
+  "Parts": [
+    {
+      "Id": 1,
+      "Name": "Oil Filter",
+      "Category": "Maintenance",
+      "OemNumber": "15208AA12A",
+      "Notes": "Standard black filter"
+    },
+    {
+      "Id": 2,
+      "Name": "Air Filter",
+      "Category": "Maintenance",
+      "OemNumber": "16546AA020",
+      "Notes": "Panel filter"
+    },
+    {
+      "Id": 3,
+      "Name": "Spark Plug",
+      "Category": "Ignition",
+      "OemNumber": "22401AA310",
+      "Notes": "NGK BKR6E-11"
+    },
+    {
+      "Id": 4,
+      "Name": "Timing Belt",
+      "Category": "Engine",
+      "OemNumber": "13028AA072",
+      "Notes": "Check tensioner as well"
+    },
+    {
+      "Id": 5,
+      "Name": "Water Pump",
+      "Category": "Cooling",
+      "OemNumber": "21111AA007",
+      "Notes": "Cast impeller"
+    },
+    {
+      "Id": 6,
+      "Name": "Thermostat",
+      "Category": "Cooling",
+      "OemNumber": "21200AA072",
+      "Notes": "170 degree F"
+    },
+    {
+      "Id": 7,
+      "Name": "Fuel Filter",
+      "Category": "Fuel",
+      "OemNumber": "42072AA011",
+      "Notes": "Under hood metal canister"
+    },
+    {
+      "Id": 8,
+      "Name": "PCV Valve",
+      "Category": "Emissions",
+      "OemNumber": "11810AA000",
+      "Notes": "Screw in type"
+    },
+    {
+      "Id": 9,
+      "Name": "Front Brake Pads",
+      "Category": "Brakes",
+      "OemNumber": "26296AA040",
+      "Notes": "Semi-metallic"
+    },
+    {
+      "Id": 10,
+      "Name": "Rear Brake Shoes",
+      "Category": "Brakes",
+      "OemNumber": "26298AA010",
+      "Notes": "Drum brakes"
+    }
+  ],
+  "CrossRefs": [
+    {
+      "Id": 1,
+      "PartId": 1,
+      "Brand": "Wix",
+      "AftermarketNumber": "51365",
+      "Notes": "High quality filter"
+    },
+    {
+      "Id": 2,
+      "PartId": 1,
+      "Brand": "Fram",
+      "AftermarketNumber": "PH3593A",
+      "Notes": "Basic filter"
+    },
+    {
+      "Id": 3,
+      "PartId": 3,
+      "Brand": "NGK",
+      "AftermarketNumber": "BKR6E-11",
+      "Notes": "OEM Manufacturer"
+    }
+  ],
+  "Specs": [
+    {
+      "Id": 1,
+      "ScopeType": "Part",
+      "ScopeId": 3,
+      "Key": "Gap",
+      "Value": "0.044",
+      "Unit": "inches",
+      "Notes": "Preset usually"
+    },
+    {
+      "Id": 2,
+      "ScopeType": "Part",
+      "ScopeId": 6,
+      "Key": "Opening Temp",
+      "Value": "78",
+      "Unit": "C",
+      "Notes": "Start to open"
+    },
+    {
+      "Id": 3,
+      "ScopeType": "Part",
+      "ScopeId": 1,
+      "Key": "Torque",
+      "Value": "12",
+      "Unit": "Nm",
+      "Notes": "Hand tight + 1/4 turn"
+    }
+  ],
+  "Supersessions": [
+    {
+      "Id": 1,
+      "OldOemNumber": "15208AA100",
+      "NewOemNumber": "15208AA12A",
+      "Notes": "Updated to blue filter then back to black"
+    }
+  ],
+  "Fitments": [
+    { "Id": 1, "EngineId": 1, "PartId": 1, "Notes": "" },
+    { "Id": 2, "EngineId": 2, "PartId": 1, "Notes": "" },
+    { "Id": 3, "EngineId": 1, "PartId": 2, "Notes": "" },
+    { "Id": 4, "EngineId": 2, "PartId": 2, "Notes": "" },
+    { "Id": 5, "EngineId": 1, "PartId": 3, "Notes": "" },
+    { "Id": 6, "EngineId": 2, "PartId": 3, "Notes": "" },
+    { "Id": 7, "EngineId": 1, "PartId": 4, "Notes": "" },
+    { "Id": 8, "EngineId": 2, "PartId": 4, "Notes": "DOHC belt differs" },
+    { "Id": 9, "EngineId": 1, "PartId": 5, "Notes": "" },
+    { "Id": 10, "EngineId": 2, "PartId": 5, "Notes": "" },
+    { "Id": 11, "EngineId": 1, "PartId": 6, "Notes": "" },
+    { "Id": 12, "EngineId": 2, "PartId": 6, "Notes": "" },
+    { "Id": 13, "EngineId": 1, "PartId": 7, "Notes": "" },
+    { "Id": 14, "EngineId": 2, "PartId": 7, "Notes": "" },
+    { "Id": 15, "EngineId": 1, "PartId": 8, "Notes": "" },
+    { "Id": 16, "EngineId": 2, "PartId": 8, "Notes": "" },
+    { "Id": 17, "EngineId": 1, "PartId": 9, "Notes": "" },
+    { "Id": 18, "EngineId": 2, "PartId": 9, "Notes": "" },
+    { "Id": 19, "EngineId": 1, "PartId": 10, "Notes": "" },
+    { "Id": 20, "EngineId": 2, "PartId": 10, "Notes": "" }
+  ]
+}
