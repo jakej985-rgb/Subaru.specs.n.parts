@@ -1,0 +1,51 @@
+name: Build Android APK (.NET 9)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build-apk:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 9 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+          cache: true
+
+      - name: Install MAUI Android workload
+        run: dotnet workload install maui-android
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Publish APK (net9.0-android)
+        run: >
+          dotnet publish SubaruPartsSuite/SubaruParts.App/SubaruParts.App.csproj
+          -c Release
+          -f net9.0-android
+          -p:AndroidPackageFormats=apk
+
+      - name: Collect APK
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path dist | Out-Null
+          $apk = Get-ChildItem -Recurse -Filter *.apk SubaruPartsSuite/SubaruParts.App/bin/Release/net9.0-android/publish |
+                Sort-Object LastWriteTime -Descending |
+                Select-Object -First 1
+          if (-not $apk) { throw "No APK found." }
+          Copy-Item $apk.FullName "dist/$($apk.Name)" -Force
+          Write-Host "APK: dist/$($apk.Name)"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk
+          path: dist/*.apk
