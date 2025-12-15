@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SubaruParts.App.Navigation;
+namespace SubaruParts.Navigation;
 
 public sealed record NavNode(
     string Route,

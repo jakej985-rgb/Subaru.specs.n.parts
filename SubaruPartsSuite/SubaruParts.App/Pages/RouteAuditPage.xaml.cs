@@ -1,6 +1,6 @@
 using System.Linq;
 using Microsoft.Maui.Controls;
-using SubaruParts.App.Navigation;
+using SubaruParts.Navigation;
 
 namespace SubaruParts.App.Pages;
 

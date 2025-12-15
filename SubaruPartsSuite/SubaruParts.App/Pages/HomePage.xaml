@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:SubaruParts.App.ViewModels"
              xmlns:models="clr-namespace:SubaruParts.App.Models"
-             xmlns:nav="clr-namespace:SubaruParts.App.Navigation"
+             xmlns:nav="clr-namespace:SubaruParts.Navigation;assembly=SubaruParts.Navigation"
              x:Class="SubaruParts.App.Pages.HomePage"
              Title="Home"
              BackgroundColor="{StaticResource OemBg}"
