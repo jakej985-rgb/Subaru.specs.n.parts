@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:SubaruParts.App.ViewModels"
-             xmlns:models="clr-namespace:SubaruParts.App.Models"
-             xmlns:nav="clr-namespace:SubaruParts.App.Navigation"
+             xmlns:models="clr-namespace:SubaruParts.Navigation.Models;assembly=SubaruParts.Navigation"
+             xmlns:nav="clr-namespace:SubaruParts.Navigation;assembly=SubaruParts.Navigation"
              x:Class="SubaruParts.App.Pages.HomePage"
              Title="Home"
              BackgroundColor="{StaticResource OemBg}"
@@ -126,14 +126,14 @@
             <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
                 <Button Text="Settings"
                         Command="{Binding NavCommand}"
-                        CommandParameter="{x:Static nav:Routes.Settings}"
+                        CommandParameter="{x:Static nav:AppRoutes.Settings}"
                         BackgroundColor="Transparent"
                         TextColor="{StaticResource OemMuted}"
                         FontSize="14"/>
 
                 <Button Text="Route Audit"
                         Command="{Binding NavCommand}"
-                        CommandParameter="{x:Static nav:Routes.RouteAudit}"
+                        CommandParameter="{x:Static nav:AppRoutes.RouteAudit}"
                         BackgroundColor="Transparent"
                         TextColor="{StaticResource OemMuted}"
                         FontSize="12"/>

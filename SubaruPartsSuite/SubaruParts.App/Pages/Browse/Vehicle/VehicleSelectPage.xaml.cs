@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.Maui.Controls;
+using SubaruParts.Navigation;
 using SubaruParts.App.Navigation;
 
 namespace SubaruParts.App.Pages.Browse.Vehicle;

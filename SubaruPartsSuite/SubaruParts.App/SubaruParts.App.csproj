@@ -49,6 +49,7 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\SubaruParts.Domain\SubaruParts.Domain.csproj" />
 	  <ProjectReference Include="..\SubaruParts.Data\SubaruParts.Data.csproj" />
+	  <ProjectReference Include="..\SubaruParts.Navigation\SubaruParts.Navigation.csproj" />
 	</ItemGroup>
 
 </Project>

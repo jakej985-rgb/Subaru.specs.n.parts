@@ -1,5 +1,5 @@
 using Microsoft.Maui.Controls;
-using SubaruParts.App.Navigation;
+using SubaruParts.Navigation;
 using SubaruParts.App.Pages;
 using SubaruParts.App.Pages.Browse;
 using SubaruParts.App.Pages.Browse.Vehicle;
@@ -10,6 +10,10 @@ using SubaruParts.App.Pages.CompatibilityTools;
 using SubaruParts.App.Pages.MyStuff;
 using SubaruParts.App.Pages.Contribute;
 using SubaruParts.App.Pages.Settings;
+using SubaruParts.App.Pages.Parts;
+using SubaruParts.App.Pages.Specs;
+using SubaruParts.App.Pages.Tools;
+using SubaruParts.App.Pages.Vehicle;
 
 namespace SubaruParts.App
 {
@@ -23,21 +27,43 @@ namespace SubaruParts.App
 
         private void RegisterRoutes()
         {
-            // Placeholder routes for unimplemented pages
-            Routing.RegisterRoute(Routes.BrowseYmm, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage));
-            Routing.RegisterRoute(Routes.VehiclePicker, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage));
-            Routing.RegisterRoute(Routes.PartsXref, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage));
-            Routing.RegisterRoute(Routes.PartsOem, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage));
+            // NEW / UPDATED ROUTES for Blank Scaffold Pages
 
-            // Missing top-level routes that might be navigated to (e.g. from Home Tiles if they are not just Shell Tabs)
-            // Note: If these are Tabs in Shell, they are auto-registered. But if we use GoToAsync("//parts") and it's a Tab, it works.
-            // However, the reviewer mentioned these might be missing if they are not top-level Tabs or if we want to push them.
-            // Shell handles "//route" for FlyoutItems automatically.
-            // But let's check AppShell.xaml to see if they are registered as FlyoutItems.
-            // PartLookup is a FlyoutItem. SpecsLibrary is a FlyoutItem. CompatTools is a FlyoutItem.
-            // So they SHOULD work with GoToAsync("//part-lookup") etc.
-            // However, to be safe and satisfy the reviewer who thinks they might be missing or if we want to use relative routing:
-            // Routing.RegisterRoute(Routes.PartLookup, typeof(PartLookupPage)); // This is likely auto-handled by ShellContent
+            // Browse
+            Routing.RegisterRoute(Routes.BrowseYmm, typeof(BrowseYmmPage));
+            Routing.RegisterRoute(Routes.BrowseEngine, typeof(BrowseEnginePage)); // Was EngineBrowsePage
+
+            // Parts
+            Routing.RegisterRoute("parts", typeof(PartsHomePage));
+            Routing.RegisterRoute(Routes.PartsXref, typeof(CrossReferencePage));
+            Routing.RegisterRoute(Routes.PartsOem, typeof(OemNumberPage));
+
+            // Specs
+            Routing.RegisterRoute("specs", typeof(SpecsHomePage));
+            Routing.RegisterRoute("specs/fluids", typeof(FluidsPage));
+            Routing.RegisterRoute("specs/torque", typeof(TorquePage));
+            Routing.RegisterRoute("specs/filters", typeof(FiltersPage));
+
+            // Compat
+            Routing.RegisterRoute("compat", typeof(ToolsHomePage));
+            Routing.RegisterRoute("compat/ecu", typeof(EcuHarnessPage));
+            Routing.RegisterRoute("compat/trans", typeof(TransmissionSwapPage));
+            Routing.RegisterRoute("compat/na2t", typeof(NaToTurboPage));
+
+            // Vehicle
+            Routing.RegisterRoute(Routes.VehiclePicker, typeof(VehiclePickerPage));
+
+            // Debug
+            Routing.RegisterRoute("debug/route-audit", typeof(RouteAuditPage));
+
+            // ----------------------------------------------------------------
+            // Existing routes (kept to avoid breaking other flows)
+
+            // Placeholder routes for unimplemented pages - Removing conflicts above
+            // Routing.RegisterRoute(Routes.BrowseYmm, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage)); // Replaced
+            // Routing.RegisterRoute(Routes.VehiclePicker, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage)); // Replaced
+            // Routing.RegisterRoute(Routes.PartsXref, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage)); // Replaced
+            // Routing.RegisterRoute(Routes.PartsOem, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage)); // Replaced
 
             // Browse / Vehicle
             Routing.RegisterRoute(Routes.BrowseVehicle, typeof(VehicleBrowsePage));
@@ -45,7 +71,7 @@ namespace SubaruParts.App
             Routing.RegisterRoute(Routes.VehiclePage, typeof(VehiclePage));
 
             // Browse / Engine
-            Routing.RegisterRoute(Routes.BrowseEngine, typeof(EngineBrowsePage));
+            // Routing.RegisterRoute(Routes.BrowseEngine, typeof(EngineBrowsePage)); // Replaced above
             Routing.RegisterRoute(Routes.BrowseEngineSelect, typeof(EngineSelectPage));
             Routing.RegisterRoute(Routes.EnginePage, typeof(EnginePage));
 
