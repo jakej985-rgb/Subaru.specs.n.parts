@@ -18,13 +18,12 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "9.0.x"
-          cache: true
 
       - name: Install MAUI Android workload
         run: dotnet workload install maui-android
 
       - name: Restore
-        run: dotnet restore
+        run: dotnet restore SubaruPartsSuite/SubaruParts.App/SubaruParts.App.csproj
 
       - name: Publish APK (net9.0-android)
         run: >
