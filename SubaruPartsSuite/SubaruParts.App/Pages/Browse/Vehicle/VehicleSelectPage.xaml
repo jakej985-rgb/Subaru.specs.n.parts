@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SubaruParts.App.Pages.Browse.Vehicle.VehicleSelectPage"
+             Title="Select Vehicle">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <Label Text="Vehicle Selection" FontSize="Title" FontAttributes="Bold"/>
+            <Label Text="This is a dummy selection page." />
+
+            <Picker x:Name="YearPicker" Title="Year">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1998</x:String>
+                        <x:String>2005</x:String>
+                        <x:String>2013</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                <Picker.SelectedIndex>1</Picker.SelectedIndex>
+            </Picker>
+
+            <Picker x:Name="MakePicker" Title="Make">
+                 <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Subaru</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            </Picker>
+
+            <Picker x:Name="ModelPicker" Title="Model">
+                 <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Impreza</x:String>
+                        <x:String>Legacy</x:String>
+                        <x:String>Forester</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            </Picker>
+
+             <Picker x:Name="TrimPicker" Title="Trim">
+                 <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>2.5RS</x:String>
+                        <x:String>WRX</x:String>
+                        <x:String>STI</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            </Picker>
+
+            <Picker x:Name="EnginePicker" Title="Engine Code">
+                 <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>EJ251</x:String>
+                        <x:String>EJ205</x:String>
+                        <x:String>EJ257</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            </Picker>
+
+            <Picker x:Name="TransPicker" Title="Transmission">
+                 <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>5MT</x:String>
+                        <x:String>4EAT</x:String>
+                        <x:String>6MT</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            </Picker>
+
+            <Button Text="Go to Vehicle Page" Clicked="OnGoClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

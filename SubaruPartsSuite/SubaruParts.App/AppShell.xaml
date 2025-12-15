@@ -3,12 +3,52 @@
     x:Class="SubaruParts.App.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:pages="clr-namespace:SubaruParts.App.Pages"
+    xmlns:local="clr-namespace:SubaruParts.App.Pages"
+    xmlns:browse="clr-namespace:SubaruParts.App.Pages.Browse"
+    xmlns:lookup="clr-namespace:SubaruParts.App.Pages.PartLookup"
+    xmlns:specs="clr-namespace:SubaruParts.App.Pages.SpecsLibrary"
+    xmlns:compat="clr-namespace:SubaruParts.App.Pages.CompatibilityTools"
+    xmlns:mystuff="clr-namespace:SubaruParts.App.Pages.MyStuff"
+    xmlns:contribute="clr-namespace:SubaruParts.App.Pages.Contribute"
+    xmlns:settings="clr-namespace:SubaruParts.App.Pages.Settings"
+    xmlns:nav="clr-namespace:SubaruParts.App.Navigation"
     Title="Subaru Parts">
 
-    <ShellContent
-        Title="Engines"
-        ContentTemplate="{DataTemplate pages:EnginePickerPage}"
-        Route="engines" />
+    <!-- Flyout Items -->
+    <FlyoutItem Title="Home" Route="{x:Static nav:Routes.Home}">
+        <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Browse" Route="{x:Static nav:Routes.Browse}">
+        <ShellContent ContentTemplate="{DataTemplate browse:BrowseHubPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Part Lookup" Route="{x:Static nav:Routes.PartLookup}">
+        <ShellContent ContentTemplate="{DataTemplate lookup:PartLookupPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Specs Library" Route="{x:Static nav:Routes.SpecsLibrary}">
+        <ShellContent ContentTemplate="{DataTemplate specs:SpecsLibraryPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Compatibility Tools" Route="{x:Static nav:Routes.CompatTools}">
+        <ShellContent ContentTemplate="{DataTemplate compat:CompatibilityToolsPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="My Stuff" Route="{x:Static nav:Routes.MyStuff}">
+        <ShellContent ContentTemplate="{DataTemplate mystuff:MyStuffPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Contribute" Route="{x:Static nav:Routes.Contribute}">
+        <ShellContent ContentTemplate="{DataTemplate contribute:ContributePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings" Route="{x:Static nav:Routes.Settings}">
+        <ShellContent ContentTemplate="{DataTemplate settings:SettingsPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Route Audit (Debug)" Route="{x:Static nav:Routes.RouteAudit}">
+        <ShellContent ContentTemplate="{DataTemplate local:RouteAuditPage}" />
+    </FlyoutItem>
 
 </Shell>
