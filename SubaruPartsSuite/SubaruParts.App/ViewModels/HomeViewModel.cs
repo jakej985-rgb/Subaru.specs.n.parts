@@ -79,31 +79,31 @@ public partial class HomeViewModel : ObservableObject
         {
             case HomeSegment.Browse:
                 SegmentTitle = "Browse Catalog";
-                AddTile("Year/Make/Model", "Search by vehicle", "search.png", Routes.BrowseYmm);
-                AddTile("By Engine", "Search by engine family", "engine.png", Routes.BrowseEngine);
+                AddTile("Year/Make/Model", "Search by vehicle", "search.png", AppRoutes.BrowseYmm);
+                AddTile("By Engine", "Search by engine family", "engine.png", AppRoutes.BrowseEngine);
                 break;
 
             case HomeSegment.Parts:
                 SegmentTitle = "Part Lookup";
-                AddTile("Part Lookup", "Search by keyword", "part.png", $"//{Routes.PartLookup}");
-                AddTile("Cross Reference", "Find interchange", "swap.png", Routes.PartsXref);
-                AddTile("OEM Number", "Lookup by OEM #", "oem.png", Routes.PartsOem);
+                AddTile("Part Lookup", "Search by keyword", "part.png", AppRoutes.Parts);
+                AddTile("Cross Reference", "Find interchange", "swap.png", AppRoutes.PartsXref);
+                AddTile("OEM Number", "Lookup by OEM #", "oem.png", AppRoutes.PartsOem);
                 break;
 
             case HomeSegment.Specs:
                 SegmentTitle = "Specs Library";
-                AddTile("Specs Library", "Full library", "library.png", $"//{Routes.SpecsLibrary}");
-                AddTile("Fluids", "Oil, coolant, etc.", "drop.png", $"{Routes.SpecsCategory}?{RouteKeys.Category}=fluids");
-                AddTile("Torque", "Torque specs", "wrench.png", $"{Routes.SpecsCategory}?{RouteKeys.Category}=torque");
-                AddTile("Filters", "Filter lookup", "filter.png", $"{Routes.SpecsCategory}?{RouteKeys.Category}=filters");
+                AddTile("Specs Library", "Full library", "library.png", AppRoutes.Specs);
+                AddTile("Fluids", "Oil, coolant, etc.", "drop.png", AppRoutes.SpecsFluids);
+                AddTile("Torque", "Torque specs", "wrench.png", AppRoutes.SpecsTorque);
+                AddTile("Filters", "Filter lookup", "filter.png", AppRoutes.SpecsFilters);
                 break;
 
             case HomeSegment.Tools:
                 SegmentTitle = "Compatibility Tools";
-                AddTile("Compat Tools", "All tools", "tools.png", $"//{Routes.CompatTools}");
-                AddTile("ECU / Harness", "Wiring helpers", "ecu.png", Routes.EcuHarness);
-                AddTile("Transmission", "Swap helper", "gear.png", $"{Routes.CompatTools}?tool=trans");
-                AddTile("NA to Turbo", "Conversion guide", "turbo.png", $"{Routes.CompatTools}?tool=na2t");
+                AddTile("Compat Tools", "All tools", "tools.png", AppRoutes.Compat);
+                AddTile("ECU / Harness", "Wiring helpers", "ecu.png", AppRoutes.CompatEcu);
+                AddTile("Transmission", "Swap helper", "gear.png", AppRoutes.CompatTrans);
+                AddTile("NA to Turbo", "Conversion guide", "turbo.png", AppRoutes.CompatNa2t);
                 break;
         }
     }
@@ -137,7 +137,7 @@ public partial class HomeViewModel : ObservableObject
 
     private async Task OnGoVehiclePicker()
     {
-        await Shell.Current.GoToAsync(Routes.VehiclePicker);
+        await Shell.Current.GoToAsync(AppRoutes.VehiclePicker);
     }
 
     // Refresh vehicle label when returning to view
