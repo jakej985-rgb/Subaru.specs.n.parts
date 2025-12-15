@@ -1,4 +1,4 @@
-namespace SubaruParts.App.Navigation;
+namespace SubaruParts.Navigation;
 
 public static class RouteKeys
 {

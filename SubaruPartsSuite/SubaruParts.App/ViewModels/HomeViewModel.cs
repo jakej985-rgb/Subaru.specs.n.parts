@@ -2,13 +2,11 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using SubaruParts.App.Models;
-using SubaruParts.App.Navigation;
+using SubaruParts.Navigation;
+using SubaruParts.Navigation.Models;
 using SubaruParts.App.Services;
 
 namespace SubaruParts.App.ViewModels;
-
-public enum HomeSegment { Browse, Parts, Specs, Tools }
 
 public partial class HomeViewModel : ObservableObject
 {
@@ -73,50 +71,14 @@ public partial class HomeViewModel : ObservableObject
         IsTools = segment == HomeSegment.Tools;
 
         // Update Title and Tiles
+        SegmentTitle = HomeMenuRegistry.GetSegmentTitle(segment);
         SegmentTiles.Clear();
 
-        switch (segment)
+        var tiles = HomeMenuRegistry.GetTiles(segment);
+        foreach (var tile in tiles)
         {
-            case HomeSegment.Browse:
-                SegmentTitle = "Browse Catalog";
-                AddTile("Year/Make/Model", "Search by vehicle", "search.png", AppRoutes.BrowseYmm);
-                AddTile("By Engine", "Search by engine family", "engine.png", AppRoutes.BrowseEngine);
-                break;
-
-            case HomeSegment.Parts:
-                SegmentTitle = "Part Lookup";
-                AddTile("Part Lookup", "Search by keyword", "part.png", AppRoutes.Parts);
-                AddTile("Cross Reference", "Find interchange", "swap.png", AppRoutes.PartsXref);
-                AddTile("OEM Number", "Lookup by OEM #", "oem.png", AppRoutes.PartsOem);
-                break;
-
-            case HomeSegment.Specs:
-                SegmentTitle = "Specs Library";
-                AddTile("Specs Library", "Full library", "library.png", AppRoutes.Specs);
-                AddTile("Fluids", "Oil, coolant, etc.", "drop.png", AppRoutes.SpecsFluids);
-                AddTile("Torque", "Torque specs", "wrench.png", AppRoutes.SpecsTorque);
-                AddTile("Filters", "Filter lookup", "filter.png", AppRoutes.SpecsFilters);
-                break;
-
-            case HomeSegment.Tools:
-                SegmentTitle = "Compatibility Tools";
-                AddTile("Compat Tools", "All tools", "tools.png", AppRoutes.Compat);
-                AddTile("ECU / Harness", "Wiring helpers", "ecu.png", AppRoutes.CompatEcu);
-                AddTile("Transmission", "Swap helper", "gear.png", AppRoutes.CompatTrans);
-                AddTile("NA to Turbo", "Conversion guide", "turbo.png", AppRoutes.CompatNa2t);
-                break;
+            SegmentTiles.Add(tile);
         }
-    }
-
-    private void AddTile(string title, string subtitle, string icon, string route)
-    {
-        SegmentTiles.Add(new HomeTile
-        {
-            Title = title,
-            Subtitle = subtitle,
-            Icon = icon,
-            Route = route
-        });
     }
 
     private async Task OnNavigateTile(string? route)

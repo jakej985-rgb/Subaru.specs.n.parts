@@ -1,5 +1,5 @@
 using Microsoft.Maui.Controls;
-using SubaruParts.App.Navigation;
+using SubaruParts.Navigation;
 using SubaruParts.App.Pages;
 using SubaruParts.App.Pages.Browse;
 using SubaruParts.App.Pages.Browse.Vehicle;

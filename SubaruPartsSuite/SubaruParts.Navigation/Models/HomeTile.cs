@@ -1,4 +1,4 @@
-namespace SubaruParts.App.Models;
+namespace SubaruParts.Navigation.Models;
 
 public class HomeTile
 {

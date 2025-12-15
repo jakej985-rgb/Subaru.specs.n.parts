@@ -11,7 +11,7 @@
     xmlns:mystuff="clr-namespace:SubaruParts.App.Pages.MyStuff"
     xmlns:contribute="clr-namespace:SubaruParts.App.Pages.Contribute"
     xmlns:settings="clr-namespace:SubaruParts.App.Pages.Settings"
-    xmlns:nav="clr-namespace:SubaruParts.App.Navigation"
+    xmlns:nav="clr-namespace:SubaruParts.Navigation;assembly=SubaruParts.Navigation"
     Title="Subaru Parts">
 
     <!-- Flyout Items -->
