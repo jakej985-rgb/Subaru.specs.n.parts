@@ -16,4 +16,9 @@
     <ProjectReference Include="..\SubaruParts.Domain\SubaruParts.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="Seeds\engines.json" />
+    <EmbeddedResource Include="Seeds\rules.json" />
+  </ItemGroup>
+
 </Project>

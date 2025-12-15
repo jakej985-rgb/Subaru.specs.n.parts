@@ -32,16 +32,19 @@ namespace SubaruParts.App
             builder.Services.AddTransient<DatabaseInitializer>();
             builder.Services.AddSingleton<CatalogService>();
             builder.Services.AddSingleton<StoreLinkService>();
+            builder.Services.AddSingleton<CompatibilityService>();
 
             // ViewModels
             builder.Services.AddTransient<EnginePickerViewModel>();
             builder.Services.AddTransient<PartListViewModel>();
             builder.Services.AddTransient<PartDetailViewModel>();
+            builder.Services.AddTransient<CompatibilityViewModel>();
 
             // Pages
             builder.Services.AddTransient<EnginePickerPage>();
             builder.Services.AddTransient<PartListPage>();
             builder.Services.AddTransient<PartDetailPage>();
+            builder.Services.AddTransient<CompatibilityPage>();
 
             return builder.Build();
         }

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "phase_mismatch_p1_p2",
+    "when": {
+      "donor": { "Phase": "Phase2" },
+      "target": { "Phase": "Phase1" }
+    },
+    "effect": {
+      "level": "MajorMods",
+      "scoreDelta": -40,
+      "addWarning": "Phase 2 engine into Phase 1 chassis requires handling sensor differences.",
+      "addChange": {
+        "title": "Cam/Crank triggers & Intake",
+        "details": "You may need to swap the intake manifold and cam/crank sprockets from the Phase 1 engine to the Phase 2 block to use the original ECU.",
+        "severity": "High"
+      }
+    }
+  },
+  {
+    "id": "phase_mismatch_p2_p1",
+    "when": {
+      "donor": { "Phase": "Phase1" },
+      "target": { "Phase": "Phase2" }
+    },
+    "effect": {
+      "level": "MajorMods",
+      "scoreDelta": -40,
+      "addWarning": "Phase 1 engine into Phase 2 chassis is tricky due to idle control and sensor differences.",
+      "addChange": {
+        "title": "IACV & Sensors",
+        "details": "Phase 1 IACV is on manifold, Phase 2 is on TB (usually). Requires wiring merge or manifold swap.",
+        "severity": "Medium"
+      }
+    }
+  },
+  {
+    "id": "fb_into_ej",
+    "when": {
+      "donor": { "Phase": "FB" },
+      "target": { "Phase": "Phase2" }
+    },
+    "effect": {
+      "level": "NotRecommended",
+      "scoreDelta": -90,
+      "addWarning": "FB engines use CAN-bus and completely different mounting/bellhousing patterns.",
+      "addChange": {
+        "title": "Full Drivetrain Swap",
+        "details": "Requires custom fabrication, standalone ECU, or complete donor car harness merge.",
+        "severity": "Critical"
+      }
+    }
+  },
+  {
+    "id": "fb_into_ej_p1",
+    "when": {
+      "donor": { "Phase": "FB" },
+      "target": { "Phase": "Phase1" }
+    },
+    "effect": {
+      "level": "NotRecommended",
+      "scoreDelta": -90,
+      "addWarning": "FB engines use CAN-bus and completely different mounting/bellhousing patterns.",
+      "addChange": {
+        "title": "Full Drivetrain Swap",
+        "details": "Requires custom fabrication, standalone ECU, or complete donor car harness merge.",
+        "severity": "Critical"
+      }
+    }
+  },
+  {
+    "id": "dbw_into_cable",
+    "when": {
+      "donor": { "Throttle": "DBW" },
+      "target": { "Throttle": "Cable" }
+    },
+    "effect": {
+      "level": "MajorMods",
+      "scoreDelta": -30,
+      "addChange": {
+        "title": "Throttle Pedal & ECU",
+        "details": "Target chassis is cable throttle, donor is DBW. Must install DBW pedal and use DBW ECU, or convert engine to cable throttle (if possible).",
+        "severity": "High"
+      }
+    }
+  },
+  {
+    "id": "can_into_noncan",
+    "when": {
+      "donor": { "EcuBus": "CanBus" },
+      "target": { "EcuBus": "NonCan" }
+    },
+    "effect": {
+      "level": "MajorMods",
+      "scoreDelta": -50,
+      "addWarning": "CAN-bus ECU requires CAN signals (cluster, ABS) to function correctly without codes.",
+      "addChange": {
+        "title": "CAN Network Simulation",
+        "details": "You may need a CAN emulator or swap the cluster and ABS unit to keep the ECU happy.",
+        "severity": "High"
+      }
+    }
+  }
+]
