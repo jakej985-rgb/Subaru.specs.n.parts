@@ -51,7 +51,8 @@ public static class NavGraph
             new List<NavLink>
             {
                 new(Routes.BrowseVehicle, "By Vehicle"),
-                new(Routes.BrowseEngine, "By Engine")
+                new(Routes.BrowseEngine, "By Engine"),
+                new(Routes.BrowseYmm, "Year/Make/Model"),
             }
         ),
 
@@ -175,6 +176,8 @@ public static class NavGraph
             "Part Lookup",
             new List<NavLink>
             {
+                new(Routes.PartsXref, "Cross Reference"),
+                new(Routes.PartsOem, "OEM Part Number"),
                 new(Routes.PartPage, "Open Part Page (OEM example)", P(
                     (RouteKeys.Oem, "15208AA15A"),
                     (RouteKeys.Tab, "cross-references")
