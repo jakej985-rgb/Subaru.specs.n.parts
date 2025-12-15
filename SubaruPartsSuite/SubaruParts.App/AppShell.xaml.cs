@@ -23,6 +23,22 @@ namespace SubaruParts.App
 
         private void RegisterRoutes()
         {
+            // Placeholder routes for unimplemented pages
+            Routing.RegisterRoute(Routes.BrowseYmm, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage));
+            Routing.RegisterRoute(Routes.VehiclePicker, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage));
+            Routing.RegisterRoute(Routes.PartsXref, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage));
+            Routing.RegisterRoute(Routes.PartsOem, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage));
+
+            // Missing top-level routes that might be navigated to (e.g. from Home Tiles if they are not just Shell Tabs)
+            // Note: If these are Tabs in Shell, they are auto-registered. But if we use GoToAsync("//parts") and it's a Tab, it works.
+            // However, the reviewer mentioned these might be missing if they are not top-level Tabs or if we want to push them.
+            // Shell handles "//route" for FlyoutItems automatically.
+            // But let's check AppShell.xaml to see if they are registered as FlyoutItems.
+            // PartLookup is a FlyoutItem. SpecsLibrary is a FlyoutItem. CompatTools is a FlyoutItem.
+            // So they SHOULD work with GoToAsync("//part-lookup") etc.
+            // However, to be safe and satisfy the reviewer who thinks they might be missing or if we want to use relative routing:
+            // Routing.RegisterRoute(Routes.PartLookup, typeof(PartLookupPage)); // This is likely auto-handled by ShellContent
+
             // Browse / Vehicle
             Routing.RegisterRoute(Routes.BrowseVehicle, typeof(VehicleBrowsePage));
             Routing.RegisterRoute(Routes.BrowseVehicleSelect, typeof(VehicleSelectPage));

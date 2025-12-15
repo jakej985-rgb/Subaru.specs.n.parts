@@ -8,6 +8,28 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- OEM Dark Colors -->
+            <Color x:Key="OemBg">#121212</Color>
+            <Color x:Key="OemSurface">#1F1F1F</Color>
+            <Color x:Key="OemSurface2">#2D2D2D</Color>
+            <Color x:Key="OemText">#E0E0E0</Color>
+            <Color x:Key="OemMuted">#9E9E9E</Color>
+            <Color x:Key="OemAccent">#2563EB</Color>
+            <Color x:Key="OemDivider">#383838</Color>
+
+            <!-- SegBtn Style -->
+            <Style x:Key="SegBtn" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource OemSurface}" />
+                <Setter Property="TextColor" Value="{StaticResource OemMuted}" />
+                <Setter Property="BorderColor" Value="{StaticResource OemDivider}" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="HeightRequest" Value="40" />
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -16,6 +16,8 @@ public static class Routes
     public const string BrowseVehicle = "browse/vehicle";
     public const string BrowseVehicleSelect = "browse/vehicle/select";
     public const string VehiclePage = "browse/vehicle/page";
+    public const string BrowseYmm = "browse/ymm";
+    public const string VehiclePicker = "vehicle/picker";
 
     // Browse / Engine
     public const string BrowseEngine = "browse/engine";
@@ -24,6 +26,8 @@ public static class Routes
 
     // Part lookup
     public const string PartPage = "part-lookup/part";
+    public const string PartsXref = "parts/xref";
+    public const string PartsOem = "parts/oem";
 
     // Specs library
     public const string SpecsCategory = "specs-library/category"; // uses ?category=
