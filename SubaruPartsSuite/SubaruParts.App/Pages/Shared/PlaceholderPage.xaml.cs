@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using SubaruParts.Navigation;
+using SubaruParts.App.Navigation;
 
 namespace SubaruParts.App.Pages.Shared;
 
