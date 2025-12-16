@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:flutter/services.dart';
 // for Value
 import 'package:specsnparts/data/db/app_db.dart';
@@ -11,6 +12,8 @@ class SeedRunner {
 
   Future<void> runSeedIfNeeded() async {
     final prefs = await SharedPreferences.getInstance();
+    // Force re-seed for testing if needed, or remove 'seeded' check if dev
+    // For now respecting 'is_seeded' but users might want to clear data to see changes
     final seeded = prefs.getBool('is_seeded') ?? false;
 
     if (!seeded) {
