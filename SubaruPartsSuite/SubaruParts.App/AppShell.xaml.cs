@@ -27,64 +27,39 @@ namespace SubaruParts.App
 
         private void RegisterRoutes()
         {
-            // NEW / UPDATED ROUTES for Blank Scaffold Pages
-
             // Browse
             Routing.RegisterRoute(Routes.BrowseYmm, typeof(BrowseYmmPage));
-            Routing.RegisterRoute(Routes.BrowseEngine, typeof(BrowseEnginePage)); // Was EngineBrowsePage
-
-            // Parts
-            Routing.RegisterRoute("parts", typeof(PartsHomePage));
-            Routing.RegisterRoute(Routes.PartsXref, typeof(CrossReferencePage));
-            Routing.RegisterRoute(Routes.PartsOem, typeof(OemNumberPage));
-
-            // Specs
-            Routing.RegisterRoute("specs", typeof(SpecsHomePage));
-            Routing.RegisterRoute("specs/fluids", typeof(FluidsPage));
-            Routing.RegisterRoute("specs/torque", typeof(TorquePage));
-            Routing.RegisterRoute("specs/filters", typeof(FiltersPage));
-
-            // Compat
-            Routing.RegisterRoute("compat", typeof(ToolsHomePage));
-            Routing.RegisterRoute("compat/ecu", typeof(EcuHarnessPage));
-            Routing.RegisterRoute("compat/trans", typeof(TransmissionSwapPage));
-            Routing.RegisterRoute("compat/na2t", typeof(NaToTurboPage));
-
-            // Vehicle
-            Routing.RegisterRoute(Routes.VehiclePicker, typeof(VehiclePickerPage));
-
-            // Debug
-            Routing.RegisterRoute("debug/route-audit", typeof(RouteAuditPage));
-
-            // ----------------------------------------------------------------
-            // Existing routes (kept to avoid breaking other flows)
-
-            // Placeholder routes for unimplemented pages - Removing conflicts above
-            // Routing.RegisterRoute(Routes.BrowseYmm, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage)); // Replaced
-            // Routing.RegisterRoute(Routes.VehiclePicker, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage)); // Replaced
-            // Routing.RegisterRoute(Routes.PartsXref, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage)); // Replaced
-            // Routing.RegisterRoute(Routes.PartsOem, typeof(SubaruParts.App.Pages.Shared.PlaceholderPage)); // Replaced
-
-            // Browse / Vehicle
+            Routing.RegisterRoute(Routes.BrowseEngine, typeof(BrowseEnginePage));
             Routing.RegisterRoute(Routes.BrowseVehicle, typeof(VehicleBrowsePage));
             Routing.RegisterRoute(Routes.BrowseVehicleSelect, typeof(VehicleSelectPage));
             Routing.RegisterRoute(Routes.VehiclePage, typeof(VehiclePage));
-
-            // Browse / Engine
-            // Routing.RegisterRoute(Routes.BrowseEngine, typeof(EngineBrowsePage)); // Replaced above
             Routing.RegisterRoute(Routes.BrowseEngineSelect, typeof(EngineSelectPage));
             Routing.RegisterRoute(Routes.EnginePage, typeof(EnginePage));
 
-            // Part lookup
+            // Parts
+            Routing.RegisterRoute(Routes.Parts, typeof(PartsHomePage));
+            Routing.RegisterRoute(Routes.PartsXref, typeof(CrossReferencePage));
+            Routing.RegisterRoute(Routes.PartsOem, typeof(OemNumberPage));
             Routing.RegisterRoute(Routes.PartPage, typeof(PartPage));
 
-            // Specs library
+            // Specs
+            Routing.RegisterRoute(Routes.Specs, typeof(SpecsHomePage));
+            Routing.RegisterRoute(Routes.SpecsFluids, typeof(FluidsPage));
+            Routing.RegisterRoute(Routes.SpecsTorque, typeof(TorquePage));
+            Routing.RegisterRoute(Routes.SpecsFilters, typeof(FiltersPage));
             Routing.RegisterRoute(Routes.SpecsCategory, typeof(SpecsCategoryPage));
 
-            // Compatibility tools
+            // Compat
+            Routing.RegisterRoute(Routes.Compat, typeof(ToolsHomePage));
+            Routing.RegisterRoute(Routes.CompatEcu, typeof(EcuHarnessPage));
+            Routing.RegisterRoute(Routes.CompatTrans, typeof(TransmissionSwapPage));
+            Routing.RegisterRoute(Routes.CompatNa2t, typeof(NaToTurboPage));
             Routing.RegisterRoute(Routes.SwapChecker, typeof(SwapCheckerPage));
             Routing.RegisterRoute(Routes.EcuHarness, typeof(EcuHarnessHelperPage));
             Routing.RegisterRoute(Routes.SensorDiff, typeof(SensorDiffFinderPage));
+
+            // Vehicle
+            Routing.RegisterRoute(Routes.VehiclePicker, typeof(VehiclePickerPage));
 
             // My stuff
             Routing.RegisterRoute(Routes.Favorites, typeof(FavoritesPage));
@@ -105,9 +80,8 @@ namespace SubaruParts.App
             Routing.RegisterRoute(Routes.Sources, typeof(SourcesPage));
             Routing.RegisterRoute(Routes.AppInfo, typeof(AppInfoPage));
 
-            // Note: RouteAudit is in the Flyout, so it's auto-registered, but safe to register again or skip.
-            // Since it's a root item in Flyout, we don't strictly need to register it for push nav,
-            // but if we link to it from elsewhere using GoToAsync, Shell handles it.
+            // Debug
+            Routing.RegisterRoute(Routes.RouteAudit, typeof(RouteAuditPage));
         }
     }
 }
