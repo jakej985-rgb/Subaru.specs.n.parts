@@ -1,0 +1,227 @@
+[
+  {
+    "id": "p1",
+    "name": "Oil Filter (Black)",
+    "oemNumber": "15208AA170",
+    "aftermarketNumbers": "{\"Wix\": \"57055\", \"K&N\": \"HP-1008\"}",
+    "fits": "[\"FA20\", \"FA24\", \"FB25\"]",
+    "notes": "Standard black filter for newer Subarus.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p2",
+    "name": "Oil Filter (Blue)",
+    "oemNumber": "15208AA12A",
+    "aftermarketNumbers": "{\"Wix\": \"57712\"}",
+    "fits": "[\"EJ25\", \"EJ20\"]",
+    "notes": "Standard blue filter for older EJ engines.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p3",
+    "name": "Crush Washer",
+    "oemNumber": "803916010",
+    "aftermarketNumbers": "{}",
+    "fits": "[\"All\"]",
+    "notes": "Replace at every oil change.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p4",
+    "name": "Cabin Air Filter",
+    "oemNumber": "72880FL000",
+    "aftermarketNumbers": "{\"K&N\": \"VF2056\"}",
+    "fits": "[\"v1\", \"v2\", \"v3\", \"v4\", \"v5\"]",
+    "notes": "Located behind glove box.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p5",
+    "name": "Engine Air Filter",
+    "oemNumber": "16546AA120",
+    "aftermarketNumbers": "{\"Wix\": \"49012\"}",
+    "fits": "[\"v6\", \"v7\"]",
+    "notes": "For STI air box.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p6",
+    "name": "Brembo Front Brake Pads",
+    "oemNumber": "26296FE100",
+    "aftermarketNumbers": "{\"Hawk\": \"HB453F.585\"}",
+    "fits": "[\"v6\", \"v7\"]",
+    "notes": "For 4-pot Brembos.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p7",
+    "name": "Spark Plug (FA20)",
+    "oemNumber": "22401AA830",
+    "aftermarketNumbers": "{\"NGK\": \"96024\"}",
+    "fits": "[\"FA20\"]",
+    "notes": "Iridium.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p8",
+    "name": "Spark Plug (EJ257)",
+    "oemNumber": "22401AA670",
+    "aftermarketNumbers": "{\"NGK\": \"ILFR7H\"}",
+    "fits": "[\"EJ257\"]",
+    "notes": "One step colder available.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p9",
+    "name": "Timing Belt Kit",
+    "oemNumber": "13028AA240",
+    "aftermarketNumbers": "{\"Gates\": \"TCK328\"}",
+    "fits": "[\"EJ257\", \"EJ205\"]",
+    "notes": "Replace every 105k miles.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p10",
+    "name": "Water Pump",
+    "oemNumber": "21111AA320",
+    "aftermarketNumbers": "{\"Aisin\": \"WPF-025\"}",
+    "fits": "[\"EJ257\"]",
+    "notes": "Cast impeller recommended.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p11",
+    "name": "Thermostat",
+    "oemNumber": "21200AA072",
+    "aftermarketNumbers": "{}",
+    "fits": "[\"EJ25\", \"FA20\"]",
+    "notes": "170 degree standard.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p12",
+    "name": "PCV Valve",
+    "oemNumber": "11810AA131",
+    "aftermarketNumbers": "{}",
+    "fits": "[\"v1\", \"v2\"]",
+    "notes": "Check for clicking sound.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p13",
+    "name": "Head Gasket (MLS)",
+    "oemNumber": "11044AA770",
+    "aftermarketNumbers": "{\"Fel-Pro\": \"26415 PT\"}",
+    "fits": "[\"EJ257\"]",
+    "notes": "Multi-Layer Steel.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p14",
+    "name": "Front Wiper Blade (Driver)",
+    "oemNumber": "SOA591U326",
+    "aftermarketNumbers": "{\"Bosch\": \"26A\"}",
+    "fits": "[\"v1\", \"v2\"]",
+    "notes": "26 inch.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p15",
+    "name": "Front Wiper Blade (Pass)",
+    "oemNumber": "SOA591U317",
+    "aftermarketNumbers": "{\"Bosch\": \"17A\"}",
+    "fits": "[\"v1\", \"v2\"]",
+    "notes": "17 inch.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p16",
+    "name": "CVT Fluid (High Torque)",
+    "oemNumber": "SOA748V0200",
+    "aftermarketNumbers": "{}",
+    "fits": "[\"v1\"]",
+    "notes": "Orange color.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p17",
+    "name": "Manual Trans Fluid",
+    "oemNumber": "K0320AA093",
+    "aftermarketNumbers": "{\"Motul\": \"Gear 300\"}",
+    "fits": "[\"v2\", \"v3\", \"v6\"]",
+    "notes": "Extra S replacement.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p18",
+    "name": "Rear Brake Rotors",
+    "oemNumber": "26700FE080",
+    "aftermarketNumbers": "{\"DBA\": \"4655\"}",
+    "fits": "[\"v7\"]",
+    "notes": "5x100 bolt pattern.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p19",
+    "name": "Front Brake Rotors",
+    "oemNumber": "26300FE010",
+    "aftermarketNumbers": "{\"DBA\": \"4000\"}",
+    "fits": "[\"v7\"]",
+    "notes": "STI Brembo size.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p20",
+    "name": "Fuel Pump Assembly",
+    "oemNumber": "42021AA020",
+    "aftermarketNumbers": "{\"Walbro\": \"255\"}",
+    "fits": "[\"v8\"]",
+    "notes": "In-tank.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p21",
+    "name": "Alternator",
+    "oemNumber": "23700AA521",
+    "aftermarketNumbers": "{}",
+    "fits": "[\"v6\"]",
+    "notes": "110 Amp.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p22",
+    "name": "Power Steering Pump",
+    "oemNumber": "34430FE040",
+    "aftermarketNumbers": "{}",
+    "fits": "[\"v7\"]",
+    "notes": "Common failure point O-ring.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p23",
+    "name": "Radiator Cap",
+    "oemNumber": "45137AE003",
+    "aftermarketNumbers": "{}",
+    "fits": "[\"All\"]",
+    "notes": "1.1 bar (108 kPa).",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p24",
+    "name": "Expansion Tank Cap",
+    "oemNumber": "45137FE002",
+    "aftermarketNumbers": "{}",
+    "fits": "[\"v6\", \"v7\", \"v8\"]",
+    "notes": "137 kPa round cap.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "p25",
+    "name": "MAF Sensor",
+    "oemNumber": "22680AA380",
+    "aftermarketNumbers": "{}",
+    "fits": "[\"v6\", \"v7\"]",
+    "notes": "Do not touch element.",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  }
+]

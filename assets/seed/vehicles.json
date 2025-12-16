@@ -1,0 +1,92 @@
+[
+  {
+    "id": "v1",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "WRX",
+    "trim": "Limited",
+    "engineCode": "FA24",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v2",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "WRX",
+    "trim": "Base",
+    "engineCode": "FA24",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v3",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "BRZ",
+    "trim": "TS",
+    "engineCode": "FA24",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v4",
+    "year": 2023,
+    "make": "Subaru",
+    "model": "Forester",
+    "trim": "Wilderness",
+    "engineCode": "FB25",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v5",
+    "year": 2023,
+    "make": "Subaru",
+    "model": "Outback",
+    "trim": "Onyx XT",
+    "engineCode": "FA24",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v6",
+    "year": 2015,
+    "make": "Subaru",
+    "model": "WRX STI",
+    "trim": "Limited",
+    "engineCode": "EJ257",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v7",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Impreza WRX STI",
+    "trim": "Standard",
+    "engineCode": "EJ257",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v8",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza WRX",
+    "trim": "Standard",
+    "engineCode": "EJ205",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v9",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Sport",
+    "engineCode": "FB25",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v10",
+    "year": 1998,
+    "make": "Subaru",
+    "model": "Impreza 2.5RS",
+    "trim": "Coupe",
+    "engineCode": "EJ251",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  }
+]
