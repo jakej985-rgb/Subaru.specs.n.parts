@@ -24,15 +24,30 @@ public static class Routes
     public const string BrowseEngineSelect = "browse/engine/select";
     public const string EnginePage = "browse/engine/page";
 
-    // Part lookup
-    public const string PartPage = "part-lookup/part";
+    // Parts
+    public const string Parts = "parts";
     public const string PartsXref = "parts/xref";
     public const string PartsOem = "parts/oem";
 
-    // Specs library
+    // Specs
+    public const string Specs = "specs";
+    public const string SpecsFluids = "specs/fluids";
+    public const string SpecsTorque = "specs/torque";
+    public const string SpecsFilters = "specs/filters";
+
+    // Tools
+    public const string Compat = "compat";
+    public const string CompatEcu = "compat/ecu";
+    public const string CompatTrans = "compat/trans";
+    public const string CompatNa2t = "compat/na2t";
+
+    // Part lookup (Legacy/Existing)
+    public const string PartPage = "part-lookup/part";
+
+    // Specs library (Legacy/Existing)
     public const string SpecsCategory = "specs-library/category"; // uses ?category=
 
-    // Compatibility tools
+    // Compatibility tools (Legacy/Existing)
     public const string SwapChecker = "compat-tools/swap-checker";
     public const string EcuHarness = "compat-tools/ecu-harness";
     public const string SensorDiff = "compat-tools/sensor-diff";
