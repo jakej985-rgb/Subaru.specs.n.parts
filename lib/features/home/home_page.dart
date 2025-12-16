@@ -6,7 +6,7 @@ import '../../widgets/home_menu_card.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  static const double cardHeight = 110;
+  static const double cardHeight = 130;
   static const double spacing = 16;
   static const double headerHeightEstimate = 70; // title + spacing
 
@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
     // In a real app, we might check MediaQuery.textScaleFactorOf(context).
     // For now, we stick to the plan's logic or simple fixed logic.
     // The plan suggested: final textScale = MediaQuery.textScaleFactorOf(context);
-    final textScale = MediaQuery.textScalerOf(context).scale(1); // Getting scale factor roughly
+
     // textScaler.scale(1) returns the scaled font size for 1.
     // Effectively we want the factor.
     // In newer Flutter, textScaleFactor is deprecated for textScaler.
@@ -31,8 +31,16 @@ class HomePage extends StatelessWidget {
     final scaledCardHeight = cardHeight * (scaleFactor > 1.2 ? 1.15 : 1.0);
 
     final items = [
-      ('Browse by Year/Make/Model', Icons.directions_car, () => context.go('/browse/ymm')),
-      ('Browse by Engine', Icons.engineering, () => context.go('/browse/engine')),
+      (
+        'Browse by Year/Make/Model',
+        Icons.directions_car,
+        () => context.go('/browse/ymm'),
+      ),
+      (
+        'Browse by Engine',
+        Icons.engineering,
+        () => context.go('/browse/engine'),
+      ),
       ('Part Lookup', Icons.search, () => context.go('/parts')),
       ('Just Specs', Icons.list_alt, () => context.go('/specs')),
       ('Settings', Icons.settings, () => context.go('/settings')),
@@ -44,7 +52,7 @@ class HomePage extends StatelessWidget {
         headerHeightEstimate +
         (totalCards * scaledCardHeight) +
         ((totalCards - 1) * spacing) +
-        32; // extra breathing room (top/bottom padding of AdaptiveScroll usually 16+16=32, plus internal 8+18 spacing)
+        80; // extra breathing room (top/bottom padding of AdaptiveScroll usually 16+16=32, plus internal 8+18 spacing)
 
     // Wait, AdaptiveScroll has padding=16.
     // Inside AdaptiveScroll child:

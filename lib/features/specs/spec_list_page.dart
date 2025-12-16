@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
-import 'package:specsnparts/data/db/tables.dart';
+
 
 class SpecListPage extends ConsumerStatefulWidget {
   const SpecListPage({super.key});
@@ -11,11 +11,11 @@ class SpecListPage extends ConsumerStatefulWidget {
 }
 
 class _SpecListPageState extends ConsumerState<SpecListPage> {
-  String _query = '';
+
   List<Spec> _results = [];
 
   void _search(String query) async {
-    setState(() => _query = query);
+    // query param is used directly below
     if (query.isEmpty) {
        _loadInitial();
       return;

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
-import 'package:specsnparts/data/db/tables.dart';
 
 class PartLookupPage extends ConsumerStatefulWidget {
   const PartLookupPage({super.key});
@@ -53,7 +52,29 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                         title: Text(part.name),
                         subtitle: Text('OEM: ${part.oemNumber}'),
                         onTap: () {
-                          // TODO: Navigate to detail
+                          showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              title: Text(part.name),
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('OEM: ${part.oemNumber}'),
+                                  if (part.notes != null) ...[
+                                    const SizedBox(height: 8),
+                                    Text(part.notes!),
+                                  ],
+                                ],
+                              ),
+                              actions: [
+                                TextButton(
+                                  onPressed: () => Navigator.pop(context),
+                                  child: const Text('Close'),
+                                ),
+                              ],
+                            ),
+                          );
                         },
                       );
                     },

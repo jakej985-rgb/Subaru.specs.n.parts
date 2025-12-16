@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
-import 'package:specsnparts/data/db/tables.dart';
 
 class YmmFlowPage extends ConsumerStatefulWidget {
   const YmmFlowPage({super.key});
@@ -12,7 +11,7 @@ class YmmFlowPage extends ConsumerStatefulWidget {
 
 class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
   int? _selectedYear;
-  String? _selectedMake; // Always Subaru but flexible
+
   String? _selectedModel;
   Vehicle? _selectedVehicle;
 
@@ -29,7 +28,8 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
   Future<void> _loadYears() async {
     final db = ref.read(appDbProvider);
     final all = await db.vehiclesDao.getAllVehicles();
-    final years = all.map((v) => v.year).toSet().toList()..sort((a, b) => b.compareTo(a));
+    final years = all.map((v) => v.year).toSet().toList()
+      ..sort((a, b) => b.compareTo(a));
     setState(() => _years = years);
   }
 
@@ -51,61 +51,119 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
         padding: const EdgeInsets.all(16),
         children: [
           if (_selectedYear == null) ...[
-            const Text('Select Year', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            ..._years.map((y) => ListTile(
-              title: Text(y.toString()),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () {
-                setState(() => _selectedYear = y);
-                _loadModels(y);
-              },
-            )),
+            const Text(
+              'Select Year',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            ..._years.map(
+              (y) => ListTile(
+                title: Text(y.toString()),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () {
+                  setState(() => _selectedYear = y);
+                  _loadModels(y);
+                },
+              ),
+            ),
           ] else if (_selectedModel == null) ...[
-            Row(children: [
-               IconButton(icon: const Icon(Icons.arrow_back), onPressed: () => setState(() => _selectedYear = null)),
-               Text('$_selectedYear > Select Model', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            ]),
-            ..._models.map((m) => ListTile(
-              title: Text(m),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () {
-                setState(() => _selectedModel = m);
-              },
-            )),
+            Row(
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () => setState(() => _selectedYear = null),
+                ),
+                Text(
+                  '$_selectedYear > Select Model',
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            ..._models.map(
+              (m) => ListTile(
+                title: Text(m),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () {
+                  setState(() => _selectedModel = m);
+                },
+              ),
+            ),
           ] else if (_selectedVehicle == null) ...[
-             Row(children: [
-               IconButton(icon: const Icon(Icons.arrow_back), onPressed: () => setState(() => _selectedModel = null)),
-               Text('$_selectedYear $_selectedModel > Select Trim', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            ]),
-            ..._vehicles.where((v) => v.year == _selectedYear && v.model == _selectedModel).map((v) => ListTile(
-              title: Text('${v.trim ?? "Base"} (${v.engineCode ?? "?"})'),
-              trailing: const Icon(Icons.check),
-              onTap: () {
-                setState(() => _selectedVehicle = v);
-              },
-            )),
+            Row(
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () => setState(() => _selectedModel = null),
+                ),
+                Text(
+                  '$_selectedYear $_selectedModel > Select Trim',
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            ..._vehicles
+                .where(
+                  (v) => v.year == _selectedYear && v.model == _selectedModel,
+                )
+                .map(
+                  (v) => ListTile(
+                    title: Text('${v.trim ?? "Base"} (${v.engineCode ?? "?"})'),
+                    trailing: const Icon(Icons.check),
+                    onTap: () {
+                      setState(() => _selectedVehicle = v);
+                    },
+                  ),
+                ),
           ] else ...[
-             Row(children: [
-               IconButton(icon: const Icon(Icons.arrow_back), onPressed: () => setState(() => _selectedVehicle = null)),
-               Expanded(child: Text('${_selectedVehicle!.year} ${_selectedVehicle!.model} ${_selectedVehicle!.trim}', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
-            ]),
+            Row(
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () => setState(() => _selectedVehicle = null),
+                ),
+                Expanded(
+                  child: Text(
+                    '${_selectedVehicle!.year} ${_selectedVehicle!.model} ${_selectedVehicle!.trim}',
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
+            ),
             const SizedBox(height: 20),
             ListTile(
               leading: const Icon(Icons.list),
               title: const Text('View Specs'),
               onTap: () {
                 // Show specs for this vehicle (filtered by tags/engine code ideally, but simple for now)
-                showDialog(context: context, builder: (ctx) => AlertDialog(content: const Text('Specs filtering coming soon!')));
+                showDialog(
+                  context: context,
+                  builder: (ctx) => AlertDialog(
+                    content: const Text('Specs filtering coming soon!'),
+                  ),
+                );
               },
             ),
-             ListTile(
+            ListTile(
               leading: const Icon(Icons.build),
               title: const Text('View Parts'),
               onTap: () {
-                 showDialog(context: context, builder: (ctx) => AlertDialog(content: const Text('Parts filtering coming soon!')));
+                showDialog(
+                  context: context,
+                  builder: (ctx) => AlertDialog(
+                    content: const Text('Parts filtering coming soon!'),
+                  ),
+                );
               },
             ),
-          ]
+          ],
         ],
       ),
     );

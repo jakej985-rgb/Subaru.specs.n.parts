@@ -6,18 +6,22 @@ part 'specs_dao.g.dart';
 
 @DriftAccessor(tables: [Specs])
 class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
-  SpecsDao(AppDatabase db) : super(db);
+  SpecsDao(super.db);
 
   Future<List<Spec>> getAllSpecs() => select(specs).get();
 
   Future<List<Spec>> getSpecsByCategory(String category) =>
-    (select(specs)..where((tbl) => tbl.category.equals(category))).get();
+      (select(specs)..where((tbl) => tbl.category.equals(category))).get();
 
   Future<List<Spec>> searchSpecs(String query) {
-     return (select(specs)..where((tbl) => tbl.title.contains(query) | tbl.body.contains(query))).get();
+    return (select(
+          specs,
+        )..where((tbl) => tbl.title.contains(query) | tbl.body.contains(query)))
+        .get();
   }
 
-  Future<void> insertSpec(Spec spec) => into(specs).insert(spec, mode: InsertMode.insertOrReplace);
+  Future<void> insertSpec(Spec spec) =>
+      into(specs).insert(spec, mode: InsertMode.insertOrReplace);
 
   Future<void> insertMultiple(List<Spec> list) async {
     await batch((batch) {
