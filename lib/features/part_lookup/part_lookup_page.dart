@@ -26,15 +26,21 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
   void initState() {
     super.initState();
     _scrollController.addListener(_scrollListener);
+    _searchController.addListener(_onSearchControllerChanged);
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    _searchController.removeListener(_onSearchControllerChanged);
     _debounce?.cancel();
     _scrollController.dispose();
     _searchController.dispose();
     super.dispose();
+  }
+
+  void _onSearchControllerChanged() {
+    // Rebuild to update the clear button visibility state
+    setState(() {});
   }
 
   void _scrollListener() {
@@ -107,6 +113,18 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
     });
   }
 
+  void _clearSearch() {
+    _searchController.clear();
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+    setState(() {
+      _searchQuery = '';
+      _results = [];
+      _currentOffset = 0;
+      _hasMore = true;
+      _isLoading = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -117,10 +135,10 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
             padding: const EdgeInsets.all(16.0),
             child: TextField(
               controller: _searchController,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: 'Search by Name or OEM Number',
                 border: const OutlineInputBorder(),
-                suffixIcon: _query.isNotEmpty
+                suffixIcon: _searchController.text.isNotEmpty
                     ? IconButton(
                         icon: const Icon(Icons.clear),
                         tooltip: 'Clear search',
