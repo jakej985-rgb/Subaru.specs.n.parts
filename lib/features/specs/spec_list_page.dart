@@ -49,7 +49,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
             _scrollController.position.maxScrollExtent - 200 &&
         !_isLoading &&
         _hasMore) {
-      _loadMore();
+      _loadMore(_searchQuery);
     }
   }
 
@@ -61,10 +61,13 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
       _isLoading = false;
       _searchQuery = '';
     });
-    await _loadMore();
+    await _loadMore('');
   }
 
-  Future<void> _loadMore() async {
+  Future<void> _loadMore(String query) async {
+    // Ensure we are loading for the correct query
+    if (query != _searchQuery) return;
+
     if (_isLoading || !_hasMore) return;
 
     setState(() {
@@ -74,34 +77,45 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     final db = ref.read(appDbProvider);
     late final List<Spec> newSpecs;
 
-    if (_searchQuery.isNotEmpty) {
-      newSpecs = await db.specsDao.searchSpecs(_searchQuery,
-          limit: pageSize, offset: _currentOffset);
-    } else {
-      newSpecs =
-          await db.specsDao.getSpecsPaged(pageSize, offset: _currentOffset);
-    }
+    try {
+      if (query.isNotEmpty) {
+        newSpecs = await db.specsDao.searchSpecs(query,
+            limit: pageSize, offset: _currentOffset);
+      } else {
+        newSpecs =
+            await db.specsDao.getSpecsPaged(pageSize, offset: _currentOffset);
+      }
 
-    if (mounted) {
-      setState(() {
-        _results.addAll(newSpecs);
-        _currentOffset += newSpecs.length;
-        if (newSpecs.length < pageSize) {
-          _hasMore = false;
+      if (mounted) {
+        // Check if the query has changed while we were waiting
+        if (_searchQuery != query) {
+          // The query changed, so these results are stale. Do nothing.
+          return;
         }
-        _isLoading = false;
-      });
+
+        setState(() {
+          _results.addAll(newSpecs);
+          _currentOffset += newSpecs.length;
+          if (newSpecs.length < pageSize) {
+            _hasMore = false;
+          }
+          _isLoading = false;
+        });
+      }
+    } catch (e) {
+      if (mounted && _searchQuery == query) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
     }
   }
 
   void _search(String query) {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
-    _debounce = Timer(const Duration(milliseconds: 500), () async {
-      if (query.isEmpty) {
-        _loadInitial();
-        return;
-      }
 
+    // Debounce search input to prevent excessive DB calls
+    _debounce = Timer(const Duration(milliseconds: 500), () async {
       setState(() {
         _searchQuery = query;
         _results = [];
@@ -110,7 +124,16 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
         _isLoading = false;
       });
 
-      await _loadMore();
+      if (query.isEmpty) {
+        // If query is empty, we load initial state (all specs)
+        // But since we just set _searchQuery to '', we can call _loadMore('')
+        // However, _loadInitial also resets _results etc. which we just did.
+        // Let's call _loadMore directly.
+        await _loadMore('');
+        return;
+      }
+
+      await _loadMore(query);
     });
   }
 
