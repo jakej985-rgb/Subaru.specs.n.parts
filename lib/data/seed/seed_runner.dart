@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 // for Value
 import 'package:specsnparts/data/db/app_db.dart';
@@ -25,20 +26,7 @@ class SeedRunner {
     final String response = await rootBundle.loadString(
       'assets/seed/vehicles.json',
     );
-    final List<dynamic> data = json.decode(response);
-    final List<Vehicle> vehicles = data
-        .map(
-          (json) => Vehicle(
-            id: json['id'],
-            year: json['year'],
-            make: json['make'],
-            model: json['model'],
-            trim: json['trim'],
-            engineCode: json['engineCode'],
-            updatedAt: DateTime.parse(json['updatedAt']),
-          ),
-        )
-        .toList();
+    final List<Vehicle> vehicles = await compute(_parseVehicles, response);
 
     await db.vehiclesDao.insertMultiple(vehicles);
   }
@@ -47,19 +35,7 @@ class SeedRunner {
     final String response = await rootBundle.loadString(
       'assets/seed/specs.json',
     );
-    final List<dynamic> data = json.decode(response);
-    final List<Spec> specs = data
-        .map(
-          (json) => Spec(
-            id: json['id'],
-            category: json['category'],
-            title: json['title'],
-            body: json['body'],
-            tags: json['tags'],
-            updatedAt: DateTime.parse(json['updatedAt']),
-          ),
-        )
-        .toList();
+    final List<Spec> specs = await compute(_parseSpecs, response);
 
     await db.specsDao.insertMultiple(specs);
   }
@@ -68,21 +44,58 @@ class SeedRunner {
     final String response = await rootBundle.loadString(
       'assets/seed/parts.json',
     );
-    final List<dynamic> data = json.decode(response);
-    final List<Part> parts = data
-        .map(
-          (json) => Part(
-            id: json['id'],
-            name: json['name'],
-            oemNumber: json['oemNumber'],
-            aftermarketNumbers: json['aftermarketNumbers'],
-            fits: json['fits'],
-            notes: json['notes'],
-            updatedAt: DateTime.parse(json['updatedAt']),
-          ),
-        )
-        .toList();
+    final List<Part> parts = await compute(_parseParts, response);
 
     await db.partsDao.insertMultiple(parts);
   }
+}
+
+List<Vehicle> _parseVehicles(String response) {
+  final List<dynamic> data = json.decode(response);
+  return data
+      .map(
+        (json) => Vehicle(
+          id: json['id'],
+          year: json['year'],
+          make: json['make'],
+          model: json['model'],
+          trim: json['trim'],
+          engineCode: json['engineCode'],
+          updatedAt: DateTime.parse(json['updatedAt']),
+        ),
+      )
+      .toList();
+}
+
+List<Spec> _parseSpecs(String response) {
+  final List<dynamic> data = json.decode(response);
+  return data
+      .map(
+        (json) => Spec(
+          id: json['id'],
+          category: json['category'],
+          title: json['title'],
+          body: json['body'],
+          tags: json['tags'],
+          updatedAt: DateTime.parse(json['updatedAt']),
+        ),
+      )
+      .toList();
+}
+
+List<Part> _parseParts(String response) {
+  final List<dynamic> data = json.decode(response);
+  return data
+      .map(
+        (json) => Part(
+          id: json['id'],
+          name: json['name'],
+          oemNumber: json['oemNumber'],
+          aftermarketNumbers: json['aftermarketNumbers'],
+          fits: json['fits'],
+          notes: json['notes'],
+          updatedAt: DateTime.parse(json['updatedAt']),
+        ),
+      )
+      .toList();
 }
