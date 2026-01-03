@@ -14,6 +14,7 @@ class SpecListPage extends ConsumerStatefulWidget {
 
 class _SpecListPageState extends ConsumerState<SpecListPage> {
   final ScrollController _scrollController = ScrollController();
+  final TextEditingController _searchController = TextEditingController();
   List<Spec> _results = [];
   int _currentOffset = 0;
   final int _pageLimit = 20;
@@ -26,6 +27,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   void initState() {
     super.initState();
     _scrollController.addListener(_scrollListener);
+    _searchController.addListener(_onSearchChanged);
     _loadInitial();
   }
 
@@ -33,7 +35,13 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   void dispose() {
     _debounce?.cancel();
     _scrollController.dispose();
+    _searchController.dispose();
     super.dispose();
+  }
+
+  void _onSearchChanged() {
+    // Rebuild to update the suffixIcon (search vs clear)
+    setState(() {});
   }
 
   void _scrollListener() {
@@ -101,6 +109,14 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     });
   }
 
+  void _clearSearch() {
+    _searchController.clear();
+    // Cancel any pending search debounce
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+    // Immediately reload initial data
+    _loadInitial();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,10 +126,17 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
-              decoration: const InputDecoration(
+              controller: _searchController,
+              decoration: InputDecoration(
                 labelText: 'Search Specs',
-                border: OutlineInputBorder(),
-                suffixIcon: Icon(Icons.search),
+                border: const OutlineInputBorder(),
+                suffixIcon: _searchController.text.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear),
+                        tooltip: 'Clear search',
+                        onPressed: _clearSearch,
+                      )
+                    : const Icon(Icons.search),
               ),
               onChanged: _search,
             ),
