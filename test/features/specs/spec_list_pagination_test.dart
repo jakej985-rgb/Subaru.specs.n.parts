@@ -28,6 +28,7 @@ class FakeSpecsDao extends SpecsDao {
       body: 'Body ${offset + index}',
       category: 'Category',
       tags: 'tag',
+      updatedAt: DateTime.now(),
     ));
   }
 
@@ -44,6 +45,7 @@ class FakeSpecsDao extends SpecsDao {
       body: 'Body ${offset + index}',
       category: 'Category',
       tags: 'tag',
+      updatedAt: DateTime.now(),
     ));
   }
 }

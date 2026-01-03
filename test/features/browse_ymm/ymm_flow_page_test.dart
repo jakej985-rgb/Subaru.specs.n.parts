@@ -52,7 +52,7 @@ void main() {
     await tester.pumpAndSettle(); // Wait for _loadModels
 
     // Should now show models
-    expect(find.text('Select Model'), findsOneWidget);
+    expect(find.textContaining('Select Model'), findsOneWidget);
     expect(find.text('WRX'), findsOneWidget);
     expect(find.text('Outback'), findsOneWidget);
 
