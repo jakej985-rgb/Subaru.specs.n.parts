@@ -14,19 +14,21 @@ class SpecListPage extends ConsumerStatefulWidget {
 
 class _SpecListPageState extends ConsumerState<SpecListPage> {
   static const int pageSize = 20;
-  final ScrollController _scrollController = ScrollController();
   final TextEditingController _searchController = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
+
   List<Spec> _results = [];
   int _currentOffset = 0;
   bool _isLoading = false;
   bool _hasMore = true;
   String _searchQuery = '';
   Timer? _debounce;
+  int _searchGeneration = 0;
 
   @override
   void initState() {
     super.initState();
-    _scrollController.addListener(_scrollListener);
+    // We use NotificationListener instead of _scrollController listener for better testability
     _searchController.addListener(_onSearchChanged);
     _loadInitial();
   }
@@ -44,16 +46,21 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     setState(() {});
   }
 
-  void _scrollListener() {
-    if (_scrollController.position.pixels >=
-            _scrollController.position.maxScrollExtent - 200 &&
-        !_isLoading &&
-        _hasMore) {
-      _loadMore(_searchQuery);
+  bool _onScrollNotification(ScrollNotification notification) {
+    if (notification is ScrollUpdateNotification) {
+      if (notification.metrics.pixels >= notification.metrics.maxScrollExtent - 200 &&
+          !_isLoading &&
+          _hasMore) {
+        _loadMore(_searchQuery);
+      }
     }
+    return false;
   }
 
   Future<void> _loadInitial() async {
+    _searchGeneration++;
+    final currentGen = _searchGeneration;
+
     setState(() {
       _results = [];
       _currentOffset = 0;
@@ -61,12 +68,14 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
       _isLoading = false;
       _searchQuery = '';
     });
-    await _loadMore('');
+
+    await _loadMore('', generation: currentGen);
   }
 
-  Future<void> _loadMore(String query) async {
-    // Ensure we are loading for the correct query
-    if (query != _searchQuery) return;
+  Future<void> _loadMore(String query, {int? generation}) async {
+    final currentGen = generation ?? _searchGeneration;
+    // If a newer search/reset has started, abort.
+    if (currentGen != _searchGeneration) return;
 
     if (_isLoading || !_hasMore) return;
 
@@ -87,11 +96,11 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
       }
 
       if (mounted) {
-        // Check if the query has changed while we were waiting
-        if (_searchQuery != query) {
-          // The query changed, so these results are stale. Do nothing.
-          return;
-        }
+        // Double check generation after async call
+        if (_searchGeneration != currentGen) return;
+
+        // Double check query hasn't changed (redundant if generation logic works, but safe)
+        if (_searchQuery != query) return;
 
         setState(() {
           _results.addAll(newSpecs);
@@ -103,7 +112,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
         });
       }
     } catch (e) {
-      if (mounted && _searchQuery == query) {
+      if (mounted && _searchGeneration == currentGen) {
         setState(() {
           _isLoading = false;
         });
@@ -114,8 +123,10 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   void _search(String query) {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
 
-    // Debounce search input to prevent excessive DB calls
     _debounce = Timer(const Duration(milliseconds: 500), () async {
+      _searchGeneration++;
+      final currentGen = _searchGeneration;
+
       setState(() {
         _searchQuery = query;
         _results = [];
@@ -125,23 +136,17 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
       });
 
       if (query.isEmpty) {
-        // If query is empty, we load initial state (all specs)
-        // But since we just set _searchQuery to '', we can call _loadMore('')
-        // However, _loadInitial also resets _results etc. which we just did.
-        // Let's call _loadMore directly.
-        await _loadMore('');
+        await _loadMore('', generation: currentGen);
         return;
       }
 
-      await _loadMore(query);
+      await _loadMore(query, generation: currentGen);
     });
   }
 
   void _clearSearch() {
     _searchController.clear();
-    // Cancel any pending search debounce
     if (_debounce?.isActive ?? false) _debounce!.cancel();
-    // Immediately reload initial data
     _loadInitial();
   }
 
@@ -170,55 +175,60 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
             ),
           ),
           Expanded(
-            child: ListView.builder(
-              controller: _scrollController,
-              itemCount: _results.length + (_isLoading ? 1 : 0),
-              itemBuilder: (context, index) {
-                if (index == _results.length) {
-                  return const Center(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: CircularProgressIndicator(),
-                    ),
-                  );
-                }
-                final spec = _results[index];
-                return ListTile(
-                  title: Text(spec.title),
-                  subtitle: Text(spec.category),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () {
-                    // Show detail dialog or page
-                    showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                              title: Text(spec.title),
-                              content: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Category: ${spec.category}',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodySmall),
-                                  const SizedBox(height: 8),
-                                  Text(spec.body),
-                                  const SizedBox(height: 8),
-                                  Text('Tags: ${spec.tags}',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .bodySmall),
+            child: NotificationListener<ScrollNotification>(
+              onNotification: _onScrollNotification,
+              child: ListView.builder(
+                controller: _scrollController,
+                // Ensure list is scrollable even if items fit in viewport,
+                // so tests can drag to trigger scroll events.
+                physics: const AlwaysScrollableScrollPhysics(),
+                itemCount: _results.length + (_isLoading ? 1 : 0),
+                itemBuilder: (context, index) {
+                  if (index == _results.length) {
+                    return const Center(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: CircularProgressIndicator(),
+                      ),
+                    );
+                  }
+                  final spec = _results[index];
+                  return ListTile(
+                    title: Text(spec.title),
+                    subtitle: Text(spec.category),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                                title: Text(spec.title),
+                                content: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Category: ${spec.category}',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodySmall),
+                                    const SizedBox(height: 8),
+                                    Text(spec.body),
+                                    const SizedBox(height: 8),
+                                    Text('Tags: ${spec.tags}',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodySmall),
+                                  ],
+                                ),
+                                actions: [
+                                  TextButton(
+                                      onPressed: () => Navigator.pop(context),
+                                      child: const Text('Close'))
                                 ],
-                              ),
-                              actions: [
-                                TextButton(
-                                    onPressed: () => Navigator.pop(context),
-                                    child: const Text('Close'))
-                              ],
-                            ));
-                  },
-                );
-              },
+                              ));
+                    },
+                  );
+                },
+              ),
             ),
           ),
         ],
