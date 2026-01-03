@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:specsnparts/data/db/app_db.dart';
+import 'package:specsnparts/data/db/dao/parts_dao.dart';
 import 'package:specsnparts/features/part_lookup/part_lookup_page.dart';
 
 // Create a Fake implementation since Mockito generation is not available/easy here
