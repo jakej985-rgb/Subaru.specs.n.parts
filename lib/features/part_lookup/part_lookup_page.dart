@@ -12,41 +12,98 @@ class PartLookupPage extends ConsumerStatefulWidget {
 }
 
 class _PartLookupPageState extends ConsumerState<PartLookupPage> {
-  final TextEditingController _controller = TextEditingController();
-  String _query = '';
+  final ScrollController _scrollController = ScrollController();
+  final TextEditingController _searchController = TextEditingController();
   List<Part> _results = [];
   Timer? _debounce;
+  int _currentOffset = 0;
+  final int _pageLimit = 20;
+  bool _isLoading = false;
+  bool _hasMore = true;
+  String _searchQuery = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(_scrollListener);
+  }
 
   @override
   void dispose() {
     _controller.dispose();
     _debounce?.cancel();
+    _scrollController.dispose();
+    _searchController.dispose();
     super.dispose();
   }
 
-  void _clearSearch() {
-    _controller.clear();
+  void _scrollListener() {
+    if (_scrollController.position.pixels >=
+            _scrollController.position.maxScrollExtent - 200 &&
+        !_isLoading &&
+        _hasMore &&
+        _searchQuery.isNotEmpty) {
+      _loadMore(_searchQuery);
+    }
+  }
+
+  Future<void> _loadMore(String query) async {
+    // If the query passed to this function is not the current one, abort.
+    if (query != _searchQuery) return;
+    if (_isLoading || !_hasMore) return;
+
     setState(() {
-      _query = '';
-      _results = [];
+      _isLoading = true;
     });
-    _debounce?.cancel();
+
+    final db = ref.read(appDbProvider);
+    try {
+      final results = await db.partsDao.searchParts(
+        query,
+        limit: _pageLimit,
+        offset: _currentOffset,
+      );
+
+      if (!mounted) return;
+
+      // Check again if the query has changed while we were waiting
+      if (query != _searchQuery) return;
+
+      setState(() {
+        _results.addAll(results);
+        _currentOffset += results.length;
+        if (results.length < _pageLimit) {
+          _hasMore = false;
+        }
+        _isLoading = false;
+      });
+    } catch (e) {
+      if (mounted && query == _searchQuery) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    }
   }
 
   void _search(String query) {
-    setState(() => _query = query);
-
     if (_debounce?.isActive ?? false) _debounce!.cancel();
     _debounce = Timer(const Duration(milliseconds: 500), () async {
+      // If the query is effectively empty (or unchanged from a logic perspective, though UI handles that), reset.
+
+      setState(() {
+        _searchQuery = query;
+        _results = [];
+        _currentOffset = 0;
+        _hasMore = true;
+        _isLoading = false;
+      });
+
       if (query.isEmpty) {
-        setState(() => _results = []);
         return;
       }
-      final db = ref.read(appDbProvider);
-      final results = await db.partsDao.searchParts(query);
-      if (mounted) {
-        setState(() => _results = results);
-      }
+
+      await _loadMore(query);
     });
   }
 
@@ -59,8 +116,8 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
-              controller: _controller,
-              decoration: InputDecoration(
+              controller: _searchController,
+              decoration: const InputDecoration(
                 labelText: 'Search by Name or OEM Number',
                 border: const OutlineInputBorder(),
                 suffixIcon: _query.isNotEmpty
@@ -75,11 +132,20 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
             ),
           ),
           Expanded(
-            child: _results.isEmpty && _query.isNotEmpty
+            child: _results.isEmpty && _searchQuery.isNotEmpty && !_isLoading
                 ? const Center(child: Text('No parts found.'))
                 : ListView.builder(
-                    itemCount: _results.length,
+                    controller: _scrollController,
+                    itemCount: _results.length + (_isLoading ? 1 : 0),
                     itemBuilder: (context, index) {
+                      if (index == _results.length) {
+                        return const Center(
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: CircularProgressIndicator(),
+                          ),
+                        );
+                      }
                       final part = _results[index];
                       return ListTile(
                         title: Text(part.name),
