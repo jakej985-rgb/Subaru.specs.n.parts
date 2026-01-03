@@ -76,7 +76,7 @@ void main() {
 
       final models = await vehiclesDao.getDistinctModelsByYear(2020);
 
-      expect(models.toSet(), {'Outback', 'Forester'});
+      expect(models, ['Forester', 'Outback']);
       expect(models.length, 2);
     });
   });
