@@ -23,7 +23,7 @@ class FakeSpecsDao extends SpecsDao {
 
     // Generate dummy specs to simulate data
     return List.generate(limit, (index) => Spec(
-      id: offset + index,
+      id: (offset + index).toString(),
       title: 'Spec ${offset + index} for $query',
       body: 'Body ${offset + index}',
       category: 'Category',
@@ -40,7 +40,7 @@ class FakeSpecsDao extends SpecsDao {
 
     // Generate dummy specs to simulate data
     return List.generate(limit, (index) => Spec(
-      id: offset + index,
+      id: (offset + index).toString(),
       title: 'Spec ${offset + index}',
       body: 'Body ${offset + index}',
       category: 'Category',
