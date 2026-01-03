@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
@@ -12,32 +14,41 @@ class SpecListPage extends ConsumerStatefulWidget {
 
 class _SpecListPageState extends ConsumerState<SpecListPage> {
   final ScrollController _scrollController = ScrollController();
+  final TextEditingController _searchController = TextEditingController();
   List<Spec> _results = [];
   int _currentOffset = 0;
   final int _pageLimit = 20;
   bool _isLoading = false;
   bool _hasMore = true;
-  bool _isSearching = false;
+  String _searchQuery = '';
+  Timer? _debounce;
 
   @override
   void initState() {
     super.initState();
     _scrollController.addListener(_scrollListener);
+    _searchController.addListener(_onSearchChanged);
     _loadInitial();
   }
 
   @override
   void dispose() {
+    _debounce?.cancel();
     _scrollController.dispose();
+    _searchController.dispose();
     super.dispose();
+  }
+
+  void _onSearchChanged() {
+    // Rebuild to update the suffixIcon (search vs clear)
+    setState(() {});
   }
 
   void _scrollListener() {
     if (_scrollController.position.pixels >=
             _scrollController.position.maxScrollExtent - 200 &&
         !_isLoading &&
-        _hasMore &&
-        !_isSearching) {
+        _hasMore) {
       _loadMore();
     }
   }
@@ -48,7 +59,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
       _currentOffset = 0;
       _hasMore = true;
       _isLoading = false;
-      _isSearching = false;
+      _searchQuery = '';
     });
     await _loadMore();
   }
@@ -61,8 +72,15 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     });
 
     final db = ref.read(appDbProvider);
-    final newSpecs =
-        await db.specsDao.getSpecsPaged(_pageLimit, offset: _currentOffset);
+    late final List<Spec> newSpecs;
+
+    if (_searchQuery.isNotEmpty) {
+      newSpecs = await db.specsDao.searchSpecs(_searchQuery,
+          limit: _pageLimit, offset: _currentOffset);
+    } else {
+      newSpecs =
+          await db.specsDao.getSpecsPaged(_pageLimit, offset: _currentOffset);
+    }
 
     if (mounted) {
       setState(() {
@@ -76,23 +94,32 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     }
   }
 
-  void _search(String query) async {
-    // query param is used directly below
-    if (query.isEmpty) {
-      _loadInitial();
-      return;
-    }
+  void _search(String query) {
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+    _debounce = Timer(const Duration(milliseconds: 500), () async {
+      if (query.isEmpty) {
+        _loadInitial();
+        return;
+      }
 
-    setState(() {
-      _isSearching = true;
+      setState(() {
+        _searchQuery = query;
+        _results = [];
+        _currentOffset = 0;
+        _hasMore = true;
+        _isLoading = false;
+      });
+
+      await _loadMore();
     });
+  }
 
-    final db = ref.read(appDbProvider);
-    final results = await db.specsDao.searchSpecs(query);
-
-    if (mounted) {
-      setState(() => _results = results);
-    }
+  void _clearSearch() {
+    _searchController.clear();
+    // Cancel any pending search debounce
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+    // Immediately reload initial data
+    _loadInitial();
   }
 
   @override
@@ -104,10 +131,17 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
-              decoration: const InputDecoration(
+              controller: _searchController,
+              decoration: InputDecoration(
                 labelText: 'Search Specs',
-                border: OutlineInputBorder(),
-                suffixIcon: Icon(Icons.search),
+                border: const OutlineInputBorder(),
+                suffixIcon: _searchController.text.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear),
+                        tooltip: 'Clear search',
+                        onPressed: _clearSearch,
+                      )
+                    : const Icon(Icons.search),
               ),
               onChanged: _search,
             ),
