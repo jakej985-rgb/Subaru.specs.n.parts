@@ -9,10 +9,6 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
     with _$VehiclesDaoMixin {
   VehiclesDao(super.db);
 
-  /// Returns all vehicles for a given [year].
-  Future<List<Vehicle>> getVehiclesByYear(int year) =>
-      (select(vehicles)..where((tbl) => tbl.year.equals(year))).get();
-
   /// Returns a distinct list of years sorted descending.
   Future<List<int>> getDistinctYears() {
     final q = selectOnly(vehicles, distinct: true)
