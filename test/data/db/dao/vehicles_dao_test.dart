@@ -1,6 +1,7 @@
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:specsnparts/data/db/app_db.dart';
+import 'package:specsnparts/data/db/dao/vehicles_dao.dart';
 // ignore: unused_import
 import 'package:specsnparts/data/db/tables.dart';
 
