@@ -11,9 +11,9 @@
     "id": "s2",
     "category": "Oil",
     "title": "STI 2015-2021 Oil Capacity",
-    "body": "4.3 Liters (4.5 Quarts) approx.",
+    "body": "4.3 Liters (4.5 Quarts)",
     "tags": "oil,capacity,ej257,sti,va",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "updatedAt": "2024-05-24T00:00:00Z"
   },
   {
     "id": "s3",
@@ -76,8 +76,8 @@
     "category": "Transmission",
     "title": "STI 6MT Fluid Capacity",
     "body": "3.5 - 4.1 Liters (3.7 - 4.3 Quarts) depending on year.",
-    "tags": "trans,sti,6mt",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "tags": "trans,sti,6mt,fluid,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
   },
   {
     "id": "s11",
@@ -219,25 +219,25 @@
     "id": "s28",
     "category": "Transmission",
     "title": "WRX 5MT Fluid Capacity",
-    "body": "3.5 Liters (3.7 Quarts) approx.",
-    "tags": "trans,wrx,5mt,gd",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "body": "3.5 Liters (3.7 Quarts)",
+    "tags": "trans,wrx,5mt,gd,fluid,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
   },
   {
     "id": "s29",
     "category": "Fluids",
     "title": "R160 Rear Diff Capacity",
     "body": "0.8 Liters (0.8 Quarts)",
-    "tags": "diff,fluid,r160,wrx,gd",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "tags": "diff,fluid,r160,wrx,gd,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
   },
   {
     "id": "s30",
     "category": "Fluids",
     "title": "R180 Rear Diff Capacity",
     "body": "1.0 Liters (1.1 Quarts)",
-    "tags": "diff,fluid,r180,sti,gd",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "tags": "diff,fluid,r180,sti,gd,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
   },
   {
     "id": "s31",
@@ -302,5 +302,13 @@
     "body": "M12 x 1.25",
     "tags": "wheels,lugs,thread,wrx,sti",
     "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s39",
+    "category": "Transmission",
+    "title": "WRX 2015-2021 Trans Fluid Capacity",
+    "body": "3.3 Liters (3.5 Quarts)",
+    "tags": "trans,fluid,capacity,wrx,va,6mt",
+    "updatedAt": "2024-05-24T00:00:00Z"
   }
 ]
