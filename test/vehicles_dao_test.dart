@@ -31,6 +31,11 @@ void main() {
         model: 'WRX',
         trim: 'Base',
         engineCode: 'FA24',
+        year: 2024,
+        make: 'Subaru',
+        model: 'Outback',
+        trim: 'Base',
+        engineCode: 'FB25',
         updatedAt: DateTime.now(),
       );
       final v3 = Vehicle(
@@ -52,6 +57,32 @@ void main() {
     });
 
     test('getDistinctModelsByYear returns only distinct models for the given year sorted ascending', () async {
+        year: 2023,
+        make: 'Subaru',
+        model: 'Legacy',
+        trim: 'Sport',
+        engineCode: 'FA24',
+        updatedAt: DateTime.now(),
+      );
+      final v4 = Vehicle(
+        id: 'v4',
+        year: 2022,
+        make: 'Subaru',
+        model: 'Impreza',
+        trim: 'Base',
+        engineCode: 'FB20',
+        updatedAt: DateTime.now(),
+      );
+
+      await db.vehiclesDao.insertMultiple([v1, v2, v3, v4]);
+
+      final years = await db.vehiclesDao.getDistinctYears();
+
+      expect(years.length, 3);
+      expect(years, [2024, 2023, 2022]);
+    });
+
+    test('getDistinctModelsByYear returns only distinct models for the given year', () async {
       final v1 = Vehicle(
         id: 'v1',
         year: 2024,

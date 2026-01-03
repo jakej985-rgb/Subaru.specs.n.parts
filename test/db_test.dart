@@ -30,4 +30,34 @@ void main() {
     expect(list.length, 1);
     expect(list.first.model, 'WRX');
   });
+
+  test('getDistinctYears returns sorted unique years', () async {
+    final v1 = Vehicle(
+      id: 'v1',
+      year: 2020,
+      make: 'Subaru',
+      model: 'Impreza',
+      updatedAt: DateTime.now(),
+    );
+    final v2 = Vehicle(
+      id: 'v2',
+      year: 2022,
+      make: 'Subaru',
+      model: 'WRX',
+      updatedAt: DateTime.now(),
+    );
+    final v3 = Vehicle(
+      id: 'v3',
+      year: 2020,
+      make: 'Subaru',
+      model: 'Crosstrek',
+      updatedAt: DateTime.now(),
+    );
+
+    await db.vehiclesDao.insertMultiple([v1, v2, v3]);
+
+    final years = await db.vehiclesDao.getDistinctYears();
+
+    expect(years, [2022, 2020]);
+  });
 }
