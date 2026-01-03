@@ -19,7 +19,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   final int _pageLimit = 20;
   bool _isLoading = false;
   bool _hasMore = true;
-  bool _isSearching = false;
+  String _searchQuery = '';
   Timer? _debounce;
 
   @override
@@ -40,8 +40,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     if (_scrollController.position.pixels >=
             _scrollController.position.maxScrollExtent - 200 &&
         !_isLoading &&
-        _hasMore &&
-        !_isSearching) {
+        _hasMore) {
       _loadMore();
     }
   }
@@ -52,7 +51,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
       _currentOffset = 0;
       _hasMore = true;
       _isLoading = false;
-      _isSearching = false;
+      _searchQuery = '';
     });
     await _loadMore();
   }
@@ -65,8 +64,15 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     });
 
     final db = ref.read(appDbProvider);
-    final newSpecs =
-        await db.specsDao.getSpecsPaged(_pageLimit, offset: _currentOffset);
+    late final List<Spec> newSpecs;
+
+    if (_searchQuery.isNotEmpty) {
+      newSpecs = await db.specsDao.searchSpecs(_searchQuery,
+          limit: _pageLimit, offset: _currentOffset);
+    } else {
+      newSpecs =
+          await db.specsDao.getSpecsPaged(_pageLimit, offset: _currentOffset);
+    }
 
     if (mounted) {
       setState(() {
@@ -89,15 +95,14 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
       }
 
       setState(() {
-        _isSearching = true;
+        _searchQuery = query;
+        _results = [];
+        _currentOffset = 0;
+        _hasMore = true;
+        _isLoading = false;
       });
 
-      final db = ref.read(appDbProvider);
-      final results = await db.specsDao.searchSpecs(query);
-
-      if (mounted) {
-        setState(() => _results = results);
-      }
+      await _loadMore();
     });
   }
 
