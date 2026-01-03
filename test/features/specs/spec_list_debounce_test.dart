@@ -12,7 +12,8 @@ class FakeSpecsDao extends SpecsDao {
   int searchCallCount = 0;
 
   @override
-  Future<List<Spec>> searchSpecs(String query) async {
+  Future<List<Spec>> searchSpecs(String query,
+      {int limit = 50, int offset = 0}) async {
     searchCallCount++;
     return [];
   }
