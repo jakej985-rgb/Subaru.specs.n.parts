@@ -88,5 +88,41 @@
     "trim": "Coupe",
     "engineCode": "EJ251",
     "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v11",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base",
+    "engineCode": "FB20",
+    "updatedAt": "2024-05-22T00:00:00Z"
+  },
+  {
+    "id": "v12",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Premium",
+    "engineCode": "FB20",
+    "updatedAt": "2024-05-22T00:00:00Z"
+  },
+  {
+    "id": "v13",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Limited",
+    "engineCode": "FB25",
+    "updatedAt": "2024-05-22T00:00:00Z"
+  },
+  {
+    "id": "v14",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Wilderness",
+    "engineCode": "FB25",
+    "updatedAt": "2024-05-22T00:00:00Z"
   }
 ]
