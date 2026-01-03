@@ -7,14 +7,19 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:drift/native.dart';
 import 'package:specsnparts/app.dart';
+import 'package:specsnparts/data/db/app_db.dart';
 
 void main() {
   testWidgets('App smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(
-      const ProviderScope(
-        child: SubaruSpecsApp(),
+      ProviderScope(
+        overrides: [
+          appDbProvider.overrideWithValue(AppDatabase(NativeDatabase.memory())),
+        ],
+        child: const SubaruSpecsApp(),
       ),
     );
 
