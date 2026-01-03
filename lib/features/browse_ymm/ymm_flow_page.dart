@@ -35,12 +35,21 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
 
   Future<void> _loadModels(int year) async {
     final db = ref.read(appDbProvider);
-    final vehicles = await db.vehiclesDao.getVehiclesByYear(year);
-    final models = vehicles.map((v) => v.model).toSet().toList()..sort();
+    final models = await db.vehiclesDao.getDistinctModelsByYear(year);
     setState(() {
-      _models = models;
-      _vehicles = vehicles; // Cache for next step
+      _models = models..sort();
+      _vehicles = []; // Clear previous vehicles
     });
+  }
+
+  Future<void> _loadVehicles(int year, String model) async {
+    final db = ref.read(appDbProvider);
+    final vehicles = await db.vehiclesDao.getVehiclesByYearAndModel(year, model);
+    if (mounted && _selectedModel == model) {
+      setState(() {
+        _vehicles = vehicles;
+      });
+    }
   }
 
   @override
@@ -86,7 +95,11 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                 title: Text(m),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () {
-                  setState(() => _selectedModel = m);
+                  setState(() {
+                    _selectedModel = m;
+                    _vehicles = [];
+                  });
+                  _loadVehicles(_selectedYear!, m);
                 },
               ),
             ),
@@ -107,9 +120,6 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
               ],
             ),
             ..._vehicles
-                .where(
-                  (v) => v.year == _selectedYear && v.model == _selectedModel,
-                )
                 .map(
                   (v) => ListTile(
                     title: Text('${v.trim ?? "Base"} (${v.engineCode ?? "?"})'),
