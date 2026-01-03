@@ -14,6 +14,16 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
   Future<List<Vehicle>> getVehiclesByYear(int year) =>
       (select(vehicles)..where((tbl) => tbl.year.equals(year))).get();
 
+  Future<List<int>> getDistinctYears() {
+    final query = selectOnly(vehicles, distinct: true)
+      ..addColumns([vehicles.year])
+      ..orderBy([
+        OrderingTerm(expression: vehicles.year, mode: OrderingMode.desc)
+      ]);
+
+    return query.map((row) => row.read(vehicles.year)!).get();
+  }
+
   Future<void> insertVehicle(Vehicle vehicle) =>
       into(vehicles).insert(vehicle, mode: InsertMode.insertOrReplace);
 
