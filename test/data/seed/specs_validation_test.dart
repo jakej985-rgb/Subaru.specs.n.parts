@@ -67,5 +67,33 @@ void main() {
       expect(hasVa, isTrue, reason: 'Missing Oil Capacity spec for VA platform');
       expect(hasVb, isTrue, reason: 'Missing Oil Capacity spec for VB platform');
     });
+
+    test('Key platforms must have Bolt Pattern specs', () {
+      bool hasGd = false;
+      bool hasVa = false;
+      bool hasVb = false;
+      bool hasGdSti04 = false;
+
+      for (final spec in specs) {
+        final tags = (spec['tags'] as String).toLowerCase();
+        final title = (spec['title'] as String);
+
+        if (tags.contains('bolt_pattern')) {
+          if (tags.contains('gd') && tags.contains('wrx')) hasGd = true;
+          if (tags.contains('va') && (tags.contains('wrx') || tags.contains('sti'))) hasVa = true;
+          if (tags.contains('vb') && tags.contains('wrx')) hasVb = true;
+
+          // Specific check for the 2004 STI exception
+          if (tags.contains('gd') && tags.contains('sti') && tags.contains('2004')) {
+             if (spec['body'] == '5x100') hasGdSti04 = true;
+          }
+        }
+      }
+
+      expect(hasGd, isTrue, reason: 'Missing Bolt Pattern spec for GD WRX');
+      expect(hasVa, isTrue, reason: 'Missing Bolt Pattern spec for VA WRX/STI');
+      expect(hasVb, isTrue, reason: 'Missing Bolt Pattern spec for VB WRX');
+      expect(hasGdSti04, isTrue, reason: 'Missing 2004 STI specific Bolt Pattern (5x100)');
+    });
   });
 }
