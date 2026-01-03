@@ -37,7 +37,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
     final db = ref.read(appDbProvider);
     final models = await db.vehiclesDao.getDistinctModelsByYear(year);
     setState(() {
-      _models = models..sort();
+      _models = models;
       _vehicles = []; // Clear previous vehicles
     });
   }
