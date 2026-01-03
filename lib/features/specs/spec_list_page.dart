@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
@@ -18,6 +20,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   bool _isLoading = false;
   bool _hasMore = true;
   bool _isSearching = false;
+  Timer? _debounce;
 
   @override
   void initState() {
@@ -28,6 +31,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
 
   @override
   void dispose() {
+    _debounce?.cancel();
     _scrollController.dispose();
     super.dispose();
   }
@@ -76,23 +80,25 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     }
   }
 
-  void _search(String query) async {
-    // query param is used directly below
-    if (query.isEmpty) {
-      _loadInitial();
-      return;
-    }
+  void _search(String query) {
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+    _debounce = Timer(const Duration(milliseconds: 500), () async {
+      if (query.isEmpty) {
+        _loadInitial();
+        return;
+      }
 
-    setState(() {
-      _isSearching = true;
+      setState(() {
+        _isSearching = true;
+      });
+
+      final db = ref.read(appDbProvider);
+      final results = await db.specsDao.searchSpecs(query);
+
+      if (mounted) {
+        setState(() => _results = results);
+      }
     });
-
-    final db = ref.read(appDbProvider);
-    final results = await db.specsDao.searchSpecs(query);
-
-    if (mounted) {
-      setState(() => _results = results);
-    }
   }
 
   @override
