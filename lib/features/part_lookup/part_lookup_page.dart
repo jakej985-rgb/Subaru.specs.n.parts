@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
@@ -12,16 +14,29 @@ class PartLookupPage extends ConsumerStatefulWidget {
 class _PartLookupPageState extends ConsumerState<PartLookupPage> {
   String _query = '';
   List<Part> _results = [];
+  Timer? _debounce;
 
-  void _search(String query) async {
+  @override
+  void dispose() {
+    _debounce?.cancel();
+    super.dispose();
+  }
+
+  void _search(String query) {
     setState(() => _query = query);
-    if (query.isEmpty) {
-      setState(() => _results = []);
-      return;
-    }
-    final db = ref.read(appDbProvider);
-    final results = await db.partsDao.searchParts(query);
-    setState(() => _results = results);
+
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+    _debounce = Timer(const Duration(milliseconds: 500), () async {
+      if (query.isEmpty) {
+        setState(() => _results = []);
+        return;
+      }
+      final db = ref.read(appDbProvider);
+      final results = await db.partsDao.searchParts(query);
+      if (mounted) {
+        setState(() => _results = results);
+      }
+    });
   }
 
   @override
