@@ -88,7 +88,7 @@ void main() {
     expect(find.text('Spec 19'), findsOneWidget);
 
     // Scroll to the bottom to trigger load more
-    final scrollFinder = find.byType(Scrollable);
+    final scrollFinder = find.descendant(of: find.byType(ListView), matching: find.byType(Scrollable));
     await tester.scrollUntilVisible(
       find.text('Spec 19'), // Scroll to the last item of the first page
       500.0,
@@ -150,7 +150,7 @@ void main() {
     expect(find.text('Spec 0 for Test'), findsOneWidget);
 
     // Scroll to load more search results
-    final scrollFinder = find.byType(Scrollable);
+    final scrollFinder = find.descendant(of: find.byType(ListView), matching: find.byType(Scrollable));
     await tester.scrollUntilVisible(
       find.text('Spec 19 for Test'),
       500.0,
