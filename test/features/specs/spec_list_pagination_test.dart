@@ -28,7 +28,6 @@ class FakeSpecsDao extends SpecsDao {
       body: 'Body ${offset + index}',
       category: 'Category',
       tags: 'tag',
-      year: 2023,
     ));
   }
 
@@ -45,7 +44,6 @@ class FakeSpecsDao extends SpecsDao {
       body: 'Body ${offset + index}',
       category: 'Category',
       tags: 'tag',
-      year: 2023,
     ));
   }
 }
