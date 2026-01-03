@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
+import 'package:specsnparts/data/db/dao/vehicles_dao.dart';
 
 class YmmFlowPage extends ConsumerStatefulWidget {
   const YmmFlowPage({super.key});
@@ -27,6 +28,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
 
   Future<void> _loadYears() async {
     final db = ref.read(appDbProvider);
+    // Efficiently fetch only distinct years
     final List<int> years = await db.vehiclesDao.getDistinctYears();
     setState(() => _years = years);
   }
