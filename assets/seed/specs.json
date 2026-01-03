@@ -246,5 +246,61 @@
     "body": "7.0 - 7.7 Liters (7.4 - 8.1 Quarts) depending on model.",
     "tags": "coolant,capacity,gd,wrx,sti",
     "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s32",
+    "category": "Wheels",
+    "title": "Bolt Pattern (WRX 2022+)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,wrx,vb,2022,2023,2024",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s33",
+    "category": "Wheels",
+    "title": "Bolt Pattern (WRX/STI 2015-2021)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,wrx,sti,va,2015,2016,2017,2018,2019,2020,2021",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s34",
+    "category": "Wheels",
+    "title": "Bolt Pattern (STI 2005-2007)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,sti,gd,2005,2006,2007",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s35",
+    "category": "Wheels",
+    "title": "Bolt Pattern (STI 2004)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,sti,gd,2004",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s36",
+    "category": "Wheels",
+    "title": "Bolt Pattern (WRX 2002-2007)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,wrx,gd,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s37",
+    "category": "Wheels",
+    "title": "Hub Center Bore",
+    "body": "56.1 mm",
+    "tags": "wheels,hub,bore,wrx,sti,impreza",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s38",
+    "category": "Wheels",
+    "title": "Lug Thread Size",
+    "body": "M12 x 1.25",
+    "tags": "wheels,lugs,thread,wrx,sti",
+    "updatedAt": "2024-05-23T00:00:00Z"
   }
 ]
