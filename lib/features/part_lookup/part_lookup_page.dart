@@ -12,14 +12,25 @@ class PartLookupPage extends ConsumerStatefulWidget {
 }
 
 class _PartLookupPageState extends ConsumerState<PartLookupPage> {
+  final TextEditingController _controller = TextEditingController();
   String _query = '';
   List<Part> _results = [];
   Timer? _debounce;
 
   @override
   void dispose() {
+    _controller.dispose();
     _debounce?.cancel();
     super.dispose();
+  }
+
+  void _clearSearch() {
+    _controller.clear();
+    setState(() {
+      _query = '';
+      _results = [];
+    });
+    _debounce?.cancel();
   }
 
   void _search(String query) {
@@ -48,10 +59,17 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
-              decoration: const InputDecoration(
+              controller: _controller,
+              decoration: InputDecoration(
                 labelText: 'Search by Name or OEM Number',
-                border: OutlineInputBorder(),
-                suffixIcon: Icon(Icons.search),
+                border: const OutlineInputBorder(),
+                suffixIcon: _query.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear),
+                        tooltip: 'Clear search',
+                        onPressed: _clearSearch,
+                      )
+                    : const Icon(Icons.search),
               ),
               onChanged: _search,
             ),
