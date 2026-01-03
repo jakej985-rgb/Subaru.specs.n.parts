@@ -8,8 +8,6 @@ part 'specs_dao.g.dart';
 class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
   SpecsDao(super.db);
 
-  Future<List<Spec>> getAllSpecs() => select(specs).get();
-
   Future<List<Spec>> getSpecsPaged(int limit, {int offset = 0}) =>
       (select(specs)..limit(limit, offset: offset)).get();
 
