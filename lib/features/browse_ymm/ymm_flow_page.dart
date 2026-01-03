@@ -27,7 +27,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
 
   Future<void> _loadYears() async {
     final db = ref.read(appDbProvider);
-    final years = await db.vehiclesDao.getDistinctYears();
+    final List<int> years = await db.vehiclesDao.getDistinctYears();
     setState(() => _years = years);
   }
 

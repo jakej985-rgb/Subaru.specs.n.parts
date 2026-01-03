@@ -30,6 +30,7 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
 
   @override
   void dispose() {
+    _controller.dispose();
     _debounce?.cancel();
     _scrollController.dispose();
     _searchController.dispose();
@@ -118,8 +119,14 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
               controller: _searchController,
               decoration: const InputDecoration(
                 labelText: 'Search by Name or OEM Number',
-                border: OutlineInputBorder(),
-                suffixIcon: Icon(Icons.search),
+                border: const OutlineInputBorder(),
+                suffixIcon: _query.isNotEmpty
+                    ? IconButton(
+                        icon: const Icon(Icons.clear),
+                        tooltip: 'Clear search',
+                        onPressed: _clearSearch,
+                      )
+                    : const Icon(Icons.search),
               ),
               onChanged: _search,
             ),

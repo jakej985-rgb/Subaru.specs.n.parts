@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-// for Value
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -26,7 +25,7 @@ class SeedRunner {
     final String response = await rootBundle.loadString(
       'assets/seed/vehicles.json',
     );
-    final List<Vehicle> vehicles = await compute(_parseVehicles, response);
+    final List<Vehicle> vehicles = await compute(parseVehicles, response);
 
     await db.vehiclesDao.insertMultiple(vehicles);
   }
@@ -35,7 +34,7 @@ class SeedRunner {
     final String response = await rootBundle.loadString(
       'assets/seed/specs.json',
     );
-    final List<Spec> specs = await compute(_parseSpecs, response);
+    final List<Spec> specs = await compute(parseSpecs, response);
 
     await db.specsDao.insertMultiple(specs);
   }
@@ -44,13 +43,13 @@ class SeedRunner {
     final String response = await rootBundle.loadString(
       'assets/seed/parts.json',
     );
-    final List<Part> parts = await compute(_parseParts, response);
+    final List<Part> parts = await compute(parseParts, response);
 
     await db.partsDao.insertMultiple(parts);
   }
 }
 
-List<Vehicle> _parseVehicles(String response) {
+List<Vehicle> parseVehicles(String response) {
   final List<dynamic> data = json.decode(response);
   return data
       .map(
@@ -67,7 +66,7 @@ List<Vehicle> _parseVehicles(String response) {
       .toList();
 }
 
-List<Spec> _parseSpecs(String response) {
+List<Spec> parseSpecs(String response) {
   final List<dynamic> data = json.decode(response);
   return data
       .map(
@@ -83,7 +82,7 @@ List<Spec> _parseSpecs(String response) {
       .toList();
 }
 
-List<Part> _parseParts(String response) {
+List<Part> parseParts(String response) {
   final List<dynamic> data = json.decode(response);
   return data
       .map(
