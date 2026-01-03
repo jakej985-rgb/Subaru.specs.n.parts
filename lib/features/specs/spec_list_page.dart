@@ -13,11 +13,11 @@ class SpecListPage extends ConsumerStatefulWidget {
 }
 
 class _SpecListPageState extends ConsumerState<SpecListPage> {
+  static const int pageSize = 20;
   final ScrollController _scrollController = ScrollController();
   final TextEditingController _searchController = TextEditingController();
   List<Spec> _results = [];
   int _currentOffset = 0;
-  final int _pageLimit = 20;
   bool _isLoading = false;
   bool _hasMore = true;
   String _searchQuery = '';
@@ -76,17 +76,17 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
 
     if (_searchQuery.isNotEmpty) {
       newSpecs = await db.specsDao.searchSpecs(_searchQuery,
-          limit: _pageLimit, offset: _currentOffset);
+          limit: pageSize, offset: _currentOffset);
     } else {
       newSpecs =
-          await db.specsDao.getSpecsPaged(_pageLimit, offset: _currentOffset);
+          await db.specsDao.getSpecsPaged(pageSize, offset: _currentOffset);
     }
 
     if (mounted) {
       setState(() {
         _results.addAll(newSpecs);
         _currentOffset += newSpecs.length;
-        if (newSpecs.length < _pageLimit) {
+        if (newSpecs.length < pageSize) {
           _hasMore = false;
         }
         _isLoading = false;
