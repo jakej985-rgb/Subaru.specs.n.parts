@@ -41,6 +41,7 @@ void main() {
     );
 
     // Initial state: years should be visible
+    await tester.pump(); // Ensure initState completes
     await tester.pumpAndSettle(); // Wait for _loadYears
 
     expect(find.text('2022'), findsOneWidget);

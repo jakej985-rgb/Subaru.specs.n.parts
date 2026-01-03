@@ -13,7 +13,8 @@ class FakePartsDao extends PartsDao {
   int searchCallCount = 0;
 
   @override
-  Future<List<Part>> searchParts(String query) async {
+  Future<List<Part>> searchParts(String query,
+      {int limit = 50, int offset = 0}) async {
     searchCallCount++;
     return [];
   }
