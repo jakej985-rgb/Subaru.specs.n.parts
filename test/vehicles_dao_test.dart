@@ -14,7 +14,44 @@ void main() {
   });
 
   group('VehiclesDao', () {
-    test('getDistinctModelsByYear returns only distinct models for the given year', () async {
+    test('getDistinctYears returns years sorted descending', () async {
+      final v1 = Vehicle(
+        id: 'v1',
+        year: 2024,
+        make: 'Subaru',
+        model: 'WRX',
+        trim: 'Limited',
+        engineCode: 'FA24',
+        updatedAt: DateTime.now(),
+      );
+      final v2 = Vehicle(
+        id: 'v2',
+        year: 2023,
+        make: 'Subaru',
+        model: 'WRX',
+        trim: 'Base',
+        engineCode: 'FA24',
+        updatedAt: DateTime.now(),
+      );
+      final v3 = Vehicle(
+        id: 'v3',
+        year: 2024,
+        make: 'Subaru',
+        model: 'Outback',
+        trim: 'Touring',
+        engineCode: 'FB25',
+        updatedAt: DateTime.now(),
+      );
+
+      await db.vehiclesDao.insertMultiple([v1, v2, v3]);
+
+      final years = await db.vehiclesDao.getDistinctYears();
+
+      expect(years.length, 2);
+      expect(years, [2024, 2023]);
+    });
+
+    test('getDistinctModelsByYear returns only distinct models for the given year sorted ascending', () async {
       final v1 = Vehicle(
         id: 'v1',
         year: 2024,
@@ -57,7 +94,7 @@ void main() {
       final models = await db.vehiclesDao.getDistinctModelsByYear(2024);
 
       expect(models.length, 2);
-      expect(models, containsAll(['WRX', 'Outback']));
+      expect(models, ['Outback', 'WRX']);
       expect(models, isNot(contains('Legacy')));
     });
 
