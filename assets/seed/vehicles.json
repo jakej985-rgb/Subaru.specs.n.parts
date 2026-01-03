@@ -124,5 +124,32 @@
     "trim": "Wilderness",
     "engineCode": "FB25",
     "updatedAt": "2024-05-22T00:00:00Z"
+  },
+  {
+    "id": "v15",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "WRX",
+    "trim": "Premium",
+    "engineCode": "FA24",
+    "updatedAt": "2024-05-27T00:00:00Z"
+  },
+  {
+    "id": "v16",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "WRX",
+    "trim": "TR",
+    "engineCode": "FA24",
+    "updatedAt": "2024-05-27T00:00:00Z"
+  },
+  {
+    "id": "v17",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "WRX",
+    "trim": "GT",
+    "engineCode": "FA24",
+    "updatedAt": "2024-05-27T00:00:00Z"
   }
 ]
