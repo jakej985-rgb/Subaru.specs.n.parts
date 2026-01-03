@@ -49,7 +49,7 @@ void main() {
       expect(years, [2021, 2020]);
     });
 
-    test('getDistinctModelsByYear returns distinct models', () async {
+    test('getDistinctModelsByYear returns distinct models sorted alphabetically', () async {
        final v1 = Vehicle(
         id: '1',
         year: 2020,
@@ -71,13 +71,19 @@ void main() {
         model: 'Outback',
         updatedAt: DateTime.now(),
       );
+      final v4 = Vehicle(
+        id: '4',
+        year: 2020,
+        make: 'Subaru',
+        model: 'Crosstrek',
+        updatedAt: DateTime.now(),
+      );
 
-      await vehiclesDao.insertMultiple([v1, v2, v3]);
+      await vehiclesDao.insertMultiple([v1, v2, v3, v4]);
 
       final models = await vehiclesDao.getDistinctModelsByYear(2020);
 
-      expect(models.toSet(), {'Outback', 'Forester'});
-      expect(models.length, 2);
+      expect(models, ['Crosstrek', 'Forester', 'Outback']);
     });
   });
 }
