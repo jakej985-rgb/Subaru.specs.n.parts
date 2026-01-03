@@ -25,7 +25,7 @@ void main() {
     );
 
     await db.vehiclesDao.insertVehicle(vehicle);
-    final list = await db.vehiclesDao.getVehiclesByYear(2024);
+    final list = await db.vehiclesDao.getVehiclesByYearAndModel(2024, 'WRX');
 
     expect(list.length, 1);
     expect(list.first.model, 'WRX');
