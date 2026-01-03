@@ -95,5 +95,17 @@ void main() {
       expect(hasVb, isTrue, reason: 'Missing Bolt Pattern spec for VB WRX');
       expect(hasGdSti04, isTrue, reason: 'Missing 2004 STI specific Bolt Pattern (5x100)');
     });
+
+    test('Specs with "Capacity" in title must have "capacity" tag', () {
+      for (final spec in specs) {
+        final title = (spec['title'] as String);
+        final tags = (spec['tags'] as String).toLowerCase();
+
+        if (title.toLowerCase().contains('capacity')) {
+          expect(tags.contains('capacity'), isTrue,
+              reason: 'Spec "${spec['id']}" with title "$title" is missing "capacity" tag');
+        }
+      }
+    });
   });
 }
