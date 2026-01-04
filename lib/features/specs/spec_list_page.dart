@@ -98,6 +98,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                 }
                 final spec = s.items[index];
                 return ListTile(
+                  key: Key('spec_row_${spec.id}'),
                   title: Text(spec.title),
                   subtitle: Text(spec.category),
                   trailing: const Icon(Icons.chevron_right),

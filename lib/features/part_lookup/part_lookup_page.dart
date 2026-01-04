@@ -26,21 +26,14 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
   void initState() {
     super.initState();
     _scrollController.addListener(_scrollListener);
-    _searchController.addListener(_onSearchControllerChanged);
   }
 
   @override
   void dispose() {
-    _searchController.removeListener(_onSearchControllerChanged);
     _debounce?.cancel();
     _scrollController.dispose();
     _searchController.dispose();
     super.dispose();
-  }
-
-  void _onSearchControllerChanged() {
-    // Rebuild to update the clear button visibility state
-    setState(() {});
   }
 
   void _scrollListener() {
@@ -53,15 +46,7 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
     }
   }
 
-  Future<void> _loadMore(String query) async {
-    // If the query passed to this function is not the current one, abort.
-    if (query != _searchQuery) return;
-    if (_isLoading || !_hasMore) return;
-
-    setState(() {
-      _isLoading = true;
-    });
-
+  Future<void> _fetchData(String query) async {
     final db = ref.read(appDbProvider);
     try {
       final results = await db.partsDao.searchParts(
@@ -71,8 +56,6 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
       );
 
       if (!mounted) return;
-
-      // Check again if the query has changed while we were waiting
       if (query != _searchQuery) return;
 
       setState(() {
@@ -92,24 +75,42 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
     }
   }
 
+  Future<void> _loadMore(String query) async {
+    // If the query passed to this function is not the current one, abort.
+    if (query != _searchQuery) return;
+    if (_isLoading || !_hasMore) return;
+
+    setState(() {
+      _isLoading = true;
+    });
+
+    await _fetchData(query);
+  }
+
   void _search(String query) {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
     _debounce = Timer(const Duration(milliseconds: 500), () async {
-      // If the query is effectively empty (or unchanged from a logic perspective, though UI handles that), reset.
+      if (query.isEmpty) {
+        setState(() {
+          _searchQuery = query;
+          _results = [];
+          _currentOffset = 0;
+          _hasMore = true;
+          _isLoading = false;
+        });
+        return;
+      }
 
+      // Optimization: Set loading state immediately to prevent empty list flash
       setState(() {
         _searchQuery = query;
         _results = [];
         _currentOffset = 0;
         _hasMore = true;
-        _isLoading = false;
+        _isLoading = true;
       });
 
-      if (query.isEmpty) {
-        return;
-      }
-
-      await _loadMore(query);
+      await _fetchData(query);
     });
   }
 
@@ -133,20 +134,27 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
         children: [
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: TextField(
-              controller: _searchController,
-              decoration: InputDecoration(
-                labelText: 'Search by Name or OEM Number',
-                border: const OutlineInputBorder(),
-                suffixIcon: _searchController.text.isNotEmpty
-                    ? IconButton(
-                        icon: const Icon(Icons.clear),
-                        tooltip: 'Clear search',
-                        onPressed: _clearSearch,
-                      )
-                    : const Icon(Icons.search),
-              ),
-              onChanged: _search,
+            // Optimization: Use ValueListenableBuilder to update only the suffix icon
+            // instead of rebuilding the entire page on every keystroke.
+            child: ValueListenableBuilder<TextEditingValue>(
+              valueListenable: _searchController,
+              builder: (context, value, child) {
+                return TextField(
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    labelText: 'Search by Name or OEM Number',
+                    border: const OutlineInputBorder(),
+                    suffixIcon: value.text.isNotEmpty
+                        ? IconButton(
+                            icon: const Icon(Icons.clear),
+                            tooltip: 'Clear search',
+                            onPressed: _clearSearch,
+                          )
+                        : const Icon(Icons.search),
+                  ),
+                  onChanged: _search,
+                );
+              },
             ),
           ),
           Expanded(
