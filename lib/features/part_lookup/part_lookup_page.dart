@@ -134,27 +134,25 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
         children: [
           Padding(
             padding: const EdgeInsets.all(16.0),
-            // Optimization: Use ValueListenableBuilder to update only the suffix icon
-            // instead of rebuilding the entire page on every keystroke.
-            child: ValueListenableBuilder<TextEditingValue>(
-              valueListenable: _searchController,
-              builder: (context, value, child) {
-                return TextField(
-                  controller: _searchController,
-                  decoration: InputDecoration(
-                    labelText: 'Search by Name or OEM Number',
-                    border: const OutlineInputBorder(),
-                    suffixIcon: value.text.isNotEmpty
+            child: TextField(
+              controller: _searchController,
+              decoration: InputDecoration(
+                labelText: 'Search by Name or OEM Number',
+                border: const OutlineInputBorder(),
+                suffixIcon: ValueListenableBuilder<TextEditingValue>(
+                  valueListenable: _searchController,
+                  builder: (context, value, child) {
+                    return value.text.isNotEmpty
                         ? IconButton(
                             icon: const Icon(Icons.clear),
                             tooltip: 'Clear search',
                             onPressed: _clearSearch,
                           )
-                        : const Icon(Icons.search),
-                  ),
-                  onChanged: _search,
-                );
-              },
+                        : const Icon(Icons.search);
+                  },
+                ),
+              ),
+              onChanged: _search,
             ),
           ),
           Expanded(
