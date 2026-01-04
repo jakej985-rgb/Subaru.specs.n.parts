@@ -66,6 +66,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
             child: TextField(
               key: const Key('specSearchField'),
               controller: _searchController,
+              maxLength: 100, // Security: Limit input length to prevent DoS
               decoration: InputDecoration(
                 labelText: 'Search Specs',
                 border: const OutlineInputBorder(),

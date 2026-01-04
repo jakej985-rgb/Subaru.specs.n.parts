@@ -136,6 +136,7 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
             padding: const EdgeInsets.all(16.0),
             child: TextField(
               controller: _searchController,
+              maxLength: 100, // Security: Limit input length to prevent DoS
               decoration: InputDecoration(
                 labelText: 'Search by Name or OEM Number',
                 border: const OutlineInputBorder(),
