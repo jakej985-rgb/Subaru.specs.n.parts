@@ -18,8 +18,8 @@ void main() {
 
     final file = File('assets/seed/vehicles.json');
     final content = await file.readAsString();
-    final List<dynamic> json = jsonDecode(content);
-    final vehicles = json.map((e) => Vehicle.fromJson(e)).toList();
+    // Use the shared parser to ensure consistent behavior and avoid Missing fromJson error
+    final vehicles = parseVehicles(content);
 
     final wrx2024 = vehicles.where((v) =>
       v.year == 2024 &&
