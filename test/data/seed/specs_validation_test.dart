@@ -107,5 +107,48 @@ void main() {
         }
       }
     });
+
+    test('Platforms with Oil Capacity must have Oil Viscosity', () {
+      final platformsWithCapacity = <String>{};
+      final platformsWithViscosity = <String>{};
+
+      for (final spec in specs) {
+        final tags = (spec['tags'] as String).toLowerCase();
+        if (tags.contains('oil')) {
+          bool isCapacity = tags.contains('capacity');
+          bool isViscosity = tags.contains('viscosity');
+
+          // Simplify platform detection to match existing logic
+          if (tags.contains('vb') || tags.contains('fa24')) {
+            if (isCapacity) platformsWithCapacity.add('vb');
+            if (isViscosity) platformsWithViscosity.add('vb');
+          }
+          if (tags.contains('va') || tags.contains('fa20')) {
+             if (isCapacity) platformsWithCapacity.add('va');
+             if (isViscosity) platformsWithViscosity.add('va');
+          }
+          if (tags.contains('gd') || tags.contains('ej205')) {
+             if (isCapacity) platformsWithCapacity.add('gd');
+             if (isViscosity) platformsWithViscosity.add('gd');
+          }
+           // Handle EJ257 which spans GD and VA
+          if (tags.contains('ej257')) {
+             if (tags.contains('va')) {
+               if (isCapacity) platformsWithCapacity.add('va');
+               if (isViscosity) platformsWithViscosity.add('va');
+             }
+             if (tags.contains('gd')) {
+               if (isCapacity) platformsWithCapacity.add('gd');
+               if (isViscosity) platformsWithViscosity.add('gd');
+             }
+          }
+        }
+      }
+
+      for (final platform in platformsWithCapacity) {
+        expect(platformsWithViscosity.contains(platform), isTrue,
+            reason: 'Platform $platform has Oil Capacity but is missing Oil Viscosity spec');
+      }
+    });
   });
 }

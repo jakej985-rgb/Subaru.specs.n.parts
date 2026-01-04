@@ -310,5 +310,55 @@
     "body": "3.3 Liters (3.5 Quarts)",
     "tags": "trans,fluid,capacity,wrx,va,6mt",
     "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s40",
+    "category": "Oil",
+    "title": "WRX 2022+ Oil Viscosity",
+    "body": "0W-20 Synthetic",
+    "tags": "oil,viscosity,fa24,wrx,vb",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s41",
+    "category": "Oil",
+    "title": "STI 2015-2021 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,ej257,sti,va",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s42",
+    "category": "Oil",
+    "title": "WRX 2015-2021 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,fa20,wrx,va",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s43",
+    "category": "Oil",
+    "title": "STI 2004-2007 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,ej257,sti,gd",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s44",
+    "category": "Oil",
+    "title": "WRX 2002-2005 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,ej205,wrx,gd",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]
