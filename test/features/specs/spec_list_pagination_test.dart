@@ -89,7 +89,7 @@ void main() {
     // Note: spec_row_19 might be off-screen so we don't expect it to be built yet.
 
     // Scroll to the bottom to trigger load more
-    final scrollFinder = find.byKey(const Key('specListView'));
+    final scrollFinder = find.descendant(of: find.byType(ListView), matching: find.byType(Scrollable));
     await tester.scrollUntilVisible(
       find.byKey(const Key('spec_row_19')), // Scroll to the last item of the first page
       500.0,
@@ -154,7 +154,7 @@ void main() {
     expect(find.byKey(const Key('spec_row_0')), findsOneWidget);
 
     // Scroll to load more search results
-    final scrollFinder = find.byKey(const Key('specListView'));
+    final scrollFinder = find.descendant(of: find.byType(ListView), matching: find.byType(Scrollable));
     await tester.scrollUntilVisible(
       find.byKey(const Key('spec_row_19')),
       500.0,
