@@ -84,6 +84,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
               children: [
                 IconButton(
                   icon: const Icon(Icons.arrow_back),
+                  tooltip: 'Back to years',
                   onPressed: () => setState(() => _selectedYear = null),
                 ),
                 Text(
@@ -113,6 +114,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
               children: [
                 IconButton(
                   icon: const Icon(Icons.arrow_back),
+                  tooltip: 'Back to models',
                   onPressed: () => setState(() => _selectedModel = null),
                 ),
                 Text(
@@ -139,6 +141,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
               children: [
                 IconButton(
                   icon: const Icon(Icons.arrow_back),
+                  tooltip: 'Back to trims',
                   onPressed: () => setState(() => _selectedVehicle = null),
                 ),
                 Expanded(
