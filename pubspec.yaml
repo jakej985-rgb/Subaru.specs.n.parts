@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   go_router: ^17.0.1
+  # Explicitly pinned for Riverpod 3 migration
   flutter_riverpod: ^3.0.3
   drift: ^2.30.0
   drift_flutter: ^0.2.8
