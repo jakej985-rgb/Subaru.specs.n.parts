@@ -46,15 +46,7 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
     }
   }
 
-  Future<void> _loadMore(String query) async {
-    // If the query passed to this function is not the current one, abort.
-    if (query != _searchQuery) return;
-    if (_isLoading || !_hasMore) return;
-
-    setState(() {
-      _isLoading = true;
-    });
-
+  Future<void> _fetchData(String query) async {
     final db = ref.read(appDbProvider);
     try {
       final results = await db.partsDao.searchParts(
@@ -64,8 +56,6 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
       );
 
       if (!mounted) return;
-
-      // Check again if the query has changed while we were waiting
       if (query != _searchQuery) return;
 
       setState(() {
@@ -85,24 +75,42 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
     }
   }
 
+  Future<void> _loadMore(String query) async {
+    // If the query passed to this function is not the current one, abort.
+    if (query != _searchQuery) return;
+    if (_isLoading || !_hasMore) return;
+
+    setState(() {
+      _isLoading = true;
+    });
+
+    await _fetchData(query);
+  }
+
   void _search(String query) {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
     _debounce = Timer(const Duration(milliseconds: 500), () async {
-      // If the query is effectively empty (or unchanged from a logic perspective, though UI handles that), reset.
+      if (query.isEmpty) {
+        setState(() {
+          _searchQuery = query;
+          _results = [];
+          _currentOffset = 0;
+          _hasMore = true;
+          _isLoading = false;
+        });
+        return;
+      }
 
+      // Optimization: Set loading state immediately to prevent empty list flash
       setState(() {
         _searchQuery = query;
         _results = [];
         _currentOffset = 0;
         _hasMore = true;
-        _isLoading = false;
+        _isLoading = true;
       });
 
-      if (query.isEmpty) {
-        return;
-      }
-
-      await _loadMore(query);
+      await _fetchData(query);
     });
   }
 
