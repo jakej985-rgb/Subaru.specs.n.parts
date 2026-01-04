@@ -10,6 +10,12 @@
             "type": "dart"
         },
         {
+            "name": "Subaru.specs.n.parts (Flutter Windows)",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "windows"
+        },
+        {
             "name": "Subaru.specs.n.parts (profile mode)",
             "request": "launch",
             "type": "dart",

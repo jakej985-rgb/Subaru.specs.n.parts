@@ -12,14 +12,26 @@ class SeedRunner {
 
   Future<void> runSeedIfNeeded() async {
     final prefs = await SharedPreferences.getInstance();
-    // Force re-seed for testing if needed, or remove 'seeded' check if dev
-    // For now respecting 'is_seeded' but users might want to clear data to see changes
-    final seeded = prefs.getBool('is_seeded') ?? false;
 
-    if (!seeded) {
+    // Version 1: Initial seed
+    // Version 2: Added Impreza CSV data
+    const int kCurrentSeedVersion = 2;
+    final int lastSeedVersion = prefs.getInt('seed_version') ?? 0;
+
+    // Check old flag for legacy migration (if user had v1 but tracking was bool)
+    final bool legacySeeded = prefs.getBool('is_seeded') ?? false;
+    int effectiveVersion = lastSeedVersion;
+    if (legacySeeded && lastSeedVersion == 0) {
+      effectiveVersion = 1;
+    }
+
+    if (effectiveVersion < kCurrentSeedVersion) {
       await _seedVehicles();
       await _seedSpecs();
       await _seedParts();
+
+      await prefs.setInt('seed_version', kCurrentSeedVersion);
+      // Keep legacy flag for compatibility or remove it? Keeping it true won't hurt.
       await prefs.setBool('is_seeded', true);
     }
   }
