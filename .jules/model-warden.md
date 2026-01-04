@@ -11,3 +11,7 @@
 ## 2024-05-27 - 2024 WRX Coverage
 **Learning:** 2024 WRX coverage was incomplete, missing Premium, TR, and GT trims. 2024 introduces the "TR" trim (Performance-focused) and "GT" is the top trim with SPT (CVT).
 **Action:** Added Premium, TR, and GT trims to `assets/seed/vehicles.json` for 2024 WRX. All share the FA24 engine code.
+
+## 2024-05-28 - 2024 BRZ Coverage
+**Learning:** 2024 BRZ was missing Premium and Limited trims. Existing "TS" trim was incorrectly capitalized; official Subaru branding is "tS".
+**Action:** Added Premium and Limited trims. Renamed "TS" to "tS" in `assets/seed/vehicles.json`. Validated engine code is FA24 for all.
