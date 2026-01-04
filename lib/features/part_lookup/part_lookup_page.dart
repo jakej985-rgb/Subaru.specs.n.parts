@@ -26,21 +26,14 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
   void initState() {
     super.initState();
     _scrollController.addListener(_scrollListener);
-    _searchController.addListener(_onSearchControllerChanged);
   }
 
   @override
   void dispose() {
-    _searchController.removeListener(_onSearchControllerChanged);
     _debounce?.cancel();
     _scrollController.dispose();
     _searchController.dispose();
     super.dispose();
-  }
-
-  void _onSearchControllerChanged() {
-    // Rebuild to update the clear button visibility state
-    setState(() {});
   }
 
   void _scrollListener() {
@@ -138,13 +131,18 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
               decoration: InputDecoration(
                 labelText: 'Search by Name or OEM Number',
                 border: const OutlineInputBorder(),
-                suffixIcon: _searchController.text.isNotEmpty
-                    ? IconButton(
-                        icon: const Icon(Icons.clear),
-                        tooltip: 'Clear search',
-                        onPressed: _clearSearch,
-                      )
-                    : const Icon(Icons.search),
+                suffixIcon: ValueListenableBuilder<TextEditingValue>(
+                  valueListenable: _searchController,
+                  builder: (context, value, child) {
+                    return value.text.isNotEmpty
+                        ? IconButton(
+                            icon: const Icon(Icons.clear),
+                            tooltip: 'Clear search',
+                            onPressed: _clearSearch,
+                          )
+                        : const Icon(Icons.search);
+                  },
+                ),
               ),
               onChanged: _search,
             ),

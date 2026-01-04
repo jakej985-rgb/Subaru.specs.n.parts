@@ -20,9 +20,6 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   void initState() {
     super.initState();
     _controller = ScrollController()..addListener(_onScroll);
-    _searchController.addListener(() {
-      setState(() {});
-    });
   }
 
   void _onScroll() {
@@ -72,13 +69,18 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
               decoration: InputDecoration(
                 labelText: 'Search Specs',
                 border: const OutlineInputBorder(),
-                suffixIcon: _searchController.text.isNotEmpty
-                    ? IconButton(
-                        icon: const Icon(Icons.clear),
-                        tooltip: 'Clear search',
-                        onPressed: _clearSearch,
-                      )
-                    : const Icon(Icons.search),
+                suffixIcon: ValueListenableBuilder<TextEditingValue>(
+                  valueListenable: _searchController,
+                  builder: (context, value, child) {
+                    return value.text.isNotEmpty
+                        ? IconButton(
+                            icon: const Icon(Icons.clear),
+                            tooltip: 'Clear search',
+                            onPressed: _clearSearch,
+                          )
+                        : const Icon(Icons.search);
+                  },
+                ),
               ),
               onChanged: _onSearchChanged,
             ),
