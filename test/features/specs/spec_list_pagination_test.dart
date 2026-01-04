@@ -84,13 +84,13 @@ void main() {
     expect(fakeDb.specsDao.lastLimit, 20);
 
     // Verify that items are displayed
-    expect(find.text('Spec 0'), findsOneWidget);
-    expect(find.text('Spec 19'), findsOneWidget);
+    expect(find.byKey(const Key('spec_row_0')), findsOneWidget);
+    expect(find.byKey(const Key('spec_row_19')), findsOneWidget);
 
     // Scroll to the bottom to trigger load more
     final scrollFinder = find.byType(Scrollable);
     await tester.scrollUntilVisible(
-      find.text('Spec 19'), // Scroll to the last item of the first page
+      find.byKey(const Key('spec_row_19')), // Scroll to the last item of the first page
       500.0,
       scrollable: scrollFinder,
     );
@@ -112,7 +112,7 @@ void main() {
     expect(fakeDb.specsDao.lastLimit, 20);
 
     // Verify new items
-    expect(find.text('Spec 20'), findsOneWidget);
+    expect(find.byKey(const Key('spec_row_20')), findsOneWidget);
   });
 
   testWidgets('SpecListPage implements search pagination', (WidgetTester tester) async {
@@ -147,12 +147,14 @@ void main() {
     expect(fakeDb.specsDao.lastOffset, 0);
     expect(fakeDb.specsDao.lastLimit, 20); // Should use the same page limit
 
-    expect(find.text('Spec 0 for Test'), findsOneWidget);
+    // With Fake specs, id is offset+index.
+    // In searchSpecs, it returns Spec with id (offset+index).
+    expect(find.byKey(const Key('spec_row_0')), findsOneWidget);
 
     // Scroll to load more search results
     final scrollFinder = find.byType(Scrollable);
     await tester.scrollUntilVisible(
-      find.text('Spec 19 for Test'),
+      find.byKey(const Key('spec_row_19')),
       500.0,
       scrollable: scrollFinder,
     );
@@ -164,6 +166,6 @@ void main() {
     expect(fakeDb.specsDao.lastOffset, 20);
     expect(fakeDb.specsDao.lastLimit, 20);
 
-    expect(find.text('Spec 20 for Test'), findsOneWidget);
+    expect(find.byKey(const Key('spec_row_20')), findsOneWidget);
   });
 }
