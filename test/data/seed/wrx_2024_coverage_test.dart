@@ -18,6 +18,7 @@ void main() {
 
     final file = File('assets/seed/vehicles.json');
     final content = await file.readAsString();
+    // Use the shared parser to ensure consistent behavior and avoid Missing fromJson error
     final vehicles = parseVehicles(content);
 
     final wrx2024 = vehicles.where((v) =>
