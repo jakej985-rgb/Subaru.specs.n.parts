@@ -2,8 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:specsnparts/data/db/app_db.dart';
-
+import 'package:specsnparts/features/specs/spec_list_controller.dart';
 
 class SpecListPage extends ConsumerStatefulWidget {
   const SpecListPage({super.key});
@@ -13,140 +12,54 @@ class SpecListPage extends ConsumerStatefulWidget {
 }
 
 class _SpecListPageState extends ConsumerState<SpecListPage> {
-  static const int pageSize = 20;
-  final ScrollController _scrollController = ScrollController();
+  late final ScrollController _controller;
   final TextEditingController _searchController = TextEditingController();
-  List<Spec> _results = [];
-  int _currentOffset = 0;
-  bool _isLoading = false;
-  bool _hasMore = true;
-  String _searchQuery = '';
   Timer? _debounce;
 
   @override
   void initState() {
     super.initState();
-    _scrollController.addListener(_scrollListener);
-    _searchController.addListener(_onSearchChanged);
-    _loadInitial();
+    _controller = ScrollController()..addListener(_onScroll);
+    _searchController.addListener(() {
+      setState(() {});
+    });
+  }
+
+  void _onScroll() {
+    if (!_controller.hasClients) return;
+    final pos = _controller.position;
+    if (pos.pixels >= pos.maxScrollExtent - 200) {
+      ref.read(specListControllerProvider.notifier).loadMore();
+    }
   }
 
   @override
   void dispose() {
     _debounce?.cancel();
-    _scrollController.dispose();
+    _controller.removeListener(_onScroll);
+    _controller.dispose();
     _searchController.dispose();
     super.dispose();
   }
 
-  void _onSearchChanged() {
-    // Rebuild to update the suffixIcon (search vs clear)
-    setState(() {});
-  }
-
-  void _scrollListener() {
-    if (_scrollController.position.pixels >=
-            _scrollController.position.maxScrollExtent - 200 &&
-        !_isLoading &&
-        _hasMore) {
-      _loadMore(_searchQuery);
-    }
-  }
-
-  Future<void> _loadInitial() async {
-    setState(() {
-      _results = [];
-      _currentOffset = 0;
-      _hasMore = true;
-      _isLoading = false;
-      _searchQuery = '';
-    });
-    await _loadMore('');
-  }
-
-  Future<void> _loadMore(String query) async {
-    // Ensure we are loading for the correct query
-    if (query != _searchQuery) return;
-
-    if (_isLoading || !_hasMore) return;
-
-    setState(() {
-      _isLoading = true;
-    });
-
-    final db = ref.read(appDbProvider);
-    late final List<Spec> newSpecs;
-
-    try {
-      if (query.isNotEmpty) {
-        newSpecs = await db.specsDao.searchSpecs(query,
-            limit: pageSize, offset: _currentOffset);
-      } else {
-        newSpecs =
-            await db.specsDao.getSpecsPaged(pageSize, offset: _currentOffset);
-      }
-
-      if (mounted) {
-        // Check if the query has changed while we were waiting
-        if (_searchQuery != query) {
-          // The query changed, so these results are stale. Do nothing.
-          return;
-        }
-
-        setState(() {
-          _results.addAll(newSpecs);
-          _currentOffset += newSpecs.length;
-          if (newSpecs.length < pageSize) {
-            _hasMore = false;
-          }
-          _isLoading = false;
-        });
-      }
-    } catch (e) {
-      if (mounted && _searchQuery == query) {
-        setState(() {
-          _isLoading = false;
-        });
-      }
-    }
-  }
-
-  void _search(String query) {
+  void _onSearchChanged(String query) {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
 
-    // Debounce search input to prevent excessive DB calls
-    _debounce = Timer(const Duration(milliseconds: 500), () async {
-      setState(() {
-        _searchQuery = query;
-        _results = [];
-        _currentOffset = 0;
-        _hasMore = true;
-        _isLoading = false;
-      });
-
-      if (query.isEmpty) {
-        // If query is empty, we load initial state (all specs)
-        // But since we just set _searchQuery to '', we can call _loadMore('')
-        // However, _loadInitial also resets _results etc. which we just did.
-        // Let's call _loadMore directly.
-        await _loadMore('');
-        return;
-      }
-
-      await _loadMore(query);
+    _debounce = Timer(const Duration(milliseconds: 500), () {
+      ref.read(specListControllerProvider.notifier).setQuery(query);
     });
   }
 
   void _clearSearch() {
     _searchController.clear();
-    // Cancel any pending search debounce
     if (_debounce?.isActive ?? false) _debounce!.cancel();
-    // Immediately reload initial data
-    _loadInitial();
+    ref.read(specListControllerProvider.notifier).setQuery('');
   }
 
   @override
   Widget build(BuildContext context) {
+    final s = ref.watch(specListControllerProvider);
+
     return Scaffold(
       appBar: AppBar(title: const Text('Specs')),
       body: Column(
@@ -154,6 +67,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
+              key: const Key('specSearchField'),
               controller: _searchController,
               decoration: InputDecoration(
                 labelText: 'Search Specs',
@@ -166,29 +80,29 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                       )
                     : const Icon(Icons.search),
               ),
-              onChanged: _search,
+              onChanged: _onSearchChanged,
             ),
           ),
           Expanded(
             child: ListView.builder(
-              controller: _scrollController,
-              itemCount: _results.length + (_isLoading ? 1 : 0),
+              key: const Key('specListView'),
+              controller: _controller,
+              physics: const AlwaysScrollableScrollPhysics(),
+              itemCount: s.items.length + (s.isLoadingMore ? 1 : 0),
               itemBuilder: (context, index) {
-                if (index == _results.length) {
-                  return const Center(
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: CircularProgressIndicator(),
-                    ),
+                if (index >= s.items.length) {
+                  return const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Center(child: CircularProgressIndicator()),
                   );
                 }
-                final spec = _results[index];
+                final spec = s.items[index];
                 return ListTile(
+                  key: Key('spec_row_${spec.id}'),
                   title: Text(spec.title),
                   subtitle: Text(spec.category),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: () {
-                    // Show detail dialog or page
                     showDialog(
                         context: context,
                         builder: (context) => AlertDialog(

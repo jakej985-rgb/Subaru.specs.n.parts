@@ -22,9 +22,9 @@
     "year": 2024,
     "make": "Subaru",
     "model": "BRZ",
-    "trim": "TS",
+    "trim": "tS",
     "engineCode": "FA24",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "updatedAt": "2024-05-28T00:00:00Z"
   },
   {
     "id": "v4",
@@ -88,5 +88,86 @@
     "trim": "Coupe",
     "engineCode": "EJ251",
     "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v11",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base",
+    "engineCode": "FB20",
+    "updatedAt": "2024-05-22T00:00:00Z"
+  },
+  {
+    "id": "v12",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Premium",
+    "engineCode": "FB20",
+    "updatedAt": "2024-05-22T00:00:00Z"
+  },
+  {
+    "id": "v13",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Limited",
+    "engineCode": "FB25",
+    "updatedAt": "2024-05-22T00:00:00Z"
+  },
+  {
+    "id": "v14",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Wilderness",
+    "engineCode": "FB25",
+    "updatedAt": "2024-05-22T00:00:00Z"
+  },
+  {
+    "id": "v15",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "WRX",
+    "trim": "Premium",
+    "engineCode": "FA24",
+    "updatedAt": "2024-05-27T00:00:00Z"
+  },
+  {
+    "id": "v16",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "WRX",
+    "trim": "TR",
+    "engineCode": "FA24",
+    "updatedAt": "2024-05-27T00:00:00Z"
+  },
+  {
+    "id": "v17",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "WRX",
+    "trim": "GT",
+    "engineCode": "FA24",
+    "updatedAt": "2024-05-27T00:00:00Z"
+  },
+  {
+    "id": "v18",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "BRZ",
+    "trim": "Premium",
+    "engineCode": "FA24",
+    "updatedAt": "2024-05-28T00:00:00Z"
+  },
+  {
+    "id": "v19",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "BRZ",
+    "trim": "Limited",
+    "engineCode": "FA24",
+    "updatedAt": "2024-05-28T00:00:00Z"
   }
 ]
