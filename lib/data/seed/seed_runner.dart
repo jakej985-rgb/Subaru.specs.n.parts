@@ -14,8 +14,8 @@ class SeedRunner {
 
     // Version 1: Initial seed
     // Version 2: Added Impreza CSV data
-    // Version 10: Completeness check (Wipers/Bulbs/Battery for Classics)
-    const int kCurrentSeedVersion = 10;
+    // Version 12: Modern Era (GR/GV, BRZ, VA, Ascent, FA Series)
+    const int kCurrentSeedVersion = 12;
     final int lastSeedVersion = prefs.getInt('seed_version') ?? 0;
 
     // Check old flag for legacy migration (if user had v1 but tracking was bool)
@@ -37,61 +37,32 @@ class SeedRunner {
   }
 
   Future<void> _seedVehicles() async {
-    final files = [
-      'vehicles_impreza.json',
-      'vehicles_wrx.json',
-      'vehicles_forester.json',
-      'vehicles_outback.json',
-      'vehicles_legacy.json',
-      'vehicles_crosstrek.json',
-      'vehicles_brz.json',
-      'vehicles_classics.json',
-      'vehicles_other.json',
-    ];
-
-    for (final file in files) {
-      try {
-        final String response = await rootBundle.loadString(
-          'assets/seed/vehicles/$file',
-        );
-        final List<Vehicle> vehicles = await compute<String, List<Vehicle>>(
-          parseVehicles,
-          response,
-        );
-        await db.vehiclesDao.insertMultiple(vehicles);
-      } catch (e) {
-        debugPrint('Error loading $file: $e');
-        // Continue loading other files
-      }
+    try {
+      final String response = await rootBundle.loadString(
+        'assets/seed/vehicles.json',
+      );
+      final List<Vehicle> vehicles = await compute<String, List<Vehicle>>(
+        parseVehicles,
+        response,
+      );
+      await db.vehiclesDao.insertMultiple(vehicles);
+    } catch (e) {
+      debugPrint('Error loading vehicles.json: $e');
     }
   }
 
   Future<void> _seedSpecs() async {
-    final files = [
-      'specs_oil.json',
-      'specs_wheels.json',
-      'specs_fluids.json',
-      'specs_maintenance.json',
-      'specs_engine.json',
-      'specs_transmission.json',
-      'specs_suspension.json',
-      'specs_other.json',
-    ];
-
-    for (final file in files) {
-      try {
-        final String response = await rootBundle.loadString(
-          'assets/seed/specs/$file',
-        );
-        final List<Spec> specs = await compute<String, List<Spec>>(
-          parseSpecs,
-          response,
-        );
-        await db.specsDao.insertMultiple(specs);
-      } catch (e) {
-        debugPrint('Error loading $file: $e');
-        // Continue loading other files
-      }
+    try {
+      final String response = await rootBundle.loadString(
+        'assets/seed/specs.json',
+      );
+      final List<Spec> specs = await compute<String, List<Spec>>(
+        parseSpecs,
+        response,
+      );
+      await db.specsDao.insertMultiple(specs);
+    } catch (e) {
+      debugPrint('Error loading specs.json: $e');
     }
   }
 
