@@ -5,7 +5,6 @@ import 'package:specsnparts/widgets/home_menu_card.dart';
 void main() {
   testWidgets('HomeMenuCard has correct semantics', (WidgetTester tester) async {
     final handle = tester.ensureSemantics();
-    addTearDown(handle.dispose);
 
     // Build the widget
     await tester.pumpWidget(
@@ -29,5 +28,7 @@ void main() {
     
     final buttonFinder = find.bySemanticsLabel('Browse');
     expect(buttonFinder, findsOneWidget, reason: 'HomeMenuCard should be a semantic button with the correct label');
+
+    handle.dispose();
   });
 }
