@@ -3734,6 +3734,50 @@
       "trim": "Wilderness (US)",
       "engineCode": "FB25 DI",
       "updatedAt": "2026-01-04T00:00:00Z"
-    }
+    },
+  {
+    "id": "v_for_2025_base_us",
+    "year": 2025,
+    "make": "Subaru",
+    "model": "Forester",
+    "trim": "Base (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-05T19:08:18Z"
+  },
+  {
+    "id": "v_for_2025_premium_us",
+    "year": 2025,
+    "make": "Subaru",
+    "model": "Forester",
+    "trim": "Premium (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-05T19:08:18Z"
+  },
+  {
+    "id": "v_for_2025_sport_us",
+    "year": 2025,
+    "make": "Subaru",
+    "model": "Forester",
+    "trim": "Sport (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-05T19:08:18Z"
+  },
+  {
+    "id": "v_for_2025_limited_us",
+    "year": 2025,
+    "make": "Subaru",
+    "model": "Forester",
+    "trim": "Limited (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-05T19:08:18Z"
+  },
+  {
+    "id": "v_for_2025_touring_us",
+    "year": 2025,
+    "make": "Subaru",
+    "model": "Forester",
+    "trim": "Touring (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-05T19:08:18Z"
+  }
 ]
-
