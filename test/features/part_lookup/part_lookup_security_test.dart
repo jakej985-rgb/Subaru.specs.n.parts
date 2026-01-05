@@ -11,7 +11,11 @@ class FakePartsDao extends PartsDao {
   FakePartsDao(super.db);
 
   @override
-  Future<List<Part>> searchParts(String query, {int limit = 50, int offset = 0}) async {
+  Future<List<Part>> searchParts(
+    String query, {
+    int limit = 50,
+    int offset = 0,
+  }) async {
     return [];
   }
 }
@@ -26,18 +30,16 @@ class FakeAppDatabase extends AppDatabase {
 }
 
 void main() {
-  testWidgets('PartLookupPage limits input length for security', (WidgetTester tester) async {
+  testWidgets('PartLookupPage limits input length for security', (
+    WidgetTester tester,
+  ) async {
     final fakeDb = FakeAppDatabase(NativeDatabase.memory());
     addTearDown(() => fakeDb.close());
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          appDbProvider.overrideWithValue(fakeDb),
-        ],
-        child: const MaterialApp(
-          home: PartLookupPage(),
-        ),
+        overrides: [appDbProvider.overrideWithValue(fakeDb)],
+        child: const MaterialApp(home: PartLookupPage()),
       ),
     );
 
@@ -49,6 +51,10 @@ void main() {
 
     // Initially, there might be no limit or a limit. We expect to enforce 100.
     // This check is expected to FAIL before the fix if the limit is not set.
-    expect(textField.maxLength, 100, reason: 'TextField should have maxLength set to 100 to prevent DoS');
+    expect(
+      textField.maxLength,
+      100,
+      reason: 'TextField should have maxLength set to 100 to prevent DoS',
+    );
   });
 }

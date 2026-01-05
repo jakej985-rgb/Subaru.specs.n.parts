@@ -19,17 +19,11 @@ class AdaptiveScroll extends StatelessWidget {
         final available = constraints.maxHeight;
         final needsScroll = estimatedContentHeight > available;
 
-        final content = Padding(
-          padding: padding,
-          child: child,
-        );
+        final content = Padding(padding: padding, child: child);
 
         if (!needsScroll) return content;
 
-        return SingleChildScrollView(
-          padding: padding,
-          child: child,
-        );
+        return SingleChildScrollView(padding: padding, child: child);
       },
     );
   }

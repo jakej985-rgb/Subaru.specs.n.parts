@@ -16,6 +16,9 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
 
   Future<List<Spec>> searchSpecs(String query,
       {int limit = 50, int offset = 0}) {
+    // Security: Prevent DoS/Performance issues with excessively long queries
+    if (query.length > 100) return Future.value([]);
+
     return (select(
           specs,
         )
