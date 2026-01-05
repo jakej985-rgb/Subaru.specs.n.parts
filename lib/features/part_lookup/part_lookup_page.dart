@@ -174,7 +174,27 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                     ),
                   )
                 : _results.isEmpty && !_isLoading
-                    ? const Center(child: Text('No parts found.'))
+                    ? Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.search_off, size: 64, color: Theme.of(context).hintColor),
+                            const SizedBox(height: 16),
+                            Text(
+                              'No parts found for "$_searchQuery"',
+                              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    color: Theme.of(context).hintColor,
+                                  ),
+                            ),
+                            const SizedBox(height: 16),
+                            OutlinedButton.icon(
+                              onPressed: _clearSearch,
+                              icon: const Icon(Icons.clear),
+                              label: const Text('Clear Search'),
+                            ),
+                          ],
+                        ),
+                      )
                     : ListView.builder(
                         controller: _scrollController,
                         itemCount: _results.length + (_isLoading ? 1 : 0),
