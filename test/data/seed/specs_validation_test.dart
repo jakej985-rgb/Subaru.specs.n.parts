@@ -1,16 +1,29 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:path/path.dart' as p;
 
 void main() {
   group('Spec Data Validation', () {
     late List<dynamic> specs;
 
     setUpAll(() {
-      final file = File('assets/seed/specs.json');
+      final filePath = p.join(Directory.current.path, 'assets', 'seed', 'specs.json');
+      final file = File(filePath);
+
+      // Helpful failure message
+      expect(file.existsSync(), isTrue, reason: 'Missing specs.json at: $filePath');
+
       final content = file.readAsStringSync();
       specs = json.decode(content);
     });
+
+    String tagsToLower(dynamic raw) {
+      if (raw == null) return '';
+      if (raw is String) return raw.toLowerCase();
+      if (raw is List) return raw.join(' ').toLowerCase();
+      return raw.toString().toLowerCase();
+    }
 
     test('Fluid capacities must follow standard format', () {
       final fluidPattern = RegExp(r'^[\d\.\s-]+ Liters \([\d\.\s-]+ Quarts\).*');
@@ -55,7 +68,7 @@ void main() {
       bool hasVb = false;
 
       for (final spec in specs) {
-        final tags = (spec['tags'] as String).toLowerCase();
+        final tags = tagsToLower(spec['tags']);
         if (tags.contains('oil') && tags.contains('capacity')) {
           if (tags.contains('gd') || tags.contains('ej205') || tags.contains('ej257')) hasGd = true;
           if (tags.contains('va') || tags.contains('fa20')) hasVa = true;
@@ -75,7 +88,7 @@ void main() {
       bool hasGdSti04 = false;
 
       for (final spec in specs) {
-        final tags = (spec['tags'] as String).toLowerCase();
+        final tags = tagsToLower(spec['tags']);
         final title = (spec['title'] as String);
 
         if (tags.contains('bolt_pattern')) {
@@ -99,7 +112,7 @@ void main() {
     test('Specs with "Capacity" in title must have "capacity" tag', () {
       for (final spec in specs) {
         final title = (spec['title'] as String);
-        final tags = (spec['tags'] as String).toLowerCase();
+        final tags = tagsToLower(spec['tags']);
 
         if (title.toLowerCase().contains('capacity')) {
           expect(tags.contains('capacity'), isTrue,
@@ -113,7 +126,7 @@ void main() {
       final platformsWithViscosity = <String>{};
 
       for (final spec in specs) {
-        final tags = (spec['tags'] as String).toLowerCase();
+        final tags = tagsToLower(spec['tags']);
         if (tags.contains('oil')) {
           bool isCapacity = tags.contains('capacity');
           bool isViscosity = tags.contains('viscosity');
