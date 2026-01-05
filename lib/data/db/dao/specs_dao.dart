@@ -14,14 +14,12 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
   Future<List<Spec>> getSpecsByCategory(String category) =>
       (select(specs)..where((tbl) => tbl.category.equals(category))).get();
 
-  Future<List<Spec>> searchSpecs(String query,
-      {int limit = 50, int offset = 0}) {
-    // Security: Prevent DoS/Performance issues with excessively long queries
-    if (query.length > 100) return Future.value([]);
-
-    return (select(
-          specs,
-        )
+  Future<List<Spec>> searchSpecs(
+    String query, {
+    int limit = 50,
+    int offset = 0,
+  }) {
+    return (select(specs)
           ..where((tbl) => tbl.title.contains(query) | tbl.body.contains(query))
           ..limit(limit, offset: offset))
         .get();

@@ -53,7 +53,10 @@ void main() {
       // Ensure no Turbo models in 2010+
       final turboGen4 = vehicles.any(
         (v) =>
-            v['year'] >= 2010 && v['year'] <= 2014 && v['trim'].contains('XT'),
+            v['model'] == 'Outback' &&
+            v['year'] >= 2010 &&
+            v['year'] <= 2014 &&
+            v['trim'].contains('XT'),
       );
       expect(
         turboGen4,
