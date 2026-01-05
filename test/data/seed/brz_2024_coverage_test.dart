@@ -8,10 +8,9 @@ void main() {
     final jsonString = file.readAsStringSync();
     final List<dynamic> vehicles = json.decode(jsonString);
 
-    final brz2024 = vehicles.where((v) =>
-        v['year'] == 2024 &&
-        v['make'] == 'Subaru' &&
-        v['model'] == 'BRZ');
+    final brz2024 = vehicles.where(
+      (v) => v['year'] == 2024 && v['make'] == 'Subaru' && v['model'] == 'BRZ',
+    );
 
     final trims = brz2024.map((v) => v['trim']).toSet();
     final engineCodes = brz2024.map((v) => v['engineCode']).toSet();

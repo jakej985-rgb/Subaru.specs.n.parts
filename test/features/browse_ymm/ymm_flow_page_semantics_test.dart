@@ -24,12 +24,8 @@ void main() {
     // Pump widget
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          appDbProvider.overrideWithValue(db),
-        ],
-        child: const MaterialApp(
-          home: YmmFlowPage(),
-        ),
+        overrides: [appDbProvider.overrideWithValue(db)],
+        child: const MaterialApp(home: YmmFlowPage()),
       ),
     );
 
@@ -46,8 +42,14 @@ void main() {
     expect(backButton, findsOneWidget);
 
     // Check tooltip
-    final iconButton = tester.widget<IconButton>(find.ancestor(of: backButton, matching: find.byType(IconButton)));
-    expect(iconButton.tooltip, isNotNull, reason: 'Back button should have a tooltip');
+    final iconButton = tester.widget<IconButton>(
+      find.ancestor(of: backButton, matching: find.byType(IconButton)),
+    );
+    expect(
+      iconButton.tooltip,
+      isNotNull,
+      reason: 'Back button should have a tooltip',
+    );
     expect(iconButton.tooltip, equals('Back to years'));
 
     await db.close();
