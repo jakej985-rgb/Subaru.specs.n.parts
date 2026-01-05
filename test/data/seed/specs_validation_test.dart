@@ -89,7 +89,7 @@ void main() {
 
       for (final spec in specs) {
         final tags = tagsToLower(spec['tags']);
-        final title = (spec['title'] as String);
+
 
         if (tags.contains('bolt_pattern')) {
           if (tags.contains('gd') && tags.contains('wrx')) hasGd = true;
