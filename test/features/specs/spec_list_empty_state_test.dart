@@ -63,12 +63,9 @@ void main() {
   testWidgets('SpecListPage shows empty state when no specs found', (
     WidgetTester tester,
   ) async {
-    final innerDb = AppDatabase(NativeDatabase.memory());
-    addTearDown(() => innerDb.close());
-
     final fakeDb = FakeAppDatabase(
       NativeDatabase.memory(),
-      EmptySpecsDao(innerDb),
+      EmptySpecsDao(AppDatabase(NativeDatabase.memory())),
     );
     addTearDown(() => fakeDb.close());
 
@@ -92,12 +89,9 @@ void main() {
   testWidgets('SpecListPage shows loading state initially', (
     WidgetTester tester,
   ) async {
-    final innerDb = AppDatabase(NativeDatabase.memory());
-    addTearDown(() => innerDb.close());
-
     final fakeDb = FakeAppDatabase(
       NativeDatabase.memory(),
-      SlowSpecsDao(innerDb),
+      SlowSpecsDao(AppDatabase(NativeDatabase.memory())),
     );
     addTearDown(() => fakeDb.close());
 

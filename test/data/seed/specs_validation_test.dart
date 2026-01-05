@@ -124,7 +124,9 @@ void main() {
         final tags = tagsToLower(spec['tags']);
 
         if (tags.contains('bolt_pattern')) {
-          if (tags.contains('gd') && tags.contains('wrx')) hasGd = true;
+          if (tags.contains('gd') && tags.contains('wrx')) {
+            hasGd = true;
+          }
           if (tags.contains('va') &&
               (tags.contains('wrx') || tags.contains('sti'))) {
             hasVa = true;
@@ -137,7 +139,9 @@ void main() {
           if (tags.contains('gd') &&
               tags.contains('sti') &&
               tags.contains('2004')) {
-            if (spec['body'] == '5x100') hasGdSti04 = true;
+            if (spec['body'] == '5x100') {
+              hasGdSti04 = true;
+            }
           }
         }
       }

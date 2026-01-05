@@ -71,22 +71,14 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
 
   Future<void> _loadVehicles(int year, String model) async {
     final db = ref.read(appDbProvider);
-    try {
-      final vehicles = await db.vehiclesDao.getVehiclesByYearAndModel(
-        year,
-        model,
-      );
-      if (mounted && _selectedModel == model) {
-        setState(() {
-          _vehicles = vehicles;
-        });
-      }
-    } finally {
-      if (mounted) {
-        setState(() {
-          _isLoading = false;
-        });
-      }
+    final vehicles = await db.vehiclesDao.getVehiclesByYearAndModel(
+      year,
+      model,
+    );
+    if (mounted && _selectedModel == model) {
+      setState(() {
+        _vehicles = vehicles;
+      });
     }
   }
 
@@ -118,35 +110,32 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                       },
                     ),
                   ),
-                ] else if (_selectedModel == null) ...[
-                  Row(
-                    children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back),
-                        tooltip: 'Back to years',
-                        onPressed: () => setState(() => _selectedYear = null),
-                      ),
-                      Text(
-                        '$_selectedYear > Select Model',
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                  ..._models.map(
-                    (m) => ListTile(
-                      title: Text(m),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        setState(() {
-                          _selectedModel = m;
-                          _vehicles = [];
-                          _isLoading = true;
-                        });
-                        _loadVehicles(_selectedYear!, m);
-                      },
+                ),
+              ],
+            ),
+            ..._vehicles.map(
+              (v) => ListTile(
+                title: Text('${v.trim ?? "Base"} (${v.engineCode ?? "?"})'),
+                trailing: const Icon(Icons.check),
+                onTap: () {
+                  setState(() => _selectedVehicle = v);
+                },
+              ),
+            ),
+          ] else ...[
+            Row(
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  tooltip: 'Back to trims',
+                  onPressed: () => setState(() => _selectedVehicle = null),
+                ),
+                Expanded(
+                  child: Text(
+                    '${_selectedVehicle!.year} ${_selectedVehicle!.model} ${_selectedVehicle!.trim}',
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ] else if (_selectedVehicle == null) ...[
