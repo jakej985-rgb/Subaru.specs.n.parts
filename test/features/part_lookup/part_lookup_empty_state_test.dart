@@ -61,7 +61,9 @@ void main() {
     expect(find.text('Start typing to search parts...'), findsNothing);
     expect(find.byIcon(Icons.manage_search), findsNothing);
 
-    // Should show "No parts found."
-    expect(find.text('No parts found.'), findsOneWidget);
+    // Should show "No parts found for 'filter'"
+    expect(find.text('No parts found for "filter"'), findsOneWidget);
+    expect(find.byIcon(Icons.search_off), findsOneWidget);
+    expect(find.text('Clear Search'), findsOneWidget);
   });
 }

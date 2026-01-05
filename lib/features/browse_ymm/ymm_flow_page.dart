@@ -19,6 +19,9 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
   List<String> _models = [];
   List<Vehicle> _vehicles = [];
 
+  // Initialize to true because we load years immediately in initState
+  bool _isLoading = true;
+
   @override
   void initState() {
     super.initState();
@@ -26,23 +29,43 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
   }
 
   Future<void> _loadYears() async {
+    // No setState here because we are in initState (or started from it)
+    // and initialized _isLoading = true.
     final db = ref.read(appDbProvider);
-    // Efficiently fetch only distinct years
-    final List<int> years = await db.vehiclesDao.getDistinctYears();
-    if (mounted) {
-      setState(() => _years = years);
+    try {
+      // Efficiently fetch only distinct years
+      final List<int> years = await db.vehiclesDao.getDistinctYears();
+      if (mounted) {
+        setState(() {
+          _years = years;
+        });
+      }
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
     }
   }
 
   Future<void> _loadModels(int year) async {
     final db = ref.read(appDbProvider);
-    // Optimized: Fetch distinct models directly from DB
-    final models = await db.vehiclesDao.getDistinctModelsByYear(year);
-    if (mounted && _selectedYear == year) {
-      setState(() {
-        _models = models;
-        _vehicles = []; // Clear previous vehicles
-      });
+    try {
+      // Optimized: Fetch distinct models directly from DB
+      final models = await db.vehiclesDao.getDistinctModelsByYear(year);
+      if (mounted && _selectedYear == year) {
+        setState(() {
+          _models = models;
+          _vehicles = []; // Clear previous vehicles
+        });
+      }
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
     }
   }
 
@@ -63,7 +86,9 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Select Vehicle')),
-      body: ListView(
+      body: _isLoading
+          ? const Center(child: CircularProgressIndicator())
+          : ListView(
         padding: const EdgeInsets.all(16),
         children: [
           if (_selectedYear == null) ...[
@@ -76,7 +101,10 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                 title: Text(y.toString()),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () {
-                  setState(() => _selectedYear = y);
+                  setState(() {
+                    _selectedYear = y;
+                    _isLoading = true;
+                  });
                   _loadModels(y);
                 },
               ),
@@ -106,6 +134,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                   setState(() {
                     _selectedModel = m;
                     _vehicles = [];
+                    _isLoading = true;
                   });
                   _loadVehicles(_selectedYear!, m);
                 },

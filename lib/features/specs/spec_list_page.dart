@@ -55,7 +55,14 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
 
   @override
   Widget build(BuildContext context) {
-    final s = ref.watch(specListControllerProvider);
+    // ⚡ Bolt Optimization: Use select to only watch relevant state fields.
+    // This prevents unnecessary rebuilds when fields like 'query' or 'generation' change
+    // in the state but don't affect the UI structure directly (since query is managed via controller).
+    final s = ref.watch(specListControllerProvider.select((state) => (
+          items: state.items,
+          isLoadingInitial: state.isLoadingInitial,
+          isLoadingMore: state.isLoadingMore,
+        )));
 
     return Scaffold(
       appBar: AppBar(title: const Text('Specs')),
