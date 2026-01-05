@@ -49,41 +49,44 @@ void main() {
       expect(years, [2021, 2020]);
     });
 
-    test('getDistinctModelsByYear returns distinct models sorted alphabetically', () async {
-       final v1 = Vehicle(
-        id: '1',
-        year: 2020,
-        make: 'Subaru',
-        model: 'Outback',
-        updatedAt: DateTime.now(),
-      );
-      final v2 = Vehicle(
-        id: '2',
-        year: 2020,
-        make: 'Subaru',
-        model: 'Forester',
-        updatedAt: DateTime.now(),
-      );
-      final v3 = Vehicle(
-        id: '3',
-        year: 2020,
-        make: 'Subaru',
-        model: 'Outback',
-        updatedAt: DateTime.now(),
-      );
-      final v4 = Vehicle(
-        id: '4',
-        year: 2020,
-        make: 'Subaru',
-        model: 'Crosstrek',
-        updatedAt: DateTime.now(),
-      );
+    test(
+      'getDistinctModelsByYear returns distinct models sorted alphabetically',
+      () async {
+        final v1 = Vehicle(
+          id: '1',
+          year: 2020,
+          make: 'Subaru',
+          model: 'Outback',
+          updatedAt: DateTime.now(),
+        );
+        final v2 = Vehicle(
+          id: '2',
+          year: 2020,
+          make: 'Subaru',
+          model: 'Forester',
+          updatedAt: DateTime.now(),
+        );
+        final v3 = Vehicle(
+          id: '3',
+          year: 2020,
+          make: 'Subaru',
+          model: 'Outback',
+          updatedAt: DateTime.now(),
+        );
+        final v4 = Vehicle(
+          id: '4',
+          year: 2020,
+          make: 'Subaru',
+          model: 'Crosstrek',
+          updatedAt: DateTime.now(),
+        );
 
-      await vehiclesDao.insertMultiple([v1, v2, v3, v4]);
+        await vehiclesDao.insertMultiple([v1, v2, v3, v4]);
 
-      final models = await vehiclesDao.getDistinctModelsByYear(2020);
+        final models = await vehiclesDao.getDistinctModelsByYear(2020);
 
-      expect(models, ['Crosstrek', 'Forester', 'Outback']);
-    });
+        expect(models, ['Crosstrek', 'Forester', 'Outback']);
+      },
+    );
   });
 }

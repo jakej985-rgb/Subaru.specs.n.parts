@@ -4,9 +4,5 @@ import 'package:specsnparts/app.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(
-    const ProviderScope(
-      child: SubaruSpecsApp(),
-    ),
-  );
+  runApp(const ProviderScope(child: SubaruSpecsApp()));
 }

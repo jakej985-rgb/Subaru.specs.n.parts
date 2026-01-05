@@ -15,21 +15,27 @@ class FakeSpecsDao extends SpecsDao {
   int lastOffset = 0;
 
   @override
-  Future<List<Spec>> searchSpecs(String query,
-      {int limit = 50, int offset = 0}) async {
+  Future<List<Spec>> searchSpecs(
+    String query, {
+    int limit = 50,
+    int offset = 0,
+  }) async {
     getSpecsPagedCallCount++;
     lastLimit = limit;
     lastOffset = offset;
 
     // Generate dummy specs to simulate data
-    return List.generate(limit, (index) => Spec(
-      id: (offset + index).toString(), // Fix: Ensure id is String
-      title: 'Spec ${offset + index} for $query',
-      body: 'Body ${offset + index}',
-      category: 'Category',
-      tags: 'tag',
-      updatedAt: DateTime.now(),
-    ));
+    return List.generate(
+      limit,
+      (index) => Spec(
+        id: (offset + index).toString(), // Fix: Ensure id is String
+        title: 'Spec ${offset + index} for $query',
+        body: 'Body ${offset + index}',
+        category: 'Category',
+        tags: 'tag',
+        updatedAt: DateTime.now(),
+      ),
+    );
   }
 
   @override
@@ -39,14 +45,17 @@ class FakeSpecsDao extends SpecsDao {
     lastOffset = offset;
 
     // Generate dummy specs to simulate data
-    return List.generate(limit, (index) => Spec(
-      id: (offset + index).toString(), // Fix: Ensure id is String
-      title: 'Spec ${offset + index}',
-      body: 'Body ${offset + index}',
-      category: 'Category',
-      tags: 'tag',
-      updatedAt: DateTime.now(),
-    ));
+    return List.generate(
+      limit,
+      (index) => Spec(
+        id: (offset + index).toString(), // Fix: Ensure id is String
+        title: 'Spec ${offset + index}',
+        body: 'Body ${offset + index}',
+        category: 'Category',
+        tags: 'tag',
+        updatedAt: DateTime.now(),
+      ),
+    );
   }
 }
 
@@ -60,18 +69,16 @@ class FakeAppDatabase extends AppDatabase {
 }
 
 void main() {
-  testWidgets('SpecListPage implements pagination', (WidgetTester tester) async {
+  testWidgets('SpecListPage implements pagination', (
+    WidgetTester tester,
+  ) async {
     final fakeDb = FakeAppDatabase(NativeDatabase.memory());
     addTearDown(() => fakeDb.close());
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          appDbProvider.overrideWithValue(fakeDb),
-        ],
-        child: const MaterialApp(
-          home: SpecListPage(),
-        ),
+        overrides: [appDbProvider.overrideWithValue(fakeDb)],
+        child: const MaterialApp(home: SpecListPage()),
       ),
     );
 
@@ -89,9 +96,14 @@ void main() {
     // Note: spec_row_19 might be off-screen so we don't expect it to be built yet.
 
     // Scroll to the bottom to trigger load more
-    final scrollFinder = find.descendant(of: find.byType(ListView), matching: find.byType(Scrollable));
+    final scrollFinder = find.descendant(
+      of: find.byType(ListView),
+      matching: find.byType(Scrollable),
+    );
     await tester.scrollUntilVisible(
-      find.byKey(const Key('spec_row_19')), // Scroll to the last item of the first page
+      find.byKey(
+        const Key('spec_row_19'),
+      ), // Scroll to the last item of the first page
       500.0,
       scrollable: scrollFinder,
     );
@@ -118,18 +130,16 @@ void main() {
     // expect(find.byKey(const Key('spec_row_20')), findsOneWidget);
   });
 
-  testWidgets('SpecListPage implements search pagination', (WidgetTester tester) async {
+  testWidgets('SpecListPage implements search pagination', (
+    WidgetTester tester,
+  ) async {
     final fakeDb = FakeAppDatabase(NativeDatabase.memory());
     addTearDown(() => fakeDb.close());
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          appDbProvider.overrideWithValue(fakeDb),
-        ],
-        child: const MaterialApp(
-          home: SpecListPage(),
-        ),
+        overrides: [appDbProvider.overrideWithValue(fakeDb)],
+        child: const MaterialApp(home: SpecListPage()),
       ),
     );
 
@@ -156,7 +166,10 @@ void main() {
     expect(find.byKey(const Key('spec_row_0')), findsOneWidget);
 
     // Scroll to load more search results
-    final scrollFinder = find.descendant(of: find.byType(ListView), matching: find.byType(Scrollable));
+    final scrollFinder = find.descendant(
+      of: find.byType(ListView),
+      matching: find.byType(Scrollable),
+    );
     await tester.scrollUntilVisible(
       find.byKey(const Key('spec_row_19')),
       500.0,
