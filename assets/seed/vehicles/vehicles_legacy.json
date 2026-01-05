@@ -1,0 +1,623 @@
+[
+  {
+    "id": "v_leg_1990_l_us",
+    "year": 1990,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "L (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1990_ls_us",
+    "year": 1990,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "LS (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1991_sport_sedan_us",
+    "year": 1991,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Sport Sedan (US)",
+    "engineCode": "EJ22T Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1991_l_us",
+    "year": 1991,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "L (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1992_sport_sedan_us",
+    "year": 1992,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Sport Sedan (US)",
+    "engineCode": "EJ22T Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1992_touring_wagon_us",
+    "year": 1992,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Touring Wagon (US)",
+    "engineCode": "EJ22T Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1992_lsi_us",
+    "year": 1992,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "LSi (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1993_sport_sedan_us",
+    "year": 1993,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Sport Sedan (US)",
+    "engineCode": "EJ22T Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1993_touring_wagon_us",
+    "year": 1993,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Touring Wagon (US)",
+    "engineCode": "EJ22T Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1994_sport_sedan_us",
+    "year": 1994,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Sport Sedan (US)",
+    "engineCode": "EJ22T Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1994_touring_wagon_us",
+    "year": 1994,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Touring Wagon (US)",
+    "engineCode": "EJ22T Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1994_gt_us",
+    "year": 1994,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1995_l_us",
+    "year": 1995,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "L (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1995_ls_us",
+    "year": 1995,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "LS (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1995_outback_us",
+    "year": 1995,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Outback (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1996_gt_us",
+    "year": 1996,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT (US)",
+    "engineCode": "EJ25D NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1996_outback_us",
+    "year": 1996,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Outback (US)",
+    "engineCode": "EJ22/EJ25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1997_gt_us",
+    "year": 1997,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT (US)",
+    "engineCode": "EJ25D NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1997_outback_limited_us",
+    "year": 1997,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Outback Limited (US)",
+    "engineCode": "EJ25D NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1998_gt_limited_us",
+    "year": 1998,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT Limited (US)",
+    "engineCode": "EJ25D NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1998_outback_limited_us",
+    "year": 1998,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Outback Limited (US)",
+    "engineCode": "EJ25D NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1999_gt_30th_us",
+    "year": 1999,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT 30th Anniversary (US)",
+    "engineCode": "EJ25D NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1999_outback_30th_us",
+    "year": 1999,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Outback 30th Anniversary (US)",
+    "engineCode": "EJ25D NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1999_sus_30th_us",
+    "year": 1999,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "SUS 30th Anniversary (US)",
+    "engineCode": "EJ25D NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2000_l_us",
+    "year": 2000,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "L (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2000_brighton_us",
+    "year": 2000,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Brighton (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2000_gt_us",
+    "year": 2000,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2000_gt_limited_us",
+    "year": 2000,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT Limited (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2001_gt_limited_us",
+    "year": 2001,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT Limited (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2002_gt_limited_us",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT Limited (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2003_l_se_us",
+    "year": 2003,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "L Special Edition (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2004_l_35th_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "L 35th Anniversary (US)",
+    "engineCode": "EJ251/EJ252 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2004_gt_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT (US)",
+    "engineCode": "EJ251/EJ252 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2005_2_5i_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5i (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2005_gt_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2005_gt_limited_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT Limited (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2006_spec_b_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT spec.B (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2006_2_5i_se_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5i Special Edition (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2007_spec_b_us",
+    "year": 2007,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT spec.B (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2008_3_0r_limited_us",
+    "year": 2008,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "3.0R Limited (US)",
+    "engineCode": "EZ30 H6",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2008_gt_limited_us",
+    "year": 2008,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT Limited (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2009_3_0r_limited_us",
+    "year": 2009,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "3.0R Limited (US)",
+    "engineCode": "EZ30 H6",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2009_gt_limited_us",
+    "year": 2009,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "GT Limited (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2010_2_5i_premium_us",
+    "year": 2010,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5i Premium (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2010_2_5gt_premium_us",
+    "year": 2010,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5GT Premium (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2010_3_6r_premium_us",
+    "year": 2010,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "3.6R Premium (US)",
+    "engineCode": "EZ36 H6",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2011_2_5gt_limited_us",
+    "year": 2011,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5GT Limited (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2011_3_6r_limited_us",
+    "year": 2011,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "3.6R Limited (US)",
+    "engineCode": "EZ36 H6",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2012_2_5gt_limited_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5GT Limited (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2013_3_6r_limited_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "3.6R Limited (US)",
+    "engineCode": "EZ36 H6",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2014_2_5i_sport_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5i Sport (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2014_3_6r_limited_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "3.6R Limited (US)",
+    "engineCode": "EZ36 H6",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2015_2_5i_premium_us",
+    "year": 2015,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5i Premium (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2015_2_5i_limited_us",
+    "year": 2015,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5i Limited (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2015_3_6r_limited_us",
+    "year": 2015,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "3.6R Limited (US)",
+    "engineCode": "EZ36 H6",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2016_2_5i_premium_us",
+    "year": 2016,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5i Premium (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2017_2_5i_sport_us",
+    "year": 2017,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5i Sport (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2018_2_5i_limited_us",
+    "year": 2018,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5i Limited (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2018_3_6r_limited_us",
+    "year": 2018,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "3.6R Limited (US)",
+    "engineCode": "EZ36 H6",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2019_2_5i_limited_50th_us",
+    "year": 2019,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "2.5i Limited 50th Anniversary (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2019_3_6r_limited_us",
+    "year": 2019,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "3.6R Limited (US)",
+    "engineCode": "EZ36 H6",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2020_premium_us",
+    "year": 2020,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Premium (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2020_limited_xt_us",
+    "year": 2020,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Limited XT (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2020_touring_xt_us",
+    "year": 2020,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Touring XT (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2021_sport_us",
+    "year": 2021,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Sport (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2022_limited_us",
+    "year": 2022,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Limited (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2023_sport_xt_us",
+    "year": 2023,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Sport (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2023_touring_xt_us",
+    "year": 2023,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Touring XT (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_2024_premium_us",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Legacy",
+    "trim": "Premium (US)",
+    "engineCode": "FB25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  }
+]

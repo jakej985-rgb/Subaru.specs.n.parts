@@ -1,0 +1,82 @@
+[
+  {
+    "id": "s4",
+    "category": "Fluids",
+    "title": "Brake Fluid Type",
+    "body": "DOT 3 or DOT 4.",
+    "tags": "brakes,fluid",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s9",
+    "category": "Coolant",
+    "title": "Coolant Type",
+    "body": "Subaru Super Coolant (Blue)",
+    "tags": "coolant,fluid",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s22",
+    "category": "Fluids",
+    "title": "Rear Differential Fluid",
+    "body": "GL-5 75W-90",
+    "tags": "diff,fluid",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s29",
+    "category": "Fluids",
+    "title": "R160 Rear Diff Capacity",
+    "body": "0.8 Liters (0.8 Quarts)",
+    "tags": "diff,fluid,r160,wrx,gd,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s30",
+    "category": "Fluids",
+    "title": "R180 Rear Diff Capacity",
+    "body": "1.0 Liters (1.1 Quarts)",
+    "tags": "diff,fluid,r180,sti,gd,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s31",
+    "category": "Coolant",
+    "title": "WRX/STI 2002-2007 Coolant Capacity",
+    "body": "7.0 - 7.7 Liters (7.4 - 8.1 Quarts) depending on model.",
+    "tags": "coolant,capacity,gd,wrx,sti",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_coolant_EV",
+    "category": "Fluids",
+    "title": "EV Coolant (Solterra)",
+    "body": "Special EV Coolant. Do not mix with engine coolant.",
+    "tags": "coolant,fluid,solterra,ev",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_atf_4eat_old",
+    "category": "Fluids",
+    "title": "4EAT Transmission Fluid (90s Era)",
+    "body": "Dexron III ATF",
+    "tags": "trans,fluid,atf,svx,legacy,4eat,dexron",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_gear_5mt_old",
+    "category": "Fluids",
+    "title": "5MT Transmission Fluid (90s Era)",
+    "body": "GL-5 75W-90 (Approx 3.7 Quarts)",
+    "tags": "trans,fluid,manual,legacy,gl,loyale,5mt",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_diff_svx_front",
+    "category": "Fluids",
+    "title": "SVX Front Diff Fluid",
+    "body": "GL-5 80W-90 or 75W-90 (1.2 - 1.3 Quarts)",
+    "tags": "diff,fluid,front,svx",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  }
+]

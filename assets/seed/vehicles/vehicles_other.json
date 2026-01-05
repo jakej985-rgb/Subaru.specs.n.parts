@@ -1,0 +1,380 @@
+[
+  {
+    "id": "v_svx_1991_base_us",
+    "year": 1991,
+    "make": "Subaru",
+    "model": "SVX",
+    "trim": "Base (US)",
+    "engineCode": "EG33 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_svx_1992_base_us",
+    "year": 1992,
+    "make": "Subaru",
+    "model": "SVX",
+    "trim": "Base (US)",
+    "engineCode": "EG33 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_svx_1993_base_us",
+    "year": 1993,
+    "make": "Subaru",
+    "model": "SVX",
+    "trim": "Base (US)",
+    "engineCode": "EG33 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_svx_1994_base_us",
+    "year": 1994,
+    "make": "Subaru",
+    "model": "SVX",
+    "trim": "Base (US)",
+    "engineCode": "EG33 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_svx_1995_lsi_us",
+    "year": 1995,
+    "make": "Subaru",
+    "model": "SVX",
+    "trim": "LSi (US)",
+    "engineCode": "EG33 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_svx_1996_lsi_us",
+    "year": 1996,
+    "make": "Subaru",
+    "model": "SVX",
+    "trim": "LSi (US)",
+    "engineCode": "EG33 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_baja_2003_base_us",
+    "year": 2003,
+    "make": "Subaru",
+    "model": "Baja",
+    "trim": "Base (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_baja_2003_sport_us",
+    "year": 2003,
+    "make": "Subaru",
+    "model": "Baja",
+    "trim": "Sport (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_baja_2004_base_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Baja",
+    "trim": "Base (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_baja_2004_turbo_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Baja",
+    "trim": "Turbo (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_baja_2005_base_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Baja",
+    "trim": "Base (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_baja_2005_turbo_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Baja",
+    "trim": "Turbo (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_baja_2006_base_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Baja",
+    "trim": "Base (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_baja_2006_turbo_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Baja",
+    "trim": "Turbo (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_tribeca_2006_base_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Tribeca",
+    "trim": "Base (US)",
+    "engineCode": "EZ30 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_tribeca_2007_base_us",
+    "year": 2007,
+    "make": "Subaru",
+    "model": "Tribeca",
+    "trim": "Base (US)",
+    "engineCode": "EZ30 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_tribeca_2008_base_us",
+    "year": 2008,
+    "make": "Subaru",
+    "model": "Tribeca",
+    "trim": "Base (US)",
+    "engineCode": "EZ36 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_tribeca_2009_base_us",
+    "year": 2009,
+    "make": "Subaru",
+    "model": "Tribeca",
+    "trim": "Base (US)",
+    "engineCode": "EZ36 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_tribeca_2010_base_us",
+    "year": 2010,
+    "make": "Subaru",
+    "model": "Tribeca",
+    "trim": "Base (US)",
+    "engineCode": "EZ36 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_tribeca_2011_base_us",
+    "year": 2011,
+    "make": "Subaru",
+    "model": "Tribeca",
+    "trim": "Base (US)",
+    "engineCode": "EZ36 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_tribeca_2012_base_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Tribeca",
+    "trim": "Base (US)",
+    "engineCode": "EZ36 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_tribeca_2013_base_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Tribeca",
+    "trim": "Base (US)",
+    "engineCode": "EZ36 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_tribeca_2014_base_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Tribeca",
+    "trim": "Base (US)",
+    "engineCode": "EZ36 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_ascent_2019_base_us",
+    "year": 2019,
+    "make": "Subaru",
+    "model": "Ascent",
+    "trim": "Base (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_ascent_2019_premium_us",
+    "year": 2019,
+    "make": "Subaru",
+    "model": "Ascent",
+    "trim": "Premium (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_ascent_2019_limited_us",
+    "year": 2019,
+    "make": "Subaru",
+    "model": "Ascent",
+    "trim": "Limited (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_ascent_2019_touring_us",
+    "year": 2019,
+    "make": "Subaru",
+    "model": "Ascent",
+    "trim": "Touring (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_ascent_2020_base_us",
+    "year": 2020,
+    "make": "Subaru",
+    "model": "Ascent",
+    "trim": "Base (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_ascent_2021_base_us",
+    "year": 2021,
+    "make": "Subaru",
+    "model": "Ascent",
+    "trim": "Base (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_ascent_2022_base_us",
+    "year": 2022,
+    "make": "Subaru",
+    "model": "Ascent",
+    "trim": "Base (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_ascent_2022_onyx_us",
+    "year": 2022,
+    "make": "Subaru",
+    "model": "Ascent",
+    "trim": "Onyx Edition (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_ascent_2023_base_us",
+    "year": 2023,
+    "make": "Subaru",
+    "model": "Ascent",
+    "trim": "Base (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_ascent_2024_base_us",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Ascent",
+    "trim": "Base (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_solterra_2022_premium_us",
+    "year": 2022,
+    "make": "Subaru",
+    "model": "Solterra",
+    "trim": "Premium (US)",
+    "engineCode": "Electric",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_solterra_2022_limited_us",
+    "year": 2022,
+    "make": "Subaru",
+    "model": "Solterra",
+    "trim": "Limited (US)",
+    "engineCode": "Electric",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_solterra_2022_touring_us",
+    "year": 2022,
+    "make": "Subaru",
+    "model": "Solterra",
+    "trim": "Touring (US)",
+    "engineCode": "Electric",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_solterra_2023_premium_us",
+    "year": 2023,
+    "make": "Subaru",
+    "model": "Solterra",
+    "trim": "Premium (US)",
+    "engineCode": "Electric",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_solterra_2023_limited_us",
+    "year": 2023,
+    "make": "Subaru",
+    "model": "Solterra",
+    "trim": "Limited (US)",
+    "engineCode": "Electric",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_solterra_2023_touring_us",
+    "year": 2023,
+    "make": "Subaru",
+    "model": "Solterra",
+    "trim": "Touring (US)",
+    "engineCode": "Electric",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_solterra_2024_premium_us",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Solterra",
+    "trim": "Premium (US)",
+    "engineCode": "Electric",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_solterra_2024_limited_us",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Solterra",
+    "trim": "Limited (US)",
+    "engineCode": "Electric",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_solterra_2024_touring_us",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Solterra",
+    "trim": "Touring (US)",
+    "engineCode": "Electric",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  }
+]

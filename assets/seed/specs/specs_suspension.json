@@ -1,0 +1,18 @@
+[
+  {
+    "id": "s23",
+    "category": "Alignment",
+    "title": "Front Camber (Stock)",
+    "body": "-0.5 degrees +/- 0.5",
+    "tags": "alignment,suspension",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s24",
+    "category": "Alignment",
+    "title": "Rear Toe",
+    "body": "0 +/- 2mm",
+    "tags": "alignment,suspension",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  }
+]

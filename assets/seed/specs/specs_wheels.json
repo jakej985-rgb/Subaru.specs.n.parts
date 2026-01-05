@@ -1,0 +1,154 @@
+[
+  {
+    "id": "s12",
+    "category": "Tires",
+    "title": "WRX 2022 Base Tire Size",
+    "body": "235/45R17",
+    "tags": "tires,wrx,2022",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s13",
+    "category": "Tires",
+    "title": "WRX 2022 Limited Tire Size",
+    "body": "245/40R18",
+    "tags": "tires,wrx,2022",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s32",
+    "category": "Wheels",
+    "title": "Bolt Pattern (WRX 2022+)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,wrx,vb,2022,2023,2024",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s33",
+    "category": "Wheels",
+    "title": "Bolt Pattern (WRX/STI 2015-2021)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,wrx,sti,va,2015,2016,2017,2018,2019,2020,2021",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s34",
+    "category": "Wheels",
+    "title": "Bolt Pattern (STI 2005-2007)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,sti,gd,2005,2006,2007",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s35",
+    "category": "Wheels",
+    "title": "Bolt Pattern (STI 2004)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,sti,gd,2004",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s36",
+    "category": "Wheels",
+    "title": "Bolt Pattern (WRX 2002-2007)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,wrx,gd,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s37",
+    "category": "Wheels",
+    "title": "Hub Center Bore",
+    "body": "56.1 mm",
+    "tags": "wheels,hub,bore,wrx,sti,impreza",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s38",
+    "category": "Wheels",
+    "title": "Lug Thread Size",
+    "body": "M12 x 1.25",
+    "tags": "wheels,lugs,thread,wrx,sti",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_4x140",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Classics)",
+    "body": "4x140",
+    "tags": "wheels,bolt_pattern,brat,gl,xt,loyale,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x100_XT6",
+    "category": "Wheels",
+    "title": "Bolt Pattern (XT6)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,xt6,xt",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_4x100_Justy",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Justy)",
+    "body": "4x100",
+    "tags": "wheels,bolt_pattern,justy",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x114_SVX",
+    "category": "Wheels",
+    "title": "Bolt Pattern (SVX)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,svx",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x100_Baja",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Baja)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,baja",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x114_Tribeca",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Tribeca)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,tribeca",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x114_Ascent",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Ascent)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,ascent",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x114_Solterra",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Solterra)",
+    "body": "5x114.3 (Hub: 60.1mm)",
+    "tags": "wheels,bolt_pattern,solterra",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x100_Crosstrek_Pre24",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Crosstrek 2013-2023)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,crosstrek,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x114_Crosstrek_24",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Crosstrek 2024+)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,crosstrek,2024",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  }
+]

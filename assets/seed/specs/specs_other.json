@@ -1,0 +1,58 @@
+[
+  {
+    "id": "s3",
+    "category": "Torque",
+    "title": "Lug Nut Torque",
+    "body": "89 ft-lbs (120 Nm) for most models.",
+    "tags": "torque,wheels,lugs",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s5",
+    "category": "Torque",
+    "title": "Oil Drain Plug Torque",
+    "body": "30.8 ft-lbs (41.7 Nm) - check specific model.",
+    "tags": "oil,torque,drain",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s11",
+    "category": "Torque",
+    "title": "Caliper Bracket Bolts (Front)",
+    "body": "80 ft-lbs (108 Nm) for STI Brembos.",
+    "tags": "brakes,torque,sti",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s15",
+    "category": "Torque",
+    "title": "Spark Plug Torque",
+    "body": "12.9 ft-lbs (17.5 Nm)",
+    "tags": "spark,torque",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s18",
+    "category": "Dimensions",
+    "title": "WRX 2022 Length",
+    "body": "183.8 inches",
+    "tags": "dimensions,wrx",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s19",
+    "category": "Dimensions",
+    "title": "WRX 2022 Width",
+    "body": "71.9 inches",
+    "tags": "dimensions,wrx",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s25",
+    "category": "Fuel",
+    "title": "Recommended Fuel",
+    "body": "91 Octane or higher for Turbo models.",
+    "tags": "fuel,gas",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  }
+]

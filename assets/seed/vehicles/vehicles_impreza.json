@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "v_imp_1993_l_us",
+    "year": 1993,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "L (US)",
+    "engineCode": "EJ18 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_1993_ls_us",
+    "year": 1993,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "LS (US)",
+    "engineCode": "EJ18 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_1995_lx_us",
+    "year": 1995,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "LX (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_1995_outback_sport_us",
+    "year": 1995,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Outback Sport (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_1996_brighton_us",
+    "year": 1996,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Brighton (US)",
+    "engineCode": "EJ18 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_leg_1996_outback_sport_us",
+    "year": 1996,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Outback Sport (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_1998_2_5rs_us",
+    "year": 1998,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS (US)",
+    "engineCode": "EJ25D NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_1999_2_5rs_us",
+    "year": 1999,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2000_2_5rs_sedan_us",
+    "year": 2000,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS Sedan (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2000_2_5rs_coupe_us",
+    "year": 2000,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS Coupe (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2001_2_5rs_sedan_us",
+    "year": 2001,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS Sedan (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2002_ts_wagon_us",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "TS Sport Wagon (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2002_outback_sport_us",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Outback Sport (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2002_2_5rs_sedan_us",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS Sedan (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2002_wrx_sedan_us",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Sedan (US)",
+    "engineCode": "EJ205 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2002_wrx_wagon_us",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Wagon (US)",
+    "engineCode": "EJ205 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2003_wrx_sedan_us",
+    "year": 2003,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Sedan (US)",
+    "engineCode": "EJ205 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2004_ts_wagon_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "TS Sport Wagon (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2004_2_5rs_sedan_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS Sedan (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2004_wrx_sedan_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Sedan (US)",
+    "engineCode": "EJ205 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2004_wrx_sti_sedan_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI Sedan (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2005_2_5rs_wagon_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS Wagon (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2005_wrx_sedan_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Sedan (US)",
+    "engineCode": "EJ205 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2005_wrx_sti_sedan_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI Sedan (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2006_2_5i_sedan_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5i Sedan (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2006_wrx_sedan_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Sedan (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2006_wrx_tr_sedan_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX TR Sedan (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2006_wrx_sti_sedan_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI Sedan (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2007_kk_special_us",
+    "year": 2007,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5i Special Edition (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2007_wrx_limited_us",
+    "year": 2007,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Limited (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2015_2_0i_sport_us",
+    "year": 2015,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Sport Premium (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2017_2_0i_sport_us",
+    "year": 2017,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Sport (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v7",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Impreza WRX STI",
+    "trim": "Standard",
+    "engineCode": "EJ257",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v8",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza WRX",
+    "trim": "Standard",
+    "engineCode": "EJ205",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v10",
+    "year": 1998,
+    "make": "Subaru",
+    "model": "Impreza 2.5RS",
+    "trim": "Coupe",
+    "engineCode": "EJ251",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v_imp_1993_l_base_us",
+    "year": 1993,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "L/Base (US)",
+    "engineCode": "EJ18 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1993_base_grades_jdm",
+    "year": 1993,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Base grades (JDM)",
+    "engineCode": "EJ15/EJ16/EJ18/EJ20 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1993_wrx_jdm",
+    "year": 1993,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (JDM)",
+    "engineCode": "EJ20 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1994_l_us",
+    "year": 1994,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "L (US)",
+    "engineCode": "EJ18 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1994_wrx_jdm",
+    "year": 1994,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (JDM)",
+    "engineCode": "EJ20 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1994_wrx_sti_v1_jdm",
+    "year": 1994,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI V1 (JDM)",
+    "engineCode": "EJ20 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1995_l_us",
+    "year": 1995,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "L (US)",
+    "engineCode": "EJ18/EJ22 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1995_wrx_sti_v2_jdm",
+    "year": 1995,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX/STI V2 (JDM)",
+    "engineCode": "EJ20 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1996_l_brighton_us",
+    "year": 1996,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "L/Brighton (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1996_wrx_sti_v3_jdm",
+    "year": 1996,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX/STI V3 (JDM)",
+    "engineCode": "EJ20 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1997_l_brighton_us",
+    "year": 1997,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "L/Brighton (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1997_outback_sport_us",
+    "year": 1997,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Outback Sport (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1997_wrx_sti_v4_jdm",
+    "year": 1997,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX/STI V4 (JDM)",
+    "engineCode": "EJ20 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1998_2_5_rs_us",
+    "year": 1998,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS (US)",
+    "engineCode": "EJ25D NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1998_l_us",
+    "year": 1998,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "L (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1998_wrx_sti_v5_jdm",
+    "year": 1998,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX/STI V5 (JDM)",
+    "engineCode": "EJ20 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1998_sti_22b_jdm",
+    "year": 1998,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "STI 22B (JDM)",
+    "engineCode": "EJ22T Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1999_2_5_rs_us",
+    "year": 1999,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1999_l_brighton_us",
+    "year": 1999,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "L/Brighton (US)",
+    "engineCode": "EJ22 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_1999_wrx_sti_v6_jdm",
+    "year": 1999,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX/STI V6 (JDM)",
+    "engineCode": "EJ20 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2000_2_5_rs_us",
+    "year": 2000,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2000_outback_sport_us",
+    "year": 2000,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Outback Sport (US)",
+    "engineCode": "EJ22/EJ25 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2000_wrx_jdm",
+    "year": 2000,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (JDM)",
+    "engineCode": "EJ20 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2000_wrx_sti_jdm",
+    "year": 2000,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (JDM)",
+    "engineCode": "EJ207 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2001_2_5_rs_us",
+    "year": 2001,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2001_outback_sport_us",
+    "year": 2001,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Outback Sport (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2002_2_5_rs_us",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2002_wrx_us",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ205 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2002_wrx_jdm",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (JDM)",
+    "engineCode": "EJ20 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2002_wrx_sti_jdm",
+    "year": 2002,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (JDM)",
+    "engineCode": "EJ207 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2003_wrx_us",
+    "year": 2003,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ205 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2003_2_5_ts_us",
+    "year": 2003,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 TS (US)",
+    "engineCode": "EJ251 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2004_wrx_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ205 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2004_wrx_sti_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2004_2_5_rs_ts_us",
+    "year": 2004,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS/TS (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2005_wrx_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ205 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2005_wrx_sti_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2005_2_5_rs_us",
+    "year": 2005,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 RS (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2006_wrx_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2006_wrx_sti_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2006_2_5i_us",
+    "year": 2006,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5i (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2007_wrx_us",
+    "year": 2007,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2007_wrx_sti_us",
+    "year": 2007,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2007_2_5i_us",
+    "year": 2007,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5i (US)",
+    "engineCode": "EJ25 NA",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "v_imp_2008_2_5i_us",
+    "year": 2008,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5i (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2008_outback_sport_us",
+    "year": 2008,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Outback Sport (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2008_wrx_us",
+    "year": 2008,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2008_wrx_sti_us",
+    "year": 2008,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2009_2_5i_us",
+    "year": 2009,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5i (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2009_outback_sport_us",
+    "year": 2009,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Outback Sport (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2009_wrx_us",
+    "year": 2009,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2009_2_5_gt_us",
+    "year": 2009,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 GT (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2009_wrx_sti_us",
+    "year": 2009,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2010_2_5i_us",
+    "year": 2010,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5i (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2010_outback_sport_us",
+    "year": 2010,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Outback Sport (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2010_wrx_us",
+    "year": 2010,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2010_2_5_gt_us",
+    "year": 2010,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5 GT (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2010_wrx_sti_us",
+    "year": 2010,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2010_wrx_sti_se_us",
+    "year": 2010,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI Special Edition (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2011_2_5i_us",
+    "year": 2011,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.5i (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2011_outback_sport_us",
+    "year": 2011,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "Outback Sport (US)",
+    "engineCode": "EJ253 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2011_wrx_us",
+    "year": 2011,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2011_wrx_sti_us",
+    "year": 2011,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2012_2_0i_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2012_2_0i_premium_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Premium (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2012_2_0i_limited_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Limited (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2012_2_0i_sport_premium_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Sport Premium (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2012_2_0i_sport_limited_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Sport Limited (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2012_wrx_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2012_wrx_premium_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Premium (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2012_wrx_limited_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Limited (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2012_wrx_sti_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2012_wrx_sti_limited_us",
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI Limited (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_2_0i_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_2_0i_premium_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Premium (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_2_0i_limited_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Limited (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_2_0i_sport_premium_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Sport Premium (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_2_0i_sport_limited_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Sport Limited (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_wrx_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_wrx_premium_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Premium (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_wrx_limited_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Limited (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_wrx_special_edition_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Special Edition (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_wrx_sti_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_wrx_sti_limited_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI Limited (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2013_wrx_sti_special_edition_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI Special Edition (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2014_2_0i_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2014_2_0i_premium_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Premium (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2014_2_0i_limited_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Limited (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2014_2_0i_sport_premium_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Sport Premium (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2014_2_0i_sport_limited_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "2.0i Sport Limited (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2014_wrx_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2014_wrx_premium_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Premium (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2014_wrx_limited_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX Limited (US)",
+    "engineCode": "EJ255 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2014_wrx_sti_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_imp_2014_wrx_sti_limited_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Impreza",
+    "trim": "WRX STI Limited (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  }
+]

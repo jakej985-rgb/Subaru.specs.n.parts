@@ -1,0 +1,148 @@
+[
+  {
+    "id": "s1",
+    "category": "Oil",
+    "title": "WRX 2022+ Oil Capacity",
+    "body": "4.8 Liters (5.1 Quarts) with filter change.",
+    "tags": "oil,capacity,fa24,wrx,vb",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s2",
+    "category": "Oil",
+    "title": "STI 2015-2021 Oil Capacity",
+    "body": "4.3 Liters (4.5 Quarts)",
+    "tags": "oil,capacity,ej257,sti,va",
+    "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s26",
+    "category": "Oil",
+    "title": "STI 2004-2007 Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "oil,capacity,ej257,sti,gd",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s27",
+    "category": "Oil",
+    "title": "WRX 2002-2005 Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "oil,capacity,ej205,wrx,gd",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s40",
+    "category": "Oil",
+    "title": "WRX 2022+ Oil Viscosity",
+    "body": "0W-20 Synthetic",
+    "tags": "oil,viscosity,fa24,wrx,vb",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s41",
+    "category": "Oil",
+    "title": "STI 2015-2021 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,ej257,sti,va",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s42",
+    "category": "Oil",
+    "title": "WRX 2015-2021 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,fa20,wrx,va",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s43",
+    "category": "Oil",
+    "title": "STI 2004-2007 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,ej257,sti,gd",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s44",
+    "category": "Oil",
+    "title": "WRX 2002-2005 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,ej205,wrx,gd",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_oil_EA81",
+    "category": "Oil",
+    "title": "EA81 Oil Capacity & Viscosity",
+    "body": "3.7 Quarts (4.0L) | 10W-30 or 10W-40 typically recommended.",
+    "tags": "oil,capacity,viscosity,ea81,brat,gl",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_EA82",
+    "category": "Oil",
+    "title": "EA82 Oil Capacity & Viscosity",
+    "body": "4.2 Quarts (4.0L) | 10W-30 or 10W-40.",
+    "tags": "oil,capacity,viscosity,ea82,gl,loyale,xt",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_ER27",
+    "category": "Oil",
+    "title": "ER27 Oil Capacity",
+    "body": "4.8 Quarts (4.5L).",
+    "tags": "oil,capacity,er27,xt,xt6",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_EF12",
+    "category": "Oil",
+    "title": "EF12 Oil Capacity",
+    "body": "3.2 Quarts (3.0L). Small sump - check often!",
+    "tags": "oil,capacity,ef12,ef10,justy",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_EG33",
+    "category": "Oil",
+    "title": "EG33 Oil Capacity",
+    "body": "6.4 - 7.0 Quarts (check dipstick).",
+    "tags": "oil,capacity,eg33,svx",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_EZ30_36",
+    "category": "Oil",
+    "title": "EZ30/EZ36 Oil Capacity",
+    "body": "5.8 - 6.3 Quarts with filter.",
+    "tags": "oil,capacity,ez30,ez36,tribeca,legacy,outback",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_FA24T",
+    "category": "Oil",
+    "title": "FA24 Turbo Oil Capacity",
+    "body": "4.8 Quarts (4.5 Liters) with filter.",
+    "tags": "oil,capacity,fa24,ascent,wrx,legacy,outback",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_FB20",
+    "category": "Oil",
+    "title": "FB20 Oil Capacity",
+    "body": "4.7 Quarts (4.4 Liters) with filter.",
+    "tags": "oil,capacity,fb20,crosstrek,impreza",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  }
+]

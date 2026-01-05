@@ -1,0 +1,155 @@
+[
+  {
+    "id": "v9",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Sport",
+    "engineCode": "FB25",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2020_base_us",
+    "year": 2020,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FA20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2022_wilderness_us",
+    "year": 2022,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Wilderness (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2013_base_us",
+    "year": 2013,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2014_base_us",
+    "year": 2014,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2015_base_us",
+    "year": 2015,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2016_base_us",
+    "year": 2016,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2017_base_us",
+    "year": 2017,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2018_base_us",
+    "year": 2018,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 NA",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2019_base_us",
+    "year": 2019,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 DI",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2019_hybrid_us",
+    "year": 2019,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Hybrid (US)",
+    "engineCode": "FB20 Hybrid",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2021_base_us",
+    "year": 2021,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 DI",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2021_sport_us",
+    "year": 2021,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Sport (US)",
+    "engineCode": "FB25 DI",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2022_base_us",
+    "year": 2022,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 DI",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2023_base_us",
+    "year": 2023,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 DI",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2024_base_us",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Base (US)",
+    "engineCode": "FB20 DI",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "v_crosstrek_2024_wilderness_us",
+    "year": 2024,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "trim": "Wilderness (US)",
+    "engineCode": "FB25 DI",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  }
+]

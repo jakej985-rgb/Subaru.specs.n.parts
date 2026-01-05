@@ -1,0 +1,162 @@
+[
+  {
+    "id": "s6",
+    "category": "Engine",
+    "title": "FA24 Firing Order",
+    "body": "1-3-2-4",
+    "tags": "engine,firing,fa24",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s7",
+    "category": "Engine",
+    "title": "EJ257 Firing Order",
+    "body": "1-3-2-4",
+    "tags": "engine,firing,ej257",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s8",
+    "category": "Spark Plugs",
+    "title": "WRX 2015+ Gap",
+    "body": "0.020 - 0.022 inch",
+    "tags": "spark,gap,fa20",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s21",
+    "category": "Engine",
+    "title": "Head Bolts (EJ)",
+    "body": "Complex sequence. Refer to service manual.",
+    "tags": "engine,torque,headgasket",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_eng_EA81",
+    "category": "Engine",
+    "title": "EA81",
+    "body": "Displacement: 1.8L (1781cc)\nType: H4 OHV\nPower: ~73 hp\nNotes: Gear-driven cam (no timing belts). Known for extreme reliability. Used in BRAT, GL (early).",
+    "tags": "brat, gl, engine, classic, ea81",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_eng_EA82",
+    "category": "Engine",
+    "title": "EA82 / EA82T",
+    "body": "Displacement: 1.8L (1781cc)\nType: H4 SOHC\nPower: ~97 hp (NA), ~115 hp (Turbo)\nNotes: Timing belts introduced. Used in GL, Loyale, XT.",
+    "tags": "gl, loyale, xt, engine, classic, ea82",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_eng_ER27",
+    "category": "Engine",
+    "title": "ER27",
+    "body": "Displacement: 2.7L\nType: H6 SOHC\nPower: ~145 hp\nNotes: Basically an EA82 with 2 extra cylinders. Used in XT6.",
+    "tags": "xt, xt6, engine, classic, er27",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_eng_EF10_12",
+    "category": "Engine",
+    "title": "EF10 / EF12",
+    "body": "Displacement: 1.0L / 1.2L\nType: Inline-3 SOHC\nPower: ~50-73 hp\nNotes: Water-cooled 3-cylinder. Used in Justy.",
+    "tags": "justy, engine, classic, ef10, ef12",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_eng_EJ18",
+    "category": "Engine",
+    "title": "EJ18",
+    "body": "Displacement: 1.8L\nAspiration: NA\nPhase: Phase 1\nNotes: US base Impreza early years; simple ECU",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ22",
+    "category": "Engine",
+    "title": "EJ22",
+    "body": "Displacement: 2.2L\nAspiration: NA\nPhase: Phase 1/2\nNotes: Common NA swap base; phase varies by year/market",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ25D",
+    "category": "Engine",
+    "title": "EJ25D",
+    "body": "Displacement: 2.5L\nAspiration: NA\nPhase: Phase 1\nNotes: DOHC NA; phase 1 era wiring/sensors",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ251",
+    "category": "Engine",
+    "title": "EJ251",
+    "body": "Displacement: 2.5L\nAspiration: NA\nPhase: Phase 2\nNotes: Phase 2 NA; very swap-friendly",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ253",
+    "category": "Engine",
+    "title": "EJ253",
+    "body": "Displacement: 2.5L\nAspiration: NA\nPhase: Phase 2\nNotes: Late years can be DBW; some trims immobilizer",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ205",
+    "category": "Engine",
+    "title": "EJ205",
+    "body": "Displacement: 2.0L\nAspiration: Turbo\nPhase: Phase 2\nNotes: Best swap ECU era (no immobilizer, cable)",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ255",
+    "category": "Engine",
+    "title": "EJ255",
+    "body": "Displacement: 2.5L\nAspiration: Turbo\nPhase: Phase 2\nNotes: 3.70 FD era; DBW complicates swaps",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ257",
+    "category": "Engine",
+    "title": "EJ257",
+    "body": "Displacement: 2.5L\nAspiration: Turbo\nPhase: Phase 2\nNotes: STI engine; prefers STI 6MT",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ20G",
+    "category": "Engine",
+    "title": "EJ20G",
+    "body": "Displacement: 2.0L\nAspiration: Turbo\nPhase: Phase 1\nNotes: Early JDM turbo; wiring differs",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ20K",
+    "category": "Engine",
+    "title": "EJ20K",
+    "body": "Displacement: 2.0L\nAspiration: Turbo\nPhase: Phase 2 transitional\nNotes: Transitional era",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ207",
+    "category": "Engine",
+    "title": "EJ207",
+    "body": "Displacement: 2.0L\nAspiration: Turbo\nPhase: Phase 2\nNotes: Gold-standard JDM motor: AVCS, high rev, no immobilizer",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s_eng_EJ22T",
+    "category": "Engine",
+    "title": "EJ22T",
+    "body": "Displacement: 2.2L\nAspiration: Turbo\nPhase: Phase 1\nNotes: Limited special; included for completeness",
+    "tags": "impreza, engine, ",
+    "updatedAt": "2025-12-16T16:27:05.198660"
+  }
+]
