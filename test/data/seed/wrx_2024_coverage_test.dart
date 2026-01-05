@@ -1,7 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:specsnparts/data/seed/seed_runner.dart';
-import 'package:specsnparts/data/db/app_db.dart'; // Import Vehicle definition
 
 import 'dart:io';
 
@@ -31,7 +30,11 @@ void main() {
         )
         .toList();
 
-    final foundTrims = wrx2024.map((v) => v.trim).toSet();
+    // Normalize trims by removing " (US)" suffix
+    final foundTrims =
+        wrx2024
+            .map((v) => (v.trim ?? '').replaceAll(RegExp(r'\s*\(US\)'), ''))
+            .toSet();
 
     final missing = expectedTrims.difference(foundTrims);
 
