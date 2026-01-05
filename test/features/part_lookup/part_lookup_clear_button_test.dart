@@ -13,8 +13,11 @@ class FakePartsDao extends PartsDao {
   int searchCallCount = 0;
 
   @override
-  Future<List<Part>> searchParts(String query,
-      {int limit = 50, int offset = 0}) async {
+  Future<List<Part>> searchParts(
+    String query, {
+    int limit = 50,
+    int offset = 0,
+  }) async {
     searchCallCount++;
     return [];
   }
@@ -30,17 +33,15 @@ class FakeAppDatabase extends AppDatabase {
 }
 
 void main() {
-  testWidgets('PartLookupPage clear button functionality', (WidgetTester tester) async {
+  testWidgets('PartLookupPage clear button functionality', (
+    WidgetTester tester,
+  ) async {
     final fakeDb = FakeAppDatabase(NativeDatabase.memory());
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          appDbProvider.overrideWithValue(fakeDb),
-        ],
-        child: const MaterialApp(
-          home: PartLookupPage(),
-        ),
+        overrides: [appDbProvider.overrideWithValue(fakeDb)],
+        child: const MaterialApp(home: PartLookupPage()),
       ),
     );
 

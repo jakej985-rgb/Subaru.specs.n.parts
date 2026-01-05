@@ -675,15 +675,6 @@
     "updatedAt": "2026-01-04T00:00:00Z"
   },
   {
-    "id": "v_imp_1998_2_5rs_us",
-    "year": 1998,
-    "make": "Subaru",
-    "model": "Impreza",
-    "trim": "2.5 RS (US)",
-    "engineCode": "EJ25D NA",
-    "updatedAt": "2026-01-04T00:00:00Z"
-  },
-  {
     "id": "v_imp_1999_2_5rs_us",
     "year": 1999,
     "make": "Subaru",
@@ -897,15 +888,6 @@
     "model": "Impreza",
     "trim": "2.0i Sport Premium (US)",
     "engineCode": "FB20 NA",
-    "updatedAt": "2026-01-04T00:00:00Z"
-  },
-  {
-    "id": "v_wrx_2015_base_us",
-    "year": 2015,
-    "make": "Subaru",
-    "model": "WRX",
-    "trim": "Base (US)",
-    "engineCode": "FA20 Turbo",
     "updatedAt": "2026-01-04T00:00:00Z"
   },
   {
@@ -2481,7 +2463,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Base (US)",
-      "engineCode": "FA20 NA",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2490,7 +2472,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Premium (US)",
-      "engineCode": "FA20 NA",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2499,7 +2481,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Base (US)",
-      "engineCode": "FA20 NA",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2508,7 +2490,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Premium (US)",
-      "engineCode": "FA20 NA",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2517,7 +2499,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Base (US)",
-      "engineCode": "FA20 NA",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2526,7 +2508,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Premium (US)",
-      "engineCode": "FA20 NA",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2647,6 +2629,33 @@
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
+      "id": "v_wrx_2024_premium_us",
+      "year": 2024,
+      "make": "Subaru",
+      "model": "WRX",
+      "trim": "Premium (US)",
+      "engineCode": "FA24 Turbo",
+      "updatedAt": "2026-01-04T00:00:00Z"
+    },
+    {
+      "id": "v_wrx_2024_limited_us",
+      "year": 2024,
+      "make": "Subaru",
+      "model": "WRX",
+      "trim": "Limited (US)",
+      "engineCode": "FA24 Turbo",
+      "updatedAt": "2026-01-04T00:00:00Z"
+    },
+    {
+      "id": "v_wrx_2024_gt_us",
+      "year": 2024,
+      "make": "Subaru",
+      "model": "WRX",
+      "trim": "GT (US)",
+      "engineCode": "FA24 Turbo",
+      "updatedAt": "2026-01-04T00:00:00Z"
+    },
+    {
       "id": "v_brz_2021_base_us",
       "year": 2021,
       "make": "Subaru",
@@ -2733,7 +2742,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Base (US)",
-      "engineCode": "FA20 NA",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2742,7 +2751,16 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Premium (US)",
-      "engineCode": "FA20 NA",
+      "engineCode": "FA24",
+      "updatedAt": "2026-01-04T00:00:00Z"
+    },
+    {
+      "id": "v_brz_2024_limited_us",
+      "year": 2024,
+      "make": "Subaru",
+      "model": "BRZ",
+      "trim": "Limited (US)",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2751,7 +2769,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "tS (US)",
-      "engineCode": "FA24 Turbo",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -3565,15 +3583,6 @@
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
-      "id": "v_wrx_2022_base_us",
-      "year": 2022,
-      "make": "Subaru",
-      "model": "WRX",
-      "trim": "Base (US)",
-      "engineCode": "FA24 Turbo",
-      "updatedAt": "2026-01-04T00:00:00Z"
-    },
-    {
       "id": "v_wrx_2023_base_us",
       "year": 2023,
       "make": "Subaru",
@@ -3598,6 +3607,15 @@
       "model": "Crosstrek",
       "trim": "Base (US)",
       "engineCode": "FB20 NA",
+      "updatedAt": "2026-01-04T00:00:00Z"
+    },
+    {
+      "id": "v_imp_2024_rs_us",
+      "year": 2024,
+      "make": "Subaru",
+      "model": "Impreza",
+      "trim": "RS (US)",
+      "engineCode": "FB25 NA",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
