@@ -162,23 +162,26 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.manage_search, size: 64, color: Theme.of(context).hintColor),
+                        Icon(
+                          Icons.manage_search,
+                          size: 64,
+                          color: Theme.of(context).hintColor,
+                        ),
                         const SizedBox(height: 16),
                         Text(
                           'Start typing to search parts...',
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                                color: Theme.of(context).hintColor,
-                              ),
+                          style: Theme.of(context).textTheme.titleMedium
+                              ?.copyWith(color: Theme.of(context).hintColor),
                         ),
                       ],
                     ),
                   )
                 : _results.isEmpty && !_isLoading
-                    ? const Center(child: Text('No parts found.'))
-                    : ListView.builder(
-                        controller: _scrollController,
-                        itemCount: _results.length + (_isLoading ? 1 : 0),
-                        itemBuilder: (context, index) {
+                ? const Center(child: Text('No parts found.'))
+                : ListView.builder(
+                    controller: _scrollController,
+                    itemCount: _results.length + (_isLoading ? 1 : 0),
+                    itemBuilder: (context, index) {
                       if (index == _results.length) {
                         return const Center(
                           child: Padding(

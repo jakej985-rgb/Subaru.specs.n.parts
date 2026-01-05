@@ -90,71 +90,79 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
             child: s.isLoadingInitial
                 ? const Center(child: CircularProgressIndicator())
                 : s.items.isEmpty
-                    ? Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Icon(Icons.search_off,
-                                size: 64, color: Colors.grey),
-                            const SizedBox(height: 16),
-                            Text(
-                              'No specs found',
-                              style: Theme.of(context).textTheme.titleLarge,
-                            ),
-                          ],
+                ? Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.search_off,
+                          size: 64,
+                          color: Colors.grey,
                         ),
-                      )
-                    : ListView.builder(
-                        key: const Key('specListView'),
-                        controller: _controller,
-                        physics: const AlwaysScrollableScrollPhysics(),
-                        itemCount: s.items.length + (s.isLoadingMore ? 1 : 0),
-                        itemBuilder: (context, index) {
-                          if (index >= s.items.length) {
-                            return const Padding(
-                              padding: EdgeInsets.all(16),
-                              child: Center(child: CircularProgressIndicator()),
-                            );
-                          }
-                          final spec = s.items[index];
-                          return ListTile(
-                            key: Key('spec_row_${spec.id}'),
-                            title: Text(spec.title),
-                            subtitle: Text(spec.category),
-                            trailing: const Icon(Icons.chevron_right),
-                            onTap: () {
-                              showDialog(
-                                  context: context,
-                                  builder: (context) => AlertDialog(
-                                        title: Text(spec.title),
-                                        content: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text('Category: ${spec.category}',
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .bodySmall),
-                                            const SizedBox(height: 8),
-                                            Text(spec.body),
-                                            const SizedBox(height: 8),
-                                            Text('Tags: ${spec.tags}',
-                                                style: Theme.of(context)
-                                                    .textTheme
-                                                    .bodySmall),
-                                          ],
-                                        ),
-                                        actions: [
-                                          TextButton(
-                                              onPressed: () =>
-                                                  Navigator.pop(context),
-                                              child: const Text('Close'))
-                                        ],
-                                      ));
-                            },
+                        const SizedBox(height: 16),
+                        Text(
+                          'No specs found',
+                          style: Theme.of(context).textTheme.titleLarge,
+                        ),
+                      ],
+                    ),
+                  )
+                : ListView.builder(
+                    key: const Key('specListView'),
+                    controller: _controller,
+                    physics: const AlwaysScrollableScrollPhysics(),
+                    itemCount: s.items.length + (s.isLoadingMore ? 1 : 0),
+                    itemBuilder: (context, index) {
+                      if (index >= s.items.length) {
+                        return const Padding(
+                          padding: EdgeInsets.all(16),
+                          child: Center(child: CircularProgressIndicator()),
+                        );
+                      }
+                      final spec = s.items[index];
+                      return ListTile(
+                        key: Key('spec_row_${spec.id}'),
+                        title: Text(spec.title),
+                        subtitle: Text(spec.category),
+                        trailing: const Icon(Icons.chevron_right),
+                        onTap: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              title: Text(spec.title),
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Category: ${spec.category}',
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.bodySmall,
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(spec.body),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    'Tags: ${spec.tags}',
+                                    style: Theme.of(
+                                      context,
+                                    ).textTheme.bodySmall,
+                                  ),
+                                ],
+                              ),
+                              actions: [
+                                TextButton(
+                                  onPressed: () => Navigator.pop(context),
+                                  child: const Text('Close'),
+                                ),
+                              ],
+                            ),
                           );
                         },
-                      ),
+                      );
+                    },
+                  ),
           ),
         ],
       ),

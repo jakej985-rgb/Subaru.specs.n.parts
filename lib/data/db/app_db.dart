@@ -8,7 +8,10 @@ import 'package:specsnparts/data/db/dao/vehicles_dao.dart';
 
 part 'app_db.g.dart';
 
-@DriftDatabase(tables: [Vehicles, Specs, Parts], daos: [VehiclesDao, SpecsDao, PartsDao])
+@DriftDatabase(
+  tables: [Vehicles, Specs, Parts],
+  daos: [VehiclesDao, SpecsDao, PartsDao],
+)
 class AppDatabase extends _$AppDatabase {
   AppDatabase([QueryExecutor? e]) : super(e ?? _openConnection());
 

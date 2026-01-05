@@ -18,11 +18,21 @@ class EngineFlowPage extends StatelessWidget {
             title: Text(engine),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
-              showDialog(context: context, builder: (ctx) => AlertDialog(
-                title: Text(engine),
-                content: const Text('Engine details and related parts coming soon.'),
-                actions: [TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Close'))],
-              ));
+              showDialog(
+                context: context,
+                builder: (ctx) => AlertDialog(
+                  title: Text(engine),
+                  content: const Text(
+                    'Engine details and related parts coming soon.',
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(ctx),
+                      child: const Text('Close'),
+                    ),
+                  ],
+                ),
+              );
             },
           );
         },

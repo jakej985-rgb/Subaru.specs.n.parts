@@ -3,18 +3,16 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:specsnparts/widgets/home_menu_card.dart';
 
 void main() {
-  testWidgets('HomeMenuCard has correct semantics', (WidgetTester tester) async {
+  testWidgets('HomeMenuCard has correct semantics', (
+    WidgetTester tester,
+  ) async {
     final handle = tester.ensureSemantics();
 
     // Build the widget
     await tester.pumpWidget(
       MaterialApp(
         home: Scaffold(
-          body: HomeMenuCard(
-            title: 'Browse',
-            icon: Icons.search,
-            onTap: () {},
-          ),
+          body: HomeMenuCard(title: 'Browse', icon: Icons.search, onTap: () {}),
         ),
       ),
     );
@@ -25,9 +23,13 @@ void main() {
 
     // Check for semantics.
     // We expect the card to be a button and have the label "Browse".
-    
+
     final buttonFinder = find.bySemanticsLabel('Browse');
-    expect(buttonFinder, findsOneWidget, reason: 'HomeMenuCard should be a semantic button with the correct label');
+    expect(
+      buttonFinder,
+      findsOneWidget,
+      reason: 'HomeMenuCard should be a semantic button with the correct label',
+    );
 
     handle.dispose();
   });

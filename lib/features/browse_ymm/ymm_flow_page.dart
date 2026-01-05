@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 
-
 class YmmFlowPage extends ConsumerStatefulWidget {
   const YmmFlowPage({super.key});
 
@@ -49,7 +48,10 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
 
   Future<void> _loadVehicles(int year, String model) async {
     final db = ref.read(appDbProvider);
-    final vehicles = await db.vehiclesDao.getVehiclesByYearAndModel(year, model);
+    final vehicles = await db.vehiclesDao.getVehiclesByYearAndModel(
+      year,
+      model,
+    );
     if (mounted && _selectedModel == model) {
       setState(() {
         _vehicles = vehicles;
@@ -126,16 +128,15 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                 ),
               ],
             ),
-            ..._vehicles
-                .map(
-                  (v) => ListTile(
-                    title: Text('${v.trim ?? "Base"} (${v.engineCode ?? "?"})'),
-                    trailing: const Icon(Icons.check),
-                    onTap: () {
-                      setState(() => _selectedVehicle = v);
-                    },
-                  ),
-                ),
+            ..._vehicles.map(
+              (v) => ListTile(
+                title: Text('${v.trim ?? "Base"} (${v.engineCode ?? "?"})'),
+                trailing: const Icon(Icons.check),
+                onTap: () {
+                  setState(() => _selectedVehicle = v);
+                },
+              ),
+            ),
           ] else ...[
             Row(
               children: [
