@@ -4,17 +4,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/app.dart';
 
 void main() {
-  testWidgets('Smoke test - App boots and shows Home', (WidgetTester tester) async {
+  testWidgets('Smoke test - App boots and shows Home', (
+    WidgetTester tester,
+  ) async {
     // Set a large surface size to ensure all items are visible without scrolling if possible,
     // or we will scroll.
     tester.view.physicalSize = const Size(1080, 2400);
     tester.view.devicePixelRatio = 3.0;
 
-    await tester.pumpWidget(
-      const ProviderScope(
-        child: SubaruSpecsApp(),
-      ),
-    );
+    await tester.pumpWidget(const ProviderScope(child: SubaruSpecsApp()));
     await tester.pumpAndSettle();
 
     expect(find.text('Subaru Specs & Parts'), findsOneWidget);

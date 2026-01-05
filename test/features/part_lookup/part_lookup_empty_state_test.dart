@@ -11,7 +11,11 @@ class FakePartsDao extends PartsDao {
   FakePartsDao(super.db);
 
   @override
-  Future<List<Part>> searchParts(String query, {int limit = 50, int offset = 0}) async {
+  Future<List<Part>> searchParts(
+    String query, {
+    int limit = 50,
+    int offset = 0,
+  }) async {
     return [];
   }
 }
@@ -26,17 +30,15 @@ class FakeAppDatabase extends AppDatabase {
 }
 
 void main() {
-  testWidgets('PartLookupPage shows empty state initially', (WidgetTester tester) async {
+  testWidgets('PartLookupPage shows empty state initially', (
+    WidgetTester tester,
+  ) async {
     final fakeDb = FakeAppDatabase(NativeDatabase.memory());
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          appDbProvider.overrideWithValue(fakeDb),
-        ],
-        child: const MaterialApp(
-          home: PartLookupPage(),
-        ),
+        overrides: [appDbProvider.overrideWithValue(fakeDb)],
+        child: const MaterialApp(home: PartLookupPage()),
       ),
     );
 
@@ -59,7 +61,9 @@ void main() {
     expect(find.text('Start typing to search parts...'), findsNothing);
     expect(find.byIcon(Icons.manage_search), findsNothing);
 
-    // Should show "No parts found."
-    expect(find.text('No parts found.'), findsOneWidget);
+    // Should show "No parts found for 'filter'"
+    expect(find.text('No parts found for "filter"'), findsOneWidget);
+    expect(find.byIcon(Icons.search_off), findsOneWidget);
+    expect(find.text('Clear Search'), findsOneWidget);
   });
 }

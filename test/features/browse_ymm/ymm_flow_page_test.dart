@@ -31,12 +31,8 @@ void main() {
     // Pump widget
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          appDbProvider.overrideWithValue(db),
-        ],
-        child: const MaterialApp(
-          home: YmmFlowPage(),
-        ),
+        overrides: [appDbProvider.overrideWithValue(db)],
+        child: const MaterialApp(home: YmmFlowPage()),
       ),
     );
 

@@ -10,8 +10,11 @@ class PartsDao extends DatabaseAccessor<AppDatabase> with _$PartsDaoMixin {
 
   Future<List<Part>> getAllParts() => select(parts).get();
 
-  Future<List<Part>> searchParts(String query,
-      {int limit = 50, int offset = 0}) {
+  Future<List<Part>> searchParts(
+    String query, {
+    int limit = 50,
+    int offset = 0,
+  }) {
     return (select(parts)
           ..where(
             (tbl) => tbl.name.contains(query) | tbl.oemNumber.contains(query),
