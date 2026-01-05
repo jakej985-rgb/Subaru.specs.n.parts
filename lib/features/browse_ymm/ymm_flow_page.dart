@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 
+
 class YmmFlowPage extends ConsumerStatefulWidget {
   const YmmFlowPage({super.key});
 
@@ -27,20 +28,33 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
 
   Future<void> _loadYears() async {
     final db = ref.read(appDbProvider);
-    final all = await db.vehiclesDao.getAllVehicles();
-    final years = all.map((v) => v.year).toSet().toList()
-      ..sort((a, b) => b.compareTo(a));
-    setState(() => _years = years);
+    // Efficiently fetch only distinct years
+    final List<int> years = await db.vehiclesDao.getDistinctYears();
+    if (mounted) {
+      setState(() => _years = years);
+    }
   }
 
   Future<void> _loadModels(int year) async {
     final db = ref.read(appDbProvider);
-    final vehicles = await db.vehiclesDao.getVehiclesByYear(year);
-    final models = vehicles.map((v) => v.model).toSet().toList()..sort();
-    setState(() {
-      _models = models;
-      _vehicles = vehicles; // Cache for next step
-    });
+    // Optimized: Fetch distinct models directly from DB
+    final models = await db.vehiclesDao.getDistinctModelsByYear(year);
+    if (mounted && _selectedYear == year) {
+      setState(() {
+        _models = models;
+        _vehicles = []; // Clear previous vehicles
+      });
+    }
+  }
+
+  Future<void> _loadVehicles(int year, String model) async {
+    final db = ref.read(appDbProvider);
+    final vehicles = await db.vehiclesDao.getVehiclesByYearAndModel(year, model);
+    if (mounted && _selectedModel == model) {
+      setState(() {
+        _vehicles = vehicles;
+      });
+    }
   }
 
   @override
@@ -70,6 +84,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
               children: [
                 IconButton(
                   icon: const Icon(Icons.arrow_back),
+                  tooltip: 'Back to years',
                   onPressed: () => setState(() => _selectedYear = null),
                 ),
                 Text(
@@ -86,7 +101,11 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                 title: Text(m),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () {
-                  setState(() => _selectedModel = m);
+                  setState(() {
+                    _selectedModel = m;
+                    _vehicles = [];
+                  });
+                  _loadVehicles(_selectedYear!, m);
                 },
               ),
             ),
@@ -95,6 +114,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
               children: [
                 IconButton(
                   icon: const Icon(Icons.arrow_back),
+                  tooltip: 'Back to models',
                   onPressed: () => setState(() => _selectedModel = null),
                 ),
                 Text(
@@ -107,9 +127,6 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
               ],
             ),
             ..._vehicles
-                .where(
-                  (v) => v.year == _selectedYear && v.model == _selectedModel,
-                )
                 .map(
                   (v) => ListTile(
                     title: Text('${v.trim ?? "Base"} (${v.engineCode ?? "?"})'),
@@ -124,6 +141,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
               children: [
                 IconButton(
                   icon: const Icon(Icons.arrow_back),
+                  tooltip: 'Back to trims',
                   onPressed: () => setState(() => _selectedVehicle = null),
                 ),
                 Expanded(

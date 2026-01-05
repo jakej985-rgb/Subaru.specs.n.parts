@@ -9,10 +9,32 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
     with _$VehiclesDaoMixin {
   VehiclesDao(super.db);
 
-  Future<List<Vehicle>> getAllVehicles() => select(vehicles).get();
+  /// Returns a distinct list of years sorted descending.
+  Future<List<int>> getDistinctYears() {
+    final q = selectOnly(vehicles, distinct: true)
+      ..addColumns([vehicles.year])
+      ..orderBy([
+        OrderingTerm(expression: vehicles.year, mode: OrderingMode.desc)
+      ]);
 
-  Future<List<Vehicle>> getVehiclesByYear(int year) =>
-      (select(vehicles)..where((tbl) => tbl.year.equals(year))).get();
+    return q.map((row) => row.read(vehicles.year)!).get();
+  }
+
+  Future<List<String>> getDistinctModelsByYear(int year) {
+    final query = selectOnly(vehicles, distinct: true)
+      ..addColumns([vehicles.model])
+      ..where(vehicles.year.equals(year) & vehicles.model.isNotNull())
+      ..orderBy([
+        OrderingTerm(expression: vehicles.model, mode: OrderingMode.asc)
+      ]);
+
+    return query.map((row) => row.read(vehicles.model)!).get();
+  }
+
+  Future<List<Vehicle>> getVehiclesByYearAndModel(int year, String model) =>
+      (select(vehicles)
+            ..where((tbl) => tbl.year.equals(year) & tbl.model.equals(model)))
+          .get();
 
   Future<void> insertVehicle(Vehicle vehicle) =>
       into(vehicles).insert(vehicle, mode: InsertMode.insertOrReplace);

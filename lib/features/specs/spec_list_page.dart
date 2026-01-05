@@ -1,7 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:specsnparts/data/db/app_db.dart';
-
+import 'package:specsnparts/features/specs/spec_list_controller.dart';
 
 class SpecListPage extends ConsumerStatefulWidget {
   const SpecListPage({super.key});
@@ -11,34 +12,51 @@ class SpecListPage extends ConsumerStatefulWidget {
 }
 
 class _SpecListPageState extends ConsumerState<SpecListPage> {
-
-  List<Spec> _results = [];
-
-  void _search(String query) async {
-    // query param is used directly below
-    if (query.isEmpty) {
-       _loadInitial();
-      return;
-    }
-    final db = ref.read(appDbProvider);
-    final results = await db.specsDao.searchSpecs(query);
-    setState(() => _results = results);
-  }
-
-  void _loadInitial() async {
-     final db = ref.read(appDbProvider);
-     final results = await db.specsDao.getAllSpecs();
-     setState(() => _results = results);
-  }
+  late final ScrollController _controller;
+  final TextEditingController _searchController = TextEditingController();
+  Timer? _debounce;
 
   @override
   void initState() {
     super.initState();
-    _loadInitial();
+    _controller = ScrollController()..addListener(_onScroll);
+  }
+
+  void _onScroll() {
+    if (!_controller.hasClients) return;
+    final pos = _controller.position;
+    if (pos.pixels >= pos.maxScrollExtent - 200) {
+      ref.read(specListControllerProvider.notifier).loadMore();
+    }
+  }
+
+  @override
+  void dispose() {
+    _debounce?.cancel();
+    _controller.removeListener(_onScroll);
+    _controller.dispose();
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  void _onSearchChanged(String query) {
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+
+    _debounce = Timer(const Duration(milliseconds: 500), () {
+      ref.read(specListControllerProvider.notifier).setQuery(query);
+    });
+  }
+
+  void _clearSearch() {
+    _searchController.clear();
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+    ref.read(specListControllerProvider.notifier).setQuery('');
   }
 
   @override
   Widget build(BuildContext context) {
+    final s = ref.watch(specListControllerProvider);
+
     return Scaffold(
       appBar: AppBar(title: const Text('Specs')),
       body: Column(
@@ -46,40 +64,75 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
-              decoration: const InputDecoration(
+              key: const Key('specSearchField'),
+              controller: _searchController,
+              maxLength: 100, // Security: Limit input length to prevent DoS
+              decoration: InputDecoration(
                 labelText: 'Search Specs',
-                border: OutlineInputBorder(),
-                suffixIcon: Icon(Icons.search),
+                border: const OutlineInputBorder(),
+                suffixIcon: ValueListenableBuilder<TextEditingValue>(
+                  valueListenable: _searchController,
+                  builder: (context, value, child) {
+                    return value.text.isNotEmpty
+                        ? IconButton(
+                            icon: const Icon(Icons.clear),
+                            tooltip: 'Clear search',
+                            onPressed: _clearSearch,
+                          )
+                        : const Icon(Icons.search);
+                  },
+                ),
               ),
-              onChanged: _search,
+              onChanged: _onSearchChanged,
             ),
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: _results.length,
+              key: const Key('specListView'),
+              controller: _controller,
+              physics: const AlwaysScrollableScrollPhysics(),
+              itemCount: s.items.length + (s.isLoadingMore ? 1 : 0),
               itemBuilder: (context, index) {
-                final spec = _results[index];
+                if (index >= s.items.length) {
+                  return const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Center(child: CircularProgressIndicator()),
+                  );
+                }
+                final spec = s.items[index];
                 return ListTile(
+                  key: Key('spec_row_${spec.id}'),
                   title: Text(spec.title),
                   subtitle: Text(spec.category),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: () {
-                     // Show detail dialog or page
-                     showDialog(context: context, builder: (context) => AlertDialog(
-                       title: Text(spec.title),
-                       content: Column(
-                         mainAxisSize: MainAxisSize.min,
-                         crossAxisAlignment: CrossAxisAlignment.start,
-                         children: [
-                           Text('Category: ${spec.category}', style: Theme.of(context).textTheme.bodySmall),
-                           const SizedBox(height: 8),
-                           Text(spec.body),
-                           const SizedBox(height: 8),
-                           Text('Tags: ${spec.tags}', style: Theme.of(context).textTheme.bodySmall),
-                         ],
-                       ),
-                       actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('Close'))],
-                     ));
+                    showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                              title: Text(spec.title),
+                              content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Category: ${spec.category}',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodySmall),
+                                  const SizedBox(height: 8),
+                                  Text(spec.body),
+                                  const SizedBox(height: 8),
+                                  Text('Tags: ${spec.tags}',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodySmall),
+                                ],
+                              ),
+                              actions: [
+                                TextButton(
+                                    onPressed: () => Navigator.pop(context),
+                                    child: const Text('Close'))
+                              ],
+                            ));
                   },
                 );
               },

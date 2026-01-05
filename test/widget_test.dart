@@ -6,16 +6,24 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:drift/native.dart';
 import 'package:specsnparts/app.dart';
+import 'package:specsnparts/data/db/app_db.dart';
 
 void main() {
   testWidgets('App smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const ProviderScope(child: SubaruSpecsApp()));
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          appDbProvider.overrideWithValue(AppDatabase(NativeDatabase.memory())),
+        ],
+        child: const SubaruSpecsApp(),
+      ),
+    );
 
-    // Verify the app builds.
-    expect(find.byType(SubaruSpecsApp), findsOneWidget);
+    // Verify that the app title is present.
+    expect(find.text('Subaru Specs & Parts'), findsOneWidget);
   });
 }

@@ -4,16 +4,16 @@
     "category": "Oil",
     "title": "WRX 2022+ Oil Capacity",
     "body": "4.8 Liters (5.1 Quarts) with filter change.",
-    "tags": "oil,capacity,fa24,wrx",
+    "tags": "oil,capacity,fa24,wrx,vb",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
     "id": "s2",
     "category": "Oil",
     "title": "STI 2015-2021 Oil Capacity",
-    "body": "4.3 Liters (4.5 Quarts) approx.",
-    "tags": "oil,capacity,ej257,sti",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "body": "4.3 Liters (4.5 Quarts)",
+    "tags": "oil,capacity,ej257,sti,va",
+    "updatedAt": "2024-05-24T00:00:00Z"
   },
   {
     "id": "s3",
@@ -75,15 +75,15 @@
     "id": "s10",
     "category": "Transmission",
     "title": "STI 6MT Fluid Capacity",
-    "body": "3.5 - 4.1 Liters depending on year.",
-    "tags": "trans,sti,6mt",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "body": "3.5 - 4.1 Liters (3.7 - 4.3 Quarts) depending on year.",
+    "tags": "trans,sti,6mt,fluid,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
   },
   {
     "id": "s11",
     "category": "Torque",
     "title": "Caliper Bracket Bolts (Front)",
-    "body": "80 ft-lbs (approx) for STI Brembos.",
+    "body": "80 ft-lbs (108 Nm) for STI Brembos.",
     "tags": "brakes,torque,sti",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
@@ -161,7 +161,7 @@
   },
   {
     "id": "s21",
-    "category": "Torque",
+    "category": "Engine",
     "title": "Head Bolts (EJ)",
     "body": "Complex sequence. Refer to service manual.",
     "tags": "engine,torque,headgasket",
@@ -446,5 +446,167 @@
     "body": "Severity: mods\nMessage: 4EAT needs trans cooler/heat management.\nCondition: trans is 4EAT AND engine.isTurbo",
     "tags": "impreza, swap_rule",
     "updatedAt": "2025-12-16T16:27:05.198660"
+  },
+  {
+    "id": "s26",
+    "category": "Oil",
+    "title": "STI 2004-2007 Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "oil,capacity,ej257,sti,gd",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s27",
+    "category": "Oil",
+    "title": "WRX 2002-2005 Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "oil,capacity,ej205,wrx,gd",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s28",
+    "category": "Transmission",
+    "title": "WRX 5MT Fluid Capacity",
+    "body": "3.5 Liters (3.7 Quarts)",
+    "tags": "trans,wrx,5mt,gd,fluid,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s29",
+    "category": "Fluids",
+    "title": "R160 Rear Diff Capacity",
+    "body": "0.8 Liters (0.8 Quarts)",
+    "tags": "diff,fluid,r160,wrx,gd,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s30",
+    "category": "Fluids",
+    "title": "R180 Rear Diff Capacity",
+    "body": "1.0 Liters (1.1 Quarts)",
+    "tags": "diff,fluid,r180,sti,gd,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s31",
+    "category": "Coolant",
+    "title": "WRX/STI 2002-2007 Coolant Capacity",
+    "body": "7.0 - 7.7 Liters (7.4 - 8.1 Quarts) depending on model.",
+    "tags": "coolant,capacity,gd,wrx,sti",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s32",
+    "category": "Wheels",
+    "title": "Bolt Pattern (WRX 2022+)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,wrx,vb,2022,2023,2024",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s33",
+    "category": "Wheels",
+    "title": "Bolt Pattern (WRX/STI 2015-2021)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,wrx,sti,va,2015,2016,2017,2018,2019,2020,2021",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s34",
+    "category": "Wheels",
+    "title": "Bolt Pattern (STI 2005-2007)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,sti,gd,2005,2006,2007",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s35",
+    "category": "Wheels",
+    "title": "Bolt Pattern (STI 2004)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,sti,gd,2004",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s36",
+    "category": "Wheels",
+    "title": "Bolt Pattern (WRX 2002-2007)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,wrx,gd,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s37",
+    "category": "Wheels",
+    "title": "Hub Center Bore",
+    "body": "56.1 mm",
+    "tags": "wheels,hub,bore,wrx,sti,impreza",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s38",
+    "category": "Wheels",
+    "title": "Lug Thread Size",
+    "body": "M12 x 1.25",
+    "tags": "wheels,lugs,thread,wrx,sti",
+    "updatedAt": "2024-05-23T00:00:00Z"
+  },
+  {
+    "id": "s39",
+    "category": "Transmission",
+    "title": "WRX 2015-2021 Trans Fluid Capacity",
+    "body": "3.3 Liters (3.5 Quarts)",
+    "tags": "trans,fluid,capacity,wrx,va,6mt",
+    "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s40",
+    "category": "Oil",
+    "title": "WRX 2022+ Oil Viscosity",
+    "body": "0W-20 Synthetic",
+    "tags": "oil,viscosity,fa24,wrx,vb",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s41",
+    "category": "Oil",
+    "title": "STI 2015-2021 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,ej257,sti,va",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s42",
+    "category": "Oil",
+    "title": "WRX 2015-2021 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,fa20,wrx,va",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s43",
+    "category": "Oil",
+    "title": "STI 2004-2007 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,ej257,sti,gd",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s44",
+    "category": "Oil",
+    "title": "WRX 2002-2005 Oil Viscosity",
+    "body": "5W-30 Synthetic",
+    "tags": "oil,viscosity,ej205,wrx,gd",
+    "updatedAt": "2026-01-04T07:34:37Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]
