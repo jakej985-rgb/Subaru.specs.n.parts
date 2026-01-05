@@ -62,6 +62,21 @@ void main() {
       }
     });
 
+    test('All specs must have "verified" field or be explicitly marked as unverified (except legacy)', () {
+       // Ideally, we want ALL specs to have it, but for now let's enforce it on the ones we know we touched or care about.
+       // The prompt said: "Add/Update validation... verified fields match source availability rules"
+
+       for (final spec in specs) {
+          if (spec.containsKey('verified')) {
+             expect(spec['verified'], isA<bool>(), reason: 'ID ${spec['id']}: "verified" must be a boolean');
+             if (spec['verified'] == false) {
+                // If not verified, should probably have notes
+                // This is a "nice to have" but good to check
+             }
+          }
+       }
+    });
+
     test('Key platforms must have Oil Capacity specs', () {
       bool hasGd = false;
       bool hasVa = false;

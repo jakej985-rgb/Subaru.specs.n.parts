@@ -677,49 +677,61 @@
     "id": "s_oil_EA81_82",
     "category": "Oil",
     "title": "EA81/EA82 Oil Capacity",
-    "body": "4.2 Quarts (4.0 Liters) with filter.",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
     "tags": "oil,capacity,ea81,ea82,brat,gl,xt",
-    "updatedAt": "2026-01-04T00:00:00Z"
+    "updatedAt": "2026-01-04T00:00:00Z",
+    "verified": false,
+    "notes": "Values swapped to match standard format."
   },
   {
     "id": "s_oil_EF12",
     "category": "Oil",
     "title": "EF12 Oil Capacity",
-    "body": "3.0 - 3.2 Quarts with filter.",
+    "body": "2.8 - 3.0 Liters (3.0 - 3.2 Quarts) with filter.",
     "tags": "oil,capacity,ef12,justy",
-    "updatedAt": "2026-01-04T00:00:00Z"
+    "updatedAt": "2026-01-04T00:00:00Z",
+    "verified": false,
+    "notes": "Metric converted from US Qts - TBD verify."
   },
   {
     "id": "s_oil_EG33",
     "category": "Oil",
     "title": "EG33 Oil Capacity",
-    "body": "6.4 - 7.0 Quarts (check dipstick).",
+    "body": "6.1 - 6.6 Liters (6.4 - 7.0 Quarts) (check dipstick).",
     "tags": "oil,capacity,eg33,svx",
-    "updatedAt": "2026-01-04T00:00:00Z"
+    "updatedAt": "2026-01-04T00:00:00Z",
+    "verified": false,
+    "notes": "Metric converted from US Qts - TBD verify."
   },
   {
     "id": "s_oil_EZ30_36",
     "category": "Oil",
     "title": "EZ30/EZ36 Oil Capacity",
-    "body": "5.8 - 6.3 Quarts with filter.",
+    "body": "5.5 - 6.0 Liters (5.8 - 6.3 Quarts) with filter.",
     "tags": "oil,capacity,ez30,ez36,tribeca,legacy,outback",
-    "updatedAt": "2026-01-04T00:00:00Z"
+    "updatedAt": "2026-01-04T00:00:00Z",
+    "verified": false,
+    "notes": "Metric converted from US Qts - TBD verify."
   },
   {
     "id": "s_oil_FA24T",
     "category": "Oil",
     "title": "FA24 Turbo Oil Capacity",
-    "body": "4.8 Quarts (4.5 Liters) with filter.",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
     "tags": "oil,capacity,fa24,ascent,wrx,legacy,outback",
-    "updatedAt": "2026-01-04T00:00:00Z"
+    "updatedAt": "2026-01-04T00:00:00Z",
+    "verified": false,
+    "notes": "Values swapped to match standard format."
   },
   {
     "id": "s_oil_FB20",
     "category": "Oil",
     "title": "FB20 Oil Capacity",
-    "body": "4.7 Quarts (4.4 Liters) with filter.",
+    "body": "4.4 Liters (4.7 Quarts) with filter.",
     "tags": "oil,capacity,fb20,crosstrek,impreza",
-    "updatedAt": "2026-01-04T00:00:00Z"
+    "updatedAt": "2026-01-04T00:00:00Z",
+    "verified": false,
+    "notes": "Values swapped to match standard format."
   },
   {
     "id": "s_coolant_EV",
