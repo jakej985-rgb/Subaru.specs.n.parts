@@ -23,6 +23,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+          cache: true
           # flutter-version: '3.24.5' # Optional, use latest stable if omitted
 
       - name: Install dependencies
