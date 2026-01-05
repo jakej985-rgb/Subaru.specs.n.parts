@@ -608,5 +608,125 @@
     "updatedAt": "2026-01-04T07:34:37Z",
     "verified": true,
     "source": "FSM"
+  },
+  {
+    "id": "s_wheel_4x140",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Classics)",
+    "body": "4x140",
+    "tags": "wheels,bolt_pattern,brat,gl,xt,loyale,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x114_SVX",
+    "category": "Wheels",
+    "title": "Bolt Pattern (SVX)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,svx",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x100_Baja",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Baja)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,baja",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x114_Tribeca",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Tribeca)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,tribeca",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x114_Ascent",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Ascent)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,ascent",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x114_Solterra",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Solterra)",
+    "body": "5x114.3 (Hub: 60.1mm)",
+    "tags": "wheels,bolt_pattern,solterra",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x100_Crosstrek_Pre24",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Crosstrek 2013-2023)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,crosstrek,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_5x114_Crosstrek_24",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Crosstrek 2024+)",
+    "body": "5x114.3",
+    "tags": "wheels,bolt_pattern,crosstrek,2024",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_EA81_82",
+    "category": "Oil",
+    "title": "EA81/EA82 Oil Capacity",
+    "body": "4.2 Quarts (4.0 Liters) with filter.",
+    "tags": "oil,capacity,ea81,ea82,brat,gl,xt",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_EF12",
+    "category": "Oil",
+    "title": "EF12 Oil Capacity",
+    "body": "3.0 - 3.2 Quarts with filter.",
+    "tags": "oil,capacity,ef12,justy",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_EG33",
+    "category": "Oil",
+    "title": "EG33 Oil Capacity",
+    "body": "6.4 - 7.0 Quarts (check dipstick).",
+    "tags": "oil,capacity,eg33,svx",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_EZ30_36",
+    "category": "Oil",
+    "title": "EZ30/EZ36 Oil Capacity",
+    "body": "5.8 - 6.3 Quarts with filter.",
+    "tags": "oil,capacity,ez30,ez36,tribeca,legacy,outback",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_FA24T",
+    "category": "Oil",
+    "title": "FA24 Turbo Oil Capacity",
+    "body": "4.8 Quarts (4.5 Liters) with filter.",
+    "tags": "oil,capacity,fa24,ascent,wrx,legacy,outback",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_oil_FB20",
+    "category": "Oil",
+    "title": "FB20 Oil Capacity",
+    "body": "4.7 Quarts (4.4 Liters) with filter.",
+    "tags": "oil,capacity,fb20,crosstrek,impreza",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_coolant_EV",
+    "category": "Fluids",
+    "title": "EV Coolant (Solterra)",
+    "body": "Special EV Coolant. Do not mix with engine coolant.",
+    "tags": "coolant,fluid,solterra,ev",
+    "updatedAt": "2026-01-04T00:00:00Z"
   }
 ]

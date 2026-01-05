@@ -14,7 +14,8 @@ class SeedRunner {
 
     // Version 1: Initial seed
     // Version 2: Added Impreza CSV data
-    const int kCurrentSeedVersion = 2;
+    // Version 4: Expanded specs coverage for Classics and Modern models
+    const int kCurrentSeedVersion = 4;
     final int lastSeedVersion = prefs.getInt('seed_version') ?? 0;
 
     // Check old flag for legacy migration (if user had v1 but tracking was bool)
