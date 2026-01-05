@@ -32,17 +32,16 @@ class SpecListState {
     int? limit,
     String? query,
     int? generation,
-  }) =>
-      SpecListState(
-        items: items ?? this.items,
-        isLoadingInitial: isLoadingInitial ?? this.isLoadingInitial,
-        isLoadingMore: isLoadingMore ?? this.isLoadingMore,
-        hasMore: hasMore ?? this.hasMore,
-        offset: offset ?? this.offset,
-        limit: limit ?? this.limit,
-        query: query ?? this.query,
-        generation: generation ?? this.generation,
-      );
+  }) => SpecListState(
+    items: items ?? this.items,
+    isLoadingInitial: isLoadingInitial ?? this.isLoadingInitial,
+    isLoadingMore: isLoadingMore ?? this.isLoadingMore,
+    hasMore: hasMore ?? this.hasMore,
+    offset: offset ?? this.offset,
+    limit: limit ?? this.limit,
+    query: query ?? this.query,
+    generation: generation ?? this.generation,
+  );
 }
 
 class SpecListController extends StateNotifier<SpecListState> {
@@ -65,8 +64,11 @@ class SpecListController extends StateNotifier<SpecListState> {
 
     late final List<Spec> results;
     if (state.query.isNotEmpty) {
-      results = await _dao.searchSpecs(state.query,
-          limit: state.limit, offset: 0);
+      results = await _dao.searchSpecs(
+        state.query,
+        limit: state.limit,
+        offset: 0,
+      );
     } else {
       results = await _dao.getSpecsPaged(state.limit, offset: 0);
     }
@@ -122,6 +124,6 @@ class SpecListController extends StateNotifier<SpecListState> {
 
 final specListControllerProvider =
     StateNotifierProvider<SpecListController, SpecListState>((ref) {
-  final db = ref.watch(appDbProvider);
-  return SpecListController(db.specsDao);
-});
+      final db = ref.watch(appDbProvider);
+      return SpecListController(db.specsDao);
+    });

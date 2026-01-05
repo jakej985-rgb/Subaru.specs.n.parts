@@ -14,7 +14,7 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
     final q = selectOnly(vehicles, distinct: true)
       ..addColumns([vehicles.year])
       ..orderBy([
-        OrderingTerm(expression: vehicles.year, mode: OrderingMode.desc)
+        OrderingTerm(expression: vehicles.year, mode: OrderingMode.desc),
       ]);
 
     return q.map((row) => row.read(vehicles.year)!).get();
@@ -25,16 +25,16 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
       ..addColumns([vehicles.model])
       ..where(vehicles.year.equals(year) & vehicles.model.isNotNull())
       ..orderBy([
-        OrderingTerm(expression: vehicles.model, mode: OrderingMode.asc)
+        OrderingTerm(expression: vehicles.model, mode: OrderingMode.asc),
       ]);
 
     return query.map((row) => row.read(vehicles.model)!).get();
   }
 
   Future<List<Vehicle>> getVehiclesByYearAndModel(int year, String model) =>
-      (select(vehicles)
-            ..where((tbl) => tbl.year.equals(year) & tbl.model.equals(model)))
-          .get();
+      (select(
+        vehicles,
+      )..where((tbl) => tbl.year.equals(year) & tbl.model.equals(model))).get();
 
   Future<void> insertVehicle(Vehicle vehicle) =>
       into(vehicles).insert(vehicle, mode: InsertMode.insertOrReplace);

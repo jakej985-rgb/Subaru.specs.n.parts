@@ -42,17 +42,15 @@ class FakeAppDatabase extends AppDatabase {
 }
 
 void main() {
-  testWidgets('YmmFlowPage race condition: models list mismatch', (WidgetTester tester) async {
+  testWidgets('YmmFlowPage race condition: models list mismatch', (
+    WidgetTester tester,
+  ) async {
     final fakeDb = FakeAppDatabase(NativeDatabase.memory());
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          appDbProvider.overrideWithValue(fakeDb),
-        ],
-        child: const MaterialApp(
-          home: YmmFlowPage(),
-        ),
+        overrides: [appDbProvider.overrideWithValue(fakeDb)],
+        child: const MaterialApp(home: YmmFlowPage()),
       ),
     );
 
@@ -85,7 +83,8 @@ void main() {
 
     // 3. User taps 2021
     await tester.tap(find.text('2021'));
-    await tester.pump(); // setState: _selectedYear = 2021, start async _loadModels(2021)
+    await tester
+        .pump(); // setState: _selectedYear = 2021, start async _loadModels(2021)
 
     // Capture the completer for 2021
     final completer2021 = fakeDb.vehiclesDao._modelsCompleter!;
