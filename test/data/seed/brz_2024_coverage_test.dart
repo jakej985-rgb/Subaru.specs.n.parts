@@ -13,10 +13,9 @@ void main() {
     );
 
     // Normalize trims by removing " (US)" suffix
-    final trims =
-        brz2024
-            .map((v) => (v['trim'] as String).replaceAll(RegExp(r'\s*\(US\)'), ''))
-            .toSet();
+    final trims = brz2024
+        .map((v) => (v['trim'] as String).replaceAll(RegExp(r'\s*\(US\)'), ''))
+        .toSet();
     final engineCodes = brz2024.map((v) => v['engineCode']).toSet();
 
     // Verify all expected trims are present

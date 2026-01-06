@@ -27,7 +27,9 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     // We use a microtask to avoid building/modifying provider during build
     if (widget.vehicle != null) {
       Future.microtask(() {
-        ref.read(specListControllerProvider.notifier).setVehicle(widget.vehicle);
+        ref
+            .read(specListControllerProvider.notifier)
+            .setVehicle(widget.vehicle);
       });
     }
   }

@@ -43,7 +43,8 @@ void main() {
         category: 'Torque',
         title: 'Lug Nut Torque (Modern 5-Lug)',
         body: '89 ft-lbs',
-        tags: 'torque,wheels,lugs,wrx,sti', // Still missing year, should fail/be missing
+        tags:
+            'torque,wheels,lugs,wrx,sti', // Still missing year, should fail/be missing
         updatedAt: DateTime.now(),
       ),
     ]);
@@ -68,8 +69,20 @@ void main() {
     print('Fetched Specs: $ids');
 
     // Expectations
-    expect(ids, contains('s_wheel_bolt_pattern_wrx_vb'), reason: 'Already present');
-    expect(ids, contains('s_oil_capacity_wrx_vb'), reason: 'Should now be present due to tag fix');
-    expect(ids, isNot(contains('s_torque_lug_nut_modern')), reason: 'Still missing (scope limited to one fix)');
+    expect(
+      ids,
+      contains('s_wheel_bolt_pattern_wrx_vb'),
+      reason: 'Already present',
+    );
+    expect(
+      ids,
+      contains('s_oil_capacity_wrx_vb'),
+      reason: 'Should now be present due to tag fix',
+    );
+    expect(
+      ids,
+      isNot(contains('s_torque_lug_nut_modern')),
+      reason: 'Still missing (scope limited to one fix)',
+    );
   });
 }
