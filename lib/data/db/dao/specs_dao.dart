@@ -19,6 +19,9 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
     int limit = 50,
     int offset = 0,
   }) {
+    // Security: Input length limit to prevent DoS via massive regex/contains checks
+    if (query.length > 100) return Future.value([]);
+
     return (select(specs)
           ..where((tbl) => tbl.title.contains(query) | tbl.body.contains(query))
           ..limit(limit, offset: offset))
@@ -34,7 +37,10 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
     });
   }
 
-  Future<List<Spec>> getSpecsForVehicle(Vehicle vehicle) async {
+  Future<List<Spec>> getSpecsForVehicle(
+    Vehicle vehicle, {
+    String? query,
+  }) async {
     // 1. Broad fetch: Get specs that mention the model AND year.
     // This mimics the "inferred" logic of matching attributes to tags.
     final model = vehicle.model.toLowerCase();
