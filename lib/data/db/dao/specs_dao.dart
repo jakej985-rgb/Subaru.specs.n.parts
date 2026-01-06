@@ -34,14 +34,21 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
     });
   }
 
-  Future<List<Spec>> getSpecsForVehicle(Vehicle vehicle) async {
+  Future<List<Spec>> getSpecsForVehicle(
+    Vehicle vehicle, {
+    String? query,
+  }) async {
     // 1. Broad fetch: Get specs that mention the model AND year.
     // This mimics the "inferred" logic of matching attributes to tags.
     final model = vehicle.model?.toLowerCase() ?? '';
     final year = vehicle.year.toString();
 
     final candidates = await (select(specs)..where((tbl) {
-      return tbl.tags.contains(model) & tbl.tags.contains(year);
+      var predicate = tbl.tags.contains(model) & tbl.tags.contains(year);
+      if (query != null && query.isNotEmpty) {
+        predicate &= (tbl.title.contains(query) | tbl.body.contains(query));
+      }
+      return predicate;
     })).get();
 
     // 2. Post-filter for Trim applicability
