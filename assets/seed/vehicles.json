@@ -1503,103 +1503,31 @@
     "updatedAt": "2026-01-04T00:00:00Z"
   },
   {
-    "id": "v1",
-    "year": 2024,
-    "make": "Subaru",
-    "model": "WRX",
-    "trim": "Limited",
-    "engineCode": "FA24",
-    "updatedAt": "2024-01-01T00:00:00Z"
-  },
-  {
-    "id": "v2",
-    "year": 2024,
-    "make": "Subaru",
-    "model": "WRX",
-    "trim": "Base",
-    "engineCode": "FA24",
-    "updatedAt": "2024-01-01T00:00:00Z"
-  },
-  {
-    "id": "v3",
-    "year": 2024,
-    "make": "Subaru",
-    "model": "BRZ",
-    "trim": "tS",
-    "engineCode": "FA24",
-    "updatedAt": "2024-05-28T00:00:00Z"
-  },
-  {
-    "id": "v4",
-    "year": 2023,
-    "make": "Subaru",
-    "model": "Forester",
-    "trim": "Wilderness",
-    "engineCode": "FB25",
-    "updatedAt": "2024-01-01T00:00:00Z"
-  },
-  {
-    "id": "v5",
+    "id": "v_obk_2023_onyx_xt_us",
     "year": 2023,
     "make": "Subaru",
     "model": "Outback",
-    "trim": "Onyx Edition XT",
-    "engineCode": "FA24",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "trim": "Onyx Edition XT (US)",
+    "engineCode": "FA24 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
   },
   {
-    "id": "v6",
-    "year": 2015,
-    "make": "Subaru",
-    "model": "WRX STI",
-    "trim": "Limited",
-    "engineCode": "EJ257",
-    "updatedAt": "2024-01-01T00:00:00Z"
-  },
-  {
-    "id": "v7",
-    "year": 2004,
-    "make": "Subaru",
-    "model": "Impreza WRX STI",
-    "trim": "Standard",
-    "engineCode": "EJ257",
-    "updatedAt": "2024-01-01T00:00:00Z"
-  },
-  {
-    "id": "v8",
-    "year": 2002,
-    "make": "Subaru",
-    "model": "Impreza WRX",
-    "trim": "Standard",
-    "engineCode": "EJ205",
-    "updatedAt": "2024-01-01T00:00:00Z"
-  },
-  {
-    "id": "v9",
+    "id": "v_crosstrek_2024_sport_us",
     "year": 2024,
     "make": "Subaru",
     "model": "Crosstrek",
-    "trim": "Sport",
-    "engineCode": "FB25",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "trim": "Sport (US)",
+    "engineCode": "FB25 DI",
+    "updatedAt": "2026-01-04T00:00:00Z"
   },
   {
-    "id": "v10",
-    "year": 1998,
+    "id": "v_wrx_2015_sti_limited_us",
+    "year": 2015,
     "make": "Subaru",
-    "model": "Impreza 2.5RS",
-    "trim": "Coupe",
-    "engineCode": "EJ251",
-    "updatedAt": "2024-01-01T00:00:00Z"
-  },
-  {
-    "id": "v_imp_1993_l_base_us",
-    "year": 1993,
-    "make": "Subaru",
-    "model": "Impreza",
-    "trim": "L/Base (US)",
-    "engineCode": "EJ18 NA",
-    "updatedAt": "2025-12-16T16:27:05.198660"
+    "model": "WRX",
+    "trim": "STI Limited (US)",
+    "engineCode": "EJ257 Turbo",
+    "updatedAt": "2026-01-04T00:00:00Z"
   },
   {
     "id": "v_imp_1993_base_grades_jdm",
@@ -2449,39 +2377,21 @@
     "updatedAt": "2026-01-04T00:00:00Z"
   },
   {
-    "id": "v28",
+    "id": "v_obk_2024_touring_xt_us",
     "year": 2024,
     "make": "Subaru",
     "model": "Outback",
-    "trim": "Touring XT",
-    "engineCode": "FA24",
+    "trim": "Touring XT (US)",
+    "engineCode": "FA24 Turbo",
     "updatedAt": "2026-01-04T00:00:00Z"
   },
-    {
-      "id": "v_brz_2012_base_us",
-      "year": 2012,
-      "make": "Subaru",
-      "model": "BRZ",
-      "trim": "Base (US)",
-      "engineCode": "FA24",
-      "updatedAt": "2026-01-04T00:00:00Z"
-    },
-    {
-      "id": "v_brz_2012_premium_us",
-      "year": 2012,
-      "make": "Subaru",
-      "model": "BRZ",
-      "trim": "Premium (US)",
-      "engineCode": "FA24",
-      "updatedAt": "2026-01-04T00:00:00Z"
-    },
     {
       "id": "v_brz_2013_base_us",
       "year": 2013,
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Base (US)",
-      "engineCode": "FA24",
+      "engineCode": "FA20 NA",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2490,7 +2400,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Premium (US)",
-      "engineCode": "FA24",
+      "engineCode": "FA20 NA",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2499,7 +2409,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Base (US)",
-      "engineCode": "FA24",
+      "engineCode": "FA20 NA",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2508,7 +2418,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Premium (US)",
-      "engineCode": "FA24",
+      "engineCode": "FA20 NA",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2625,7 +2535,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "tS (US)",
-      "engineCode": "FA24 Turbo",
+      "engineCode": "FA20 NA",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2656,39 +2566,12 @@
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
-      "id": "v_brz_2021_base_us",
-      "year": 2021,
-      "make": "Subaru",
-      "model": "BRZ",
-      "trim": "Base (US)",
-      "engineCode": "FA20 NA",
-      "updatedAt": "2026-01-04T00:00:00Z"
-    },
-    {
-      "id": "v_brz_2021_premium_us",
-      "year": 2021,
-      "make": "Subaru",
-      "model": "BRZ",
-      "trim": "Premium (US)",
-      "engineCode": "FA20 NA",
-      "updatedAt": "2026-01-04T00:00:00Z"
-    },
-    {
-      "id": "v_brz_2021_ts_us",
-      "year": 2021,
-      "make": "Subaru",
-      "model": "BRZ",
-      "trim": "tS (US)",
-      "engineCode": "FA24 Turbo",
-      "updatedAt": "2026-01-04T00:00:00Z"
-    },
-    {
       "id": "v_brz_2022_base_us",
       "year": 2022,
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Base (US)",
-      "engineCode": "FA20 NA",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2697,16 +2580,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Premium (US)",
-      "engineCode": "FA20 NA",
-      "updatedAt": "2026-01-04T00:00:00Z"
-    },
-    {
-      "id": "v_brz_2022_ts_us",
-      "year": 2022,
-      "make": "Subaru",
-      "model": "BRZ",
-      "trim": "tS (US)",
-      "engineCode": "FA24 Turbo",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2715,7 +2589,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Base (US)",
-      "engineCode": "FA20 NA",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {
@@ -2724,16 +2598,7 @@
       "make": "Subaru",
       "model": "BRZ",
       "trim": "Premium (US)",
-      "engineCode": "FA20 NA",
-      "updatedAt": "2026-01-04T00:00:00Z"
-    },
-    {
-      "id": "v_brz_2023_ts_us",
-      "year": 2023,
-      "make": "Subaru",
-      "model": "BRZ",
-      "trim": "tS (US)",
-      "engineCode": "FA24 Turbo",
+      "engineCode": "FA24",
       "updatedAt": "2026-01-04T00:00:00Z"
     },
     {

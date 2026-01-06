@@ -1,0 +1,74 @@
+[
+  {
+    "id": "s_interval_oil_change",
+    "category": "Maintenance",
+    "title": "Oil Change Interval",
+    "body": "6,000 miles or 6 months.",
+    "tags": "maintenance,oil",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_wiper_gd",
+    "category": "Maintenance",
+    "title": "Wiper Blades (Impreza GD/GG 02-07)",
+    "body": "Driver: 22\". Passenger: 17\". Rear (Wagon): 14\".",
+    "tags": "wipers,maintenance,impreza,wrx,sti,gd,gg",
+    "updatedAt": "2026-01-05T14:40:00Z"
+  },
+  {
+    "id": "s_wiper_gr",
+    "category": "Maintenance",
+    "title": "Wiper Blades (Impreza/WRX 08-14)",
+    "body": "Driver: 24\". Passenger: 16\". Rear (Hatch): 14\".",
+    "tags": "wipers,maintenance,impreza,wrx,sti,gr,gv",
+    "updatedAt": "2026-01-05T14:40:00Z"
+  },
+  {
+    "id": "s_wiper_va",
+    "category": "Maintenance",
+    "title": "Wiper Blades (WRX/STI VA 15-21)",
+    "body": "Driver: 26\". Passenger: 16\".",
+    "tags": "wipers,maintenance,wrx,sti,va",
+    "updatedAt": "2026-01-05T14:40:00Z"
+  },
+  {
+    "id": "s_wiper_sj_sk",
+    "category": "Maintenance",
+    "title": "Wiper Blades (Forester 14-24)",
+    "body": "Driver: 26\". Passenger: 17\". Rear: 14\".",
+    "tags": "wipers,maintenance,forester,sj,sk",
+    "updatedAt": "2026-01-05T14:40:00Z"
+  },
+  {
+    "id": "s_wiper_brz",
+    "category": "Maintenance",
+    "title": "Wiper Blades (BRZ)",
+    "body": "Driver: 22\". Passenger: 20\".",
+    "tags": "wipers,maintenance,brz",
+    "updatedAt": "2026-01-05T14:40:00Z"
+  },
+  {
+    "id": "s_wiper_outback_gen4_5",
+    "category": "Maintenance",
+    "title": "Wiper Blades (Outback 10-19)",
+    "body": "Driver: 26\". Passenger: 19\" (Gen4) or 17\" (Gen5).",
+    "tags": "wipers,maintenance,outback,legacy",
+    "updatedAt": "2026-01-05T14:40:00Z"
+  },
+  {
+    "id": "s_wiper_svx",
+    "category": "Maintenance",
+    "title": "Wiper Blades (SVX)",
+    "body": "Driver: 22\" (550mm). Passenger: 20\" (500mm). Rear: 18\" (if equipped).",
+    "tags": "wipers,maintenance,svx,eg33,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-05T14:30:00Z"
+  },
+  {
+    "id": "s_spark_eg33",
+    "category": "Maintenance",
+    "title": "Spark Plugs (SVX EG33)",
+    "body": "NGK PFR6G-11 (Stock #5555). Type: Laser Platinum. Gap: 0.044\" (1.1mm).",
+    "tags": "spark,maintenance,svx,eg33,platinum",
+    "updatedAt": "2026-01-05T14:30:00Z"
+  }
+]

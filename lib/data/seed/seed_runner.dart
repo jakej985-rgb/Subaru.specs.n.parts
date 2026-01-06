@@ -14,8 +14,9 @@ class SeedRunner {
 
     // Version 1: Initial seed
     // Version 2: Added Impreza CSV data
-    // Version 4: Expanded specs coverage for Classics and Modern models
-    const int kCurrentSeedVersion = 4;
+    // Version 12: Modern Era (GR/GV, BRZ, VA, Ascent, FA Series)
+    // Version 17: Spec Cleanup (IDs, Units, Categories, Validation)
+    const int kCurrentSeedVersion = 17;
     final int lastSeedVersion = prefs.getInt('seed_version') ?? 0;
 
     // Check old flag for legacy migration (if user had v1 but tracking was bool)
@@ -37,27 +38,50 @@ class SeedRunner {
   }
 
   Future<void> _seedVehicles() async {
-    final String response = await rootBundle.loadString(
-      'assets/seed/vehicles.json',
-    );
-    final List<Vehicle> vehicles = await compute<String, List<Vehicle>>(
-      parseVehicles,
-      response,
-    );
-
-    await db.vehiclesDao.insertMultiple(vehicles);
+    try {
+      final String response = await rootBundle.loadString(
+        'assets/seed/vehicles.json',
+      );
+      final List<Vehicle> vehicles = await compute<String, List<Vehicle>>(
+        parseVehicles,
+        response,
+      );
+      await db.vehiclesDao.insertMultiple(vehicles);
+    } catch (e) {
+      debugPrint('Error loading vehicles.json: $e');
+    }
   }
 
   Future<void> _seedSpecs() async {
-    final String response = await rootBundle.loadString(
-      'assets/seed/specs.json',
-    );
-    final List<Spec> specs = await compute<String, List<Spec>>(
-      parseSpecs,
-      response,
-    );
+    try {
+      final manifestContent = await rootBundle.loadString('AssetManifest.json');
+      final Map<String, dynamic> manifestMap = json.decode(manifestContent);
+      final specFiles = manifestMap.keys
+          .where(
+            (key) =>
+                key.startsWith('assets/seed/specs/') && key.endsWith('.json'),
+          )
+          .toList();
 
-    await db.specsDao.insertMultiple(specs);
+      if (specFiles.isEmpty) {
+        debugPrint('Warning: No spec files found in assets/seed/specs/');
+        return;
+      }
+
+      final List<Spec> allSpecs = [];
+      for (final file in specFiles) {
+        final String response = await rootBundle.loadString(file);
+        final List<Spec> specs = await compute<String, List<Spec>>(
+          parseSpecs,
+          response,
+        );
+        allSpecs.addAll(specs);
+      }
+
+      await db.specsDao.insertMultiple(allSpecs);
+    } catch (e) {
+      debugPrint('Error loading specs from split files: $e');
+    }
   }
 
   Future<void> _seedParts() async {

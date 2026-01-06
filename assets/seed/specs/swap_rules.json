@@ -1,0 +1,58 @@
+[
+  {
+    "id": "s_rule_FD_MATCH",
+    "category": "Swap Rules",
+    "title": "FD_MATCH",
+    "body": "Severity: error\nMessage: Final drive mismatch (front vs rear).\nCondition: trans.finalDrive != rearDiff.finalDrive",
+    "tags": "impreza,swap_rule",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  },
+  {
+    "id": "s_rule_STI6_R180",
+    "category": "Swap Rules",
+    "title": "STI6_R180",
+    "body": "Severity: error\nMessage: STI 6MT requires R180 3.90 rear diff.\nCondition: trans == STI_6MT AND rearDiff != R180_390",
+    "tags": "impreza,swap_rule",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  },
+  {
+    "id": "s_rule_TURBO_XMEM",
+    "category": "Swap Rules",
+    "title": "TURBO_XMEM",
+    "body": "Severity: error\nMessage: Turbo up-pipe/exhaust hits NA crossmember.\nCondition: engine.isTurbo AND crossmember == NA",
+    "tags": "impreza,swap_rule",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  },
+  {
+    "id": "s_rule_DBW_REQ",
+    "category": "Swap Rules",
+    "title": "DBW_REQ",
+    "body": "Severity: error\nMessage: DBW engine needs pedal + wiring + ECU support.\nCondition: engine.requiresDBW AND DBW_Planned == false",
+    "tags": "impreza,swap_rule",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  },
+  {
+    "id": "s_rule_IMMOB",
+    "category": "Swap Rules",
+    "title": "IMMOB",
+    "body": "Severity: error\nMessage: Immobilizer requires ECU+key+cluster match (or delete).\nCondition: engine.hasImmobilizer AND Immobilizer_Planned == false",
+    "tags": "impreza,swap_rule",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  },
+  {
+    "id": "s_rule_5MT_TORQUE_RISK",
+    "category": "Swap Rules",
+    "title": "5MT_TORQUE_RISK",
+    "body": "Severity: mods\nMessage: 5MT reliability risk at power; consider STI 6MT.\nCondition: engine in {EJ255,EJ257,EJ207} AND trans in {NA_5MT,WRX_5MT_390,WRX_5MT_370}",
+    "tags": "impreza,swap_rule",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  },
+  {
+    "id": "s_rule_4EAT_HEAT",
+    "category": "Swap Rules",
+    "title": "4EAT_HEAT",
+    "body": "Severity: mods\nMessage: 4EAT needs trans cooler/heat management.\nCondition: trans is 4EAT AND engine.isTurbo",
+    "tags": "impreza,swap_rule",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  }
+]

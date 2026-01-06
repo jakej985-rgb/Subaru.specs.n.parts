@@ -1,0 +1,26 @@
+[
+  {
+    "id": "s_filter_oil_blue",
+    "category": "Filters",
+    "title": "Oil Filter (Blue - 15208AA15A)",
+    "body": "Standard efficient filter for FB engines (2011+). Replaces older Black filters in some applications.",
+    "tags": "filter,oil,maintenance,fb20,fb25,fa20",
+    "updatedAt": "2026-01-05T12:30:00Z"
+  },
+  {
+    "id": "s_filter_oil_black",
+    "category": "Filters",
+    "title": "Oil Filter (Black - 15208AA100)",
+    "body": "High-flow filter. Standard for EJ Turbo engines (WRX/STI/FXT) in Tokyo Roki style.",
+    "tags": "filter,oil,maintenance,ej255,ej257,ej205",
+    "updatedAt": "2026-01-05T12:30:00Z"
+  },
+  {
+    "id": "s_filter_cabin_common",
+    "category": "Filters",
+    "title": "Cabin Air Filter (General)",
+    "body": "Location: Behind glovebox. Replace every 12-15k miles. Part: 72880FG000 (GR/VA) / 72880FL000 (Global Platform).",
+    "tags": "filter,cabin,air,maintenance",
+    "updatedAt": "2026-01-05T12:30:00Z"
+  }
+]

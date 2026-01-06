@@ -1,0 +1,18 @@
+[
+  {
+    "id": "s_interval_timing_belt",
+    "category": "Maintenance Intervals",
+    "title": "Timing Belt Interval (EJ Engines)",
+    "body": "105,000 miles (168,000 km) or 105 months. Critical interference engine - failure causes valve damage.",
+    "tags": "timing,belt,maintenance,structural,ej25,ej20",
+    "updatedAt": "2026-01-05T12:30:00Z"
+  },
+  {
+    "id": "s_interval_chain",
+    "category": "Maintenance Intervals",
+    "title": "Timing Chain (FA/FB/EZ Engines)",
+    "body": "Designed for life of engine. Inspect guides/tensioners if noise develops (rattle on startup).",
+    "tags": "timing,chain,maintenance,fa20,fb25,ez30,ez36",
+    "updatedAt": "2026-01-05T12:30:00Z"
+  }
+]

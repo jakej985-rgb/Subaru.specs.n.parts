@@ -203,6 +203,8 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                   )
                 : ListView.builder(
                     controller: _scrollController,
+                    keyboardDismissBehavior:
+                        ScrollViewKeyboardDismissBehavior.onDrag,
                     itemCount: _results.length + (_isLoading ? 1 : 0),
                     itemBuilder: (context, index) {
                       if (index == _results.length) {

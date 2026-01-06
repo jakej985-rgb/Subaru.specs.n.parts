@@ -31,10 +31,9 @@ void main() {
         .toList();
 
     // Normalize trims by removing " (US)" suffix
-    final foundTrims =
-        wrx2024
-            .map((v) => (v.trim ?? '').replaceAll(RegExp(r'\s*\(US\)'), ''))
-            .toSet();
+    final foundTrims = wrx2024
+        .map((v) => (v.trim ?? '').replaceAll(RegExp(r'\s*\(US\)'), ''))
+        .toSet();
 
     final missing = expectedTrims.difference(foundTrims);
 

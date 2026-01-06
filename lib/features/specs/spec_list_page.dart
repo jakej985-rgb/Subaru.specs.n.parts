@@ -2,10 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/specs/spec_list_controller.dart';
 
 class SpecListPage extends ConsumerStatefulWidget {
-  const SpecListPage({super.key});
+  const SpecListPage({super.key, this.vehicle});
+
+  final Vehicle? vehicle;
 
   @override
   ConsumerState<SpecListPage> createState() => _SpecListPageState();
@@ -20,6 +23,15 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   void initState() {
     super.initState();
     _controller = ScrollController()..addListener(_onScroll);
+    // Initialize controller with vehicle if present
+    // We use a microtask to avoid building/modifying provider during build
+    if (widget.vehicle != null) {
+      Future.microtask(() {
+        ref
+            .read(specListControllerProvider.notifier)
+            .setVehicle(widget.vehicle);
+      });
+    }
   }
 
   void _onScroll() {
@@ -64,6 +76,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
           items: state.items,
           isLoadingInitial: state.isLoadingInitial,
           isLoadingMore: state.isLoadingMore,
+          query: state.query,
         ),
       ),
     );
@@ -105,16 +118,27 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.search_off,
                           size: 64,
-                          color: Colors.grey,
+                          color: Theme.of(context).hintColor,
                         ),
                         const SizedBox(height: 16),
                         Text(
-                          'No specs found',
-                          style: Theme.of(context).textTheme.titleLarge,
+                          s.query.isNotEmpty
+                              ? 'No specs found for "${s.query}"'
+                              : 'No specs found',
+                          style: Theme.of(context).textTheme.titleLarge
+                              ?.copyWith(color: Theme.of(context).hintColor),
                         ),
+                        if (s.query.isNotEmpty) ...[
+                          const SizedBox(height: 16),
+                          OutlinedButton.icon(
+                            onPressed: _clearSearch,
+                            icon: const Icon(Icons.clear),
+                            label: const Text('Clear Search'),
+                          ),
+                        ],
                       ],
                     ),
                   )
@@ -122,6 +146,8 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                     key: const Key('specListView'),
                     controller: _controller,
                     physics: const AlwaysScrollableScrollPhysics(),
+                    keyboardDismissBehavior:
+                        ScrollViewKeyboardDismissBehavior.onDrag,
                     itemCount: s.items.length + (s.isLoadingMore ? 1 : 0),
                     itemBuilder: (context, index) {
                       if (index >= s.items.length) {

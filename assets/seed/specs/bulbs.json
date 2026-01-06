@@ -1,0 +1,74 @@
+[
+  {
+    "id": "s_bulb_h11_lowbeam",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Halogen)",
+    "body": "H11",
+    "tags": "lights,bulbs,wrx",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_bulb_9005_highbeam",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Halogen)",
+    "body": "9005 (HB3)",
+    "tags": "lights,bulbs",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_bulb_h4",
+    "category": "Bulbs",
+    "title": "H4/9003 Headlight Bulb",
+    "body": "Standard Halogen High/Low Beam. Used in: GC Impreza, SF/SG Forester, Legacy 90-04.",
+    "tags": "bulbs,lights,h4,9003,gc,sf,sg,legacy",
+    "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_bulb_h7",
+    "category": "Bulbs",
+    "title": "H7 Headlight Bulb (Low Beam)",
+    "body": "Used in: Legacy/Outback 05-09 (Low Beam), Tribeca.",
+    "tags": "bulbs,lights,h7,legacy,outback",
+    "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_bulb_h11",
+    "category": "Bulbs",
+    "title": "H11 Headlight Bulb (Low Beam)",
+    "body": "Common modern halogen low beam. Used in: WRX 08-21, Forester SH/SJ/SK, Outback 10+.",
+    "tags": "bulbs,lights,h11,gr,gv,va,forester,outback",
+    "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_bulb_9005",
+    "category": "Bulbs",
+    "title": "9005/HB3 Headlight Bulb (High Beam)",
+    "body": "Standard High Beam for most Subarus 2002-Present (GD, GR, VA, Legacy, Forester).",
+    "tags": "bulbs,lights,9005,highbeam",
+    "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_bulb_hid_d2s",
+    "category": "Bulbs",
+    "title": "D2S HID Bulb (Xenon)",
+    "body": "Factory HID Low Beam. Used in: STI 04-14, Forester XT Sports 06-08.",
+    "tags": "bulbs,lights,hid,d2s,sti",
+    "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_bulb_svx_low",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (SVX)",
+    "body": "9006 (HB4). Note: Projector housing.",
+    "tags": "bulbs,lights,svx,9006,lowbeam",
+    "updatedAt": "2026-01-05T14:30:00Z"
+  },
+  {
+    "id": "s_bulb_svx_high",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (SVX)",
+    "body": "9005 (HB3).",
+    "tags": "bulbs,lights,svx,9005,highbeam",
+    "updatedAt": "2026-01-05T14:30:00Z"
+  }
+]
