@@ -69,14 +69,10 @@ class SpecListController extends StateNotifier<SpecListState> {
     late final List<Spec> results;
     if (state.vehicle != null) {
       // Vehicle-specific specs fetch (currently returns all matches, no pagination support in this method yet)
-      results = await _dao.getSpecsForVehicle(state.vehicle!);
-      // Filter by query if present (in-memory since getSpecsForVehicle doesn't support query yet)
-      if (state.query.isNotEmpty) {
-        final q = state.query.toLowerCase();
-        results.retainWhere((s) =>
-            s.title.toLowerCase().contains(q) ||
-            s.body.toLowerCase().contains(q));
-      }
+      results = await _dao.getSpecsForVehicle(
+        state.vehicle!,
+        query: state.query,
+      );
     } else if (state.query.isNotEmpty) {
       results = await _dao.searchSpecs(
         state.query,
