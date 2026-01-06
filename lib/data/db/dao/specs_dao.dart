@@ -43,13 +43,17 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
     final model = vehicle.model.toLowerCase();
     final year = vehicle.year.toString();
 
-    final candidates = await (select(specs)..where((tbl) {
-      var predicate = tbl.tags.contains(model) & tbl.tags.contains(year);
-      if (query != null && query.isNotEmpty) {
-        predicate &= (tbl.title.contains(query) | tbl.body.contains(query));
-      }
-      return predicate;
-    })).get();
+    final candidates =
+        await (select(specs)..where((tbl) {
+              var predicate =
+                  tbl.tags.contains(model) & tbl.tags.contains(year);
+              if (query != null && query.isNotEmpty) {
+                predicate &=
+                    (tbl.title.contains(query) | tbl.body.contains(query));
+              }
+              return predicate;
+            }))
+            .get();
 
     // 2. Post-filter for Trim applicability
     final trim = vehicle.trim?.toLowerCase() ?? '';

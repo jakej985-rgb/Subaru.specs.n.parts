@@ -2,17 +2,14 @@ import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/data/db/dao/specs_dao.dart';
-import 'package:specsnparts/data/db/dao/vehicles_dao.dart';
 
 void main() {
   late AppDatabase db;
   late SpecsDao specsDao;
-  late VehiclesDao vehiclesDao;
 
   setUp(() {
     db = AppDatabase(NativeDatabase.memory());
     specsDao = SpecsDao(db);
-    vehiclesDao = VehiclesDao(db);
   });
 
   tearDown(() async {
@@ -43,7 +40,8 @@ void main() {
         category: 'Torque',
         title: 'Lug Nut Torque (Modern 5-Lug)',
         body: '89 ft-lbs',
-        tags: 'torque,wheels,lugs,wrx,sti', // Still missing year, should fail/be missing
+        tags:
+            'torque,wheels,lugs,wrx,sti', // Still missing year, should fail/be missing
         updatedAt: DateTime.now(),
       ),
     ]);
@@ -65,11 +63,21 @@ void main() {
     // 4. Analyze results
     final ids = results.map((s) => s.id).toList();
 
-    print('Fetched Specs: $ids');
-
     // Expectations
-    expect(ids, contains('s_wheel_bolt_pattern_wrx_vb'), reason: 'Already present');
-    expect(ids, contains('s_oil_capacity_wrx_vb'), reason: 'Should now be present due to tag fix');
-    expect(ids, isNot(contains('s_torque_lug_nut_modern')), reason: 'Still missing (scope limited to one fix)');
+    expect(
+      ids,
+      contains('s_wheel_bolt_pattern_wrx_vb'),
+      reason: 'Already present',
+    );
+    expect(
+      ids,
+      contains('s_oil_capacity_wrx_vb'),
+      reason: 'Should now be present due to tag fix',
+    );
+    expect(
+      ids,
+      isNot(contains('s_torque_lug_nut_modern')),
+      reason: 'Still missing (scope limited to one fix)',
+    );
   });
 }

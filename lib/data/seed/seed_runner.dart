@@ -57,7 +57,10 @@ class SeedRunner {
       final manifestContent = await rootBundle.loadString('AssetManifest.json');
       final Map<String, dynamic> manifestMap = json.decode(manifestContent);
       final specFiles = manifestMap.keys
-          .where((key) => key.startsWith('assets/seed/specs/') && key.endsWith('.json'))
+          .where(
+            (key) =>
+                key.startsWith('assets/seed/specs/') && key.endsWith('.json'),
+          )
           .toList();
 
       if (specFiles.isEmpty) {
@@ -74,7 +77,7 @@ class SeedRunner {
         );
         allSpecs.addAll(specs);
       }
-      
+
       await db.specsDao.insertMultiple(allSpecs);
     } catch (e) {
       debugPrint('Error loading specs from split files: $e');

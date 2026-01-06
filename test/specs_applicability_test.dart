@@ -71,15 +71,24 @@ void main() {
       // Should contain generic and base tire, but NOT limited tire
       expect(specsBase.any((s) => s.id == 's_generic_oil'), isTrue);
       expect(specsBase.any((s) => s.id == 's_tire_size_wrx_vb_base'), isTrue);
-      expect(specsBase.any((s) => s.id == 's_tire_size_wrx_vb_limited'), isFalse);
+      expect(
+        specsBase.any((s) => s.id == 's_tire_size_wrx_vb_limited'),
+        isFalse,
+      );
 
       // 4. Test Limited Vehicle
       final specsLimited = await db.specsDao.getSpecsForVehicle(vehicleLimited);
 
       // Should contain generic and limited tire, but NOT base tire
       expect(specsLimited.any((s) => s.id == 's_generic_oil'), isTrue);
-      expect(specsLimited.any((s) => s.id == 's_tire_size_wrx_vb_limited'), isTrue);
-      expect(specsLimited.any((s) => s.id == 's_tire_size_wrx_vb_base'), isFalse);
+      expect(
+        specsLimited.any((s) => s.id == 's_tire_size_wrx_vb_limited'),
+        isTrue,
+      );
+      expect(
+        specsLimited.any((s) => s.id == 's_tire_size_wrx_vb_base'),
+        isFalse,
+      );
     });
   });
 }

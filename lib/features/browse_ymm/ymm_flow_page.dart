@@ -100,130 +100,126 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
           ListView(
             padding: const EdgeInsets.all(16),
             children: [
-                if (_selectedYear == null) ...[
-                  const Text(
-                    'Select Year',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              if (_selectedYear == null) ...[
+                const Text(
+                  'Select Year',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                ..._years.map(
+                  (y) => ListTile(
+                    title: Text(y.toString()),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () {
+                      setState(() {
+                        _selectedYear = y;
+                        _models = [];
+                        _isLoading = true;
+                      });
+                      _loadModels(y);
+                    },
                   ),
-                  ..._years.map(
-                    (y) => ListTile(
-                      title: Text(y.toString()),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        setState(() {
-                          _selectedYear = y;
-                          _models = [];
-                          _isLoading = true;
-                        });
-                        _loadModels(y);
-                      },
+                ),
+              ] else if (_selectedModel == null) ...[
+                Row(
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.arrow_back),
+                      tooltip: 'Back to years',
+                      onPressed: () => setState(() => _selectedYear = null),
                     ),
-                  ),
-                ] else if (_selectedModel == null) ...[
-                  Row(
-                    children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back),
-                        tooltip: 'Back to years',
-                        onPressed: () => setState(() => _selectedYear = null),
+                    Text(
+                      '$_selectedYear > Select Model',
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
                       ),
-                      Text(
-                        '$_selectedYear > Select Model',
+                    ),
+                  ],
+                ),
+                ..._models.map(
+                  (m) => ListTile(
+                    title: Text(m),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () {
+                      setState(() {
+                        _selectedModel = m;
+                        _vehicles = [];
+                        _isLoading = true;
+                      });
+                      _loadVehicles(_selectedYear!, m);
+                    },
+                  ),
+                ),
+              ] else if (_selectedVehicle == null) ...[
+                Row(
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.arrow_back),
+                      tooltip: 'Back to models',
+                      onPressed: () => setState(() => _selectedModel = null),
+                    ),
+                    Text(
+                      '$_selectedYear $_selectedModel > Select Trim',
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                ..._vehicles.map(
+                  (v) => ListTile(
+                    title: Text('${v.trim ?? "Base"} (${v.engineCode ?? "?"})'),
+                    trailing: const Icon(Icons.check),
+                    onTap: () {
+                      setState(() => _selectedVehicle = v);
+                    },
+                  ),
+                ),
+              ] else ...[
+                Row(
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.arrow_back),
+                      tooltip: 'Back to trims',
+                      onPressed: () => setState(() => _selectedVehicle = null),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '${_selectedVehicle!.year} ${_selectedVehicle!.model} ${_selectedVehicle!.trim}',
                         style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                    ],
-                  ),
-                  ..._models.map(
-                    (m) => ListTile(
-                      title: Text(m),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () {
-                        setState(() {
-                          _selectedModel = m;
-                          _vehicles = [];
-                          _isLoading = true;
-                        });
-                        _loadVehicles(_selectedYear!, m);
-                      },
                     ),
-                  ),
-                ] else if (_selectedVehicle == null) ...[
-                  Row(
-                    children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back),
-                        tooltip: 'Back to models',
-                        onPressed: () => setState(() => _selectedModel = null),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                ListTile(
+                  leading: const Icon(Icons.list),
+                  title: const Text('View Specs'),
+                  onTap: () {
+                    // Navigate to specs page with selected vehicle for filtering
+                    context.push('/specs', extra: _selectedVehicle);
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.build),
+                  title: const Text('View Parts'),
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                        content: const Text('Parts filtering coming soon!'),
                       ),
-                      Text(
-                        '$_selectedYear $_selectedModel > Select Trim',
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                  ..._vehicles.map(
-                    (v) => ListTile(
-                      title: Text(
-                        '${v.trim ?? "Base"} (${v.engineCode ?? "?"})',
-                      ),
-                      trailing: const Icon(Icons.check),
-                      onTap: () {
-                        setState(() => _selectedVehicle = v);
-                      },
-                    ),
-                  ),
-                ] else ...[
-                  Row(
-                    children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back),
-                        tooltip: 'Back to trims',
-                        onPressed: () =>
-                            setState(() => _selectedVehicle = null),
-                      ),
-                      Expanded(
-                        child: Text(
-                          '${_selectedVehicle!.year} ${_selectedVehicle!.model} ${_selectedVehicle!.trim}',
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 20),
-                  ListTile(
-                    leading: const Icon(Icons.list),
-                    title: const Text('View Specs'),
-                    onTap: () {
-                      // Navigate to specs page with selected vehicle for filtering
-                      context.push('/specs', extra: _selectedVehicle);
-                    },
-                  ),
-                  ListTile(
-                    leading: const Icon(Icons.build),
-                    title: const Text('View Parts'),
-                    onTap: () {
-                      showDialog(
-                        context: context,
-                        builder: (ctx) => AlertDialog(
-                          content: const Text('Parts filtering coming soon!'),
-                        ),
-                      );
-                    },
-                  ),
-                ],
+                    );
+                  },
+                ),
               ],
+            ],
           ),
-          if (_isLoading)
-            const Center(child: CircularProgressIndicator()),
+          if (_isLoading) const Center(child: CircularProgressIndicator()),
         ],
       ),
     );
