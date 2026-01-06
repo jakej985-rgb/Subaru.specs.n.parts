@@ -48,7 +48,7 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
 
     final candidates =
         await (select(specs)..where((tbl) {
-              var predicate =
+              Expression<bool> predicate =
                   tbl.tags.contains(model) & tbl.tags.contains(year);
               if (query != null && query.isNotEmpty) {
                 predicate &=

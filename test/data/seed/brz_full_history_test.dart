@@ -14,24 +14,32 @@ void main() {
 
     List<dynamic> getBrzByYear(int year) {
       return vehicles
-          .where((v) =>
-              v['make'] == 'Subaru' &&
-              v['model'] == 'BRZ' &&
-              v['year'] == year &&
-              (v['trim'] as String).contains('(US)'))
+          .where(
+            (v) =>
+                v['make'] == 'Subaru' &&
+                v['model'] == 'BRZ' &&
+                v['year'] == year &&
+                (v['trim'] as String).contains('(US)'),
+          )
           .toList();
     }
 
     test('No 2012 BRZ models exist for USDM', () {
       final brz2012 = getBrzByYear(2012);
-      expect(brz2012, isEmpty,
-          reason: 'BRZ was introduced as a 2013 model in the US');
+      expect(
+        brz2012,
+        isEmpty,
+        reason: 'BRZ was introduced as a 2013 model in the US',
+      );
     });
 
     test('No 2021 BRZ models exist for USDM (Production Gap)', () {
       final brz2021 = getBrzByYear(2021);
-      expect(brz2021, isEmpty,
-          reason: 'There was no 2021 model year BRZ in the US');
+      expect(
+        brz2021,
+        isEmpty,
+        reason: 'There was no 2021 model year BRZ in the US',
+      );
     });
 
     test('Gen 1 (2013-2020) uses FA20 NA engine', () {
@@ -41,8 +49,11 @@ void main() {
         if (brzs.isEmpty) continue;
 
         for (final brz in brzs) {
-          expect(brz['engineCode'], 'FA20 NA',
-              reason: 'Year $year BRZ should have FA20 NA engine');
+          expect(
+            brz['engineCode'],
+            'FA20 NA',
+            reason: 'Year $year BRZ should have FA20 NA engine',
+          );
         }
       }
     });
@@ -54,8 +65,11 @@ void main() {
         if (brzs.isEmpty) continue;
 
         for (final brz in brzs) {
-          expect(brz['engineCode'], 'FA24',
-              reason: 'Year $year BRZ should have FA24 engine');
+          expect(
+            brz['engineCode'],
+            'FA24',
+            reason: 'Year $year BRZ should have FA24 engine',
+          );
         }
       }
     });

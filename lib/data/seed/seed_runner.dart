@@ -54,7 +54,9 @@ class SeedRunner {
 
   Future<void> _seedSpecs() async {
     try {
-      final manifestContent = await rootBundle.loadString('AssetManifest.json');
+      final String manifestContent = await rootBundle.loadString(
+        'AssetManifest.json',
+      );
       final Map<String, dynamic> manifestMap = json.decode(manifestContent);
       final specFiles = manifestMap.keys
           .where(

@@ -36,7 +36,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
 
   void _onScroll() {
     if (!_controller.hasClients) return;
-    final pos = _controller.position;
+    final ScrollPosition pos = _controller.position;
     if (pos.pixels >= pos.maxScrollExtent - 200) {
       ref.read(specListControllerProvider.notifier).loadMore();
     }
