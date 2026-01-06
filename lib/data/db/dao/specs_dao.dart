@@ -33,4 +33,35 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
       batch.insertAll(specs, list, mode: InsertMode.insertOrReplace);
     });
   }
+
+  Future<List<Spec>> getSpecsForVehicle(Vehicle vehicle) async {
+    // 1. Broad fetch: Get specs that mention the model AND year.
+    // This mimics the "inferred" logic of matching attributes to tags.
+    final model = vehicle.model?.toLowerCase() ?? '';
+    final year = vehicle.year.toString();
+
+    final candidates = await (select(specs)..where((tbl) {
+      return tbl.tags.contains(model) & tbl.tags.contains(year);
+    })).get();
+
+    // 2. Post-filter for Trim applicability
+    final trim = vehicle.trim?.toLowerCase() ?? '';
+
+    return candidates.where((spec) {
+      final tags = spec.tags.toLowerCase();
+      final hasBaseTag = tags.contains('base');
+      final hasLimitedTag = tags.contains('limited');
+
+      // If spec is trim-agnostic (no specific trim tags), it applies to all trims.
+      if (!hasBaseTag && !hasLimitedTag) return true;
+
+      // If spec has trim tags, vehicle must match one of them.
+      // Using contains to handle "Base (US)" vs "base".
+      if (hasBaseTag && trim.contains('base')) return true;
+      if (hasLimitedTag && trim.contains('limited')) return true;
+
+      // If spec is tagged for a trim but vehicle doesn't match, exclude it.
+      return false;
+    }).toList();
+  }
 }

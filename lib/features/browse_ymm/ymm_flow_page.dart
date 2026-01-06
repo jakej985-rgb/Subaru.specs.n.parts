@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 
 class YmmFlowPage extends ConsumerStatefulWidget {
@@ -202,13 +203,8 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                     leading: const Icon(Icons.list),
                     title: const Text('View Specs'),
                     onTap: () {
-                      // Show specs for this vehicle (filtered by tags/engine code ideally, but simple for now)
-                      showDialog(
-                        context: context,
-                        builder: (ctx) => AlertDialog(
-                          content: const Text('Specs filtering coming soon!'),
-                        ),
-                      );
+                      // Navigate to specs page with selected vehicle for filtering
+                      context.push('/specs', extra: _selectedVehicle);
                     },
                   ),
                   ListTile(

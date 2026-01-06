@@ -7,6 +7,7 @@ import 'package:specsnparts/features/specs/spec_list_page.dart';
 import 'package:specsnparts/features/browse_ymm/ymm_flow_page.dart';
 import 'package:specsnparts/features/browse_engine/engine_flow_page.dart';
 import 'package:flutter/material.dart';
+import 'package:specsnparts/data/db/app_db.dart';
 
 // Placeholder Pages (will be replaced by actual implementations)
 class PlaceholderScreen extends StatelessWidget {
@@ -39,7 +40,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           ),
           GoRoute(
             path: 'specs',
-            builder: (context, state) => const SpecListPage(),
+            builder: (context, state) {
+              final vehicle = state.extra as Vehicle?;
+              return SpecListPage(vehicle: vehicle);
+            },
           ),
           GoRoute(
             path: 'browse/ymm',
