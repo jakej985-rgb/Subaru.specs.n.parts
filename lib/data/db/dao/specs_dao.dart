@@ -40,7 +40,7 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
   }) async {
     // 1. Broad fetch: Get specs that mention the model AND year.
     // This mimics the "inferred" logic of matching attributes to tags.
-    final model = vehicle.model?.toLowerCase() ?? '';
+    final model = vehicle.model.toLowerCase();
     final year = vehicle.year.toString();
 
     final candidates = await (select(specs)..where((tbl) {
