@@ -132,6 +132,8 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                     key: const Key('specListView'),
                     controller: _controller,
                     physics: const AlwaysScrollableScrollPhysics(),
+                    keyboardDismissBehavior:
+                        ScrollViewKeyboardDismissBehavior.onDrag,
                     itemCount: s.items.length + (s.isLoadingMore ? 1 : 0),
                     itemBuilder: (context, index) {
                       if (index >= s.items.length) {
