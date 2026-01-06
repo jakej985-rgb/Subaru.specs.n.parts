@@ -44,10 +44,6 @@
 
 ## 2026-01-04 - Impreza Gen 1 Coverage (1993-2001)
 **Learning:** Gen 1 Impreza (GC/GF/GM) coverage is missing. This era includes the birth of the **Outback Sport** and the **2.5 RS** (the WRX precursor in the US). 
-**Action:** Close the 1993-2001 gap. Ensure the 1998 2.5 RS (DOHC EJ25D) is distinguished from the 1999-2001 2.5 RS (SOHC EJ251).
-
-## 2026-01-04 - Impreza Gen 2 (The WRX Era) (2002-2007)
-**Learning:** Gen 2 (GD/GG) brought the **WRX** (2002) and **STI** (2004) to the US. 
 - **2002-2003 (Bugeye):** WRX uses 2.0L EJ205.
 - **2004-2005 (Blobeye):** STI arrives with 2.5L EJ257. WRX stays EJ205.
 - **2006-2007 (Hawkeye):** WRX switches to 2.5L EJ255. Base model name changes from "RS" to "2.5i".
@@ -114,3 +110,11 @@
 - Created coverage trackers for every single model.
 - Verified with `missing_models_validation_test.dart` (all passed).
 - **Impact:** USDM Coverage is now effectively **100%** for all major retail models from 1978 to 2024.
+
+## 2026-01-04 - BRZ Generation Logic
+**Learning:**
+- **Gen 1 (2013-2020):** FA20 (2.0L NA).
+- **Gen 2 (2022+):** FA24 (2.4L NA).
+- **Production Gap:** No 2021 model year BRZ exists in the US.
+- **Launch Year:** BRZ launched as a 2013 model (April 2012 sales), so no 2012 model year exists.
+**Action:** Corrected `vehicles.json` to remove 2012/2021 entries and swapped incorrect engine codes (Gen 1 had FA24, Gen 2 had FA20) to match reality.
