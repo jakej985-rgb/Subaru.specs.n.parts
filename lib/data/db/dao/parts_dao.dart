@@ -15,6 +15,9 @@ class PartsDao extends DatabaseAccessor<AppDatabase> with _$PartsDaoMixin {
     int limit = 50,
     int offset = 0,
   }) {
+    // Security: Input length limit to prevent DoS via massive regex/contains checks
+    if (query.length > 100) return Future.value([]);
+
     return (select(parts)
           ..where(
             (tbl) => tbl.name.contains(query) | tbl.oemNumber.contains(query),
