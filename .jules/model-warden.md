@@ -111,6 +111,13 @@
 - Verified with `missing_models_validation_test.dart` (all passed).
 - **Impact:** USDM Coverage is now effectively **100%** for all major retail models from 1978 to 2024.
 
+## 2026-01-05 - 2025 Forester Coverage (Gen 6)
+**Learning:** 2025 marks the introduction of the Gen 6 Forester (Model Code **SL**).
+- **Lineup:** Base, Premium, Sport, Limited, Touring.
+- **Engine:** All use the **FB25 NA** (2.5L Direct Injection).
+- **Wilderness:** The "Wilderness" trim is currently a carryover of the 2024 model (Gen 5 SK) or unreleased on the new platform as of early 2025. To avoid ambiguity/guessing, it was omitted until confirmed.
+- **Hybrid:** A Hybrid model is announced/expected but specs are not fully detailed/orderable in the same capacity as the core 5 yet. Omitted for now.
+**Action:** Added the 5 core Gen 6 trims to `assets/seed/vehicles.json` with proper `(US)` suffix and `FB25 NA` engine code.
 ## 2026-01-04 - BRZ Generation Logic
 **Learning:**
 - **Gen 1 (2013-2020):** FA20 (2.0L NA).
