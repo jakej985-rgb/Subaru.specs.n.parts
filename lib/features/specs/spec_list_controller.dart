@@ -11,6 +11,7 @@ class SpecListState {
   final int limit;
   final String query;
   final int generation;
+  final Vehicle? vehicle;
 
   const SpecListState({
     this.items = const [],
@@ -21,6 +22,7 @@ class SpecListState {
     this.limit = 20,
     this.query = '',
     this.generation = 0,
+    this.vehicle,
   });
 
   SpecListState copyWith({
@@ -32,6 +34,7 @@ class SpecListState {
     int? limit,
     String? query,
     int? generation,
+    Vehicle? vehicle,
   }) => SpecListState(
     items: items ?? this.items,
     isLoadingInitial: isLoadingInitial ?? this.isLoadingInitial,
@@ -41,6 +44,7 @@ class SpecListState {
     limit: limit ?? this.limit,
     query: query ?? this.query,
     generation: generation ?? this.generation,
+    vehicle: vehicle ?? this.vehicle,
   );
 }
 
@@ -63,7 +67,17 @@ class SpecListController extends StateNotifier<SpecListState> {
     );
 
     late final List<Spec> results;
-    if (state.query.isNotEmpty) {
+    if (state.vehicle != null) {
+      // Vehicle-specific specs fetch (currently returns all matches, no pagination support in this method yet)
+      results = await _dao.getSpecsForVehicle(state.vehicle!);
+      // Filter by query if present (in-memory since getSpecsForVehicle doesn't support query yet)
+      if (state.query.isNotEmpty) {
+        final q = state.query.toLowerCase();
+        results.retainWhere((s) =>
+            s.title.toLowerCase().contains(q) ||
+            s.body.toLowerCase().contains(q));
+      }
+    } else if (state.query.isNotEmpty) {
       results = await _dao.searchSpecs(
         state.query,
         limit: state.limit,
@@ -80,7 +94,8 @@ class SpecListController extends StateNotifier<SpecListState> {
       isLoadingInitial: false,
       items: results,
       offset: results.length,
-      hasMore: results.length == state.limit,
+      // Disable load more for vehicle mode since we fetch all
+      hasMore: state.vehicle != null ? false : results.length == state.limit,
     );
   }
 
@@ -89,8 +104,18 @@ class SpecListController extends StateNotifier<SpecListState> {
     await loadInitial();
   }
 
+  Future<void> setVehicle(Vehicle? vehicle) async {
+    // Only reload if vehicle actually changes
+    if (state.vehicle == vehicle) return;
+    state = state.copyWith(vehicle: vehicle);
+    await loadInitial();
+  }
+
   Future<void> loadMore() async {
     if (state.isLoadingInitial || state.isLoadingMore || !state.hasMore) return;
+
+    // No load more for vehicle mode (as we fetch all at once currently)
+    if (state.vehicle != null) return;
 
     final gen = state.generation;
     state = state.copyWith(isLoadingMore: true);

@@ -2,10 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/specs/spec_list_controller.dart';
 
 class SpecListPage extends ConsumerStatefulWidget {
-  const SpecListPage({super.key});
+  const SpecListPage({super.key, this.vehicle});
+
+  final Vehicle? vehicle;
 
   @override
   ConsumerState<SpecListPage> createState() => _SpecListPageState();
@@ -20,6 +23,13 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   void initState() {
     super.initState();
     _controller = ScrollController()..addListener(_onScroll);
+    // Initialize controller with vehicle if present
+    // We use a microtask to avoid building/modifying provider during build
+    if (widget.vehicle != null) {
+      Future.microtask(() {
+        ref.read(specListControllerProvider.notifier).setVehicle(widget.vehicle);
+      });
+    }
   }
 
   void _onScroll() {
