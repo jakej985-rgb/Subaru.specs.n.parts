@@ -73,9 +73,11 @@ class SpecListController extends StateNotifier<SpecListState> {
       // Filter by query if present (in-memory since getSpecsForVehicle doesn't support query yet)
       if (state.query.isNotEmpty) {
         final q = state.query.toLowerCase();
-        results.retainWhere((s) =>
-            s.title.toLowerCase().contains(q) ||
-            s.body.toLowerCase().contains(q));
+        results.retainWhere(
+          (s) =>
+              s.title.toLowerCase().contains(q) ||
+              s.body.toLowerCase().contains(q),
+        );
       }
     } else if (state.query.isNotEmpty) {
       results = await _dao.searchSpecs(
