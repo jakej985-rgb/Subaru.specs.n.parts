@@ -54,7 +54,9 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
     final db = ref.read(appDbProvider);
     try {
       // Optimized: Fetch distinct models directly from DB
-      final models = await db.vehiclesDao.getDistinctModelsByYear(year);
+      final List<String> models = await db.vehiclesDao.getDistinctModelsByYear(
+        year,
+      );
       if (mounted && _selectedYear == year) {
         setState(() {
           _models = models;
@@ -73,10 +75,8 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
   Future<void> _loadVehicles(int year, String model) async {
     final db = ref.read(appDbProvider);
     try {
-      final vehicles = await db.vehiclesDao.getVehiclesByYearAndModel(
-        year,
-        model,
-      );
+      final List<Vehicle> vehicles = await db.vehiclesDao
+          .getVehiclesByYearAndModel(year, model);
       if (mounted && _selectedModel == model) {
         setState(() {
           _vehicles = vehicles;
