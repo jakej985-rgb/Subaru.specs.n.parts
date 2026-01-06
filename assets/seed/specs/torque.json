@@ -1,0 +1,50 @@
+[
+  {
+    "id": "s_torque_lug_nut_modern",
+    "category": "Torque",
+    "title": "Lug Nut Torque (Modern 5-Lug)",
+    "body": "89 ft-lbs (120 Nm) for most models (1990+). Verify in manual.",
+    "tags": "torque,wheels,lugs,legacy,impreza,forester,outback,wrx,sti,brz,5x100,5x114",
+    "updatedAt": "2026-01-05T14:10:00Z"
+  },
+  {
+    "id": "s_torque_lug_nut_classic",
+    "category": "Torque",
+    "title": "Lug Nut Torque (Classic 4-Lug)",
+    "body": "58-72 ft-lbs (80-100 Nm) for 4x140mm hubs. WARNING: Do not over-torque to modern specs.",
+    "tags": "torque,wheels,lugs,brat,gl,xt,loyale,classic,4x140",
+    "updatedAt": "2026-01-05T14:10:00Z"
+  },
+  {
+    "id": "s_torque_drain_plug",
+    "category": "Torque",
+    "title": "Oil Drain Plug Torque",
+    "body": "30.8 ft-lbs (41.7 Nm) - check specific model.",
+    "tags": "oil,torque,drain",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_torque_caliper_bracket_sti",
+    "category": "Torque",
+    "title": "Caliper Bracket Bolts (Front)",
+    "body": "80 ft-lbs (108 Nm) for STI Brembos.",
+    "tags": "brakes,torque,sti",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_torque_spark_plug",
+    "category": "Torque",
+    "title": "Spark Plug Torque",
+    "body": "12.9 ft-lbs (17.5 Nm)",
+    "tags": "spark,torque",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_torque_axle_nut",
+    "category": "Torque",
+    "title": "Axle Nut Torque",
+    "body": "162 ft-lbs (220 Nm) for Standard. 190 ft-lbs+ for STI/Later Models (check manual). Key stake required.",
+    "tags": "torque,drivetrain,axle,hub",
+    "updatedAt": "2026-01-05T12:30:00Z"
+  }
+]

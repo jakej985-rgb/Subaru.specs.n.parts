@@ -1,0 +1,34 @@
+[
+  {
+    "id": "s_diff_R160_390",
+    "category": "Differential",
+    "title": "R160_390",
+    "body": "Family: R160\nFinal Drive: 3.90\nLSD: Open (some WRX viscous LSD)\nNotes: Match trans FD",
+    "tags": "impreza,differential",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  },
+  {
+    "id": "s_diff_R160_411",
+    "category": "Differential",
+    "title": "R160_411",
+    "body": "Family: R160\nFinal Drive: 4.11\nLSD: Open\nNotes: Match 4EAT 4.11",
+    "tags": "impreza,differential",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  },
+  {
+    "id": "s_diff_R160_370",
+    "category": "Differential",
+    "title": "R160_370",
+    "body": "Family: R160\nFinal Drive: 3.70\nLSD: Some viscous LSD\nNotes: Unique; common swap trap",
+    "tags": "impreza,differential",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  },
+  {
+    "id": "s_diff_R180_390",
+    "category": "Differential",
+    "title": "R180_390",
+    "body": "Family: R180\nFinal Drive: 3.90\nLSD: Clutch LSD\nNotes: Requires STI axles/hubs or hybrid conversion",
+    "tags": "impreza,differential",
+    "updatedAt": "2025-12-16T16:27:05Z"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "s_coolant_thermostat",
+    "category": "Cooling",
+    "title": "Thermostat Opening Temp",
+    "body": "Standard: 172°F (78°C). Fully Open: 194°F (90°C).",
+    "tags": "coolant,thermostat,engine,heat",
+    "updatedAt": "2026-01-05T12:30:00Z"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "s_brake_brembo_front",
+    "category": "Brakes",
+    "title": "Front Rotors (STI Brembo)",
+    "body": "Diameter: 326mm. Thickness: 30mm. Bolt Pattern: 5x100 (04) or 5x114.3 (05+).",
+    "tags": "brakes,rotors,sti,brembo,front",
+    "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_brake_4pot_front",
+    "category": "Brakes",
+    "title": "Front Rotors (Subaru 4-Pot)",
+    "body": "Diameter: 294mm. Thickness: 24mm. Vented. Used on 06-07 WRX, 22+ WRX (similar size).",
+    "tags": "brakes,rotors,wrx,4pot",
+    "updatedAt": "2026-01-05T12:00:00Z"
+  }
+]

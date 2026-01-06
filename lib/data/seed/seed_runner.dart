@@ -15,7 +15,8 @@ class SeedRunner {
     // Version 1: Initial seed
     // Version 2: Added Impreza CSV data
     // Version 12: Modern Era (GR/GV, BRZ, VA, Ascent, FA Series)
-    const int kCurrentSeedVersion = 12;
+    // Version 17: Spec Cleanup (IDs, Units, Categories, Validation)
+    const int kCurrentSeedVersion = 17;
     final int lastSeedVersion = prefs.getInt('seed_version') ?? 0;
 
     // Check old flag for legacy migration (if user had v1 but tracking was bool)
@@ -53,16 +54,30 @@ class SeedRunner {
 
   Future<void> _seedSpecs() async {
     try {
-      final String response = await rootBundle.loadString(
-        'assets/seed/specs.json',
-      );
-      final List<Spec> specs = await compute<String, List<Spec>>(
-        parseSpecs,
-        response,
-      );
-      await db.specsDao.insertMultiple(specs);
+      final manifestContent = await rootBundle.loadString('AssetManifest.json');
+      final Map<String, dynamic> manifestMap = json.decode(manifestContent);
+      final specFiles = manifestMap.keys
+          .where((key) => key.startsWith('assets/seed/specs/') && key.endsWith('.json'))
+          .toList();
+
+      if (specFiles.isEmpty) {
+        debugPrint('Warning: No spec files found in assets/seed/specs/');
+        return;
+      }
+
+      final List<Spec> allSpecs = [];
+      for (final file in specFiles) {
+        final String response = await rootBundle.loadString(file);
+        final List<Spec> specs = await compute<String, List<Spec>>(
+          parseSpecs,
+          response,
+        );
+        allSpecs.addAll(specs);
+      }
+      
+      await db.specsDao.insertMultiple(allSpecs);
     } catch (e) {
-      debugPrint('Error loading specs.json: $e');
+      debugPrint('Error loading specs from split files: $e');
     }
   }
 

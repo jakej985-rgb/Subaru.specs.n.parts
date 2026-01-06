@@ -1,0 +1,18 @@
+[
+  {
+    "id": "s_coolant_type",
+    "category": "Coolant",
+    "title": "Coolant Type",
+    "body": "Subaru Super Coolant (Blue)",
+    "tags": "coolant,fluid",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_coolant_capacity_gd",
+    "category": "Coolant",
+    "title": "WRX/STI 2002-2007 Coolant Capacity",
+    "body": "7.0 - 7.7 Liters (7.4 - 8.1 Quarts) depending on model.",
+    "tags": "coolant,capacity,gd,wrx,sti",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  }
+]

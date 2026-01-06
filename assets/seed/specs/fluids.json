@@ -1,0 +1,42 @@
+[
+  {
+    "id": "s_fluid_brake",
+    "category": "Fluids",
+    "title": "Brake Fluid Type",
+    "body": "DOT 3 or DOT 4.",
+    "tags": "brakes,fluid",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_fluid_rear_diff",
+    "category": "Fluids",
+    "title": "Rear Differential Fluid",
+    "body": "GL-5 75W-90",
+    "tags": "diff,fluid",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_diff_capacity_r160",
+    "category": "Fluids",
+    "title": "R160 Rear Diff Capacity",
+    "body": "0.8 Liters (0.8 Quarts)",
+    "tags": "diff,fluid,r160,wrx,gd,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s_diff_capacity_r180",
+    "category": "Fluids",
+    "title": "R180 Rear Diff Capacity",
+    "body": "1.0 Liters (1.1 Quarts)",
+    "tags": "diff,fluid,r180,sti,gd,capacity",
+    "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s_coolant_EV",
+    "category": "Fluids",
+    "title": "EV Coolant (Solterra)",
+    "body": "Special EV Coolant. Do not mix with engine coolant.",
+    "tags": "coolant,fluid,solterra,ev",
+    "updatedAt": "2026-01-04T00:00:00Z"
+  }
+]

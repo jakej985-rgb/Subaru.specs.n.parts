@@ -1,0 +1,34 @@
+[
+  {
+    "id": "s_plug_gap_fa20",
+    "category": "Spark Plugs",
+    "title": "WRX 2015+ Gap",
+    "body": "Gap: 0.020\"-0.022\" (0.5-0.55mm).",
+    "tags": "spark,gap,fa20",
+    "updatedAt": "2026-01-05T14:50:00Z"
+  },
+  {
+    "id": "s_plug_ej_turbo",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (EJ Turbo)",
+    "body": "NGK SILFR6A (Stock) or ILFR6B. Gap: 0.030\" (0.7-0.8mm). Torque: 15-18 ft-lbs.",
+    "tags": "sparkplugs,engine,ej255,ej257,ej205,wrx,sti,fxt,lgt",
+    "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_plug_fa20dit",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (FA20DIT)",
+    "body": "NGK ILKAR8H6. Gap: 0.024\"-0.028\" (0.6-0.7mm). Do not gap manually (pre-gapped). Torque: 12.5 ft-lbs.",
+    "tags": "sparkplugs,engine,fa20dit,wrx,fxt",
+    "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_plug_ej_na",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (EJ N/A)",
+    "body": "NGK FR5AP-11 (Platinum). Gap: 0.044\" (1.1mm).",
+    "tags": "sparkplugs,engine,ej253,ej251,impreza,forester,outback",
+    "updatedAt": "2026-01-05T12:00:00Z"
+  }
+]

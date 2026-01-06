@@ -1,0 +1,26 @@
+[
+  {
+    "id": "s_tire_size_wrx_vb_base",
+    "category": "Tires",
+    "title": "WRX 2022 Base Tire Size",
+    "body": "235/45R17",
+    "tags": "tires,wrx,2022",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_tire_size_wrx_vb_limited",
+    "category": "Tires",
+    "title": "WRX 2022 Limited Tire Size",
+    "body": "245/40R18",
+    "tags": "tires,wrx,2022",
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_pressure_tires_std",
+    "category": "Tires",
+    "title": "Standard Tire Pressure",
+    "body": "Front: 33 PSI (228 kPa). Rear: 32 PSI (221 kPa). Common for Impreza/Legacy. WRX/STI often higher (35F/33R). Check door placard.",
+    "tags": "tires,pressure,maintenance,psi",
+    "updatedAt": "2026-01-05T14:50:00Z"
+  }
+]
