@@ -205,7 +205,7 @@ void main() {
         expect(
           category.contains('_'),
           isFalse,
-          reason: 'Category "${category}" uses underscore. Use spaces instead.',
+          reason: 'Category "$category" uses underscore. Use spaces instead.',
         );
       }
     });
@@ -219,13 +219,13 @@ void main() {
         expect(
           badTagPattern.hasMatch(tags),
           isFalse,
-          reason: 'Spec [${spec['id']}] has tags with spaces: "${tags}"',
+          reason: 'Spec [${spec['id']}] has tags with spaces: "$tags"',
         );
         // Also check for trailing commas
         expect(
           tags.endsWith(','),
           isFalse,
-          reason: 'Spec [${spec['id']}] has trailing comma in tags: "${tags}"',
+          reason: 'Spec [${spec['id']}] has trailing comma in tags: "$tags"',
         );
       }
     });
@@ -244,7 +244,7 @@ void main() {
           validDatePattern.hasMatch(date),
           isTrue,
           reason:
-              'Spec [${spec['id']}] has invalid date format: "${date}". Expected YYYY-MM-DDTHH:MM:SSZ',
+              'Spec [${spec['id']}] has invalid date format: "$date". Expected YYYY-MM-DDTHH:MM:SSZ',
         );
       }
     });
@@ -256,7 +256,7 @@ void main() {
         expect(
           id.startsWith('s_'),
           isTrue,
-          reason: 'Spec ID "${id}" does not start with s_ prefix',
+          reason: 'Spec ID "$id" does not start with s_ prefix',
         );
       }
     });
@@ -283,7 +283,7 @@ void main() {
           uppercaseStart.hasMatch(title),
           isTrue,
           reason:
-              'Spec [${spec['id']}] title does not start with uppercase: "${title}"',
+              'Spec [${spec['id']}] title does not start with uppercase: "$title"',
         );
       }
     });

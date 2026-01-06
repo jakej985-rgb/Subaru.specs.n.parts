@@ -2,17 +2,14 @@ import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/data/db/dao/specs_dao.dart';
-import 'package:specsnparts/data/db/dao/vehicles_dao.dart';
 
 void main() {
   late AppDatabase db;
   late SpecsDao specsDao;
-  late VehiclesDao vehiclesDao;
 
   setUp(() {
     db = AppDatabase(NativeDatabase.memory());
     specsDao = SpecsDao(db);
-    vehiclesDao = VehiclesDao(db);
   });
 
   tearDown(() async {
@@ -65,8 +62,6 @@ void main() {
 
     // 4. Analyze results
     final ids = results.map((s) => s.id).toList();
-
-    print('Fetched Specs: $ids');
 
     // Expectations
     expect(

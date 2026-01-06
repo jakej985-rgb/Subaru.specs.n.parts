@@ -91,47 +91,48 @@ void main() {
     // But if we just hide it or swap it, finding the text is the key.
   });
 
-  testWidgets('SpecListPage shows detailed empty state with clear button when searching', (
-    WidgetTester tester,
-  ) async {
-    final innerDb = AppDatabase(NativeDatabase.memory());
-    addTearDown(() => innerDb.close());
+  testWidgets(
+    'SpecListPage shows detailed empty state with clear button when searching',
+    (WidgetTester tester) async {
+      final innerDb = AppDatabase(NativeDatabase.memory());
+      addTearDown(() => innerDb.close());
 
-    final fakeDb = FakeAppDatabase(
-      NativeDatabase.memory(),
-      EmptySpecsDao(innerDb),
-    );
-    addTearDown(() => fakeDb.close());
+      final fakeDb = FakeAppDatabase(
+        NativeDatabase.memory(),
+        EmptySpecsDao(innerDb),
+      );
+      addTearDown(() => fakeDb.close());
 
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [appDbProvider.overrideWithValue(fakeDb)],
-        child: const MaterialApp(home: SpecListPage()),
-      ),
-    );
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [appDbProvider.overrideWithValue(fakeDb)],
+          child: const MaterialApp(home: SpecListPage()),
+        ),
+      );
 
-    await tester.pumpAndSettle();
+      await tester.pumpAndSettle();
 
-    // Type a query
-    await tester.enterText(find.byType(TextField), 'Turbo');
-    await tester.pump(const Duration(milliseconds: 600)); // Debounce + pump
-    await tester.pumpAndSettle();
+      // Type a query
+      await tester.enterText(find.byType(TextField), 'Turbo');
+      await tester.pump(const Duration(milliseconds: 600)); // Debounce + pump
+      await tester.pumpAndSettle();
 
-    // Should find the detailed empty state message
-    expect(find.text('No specs found for "Turbo"'), findsOneWidget);
+      // Should find the detailed empty state message
+      expect(find.text('No specs found for "Turbo"'), findsOneWidget);
 
-    // Should find the clear button
-    expect(find.text('Clear Search'), findsOneWidget);
+      // Should find the clear button
+      expect(find.text('Clear Search'), findsOneWidget);
 
-    // Tap clear button
-    await tester.tap(find.text('Clear Search'));
-    await tester.pumpAndSettle();
+      // Tap clear button
+      await tester.tap(find.text('Clear Search'));
+      await tester.pumpAndSettle();
 
-    // Should revert to base empty state
-    expect(find.text('No specs found'), findsOneWidget);
-    expect(find.text('Clear Search'), findsNothing);
-    expect(find.text('Turbo'), findsNothing); // Input should be cleared
-  });
+      // Should revert to base empty state
+      expect(find.text('No specs found'), findsOneWidget);
+      expect(find.text('Clear Search'), findsNothing);
+      expect(find.text('Turbo'), findsNothing); // Input should be cleared
+    },
+  );
 
   testWidgets('SpecListPage shows loading state initially', (
     WidgetTester tester,
