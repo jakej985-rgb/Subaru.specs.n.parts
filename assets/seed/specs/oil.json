@@ -140,5 +140,25 @@
     "updatedAt": "2026-01-04T00:00:00Z",
     "verified": false,
     "notes": "Values swapped to match standard format."
+  },
+  {
+    "id": "s_oil_capacity_brz_fa20",
+    "category": "Oil",
+    "title": "Oil Capacity (FA20)",
+    "body": "5.4 Liters (5.7 Quarts) with filter.",
+    "tags": "oil,capacity,brz,fa20,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
+  },
+  {
+    "id": "s_oil_viscosity_brz_fa20",
+    "category": "Oil",
+    "title": "Oil Viscosity (FA20)",
+    "body": "0W-20 Synthetic API SN/SM",
+    "tags": "oil,viscosity,brz,fa20,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
   }
 ]

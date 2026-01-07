@@ -30,5 +30,15 @@
     "body": "Family: R180\nFinal Drive: 3.90\nLSD: Clutch LSD\nNotes: Requires STI axles/hubs or hybrid conversion",
     "tags": "impreza,differential",
     "updatedAt": "2025-12-16T16:27:05Z"
+  },
+  {
+    "id": "s_diff_capacity_brz",
+    "category": "Differential",
+    "title": "Rear Differential Capacity",
+    "body": "1.15 Liters (1.2 Quarts). Use GL-5 75W-85 or 75W-90.",
+    "tags": "diff,fluid,capacity,brz,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
   }
 ]

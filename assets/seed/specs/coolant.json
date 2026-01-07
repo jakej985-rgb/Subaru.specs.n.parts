@@ -14,5 +14,25 @@
     "body": "7.0 - 7.7 Liters (7.4 - 8.1 Quarts) depending on model.",
     "tags": "coolant,capacity,gd,wrx,sti",
     "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_coolant_capacity_brz_mt",
+    "category": "Coolant",
+    "title": "Coolant Capacity (MT)",
+    "body": "7.2 Liters (7.6 Quarts)",
+    "tags": "coolant,capacity,brz,mt,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
+  },
+  {
+    "id": "s_coolant_capacity_brz_at",
+    "category": "Coolant",
+    "title": "Coolant Capacity (AT)",
+    "body": "7.5 Liters (7.9 Quarts)",
+    "tags": "coolant,capacity,brz,at,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
   }
 ]

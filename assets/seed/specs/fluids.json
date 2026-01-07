@@ -38,5 +38,15 @@
     "body": "Special EV Coolant. Do not mix with engine coolant.",
     "tags": "coolant,fluid,solterra,ev",
     "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_fluid_brake_brz",
+    "category": "Fluids",
+    "title": "Brake Fluid",
+    "body": "DOT 3 or DOT 4.",
+    "tags": "brakes,fluid,brz,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
   }
 ]
