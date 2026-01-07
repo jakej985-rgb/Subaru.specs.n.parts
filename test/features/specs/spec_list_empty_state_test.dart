@@ -161,39 +161,43 @@ void main() {
     await tester.pumpAndSettle();
   });
 
-  testWidgets('SpecListPage shows debug hint when vehicle selected but no specs', (
-    WidgetTester tester,
-  ) async {
-    final innerDb = AppDatabase(NativeDatabase.memory());
-    addTearDown(() => innerDb.close());
+  testWidgets(
+    'SpecListPage shows debug hint when vehicle selected but no specs',
+    (WidgetTester tester) async {
+      final innerDb = AppDatabase(NativeDatabase.memory());
+      addTearDown(() => innerDb.close());
 
-    final fakeDb = FakeAppDatabase(
-      NativeDatabase.memory(),
-      EmptySpecsDao(innerDb),
-    );
-    addTearDown(() => fakeDb.close());
+      final fakeDb = FakeAppDatabase(
+        NativeDatabase.memory(),
+        EmptySpecsDao(innerDb),
+      );
+      addTearDown(() => fakeDb.close());
 
-    final vehicle = Vehicle(
-      id: 'v_debug',
-      year: 2024,
-      make: 'Subaru',
-      model: 'DebugModel',
-      trim: 'DebugTrim',
-      engineCode: 'DebugEngine',
-      updatedAt: DateTime.now(),
-    );
+      final vehicle = Vehicle(
+        id: 'v_debug',
+        year: 2024,
+        make: 'Subaru',
+        model: 'DebugModel',
+        trim: 'DebugTrim',
+        engineCode: 'DebugEngine',
+        updatedAt: DateTime.now(),
+      );
 
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [appDbProvider.overrideWithValue(fakeDb)],
-        child: MaterialApp(home: SpecListPage(vehicle: vehicle)),
-      ),
-    );
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [appDbProvider.overrideWithValue(fakeDb)],
+          child: MaterialApp(home: SpecListPage(vehicle: vehicle)),
+        ),
+      );
 
-    await tester.pumpAndSettle();
+      await tester.pumpAndSettle();
 
-    expect(find.text('No specs found'), findsOneWidget);
-    // Use find.textContaining for the dynamic part
-    expect(find.textContaining('Debug: No matches for 2024 DebugModel DebugTrim'), findsOneWidget);
-  });
+      expect(find.text('No specs found'), findsOneWidget);
+      // Use find.textContaining for the dynamic part
+      expect(
+        find.textContaining('Debug: No matches for 2024 DebugModel DebugTrim'),
+        findsOneWidget,
+      );
+    },
+  );
 }

@@ -51,7 +51,7 @@ void main() {
       expect(specs[0].category, 'Oil');
       expect(specs[0].title, 'WRX 2022+ Oil Capacity');
       expect(specs[0].body, '4.8 Liters');
-      expect(specs[0].tags, 'oil,capacity');
+      expect(specs[0].tags, 'oil,capacity,2022,2023,2024,2025,2026');
       expect(specs[0].updatedAt, DateTime.utc(2024, 1, 1));
     });
 
