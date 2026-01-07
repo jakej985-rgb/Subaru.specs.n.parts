@@ -16,6 +16,16 @@
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
+    "id": "s_tire_size_sti_04",
+    "category": "Tires",
+    "title": "Stock Tire Size (STI 2004)",
+    "body": "225/45R17 90W (Bridgestone Potenza RE070)",
+    "tags": "tires,size,sti,gd,2004",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "2004 Impreza WRX STI FSM"
+  },
+  {
     "id": "s_pressure_tires_std",
     "category": "Tires",
     "title": "Standard Tire Pressure",

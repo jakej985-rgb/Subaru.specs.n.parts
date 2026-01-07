@@ -16,6 +16,16 @@
     "updatedAt": "2026-01-05T14:10:00Z"
   },
   {
+    "id": "s_torque_lug_nut_gd_sti",
+    "category": "Torque",
+    "title": "Lug Nut Torque (STI 2004)",
+    "body": "65.7 ft-lbs (90 Nm)",
+    "tags": "torque,wheels,lugs,sti,gd,2004",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "2004 Impreza WRX STI FSM (Section WT-4)"
+  },
+  {
     "id": "s_torque_drain_plug",
     "category": "Torque",
     "title": "Oil Drain Plug Torque",
