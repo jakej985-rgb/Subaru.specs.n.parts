@@ -56,6 +56,16 @@
     "updatedAt": "2024-05-23T00:00:00Z"
   },
   {
+    "id": "s_wheel_size_sti_04",
+    "category": "Wheels",
+    "title": "Stock Wheel Size (STI 2004)",
+    "body": "17x7.5JJ, Offset +53mm",
+    "tags": "wheels,size,offset,sti,gd,2004",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "2004 Impreza WRX STI FSM"
+  },
+  {
     "id": "s_wheel_4x140",
     "category": "Wheels",
     "title": "Bolt Pattern (Classics)",
