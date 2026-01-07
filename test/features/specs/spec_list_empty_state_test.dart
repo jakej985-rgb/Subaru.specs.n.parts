@@ -86,9 +86,6 @@ void main() {
 
     // Should NOT find the Clear Search button (since query is empty in this initial state)
     expect(find.text('Clear Search'), findsNothing);
-
-    // Should NOT find the list view (or at least it should be empty/hidden if we replace it)
-    // But if we just hide it or swap it, finding the text is the key.
   });
 
   testWidgets(
@@ -154,7 +151,6 @@ void main() {
     );
 
     // Initial pump - should be loading
-    // We assume the controller sets isLoadingInitial = true synchronously
     await tester.pump(const Duration(milliseconds: 100));
 
     // Should find circular progress indicator
@@ -163,12 +159,41 @@ void main() {
     // Finish loading
     await tester.pump(const Duration(seconds: 1));
     await tester.pumpAndSettle();
+  });
 
-    // Should not find reference to loading anymore
-    // Note: The list adds a loader at the bottom if loading MORE, but here we are checking the initial full screen loader
-    // If our implementation swaps the body, the usage of CircularProgressIndicator at the bottom of the list might confuse findsOneWidget if the list was still visible.
-    // However, if the list is empty, the bottom loader isn't shown either (index >= 0 is false if length is 0).
+  testWidgets('SpecListPage shows debug hint when vehicle selected but no specs', (
+    WidgetTester tester,
+  ) async {
+    final innerDb = AppDatabase(NativeDatabase.memory());
+    addTearDown(() => innerDb.close());
 
-    // expect(find.byType(CircularProgressIndicator), findsNothing);
+    final fakeDb = FakeAppDatabase(
+      NativeDatabase.memory(),
+      EmptySpecsDao(innerDb),
+    );
+    addTearDown(() => fakeDb.close());
+
+    final vehicle = Vehicle(
+      id: 'v_debug',
+      year: 2024,
+      make: 'Subaru',
+      model: 'DebugModel',
+      trim: 'DebugTrim',
+      engineCode: 'DebugEngine',
+      updatedAt: DateTime.now(),
+    );
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [appDbProvider.overrideWithValue(fakeDb)],
+        child: MaterialApp(home: SpecListPage(vehicle: vehicle)),
+      ),
+    );
+
+    await tester.pumpAndSettle();
+
+    expect(find.text('No specs found'), findsOneWidget);
+    // Use find.textContaining for the dynamic part
+    expect(find.textContaining('Debug: No matches for 2024 DebugModel DebugTrim'), findsOneWidget);
   });
 }

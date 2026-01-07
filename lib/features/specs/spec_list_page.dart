@@ -131,6 +131,18 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                           style: Theme.of(context).textTheme.titleLarge
                               ?.copyWith(color: Theme.of(context).hintColor),
                         ),
+                        if (widget.vehicle != null && s.query.isEmpty)
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              'Debug: No matches for ${widget.vehicle!.year} ${widget.vehicle!.model} ${widget.vehicle!.trim ?? ""}',
+                              textAlign: TextAlign.center,
+                              style: Theme.of(context).textTheme.bodySmall
+                                  ?.copyWith(
+                                    color: Theme.of(context).colorScheme.error,
+                                  ),
+                            ),
+                          ),
                         if (s.query.isNotEmpty) ...[
                           const SizedBox(height: 16),
                           OutlinedButton.icon(
