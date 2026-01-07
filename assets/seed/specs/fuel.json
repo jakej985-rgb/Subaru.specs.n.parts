@@ -6,5 +6,15 @@
     "body": "91 Octane or higher for Turbo models.",
     "tags": "fuel,gas",
     "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "s_fuel_tank_brz",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity",
+    "body": "50 Liters (13.2 Gallons). Premium Unleaded required.",
+    "tags": "fuel,tank,capacity,brz,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
   }
 ]

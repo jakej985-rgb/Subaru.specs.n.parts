@@ -86,5 +86,25 @@
     "body": "3.3 Liters (3.5 Quarts)",
     "tags": "trans,fluid,capacity,wrx,va,6mt",
     "updatedAt": "2024-05-24T00:00:00Z"
+  },
+  {
+    "id": "s_trans_capacity_brz_mt",
+    "category": "Transmission",
+    "title": "Manual Trans Fluid Capacity",
+    "body": "2.2 Liters (2.3 Quarts). Use GL-3 or GL-4 75W-90.",
+    "tags": "trans,fluid,capacity,brz,mt,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
+  },
+  {
+    "id": "s_trans_capacity_brz_at",
+    "category": "Transmission",
+    "title": "Auto Trans Fluid Capacity",
+    "body": "7.5 Liters (Total Dry Fill). Use Toyota ATF WS.",
+    "tags": "trans,fluid,capacity,brz,at,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
   }
 ]
