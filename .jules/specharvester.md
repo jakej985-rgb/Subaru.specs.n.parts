@@ -7,3 +7,7 @@
 ## 2024-05-24 - Lug Nut Torque Variance
 **Learning:** While modern Subarus generally standardize on 89 ft-lbs (120 Nm), the GD chassis (especially earlier years) often listed lower torque specs in the FSM (e.g., 65-73 ft-lbs). Using the modern 89 ft-lbs is generally safe, but purists and factory manuals differ.
 **Action:** Added `s_torque_lug_nut_gd_sti` with the specific 2004 FSM range (65.7 ft-lbs / 90 Nm) to respect the authority of the manual, while keeping `s_torque_lug_nut_modern` for general use.
+
+## 2024-05-24 - BRZ vs. Impreza Transmission Torque Specs
+**Learning:** The BRZ manual transmission (Aisin AZ6/TL70) has distinct drain/fill torque specs (27 ft-lbs / 37 Nm) compared to the standard Subaru 5MT/6MT (often 32.5 ft-lbs or higher). Conflicting info exists online, but FSM and reputable guides (ft86club, 900brz) align on 37Nm (27 ft-lbs).
+**Action:** Added `s_torque_trans_drain_brz_mt` and `s_torque_trans_fill_brz_mt` explicitly for BRZ/86 platform to prevent over-torquing with generic Subaru specs.

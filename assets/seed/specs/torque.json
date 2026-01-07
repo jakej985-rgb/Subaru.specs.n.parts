@@ -56,5 +56,75 @@
     "body": "162 ft-lbs (220 Nm) for Standard. 190 ft-lbs+ for STI/Later Models (check manual). Key stake required.",
     "tags": "torque,drivetrain,axle,hub",
     "updatedAt": "2026-01-05T12:30:00Z"
+  },
+  {
+    "id": "s_torque_drain_plug_brz",
+    "category": "Torque",
+    "title": "Oil Drain Plug Torque (FA20)",
+    "body": "29 ft-lbs (39 Nm). Use a new crush washer.",
+    "tags": "oil,torque,drain,brz,fa20,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
+  },
+  {
+    "id": "s_torque_trans_drain_brz_mt",
+    "category": "Torque",
+    "title": "MT Trans Drain Plug Torque",
+    "body": "27 ft-lbs (37 Nm). Use a new gasket.",
+    "tags": "trans,torque,drain,brz,mt,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_torque_trans_fill_brz_mt",
+    "category": "Torque",
+    "title": "MT Trans Fill Plug Torque",
+    "body": "27 ft-lbs (37 Nm). Use a new gasket.",
+    "tags": "trans,torque,fill,brz,mt,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_torque_diff_drain_brz",
+    "category": "Torque",
+    "title": "Rear Diff Drain Plug Torque",
+    "body": "36 ft-lbs (49 Nm). 10mm Hex.",
+    "tags": "diff,torque,drain,brz,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_torque_diff_fill_brz",
+    "category": "Torque",
+    "title": "Rear Diff Fill Plug Torque",
+    "body": "36 ft-lbs (49 Nm). 10mm Hex.",
+    "tags": "diff,torque,fill,brz,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_torque_lug_nut_brz",
+    "category": "Torque",
+    "title": "Lug Nut Torque (BRZ)",
+    "body": "89 ft-lbs (120 Nm)",
+    "tags": "wheels,torque,lugs,brz,2013,2014,2015,2016,2017,2018,2019,2020,2022,2023,2024",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
+  },
+  {
+    "id": "s_torque_spark_plug_brz",
+    "category": "Torque",
+    "title": "Spark Plug Torque (FA20)",
+    "body": "13 ft-lbs (17 Nm)",
+    "tags": "spark,torque,brz,fa20,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]
