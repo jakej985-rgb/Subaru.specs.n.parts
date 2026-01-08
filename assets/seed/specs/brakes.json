@@ -14,5 +14,565 @@
     "body": "Diameter: 294mm. Thickness: 24mm. Vented. Used on 06-07 WRX, 22+ WRX (similar size).",
     "tags": "brakes,rotors,wrx,4pot",
     "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_brake_front_rotor_legacy_gen1_na",
+    "category": "Brakes",
+    "title": "Front Rotors (Legacy 1990-1994 NA)",
+    "body": "Diameter: 260mm (10.2\"). Vented. 1-Pot Caliper.",
+    "tags": "brakes,rotors,front,legacy,na,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_legacy_gen1_turbo",
+    "category": "Brakes",
+    "title": "Front Rotors (Legacy 1991-1994 Turbo)",
+    "body": "Diameter: 277mm (10.9\"). Vented. 2-Pot Caliper.",
+    "tags": "brakes,rotors,front,legacy,turbo,ss,tw,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_legacy_gen1",
+    "category": "Brakes",
+    "title": "Rear Rotors (Legacy 1990-1994)",
+    "body": "Diameter: 266mm (10.5\"). Solid or Vented depending on trim. 1-Pot Caliper.",
+    "tags": "brakes,rotors,rear,legacy,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_impreza_gen1",
+    "category": "Brakes",
+    "title": "Front Rotors (Impreza 1993-2001 NA)",
+    "body": "Diameter: 260mm (10.2\"). Vented. 1-Pot Caliper. (Not RS/WRX).",
+    "tags": "brakes,rotors,front,impreza,gc,gf,gm,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_forester_gen1",
+    "category": "Brakes",
+    "title": "Front Rotors (Forester 1998-2002)",
+    "body": "Diameter: 277mm (10.9\"). Vented. 2-Pot Caliper.",
+    "tags": "brakes,rotors,front,forester,sf,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_forester_gen1",
+    "category": "Brakes",
+    "title": "Rear Rotors (Forester 1998-2002)",
+    "body": "Diameter: 266mm (10.5\"). Solid. (Disc models). (S Trim usually)",
+    "tags": "brakes,rotors,rear,forester,sf,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_legacy_gen2_260",
+    "category": "Brakes",
+    "title": "Front Rotors (Legacy 1995-1999 L/Brighton)",
+    "body": "Diameter: 260mm (10.2\"). Vented. 1-Pot Caliper.",
+    "tags": "brakes,rotors,front,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_legacy_gen2_277",
+    "category": "Brakes",
+    "title": "Front Rotors (Legacy 1996-1999 GT/Outback)",
+    "body": "Diameter: 277mm (10.9\"). Vented. 2-Pot Caliper.",
+    "tags": "brakes,rotors,front,legacy,bd,bg,bk,gt,outback,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_legacy_gen2",
+    "category": "Brakes",
+    "title": "Rear Rotors (Legacy 1995-1999)",
+    "body": "Diameter: 266mm (10.5\"). Solid or Vented depending on trim.",
+    "tags": "brakes,rotors,rear,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_wrx_gen2",
+    "category": "Brakes",
+    "title": "Front Rotors (WRX 2002-2005)",
+    "body": "Diameter: 294mm (11.6\"). Vented. 2-Pot Caliper.",
+    "tags": "brakes,rotors,front,wrx,impreza,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_wrx_gen2",
+    "category": "Brakes",
+    "title": "Rear Rotors (WRX 2002-2005)",
+    "body": "Diameter: 266mm (10.5\"). Solid (Usually 1-Pot).",
+    "tags": "brakes,rotors,rear,wrx,impreza,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_sti_gen2",
+    "category": "Brakes",
+    "title": "Front Rotors (STI 2004-2007 Brembo)",
+    "body": "Diameter: 326mm (12.8\"). Thickness: 30mm. 4-Pot Brembo. (Check Bolt Pattern).",
+    "tags": "brakes,rotors,front,sti,brembo,gd,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_sti_2004",
+    "category": "Brakes",
+    "title": "Rear Rotors (STI 2004 Only)",
+    "body": "Diameter: 316mm (12.4\"). 2-Pot Brembo. 5x100 / 170mm Handbrake Drum.",
+    "tags": "brakes,rotors,rear,sti,brembo,gd,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_sti_2005_plus",
+    "category": "Brakes",
+    "title": "Rear Rotors (STI 2005-2007)",
+    "body": "Diameter: 316mm (12.4\"). 2-Pot Brembo. 5x114.3 / 190mm Handbrake Drum.",
+    "tags": "brakes,rotors,rear,sti,brembo,gd,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_legacy_gen3_gt",
+    "category": "Brakes",
+    "title": "Front Rotors (Legacy GT/Outback 2000-2004)",
+    "body": "Diameter: 277mm (10.9\"). Vented. 2-Pot Caliper.",
+    "tags": "brakes,rotors,front,legacy,outback,gt,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_legacy_gen3_base",
+    "category": "Brakes",
+    "title": "Front Rotors (Legacy L/Brighton 2000-2004)",
+    "body": "Diameter: 260mm (10.2\"). Vented. 2-Pot Caliper.",
+    "tags": "brakes,rotors,front,legacy,l,brighton,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_legacy_gen3",
+    "category": "Brakes",
+    "title": "Rear Rotors (Legacy 2000-2004)",
+    "body": "Diameter: 266mm (10.5\"). Solid (Usually 1-Pot).",
+    "tags": "brakes,rotors,rear,legacy,outback,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_for_gen2_xt",
+    "category": "Brakes",
+    "title": "Front Rotors (Forester XT 2004-2008)",
+    "body": "Diameter: 294mm (11.6\"). Vented. 2-Pot Caliper.",
+    "tags": "brakes,rotors,front,forester,xt,sg,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_for_gen2_na",
+    "category": "Brakes",
+    "title": "Front Rotors (Forester 2.5X/XS 2003-2008)",
+    "body": "Diameter: 277mm (10.9\"). Vented. 2-Pot Caliper.",
+    "tags": "brakes,rotors,front,forester,na,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_for_gen2",
+    "category": "Brakes",
+    "title": "Rear Rotors (Forester 2003-2008)",
+    "body": "Diameter: 266mm (10.5\"). Solid.",
+    "tags": "brakes,rotors,rear,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_imp_gen2",
+    "category": "Brakes",
+    "title": "Front Rotors (Impreza RS/TS/2.5i 2002-2007)",
+    "body": "Diameter: 277mm (10.9\"). Vented. 2-Pot Caliper.",
+    "tags": "brakes,rotors,front,impreza,rs,ts,na,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_imp_gen2",
+    "category": "Brakes",
+    "title": "Rear Rotors (Impreza 2002-2007)",
+    "body": "Diameter: 266mm (10.5\"). Solid.",
+    "tags": "brakes,rotors,rear,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_outback_gen3",
+    "category": "Brakes",
+    "title": "Front Rotor (Outback 2005-2009)",
+    "body": "Diameter: 294mm (11.6\"). Vented.",
+    "tags": "brakes,rotor,front,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_outback_gen3",
+    "category": "Brakes",
+    "title": "Rear Rotor (Outback 2005-2009)",
+    "body": "Diameter: 274mm (10.79\"). Solid.",
+    "tags": "brakes,rotor,rear,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_outback_gen4_25i",
+    "category": "Brakes",
+    "title": "Front Rotor (Outback 2010-2014 2.5i)",
+    "body": "Diameter: 294mm (11.6\"). Vented.",
+    "tags": "brakes,rotor,front,outback,gen4,2.5i,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_outback_gen4_36r",
+    "category": "Brakes",
+    "title": "Front Rotor (Outback 2010-2014 3.6R)",
+    "body": "Diameter: 316mm (12.4\"). Vented.",
+    "tags": "brakes,rotor,front,outback,gen4,3.6r,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_outback_gen4",
+    "category": "Brakes",
+    "title": "Rear Rotor (Outback 2010-2014)",
+    "body": "Diameter: 286mm (11.3\"). Solid.",
+    "tags": "brakes,rotor,rear,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_forester_gen3",
+    "category": "Brakes",
+    "title": "Front Rotor (Forester 2009-2013)",
+    "body": "Diameter: 294mm (11.6\"). Vented.",
+    "tags": "brakes,rotor,front,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_forester_gen3",
+    "category": "Brakes",
+    "title": "Rear Rotor (Forester 2009-2013)",
+    "body": "Diameter: 286mm (11.3\"). Solid.",
+    "tags": "brakes,rotor,rear,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_imp_gen3_25i",
+    "category": "Brakes",
+    "title": "Front Rotor (Impreza 2008-2011 2.5i)",
+    "body": "Diameter: 277mm (10.9\"). Vented.",
+    "tags": "brakes,rotor,front,impreza,ge,gh,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_imp_gen3_wrx",
+    "category": "Brakes",
+    "title": "Front Rotor (WRX 2008-2014)",
+    "body": "Diameter: 294mm (11.6\"). Vented.",
+    "tags": "brakes,rotor,front,wrx,impreza,gh,gr,gv,2008,2009,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_imp_gen3_sti",
+    "category": "Brakes",
+    "title": "Front Rotor (STI 2008-2017)",
+    "body": "Diameter: 326mm (12.8\"). Vented Brembo.",
+    "tags": "brakes,rotor,front,sti,wrx,impreza,gr,gv,va,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_imp_gen3",
+    "category": "Brakes",
+    "title": "Rear Rotor (Impreza/WRX 2008-2011)",
+    "body": "Diameter: 286mm (11.3\"). Solid.",
+    "tags": "brakes,rotor,rear,impreza,wrx,ge,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_imp_gen3_sti",
+    "category": "Brakes",
+    "title": "Rear Rotor (STI 2008-2017)",
+    "body": "Diameter: 316mm (12.4\"). Vented Brembo.",
+    "tags": "brakes,rotor,rear,sti,wrx,impreza,gr,gv,va,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_leg_gen4_25i",
+    "category": "Brakes",
+    "title": "Front Rotor (Legacy 2005-2009 2.5i)",
+    "body": "Diameter: 277mm (10.9\"). Vented.",
+    "tags": "brakes,rotor,front,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_leg_gen4_gt",
+    "category": "Brakes",
+    "title": "Front Rotor (Legacy GT/Spec.B 2005-2009)",
+    "body": "Diameter: 316mm (12.4\"). Vented.",
+    "tags": "brakes,rotor,front,gt,specb,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_leg_gen4_25i",
+    "category": "Brakes",
+    "title": "Rear Rotor (Legacy 2005-2009 2.5i)",
+    "body": "Diameter: 274mm (10.8\"). Solid.",
+    "tags": "brakes,rotor,rear,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_leg_gen4_gt",
+    "category": "Brakes",
+    "title": "Rear Rotor (Legacy GT/Spec.B 2005-2009)",
+    "body": "Diameter: 290mm (11.4\"). Vented.",
+    "tags": "brakes,rotor,rear,gt,specb,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_baja",
+    "category": "Brakes",
+    "title": "Front Rotor (Baja 2003-2006)",
+    "body": "Diameter: 294mm (11.6\"). Vented.",
+    "tags": "brakes,rotor,front,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_baja",
+    "category": "Brakes",
+    "title": "Rear Rotor (Baja 2003-2006)",
+    "body": "Diameter: 274mm (10.8\"). Solid.",
+    "tags": "brakes,rotor,rear,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_ea81_82",
+    "category": "Brakes",
+    "title": "Front Rotor (Subaru EA81/EA82)",
+    "body": "Diameter: 242mm (9.5\"). Vented.",
+    "tags": "brakes,rotor,front,ea81,ea82,leone,brat,gl,dl,1980s",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_drum_ea81_82",
+    "category": "Brakes",
+    "title": "Rear Drum (Subaru EA81/EA82)",
+    "body": "Diameter: 203mm (8.0\").",
+    "tags": "brakes,drum,rear,ea81,ea82,leone,brat,gl,dl,1980s",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_svx",
+    "category": "Brakes",
+    "title": "Front Rotor (SVX 1992-1997)",
+    "body": "Diameter: 302mm (11.9\"). Vented.",
+    "tags": "brakes,rotor,front,svx,eg33,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_svx",
+    "category": "Brakes",
+    "title": "Rear Rotor (SVX 1992-1997)",
+    "body": "Diameter: 290mm (11.4\"). Vented.",
+    "tags": "brakes,rotor,rear,svx,eg33,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_justy",
+    "category": "Brakes",
+    "title": "Front Rotor (Justy 1987-1994)",
+    "body": "Diameter: 234mm (9.2\"). Solid.",
+    "tags": "brakes,rotor,front,justy,1987,1988,1989,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_drum_justy",
+    "category": "Brakes",
+    "title": "Rear Drum (Justy 1987-1994)",
+    "body": "Diameter: 180mm (7.1\").",
+    "tags": "brakes,drum,rear,justy,1987,1988,1989,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_forester_gen4_na",
+    "category": "Brakes",
+    "title": "Front Rotor (Forester 2014-2018 2.5i)",
+    "body": "Diameter: 294mm (11.6\"). Vented.",
+    "tags": "brakes,rotor,front,forester,sj,2014,2015,2016,2017,2018",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_forester_gen4_xt",
+    "category": "Brakes",
+    "title": "Front Rotor (Forester 2014-2018 2.0XT)",
+    "body": "Diameter: 316mm (12.4\"). Vented.",
+    "tags": "brakes,rotor,front,forester,sj,xt,2014,2015,2016,2017,2018",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_wrx_va",
+    "category": "Brakes",
+    "title": "Front Rotor (WRX 2015-2021)",
+    "body": "Diameter: 316mm (12.4\"). Vented.",
+    "tags": "brakes,rotor,front,wrx,va,2015,2016,2017,2018,2019,2020,2021",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_sti_va_15_17",
+    "category": "Brakes",
+    "title": "Front Rotor (STI 2015-2017)",
+    "body": "Diameter: 326mm (12.8\"). Vented. Brembo 4-pot.",
+    "tags": "brakes,rotor,front,sti,va,2015,2016,2017",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_tribeca",
+    "category": "Brakes",
+    "title": "Front Rotor (Tribeca 2006-2014)",
+    "body": "Diameter: 316mm (12.4\"). Thickness: 30mm. Vented.",
+    "tags": "brakes,rotor,front,tribeca,2006,2007,2008,2009,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_tribeca",
+    "category": "Brakes",
+    "title": "Rear Rotor (Tribeca 2006-2014)",
+    "body": "Diameter: 320mm (12.6\"). Thickness: 18mm. Vented.",
+    "tags": "brakes,rotor,rear,tribeca,2006,2007,2008,2009,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_ascent",
+    "category": "Brakes",
+    "title": "Front Rotor (Ascent 2019+)",
+    "body": "Diameter: 333mm (13.1\"). Vented.",
+    "tags": "brakes,rotor,front,ascent,2019,2020,2021,2022,2023,2024",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_ascent",
+    "category": "Brakes",
+    "title": "Rear Rotor (Ascent 2019+)",
+    "body": "Diameter: 330mm (13.0\"). Vented.",
+    "tags": "brakes,rotor,rear,ascent,2019,2020,2021,2022,2023,2024",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_crosstrek",
+    "category": "Brakes",
+    "title": "Front Rotor (Crosstrek 2013+)",
+    "body": "Diameter: 294mm (11.6\"). Vented.",
+    "tags": "brakes,rotor,front,crosstrek,xv,gp,gt,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_crosstrek_gt",
+    "category": "Brakes",
+    "title": "Rear Rotor (Crosstrek 2018+)",
+    "body": "Diameter: 286mm (11.3\"). Vented.",
+    "tags": "brakes,rotor,rear,crosstrek,gt,2018,2019,2020,2021,2022,2023",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]

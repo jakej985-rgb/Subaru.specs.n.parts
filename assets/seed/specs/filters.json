@@ -22,5 +22,435 @@
     "body": "Location: Behind glovebox. Replace every 12-15k miles. Part: 72880FG000 (GR/VA) / 72880FL000 (Global Platform).",
     "tags": "filter,cabin,air,maintenance",
     "updatedAt": "2026-01-05T12:30:00Z"
+  },
+  {
+    "id": "s_filter_oil_legacy_gen1",
+    "category": "Filters",
+    "title": "Oil Filter (Legacy 1990-1994)",
+    "body": "Part: 15208AA12A (Blue/Black). Alternates: Fram PH3593A, Wix 51334. Thread: M20x1.5.",
+    "tags": "filter,oil,legacy,ej22,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_filter_air_legacy_gen1",
+    "category": "Filters",
+    "title": "Engine Air Filter (Legacy 1990-1994)",
+    "body": "Part: 16546AA020 (Rectangular Panel). Alternates: Fram CA4309, Wix 42072.",
+    "tags": "filter,air,engine,legacy,ej22,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_impreza_gen1",
+    "category": "Filters",
+    "title": "Oil Filter (Impreza 1993-2001)",
+    "body": "Part: 15208AA12A (Black/Blue). Thread: M20x1.5.",
+    "tags": "filter,oil,impreza,ej18,ej22,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_impreza_gen1",
+    "category": "Filters",
+    "title": "Engine Air Filter (Impreza 1993-2001)",
+    "body": "Part: 16546AA150 (Rectangular Panel).",
+    "tags": "filter,air,impreza,ej18,ej22,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_forester_gen1",
+    "category": "Filters",
+    "title": "Oil Filter (Forester 1998-2002)",
+    "body": "Part: 15208AA12A (Black/Blue). Thread: M20x1.5.",
+    "tags": "filter,oil,forester,sf,ej25d,ej251,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_forester_gen1",
+    "category": "Filters",
+    "title": "Engine Air Filter (Forester 1998-2002)",
+    "body": "Part: 16546AA020 or 16546AA070. (Panel Filter).",
+    "tags": "filter,air,forester,sf,ej25d,ej251,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_legacy_gen2",
+    "category": "Filters",
+    "title": "Oil Filter (Legacy 1995-1999)",
+    "body": "Part: 15208AA12A (Black/Blue). Thread: M20x1.5. (For EJ22 & EJ25D).",
+    "tags": "filter,oil,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_legacy_gen2",
+    "category": "Filters",
+    "title": "Engine Air Filter (Legacy 1995-1999)",
+    "body": "Part: 16546AA020 (Panel Filter, usually). Check Vin for some early years.",
+    "tags": "filter,air,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_wrx_gen2",
+    "category": "Filters",
+    "title": "Oil Filter (WRX 2002-2005)",
+    "body": "Part: 15208AA12A (Black/Blue). Thread: M20x1.5.",
+    "tags": "filter,oil,wrx,impreza,ej205,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_wrx_gen2",
+    "category": "Filters",
+    "title": "Engine Air Filter (WRX 2002-2005)",
+    "body": "Part: 16546AA020 or 16546AA050 (Panel Filter).",
+    "tags": "filter,air,wrx,impreza,ej205,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_sti_gen2",
+    "category": "Filters",
+    "title": "Oil Filter (STI 2004-2007)",
+    "body": "Part: 15208AA100 (Black Tokyo Roki) or 15208AA12A (Blue).",
+    "tags": "filter,oil,sti,wrx,impreza,ej257,gd,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_sti_gen2",
+    "category": "Filters",
+    "title": "Engine Air Filter (STI 2004-2007)",
+    "body": "Part: 16546AA020 (Panel Filter).",
+    "tags": "filter,air,sti,wrx,impreza,ej257,gd,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_legacy_gen3_ej25",
+    "category": "Filters",
+    "title": "Oil Filter (Legacy 2.5L 2000-2004)",
+    "body": "Part: 15208AA12A (Blue).",
+    "tags": "filter,oil,legacy,outback,ej25,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_legacy_gen3_h6",
+    "category": "Filters",
+    "title": "Oil Filter (Legacy H6 2001-2004)",
+    "body": "Part: 15208AA031 (Black).",
+    "tags": "filter,oil,legacy,outback,ez30,h6,be,bh,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_legacy_gen3",
+    "category": "Filters",
+    "title": "Engine Air Filter (Legacy 2000-2004)",
+    "body": "Part: 16546AA020 or 16546AA07A.",
+    "tags": "filter,air,legacy,outback,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_for_gen2",
+    "category": "Filters",
+    "title": "Oil Filter (Forester 2003-2008)",
+    "body": "Part: 15208AA100 (Black) or 15208AA12A (Blue).",
+    "tags": "filter,oil,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_for_gen2",
+    "category": "Filters",
+    "title": "Engine Air Filter (Forester 2003-2008)",
+    "body": "Part: 16546AA020 or 16546AA080.",
+    "tags": "filter,air,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_imp_gen2",
+    "category": "Filters",
+    "title": "Oil Filter (Impreza 2.5 2002-2007)",
+    "body": "Part: 15208AA100 or 15208AA12A.",
+    "tags": "filter,oil,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_imp_gen2",
+    "category": "Filters",
+    "title": "Engine Air Filter (Impreza 2002-2007)",
+    "body": "Part: 16546AA020.",
+    "tags": "filter,air,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_outback_gen3",
+    "category": "Filters",
+    "title": "Oil Filter (Outback 2005-2009)",
+    "body": "Part: 15208AA12A (standard) or 15208AA15A (blue).",
+    "tags": "filter,oil,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_outback_gen3",
+    "category": "Filters",
+    "title": "Engine Air Filter (Outback 2005-2009)",
+    "body": "Part: 16546AA090 or 16546AA12A.",
+    "tags": "filter,air,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_cabin_outback_gen3",
+    "category": "Filters",
+    "title": "Cabin Air Filter (Outback 2005-2009)",
+    "body": "Part: 72880AG00A or 72880XA00A.",
+    "tags": "filter,cabin,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_outback_gen4",
+    "category": "Filters",
+    "title": "Oil Filter (Outback 2010-2014)",
+    "body": "2.5: 15208AA12A/15208AA15A | 3.6: 15208AA11A.",
+    "tags": "filter,oil,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_outback_gen4",
+    "category": "Filters",
+    "title": "Engine Air Filter (Outback 2010-2014)",
+    "body": "Part: 16546AA10A or 16546AA12A.",
+    "tags": "filter,air,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_cabin_outback_gen4",
+    "category": "Filters",
+    "title": "Cabin Air Filter (Outback 2010-2014)",
+    "body": "Part: 72880AJ00A.",
+    "tags": "filter,cabin,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_forester_gen3",
+    "category": "Filters",
+    "title": "Oil Filter (Forester 2009-2013)",
+    "body": "EJ: 15208AA12A/15208AA15A | FB: 15208AA160 (Black) or 15208AA15A (Blue).",
+    "tags": "filter,oil,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_forester_gen3",
+    "category": "Filters",
+    "title": "Engine Air Filter (Forester 2009-2013)",
+    "body": "Part: 16546AA090 or 16546AA12A.",
+    "tags": "filter,air,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_cabin_forester_gen3",
+    "category": "Filters",
+    "title": "Cabin Air Filter (Forester 2009-2013)",
+    "body": "Part: 72880FG000.",
+    "tags": "filter,cabin,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_imp_gen3",
+    "category": "Filters",
+    "title": "Oil Filter (Impreza/WRX/STI 2008-2011)",
+    "body": "Part: 15208AA12A / 15208AA15A / 15208AA100.",
+    "tags": "filter,oil,impreza,wrx,sti,ge,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_imp_gen3",
+    "category": "Filters",
+    "title": "Engine Air Filter (Impreza/WRX/STI 2008-2011)",
+    "body": "Part: 16546AA090.",
+    "tags": "filter,air,impreza,wrx,sti,ge,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_cabin_imp_gen3",
+    "category": "Filters",
+    "title": "Cabin Air Filter (Impreza/WRX/STI 2008-2011)",
+    "body": "Part: 72880FG000.",
+    "tags": "filter,cabin,impreza,wrx,sti,ge,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_leg_gen4",
+    "category": "Filters",
+    "title": "Oil Filter (Legacy 2005-2009)",
+    "body": "Part: 15208AA12A / 15208AA15A / 15208AA100.",
+    "tags": "filter,oil,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_leg_gen4",
+    "category": "Filters",
+    "title": "Engine Air Filter (Legacy 2005-2009)",
+    "body": "Part: 16546AA10A or 16546AA12A.",
+    "tags": "filter,air,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_cabin_leg_gen4",
+    "category": "Filters",
+    "title": "Cabin Air Filter (Legacy 2005-2009)",
+    "body": "Part: 72880AG00A.",
+    "tags": "filter,cabin,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_baja",
+    "category": "Filters",
+    "title": "Oil Filter (Baja 2003-2006)",
+    "body": "Part: 15208AA12A / 15208AA15A / 15208AA100.",
+    "tags": "filter,oil,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_baja_na",
+    "category": "Filters",
+    "title": "Engine Air Filter (Baja 2003-2006 Sport/Base)",
+    "body": "Part: 16546AA020.",
+    "tags": "filter,air,baja,na,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_baja_turbo",
+    "category": "Filters",
+    "title": "Engine Air Filter (Baja 2004-2006 Turbo)",
+    "body": "Part: 16546AA090.",
+    "tags": "filter,air,baja,turbo,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_ea_classic",
+    "category": "Filters",
+    "title": "Oil Filter (Subaru 1970s-1990s)",
+    "body": "Part: 15208AA100.",
+    "tags": "filter,oil,ea71,ea81,ea82,ej22,ej18,leone,brat,gl,dl,loyale,legacy,1970s,1980s,1990s",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_ea_classic",
+    "category": "Filters",
+    "title": "Engine Air Filter (Subaru EA81/EA82)",
+    "body": "Part: 16546AA020.",
+    "tags": "filter,air,ea81,ea82,leone,brat,gl,dl,loyale,1980s",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_svx",
+    "category": "Filters",
+    "title": "Engine Air Filter (SVX 1992-1997)",
+    "body": "Part: 16546AA030.",
+    "tags": "filter,air,eg33,svx,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_fb_engine",
+    "category": "Filters",
+    "title": "Oil Filter (Subaru FB20/FB25)",
+    "body": "Part: 15208AA15A (or 15208AA160).",
+    "tags": "filter,oil,fb20,fb25,impreza,crosstrek,forester,outback,legacy,2012,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_wrx_va",
+    "category": "Filters",
+    "title": "Oil Filter (WRX 2015-2021 FA20DIT)",
+    "body": "Part: 15208AA170.",
+    "tags": "filter,oil,fa20dit,wrx,va,2015,2016,2017,2018,2019,2020,2021",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_filter_air_fb_engine_large",
+    "category": "Filters",
+    "title": "Engine Air Filter (Forester SJ/Outback Gen5)",
+    "body": "Part: 16546AA12B.",
+    "tags": "filter,air,forester,sj,outback,gen5,legacy,gen6,2014,2015,2016,2017,2018,2019",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
   }
 ]

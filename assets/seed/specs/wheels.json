@@ -128,5 +128,423 @@
     "body": "5x114.3",
     "tags": "wheels,bolt_pattern,crosstrek,2024",
     "updatedAt": "2026-01-04T00:00:00Z"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_legacy_gen1",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Legacy 1990-1994)",
+    "body": "5x100",
+    "tags": "wheels,bolt_pattern,legacy,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_lug_torque_legacy_gen1",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Legacy 1990-1994)",
+    "body": "72-87 ft-lb (98-118 Nm)",
+    "tags": "wheels,lug_torque,legacy,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_hub_bore_legacy_gen1",
+    "category": "Wheels",
+    "title": "Hub Center Bore (Legacy 1990-1994)",
+    "body": "56.1 mm",
+    "tags": "wheels,hub_bore,legacy,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_impreza_gen1",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Impreza 1993-2001)",
+    "body": "5x100. Center Bore: 56.1mm. Lug Thread: M12x1.25.",
+    "tags": "wheel,bolt,pattern,pcd,impreza,gc,gf,gm,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_impreza_gen1",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Impreza 1993-2001)",
+    "body": "58-72 ft-lb (78-98 Nm) - Service Manual. Many users use 80 ft-lb.",
+    "tags": "wheel,torque,lug,impreza,gc,gf,gm,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_forester_gen1",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Forester 1998-2002)",
+    "body": "5x100. Center Bore: 56.1mm. Lug Thread: M12x1.25.",
+    "tags": "wheel,bolt,pattern,pcd,forester,sf,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_forester_gen1",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Forester 1998-2002)",
+    "body": "65-79 ft-lb (90-108 Nm). Typically torqued to 75-80 ft-lb.",
+    "tags": "wheel,torque,lug,forester,sf,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_legacy_gen2",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Legacy 1995-1999)",
+    "body": "5x100. Center Bore: 56.1mm. Lug Thread: M12x1.25.",
+    "tags": "wheel,bolt,pattern,pcd,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_legacy_gen2",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Legacy 1995-1999)",
+    "body": "58-72 ft-lb (78-98 Nm). Typically torqued to 75-80 ft-lb.",
+    "tags": "wheel,torque,lug,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_wrx_gen2",
+    "category": "Wheels",
+    "title": "Bolt Pattern (WRX 2002-2005)",
+    "body": "5x100. Center Bore: 56.1mm. Lug Thread: M12x1.25.",
+    "tags": "wheel,bolt,pattern,pcd,wrx,impreza,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_wrx_gen2",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (WRX 2002-2005)",
+    "body": "72-82 ft-lb (98-112 Nm). Typically torqued to 80-85 ft-lb.",
+    "tags": "wheel,torque,lug,wrx,impreza,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_sti_2004_gen2",
+    "category": "Wheels",
+    "title": "Bolt Pattern (STI 2004 Only)",
+    "body": "5x100. Center Bore: 56.1mm. (Unique year for STI).",
+    "tags": "wheel,bolt,pattern,pcd,sti,impreza,gd,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_sti_2005_gen2",
+    "category": "Wheels",
+    "title": "Bolt Pattern (STI 2005-2007)",
+    "body": "5x114.3 (5x4.5\"). Center Bore: 56.1mm. High Offset.",
+    "tags": "wheel,bolt,pattern,pcd,sti,impreza,gd,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_sti_gen2",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (STI 2004-2007)",
+    "body": "65-72 ft-lb (90-100 Nm). Typically torqued to 75-80 ft-lb.",
+    "tags": "wheel,torque,lug,sti,impreza,gd,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_legacy_gen3",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Legacy 2000-2004)",
+    "body": "5x100. Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,pcd,legacy,outback,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_legacy_gen3",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Legacy 2000-2004)",
+    "body": "58-72 ft-lb (78-98 Nm).",
+    "tags": "wheel,torque,lug,legacy,outback,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_for_gen2",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Forester 2003-2008)",
+    "body": "5x100. Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,pcd,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_for_gen2",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Forester 2003-2008)",
+    "body": "79 ft-lb (Steel) / 89 ft-lb (Alloy).",
+    "tags": "wheel,torque,lug,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_imp_gen2",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Impreza 2002-2007)",
+    "body": "5x100. Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,pcd,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_imp_gen2",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Impreza 2002-2007)",
+    "body": "70-89 ft-lb (95-120 Nm).",
+    "tags": "wheel,torque,lug,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_outback_gen3",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Outback 2005-2009)",
+    "body": "5x100. Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_outback_gen3",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Outback 2005-2009)",
+    "body": "89 ft-lb (120 Nm).",
+    "tags": "wheel,torque,lug,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_outback_gen4",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Outback 2010-2014)",
+    "body": "5x100. Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_outback_gen4",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Outback 2010-2014)",
+    "body": "89 ft-lb (120 Nm).",
+    "tags": "wheel,torque,lug,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_forester_gen3",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Forester 2009-2013)",
+    "body": "5x100. Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_forester_gen3",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Forester 2009-2013)",
+    "body": "89 ft-lb (120 Nm).",
+    "tags": "wheel,torque,lug,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_imp_gen3_100",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Impreza 2.5i/WRX 2008-2011)",
+    "body": "5x100. Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,pcd,impreza,wrx,ge,gh,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_imp_gen3_114",
+    "category": "Wheels",
+    "title": "Bolt Pattern (STI 2008-2014)",
+    "body": "5x114.3. Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,pcd,sti,wrx,impreza,gr,gv,2008,2009,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_imp_gen3",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Impreza 2008-2011)",
+    "body": "89 ft-lb (120 Nm).",
+    "tags": "wheel,torque,lug,impreza,wrx,sti,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_leg_gen4",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Legacy 2005-2009)",
+    "body": "5x100. Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,pcd,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_leg_gen4",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Legacy 2005-2009)",
+    "body": "89 ft-lb (120 Nm).",
+    "tags": "wheel,torque,lug,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_baja",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Baja 2003-2006)",
+    "body": "5x100. Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,pcd,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_baja",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Baja 2003-2006)",
+    "body": "89 ft-lb (120 Nm).",
+    "tags": "wheel,torque,lug,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_ea",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Subaru 1970s-1980s)",
+    "body": "4x140. Center Bore: 95mm.",
+    "tags": "wheel,bolt,pattern,pcd,ea71,ea81,ea82,leone,brat,gl,dl,1970s,1980s",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_ea",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Subaru 1970s-1980s)",
+    "body": "58-72 ft-lb (8-10 kg-m).",
+    "tags": "wheel,torque,lug,ea71,ea81,ea82,leone,brat,gl,dl,1970s,1980s",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_svx",
+    "category": "Wheels",
+    "title": "Bolt Pattern (SVX 1992-1997)",
+    "body": "5x114.3 (5x4.5\"). Center Bore: 64.1mm.",
+    "tags": "wheel,bolt,pattern,pcd,svx,eg33,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_svx",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (SVX 1992-1997)",
+    "body": "74 ft-lb (100 Nm).",
+    "tags": "wheel,torque,lug,svx,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_justy",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Justy 1987-1994)",
+    "body": "4x100. Center Bore: 59.1mm.",
+    "tags": "wheel,bolt,pattern,pcd,justy,1987,1988,1989,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_justy",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Justy 1987-1994)",
+    "body": "58 ft-lb (78 Nm).",
+    "tags": "wheel,torque,lug,justy,1987,1988,1989,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_bolt_pattern_5x114",
+    "category": "Wheels",
+    "title": "Bolt Pattern (Subaru 5x114.3)",
+    "body": "5x114.3 (5x4.5\"). Center Bore: 56.1mm.",
+    "tags": "wheel,bolt,pattern,pcd,wrx,sti,va,legacy,outback,gen6,forester,sk,ascent,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_2014_plus",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (Subaru 2014+)",
+    "body": "89 ft-lb (120 Nm).",
+    "tags": "wheel,torque,lug,forester,wrx,sti,impreza,crosstrek,outback,legacy,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]
+
+
+
+
+
+
+
+

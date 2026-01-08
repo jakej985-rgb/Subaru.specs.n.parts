@@ -14,5 +14,255 @@
     "body": "Standard size for most Subarus (Impreza, WRX, Forester, Legacy). CCA: 550+ recommended.",
     "tags": "battery,electrical,group35",
     "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_battery_legacy_gen1",
+    "category": "Battery",
+    "title": "Battery Group Size (Legacy 1990-1994)",
+    "body": "Group 35 (or 26R). Min CCA: 550.",
+    "tags": "battery,electrical,legacy,ej22,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_alternator_legacy_gen1",
+    "category": "Battery",
+    "title": "Alternator Output (Legacy 1990-1994)",
+    "body": "70 Amps (Standard). 12V.",
+    "tags": "alternator,electrical,legacy,ej22,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_battery_impreza_gen1",
+    "category": "Battery",
+    "title": "Battery Group Size (Impreza 1993-2001)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,impreza,ej18,ej22,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_alternator_impreza_gen1",
+    "category": "Battery",
+    "title": "Alternator Output (Impreza 1993-2001)",
+    "body": "80 Amps (Standard).",
+    "tags": "alternator,electrical,impreza,ej18,ej22,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_forester_gen1",
+    "category": "Battery",
+    "title": "Battery Group Size (Forester 1998-2002)",
+    "body": "Group 35. Min CCA: 550 (Typically 640).",
+    "tags": "battery,electrical,forester,sf,ej25d,ej251,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_alternator_forester_gen1",
+    "category": "Battery",
+    "title": "Alternator Output (Forester 1998-2002)",
+    "body": "75 Amps (Standard).",
+    "tags": "alternator,electrical,forester,sf,ej25d,ej251,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_legacy_gen2",
+    "category": "Battery",
+    "title": "Battery Group Size (Legacy 1995-1999)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_alternator_legacy_gen2",
+    "category": "Battery",
+    "title": "Alternator Output (Legacy 1995-1999)",
+    "body": "75-90 Amps (Depending on trim). 85A (Standard replacement).",
+    "tags": "alternator,electrical,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_wrx_gen2",
+    "category": "Battery",
+    "title": "Battery Group Size (WRX 2002-2005)",
+    "body": "Group 35. Min CCA: 550 (Cold).",
+    "tags": "battery,electrical,wrx,impreza,ej205,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_alternator_wrx_gen2",
+    "category": "Battery",
+    "title": "Alternator Output (WRX 2002-2005)",
+    "body": "75 Amps (Standard).",
+    "tags": "alternator,electrical,wrx,impreza,ej205,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_sti_gen2",
+    "category": "Battery",
+    "title": "Battery Group Size (STI 2004-2007)",
+    "body": "Group 35. Min CCA: 550. (Small factory battery, often upgraded).",
+    "tags": "battery,electrical,sti,wrx,impreza,ej257,gd,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_alternator_sti_gen2",
+    "category": "Battery",
+    "title": "Alternator Output (STI 2004-2007)",
+    "body": "75-90 Amps (Factory).",
+    "tags": "alternator,electrical,sti,wrx,impreza,ej257,gd,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_legacy_gen3",
+    "category": "Battery",
+    "title": "Battery Group Size (Legacy 2000-2004)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,legacy,outback,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_alternator_legacy_gen3",
+    "category": "Battery",
+    "title": "Alternator Output (Legacy 2000-2004)",
+    "body": "90 Amps (EJ25) / 110 Amps (H6).",
+    "tags": "alternator,electrical,legacy,outback,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_for_gen2",
+    "category": "Battery",
+    "title": "Battery Group Size (Forester 2003-2008)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_imp_gen2",
+    "category": "Battery",
+    "title": "Battery Group Size (Impreza 2002-2007)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_outback_gen3",
+    "category": "Battery",
+    "title": "Battery Group Size (Outback 2005-2009)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_outback_gen4",
+    "category": "Battery",
+    "title": "Battery Group Size (Outback 2010-2014)",
+    "body": "Group 25 or 35. Min CCA: 550.",
+    "tags": "battery,electrical,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_forester_gen3",
+    "category": "Battery",
+    "title": "Battery Group Size (Forester 2009-2013)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_imp_gen3",
+    "category": "Battery",
+    "title": "Battery Group Size (Impreza 2008-2011)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,impreza,ge,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_leg_gen4",
+    "category": "Battery",
+    "title": "Battery Group Size (Legacy 2005-2009)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_baja",
+    "category": "Battery",
+    "title": "Battery Group Size (Baja 2003-2006)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_subaru_classic",
+    "category": "Battery",
+    "title": "Battery Group Size (Subaru 1970s-1990s)",
+    "body": "Group 35 is most common. Some early models use Group 24.",
+    "tags": "battery,electrical,leone,brat,gl,dl,loyale,legacy,impreza,1970s,1980s,1990s",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_svx",
+    "category": "Battery",
+    "title": "Battery Group Size (SVX 1992-1997)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "battery,electrical,eg33,svx,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_battery_group_35_modern",
+    "category": "Battery",
+    "title": "Battery Group Size (Subaru 2014+)",
+    "body": "Group 35. Min CCA: 620 recommended for cold climates.",
+    "tags": "battery,electrical,forester,wrx,sti,impreza,crosstrek,outback,legacy,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
   }
 ]

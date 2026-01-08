@@ -1,0 +1,13 @@
+year,make,model,trim,body,market,function_key,location_hint,tech,bulb_code,base,qty,serviceable,notes,source_1,source_2,confidence
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,fog_front,Bumper,bulb,H3,,2,true,,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,turn_front,Bumper,bulb,1156,BA15s,2,true,,Owner's Manual,Diode Dynamics,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,parking_position_front,Corner Lamp,bulb,194,W2.1x9.5d,2,true,Often combined with side marker,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,marker_front_side,Corner Lamp,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Diode Dynamics,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,third_brake,Rear Deck,bulb,921,W2.1x9.5d,1,true,,SuperBrightLEDs,,med

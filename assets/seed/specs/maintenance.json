@@ -70,5 +70,205 @@
     "body": "NGK PFR6G-11 (Stock #5555). Type: Laser Platinum. Gap: 0.044\" (1.1mm).",
     "tags": "spark,maintenance,svx,eg33,platinum",
     "updatedAt": "2026-01-05T14:30:00Z"
+  },
+  {
+    "id": "s_maint_timing_belt_legacy_gen1",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Legacy 1990-1994)",
+    "body": "60,000 Miles (100,000 km). Interference Engine (Late 1996+ are interference, 1990-1996 Non-Interference is debated - treat as critical).",
+    "tags": "maintenance,timing,belt,legacy,ej22,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_acc_belts_legacy_gen1",
+    "category": "Maintenance",
+    "title": "Accessory Belts (Legacy 1990-1994)",
+    "body": "Alt/PS: 5PK875 (34.6\"). AC: 4PK895 (35.2\"). Check tension manually.",
+    "tags": "maintenance,belts,accessory,legacy,ej22,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_maint_oil_drain_legacy_gen1",
+    "category": "Maintenance",
+    "title": "Oil Drain Plug Size",
+    "body": "Thread: M20x1.5 (Standard). Head: 17mm. Crush Washer Required.",
+    "tags": "maintenance,oil,drain,plug,legacy,ej22,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_coolant_thermostat_legacy_gen1",
+    "category": "Cooling",
+    "title": "Thermostat Info (Legacy 1990-1994)",
+    "body": "Opens: 172°F (78°C). Full: 194°F (90°C). Location: Bottom of Water Pump.",
+    "tags": "coolant,thermostat,cooling,legacy,ej22,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wiper_legacy_gen1",
+    "category": "Maintenance",
+    "title": "Wiper Blades (Legacy 1990-1994)",
+    "body": "Driver: 20\". Passenger: 18\". Rear (Wagon): 14\".",
+    "tags": "wipers,maintenance,legacy,ej22,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_maint_timing_belt_impreza_gen1",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Impreza 1993-2001)",
+    "body": "60,000 Miles. Interference Engine (Critical).",
+    "tags": "maintenance,timing,belt,impreza,ej18,ej22,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_forester_gen1",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Forester 1998-2002)",
+    "body": "105,000 Miles (168,000 km) or 105 Months. Interference Engine.",
+    "tags": "maintenance,timing,belt,forester,sf,ej25d,ej251,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_legacy_gen2",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Legacy 1995-1999)",
+    "body": "60,000 Miles (1995-1997) / 105,000 Miles (1998+). Interference (EJ25D & '97+ EJ22).",
+    "tags": "maintenance,timing,belt,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_wrx_gen2",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (WRX 2002-2005)",
+    "body": "105,000 Miles (168,000 km) or 105 Months. Interference Engine (Critical).",
+    "tags": "maintenance,timing,belt,wrx,impreza,ej205,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_sti_gen2",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (STI 2004-2007)",
+    "body": "105,000 Miles (168,000 km). Interference Engine (EJ257). Check idlers/tensioner.",
+    "tags": "maintenance,timing,belt,sti,wrx,impreza,ej257,gd,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_legacy_gen3_ej25",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Legacy EJ25)",
+    "body": "105,000 Miles (168,000 km). Interference Engine.",
+    "tags": "maintenance,timing,belt,legacy,outback,ej25,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_chain_legacy_gen3_h6",
+    "category": "Maintenance",
+    "title": "Timing Chain (Legacy H6)",
+    "body": "Chain Driven. No scheduled replacement required.",
+    "tags": "maintenance,timing,chain,legacy,outback,ez30,h6,be,bh,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_for_gen2",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Forester 2003-2008)",
+    "body": "105,000 Miles (168,000 km). Interference Engine.",
+    "tags": "maintenance,timing,belt,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_imp_gen2",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Impreza 2.5 2002-2007)",
+    "body": "105,000 Miles (168,000 km). Interference Engine.",
+    "tags": "maintenance,timing,belt,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_outback_gen3",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Outback 2005-2009)",
+    "body": "105,000 Miles (168,000 km) or 105 months. Interference Engine.",
+    "tags": "maintenance,timing,belt,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_outback_gen4",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Outback 2010-2014)",
+    "body": "2.5i (2010-2012): 105k Miles | 2.5i (2013-2014): Timing Chain | 3.6R: Timing Chain.",
+    "tags": "maintenance,timing,belt,chain,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_forester_gen3",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Forester 2009-2013)",
+    "body": "EJ / XT (2009-2013): 105k Miles | 2.5i (2011-2013): Timing Chain.",
+    "tags": "maintenance,timing,belt,chain,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_imp_gen3",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Impreza/WRX/STI 2008-2011)",
+    "body": "Interval: 105,000 Miles (168,000 km) or 105 months.",
+    "tags": "maintenance,timing,belt,impreza,wrx,sti,ge,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_leg_gen4",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Legacy 2005-2009)",
+    "body": "Interval: 105,000 Miles (168,000 km) or 105 months.",
+    "tags": "maintenance,timing,belt,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_maint_timing_belt_baja",
+    "category": "Maintenance",
+    "title": "Timing Belt Interval (Baja 2003-2006)",
+    "body": "Interval: 105,000 Miles (168,000 km) or 105 months.",
+    "tags": "maintenance,timing,belt,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]

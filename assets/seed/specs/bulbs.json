@@ -8,6 +8,54 @@
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
+    "id": "s_bulb_turn_front_7440",
+    "category": "Bulbs",
+    "title": "Front Turn Signal Bulb (Generic)",
+    "body": "7440 (Single Filament Amber) or 1156 (Older models). Check housing.",
+    "tags": "bulbs,lights,turn,front,generic,7440,1156",
+    "updatedAt": "2026-01-07T00:00:00Z"
+  },
+  {
+    "id": "s_bulb_turn_rear_7440",
+    "category": "Bulbs",
+    "title": "Rear Turn Signal Bulb (Generic)",
+    "body": "7440 (Single Filament Amber) or 992 (7440A).",
+    "tags": "bulbs,lights,turn,rear,generic,7440,992",
+    "updatedAt": "2026-01-07T00:00:00Z"
+  },
+  {
+    "id": "s_bulb_brake_tail_7443",
+    "category": "Bulbs",
+    "title": "Brake/Tail Light Bulb (Generic)",
+    "body": "7443 (Dual Filament) or 1157 (Older models).",
+    "tags": "bulbs,lights,brake,tail,generic,7443,1157",
+    "updatedAt": "2026-01-07T00:00:00Z"
+  },
+  {
+    "id": "s_bulb_reverse_921",
+    "category": "Bulbs",
+    "title": "Reverse / Backup Light Bulb (Generic)",
+    "body": "921 (W16W). Very common for sedans/wagons/SUVs.",
+    "tags": "bulbs,lights,reverse,backup,generic,921,w16w",
+    "updatedAt": "2026-01-07T00:00:00Z"
+  },
+  {
+    "id": "s_bulb_license_168",
+    "category": "Bulbs",
+    "title": "License Plate Light Bulb (Generic)",
+    "body": "168 / 194 / W5W / 2825. (T10 Wedge Base).",
+    "tags": "bulbs,lights,license,plate,generic,168,194,w5w,t10",
+    "updatedAt": "2026-01-07T00:00:00Z"
+  },
+  {
+    "id": "s_bulb_marker_side_194",
+    "category": "Bulbs",
+    "title": "Side Marker Light Bulb (Generic)",
+    "body": "194 / 168 (T10 Wedge). Front (Amber) / Rear (Red).",
+    "tags": "bulbs,lights,marker,side,generic,194,168,t10",
+    "updatedAt": "2026-01-07T00:00:00Z"
+  },
+  {
     "id": "s_bulb_9005_highbeam",
     "category": "Bulbs",
     "title": "High Beam Headlight (Halogen)",
@@ -70,5 +118,715 @@
     "body": "9005 (HB3).",
     "tags": "bulbs,lights,svx,9005,highbeam",
     "updatedAt": "2026-01-05T14:30:00Z"
+  },
+  {
+    "id": "s_bulb_headlight_low_legacy_gen1",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Legacy 1990-1994)",
+    "body": "9004 (HB1).",
+    "tags": "bulbs,lights,headlight,low,legacy,bc,bf,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_bulb_headlight_high_legacy_gen1",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Legacy 1990-1994)",
+    "body": "9004 (HB1).",
+    "tags": "bulbs,lights,headlight,high,legacy,bc,bf,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_bulb_tail_legacy_gen1",
+    "category": "Bulbs",
+    "title": "Tail/Brake Light Bulb (Legacy 1990-1994)",
+    "body": "1157 (Dual Filament).",
+    "tags": "bulbs,lights,tail,brake,legacy,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_turn_rear_legacy_gen1",
+    "category": "Bulbs",
+    "title": "Rear Turn Signal Bulb (Legacy 1990-1994)",
+    "body": "1156 (Single Filament).",
+    "tags": "bulbs,lights,turn,rear,legacy,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_impreza_gen1",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Impreza 1993-2001)",
+    "body": "H4 (9003).",
+    "tags": "bulbs,lights,headlight,low,impreza,gc,gf,gm,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_impreza_gen1",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Impreza 1993-2001)",
+    "body": "H4 (9003).",
+    "tags": "bulbs,lights,headlight,high,impreza,gc,gf,gm,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_tail_impreza_gen1",
+    "category": "Bulbs",
+    "title": "Tail/Brake Light Bulb (Impreza 1993-2001)",
+    "body": "1157 (Dual Filament).",
+    "tags": "bulbs,lights,tail,brake,impreza,gc,gf,gm,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_forester_gen1",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Forester 1998-2002)",
+    "body": "H4 (9003).",
+    "tags": "bulbs,lights,headlight,low,forester,sf,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_forester_gen1",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Forester 1998-2002)",
+    "body": "H4 (9003).",
+    "tags": "bulbs,lights,headlight,high,forester,sf,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_forester_gen1",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Forester 1998-2002)",
+    "body": "H3.",
+    "tags": "bulbs,lights,fog,forester,sf,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_tail_forester_gen1",
+    "category": "Bulbs",
+    "title": "Tail/Brake Light Bulb (Forester 1998-2002)",
+    "body": "1157 (Dual Filament).",
+    "tags": "bulbs,lights,tail,brake,forester,sf,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_legacy_gen2",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Legacy 1995-1999)",
+    "body": "9003 (H4).",
+    "tags": "bulbs,lights,headlight,low,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_legacy_gen2",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Legacy 1995-1999)",
+    "body": "9003 (H4).",
+    "tags": "bulbs,lights,headlight,high,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_tail_legacy_gen2",
+    "category": "Bulbs",
+    "title": "Tail/Brake Light Bulb (Legacy 1995-1999)",
+    "body": "1157 (Dual Filament).",
+    "tags": "bulbs,lights,tail,brake,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_wrx_gen2_bugeye",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (WRX 2002-2003 Bugeye)",
+    "body": "9007 (HB5).",
+    "tags": "bulbs,lights,headlight,low,wrx,impreza,gd,gg,2002,2003",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_wrx_gen2_bugeye",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (WRX 2002-2003 Bugeye)",
+    "body": "9007 (HB5).",
+    "tags": "bulbs,lights,headlight,high,wrx,impreza,gd,gg,2002,2003",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_wrx_gen2_blobeye",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (WRX 2004-2005 Blobeye)",
+    "body": "H1.",
+    "tags": "bulbs,lights,headlight,low,wrx,impreza,gd,gg,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_wrx_gen2_blobeye",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (WRX 2004-2005 Blobeye)",
+    "body": "9005 (HB3).",
+    "tags": "bulbs,lights,headlight,high,wrx,impreza,gd,gg,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_wrx_gen2",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (WRX 2002-2005)",
+    "body": "H3.",
+    "tags": "bulbs,lights,fog,wrx,impreza,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_tail_wrx_gen2",
+    "category": "Bulbs",
+    "title": "Tail/Brake Light Bulb (WRX 2002-2005)",
+    "body": "2057 or 1157 (2002-2003). 7443 (2004-2005).",
+    "tags": "bulbs,lights,tail,brake,wrx,impreza,gd,gg,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_sti_gen2_04_05",
+    "category": "Bulbs",
+    "title": "Headlight Bulb (STI 2004-2005)",
+    "body": "Low: D2R (HID Reflector). High: 9005 (HB3).",
+    "tags": "bulbs,lights,headlight,sti,wrx,impreza,gd,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_sti_gen2_06_07",
+    "category": "Bulbs",
+    "title": "Headlight Bulb (STI 2006-2007)",
+    "body": "Low: D2S (HID Projector). High: 9005 (HB3).",
+    "tags": "bulbs,lights,headlight,sti,wrx,impreza,gd,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_sti_gen2",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (STI 2004-2007)",
+    "body": "H3.",
+    "tags": "bulbs,lights,fog,sti,wrx,impreza,gd,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_tail_sti_gen2",
+    "category": "Bulbs",
+    "title": "Tail/Brake Light Bulb (STI 2004-2007)",
+    "body": "7443 (Dual Filament).",
+    "tags": "bulbs,lights,tail,brake,sti,wrx,impreza,gd,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_legacy_gen3",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Legacy 2000-2004)",
+    "body": "H1.",
+    "tags": "bulbs,lights,headlight,low,legacy,outback,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_legacy_gen3",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Legacy 2000-2004)",
+    "body": "9005 (HB3).",
+    "tags": "bulbs,lights,headlight,high,legacy,outback,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_legacy_gen3",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Legacy 2000-2004)",
+    "body": "H3 is common. Check housing (some use 9006).",
+    "tags": "bulbs,lights,fog,legacy,outback,be,bh,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_for_gen2",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Forester 2003-2008)",
+    "body": "H1.",
+    "tags": "bulbs,lights,headlight,low,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_for_gen2",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Forester 2003-2008)",
+    "body": "9005 (HB3).",
+    "tags": "bulbs,lights,headlight,high,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_for_gen2",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Forester 2003-2008)",
+    "body": "H3.",
+    "tags": "bulbs,lights,fog,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_imp_gen2",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Impreza 2002-2007)",
+    "body": "9007 (HB5) Dual Beam.",
+    "tags": "bulbs,lights,headlight,low,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_imp_gen2",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Impreza 2002-2007)",
+    "body": "9007 (HB5) Dual Beam.",
+    "tags": "bulbs,lights,headlight,high,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_imp_gen2",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Impreza RS 2002-2007)",
+    "body": "H3.",
+    "tags": "bulbs,lights,fog,impreza,rs,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_outback_gen3",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Outback 2005-2009)",
+    "body": "H7.",
+    "tags": "bulbs,lights,headlight,low,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_outback_gen3",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Outback 2005-2009)",
+    "body": "9005 (HB3).",
+    "tags": "bulbs,lights,headlight,high,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_outback_gen3",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Outback 2005-2009)",
+    "body": "9006.",
+    "tags": "bulbs,lights,fog,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_outback_gen4",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Outback 2010-2014)",
+    "body": "H7.",
+    "tags": "bulbs,lights,headlight,low,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_outback_gen4",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Outback 2010-2014)",
+    "body": "9005 (HB3).",
+    "tags": "bulbs,lights,headlight,high,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_outback_gen4",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Outback 2010-2014)",
+    "body": "H11.",
+    "tags": "bulbs,lights,fog,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_forester_gen3",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Forester 2009-2013)",
+    "body": "H11.",
+    "tags": "bulbs,lights,headlight,low,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_forester_gen3",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Forester 2009-2013)",
+    "body": "9005 (HB3).",
+    "tags": "bulbs,lights,headlight,high,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_forester_gen3",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Forester 2009-2013)",
+    "body": "H11.",
+    "tags": "bulbs,lights,fog,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_imp_gen3_low",
+    "category": "Bulbs",
+    "title": "Headlight Low Beam (Impreza/WRX/STI 2008-2011)",
+    "body": "H11.",
+    "tags": "bulbs,lights,headlight,low,impreza,wrx,sti,ge,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_imp_gen3_high",
+    "category": "Bulbs",
+    "title": "Headlight High Beam (Impreza/WRX/STI 2008-2011)",
+    "body": "9005 (HB3).",
+    "tags": "bulbs,lights,headlight,high,impreza,wrx,sti,ge,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_imp_gen3",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Impreza/WRX/STI 2008-2011)",
+    "body": "H11.",
+    "tags": "bulbs,lights,fog,impreza,wrx,sti,ge,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_leg_gen4_low",
+    "category": "Bulbs",
+    "title": "Headlight Low Beam (Legacy 2005-2009)",
+    "body": "H7.",
+    "tags": "bulbs,lights,headlight,low,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_leg_gen4_high",
+    "category": "Bulbs",
+    "title": "Headlight High Beam (Legacy 2005-2009)",
+    "body": "9005 (HB3).",
+    "tags": "bulbs,lights,headlight,high,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_leg_gen4",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Legacy 2005-2009)",
+    "body": "9006 (HB4).",
+    "tags": "bulbs,lights,fog,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_baja",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Baja 2003-2006)",
+    "body": "H1.",
+    "tags": "bulbs,lights,headlight,low,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_baja",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Baja 2003-2006)",
+    "body": "9005 (HB3).",
+    "tags": "bulbs,lights,headlight,high,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_baja",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Baja 2003-2006)",
+    "body": "H3.",
+    "tags": "bulbs,lights,fog,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_ea_classic",
+    "category": "Bulbs",
+    "title": "Headlight Bulbs (Subaru 1970s-1980s)",
+    "body": "Sealed Beam (7\" Round or 5x7\" Rect) or 9004 (Composite).",
+    "tags": "bulbs,lights,headlight,ea71,ea81,ea82,leone,brat,gl,dl,1970s,1980s",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_legacy_gen1",
+    "category": "Bulbs",
+    "title": "Headlight Bulbs (Legacy 1990-1994)",
+    "body": "9004.",
+    "tags": "bulbs,lights,headlight,legacy,bc,bf,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_svx",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (SVX 1992-1997)",
+    "body": "9006.",
+    "tags": "bulbs,lights,headlight,low,svx,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_svx",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (SVX 1992-1997)",
+    "body": "9005.",
+    "tags": "bulbs,lights,headlight,high,svx,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_svx",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (SVX 1992-1997)",
+    "body": "H3.",
+    "tags": "bulbs,lights,fog,svx,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_justy",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Justy 1987-1994)",
+    "body": "9004.",
+    "tags": "bulbs,lights,headlight,low,ef10,ef12,justy,1987,1988,1989,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_justy",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Justy 1987-1994)",
+    "body": "9004.",
+    "tags": "bulbs,lights,headlight,high,ef10,ef12,justy,1987,1988,1989,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_forester_sj",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Forester 2014-2018)",
+    "body": "H11. (Models without factory LED/HID).",
+    "tags": "bulbs,lights,headlight,low,forester,sj,2014,2015,2016,2017,2018",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_forester_sj",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Forester 2014-2018)",
+    "body": "9005. (Models without factory LED/HID).",
+    "tags": "bulbs,lights,headlight,high,forester,sj,2014,2015,2016,2017,2018",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_wrx_va",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (WRX 2015-2021)",
+    "body": "H11. (Base/Premium without LED).",
+    "tags": "bulbs,lights,headlight,low,wrx,va,2015,2016,2017,2018,2019,2020,2021",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_wrx_va",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (WRX 2015-2021)",
+    "body": "9005. (Base/Premium without LED).",
+    "tags": "bulbs,lights,headlight,high,wrx,va,2015,2016,2017,2018,2019,2020,2021",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_tribeca",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Tribeca 2006-2014)",
+    "body": "H7. (Models with Halogen).",
+    "tags": "bulbs,lights,headlight,low,tribeca,2006,2007,2008,2009,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_tribeca",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Tribeca 2006-2014)",
+    "body": "9005.",
+    "tags": "bulbs,lights,headlight,high,tribeca,2006,2007,2008,2009,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_ascent",
+    "category": "Bulbs",
+    "title": "Headlight Bulbs (Ascent 2019+)",
+    "body": "Low/High: LED (Non-replaceable) or H11/9005 (Standard).",
+    "tags": "bulbs,lights,headlight,ascent,2019,2020,2021,2022,2023,2024",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_crosstrek_gp",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Crosstrek 2013-2017)",
+    "body": "H11.",
+    "tags": "bulbs,lights,headlight,low,crosstrek,xv,gp,2013,2014,2015,2016,2017",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_crosstrek_gp",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Crosstrek 2013-2017)",
+    "body": "9005.",
+    "tags": "bulbs,lights,headlight,high,crosstrek,xv,gp,2013,2014,2015,2016,2017",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_crosstrek_gp",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Crosstrek 2013-2017)",
+    "body": "PSX24W (Base/Premium) or H16 (Some models). Check housing.",
+    "tags": "bulbs,lights,fog,crosstrek,xv,gp,2013,2014,2015,2016,2017",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_low_crosstrek_gt",
+    "category": "Bulbs",
+    "title": "Low Beam Headlight (Crosstrek 2018+)",
+    "body": "H11. (Halogen models).",
+    "tags": "bulbs,lights,headlight,low,crosstrek,gt,2018,2019,2020,2021,2022,2023",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_headlight_high_crosstrek_gt",
+    "category": "Bulbs",
+    "title": "High Beam Headlight (Crosstrek 2018+)",
+    "body": "9005.",
+    "tags": "bulbs,lights,headlight,high,crosstrek,gt,2018,2019,2020,2021,2022,2023",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
+  },
+  {
+    "id": "s_bulb_fog_crosstrek_gt",
+    "category": "Bulbs",
+    "title": "Fog Light Bulb (Crosstrek 2018+)",
+    "body": "H11 (Standard) or H16 (LED capable housings).",
+    "tags": "bulbs,lights,fog,crosstrek,gt,2018,2019,2020,2021,2022,2023",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Catalog"
   }
 ]

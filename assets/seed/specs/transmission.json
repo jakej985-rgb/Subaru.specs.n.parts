@@ -106,5 +106,415 @@
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_trans_capacity_legacy_4eat_gen1",
+    "category": "Transmission",
+    "title": "Legacy 1990-1994 (4EAT) Fluid Capacity",
+    "body": "9.1 Quarts (Total Fill). Use Dexron II/III.",
+    "tags": "trans,fluid,capacity,legacy,4eat,at,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_impreza_4eat_gen1",
+    "category": "Transmission",
+    "title": "Impreza 1993-2001 (4EAT) Fluid Capacity",
+    "body": "7.9 Quarts (7.5 Liters) Total. Drain & Fill: ~3.5-4 Quarts.",
+    "tags": "trans,fluid,capacity,impreza,4eat,at,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_forester_4eat_gen1",
+    "category": "Transmission",
+    "title": "Forester 1998-2002 (4EAT) Fluid Capacity",
+    "body": "9.8 Quarts (9.3 Liters) Total. Drain & Fill: ~3.5-4 Quarts.",
+    "tags": "trans,fluid,capacity,forester,4eat,at,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_legacy_4eat_gen2",
+    "category": "Transmission",
+    "title": "Legacy 1995-1999 (4EAT) Fluid Capacity",
+    "body": "9.8 - 10.0 Quarts (9.3 - 9.5 Liters) Total. Drain & Fill: ~3.5-4 Quarts.",
+    "tags": "trans,fluid,capacity,legacy,4eat,at,1995,1996,1997,1998,1999",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_wrx_4eat_gen2",
+    "category": "Transmission",
+    "title": "WRX 2002-2005 (4EAT) Fluid Capacity",
+    "body": "10.0 Quarts (9.5 Liters) Total. Drain & Fill: ~3.5-4 Quarts.",
+    "tags": "trans,fluid,capacity,wrx,4eat,at,2002,2003,2004,2005",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_sti_6mt_gen2",
+    "category": "Transmission",
+    "title": "STI 2004-2007 (6MT) Fluid Capacity",
+    "body": "4.3 Quarts (4.1 Liters). GL-5 75W-90.",
+    "tags": "trans,fluid,capacity,sti,6mt,mt,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_legacy_4eat_gen3",
+    "category": "Transmission",
+    "title": "Legacy 2000-2004 (4EAT) Fluid Capacity",
+    "body": "9.8 - 10.0 Quarts (9.3-9.5 Liters) Total. Drain & Fill: ~4 Quarts.",
+    "tags": "trans,fluid,capacity,legacy,outback,4eat,at,2000,2001,2002,2003,2004",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_for_gen2_5mt",
+    "category": "Transmission",
+    "title": "Forester 2003-2008 (5MT) Fluid Capacity",
+    "body": "3.7 Quarts (3.5 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,5mt,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_for_gen2_4eat",
+    "category": "Transmission",
+    "title": "Forester 2003-2008 (4EAT) Fluid Capacity",
+    "body": "9.8 Quarts (9.3 Liters) Total. Dexron III.",
+    "tags": "trans,fluid,capacity,automatic,4eat,forester,sg,2003,2004,2005,2006,2007,2008",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_imp_gen2_5mt",
+    "category": "Transmission",
+    "title": "Impreza 2002-2007 (5MT) Fluid Capacity",
+    "body": "3.5 Quarts (3.3 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,5mt,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_imp_gen2_4eat",
+    "category": "Transmission",
+    "title": "Impreza 2002-2007 (4EAT) Fluid Capacity",
+    "body": "10.0 Quarts (9.5 Liters) Total. Dexron III.",
+    "tags": "trans,fluid,capacity,automatic,4eat,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_outback_gen3_5mt",
+    "category": "Transmission",
+    "title": "Outback 2.5i 2005-2009 (5MT) Fluid Capacity",
+    "body": "3.7 Quarts (3.5 Liters) 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,5mt,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_outback_gen3_4eat",
+    "category": "Transmission",
+    "title": "Outback 2.5i 2005-2009 (4EAT) Fluid Capacity",
+    "body": "9.8 Quarts (9.3 Liters) Dexron III.",
+    "tags": "trans,fluid,capacity,automatic,4eat,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_outback_gen3_5speed_auto",
+    "category": "Transmission",
+    "title": "Outback 2.5i XT 2005-2009 (5-speed Auto TG5C7) Fluid Capacity",
+    "body": "6.3 Quarts (6.0 Liters) Subaru ATF-HP.",
+    "tags": "trans,fluid,capacity,automatic,5speed,xt,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_outback_gen3_manual_ty758",
+    "category": "Transmission",
+    "title": "Outback 2.5i 2005-2009 (Manual TY758) Fluid Capacity",
+    "body": "3.7 Quarts (3.5 Liters) 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,ty758,outback,gen3,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_outback_gen4_6mt",
+    "category": "Transmission",
+    "title": "Outback 2.5i 2010-2014 (6MT) Fluid Capacity",
+    "body": "3.7 Quarts (3.5 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,6mt,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_outback_gen4_cvt",
+    "category": "Transmission",
+    "title": "Outback 2.5i 2010-2014 (CVT) Fluid Capacity",
+    "body": "12.8 - 13.2 Quarts (12.1 - 12.5 Liters) Total Fill. Subaru CVT Fluid II.",
+    "tags": "trans,fluid,capacity,cvt,automatic,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_outback_gen4_5at",
+    "category": "Transmission",
+    "title": "Outback 3.6R 2010-2014 (5AT) Fluid Capacity",
+    "body": "10.4 Quarts (9.8 Liters) Total Fill. Subaru ATF-HP.",
+    "tags": "trans,fluid,capacity,automatic,5at,3.6r,outback,gen4,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_forester_gen3_5mt",
+    "category": "Transmission",
+    "title": "Forester 2009-2013 (5MT) Fluid Capacity",
+    "body": "3.7 Quarts (3.5 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,5mt,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_forester_gen3_4eat",
+    "category": "Transmission",
+    "title": "Forester 2009-2013 (4EAT) Fluid Capacity",
+    "body": "9.8 Quarts (9.3 Liters) Total Fill. Subaru ATF-HP or Dex III.",
+    "tags": "trans,fluid,capacity,automatic,4eat,forester,sh,2009,2010,2011,2012,2013",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_imp_gen3_5mt",
+    "category": "Transmission",
+    "title": "Impreza 2.5i/WRX 2008-2011 (5MT) Fluid Capacity",
+    "body": "3.7 Quarts (3.5 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,5mt,impreza,wrx,ge,gh,gh,gr,gv,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_imp_gen3_6mt",
+    "category": "Transmission",
+    "title": "STI 2008-2014 (6MT) Fluid Capacity",
+    "body": "4.3 Quarts (4.1 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,6mt,sti,wrx,impreza,gr,gv,2008,2009,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_imp_gen3_4eat",
+    "category": "Transmission",
+    "title": "Impreza 2008-2011 (4EAT) Fluid Capacity",
+    "body": "9.8 Quarts (9.3 Liters) Total Fill. Subaru ATF-HP.",
+    "tags": "trans,fluid,capacity,automatic,4eat,impreza,ge,gh,2008,2009,2010,2011",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_leg_gen4_5mt",
+    "category": "Transmission",
+    "title": "Legacy 2005-2009 (5MT) Fluid Capacity",
+    "body": "3.7 Quarts (3.5 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,5mt,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_leg_gen4_6mt",
+    "category": "Transmission",
+    "title": "Legacy Spec.B 2006-2009 (6MT) Fluid Capacity",
+    "body": "4.3 Quarts (4.1 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,6mt,legacy,specb,bl,bp,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_leg_gen4_5at",
+    "category": "Transmission",
+    "title": "Legacy GT/3.0R 2005-2009 (5AT) Fluid Capacity",
+    "body": "10.4 Quarts (9.8 Liters) Total Fill. Subaru ATF-HP.",
+    "tags": "trans,fluid,capacity,automatic,5at,legacy,gt,3.0r,bl,bp,2005,2006,2007,2008,2009",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_baja_5mt",
+    "category": "Transmission",
+    "title": "Baja 2003-2006 (5MT) Fluid Capacity",
+    "body": "3.7 Quarts (3.5 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,5mt,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_baja_4eat",
+    "category": "Transmission",
+    "title": "Baja 2003-2006 (4EAT) Fluid Capacity",
+    "body": "9.8 Quarts (9.3 Liters) Total Fill. Subaru ATF-HP or Dex III.",
+    "tags": "trans,fluid,capacity,automatic,4eat,baja,2003,2004,2005,2006",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_ea_4mt",
+    "category": "Transmission",
+    "title": "Subaru 4-Speed Manual (4MT) Fluid Capacity",
+    "body": "3.2 Quarts (3.0 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,4mt,ea71,ea81,leone,brat,gl,dl,1970s,1980s",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_ea_3at",
+    "category": "Transmission",
+    "title": "Subaru 3-Speed Automatic (3AT) Fluid Capacity",
+    "body": "6.3 Quarts (6.0 Liters) Total Fill. Dexron II/III.",
+    "tags": "trans,fluid,capacity,automatic,3at,ea71,ea81,ea82,leone,brat,gl,dl,1970s,1980s",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_xt6_4at",
+    "category": "Transmission",
+    "title": "XT6 4-Speed Automatic (4AT) Fluid Capacity",
+    "body": "8.5 Quarts (8.0 Liters) Total Fill. Dexron II/III.",
+    "tags": "trans,fluid,capacity,automatic,4at,er27,xt6,1988,1989,1990,1991",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_svx_4eat",
+    "category": "Transmission",
+    "title": "SVX 1992-1997 (4EAT) Fluid Capacity",
+    "body": "10.0 Quarts (9.5 Liters) Total Fill. Dexron II/III.",
+    "tags": "trans,fluid,capacity,automatic,4eat,svx,1992,1993,1994,1995,1996,1997",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_justy_5mt",
+    "category": "Transmission",
+    "title": "Justy 1987-1994 (5MT) Fluid Capacity",
+    "body": "2.4 Quarts (2.3 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,5mt,ef10,ef12,justy,1987,1988,1989,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_justy_ecvt",
+    "category": "Transmission",
+    "title": "Justy 1987-1994 (ECVT) Fluid Capacity",
+    "body": "4.8 Quarts (4.5 Liters) Total. Use Subaru ECVT Fluid only.",
+    "tags": "trans,fluid,capacity,cvt,ecvt,justy,1987,1988,1989,1990,1991,1992,1993,1994",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_tr580_cvt",
+    "category": "Transmission",
+    "title": "Subaru Lineartronic CVT (TR580) Fluid Capacity",
+    "body": "8.3 Quarts (7.9 Liters) Total Fill. Use Subaru CVTF-II or CVTF-III.",
+    "tags": "trans,fluid,capacity,cvt,tr580,impreza,crosstrek,forester,legacy,outback,2012,2013,2014,2015,2016,2017,2018,2019,2020",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_tr690_cvt",
+    "category": "Transmission",
+    "title": "Subaru High-Torque CVT (TR690) Fluid Capacity",
+    "body": "13.1 Quarts (12.4 Liters) Total Fill. Use Subaru High Torque CVTF (Orange).",
+    "tags": "trans,fluid,capacity,cvt,tr690,wrx,forester,xt,outback,ascent,2014,2015,2016,2017,2018,2019,2020,2021",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_wrx_6mt_va",
+    "category": "Transmission",
+    "title": "WRX 2015-2021 (6MT) Fluid Capacity",
+    "body": "3.5 Quarts (3.3 Liters). 75W-90 GL-5.",
+    "tags": "trans,fluid,capacity,manual,6mt,wrx,va,2015,2016,2017,2018,2019,2020,2021",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_sti_6mt_va",
+    "category": "Transmission",
+    "title": "STI 2015-2021 (6MT) Fluid Capacity",
+    "body": "4.3 Quarts (4.1 Liters). 75W-90 GL-5. Shared with front differential.",
+    "tags": "trans,fluid,capacity,manual,6mt,sti,va,2015,2016,2017,2018,2019,2020,2021",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_brz_2022_6mt",
+    "category": "Transmission",
+    "title": "BRZ 2022+ (6MT) Fluid Capacity",
+    "body": "2.3 Quarts (2.2 Liters). 75W-90 GL-3 or GL-4.",
+    "tags": "trans,fluid,capacity,manual,6mt,brz,zd8,gr86,2022,2023,2024",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_tribeca_5at",
+    "category": "Transmission",
+    "title": "Tribeca 2006-2014 (5AT) Fluid Capacity",
+    "body": "10.4 Quarts (9.8 Liters) Total Fill. Use Subaru ATF-HP.",
+    "tags": "trans,fluid,capacity,automatic,5at,tribeca,2006,2007,2008,2009,2010,2011,2012,2013,2014",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]
+
+
+
+
+
+
+
+
+
+
