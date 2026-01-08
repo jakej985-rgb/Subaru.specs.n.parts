@@ -160,5 +160,25 @@
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej25d_sf",
+    "category": "Oil",
+    "title": "Engine Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "oil,capacity,ej25d,sf,forester,1998",
+    "updatedAt": "2026-01-05T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_oil_viscosity_ej25d_sf",
+    "category": "Oil",
+    "title": "Engine Oil Viscosity",
+    "body": "5W-30 Preferred (Chart dependent)",
+    "tags": "oil,viscosity,ej25d,sf,forester,1998",
+    "updatedAt": "2026-01-05T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]

@@ -48,5 +48,25 @@
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_fluid_trans_mt_sf",
+    "category": "Fluids",
+    "title": "Manual Transmission Fluid (5MT)",
+    "body": "3.5 Liters (3.7 Quarts) - GL-5 75W-90",
+    "tags": "fluid,trans,mt,sf,forester,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-05T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_fluid_diff_rear_sf",
+    "category": "Fluids",
+    "title": "Rear Differential Fluid",
+    "body": "0.8 Liters (0.8 Quarts) - GL-5 75W-90",
+    "tags": "fluid,diff,rear,sf,forester,1998,1999,2000,2001,2002",
+    "updatedAt": "2026-01-05T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]

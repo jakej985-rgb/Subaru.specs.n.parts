@@ -34,5 +34,15 @@
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_coolant_capacity_sf_ej25d",
+    "category": "Coolant",
+    "title": "Coolant Capacity",
+    "body": "5.9 Liters (6.2 Quarts)",
+    "tags": "coolant,capacity,ej25d,sf,forester,1998",
+    "updatedAt": "2026-01-05T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]
