@@ -106,5 +106,26 @@
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_trans_capacity_brz_mt_fa24",
+    "category": "Transmission",
+    "title": "Manual Trans Fluid Capacity (FA24)",
+    "body": "2.2 Liters (2.3 Quarts). Use GL-4 75W (Toyota MT Gear Oil LV).",
+    "tags": "trans,fluid,capacity,brz,mt,fa24,2022,2023,2024",
+    "updatedAt": "2024-05-25T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual (JDM)",
+    "notes": "Spec changed from GL-3 75W-90 in Gen 1 to GL-4 75W LV in Gen 2."
+  },
+  {
+    "id": "s_trans_capacity_brz_at_fa24",
+    "category": "Transmission",
+    "title": "Auto Trans Fluid Capacity (FA24)",
+    "body": "7.5 Liters (7.9 Quarts). Use Toyota ATF WS.",
+    "tags": "trans,fluid,capacity,brz,at,fa24,2022,2023,2024",
+    "updatedAt": "2024-05-25T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual (JDM)"
   }
 ]
