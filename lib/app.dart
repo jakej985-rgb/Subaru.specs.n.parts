@@ -2,36 +2,62 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/router/app_router.dart';
 import 'package:specsnparts/theme/app_theme.dart';
-import 'package:specsnparts/data/db/app_db.dart';
+
 import 'package:specsnparts/data/seed/seed_runner.dart';
 
-class SubaruSpecsApp extends ConsumerStatefulWidget {
+final appInitializationProvider = FutureProvider<void>((ref) async {
+  final runner = ref.watch(seedRunnerProvider);
+  await runner.runSeedIfNeeded();
+});
+
+class SubaruSpecsApp extends ConsumerWidget {
   const SubaruSpecsApp({super.key});
 
   @override
-  ConsumerState<SubaruSpecsApp> createState() => _SubaruSpecsAppState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final init = ref.watch(appInitializationProvider);
 
-class _SubaruSpecsAppState extends ConsumerState<SubaruSpecsApp> {
-  @override
-  void initState() {
-    super.initState();
-    _initData();
-  }
-
-  Future<void> _initData() async {
-    final db = ref.read(appDbProvider);
-    final runner = SeedRunner(db);
-    await runner.runSeedIfNeeded();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final router = ref.watch(goRouterProvider);
-    return MaterialApp.router(
-      title: 'Subaru Specs & Parts',
-      theme: AppTheme.darkTheme,
-      routerConfig: router,
+    return init.when(
+      data: (_) {
+        final router = ref.watch(goRouterProvider);
+        return MaterialApp.router(
+          title: 'Subaru Specs & Parts',
+          theme: AppTheme.darkTheme,
+          routerConfig: router,
+        );
+      },
+      loading: () => MaterialApp(
+        title: 'Subaru Specs & Parts',
+        theme: AppTheme.darkTheme,
+        home: const Scaffold(
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircularProgressIndicator(),
+                SizedBox(height: 16),
+                Text('Updating specifications database...'),
+              ],
+            ),
+          ),
+        ),
+      ),
+      error: (e, st) => MaterialApp(
+        title: 'Subaru Specs & Parts',
+        theme: AppTheme.darkTheme,
+        home: Scaffold(
+          body: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                'Critical Error initializing database:\n$e',
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: Colors.red),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
