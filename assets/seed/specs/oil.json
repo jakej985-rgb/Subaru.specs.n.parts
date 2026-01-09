@@ -182,6 +182,25 @@
     "source": "Owner's Manual"
   },
   {
+    "id": "s_oil_capacity_brz_fa24",
+    "category": "Oil",
+    "title": "Oil Capacity (FA24)",
+    "body": "5.0 Liters (5.3 Quarts) with filter.",
+    "tags": "oil,capacity,brz,fa24,2022,2023,2024",
+    "updatedAt": "2024-05-25T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual (JDM/Global)",
+    "notes": "Source lists 5.0L. Some US sources say 5.3qts."
+  },
+  {
+    "id": "s_oil_viscosity_brz_fa24",
+    "category": "Oil",
+    "title": "Oil Viscosity (FA24)",
+    "body": "0W-20 Synthetic API SP/SN Plus",
+    "tags": "oil,viscosity,brz,fa24,2022,2023,2024",
+    "updatedAt": "2024-05-25T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
     "id": "s_oil_capacity_ej22_legacy_gen1",
     "category": "Oil",
     "title": "Legacy 1990-1994 (EJ22) Oil Capacity",

@@ -42,6 +42,15 @@
     "source": "Owner's Manual"
   },
   {
+    "id": "s_diff_capacity_brz_fa24",
+    "category": "Differential",
+    "title": "Rear Differential Capacity (FA24)",
+    "body": "1.15 Liters (1.2 Quarts). Use GL-5 75W-85 (Toyota Diff Gear Oil LX).",
+    "tags": "diff,fluid,capacity,brz,fa24,2022,2023,2024",
+    "updatedAt": "2024-05-25T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual (JDM)",
+    "notes": "Spec changed to 75W-85 for Gen 2 LSD."
     "id": "s_diff_ratio_legacy_gen1_411",
     "category": "Differential",
     "title": "Final Drive Ratio (Legacy 1990-1994 4.11)",
