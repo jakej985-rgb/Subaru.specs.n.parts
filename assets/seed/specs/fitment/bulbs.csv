@@ -1,0 +1,1373 @@
+year,make,model,trim,body,market,function_key,location_hint,tech,bulb_code,base,qty,serviceable,notes,source_1,source_2,confidence
+
+1978,Subaru,BRAT,Base (US),Pickup,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,SuperBrightLEDs,high
+1978,Subaru,BRAT,Base (US),Pickup,USDM,headlight_high,Headlamp Housing,sealed_beam,H5001,,2,true,Round Sealed Beam High,Owner's Manual,SuperBrightLEDs,high
+1978,Subaru,BRAT,Base (US),Pickup,USDM,headlight_low,Headlamp Housing,sealed_beam,H5006,,2,true,Round Sealed Beam High/Low,Owner's Manual,SuperBrightLEDs,high
+1978,Subaru,BRAT,Base (US),Pickup,USDM,license_plate,Trunk/Bumper,bulb,89,G-6,2,true,,Owner's Manual,Wagner,high
+1978,Subaru,BRAT,Base (US),Pickup,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,SuperBrightLEDs,high
+1978,Subaru,BRAT,Base (US),Pickup,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,SuperBrightLEDs,high
+1978,Subaru,BRAT,Base (US),Pickup,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,SuperBrightLEDs,high
+1978,Subaru,BRAT,Base (US),Pickup,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,SuperBrightLEDs,high
+
+1979,Subaru,BRAT,Base (US),Pickup,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,SuperBrightLEDs,high
+1979,Subaru,BRAT,Base (US),Pickup,USDM,headlight_high,Headlamp Housing,sealed_beam,H5001,,2,true,Round Sealed Beam High,Owner's Manual,SuperBrightLEDs,high
+1979,Subaru,BRAT,Base (US),Pickup,USDM,headlight_low,Headlamp Housing,sealed_beam,H5006,,2,true,Round Sealed Beam High/Low,Owner's Manual,SuperBrightLEDs,high
+1979,Subaru,BRAT,Base (US),Pickup,USDM,license_plate,Trunk/Bumper,bulb,89,G-6,2,true,,Owner's Manual,Wagner,high
+1979,Subaru,BRAT,Base (US),Pickup,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,SuperBrightLEDs,high
+1979,Subaru,BRAT,Base (US),Pickup,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,SuperBrightLEDs,high
+1979,Subaru,BRAT,Base (US),Pickup,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,SuperBrightLEDs,high
+1979,Subaru,BRAT,Base (US),Pickup,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,SuperBrightLEDs,high
+
+1980,Subaru,BRAT,Base (US),Pickup,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1980,Subaru,BRAT,Base (US),Pickup,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,Sylvania,high
+1980,Subaru,BRAT,Base (US),Pickup,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,Sylvania,high
+1980,Subaru,BRAT,Base (US),Pickup,USDM,license_plate,Trunk/Bumper,bulb,67,G-6,2,true,,Owner's Manual,Wagner,high
+1980,Subaru,BRAT,Base (US),Pickup,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1980,Subaru,BRAT,Base (US),Pickup,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1980,Subaru,BRAT,Base (US),Pickup,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1980,Subaru,BRAT,Base (US),Pickup,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Dorman,high
+
+1981,Subaru,BRAT,Base (US),Pickup,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1981,Subaru,BRAT,Base (US),Pickup,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,Sylvania,high
+1981,Subaru,BRAT,Base (US),Pickup,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,Sylvania,high
+1981,Subaru,BRAT,Base (US),Pickup,USDM,license_plate,Trunk/Bumper,bulb,67,G-6,2,true,,Owner's Manual,Wagner,high
+1981,Subaru,BRAT,Base (US),Pickup,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1981,Subaru,BRAT,Base (US),Pickup,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1981,Subaru,BRAT,Base (US),Pickup,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1981,Subaru,BRAT,Base (US),Pickup,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Dorman,high
+
+1982,Subaru,BRAT,Base (US),Pickup,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1982,Subaru,BRAT,Base (US),Pickup,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,Sylvania,high
+1982,Subaru,BRAT,Base (US),Pickup,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,Sylvania,high
+1982,Subaru,BRAT,Base (US),Pickup,USDM,license_plate,Trunk/Bumper,bulb,67,G-6,2,true,,Owner's Manual,Wagner,high
+1982,Subaru,BRAT,Base (US),Pickup,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1982,Subaru,BRAT,Base (US),Pickup,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1982,Subaru,BRAT,Base (US),Pickup,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1982,Subaru,BRAT,Base (US),Pickup,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Dorman,high
+
+1983,Subaru,BRAT,Base (US),Pickup,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1983,Subaru,BRAT,Base (US),Pickup,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,Sylvania,high
+1983,Subaru,BRAT,Base (US),Pickup,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,Sylvania,high
+1983,Subaru,BRAT,Base (US),Pickup,USDM,license_plate,Trunk/Bumper,bulb,67,G-6,2,true,,Owner's Manual,Wagner,high
+1983,Subaru,BRAT,Base (US),Pickup,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1983,Subaru,BRAT,Base (US),Pickup,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1983,Subaru,BRAT,Base (US),Pickup,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1983,Subaru,BRAT,Base (US),Pickup,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Dorman,high
+
+1983,Subaru,GL,Wagon (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1983,Subaru,GL,Wagon (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,Sylvania,high
+1983,Subaru,GL,Wagon (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,Sylvania,high
+1983,Subaru,GL,Wagon (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1983,Subaru,GL,Wagon (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1983,Subaru,GL,Wagon (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1983,Subaru,GL,Wagon (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1983,Subaru,GL,Wagon (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+
+1984,Subaru,BRAT,Base (US),Pickup,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1984,Subaru,BRAT,Base (US),Pickup,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,Sylvania,high
+1984,Subaru,BRAT,Base (US),Pickup,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,Sylvania,high
+1984,Subaru,BRAT,Base (US),Pickup,USDM,license_plate,Trunk/Bumper,bulb,67,G-6,2,true,,Owner's Manual,Wagner,high
+1984,Subaru,BRAT,Base (US),Pickup,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1984,Subaru,BRAT,Base (US),Pickup,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1984,Subaru,BRAT,Base (US),Pickup,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1984,Subaru,BRAT,Base (US),Pickup,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Dorman,high
+
+1985,Subaru,BRAT,Base (US),Pickup,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1985,Subaru,BRAT,Base (US),Pickup,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,Sylvania,high
+1985,Subaru,BRAT,Base (US),Pickup,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,Sylvania,high
+1985,Subaru,BRAT,Base (US),Pickup,USDM,license_plate,Trunk/Bumper,bulb,67,G-6,2,true,,Owner's Manual,Wagner,high
+1985,Subaru,BRAT,Base (US),Pickup,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1985,Subaru,BRAT,Base (US),Pickup,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1985,Subaru,BRAT,Base (US),Pickup,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1985,Subaru,BRAT,Base (US),Pickup,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Dorman,high
+
+1985,Subaru,GL,Wagon (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1985,Subaru,GL,Wagon (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,AutoZone,high
+1985,Subaru,GL,Wagon (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,AutoZone,high
+1985,Subaru,GL,Wagon (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1985,Subaru,GL,Wagon (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoZone,high
+1985,Subaru,GL,Wagon (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1985,Subaru,GL,Wagon (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoZone,high
+1985,Subaru,GL,Wagon (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoZone,high
+
+1985,Subaru,GL-10,Turbo (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1985,Subaru,GL-10,Turbo (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,AutoZone,high
+1985,Subaru,GL-10,Turbo (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,AutoZone,high
+1985,Subaru,GL-10,Turbo (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1985,Subaru,GL-10,Turbo (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoZone,high
+1985,Subaru,GL-10,Turbo (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1985,Subaru,GL-10,Turbo (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoZone,high
+1985,Subaru,GL-10,Turbo (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoZone,high
+
+1985,Subaru,XT,DL (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoBulbsDirect,high
+1985,Subaru,XT,DL (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,AutoBulbsDirect,high
+1985,Subaru,XT,DL (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,AutoBulbsDirect,high
+1985,Subaru,XT,DL (US),Coupe,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1985,Subaru,XT,DL (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoBulbsDirect,high
+1985,Subaru,XT,DL (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoBulbsDirect,high
+1985,Subaru,XT,DL (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoBulbsDirect,high
+1985,Subaru,XT,DL (US),Coupe,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoBulbsDirect,high
+
+1986,Subaru,BRAT,Base (US),Pickup,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1986,Subaru,BRAT,Base (US),Pickup,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,Sylvania,high
+1986,Subaru,BRAT,Base (US),Pickup,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,Sylvania,high
+1986,Subaru,BRAT,Base (US),Pickup,USDM,license_plate,Trunk/Bumper,bulb,67,G-6,2,true,,Owner's Manual,Wagner,high
+1986,Subaru,BRAT,Base (US),Pickup,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1986,Subaru,BRAT,Base (US),Pickup,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1986,Subaru,BRAT,Base (US),Pickup,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1986,Subaru,BRAT,Base (US),Pickup,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Dorman,high
+
+1986,Subaru,GL,Wagon (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1986,Subaru,GL,Wagon (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,AutoZone,high
+1986,Subaru,GL,Wagon (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,AutoZone,high
+1986,Subaru,GL,Wagon (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1986,Subaru,GL,Wagon (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoZone,high
+1986,Subaru,GL,Wagon (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1986,Subaru,GL,Wagon (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoZone,high
+1986,Subaru,GL,Wagon (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoZone,high
+
+1986,Subaru,GL-10,Turbo (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1986,Subaru,GL-10,Turbo (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,AutoZone,high
+1986,Subaru,GL-10,Turbo (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,AutoZone,high
+1986,Subaru,GL-10,Turbo (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1986,Subaru,GL-10,Turbo (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoZone,high
+1986,Subaru,GL-10,Turbo (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1986,Subaru,GL-10,Turbo (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoZone,high
+1986,Subaru,GL-10,Turbo (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoZone,high
+
+1986,Subaru,XT,GL (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoBulbsDirect,high
+1986,Subaru,XT,GL (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,AutoBulbsDirect,high
+1986,Subaru,XT,GL (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,AutoBulbsDirect,high
+1986,Subaru,XT,GL (US),Coupe,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1986,Subaru,XT,GL (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoBulbsDirect,high
+1986,Subaru,XT,GL (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoBulbsDirect,high
+1986,Subaru,XT,GL (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoBulbsDirect,high
+1986,Subaru,XT,GL (US),Coupe,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoBulbsDirect,high
+
+1987,Subaru,BRAT,Base (US),Pickup,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1987,Subaru,BRAT,Base (US),Pickup,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,Sylvania,high
+1987,Subaru,BRAT,Base (US),Pickup,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,Sylvania,high
+1987,Subaru,BRAT,Base (US),Pickup,USDM,license_plate,Trunk/Bumper,bulb,67,G-6,2,true,,Owner's Manual,Wagner,high
+1987,Subaru,BRAT,Base (US),Pickup,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1987,Subaru,BRAT,Base (US),Pickup,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1987,Subaru,BRAT,Base (US),Pickup,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1987,Subaru,BRAT,Base (US),Pickup,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Dorman,high
+
+1987,Subaru,GL,Wagon (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1987,Subaru,GL,Wagon (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,AutoZone,high
+1987,Subaru,GL,Wagon (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,AutoZone,high
+1987,Subaru,GL,Wagon (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1987,Subaru,GL,Wagon (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoZone,high
+1987,Subaru,GL,Wagon (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1987,Subaru,GL,Wagon (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoZone,high
+1987,Subaru,GL,Wagon (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoZone,high
+
+1987,Subaru,GL-10,Turbo (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1987,Subaru,GL-10,Turbo (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,AutoZone,high
+1987,Subaru,GL-10,Turbo (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,AutoZone,high
+1987,Subaru,GL-10,Turbo (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1987,Subaru,GL-10,Turbo (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoZone,high
+1987,Subaru,GL-10,Turbo (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1987,Subaru,GL-10,Turbo (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoZone,high
+1987,Subaru,GL-10,Turbo (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoZone,high
+
+1987,Subaru,Justy,DL (US),Hatchback,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1987,Subaru,Justy,DL (US),Hatchback,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1987,Subaru,Justy,DL (US),Hatchback,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1987,Subaru,Justy,DL (US),Hatchback,USDM,license_plate,Trunk/Bumper,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1987,Subaru,Justy,DL (US),Hatchback,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1987,Subaru,Justy,DL (US),Hatchback,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1987,Subaru,Justy,DL (US),Hatchback,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1987,Subaru,Justy,DL (US),Hatchback,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Sylvania,high
+
+1987,Subaru,XT,GL (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoBulbsDirect,high
+1987,Subaru,XT,GL (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,AutoBulbsDirect,high
+1987,Subaru,XT,GL (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,AutoBulbsDirect,high
+1987,Subaru,XT,GL (US),Coupe,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1987,Subaru,XT,GL (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoBulbsDirect,high
+1987,Subaru,XT,GL (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoBulbsDirect,high
+1987,Subaru,XT,GL (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoBulbsDirect,high
+1987,Subaru,XT,GL (US),Coupe,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoBulbsDirect,high
+
+1988,Subaru,GL,Wagon (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1988,Subaru,GL,Wagon (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,AutoZone,high
+1988,Subaru,GL,Wagon (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,AutoZone,high
+1988,Subaru,GL,Wagon (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1988,Subaru,GL,Wagon (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoZone,high
+1988,Subaru,GL,Wagon (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1988,Subaru,GL,Wagon (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoZone,high
+1988,Subaru,GL,Wagon (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoZone,high
+
+1988,Subaru,GL-10,Turbo (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1988,Subaru,GL-10,Turbo (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,AutoZone,high
+1988,Subaru,GL-10,Turbo (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,AutoZone,high
+1988,Subaru,GL-10,Turbo (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1988,Subaru,GL-10,Turbo (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoZone,high
+1988,Subaru,GL-10,Turbo (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1988,Subaru,GL-10,Turbo (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoZone,high
+1988,Subaru,GL-10,Turbo (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoZone,high
+
+1988,Subaru,Justy,DL (US),Hatchback,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1988,Subaru,Justy,DL (US),Hatchback,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1988,Subaru,Justy,DL (US),Hatchback,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1988,Subaru,Justy,DL (US),Hatchback,USDM,license_plate,Trunk/Bumper,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1988,Subaru,Justy,DL (US),Hatchback,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1988,Subaru,Justy,DL (US),Hatchback,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1988,Subaru,Justy,DL (US),Hatchback,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1988,Subaru,Justy,DL (US),Hatchback,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Sylvania,high
+
+1988,Subaru,XT,GL (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoBulbsDirect,high
+1988,Subaru,XT,GL (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,AutoBulbsDirect,high
+1988,Subaru,XT,GL (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,AutoBulbsDirect,high
+1988,Subaru,XT,GL (US),Coupe,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1988,Subaru,XT,GL (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoBulbsDirect,high
+1988,Subaru,XT,GL (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoBulbsDirect,high
+1988,Subaru,XT,GL (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoBulbsDirect,high
+1988,Subaru,XT,GL (US),Coupe,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoBulbsDirect,high
+
+1988,Subaru,XT6,Base (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,eBay,high
+1988,Subaru,XT6,Base (US),Coupe,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low (Pop-up),Owner's Manual,eBay,high
+1988,Subaru,XT6,Base (US),Coupe,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low (Pop-up),Owner's Manual,eBay,high
+1988,Subaru,XT6,Base (US),Coupe,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1988,Subaru,XT6,Base (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,eBay,high
+1988,Subaru,XT6,Base (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,eBay,high
+1988,Subaru,XT6,Base (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,eBay,high
+1988,Subaru,XT6,Base (US),Coupe,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,eBay,high
+
+1989,Subaru,GL,Wagon (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1989,Subaru,GL,Wagon (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,AutoZone,high
+1989,Subaru,GL,Wagon (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,AutoZone,high
+1989,Subaru,GL,Wagon (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1989,Subaru,GL,Wagon (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoZone,high
+1989,Subaru,GL,Wagon (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1989,Subaru,GL,Wagon (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoZone,high
+1989,Subaru,GL,Wagon (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoZone,high
+
+1989,Subaru,GL-10,Turbo (US),Wagon,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1989,Subaru,GL-10,Turbo (US),Wagon,USDM,headlight_high,Headlamp Housing,sealed_beam,H4651,,2,true,Rectangular Sealed Beam High (4-Lamp System),Owner's Manual,AutoZone,high
+1989,Subaru,GL-10,Turbo (US),Wagon,USDM,headlight_low,Headlamp Housing,sealed_beam,H4656,,2,true,Rectangular Sealed Beam Low (4-Lamp System),Owner's Manual,AutoZone,high
+1989,Subaru,GL-10,Turbo (US),Wagon,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1989,Subaru,GL-10,Turbo (US),Wagon,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoZone,high
+1989,Subaru,GL-10,Turbo (US),Wagon,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoZone,high
+1989,Subaru,GL-10,Turbo (US),Wagon,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoZone,high
+1989,Subaru,GL-10,Turbo (US),Wagon,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoZone,high
+
+1989,Subaru,Justy,GL (US),Hatchback,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1989,Subaru,Justy,GL (US),Hatchback,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1989,Subaru,Justy,GL (US),Hatchback,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1989,Subaru,Justy,GL (US),Hatchback,USDM,license_plate,Trunk/Bumper,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1989,Subaru,Justy,GL (US),Hatchback,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1989,Subaru,Justy,GL (US),Hatchback,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1989,Subaru,Justy,GL (US),Hatchback,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1989,Subaru,Justy,GL (US),Hatchback,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Sylvania,high
+
+1989,Subaru,XT,GL (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoBulbsDirect,high
+1989,Subaru,XT,GL (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,AutoBulbsDirect,high
+1989,Subaru,XT,GL (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,AutoBulbsDirect,high
+1989,Subaru,XT,GL (US),Coupe,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1989,Subaru,XT,GL (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,AutoBulbsDirect,high
+1989,Subaru,XT,GL (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,AutoBulbsDirect,high
+1989,Subaru,XT,GL (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,AutoBulbsDirect,high
+1989,Subaru,XT,GL (US),Coupe,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,AutoBulbsDirect,high
+
+1989,Subaru,XT6,Base (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,eBay,high
+1989,Subaru,XT6,Base (US),Coupe,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low (Pop-up),Owner's Manual,eBay,high
+1989,Subaru,XT6,Base (US),Coupe,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low (Pop-up),Owner's Manual,eBay,high
+1989,Subaru,XT6,Base (US),Coupe,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1989,Subaru,XT6,Base (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,eBay,high
+1989,Subaru,XT6,Base (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,eBay,high
+1989,Subaru,XT6,Base (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,eBay,high
+1989,Subaru,XT6,Base (US),Coupe,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,eBay,high
+
+1990,Subaru,Justy,GL (US),Hatchback,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1990,Subaru,Justy,GL (US),Hatchback,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1990,Subaru,Justy,GL (US),Hatchback,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1990,Subaru,Justy,GL (US),Hatchback,USDM,license_plate,Trunk/Bumper,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1990,Subaru,Justy,GL (US),Hatchback,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1990,Subaru,Justy,GL (US),Hatchback,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1990,Subaru,Justy,GL (US),Hatchback,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1990,Subaru,Justy,GL (US),Hatchback,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Sylvania,high
+
+1990,Subaru,Legacy,L (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1990,Subaru,Legacy,L (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1990,Subaru,Legacy,LS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1990,Subaru,Legacy,LS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1990,Subaru,XT6,Base (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,eBay,high
+1990,Subaru,XT6,Base (US),Coupe,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low (Pop-up),Owner's Manual,eBay,high
+1990,Subaru,XT6,Base (US),Coupe,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low (Pop-up),Owner's Manual,eBay,high
+1990,Subaru,XT6,Base (US),Coupe,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1990,Subaru,XT6,Base (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,eBay,high
+1990,Subaru,XT6,Base (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,eBay,high
+1990,Subaru,XT6,Base (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,eBay,high
+1990,Subaru,XT6,Base (US),Coupe,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,eBay,high
+
+1991,Subaru,Justy,GL (US),Hatchback,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1991,Subaru,Justy,GL (US),Hatchback,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1991,Subaru,Justy,GL (US),Hatchback,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1991,Subaru,Justy,GL (US),Hatchback,USDM,license_plate,Trunk/Bumper,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1991,Subaru,Justy,GL (US),Hatchback,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1991,Subaru,Justy,GL (US),Hatchback,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1991,Subaru,Justy,GL (US),Hatchback,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1991,Subaru,Justy,GL (US),Hatchback,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Sylvania,high
+
+1991,Subaru,Legacy,L (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1991,Subaru,Legacy,L (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1991,Subaru,Legacy,Sport Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1991,Subaru,Legacy,Sport Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1991,Subaru,SVX,Base (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1991,Subaru,SVX,Base (US),Coupe,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1991,Subaru,SVX,Base (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+1991,Subaru,SVX,Base (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,9006 (HB4),P22d,2,true,Projector Low,Owner's Manual,Sylvania,high
+1991,Subaru,SVX,Base (US),Coupe,USDM,license_plate,Trunk,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1991,Subaru,SVX,Base (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1991,Subaru,SVX,Base (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1991,Subaru,SVX,Base (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+
+1991,Subaru,XT6,Base (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,eBay,high
+1991,Subaru,XT6,Base (US),Coupe,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low (Pop-up),Owner's Manual,eBay,high
+1991,Subaru,XT6,Base (US),Coupe,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low (Pop-up),Owner's Manual,eBay,high
+1991,Subaru,XT6,Base (US),Coupe,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Dorman,high
+1991,Subaru,XT6,Base (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,eBay,high
+1991,Subaru,XT6,Base (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,eBay,high
+1991,Subaru,XT6,Base (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,eBay,high
+1991,Subaru,XT6,Base (US),Coupe,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,eBay,high
+
+1992,Subaru,Justy,GL (US),Hatchback,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1992,Subaru,Justy,GL (US),Hatchback,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1992,Subaru,Justy,GL (US),Hatchback,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1992,Subaru,Justy,GL (US),Hatchback,USDM,license_plate,Trunk/Bumper,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1992,Subaru,Justy,GL (US),Hatchback,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1992,Subaru,Justy,GL (US),Hatchback,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1992,Subaru,Justy,GL (US),Hatchback,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1992,Subaru,Justy,GL (US),Hatchback,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Sylvania,high
+
+1992,Subaru,Legacy,LSi (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1992,Subaru,Legacy,LSi (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1992,Subaru,Legacy,Sport Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1992,Subaru,Legacy,Sport Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1992,Subaru,Legacy,Touring Wagon (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1992,Subaru,Legacy,Touring Wagon (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1992,Subaru,SVX,Base (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1992,Subaru,SVX,Base (US),Coupe,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1992,Subaru,SVX,Base (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+1992,Subaru,SVX,Base (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,9006 (HB4),P22d,2,true,Projector Low,Owner's Manual,Sylvania,high
+1992,Subaru,SVX,Base (US),Coupe,USDM,license_plate,Trunk,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1992,Subaru,SVX,Base (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1992,Subaru,SVX,Base (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1992,Subaru,SVX,Base (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+
+1993,Subaru,Impreza,Base grades (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,Base grades (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,Base grades (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,L (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,L (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,L (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,LS (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,LS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,LS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,WRX (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,WRX (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1993,Subaru,Impreza,WRX (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1993,Subaru,Justy,GL (US),Hatchback,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1993,Subaru,Justy,GL (US),Hatchback,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1993,Subaru,Justy,GL (US),Hatchback,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1993,Subaru,Justy,GL (US),Hatchback,USDM,license_plate,Trunk/Bumper,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1993,Subaru,Justy,GL (US),Hatchback,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1993,Subaru,Justy,GL (US),Hatchback,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1993,Subaru,Justy,GL (US),Hatchback,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1993,Subaru,Justy,GL (US),Hatchback,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Sylvania,high
+
+1993,Subaru,Legacy,Sport Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1993,Subaru,Legacy,Sport Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1993,Subaru,Legacy,Touring Wagon (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1993,Subaru,Legacy,Touring Wagon (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1993,Subaru,SVX,Base (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1993,Subaru,SVX,Base (US),Coupe,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1993,Subaru,SVX,Base (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+1993,Subaru,SVX,Base (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,9006 (HB4),P22d,2,true,Projector Low,Owner's Manual,Sylvania,high
+1993,Subaru,SVX,Base (US),Coupe,USDM,license_plate,Trunk,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1993,Subaru,SVX,Base (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1993,Subaru,SVX,Base (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1993,Subaru,SVX,Base (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+
+1994,Subaru,Impreza,L (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1994,Subaru,Impreza,L (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1994,Subaru,Impreza,L (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1994,Subaru,Impreza,WRX (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1994,Subaru,Impreza,WRX (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1994,Subaru,Impreza,WRX (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1994,Subaru,Impreza,WRX STI V1 (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1994,Subaru,Impreza,WRX STI V1 (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1994,Subaru,Impreza,WRX STI V1 (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1994,Subaru,Justy,GL (US),Hatchback,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1994,Subaru,Justy,GL (US),Hatchback,USDM,headlight_high,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1994,Subaru,Justy,GL (US),Hatchback,USDM,headlight_low,Headlamp Housing,sealed_beam,H6054,,2,true,Rectangular Sealed Beam High/Low,Owner's Manual,Sylvania,high
+1994,Subaru,Justy,GL (US),Hatchback,USDM,license_plate,Trunk/Bumper,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1994,Subaru,Justy,GL (US),Hatchback,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1994,Subaru,Justy,GL (US),Hatchback,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1994,Subaru,Justy,GL (US),Hatchback,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1994,Subaru,Justy,GL (US),Hatchback,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,Amber,Owner's Manual,Sylvania,high
+
+1994,Subaru,Legacy,GT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1994,Subaru,Legacy,GT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1994,Subaru,Legacy,Sport Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1994,Subaru,Legacy,Sport Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1994,Subaru,Legacy,Touring Wagon (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1994,Subaru,Legacy,Touring Wagon (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1994,Subaru,SVX,Base (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1994,Subaru,SVX,Base (US),Coupe,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1994,Subaru,SVX,Base (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+1994,Subaru,SVX,Base (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,9006 (HB4),P22d,2,true,Projector Low,Owner's Manual,Sylvania,high
+1994,Subaru,SVX,Base (US),Coupe,USDM,license_plate,Trunk,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1994,Subaru,SVX,Base (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1994,Subaru,SVX,Base (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1994,Subaru,SVX,Base (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+
+1995,Subaru,Impreza,L (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,L (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,L (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,LX (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,LX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,LX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,Outback Sport (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,WRX/STI V2 (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,WRX/STI V2 (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Impreza,WRX/STI V2 (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1995,Subaru,Legacy,L (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Legacy,L (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Legacy,LS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Legacy,LS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Legacy,Outback (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1995,Subaru,Legacy,Outback (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1995,Subaru,SVX,LSi (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1995,Subaru,SVX,LSi (US),Coupe,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1995,Subaru,SVX,LSi (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+1995,Subaru,SVX,LSi (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,9006 (HB4),P22d,2,true,Projector Low,Owner's Manual,Sylvania,high
+1995,Subaru,SVX,LSi (US),Coupe,USDM,license_plate,Trunk,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1995,Subaru,SVX,LSi (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1995,Subaru,SVX,LSi (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1995,Subaru,SVX,LSi (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+
+1996,Subaru,Impreza,Brighton (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,Brighton (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,Brighton (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,L/Brighton (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,L/Brighton (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,L/Brighton (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,Outback Sport (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,WRX/STI V3 (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,WRX/STI V3 (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1996,Subaru,Impreza,WRX/STI V3 (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1996,Subaru,Legacy,GT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1996,Subaru,Legacy,GT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1996,Subaru,Legacy,Outback (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1996,Subaru,Legacy,Outback (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1996,Subaru,SVX,LSi (US),Coupe,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1996,Subaru,SVX,LSi (US),Coupe,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1996,Subaru,SVX,LSi (US),Coupe,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+1996,Subaru,SVX,LSi (US),Coupe,USDM,headlight_low,Headlamp Housing,bulb,9006 (HB4),P22d,2,true,Projector Low,Owner's Manual,Sylvania,high
+1996,Subaru,SVX,LSi (US),Coupe,USDM,license_plate,Trunk,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1996,Subaru,SVX,LSi (US),Coupe,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1996,Subaru,SVX,LSi (US),Coupe,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1996,Subaru,SVX,LSi (US),Coupe,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+
+1997,Subaru,Impreza,L/Brighton (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1997,Subaru,Impreza,L/Brighton (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1997,Subaru,Impreza,L/Brighton (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1997,Subaru,Impreza,Outback Sport (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1997,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1997,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1997,Subaru,Impreza,WRX/STI V4 (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1997,Subaru,Impreza,WRX/STI V4 (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1997,Subaru,Impreza,WRX/STI V4 (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1997,Subaru,Legacy,GT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1997,Subaru,Legacy,GT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1997,Subaru,Legacy,Outback Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1997,Subaru,Legacy,Outback Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1998,Subaru,Forester,L (US),SUV,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,L (US),SUV,USDM,fog_front,Bumper,bulb,H3,,2,true,,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,L (US),SUV,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,L (US),SUV,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,L (US),SUV,USDM,license_plate,Liftgate,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,L (US),SUV,USDM,marker_front_side,Corner Lamp,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,L (US),SUV,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,L (US),SUV,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Stop/Tail,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,L (US),SUV,USDM,third_brake,Liftgate,bulb,912,W2.1x9.5d,1,true,,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,L (US),SUV,USDM,turn_front,Bumper,bulb,1157,BAY15d,2,true,Park/Turn,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,L (US),SUV,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,S (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Forester,S (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1998,Subaru,Impreza,2.5 RS (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,L (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,L (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,L (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,STI 22B (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,STI 22B (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,STI 22B (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,WRX/STI V5 (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,WRX/STI V5 (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Impreza,WRX/STI V5 (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1998,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Legacy,Outback Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1998,Subaru,Legacy,Outback Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1999,Subaru,Forester,L (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Forester,L (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1999,Subaru,Impreza,2.5 RS (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,2.5 RS (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,L/Brighton (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,L/Brighton (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,L/Brighton (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,WRX/STI V6 (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,WRX/STI V6 (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Impreza,WRX/STI V6 (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+1999,Subaru,Legacy,GT 30th Anniversary (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Legacy,GT 30th Anniversary (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Legacy,Outback 30th Anniversary (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Legacy,Outback 30th Anniversary (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Legacy,SUS 30th Anniversary (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+1999,Subaru,Legacy,SUS 30th Anniversary (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2000,Subaru,Impreza,2.5 RS (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Coupe (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Coupe (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Coupe (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,brake,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,fog_front,Bumper,bulb,H3,,2,true,,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,license_plate,Trunk/Bumper,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,marker_front_side,Corner Lamp,bulb,194,W2.1x9.5d,2,true,,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,parking_position_front,Corner Lamp,bulb,194,W2.1x9.5d,2,true,Often combined with side marker,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,reverse,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Diode Dynamics,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,tail,Rear Combo Lamp,bulb,1157,BAY15d,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,third_brake,Rear Deck,bulb,921,W2.1x9.5d,1,true,,SuperBrightLEDs,,med
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,turn_front,Bumper,bulb,1156,BA15s,2,true,,Owner's Manual,Diode Dynamics,high
+2000,Subaru,Impreza,2.5 RS Sedan (US),Sedan,USDM,turn_rear,Rear Combo Lamp,bulb,1156,BA15s,2,true,,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,Outback Sport (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,WRX (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,WRX (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,WRX (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,WRX STI (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,WRX STI (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Impreza,WRX STI (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2000,Subaru,Legacy,Brighton (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Legacy,Brighton (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Legacy,GT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2000,Subaru,Legacy,GT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2000,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2000,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2000,Subaru,Legacy,L (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2000,Subaru,Legacy,L (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2000,Subaru,Outback,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2000,Subaru,Outback,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2000,Subaru,Outback,Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2000,Subaru,Outback,Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2001,Subaru,Forester,S Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2001,Subaru,Forester,S Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2001,Subaru,Impreza,2.5 RS (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2001,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2001,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2001,Subaru,Impreza,2.5 RS Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2001,Subaru,Impreza,2.5 RS Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2001,Subaru,Impreza,2.5 RS Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2001,Subaru,Impreza,Outback Sport (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2001,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2001,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2001,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2001,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2001,Subaru,Outback,H6-3.0 L.L. Bean Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2001,Subaru,Outback,H6-3.0 L.L. Bean Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2001,Subaru,Outback,H6-3.0 VDC (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2001,Subaru,Outback,H6-3.0 VDC (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2002,Subaru,Impreza,2.5 RS (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,2.5 RS Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,2.5 RS Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,2.5 RS Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,Outback Sport (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,TS Sport Wagon (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,TS Sport Wagon (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,TS Sport Wagon (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX STI (JDM),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX STI (JDM),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX STI (JDM),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX Wagon (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX Wagon (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2002,Subaru,Impreza,WRX Wagon (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2002,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2002,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2003,Subaru,Baja,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2003,Subaru,Baja,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2003,Subaru,Baja,Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2003,Subaru,Baja,Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2003,Subaru,Forester,X (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2003,Subaru,Forester,X (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2003,Subaru,Forester,XS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2003,Subaru,Forester,XS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2003,Subaru,Impreza,2.5 TS (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2003,Subaru,Impreza,2.5 TS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2003,Subaru,Impreza,2.5 TS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2003,Subaru,Impreza,WRX (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2003,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2003,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2003,Subaru,Impreza,WRX Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2003,Subaru,Impreza,WRX Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2003,Subaru,Impreza,WRX Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2003,Subaru,Legacy,L Special Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2003,Subaru,Legacy,L Special Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2004,Subaru,Baja,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2004,Subaru,Baja,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2004,Subaru,Baja,Turbo (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2004,Subaru,Baja,Turbo (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2004,Subaru,Forester,XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2004,Subaru,Forester,XT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2004,Subaru,Impreza,2.5 RS Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,2.5 RS Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,2.5 RS Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,2.5 RS/TS (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,2.5 RS/TS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,2.5 RS/TS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,TS Sport Wagon (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,TS Sport Wagon (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,TS Sport Wagon (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX STI (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2R,P32d-3,2,true,HID Low,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX STI Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX STI Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2004,Subaru,Impreza,WRX STI Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2R,P32d-3,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2004,Subaru,Legacy,GT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2004,Subaru,Legacy,GT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2004,Subaru,Legacy,L 35th Anniversary (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2004,Subaru,Legacy,L 35th Anniversary (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,9007 (HB5),PX29t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2005,Subaru,Baja,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Baja,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2005,Subaru,Baja,Turbo (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Baja,Turbo (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2005,Subaru,Forester,XS L.L. Bean Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+2005,Subaru,Forester,XS L.L. Bean Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H4 (9003),P43t,2,true,Dual filament,Owner's Manual,Sylvania,high
+
+2005,Subaru,Impreza,2.5 RS (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,2.5 RS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,2.5 RS Wagon (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,2.5 RS Wagon (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,2.5 RS Wagon (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX STI (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2R,P32d-3,2,true,HID Low,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX STI Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX STI Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Impreza,WRX STI Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2R,P32d-3,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2005,Subaru,Legacy,2.5i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Legacy,2.5i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2005,Subaru,Legacy,GT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Legacy,GT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2005,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2005,Subaru,Outback,2.5i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Outback,2.5i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2005,Subaru,Outback,3.0R L.L. Bean Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Outback,3.0R L.L. Bean Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2005,Subaru,Outback,XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Outback,XT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2005,Subaru,Outback,XT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2005,Subaru,Outback,XT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2006,Subaru,Baja,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Baja,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+2006,Subaru,Baja,Turbo (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Baja,Turbo (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2006,Subaru,Forester,2.5 XT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Forester,2.5 XT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2006,Subaru,Impreza,2.5i (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,2.5i Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,2.5i Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,2.5i Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX STI (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX STI Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX STI Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX STI Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX TR Sedan (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX TR Sedan (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Impreza,WRX TR Sedan (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2006,Subaru,Legacy,2.5i Special Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Legacy,2.5i Special Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2006,Subaru,Legacy,GT spec.B (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Legacy,GT spec.B (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2006,Subaru,Tribeca,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H9,PGJ19-5,2,true,High Beam,Owner's Manual,Sylvania,high
+2006,Subaru,Tribeca,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2007,Subaru,Forester,Sports 2.5 XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2007,Subaru,Forester,Sports 2.5 XT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2007,Subaru,Impreza,2.5i (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,2.5i Special Edition (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,2.5i Special Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,2.5i Special Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,WRX (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,WRX Limited (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,WRX Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,WRX Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,WRX STI (US),TBD,USDM,fog_front,Bumper,bulb,H3,PK22s,2,true,Projector Fog,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2007,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2007,Subaru,Legacy,GT spec.B (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2007,Subaru,Legacy,GT spec.B (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2007,Subaru,Tribeca,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,H9,PGJ19-5,2,true,High Beam,Owner's Manual,Sylvania,high
+2007,Subaru,Tribeca,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2008,Subaru,Forester,Sports 2.5 XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2008,Subaru,Forester,Sports 2.5 XT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H1,P14.5s,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2008,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2008,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2008,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2008,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2008,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2008,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2008,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2008,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2008,Subaru,Legacy,3.0R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2008,Subaru,Legacy,3.0R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2008,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2008,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2008,Subaru,Tribeca,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2008,Subaru,Tribeca,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2009,Subaru,Forester,XT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2009,Subaru,Forester,XT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2009,Subaru,Impreza,2.5 GT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2009,Subaru,Impreza,2.5 GT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2009,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2009,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2009,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2009,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2009,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2009,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2009,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2009,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2009,Subaru,Legacy,3.0R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2009,Subaru,Legacy,3.0R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2009,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2009,Subaru,Legacy,GT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2009,Subaru,Outback,2.5i Special Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2009,Subaru,Outback,2.5i Special Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2009,Subaru,Tribeca,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2009,Subaru,Tribeca,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2010,Subaru,Forester,2.5X Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Forester,2.5X Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2010,Subaru,Impreza,2.5 GT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,2.5 GT (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,WRX STI Special Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Impreza,WRX STI Special Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2010,Subaru,Legacy,2.5GT Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Legacy,2.5GT Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2010,Subaru,Legacy,2.5i Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Legacy,2.5i Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2010,Subaru,Legacy,3.6R Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Legacy,3.6R Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2010,Subaru,Outback,2.5i Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Outback,2.5i Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2010,Subaru,Outback,3.6R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Outback,3.6R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2010,Subaru,Outback,3.6R Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Outback,3.6R Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2010,Subaru,Tribeca,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2010,Subaru,Tribeca,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2011,Subaru,Forester,2.5X Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2011,Subaru,Forester,2.5X Touring (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2011,Subaru,Forester,XT Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2011,Subaru,Forester,XT Touring (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2011,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2011,Subaru,Impreza,2.5i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2011,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2011,Subaru,Impreza,Outback Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2011,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2011,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2011,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2011,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2011,Subaru,Legacy,2.5GT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2011,Subaru,Legacy,2.5GT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2011,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2011,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2011,Subaru,Tribeca,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2011,Subaru,Tribeca,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2012,Subaru,Impreza,2.0i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,2.0i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,2.0i Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,2.0i Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,2.0i Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,2.0i Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,2.0i Sport Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,2.0i Sport Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,2.0i Sport Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,2.0i Sport Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,WRX Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,WRX Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,WRX Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,WRX Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,WRX STI Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Impreza,WRX STI Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2012,Subaru,Legacy,2.5GT Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Legacy,2.5GT Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2012,Subaru,Outback,2.5i Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Outback,2.5i Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2012,Subaru,Tribeca,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2012,Subaru,Tribeca,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2013,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2013,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2013,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2013,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+
+2013,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2013,Subaru,Forester,XT Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Forester,XT Touring (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2013,Subaru,Impreza,2.0i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,2.0i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,2.0i Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,2.0i Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,2.0i Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,2.0i Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,2.0i Sport Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,2.0i Sport Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,2.0i Sport Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,2.0i Sport Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX Special Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX Special Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX STI Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX STI Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX STI Special Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Impreza,WRX STI Special Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2013,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2013,Subaru,Outback,2.5i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Outback,2.5i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2013,Subaru,Outback,2.5i Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Outback,2.5i Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2013,Subaru,Outback,3.6R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Outback,3.6R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2013,Subaru,Tribeca,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2013,Subaru,Tribeca,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2014,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2014,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2014,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2014,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+
+2014,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2014,Subaru,Forester,2.0XT Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Forester,2.0XT Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2014,Subaru,Forester,2.0XT Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Forester,2.0XT Touring (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+2014,Subaru,Forester,2.5i Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Forester,2.5i Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2014,Subaru,Impreza,2.0i (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,2.0i (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,2.0i Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,2.0i Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,2.0i Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,2.0i Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,2.0i Sport Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,2.0i Sport Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,2.0i Sport Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,2.0i Sport Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,WRX (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,WRX (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,WRX Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,WRX Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,WRX Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,WRX Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,WRX STI (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,WRX STI Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Impreza,WRX STI Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D2S,P32d-2,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2014,Subaru,Legacy,2.5i Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Legacy,2.5i Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+2014,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Projector Low,Owner's Manual,Sylvania,high
+
+2014,Subaru,Tribeca,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2014,Subaru,Tribeca,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H7,PX26d,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2015,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2015,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2015,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2015,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+
+2015,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2015,Subaru,Forester,2.5i Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,Forester,2.5i Limited (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2015,Subaru,Impreza,2.0i Sport Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,Impreza,2.0i Sport Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2015,Subaru,Legacy,2.5i Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,Legacy,2.5i Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+2015,Subaru,Legacy,2.5i Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,Legacy,2.5i Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2015,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2015,Subaru,Outback,2.5i Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,Outback,2.5i Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+2015,Subaru,Outback,3.6R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,Outback,3.6R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2015,Subaru,WRX,Base (US),Sedan,USDM,brake,Rear Combo Lamp,bulb,7443,W3x16q,2,true,Stop/Tail,Owner's Manual,Auxito,high
+2015,Subaru,WRX,Base (US),Sedan,USDM,drl,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam at lower voltage,Owner's Manual,Auxito,high
+2015,Subaru,WRX,Base (US),Sedan,USDM,fog_front,Bumper,bulb,H11,PGJ19-2,2,true,Check housing for H16 (19W) requirement,Owner's Manual,Auxito,med
+2015,Subaru,WRX,Base (US),Sedan,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,,Owner's Manual,Auxito,high
+2015,Subaru,WRX,Base (US),Sedan,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,,Owner's Manual,Auxito,high
+2015,Subaru,WRX,Base (US),Sedan,USDM,license_plate,Trunk,bulb,168,W2.1x9.5d,2,true,,Owner's Manual,Auxito,high
+2015,Subaru,WRX,Base (US),Sedan,USDM,marker_front_side,Headlamp Housing,bulb,194,W2.1x9.5d,2,true,C-Light on Base,Owner's Manual,Auxito,high
+2015,Subaru,WRX,Base (US),Sedan,USDM,reverse,Rear Combo Lamp,bulb,921,W2.1x9.5d,2,true,,Owner's Manual,Auxito,high
+2015,Subaru,WRX,Base (US),Sedan,USDM,tail,Rear Combo Lamp,bulb,7443,W3x16q,2,true,Stop/Tail,Owner's Manual,Auxito,high
+2015,Subaru,WRX,Base (US),Sedan,USDM,turn_front,Bumper,bulb,7440A,W3x16d,2,true,,Owner's Manual,Auxito,high
+2015,Subaru,WRX,Base (US),Sedan,USDM,turn_rear,Rear Combo Lamp,bulb,992 (7440A),W3x16d,2,true,,Owner's Manual,Auxito,high
+2015,Subaru,WRX,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,WRX,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2015,Subaru,WRX,STI (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,WRX,STI (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2015,Subaru,WRX,STI Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2015,Subaru,WRX,STI Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2016,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2016,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2016,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2016,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+
+2016,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2016,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2016,Subaru,Legacy,2.5i Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2016,Subaru,Legacy,2.5i Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2016,Subaru,WRX,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2016,Subaru,WRX,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2017,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2017,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2017,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2017,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+
+2017,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2017,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2017,Subaru,Forester,2.0XT Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2017,Subaru,Forester,2.0XT Touring (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2017,Subaru,Impreza,2.0i Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2017,Subaru,Impreza,2.0i Sport (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2017,Subaru,Legacy,2.5i Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2017,Subaru,Legacy,2.5i Sport (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2017,Subaru,Outback,3.6R Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2017,Subaru,Outback,3.6R Touring (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+2017,Subaru,Outback,Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2017,Subaru,Outback,Touring (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2017,Subaru,WRX,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2017,Subaru,WRX,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2018,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2018,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2018,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2018,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+
+2018,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2018,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2018,Subaru,Forester,2.0XT Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2018,Subaru,Forester,2.0XT Touring (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+2018,Subaru,Forester,2.5i Black Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2018,Subaru,Forester,2.5i Black Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2018,Subaru,Legacy,2.5i Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2018,Subaru,Legacy,2.5i Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+2018,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2018,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2018,Subaru,WRX,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2018,Subaru,WRX,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2018,Subaru,WRX,STI Type RA (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2018,Subaru,WRX,STI Type RA (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2019,Subaru,Ascent,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Ascent,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2019,Subaru,Ascent,Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Ascent,Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2019,Subaru,Ascent,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Ascent,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2019,Subaru,Ascent,Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Ascent,Touring (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2019,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2019,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2019,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2019,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+
+2019,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2019,Subaru,Crosstrek,Hybrid (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Crosstrek,Hybrid (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2019,Subaru,Forester,Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Forester,Sport (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2019,Subaru,Forester,Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Forester,Touring (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2019,Subaru,Legacy,2.5i Limited 50th Anniversary (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Legacy,2.5i Limited 50th Anniversary (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+2019,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Legacy,3.6R Limited (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2019,Subaru,Outback,2.5i Limited 50th Anniversary (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,Outback,2.5i Limited 50th Anniversary (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,HID Low,Owner's Manual,Sylvania,high
+
+2019,Subaru,WRX,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,WRX,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2019,Subaru,WRX,Series.Gray (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2019,Subaru,WRX,Series.Gray (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2020,Subaru,Ascent,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2020,Subaru,Ascent,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2020,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2020,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2020,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2020,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2020,Subaru,BRZ,tS (US),TBD,USDM,headlight_high,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+2020,Subaru,BRZ,tS (US),TBD,USDM,headlight_low,Headlamp Housing,hid,D4S,P32d-5,2,true,Bi-Xenon HID,Owner's Manual,Sylvania,high
+
+2020,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2020,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2020,Subaru,Forester,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2020,Subaru,Forester,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2020,Subaru,Legacy,Limited XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2020,Subaru,Legacy,Limited XT (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2020,Subaru,Legacy,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2020,Subaru,Legacy,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2020,Subaru,Legacy,Touring XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2020,Subaru,Legacy,Touring XT (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2020,Subaru,Outback,Limited XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2020,Subaru,Outback,Limited XT (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2020,Subaru,Outback,Onyx Edition XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2020,Subaru,Outback,Onyx Edition XT (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2020,Subaru,Outback,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2020,Subaru,Outback,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2020,Subaru,WRX,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2020,Subaru,WRX,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2020,Subaru,WRX,Series.White (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2020,Subaru,WRX,Series.White (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2020,Subaru,WRX,tS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2020,Subaru,WRX,tS (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2021,Subaru,Ascent,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2021,Subaru,Ascent,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2021,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2021,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2021,Subaru,Crosstrek,Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2021,Subaru,Crosstrek,Sport (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2021,Subaru,Forester,Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2021,Subaru,Forester,Sport (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2021,Subaru,Legacy,Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2021,Subaru,Legacy,Sport (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2021,Subaru,WRX,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2021,Subaru,WRX,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2021,Subaru,WRX,STI Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2021,Subaru,WRX,STI Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2022,Subaru,Ascent,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2022,Subaru,Ascent,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2022,Subaru,Ascent,Onyx Edition (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2022,Subaru,Ascent,Onyx Edition (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2022,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+
+2022,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2022,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2022,Subaru,Crosstrek,Wilderness (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2022,Subaru,Crosstrek,Wilderness (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2022,Subaru,Forester,Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2022,Subaru,Forester,Touring (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2022,Subaru,Forester,Wilderness (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2022,Subaru,Forester,Wilderness (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2022,Subaru,Legacy,Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2022,Subaru,Legacy,Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2022,Subaru,Outback,Touring XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2022,Subaru,Outback,Touring XT (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2022,Subaru,Outback,Wilderness (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2022,Subaru,Outback,Wilderness (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2022,Subaru,Solterra,Limited (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,Solterra,Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,Solterra,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,Solterra,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,Solterra,Touring (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,Solterra,Touring (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+
+2022,Subaru,WRX,Base (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,WRX,Base (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,WRX,Limited (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2022,Subaru,WRX,Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+
+2023,Subaru,Ascent,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2023,Subaru,Ascent,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2023,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2023,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2023,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2023,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+
+2023,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2023,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2023,Subaru,Forester,Wilderness (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2023,Subaru,Forester,Wilderness (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2023,Subaru,Legacy,Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2023,Subaru,Legacy,Sport (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2023,Subaru,Legacy,Touring XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2023,Subaru,Legacy,Touring XT (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2023,Subaru,Outback,Onyx Edition XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2023,Subaru,Outback,Onyx Edition XT (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2023,Subaru,Solterra,Limited (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2023,Subaru,Solterra,Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2023,Subaru,Solterra,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2023,Subaru,Solterra,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2023,Subaru,Solterra,Touring (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2023,Subaru,Solterra,Touring (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+
+2023,Subaru,WRX,Base (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2023,Subaru,WRX,Base (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+
+2024,Subaru,Ascent,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2024,Subaru,Ascent,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+
+2024,Subaru,BRZ,Base (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,BRZ,Base (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,BRZ,Limited (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,BRZ,Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,BRZ,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,BRZ,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,BRZ,tS (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,BRZ,tS (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+
+2024,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2024,Subaru,Crosstrek,Base (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2024,Subaru,Crosstrek,Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2024,Subaru,Crosstrek,Sport (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2024,Subaru,Crosstrek,Wilderness (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2024,Subaru,Crosstrek,Wilderness (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2024,Subaru,Forester,Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2024,Subaru,Forester,Sport (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2024,Subaru,Impreza,RS (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2024,Subaru,Impreza,RS (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2024,Subaru,Legacy,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2024,Subaru,Legacy,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2024,Subaru,Outback,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2024,Subaru,Outback,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2024,Subaru,Outback,Touring XT (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2024,Subaru,Outback,Touring XT (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2024,Subaru,Outback,Wilderness (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam (often separate),Owner's Manual,Sylvania,high
+2024,Subaru,Outback,Wilderness (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+
+2024,Subaru,Solterra,Limited (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,Solterra,Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,Solterra,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,Solterra,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,Solterra,Touring (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,Solterra,Touring (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+
+2024,Subaru,WRX,Base (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,WRX,Base (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,WRX,GT (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,WRX,GT (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,WRX,Limited (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,WRX,Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,WRX,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,WRX,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,WRX,TR (US),TBD,USDM,headlight_high,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+2024,Subaru,WRX,TR (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Assembly,Owner's Manual,Sylvania,high
+
+2025,Subaru,Forester,Base (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2025,Subaru,Forester,Base (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2025,Subaru,Forester,Limited (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2025,Subaru,Forester,Limited (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2025,Subaru,Forester,Premium (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2025,Subaru,Forester,Premium (US),TBD,USDM,headlight_low,Headlamp Housing,bulb,H11,PGJ19-2,2,true,Halogen Low,Owner's Manual,Sylvania,high
+2025,Subaru,Forester,Sport (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2025,Subaru,Forester,Sport (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
+2025,Subaru,Forester,Touring (US),TBD,USDM,headlight_high,Headlamp Housing,bulb,9005 (HB3),P20d,2,true,High Beam,Owner's Manual,Sylvania,high
+2025,Subaru,Forester,Touring (US),TBD,USDM,headlight_low,Headlamp Housing,led_module,,,2,true,LED Low,Owner's Manual,Sylvania,high
