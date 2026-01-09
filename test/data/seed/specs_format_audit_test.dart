@@ -17,7 +17,7 @@ void main() {
 
       specs = [];
       final files = specsDir.listSync().whereType<File>().where(
-        (f) => f.path.endsWith('.json'),
+        (f) => f.path.endsWith('.json') && !f.path.endsWith('index.json'),
       );
 
       for (final file in files) {
