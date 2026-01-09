@@ -80,7 +80,11 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
     // This logic ensures that if a spec is specific to a trim (e.g. tagged "base" only),
     // it doesn't show up for "limited".
     return candidates.where((spec) {
-      final tagList = spec.tags.toLowerCase().split(',').map((e) => e.trim()).toSet();
+      final tagList = spec.tags
+          .toLowerCase()
+          .split(',')
+          .map((e) => e.trim())
+          .toSet();
 
       // Known trim tags to check against
       final knownTrims = [
