@@ -4,7 +4,7 @@
     "category": "Battery",
     "title": "Battery Group Size",
     "body": "Group 35",
-    "tags": "battery,electrical",
+    "tags": "battery,electrical,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -12,7 +12,7 @@
     "category": "Battery",
     "title": "Group 35 Battery",
     "body": "Standard size for most Subarus (Impreza, WRX, Forester, Legacy). CCA: 550+ recommended.",
-    "tags": "battery,electrical,group35",
+    "tags": "battery,electrical,group35,impreza,wrx,forester,legacy,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024",
     "updatedAt": "2026-01-05T12:00:00Z"
   },
   {

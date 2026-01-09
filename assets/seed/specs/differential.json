@@ -4,7 +4,7 @@
     "category": "Differential",
     "title": "R160_390",
     "body": "Family: R160\nFinal Drive: 3.90\nLSD: Open (some WRX viscous LSD)\nNotes: Match trans FD",
-    "tags": "impreza,differential",
+    "tags": "impreza,differential,wrx,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {
@@ -12,7 +12,7 @@
     "category": "Differential",
     "title": "R160_411",
     "body": "Family: R160\nFinal Drive: 4.11\nLSD: Open\nNotes: Match 4EAT 4.11",
-    "tags": "impreza,differential",
+    "tags": "impreza,differential,legacy,forester,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {
@@ -20,7 +20,7 @@
     "category": "Differential",
     "title": "R160_370",
     "body": "Family: R160\nFinal Drive: 3.70\nLSD: Some viscous LSD\nNotes: Unique; common swap trap",
-    "tags": "impreza,differential",
+    "tags": "impreza,differential,wrx,2002,2003,2004,2005,2006,2007",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {
@@ -28,7 +28,7 @@
     "category": "Differential",
     "title": "R180_390",
     "body": "Family: R180\nFinal Drive: 3.90\nLSD: Clutch LSD\nNotes: Requires STI axles/hubs or hybrid conversion",
-    "tags": "impreza,differential",
+    "tags": "impreza,differential,sti,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {

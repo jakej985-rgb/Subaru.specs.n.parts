@@ -4,7 +4,7 @@
     "category": "Bulbs",
     "title": "Low Beam Headlight (Halogen)",
     "body": "H11",
-    "tags": "lights,bulbs,wrx",
+    "tags": "lights,bulbs,wrx,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -36,7 +36,7 @@
     "category": "Bulbs",
     "title": "Reverse / Backup Light Bulb (Generic)",
     "body": "921 (W16W). Very common for sedans/wagons/SUVs.",
-    "tags": "bulbs,lights,reverse,backup,generic,921,w16w",
+    "tags": "bulbs,lights,reverse,backup,generic,921,w16w,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024",
     "updatedAt": "2026-01-07T00:00:00Z"
   },
   {
@@ -44,7 +44,7 @@
     "category": "Bulbs",
     "title": "License Plate Light Bulb (Generic)",
     "body": "168 / 194 / W5W / 2825. (T10 Wedge Base).",
-    "tags": "bulbs,lights,license,plate,generic,168,194,w5w,t10",
+    "tags": "bulbs,lights,license,plate,generic,168,194,w5w,t10,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024",
     "updatedAt": "2026-01-07T00:00:00Z"
   },
   {
@@ -52,7 +52,7 @@
     "category": "Bulbs",
     "title": "Side Marker Light Bulb (Generic)",
     "body": "194 / 168 (T10 Wedge). Front (Amber) / Rear (Red).",
-    "tags": "bulbs,lights,marker,side,generic,194,168,t10",
+    "tags": "bulbs,lights,marker,side,generic,194,168,t10,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024",
     "updatedAt": "2026-01-07T00:00:00Z"
   },
   {
@@ -60,7 +60,7 @@
     "category": "Bulbs",
     "title": "High Beam Headlight (Halogen)",
     "body": "9005 (HB3)",
-    "tags": "lights,bulbs",
+    "tags": "lights,bulbs,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -68,7 +68,7 @@
     "category": "Bulbs",
     "title": "H4/9003 Headlight Bulb",
     "body": "Standard Halogen High/Low Beam. Used in: GC Impreza, SF/SG Forester, Legacy 90-04.",
-    "tags": "bulbs,lights,h4,9003,gc,sf,sg,legacy",
+    "tags": "bulbs,lights,h4,9003,gc,sf,sg,legacy,impreza,forester,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008",
     "updatedAt": "2026-01-05T12:00:00Z"
   },
   {
@@ -76,7 +76,7 @@
     "category": "Bulbs",
     "title": "H7 Headlight Bulb (Low Beam)",
     "body": "Used in: Legacy/Outback 05-09 (Low Beam), Tribeca.",
-    "tags": "bulbs,lights,h7,legacy,outback",
+    "tags": "bulbs,lights,h7,legacy,outback,tribeca,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014",
     "updatedAt": "2026-01-05T12:00:00Z"
   },
   {
@@ -84,7 +84,7 @@
     "category": "Bulbs",
     "title": "H11 Headlight Bulb (Low Beam)",
     "body": "Common modern halogen low beam. Used in: WRX 08-21, Forester SH/SJ/SK, Outback 10+.",
-    "tags": "bulbs,lights,h11,gr,gv,va,forester,outback",
+    "tags": "bulbs,lights,h11,gr,gv,va,forester,outback,wrx,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024",
     "updatedAt": "2026-01-05T12:00:00Z"
   },
   {
@@ -92,7 +92,7 @@
     "category": "Bulbs",
     "title": "9005/HB3 Headlight Bulb (High Beam)",
     "body": "Standard High Beam for most Subarus 2002-Present (GD, GR, VA, Legacy, Forester).",
-    "tags": "bulbs,lights,9005,highbeam",
+    "tags": "bulbs,lights,9005,highbeam,legacy,forester,outback,wrx,sti,impreza,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024",
     "updatedAt": "2026-01-05T12:00:00Z"
   },
   {
@@ -100,7 +100,7 @@
     "category": "Bulbs",
     "title": "D2S HID Bulb (Xenon)",
     "body": "Factory HID Low Beam. Used in: STI 04-14, Forester XT Sports 06-08.",
-    "tags": "bulbs,lights,hid,d2s,sti",
+    "tags": "bulbs,lights,hid,d2s,sti,forester,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014",
     "updatedAt": "2026-01-05T12:00:00Z"
   },
   {

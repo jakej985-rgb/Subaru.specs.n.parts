@@ -92,6 +92,7 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
         'wilderness',
         'ts',
         'gt',
+        'rs',
       ];
 
       for (final t in knownTrims) {

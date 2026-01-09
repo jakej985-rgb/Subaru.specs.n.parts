@@ -86,7 +86,7 @@
     "category": "Oil",
     "title": "EA81/EA82 Oil Capacity",
     "body": "4.0 Liters (4.2 Quarts) with filter.",
-    "tags": "oil,capacity,ea81,ea82,brat,gl,xt",
+    "tags": "oil,capacity,ea81,ea82,brat,gl,gl-10,xt",
     "updatedAt": "2026-01-04T00:00:00Z",
     "verified": false,
     "notes": "Values swapped to match standard format."
@@ -146,7 +146,7 @@
     "category": "Oil",
     "title": "FA24 Turbo Oil Capacity",
     "body": "4.5 Liters (4.8 Quarts) with filter.",
-    "tags": "oil,capacity,fa24,ascent,wrx,legacy,outback",
+    "tags": "oil,capacity,fa24,ascent,wrx,legacy,outback,2019,2020,2021,2022,2023,2024",
     "updatedAt": "2026-01-04T00:00:00Z",
     "verified": false,
     "notes": "Values swapped to match standard format."
