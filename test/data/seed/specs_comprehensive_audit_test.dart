@@ -10,11 +10,8 @@ void main() {
       late List<dynamic> oilSpecs;
       late List<dynamic> coolantSpecs;
       late List<dynamic> transSpecs;
-      late List<dynamic> wheelSpecs;
       late List<dynamic> brakeSpecs;
       late List<dynamic> plugSpecs;
-      late List<dynamic> filterSpecs;
-      late List<dynamic> battSpecs;
       late List<dynamic> fuelSpecs;
       late List<dynamic> tireSpecs;
       late List<dynamic> bulbSpecs;
@@ -36,20 +33,11 @@ void main() {
         transSpecs = json.decode(
           File(p.join(seedDir, 'transmission.json')).readAsStringSync(),
         );
-        wheelSpecs = json.decode(
-          File(p.join(seedDir, 'wheels.json')).readAsStringSync(),
-        );
         brakeSpecs = json.decode(
           File(p.join(seedDir, 'brakes.json')).readAsStringSync(),
         );
         plugSpecs = json.decode(
           File(p.join(seedDir, 'spark_plugs.json')).readAsStringSync(),
-        );
-        filterSpecs = json.decode(
-          File(p.join(seedDir, 'filters.json')).readAsStringSync(),
-        );
-        battSpecs = json.decode(
-          File(p.join(seedDir, 'battery.json')).readAsStringSync(),
         );
         fuelSpecs = json.decode(
           File(p.join(seedDir, 'fuel.json')).readAsStringSync(),

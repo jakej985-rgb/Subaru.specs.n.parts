@@ -165,7 +165,7 @@ void main() {
       expect(spec['body'], contains('16.9 Gallons'));
     });
 
-    test('Has Legacy Gen4 GT Tires (17\")', () {
+    test('Has Legacy Gen4 GT Tires (17")', () {
       final spec = tireSpecs.firstWhere(
         (s) => s['id'] == 's_tire_size_leg_gen4_17',
       );

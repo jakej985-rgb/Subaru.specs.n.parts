@@ -161,7 +161,7 @@ void main() {
       expect(spec['body'], contains('15.9 Gallons'));
     });
 
-    test('Has Forester Gen3 Tires (17\")', () {
+    test('Has Forester Gen3 Tires (17")', () {
       final spec = tireSpecs.firstWhere(
         (s) => s['id'] == 's_tire_size_forester_gen3_17',
       );

@@ -161,7 +161,7 @@ void main() {
       expect(spec['body'], contains('16.9 Gallons'));
     });
 
-    test('Has Outback Gen3 XT Tires (17\")', () {
+    test('Has Outback Gen3 XT Tires (17")', () {
       final spec = tireSpecs.firstWhere(
         (s) => s['id'] == 's_tire_size_outback_gen3_xt',
       );
