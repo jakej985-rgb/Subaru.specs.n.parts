@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:specsnparts/data/db/app_db.dart';
-import 'package:specsnparts/data/db/tables.dart';
+
 import 'package:specsnparts/features/specs_by_category/category_year_results_page.dart';
 import 'package:drift/native.dart';
 
@@ -11,7 +11,7 @@ void main() {
 
   setUp(() async {
     db = AppDatabase(NativeDatabase.memory());
-    
+
     // Seed Data
     final v = Vehicle(
       id: 'v_test',
@@ -39,12 +39,12 @@ void main() {
     await db.close();
   });
 
-  testWidgets('CategoryYearResultsPage shows vehicles and specs', (tester) async {
+  testWidgets('CategoryYearResultsPage shows vehicles and specs', (
+    tester,
+  ) async {
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
-          appDbProvider.overrideWithValue(db),
-        ],
+        overrides: [appDbProvider.overrideWithValue(db)],
         child: const MaterialApp(
           home: CategoryYearResultsPage(categoryKey: 'fluids', year: 2025),
         ),

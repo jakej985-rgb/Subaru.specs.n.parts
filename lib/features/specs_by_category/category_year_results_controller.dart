@@ -31,12 +31,14 @@ class VehicleResult {
 }
 
 final categoryYearResultsControllerProvider =
-    StateNotifierProvider.family<CategoryYearResultsController, YearResultsState, (String, int)>(
-  (ref, args) {
-    final (categoryKey, year) = args;
-    return CategoryYearResultsController(ref, categoryKey, year);
-  },
-);
+    StateNotifierProvider.family<
+      CategoryYearResultsController,
+      YearResultsState,
+      (String, int)
+    >((ref, args) {
+      final (categoryKey, year) = args;
+      return CategoryYearResultsController(ref, categoryKey, year);
+    });
 
 class CategoryYearResultsController extends StateNotifier<YearResultsState> {
   final Ref ref;
@@ -44,7 +46,7 @@ class CategoryYearResultsController extends StateNotifier<YearResultsState> {
   final int year;
 
   CategoryYearResultsController(this.ref, this.categoryKey, this.year)
-      : super(YearResultsState(isLoading: true)) {
+    : super(YearResultsState(isLoading: true)) {
     loadData();
   }
 
@@ -70,7 +72,9 @@ class CategoryYearResultsController extends StateNotifier<YearResultsState> {
       // 2. Fetch Specs for Category (all years/models to filter in memory)
       // Optimization: Could filter by Year tag in SQL if we trust tag format consistently.
       // For now, fetch all for category is safest.
-      final allSpecs = await db.specsDao.getSpecsByCategoriesResult(cat.dataCategories);
+      final allSpecs = await db.specsDao.getSpecsByCategoriesResult(
+        cat.dataCategories,
+      );
 
       // 3. Match
       final results = <VehicleResult>[];
@@ -89,7 +93,7 @@ class CategoryYearResultsController extends StateNotifier<YearResultsState> {
       final groups = grouped.entries
           .map((e) => VehicleGroup(model: e.key, results: e.value))
           .toList();
-      
+
       // Sort groups by Model Name
       groups.sort((a, b) => a.model.compareTo(b.model));
 
@@ -114,10 +118,16 @@ class CategoryYearResultsController extends StateNotifier<YearResultsState> {
       // Aliases logic from SpecsDao
       bool modelMatch = s.tags.contains(modelNorm);
       if (!modelMatch) {
-         if (modelNorm.contains('wrx') && s.tags.contains('wrx')) modelMatch = true;
-         if (modelNorm.contains('sti') && s.tags.contains('sti')) modelMatch = true;
-         if (modelNorm.contains('outback') && s.tags.contains('outback')) modelMatch = true;
-         // Add other aliases as needed
+        if (modelNorm.contains('wrx') && s.tags.contains('wrx')) {
+          modelMatch = true;
+        }
+        if (modelNorm.contains('sti') && s.tags.contains('sti')) {
+          modelMatch = true;
+        }
+        if (modelNorm.contains('outback') && s.tags.contains('outback')) {
+          modelMatch = true;
+        }
+        // Add other aliases as needed
       }
       if (!modelMatch) return false;
 
@@ -127,7 +137,7 @@ class CategoryYearResultsController extends StateNotifier<YearResultsState> {
       // This is simplified. SpecDao has complex logic.
       // For now, accept broad matches to avoid hiding data (better false positive than false negative?).
       // User requested "Group by trim".
-      
+
       return true;
     }).toList();
   }

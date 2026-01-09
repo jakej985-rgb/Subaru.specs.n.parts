@@ -16,7 +16,9 @@ class CategoryYearResultsPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(categoryYearResultsControllerProvider((categoryKey, year)));
+    final state = ref.watch(
+      categoryYearResultsControllerProvider((categoryKey, year)),
+    );
     final cat = SpecCategoryKey.fromKey(categoryKey);
     final title = cat?.title ?? 'Results';
 
@@ -70,10 +72,7 @@ class CategoryYearResultsPage extends ConsumerWidget {
           color: Colors.grey.shade200,
           width: double.infinity,
           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-          child: Text(
-            trimName,
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
+          child: Text(trimName, style: Theme.of(context).textTheme.titleMedium),
         ),
         if (!hasSpecs)
           Padding(
@@ -84,11 +83,13 @@ class CategoryYearResultsPage extends ConsumerWidget {
             ),
           )
         else
-          ...result.specs.map((spec) => ListTile(
-                title: Text(spec.title),
-                subtitle: Text(spec.body),
-                dense: true,
-              )),
+          ...result.specs.map(
+            (spec) => ListTile(
+              title: Text(spec.title),
+              subtitle: Text(spec.body),
+              dense: true,
+            ),
+          ),
       ],
     );
   }
