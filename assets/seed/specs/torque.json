@@ -126,5 +126,45 @@
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "FSM"
+  },
+  {
+    "id": "s_torque_trans_drain_sti_6mt",
+    "category": "Torque",
+    "title": "STI 6MT Trans Drain Plug Torque",
+    "body": "32.5 ft-lbs (44 Nm) for Aluminum Gasket. 51.6 ft-lbs (70 Nm) for Copper/Metal Gasket.",
+    "tags": "2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,6mt,drain,sti,torque,trans",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_torque_diff_drain_sti_r180",
+    "category": "Torque",
+    "title": "STI R180 Rear Diff Drain Plug Torque",
+    "body": "36.9 ft-lbs (50 Nm).",
+    "tags": "2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,diff,drain,r180,sti,torque",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_torque_diff_fill_sti_r180",
+    "category": "Torque",
+    "title": "STI R180 Rear Diff Fill Plug Torque",
+    "body": "36.9 ft-lbs (50 Nm).",
+    "tags": "2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,diff,fill,r180,sti,torque",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_torque_drain_plug_sti_ej257",
+    "category": "Torque",
+    "title": "STI Engine Oil Drain Plug Torque",
+    "body": "33 ft-lbs (44 Nm). Use new crush washer.",
+    "tags": "2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,drain,ej257,oil,sti,torque",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]
