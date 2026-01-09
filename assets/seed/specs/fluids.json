@@ -48,5 +48,45 @@
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_fluid_ps_dex3",
+    "category": "Fluids",
+    "title": "Power Steering Fluid",
+    "body": "Dexron III ATF",
+    "tags": "fluid,steering,gd,sti,wrx,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_fluid_clutch_dot34",
+    "category": "Fluids",
+    "title": "Clutch Fluid",
+    "body": "DOT 3 or DOT 4 Brake Fluid",
+    "tags": "fluid,clutch,mt,gd,sti,wrx,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_ic_spray_capacity_sti_gd_us",
+    "category": "Fluids",
+    "title": "Intercooler Water Spray Tank Capacity",
+    "body": "3.8 Liters (4.0 US quarts, 3.3 Imp quarts) [Trunk Mounted]",
+    "tags": "fluid,capacity,intercooler,sti,gd,2004,2005,2006,2007",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_washer_capacity_gd",
+    "category": "Fluids",
+    "title": "Windshield Washer Tank Capacity",
+    "body": "4.0 Liters (4.2 US quarts)",
+    "tags": "fluid,capacity,washer,gd,gg,wrx,sti,2002,2003,2004,2005,2006,2007",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]
