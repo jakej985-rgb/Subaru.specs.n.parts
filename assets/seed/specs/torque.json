@@ -4,7 +4,7 @@
     "category": "Torque",
     "title": "Lug Nut Torque (Modern 5-Lug)",
     "body": "89 ft-lbs (120 Nm) for most models (1990+). Verify in manual.",
-    "tags": "torque,wheels,lugs,legacy,impreza,forester,outback,wrx,sti,brz,5x100,5x114",
+    "tags": "1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,5x100,5x114,brz,forester,impreza,legacy,lugs,outback,sti,torque,wheels,wrx",
     "updatedAt": "2026-01-05T14:10:00Z"
   },
   {
@@ -12,7 +12,7 @@
     "category": "Torque",
     "title": "Lug Nut Torque (Classic 4-Lug)",
     "body": "58-72 ft-lbs (80-100 Nm) for 4x140mm hubs. WARNING: Do not over-torque to modern specs.",
-    "tags": "torque,wheels,lugs,brat,gl,xt,loyale,classic,4x140",
+    "tags": "4x140,brat,classic,gl,loyale,lugs,torque,wheels,xt",
     "updatedAt": "2026-01-05T14:10:00Z"
   },
   {
@@ -20,7 +20,7 @@
     "category": "Torque",
     "title": "Lug Nut Torque (STI 2004)",
     "body": "65.7 ft-lbs (90 Nm)",
-    "tags": "torque,wheels,lugs,sti,gd,2004",
+    "tags": "2004,gd,lugs,sti,torque,wheels",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "2004 Impreza WRX STI FSM (Section WT-4)"
@@ -30,7 +30,7 @@
     "category": "Torque",
     "title": "Oil Drain Plug Torque",
     "body": "30.8 ft-lbs (41.7 Nm) - check specific model.",
-    "tags": "oil,torque,drain",
+    "tags": "drain,oil,torque",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -38,7 +38,7 @@
     "category": "Torque",
     "title": "Caliper Bracket Bolts (Front)",
     "body": "80 ft-lbs (108 Nm) for STI Brembos.",
-    "tags": "brakes,torque,sti",
+    "tags": "brakes,sti,torque",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -54,7 +54,7 @@
     "category": "Torque",
     "title": "Axle Nut Torque",
     "body": "162 ft-lbs (220 Nm) for Standard. 190 ft-lbs+ for STI/Later Models (check manual). Key stake required.",
-    "tags": "torque,drivetrain,axle,hub",
+    "tags": "axle,drivetrain,hub,sti,torque",
     "updatedAt": "2026-01-05T12:30:00Z"
   },
   {
@@ -62,7 +62,7 @@
     "category": "Torque",
     "title": "Oil Drain Plug Torque (FA20)",
     "body": "29 ft-lbs (39 Nm). Use a new crush washer.",
-    "tags": "oil,torque,drain,brz,fa20,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,drain,fa20,oil,torque",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
@@ -72,7 +72,7 @@
     "category": "Torque",
     "title": "MT Trans Drain Plug Torque",
     "body": "27 ft-lbs (37 Nm). Use a new gasket.",
-    "tags": "trans,torque,drain,brz,mt,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,drain,mt,torque,trans",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "FSM"
@@ -82,7 +82,7 @@
     "category": "Torque",
     "title": "MT Trans Fill Plug Torque",
     "body": "27 ft-lbs (37 Nm). Use a new gasket.",
-    "tags": "trans,torque,fill,brz,mt,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,fill,mt,torque,trans",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "FSM"
@@ -92,7 +92,7 @@
     "category": "Torque",
     "title": "Rear Diff Drain Plug Torque",
     "body": "36 ft-lbs (49 Nm). 10mm Hex.",
-    "tags": "diff,torque,drain,brz,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,diff,drain,torque",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "FSM"
@@ -102,7 +102,7 @@
     "category": "Torque",
     "title": "Rear Diff Fill Plug Torque",
     "body": "36 ft-lbs (49 Nm). 10mm Hex.",
-    "tags": "diff,torque,fill,brz,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,diff,fill,torque",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "FSM"
@@ -112,7 +112,7 @@
     "category": "Torque",
     "title": "Lug Nut Torque (BRZ)",
     "body": "89 ft-lbs (120 Nm)",
-    "tags": "wheels,torque,lugs,brz,2013,2014,2015,2016,2017,2018,2019,2020,2022,2023,2024",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,2022,2023,2024,brz,lugs,torque,wheels",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
@@ -122,7 +122,7 @@
     "category": "Torque",
     "title": "Spark Plug Torque (FA20)",
     "body": "13 ft-lbs (17 Nm)",
-    "tags": "spark,torque,brz,fa20,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,fa20,spark,torque",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "FSM"

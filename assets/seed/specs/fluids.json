@@ -4,7 +4,7 @@
     "category": "Fluids",
     "title": "Brake Fluid Type",
     "body": "DOT 3 or DOT 4.",
-    "tags": "brakes,fluid",
+    "tags": "1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,brakes,fluid,type",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -12,7 +12,7 @@
     "category": "Fluids",
     "title": "Rear Differential Fluid",
     "body": "GL-5 75W-90",
-    "tags": "diff,fluid",
+    "tags": "1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,diff,fluid,gl",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -20,7 +20,7 @@
     "category": "Fluids",
     "title": "R160 Rear Diff Capacity",
     "body": "0.8 Liters (0.8 Quarts)",
-    "tags": "diff,fluid,r160,wrx,gd,capacity",
+    "tags": "2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,capacity,diff,fluid,gd,r160,wrx",
     "updatedAt": "2024-05-24T00:00:00Z"
   },
   {
@@ -28,7 +28,7 @@
     "category": "Fluids",
     "title": "R180 Rear Diff Capacity",
     "body": "1.0 Liters (1.1 Quarts)",
-    "tags": "diff,fluid,r180,sti,gd,capacity",
+    "tags": "2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,capacity,diff,fluid,gd,r180,sti",
     "updatedAt": "2024-05-24T00:00:00Z"
   },
   {
@@ -36,7 +36,7 @@
     "category": "Fluids",
     "title": "EV Coolant (Solterra)",
     "body": "Special EV Coolant. Do not mix with engine coolant.",
-    "tags": "coolant,fluid,solterra,ev",
+    "tags": "2022,2023,2024,coolant,ev,fluid,solterra",
     "updatedAt": "2026-01-04T00:00:00Z"
   },
   {
@@ -44,7 +44,7 @@
     "category": "Fluids",
     "title": "Brake Fluid",
     "body": "DOT 3 or DOT 4.",
-    "tags": "brakes,fluid,brz,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brakes,brz,fluid",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
@@ -56,6 +56,12 @@
     "body": "3.5 Liters (3.7 Quarts) - GL-5 75W-90",
     "tags": "fluid,trans,mt,sf,forester,1998,1999,2000,2001,2002",
     "updatedAt": "2026-01-05T00:00:00Z",
+    "id": "s_fluid_ps_dex3",
+    "category": "Fluids",
+    "title": "Power Steering Fluid",
+    "body": "Dexron III ATF",
+    "tags": "2002,2003,2004,2005,2006,2007,fluid,gd,steering,sti,wrx",
+    "updatedAt": "2026-01-08T00:00:00Z",
     "verified": true,
     "source": "FSM"
   },
@@ -66,6 +72,32 @@
     "body": "0.8 Liters (0.8 Quarts) - GL-5 75W-90",
     "tags": "fluid,diff,rear,sf,forester,1998,1999,2000,2001,2002",
     "updatedAt": "2026-01-05T00:00:00Z",
+    "id": "s_fluid_clutch_dot34",
+    "category": "Fluids",
+    "title": "Clutch Fluid",
+    "body": "DOT 3 or DOT 4 Brake Fluid",
+    "tags": "2002,2003,2004,2005,2006,2007,clutch,fluid,gd,mt,sti,wrx",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_ic_spray_capacity_sti_gd_us",
+    "category": "Fluids",
+    "title": "Intercooler Water Spray Tank Capacity",
+    "body": "3.8 Liters (4.0 US quarts, 3.3 Imp quarts) [Trunk Mounted]",
+    "tags": "2004,2005,2006,2007,capacity,fluid,gd,intercooler,sti",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_washer_capacity_gd",
+    "category": "Fluids",
+    "title": "Windshield Washer Tank Capacity",
+    "body": "4.0 Liters (4.2 US quarts)",
+    "tags": "2002,2003,2004,2005,2006,2007,capacity,fluid,gd,gg,sti,washer,wrx",
+    "updatedAt": "2026-01-08T00:00:00Z",
     "verified": true,
     "source": "FSM"
   }

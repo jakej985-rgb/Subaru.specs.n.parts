@@ -4,7 +4,7 @@
     "category": "Oil",
     "title": "WRX 2022+ Oil Capacity",
     "body": "4.8 Liters (5.1 Quarts) with filter change.",
-    "tags": "oil,capacity,fa24,wrx,vb,2022,2023,2024",
+    "tags": "2022,2023,2024,capacity,fa24,oil,vb,wrx",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -12,7 +12,7 @@
     "category": "Oil",
     "title": "STI 2015-2021 Oil Capacity",
     "body": "4.3 Liters (4.5 Quarts)",
-    "tags": "oil,capacity,ej257,sti,va",
+    "tags": "2015,2016,2017,2018,2019,2020,2021,capacity,ej257,oil,sti,va",
     "updatedAt": "2024-05-24T00:00:00Z"
   },
   {
@@ -20,7 +20,7 @@
     "category": "Oil",
     "title": "STI 2004-2007 Oil Capacity",
     "body": "4.5 Liters (4.8 Quarts) with filter.",
-    "tags": "oil,capacity,ej257,sti,gd",
+    "tags": "2004,2005,2006,2007,capacity,ej257,gd,oil,sti",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -28,7 +28,7 @@
     "category": "Oil",
     "title": "WRX 2002-2005 Oil Capacity",
     "body": "4.5 Liters (4.8 Quarts) with filter.",
-    "tags": "oil,capacity,ej205,wrx,gd",
+    "tags": "2002,2003,2004,2005,capacity,ej205,gd,oil,wrx",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -36,7 +36,7 @@
     "category": "Oil",
     "title": "WRX 2022+ Oil Viscosity",
     "body": "0W-20 Synthetic",
-    "tags": "oil,viscosity,fa24,wrx,vb,2022,2023,2024",
+    "tags": "2022,2023,2024,fa24,oil,vb,viscosity,wrx",
     "updatedAt": "2026-01-04T07:34:37Z",
     "verified": true,
     "source": "FSM"
@@ -46,7 +46,7 @@
     "category": "Oil",
     "title": "STI 2015-2021 Oil Viscosity",
     "body": "5W-30 Synthetic",
-    "tags": "oil,viscosity,ej257,sti,va",
+    "tags": "2015,2016,2017,2018,2019,2020,2021,ej257,oil,sti,va,viscosity",
     "updatedAt": "2026-01-04T07:34:37Z",
     "verified": true,
     "source": "FSM"
@@ -56,7 +56,7 @@
     "category": "Oil",
     "title": "WRX 2015-2021 Oil Viscosity",
     "body": "5W-30 Synthetic",
-    "tags": "oil,viscosity,fa20,wrx,va",
+    "tags": "2015,2016,2017,2018,2019,2020,2021,fa20,oil,va,viscosity,wrx",
     "updatedAt": "2026-01-04T07:34:37Z",
     "verified": true,
     "source": "FSM"
@@ -66,7 +66,7 @@
     "category": "Oil",
     "title": "STI 2004-2007 Oil Viscosity",
     "body": "5W-30 Synthetic",
-    "tags": "oil,viscosity,ej257,sti,gd",
+    "tags": "2004,2005,2006,2007,ej257,gd,oil,sti,viscosity",
     "updatedAt": "2026-01-04T07:34:37Z",
     "verified": true,
     "source": "FSM"
@@ -76,7 +76,7 @@
     "category": "Oil",
     "title": "WRX 2002-2005 Oil Viscosity",
     "body": "5W-30 Synthetic",
-    "tags": "oil,viscosity,ej205,wrx,gd",
+    "tags": "2002,2003,2004,2005,ej205,gd,oil,viscosity,wrx",
     "updatedAt": "2026-01-04T07:34:37Z",
     "verified": true,
     "source": "FSM"
@@ -86,7 +86,7 @@
     "category": "Oil",
     "title": "EA81/EA82 Oil Capacity",
     "body": "4.0 Liters (4.2 Quarts) with filter.",
-    "tags": "oil,capacity,ea81,ea82,brat,gl,xt",
+    "tags": "brat,capacity,ea81,ea82,gl,gl-10,oil,xt",
     "updatedAt": "2026-01-04T00:00:00Z",
     "verified": false,
     "notes": "Values swapped to match standard format."
@@ -94,39 +94,59 @@
   {
     "id": "s_oil_EF12",
     "category": "Oil",
-    "title": "EF12 Oil Capacity",
+    "title": "Subaru Justy 1.0/1.2 (EF10/EF12) Oil Capacity",
     "body": "3.0 Liters (3.2 Quarts) with filter.",
-    "tags": "oil,capacity,ef12,justy",
-    "updatedAt": "2026-01-04T00:00:00Z",
-    "verified": false,
-    "notes": "Metric converted from US Qts - TBD verify."
+    "tags": "1987,1988,1989,1990,1991,1992,1993,1994,capacity,ef10,ef12,justy,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   },
   {
     "id": "s_oil_EG33",
     "category": "Oil",
-    "title": "EG33 Oil Capacity",
-    "body": "6.0 - 6.6 Liters (6.4 - 7.0 Quarts) - check dipstick.",
-    "tags": "oil,capacity,eg33,svx",
-    "updatedAt": "2026-01-04T00:00:00Z",
-    "verified": false,
-    "notes": "Metric converted from US Qts - TBD verify."
+    "title": "Subaru EG33 Oil Capacity (SVX)",
+    "body": "6.0 Liters (6.3 Quarts) with filter.",
+    "tags": "1992,1993,1994,1995,1996,1997,capacity,eg33,oil,svx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   },
   {
-    "id": "s_oil_EZ30_36",
+    "id": "s_oil_capacity_ez30",
     "category": "Oil",
-    "title": "EZ30/EZ36 Oil Capacity",
-    "body": "5.5 - 6.0 Liters (5.8 - 6.3 Quarts) with filter.",
-    "tags": "oil,capacity,ez30,ez36,tribeca,legacy,outback",
-    "updatedAt": "2026-01-04T00:00:00Z",
-    "verified": false,
-    "notes": "Metric converted from US Qts - TBD verify."
+    "title": "Subaru EZ30 Oil Capacity (Tribeca/Outback)",
+    "body": "5.7 Liters (6.0 Quarts) with filter.",
+    "tags": "2001,2002,2003,2004,2005,2006,2007,capacity,ez30,gen3,oil,outback,tribeca",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ez36_tribeca",
+    "category": "Oil",
+    "title": "Subaru EZ36 Oil Capacity (Tribeca)",
+    "body": "6.5 Liters (6.9 Quarts) with filter.",
+    "tags": "2008,2009,2010,2011,2012,2013,2014,capacity,ez36,oil,tribeca",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ez36_outback",
+    "category": "Oil",
+    "title": "Subaru EZ36 Oil Capacity (Outback/Legacy)",
+    "body": "6.3 Liters (6.7 Quarts) with filter.",
+    "tags": "2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,capacity,ez36,gen4,legacy,oil,outback",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   },
   {
     "id": "s_oil_FA24T",
     "category": "Oil",
     "title": "FA24 Turbo Oil Capacity",
     "body": "4.5 Liters (4.8 Quarts) with filter.",
-    "tags": "oil,capacity,fa24,ascent,wrx,legacy,outback",
+    "tags": "2019,2020,2021,2022,2023,2024,ascent,capacity,fa24,legacy,oil,outback,turbo,wrx",
     "updatedAt": "2026-01-04T00:00:00Z",
     "verified": false,
     "notes": "Values swapped to match standard format."
@@ -136,7 +156,7 @@
     "category": "Oil",
     "title": "FB20 Oil Capacity",
     "body": "4.4 Liters (4.7 Quarts) with filter.",
-    "tags": "oil,capacity,fb20,crosstrek,impreza",
+    "tags": "capacity,crosstrek,fb20,impreza,oil",
     "updatedAt": "2026-01-04T00:00:00Z",
     "verified": false,
     "notes": "Values swapped to match standard format."
@@ -146,7 +166,7 @@
     "category": "Oil",
     "title": "Oil Capacity (FA20)",
     "body": "5.4 Liters (5.7 Quarts) with filter.",
-    "tags": "oil,capacity,brz,fa20,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,capacity,fa20,oil",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
@@ -156,7 +176,7 @@
     "category": "Oil",
     "title": "Oil Viscosity (FA20)",
     "body": "0W-20 Synthetic API SN/SM",
-    "tags": "oil,viscosity,brz,fa20,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,fa20,oil,viscosity",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
@@ -180,5 +200,482 @@
     "updatedAt": "2026-01-05T00:00:00Z",
     "verified": true,
     "source": "FSM"
+    "id": "s_oil_capacity_brz_fa24",
+    "category": "Oil",
+    "title": "Oil Capacity (FA24)",
+    "body": "5.0 Liters (5.3 Quarts) with filter.",
+    "tags": "oil,capacity,brz,fa24,2022,2023,2024",
+    "updatedAt": "2024-05-25T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual (JDM/Global)",
+    "notes": "Source lists 5.0L. Some US sources say 5.3qts."
+  },
+  {
+    "id": "s_oil_viscosity_brz_fa24",
+    "category": "Oil",
+    "title": "Oil Viscosity (FA24)",
+    "body": "0W-20 Synthetic API SP/SN Plus",
+    "tags": "oil,viscosity,brz,fa24,2022,2023,2024",
+    "updatedAt": "2024-05-25T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
+    "id": "s_oil_capacity_ej22_legacy_gen1",
+    "category": "Oil",
+    "title": "Legacy 1990-1994 (EJ22) Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "1990,1991,1992,1993,1994,capacity,ej22,legacy,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_viscosity_ej22_legacy_gen1",
+    "category": "Oil",
+    "title": "Legacy 1990-1994 (EJ22) Oil Viscosity",
+    "body": "10W-30 (Preferred), 5W-30 (< 0°C).",
+    "tags": "1990,1991,1992,1993,1994,ej22,legacy,oil,viscosity",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej18_impreza_gen1",
+    "category": "Oil",
+    "title": "Impreza 1993-1997 (EJ18) Oil Capacity",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
+    "tags": "1993,1994,1995,1996,1997,capacity,ej18,impreza,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej22_impreza_gen1",
+    "category": "Oil",
+    "title": "Impreza 1995-2001 (EJ22) Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "1995,1996,1997,1998,1999,2000,2001,capacity,ej22,impreza,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej25d_forester_gen1",
+    "category": "Oil",
+    "title": "Forester 1998 (EJ25D) Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "1998,capacity,ej25d,forester,oil,sf",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej251_forester_gen1",
+    "category": "Oil",
+    "title": "Forester 1999-2002 (EJ251) Oil Capacity",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
+    "tags": "1999,2000,2001,2002,capacity,ej251,forester,oil,sf",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_viscosity_forester_gen1",
+    "category": "Oil",
+    "title": "Forester 1998-2002 Oil Viscosity",
+    "body": "5W-30 (Preferred), 10W-30 (> 0°F).",
+    "tags": "1998,1999,2000,2001,2002,ej251,ej25d,forester,oil,sf,viscosity",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej22_legacy_gen2",
+    "category": "Oil",
+    "title": "Legacy 1995-1999 (EJ22) Oil Capacity",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
+    "tags": "1995,1996,1997,1998,1999,bd,bg,bk,capacity,ej22,legacy,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej25d_legacy_gen2",
+    "category": "Oil",
+    "title": "Legacy 1996-1999 (EJ25D) Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "1996,1997,1998,1999,bd,bg,bk,capacity,ej25d,legacy,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej205_wrx_gen2",
+    "category": "Oil",
+    "title": "WRX 2002-2005 (EJ205) Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "2002,2003,2004,2005,capacity,ej205,gd,gg,impreza,oil,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_viscosity_ej205_wrx_gen2",
+    "category": "Oil",
+    "title": "WRX 2002-2005 (EJ205) Oil Viscosity",
+    "body": "5W-30 (Preferred). Synthetic recommended for Turbo.",
+    "tags": "2002,2003,2004,2005,ej205,gd,gg,impreza,oil,turbo,viscosity,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej257_sti_gen2",
+    "category": "Oil",
+    "title": "STI 2004-2007 (EJ257) Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter. Check level after 4.5 Qts.",
+    "tags": "2004,2005,2006,2007,capacity,ej257,gd,impreza,oil,sti,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_viscosity_ej257_sti_gen2",
+    "category": "Oil",
+    "title": "STI 2004-2007 (EJ257) Oil Viscosity",
+    "body": "5W-30 (Preferred). Synthetic Highly Recommended.",
+    "tags": "2004,2005,2006,2007,ej257,gd,impreza,oil,sti,viscosity,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej25_legacy_gen3",
+    "category": "Oil",
+    "title": "Legacy 2000-2004 (EJ25) Oil Capacity",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
+    "tags": "2000,2001,2002,2003,2004,be,bh,capacity,ej25,ej251,ej252,legacy,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ez30_legacy_gen3",
+    "category": "Oil",
+    "title": "Legacy 2001-2004 (EZ30 H6) Oil Capacity",
+    "body": "5.7 Liters (6.0 Quarts) with filter. Check level.",
+    "tags": "2001,2002,2003,2004,be,bh,capacity,ez30,h6,legacy,oil,outback",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej25_for_gen2",
+    "category": "Oil",
+    "title": "Forester 2.5X/XS 2003-2008 (EJ25) Oil Capacity",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
+    "tags": "2003,2004,2005,2006,2007,2008,capacity,ej25,forester,na,oil,sg",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej255_for_gen2_xt",
+    "category": "Oil",
+    "title": "Forester 2.5XT 2004-2008 (EJ255) Oil Capacity",
+    "body": "4.5-4.7 Liters (4.8 - 5.0 Quarts) with filter.",
+    "tags": "2004,2005,2006,2007,2008,capacity,ej255,forester,oil,sg,xt",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ej25_imp_gen2",
+    "category": "Oil",
+    "title": "Impreza RS/TS/2.5i 2002-2007 (EJ25) Oil Capacity",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
+    "tags": "2002,2003,2004,2005,2006,2007,capacity,ej25,gd,gg,impreza,na,oil,rs,ts",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_outback_gen3_na",
+    "category": "Oil",
+    "title": "Outback 2.5i 2005-2009 (EJ25) Oil Capacity",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
+    "tags": "2005,2006,2007,2008,2009,capacity,ej25,gen3,na,oil,outback",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_outback_gen3_xt",
+    "category": "Oil",
+    "title": "Outback 2.5i XT 2005-2009 (EJ255) Oil Capacity",
+    "body": "4.3 Liters (4.5 Quarts) with filter.",
+    "tags": "2005,2006,2007,2008,2009,capacity,ej255,gen3,oil,outback,xt",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_outback_gen4_na",
+    "category": "Oil",
+    "title": "Outback 2.5i 2009-2014 (EJ25) Oil Capacity",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
+    "tags": "2009,2010,2011,2012,2013,2014,capacity,ej25,gen4,na,oil,outback",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_outback_gen4_xt",
+    "category": "Oil",
+    "title": "Outback 2.5i XT 2009-2014 (EJ255) Oil Capacity",
+    "body": "4.3 Liters (4.5 Quarts) with filter.",
+    "tags": "2009,2010,2011,2012,2013,2014,capacity,ej255,gen4,oil,outback,xt",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_outback_gen4_36r",
+    "category": "Oil",
+    "title": "Outback 3.6R 2009-2014 (EZ36D) Oil Capacity",
+    "body": "6.5 Liters (6.9 Quarts) with filter.",
+    "tags": "2009,2010,2011,2012,2013,2014,3.6r,capacity,ez36d,gen4,oil,outback",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_forester_gen3_na_ej",
+    "category": "Oil",
+    "title": "Forester 2.5i 2009-2010 (EJ253) Oil Capacity",
+    "body": "4.2 Liters (4.4 Quarts) with filter.",
+    "tags": "2009,2010,capacity,ej253,forester,na,oil,sh",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_forester_gen3_na_fb",
+    "category": "Oil",
+    "title": "Forester 2.5i 2011-2013 (FB25) Oil Capacity",
+    "body": "5.2 Liters (5.5 Quarts) with filter.",
+    "tags": "2011,2012,2013,capacity,fb25,forester,na,oil,sh",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_forester_gen3_xt",
+    "category": "Oil",
+    "title": "Forester 2.5XT 2009-2013 (EJ255) Oil Capacity",
+    "body": "4.2 Liters (4.4 Quarts) with filter.",
+    "tags": "2009,2010,2011,2012,2013,capacity,ej255,forester,oil,sh,xt",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_imp_gen3_na",
+    "category": "Oil",
+    "title": "Impreza 2.5i 2008-2011 (EJ253) Oil Capacity",
+    "body": "4.2 Liters (4.4 Quarts) with filter.",
+    "tags": "2008,2009,2010,2011,capacity,ej253,ge,gh,impreza,na,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_imp_gen3_wrx",
+    "category": "Oil",
+    "title": "WRX 2008-2011 (EJ255) Oil Capacity",
+    "body": "4.2 Liters (4.4 Quarts) with filter.",
+    "tags": "2008,2009,2010,2011,capacity,ej255,gh,gr,gv,impreza,oil,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_imp_gen3_sti",
+    "category": "Oil",
+    "title": "STI 2008-2011 (EJ257) Oil Capacity",
+    "body": "4.3 Liters (4.5 Quarts) with filter.",
+    "tags": "2008,2009,2010,2011,capacity,ej257,gr,gv,impreza,oil,sti,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_leg_gen4_na",
+    "category": "Oil",
+    "title": "Legacy 2.5i 2005-2009 (EJ253) Oil Capacity",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
+    "tags": "2005,2006,2007,2008,2009,bl,bp,capacity,ej253,legacy,na,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_leg_gen4_gt",
+    "category": "Oil",
+    "title": "Legacy GT/Spec.B 2005-2009 (EJ255) Oil Capacity",
+    "body": "4.3 Liters (4.5 Quarts) with filter.",
+    "tags": "2005,2006,2007,2008,2009,bl,bp,capacity,ej255,gt,legacy,oil,specb",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_leg_gen4_30r",
+    "category": "Oil",
+    "title": "Legacy 3.0R 2005-2009 (EZ30D H6) Oil Capacity",
+    "body": "5.7 Liters (6.0 Quarts) with filter.",
+    "tags": "2005,2006,2007,2008,2009,3.0r,bl,bp,capacity,ez30d,h6,legacy,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_baja_na",
+    "category": "Oil",
+    "title": "Baja 2.5i/Sport 2003-2006 (EJ25) Oil Capacity",
+    "body": "4.0 Liters (4.2 Quarts) with filter.",
+    "tags": "2003,2004,2005,2006,baja,capacity,ej25,na,oil,sport",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_baja_turbo",
+    "category": "Oil",
+    "title": "Baja Turbo 2004-2006 (EJ255) Oil Capacity",
+    "body": "4.5 Liters (4.8 Quarts) with filter.",
+    "tags": "2004,2005,2006,baja,capacity,ej255,oil,turbo",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_ea71",
+    "category": "Oil",
+    "title": "Subaru 1600 (EA71) Oil Capacity",
+    "body": "3.5 Liters (3.7 Quarts) with filter.",
+    "tags": "1976,1977,1978,1979,1980,1981,1982,1983,1984,brat,capacity,dl,ea71,gl,leone,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_er27",
+    "category": "Oil",
+    "title": "XT6 2.7L (ER27) Oil Capacity",
+    "body": "5.0 Liters (5.3 Quarts) with filter.",
+    "tags": "1988,1989,1990,1991,capacity,er27,h6,oil,xt,xt6",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_forester_gen4_na",
+    "category": "Oil",
+    "title": "Forester 2.5i 2014-2018 (SJ) Oil Capacity",
+    "body": "4.8 Liters (5.1 Quarts) with filter.",
+    "tags": "2014,2015,2016,2017,2018,capacity,fb25,forester,na,oil,sj",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_forester_gen4_xt",
+    "category": "Oil",
+    "title": "Forester 2.0XT 2014-2018 (SJ) Oil Capacity",
+    "body": "5.1 Liters (5.4 Quarts) with filter.",
+    "tags": "2014,2015,2016,2017,2018,capacity,fa20dit,forester,oil,sj,xt",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_forester_gen5",
+    "category": "Oil",
+    "title": "Forester 2.5i 2019-2024 (SK) Oil Capacity",
+    "body": "4.2 Liters (4.4 Quarts) with filter.",
+    "tags": "2019,2020,2021,2022,2023,2024,capacity,fb25di,forester,na,oil,sk",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_wrx_va",
+    "category": "Oil",
+    "title": "WRX 2015-2021 (FA20DIT) Oil Capacity",
+    "body": "5.1 Liters (5.4 Quarts) with filter.",
+    "tags": "2015,2016,2017,2018,2019,2020,2021,capacity,fa20dit,oil,va,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_impreza_gp_crosstrek",
+    "category": "Oil",
+    "title": "Impreza 2012-2016 / Crosstrek 2013-2017 Oil Capacity",
+    "body": "4.8 Liters (5.1 Quarts) with filter.",
+    "tags": "2012,2013,2014,2015,2016,2017,capacity,crosstrek,fb20,gp,impreza,na,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_impreza_gt_crosstrek",
+    "category": "Oil",
+    "title": "Impreza 2017+ / Crosstrek 2018+ Oil Capacity",
+    "body": "4.4 Liters (4.7 Quarts) with filter.",
+    "tags": "2017,2018,2019,2020,2021,2022,2023,capacity,crosstrek,fb20d,gk,gt,impreza,na,oil",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_outback_gen5_na",
+    "category": "Oil",
+    "title": "Outback 2.5i 2015-2019 Oil Capacity",
+    "body": "4.8 Liters (5.1 Quarts) with filter.",
+    "tags": "2015,2016,2017,2018,2019,bs,capacity,fb25,na,oil,outback",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_brz_zc6",
+    "category": "Oil",
+    "title": "BRZ 2013-2020 (FA20) Oil Capacity",
+    "body": "5.4 Liters (5.7 Quarts) with filter.",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,86,brz,capacity,fa20,frs,oil,zc6",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_leg_gen5_ej",
+    "category": "Oil",
+    "title": "Legacy/Outback 2.5i 2010-2012 (EJ253) Oil Capacity",
+    "body": "4.2 Liters (4.4 Quarts) with filter.",
+    "tags": "2010,2011,2012,bm,br,capacity,ej253,legacy,na,oil,outback",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_oil_capacity_leg_gen5_fb",
+    "category": "Oil",
+    "title": "Legacy/Outback 2.5i 2013-2014 (FB25) Oil Capacity",
+    "body": "4.8 Liters (5.1 Quarts) with filter.",
+    "tags": "2013,2014,bm,br,capacity,fb25,legacy,na,oil,outback",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]

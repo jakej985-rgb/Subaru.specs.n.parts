@@ -11,6 +11,17 @@ import 'package:drift/native.dart';
 import 'package:specsnparts/app.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 
+import 'package:specsnparts/data/seed/seed_runner.dart';
+
+class MockSeedRunner extends SeedRunner {
+  MockSeedRunner(super.db);
+
+  @override
+  Future<void> runSeedIfNeeded() async {
+    // No-op for smoke test
+  }
+}
+
 void main() {
   testWidgets('App smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
@@ -18,10 +29,16 @@ void main() {
       ProviderScope(
         overrides: [
           appDbProvider.overrideWithValue(AppDatabase(NativeDatabase.memory())),
+          seedRunnerProvider.overrideWith((ref) {
+            final db = ref.watch(appDbProvider);
+            return MockSeedRunner(db);
+          }),
         ],
         child: const SubaruSpecsApp(),
       ),
     );
+
+    await tester.pumpAndSettle();
 
     // Verify that the app title is present.
     expect(find.text('Subaru Specs & Parts'), findsOneWidget);

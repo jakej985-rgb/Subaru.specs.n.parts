@@ -80,7 +80,11 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
     // This logic ensures that if a spec is specific to a trim (e.g. tagged "base" only),
     // it doesn't show up for "limited".
     return candidates.where((spec) {
-      final tags = spec.tags.toLowerCase();
+      final tagList = spec.tags
+          .toLowerCase()
+          .split(',')
+          .map((e) => e.trim())
+          .toSet();
 
       // Known trim tags to check against
       final knownTrims = [
@@ -92,14 +96,23 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
         'wilderness',
         'ts',
         'gt',
+        'rs',
+        'xt',
+        'l',
+        's',
+        'xs',
+        'ls',
+        'lsi',
+        'brighton',
+        'gl',
+        'dl',
       ];
 
       for (final t in knownTrims) {
-        if (tags.contains(t)) {
+        if (tagList.contains(t)) {
           // If spec has this trim tag, vehicle trim MUST also contain it.
           if (!trim.contains(t)) {
-            // Special case: "Impreza WRX" trim might match "WRX" tag?
-            // But "WRX" is handled in the query aliases.
+            // Special case below...
             // Here we are concerned with "Limited", "Base", etc.
             // If spec says "Limited" and trim is "Base", return false.
             // But if spec says "WRX" and trim is "WRX Limited", we should keep it.

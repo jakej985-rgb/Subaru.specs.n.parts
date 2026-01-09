@@ -4,7 +4,7 @@
     "category": "Differential",
     "title": "R160_390",
     "body": "Family: R160\nFinal Drive: 3.90\nLSD: Open (some WRX viscous LSD)\nNotes: Match trans FD",
-    "tags": "impreza,differential",
+    "tags": "2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,differential,impreza,wrx",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {
@@ -12,7 +12,7 @@
     "category": "Differential",
     "title": "R160_411",
     "body": "Family: R160\nFinal Drive: 4.11\nLSD: Open\nNotes: Match 4EAT 4.11",
-    "tags": "impreza,differential",
+    "tags": "2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,differential,forester,impreza,legacy",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {
@@ -20,7 +20,7 @@
     "category": "Differential",
     "title": "R160_370",
     "body": "Family: R160\nFinal Drive: 3.70\nLSD: Some viscous LSD\nNotes: Unique; common swap trap",
-    "tags": "impreza,differential",
+    "tags": "2002,2003,2004,2005,2006,2007,differential,impreza,wrx",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {
@@ -28,7 +28,7 @@
     "category": "Differential",
     "title": "R180_390",
     "body": "Family: R180\nFinal Drive: 3.90\nLSD: Clutch LSD\nNotes: Requires STI axles/hubs or hybrid conversion",
-    "tags": "impreza,differential",
+    "tags": "2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,differential,impreza,sti",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {
@@ -36,9 +36,88 @@
     "category": "Differential",
     "title": "Rear Differential Capacity",
     "body": "1.15 Liters (1.2 Quarts). Use GL-5 75W-85 or 75W-90.",
-    "tags": "diff,fluid,capacity,brz,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,capacity,diff,fluid,gl",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_diff_capacity_brz_fa24",
+    "category": "Differential",
+    "title": "Rear Differential Capacity (FA24)",
+    "body": "1.15 Liters (1.2 Quarts). Use GL-5 75W-85 (Toyota Diff Gear Oil LX).",
+    "tags": "diff,fluid,capacity,brz,fa24,2022,2023,2024",
+    "updatedAt": "2024-05-25T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual (JDM)",
+    "notes": "Spec changed to 75W-85 for Gen 2 LSD."
+    "id": "s_diff_ratio_legacy_gen1_411",
+    "category": "Differential",
+    "title": "Final Drive Ratio (Legacy 1990-1994 4.11)",
+    "body": "4.11 (Common on 4EAT and specific 5MT trims). R160 Open.",
+    "tags": "1990,1991,1992,1993,1994,diff,legacy,r160,ratio",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_diff_ratio_legacy_gen1_390",
+    "category": "Differential",
+    "title": "Final Drive Ratio (Legacy 1990-1994 3.90)",
+    "body": "3.90 (Common on Base 5MT). R160 Open.",
+    "tags": "1990,1991,1992,1993,1994,base,diff,legacy,r160,ratio",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_diff_capacity_sti_r180_gen2",
+    "category": "Fluids",
+    "title": "Rear Differential Fluid (STI 2004-2007 R180)",
+    "body": "1.1 Quarts (1.0 Liter). 2004-2006 requires LSD Additive/90PA. 2007+ is Torsen (GL-5).",
+    "tags": "2004,2005,2006,2007,capacity,diff,fluid,gl,r180,rear,sti",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_diff_capacity_outback_gen4_front",
+    "category": "Differential",
+    "title": "Front Differential 2010-2014 (Auto) Fluid Capacity",
+    "body": "1.4 - 1.5 Quarts (1.3 - 1.4 Liters). 75W-90 GL-5.",
+    "tags": "2010,2011,2012,2013,2014,capacity,diff,fluid,front,gen4,gl,outback",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_diff_capacity_outback_gen4_rear",
+    "category": "Differential",
+    "title": "Rear Differential 2010-2014 Fluid Capacity",
+    "body": "0.8 Quarts (0.8 Liters). 75W-90 GL-5.",
+    "tags": "2010,2011,2012,2013,2014,capacity,diff,fluid,gen4,gl,outback,rear",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_diff_capacity_wrx_vb_rear",
+    "category": "Differential",
+    "title": "Rear Differential 2022+ Fluid Capacity",
+    "body": "0.8 Quarts (0.8 Liters)",
+    "tags": "2022,2023,2024,capacity,diff,fluid,rear,vb,wrx",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_diff_fluid_type_wrx_vb_rear",
+    "category": "Differential",
+    "title": "Rear Differential 2022+ Fluid Type",
+    "body": "GL-5 75W-90",
+    "tags": "2022,2023,2024,diff,fluid,gl,rear,type,vb,wrx",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]

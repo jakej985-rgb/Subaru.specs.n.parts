@@ -4,7 +4,7 @@
     "category": "Fuel",
     "title": "Recommended Fuel",
     "body": "91 Octane or higher for Turbo models.",
-    "tags": "fuel,gas",
+    "tags": "fuel,gas,turbo",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -12,9 +12,229 @@
     "category": "Fuel",
     "title": "Fuel Tank Capacity",
     "body": "50 Liters (13.2 Gallons). Premium Unleaded required.",
-    "tags": "fuel,tank,capacity,brz,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,capacity,fuel,premium,tank",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_fuel_tank_legacy_gen1",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Legacy 1990-1994)",
+    "body": "15.9 Gallons (60 Liters). Regular Unleaded (87 Octane) for NA, Premium (91+) for Turbo.",
+    "tags": "1990,1991,1992,1993,1994,bc,bf,capacity,ej22,fuel,legacy,premium,tank,turbo",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_impreza_gen1",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Impreza 1993-2001)",
+    "body": "13.2 Gallons (50 Liters). Regular Unleaded (87 Octane) for NA.",
+    "tags": "1993,1994,1995,1996,1997,1998,1999,2000,2001,capacity,ej18,ej22,fuel,impreza,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_forester_gen1",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Forester 1998-2002)",
+    "body": "15.9 Gallons (60 Liters). Regular Unleaded (87 Octane).",
+    "tags": "1998,1999,2000,2001,2002,capacity,ej251,ej25d,forester,fuel,sf,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_legacy_gen2",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Legacy 1995-1999)",
+    "body": "15.9 Gallons (60 Liters). Regular Unleaded (87 Octane) for NA.",
+    "tags": "1995,1996,1997,1998,1999,bd,bg,bk,capacity,fuel,legacy,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_wrx_gen2",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (WRX 2002-2005)",
+    "body": "15.9 Gallons (60 Liters). Premium Unleaded (91+ Octane) Required.",
+    "tags": "2002,2003,2004,2005,capacity,ej205,fuel,gd,gg,impreza,premium,tank,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_sti_gen2",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (STI 2004-2007)",
+    "body": "15.9 Gallons (60 Liters). Premium Unleaded (93 Octane Preferred).",
+    "tags": "2004,2005,2006,2007,capacity,ej257,fuel,gd,impreza,premium,sti,tank,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_legacy_gen3",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Legacy 2000-2004)",
+    "body": "16.9 Gallons (64 Liters).",
+    "tags": "2000,2001,2002,2003,2004,be,bh,capacity,fuel,legacy,outback,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_for_gen2",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Forester 2003-2008)",
+    "body": "15.9 Gallons (60 Liters).",
+    "tags": "2003,2004,2005,2006,2007,2008,capacity,forester,fuel,sg,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_imp_gen2",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Impreza 2002-2007)",
+    "body": "13.2 Gallons (50 Liters).",
+    "tags": "2002,2003,2004,2005,2006,2007,capacity,fuel,gd,gg,impreza,rs,tank,ts",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_outback_gen3",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Outback 2005-2009)",
+    "body": "16.9 Gallons (64 Liters).",
+    "tags": "2005,2006,2007,2008,2009,capacity,fuel,gen3,outback,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_outback_gen4",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Outback 2010-2014)",
+    "body": "18.5 Gallons (70 Liters).",
+    "tags": "2010,2011,2012,2013,2014,capacity,fuel,gen4,outback,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_forester_gen3",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Forester 2009-2013)",
+    "body": "15.9 Gallons (60 Liters).",
+    "tags": "2009,2010,2011,2012,2013,capacity,forester,fuel,sh,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_imp_gen3",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Impreza 2008-2011)",
+    "body": "16.9 Gallons (64 Liters).",
+    "tags": "2008,2009,2010,2011,capacity,fuel,ge,gh,gr,gv,impreza,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_leg_gen4",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Legacy 2005-2009)",
+    "body": "16.9 Gallons (64 Liters).",
+    "tags": "2005,2006,2007,2008,2009,bl,bp,capacity,fuel,legacy,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_baja",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Baja 2003-2006)",
+    "body": "16.9 Gallons (64 Liters).",
+    "tags": "2003,2004,2005,2006,baja,capacity,fuel,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_ea_classic",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Subaru 1970s-1980s)",
+    "body": "13.2 Gallons (50 Liters). Early 70s models may be 11.9 Gallons.",
+    "tags": "1970,1970s,1980,1980s,brat,capacity,dl,ea71,ea81,ea82,fuel,gl,leone,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_svx",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (SVX 1992-1997)",
+    "body": "18.5 Gallons (70 Liters).",
+    "tags": "1992,1993,1994,1995,1996,1997,capacity,eg33,fuel,svx,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_forester_sj",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Forester 2014-2018)",
+    "body": "15.9 Gallons (60 Liters).",
+    "tags": "2014,2015,2016,2017,2018,capacity,forester,fuel,sj,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_wrx_va",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (WRX/STI 2015-2021)",
+    "body": "15.9 Gallons (60 Liters).",
+    "tags": "2015,2016,2017,2018,2019,2020,2021,capacity,fuel,sti,tank,va,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_crosstrek_gt",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Crosstrek 2018+)",
+    "body": "16.6 Gallons (63 Liters).",
+    "tags": "2018,2019,2020,2021,2022,2023,capacity,crosstrek,fuel,gt,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_tribeca",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Tribeca 2006-2014)",
+    "body": "16.9 Gallons (64 Liters).",
+    "tags": "2006,2007,2008,2009,2010,2011,2012,2013,2014,capacity,fuel,tank,tribeca",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_ascent",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Ascent 2019+)",
+    "body": "19.3 Gallons (73 Liters).",
+    "tags": "2019,2020,2021,2022,2023,2024,ascent,capacity,fuel,tank",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]

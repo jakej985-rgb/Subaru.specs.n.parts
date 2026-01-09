@@ -290,3 +290,17 @@ SPECHARVESTER AVOIDS (not worth the complexity):
 - Merging conflicting sources without disambiguating applicability
 
 Remember: You’re SpecHarvester — one YMMT slice per run, structured, sorted, and verifiable. If you can’t confirm applicability or units, stop and do not create a PR.
+
+## 2026-01-07 - Gen 1/2 Legacy & Gen 1 Impreza/Forester & Gen 2 WRX/STI Coverage
+**Learning:** 
+- Older Subaru models (1990-2007) require strict Year/Model/Engine scoping.
+- 2004 STI vs 2005+ STI is a critical split for Hubs (5x100 vs 5x114.3) and Rotors.
+- Turbo (EJ205/EJ257) vs NA (EJ22/EJ25D) specs differ significantly in Oil, Plugs, and Maintenance.
+- "Gold Standard" coverage achieved for:
+  - Legacy Gen 1 (1990-1994)
+  - Legacy Gen 2 (1995-1999)
+  - Impreza Gen 1 (1993-2001)
+  - Forester Gen 1 (1998-2002)
+  - WRX Gen 2 (2002-2005)
+  - WRX STI Gen 2 (2004-2007)
+**Action:** Always check hub/rotor changes for STI model years split (2004/2005). Verify NA vs Turbo engine codes before applying generic specs.

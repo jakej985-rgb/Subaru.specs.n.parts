@@ -4,7 +4,7 @@
     "category": "Spark Plugs",
     "title": "WRX 2015+ Gap",
     "body": "Gap: 0.020\"-0.022\" (0.5-0.55mm).",
-    "tags": "spark,gap,fa20",
+    "tags": "2015,fa20,gap,spark,wrx",
     "updatedAt": "2026-01-05T14:50:00Z"
   },
   {
@@ -12,7 +12,7 @@
     "category": "Spark Plugs",
     "title": "Spark Plugs (EJ Turbo)",
     "body": "NGK SILFR6A (Stock) or ILFR6B. Gap: 0.030\" (0.7-0.8mm). Torque: 15-18 ft-lbs.",
-    "tags": "sparkplugs,engine,ej255,ej257,ej205,wrx,sti,fxt,lgt",
+    "tags": "ej205,ej255,ej257,engine,fxt,lgt,sparkplugs,sti,turbo,wrx",
     "updatedAt": "2026-01-05T12:00:00Z"
   },
   {
@@ -20,7 +20,7 @@
     "category": "Spark Plugs",
     "title": "Spark Plugs (FA20DIT)",
     "body": "NGK ILKAR8H6. Gap: 0.024\"-0.028\" (0.6-0.7mm). Do not gap manually (pre-gapped). Torque: 12.5 ft-lbs.",
-    "tags": "sparkplugs,engine,fa20dit,wrx,fxt",
+    "tags": "engine,fa20dit,fxt,sparkplugs,wrx",
     "updatedAt": "2026-01-05T12:00:00Z"
   },
   {
@@ -28,7 +28,347 @@
     "category": "Spark Plugs",
     "title": "Spark Plugs (EJ N/A)",
     "body": "NGK FR5AP-11 (Platinum). Gap: 0.044\" (1.1mm).",
-    "tags": "sparkplugs,engine,ej253,ej251,impreza,forester,outback",
+    "tags": "ej251,ej253,engine,forester,impreza,outback,sparkplugs",
     "updatedAt": "2026-01-05T12:00:00Z"
+  },
+  {
+    "id": "s_plug_ej22_legacy_gen1",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Legacy 1990-1994 EJ22)",
+    "body": "NGK BKR6E-11 (V-Power) or similar. Gap: 0.039\"-0.043\" (1.0-1.1mm).",
+    "tags": "1990,1991,1992,1993,1994,ej22,gap,legacy,na,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_impreza_gen1",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Impreza 1993-2001)",
+    "body": "Gap: 0.039\"-0.043\" (1.0-1.1mm). NGK BKR6E-11 (V-Power) or FR5AP-11 (Platinum for later years).",
+    "tags": "1993,1994,1995,1996,1997,1998,1999,2000,2001,ej18,ej22,gap,impreza,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_forester_gen1",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Forester 1998-2002)",
+    "body": "Gap: 0.044\" (1.1mm). NGK RC-FX58 (Wires) / Plugs: NGK FR5AP-11 (Platinum).",
+    "tags": "1998,1999,2000,2001,2002,ej251,ej25d,forester,gap,sf,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_legacy_gen2",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Legacy 1995-1999)",
+    "body": "Gap: 0.039\"-0.043\" (1.0-1.1mm). NGK BKR6E-11 (V-Power) or FR5AP-11 (Platinum).",
+    "tags": "1995,1996,1997,1998,1999,bd,bg,bk,gap,legacy,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_wrx_gen2",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (WRX 2002-2005)",
+    "body": "Gap: 0.028\"-0.031\" (0.7-0.8mm). NGK PFR6G (Platinum) or BKR6EIX (Iridium).",
+    "tags": "2002,2003,2004,2005,ej205,gap,gd,gg,impreza,spark,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_sti_gen2",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (STI 2004-2007)",
+    "body": "Gap: 0.028\"-0.031\" (0.7-0.8mm). NGK ILFR6B (Laser Iridium). Long Reach.",
+    "tags": "2004,2005,2006,2007,ej257,gap,gd,impreza,spark,sti,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_legacy_gen3",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Legacy 2000-2004)",
+    "body": "Gap: 0.039\"-0.043\" (1.0-1.1mm).",
+    "tags": "2000,2001,2002,2003,2004,be,bh,gap,legacy,outback,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_for_gen2",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Forester 2003-2008)",
+    "body": "Gap: 0.039\"-0.043\" (1.0-1.1mm).",
+    "tags": "2003,2004,2005,2006,2007,2008,forester,gap,sg,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_imp_gen2",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Impreza 2.5 2002-2007)",
+    "body": "Gap: 0.039\"-0.043\" (1.0-1.1mm).",
+    "tags": "2002,2003,2004,2005,2006,2007,gap,gd,gg,impreza,rs,spark,ts",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_outback_gen3_na",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Outback 2005-2009 2.5i)",
+    "body": "Gap: 0.044\" (1.1mm). NGK FR5AP-11.",
+    "tags": "2005,2006,2007,2008,2009,gap,gen3,na,outback,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_outback_gen3_xt",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Outback 2005-2009 XT)",
+    "body": "Gap: 0.031\" (0.8mm). NGK ILFR6B.",
+    "tags": "2005,2006,2007,2008,2009,gap,gen3,outback,spark,xt",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_outback_gen4_25i",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Outback 2010-2014 2.5i)",
+    "body": "Gap: 0.044\" (1.1mm). EJ: NGK FR5AP-11 | FB: NGK SILZKAR7B11.",
+    "tags": "2.5i,2010,2011,2012,2013,2014,gap,gen4,outback,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_outback_gen4_36r",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Outback 2010-2014 3.6R)",
+    "body": "Gap: 0.043\" (1.1mm). NGK SILFR6A11.",
+    "tags": "2010,2011,2012,2013,2014,3.6r,gap,gen4,outback,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_forester_gen3_na_ej",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Forester 2009-2010 2.5i)",
+    "body": "Gap: 0.044\" (1.1mm). NGK FR5AP-11.",
+    "tags": "2009,2010,forester,gap,na,sh,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_forester_gen3_na_fb",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Forester 2011-2013 2.5i)",
+    "body": "Gap: 0.044\" (1.1mm). NGK SILZKAR7B11.",
+    "tags": "2011,2012,2013,forester,gap,na,sh,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_forester_gen3_xt",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Forester 2009-2013 XT)",
+    "body": "Gap: 0.031\" (0.8mm). NGK SILFR6A.",
+    "tags": "2009,2010,2011,2012,2013,forester,gap,sh,spark,xt",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_imp_gen3_25i",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Impreza 2008-2011 2.5i)",
+    "body": "Gap: 0.044\" (1.1mm). NGK FR5AP-11.",
+    "tags": "2008,2009,2010,2011,gap,ge,gh,impreza,na,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_imp_gen3_wrx",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (WRX 2008-2014)",
+    "body": "Gap: 0.031\" (0.8mm). NGK SILFR6A.",
+    "tags": "2008,2009,2010,2011,2012,2013,2014,gap,gh,gr,gv,impreza,spark,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_imp_gen3_sti",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (STI 2008-2014)",
+    "body": "Gap: 0.031\" (0.8mm). NGK ILFR6B.",
+    "tags": "2008,2009,2010,2011,2012,2013,2014,gap,gr,gv,impreza,spark,sti,va,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_leg_gen4_na",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Legacy 2005-2009 2.5i)",
+    "body": "Gap: 0.044\" (1.1mm). NGK FR5AP-11.",
+    "tags": "2005,2006,2007,2008,2009,bl,bp,gap,legacy,na,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_leg_gen4_gt",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Legacy GT/Spec.B 2005-2009)",
+    "body": "Gap: 0.031\" (0.8mm). NGK SILFR6A.",
+    "tags": "2005,2006,2007,2008,2009,bl,bp,gap,gt,legacy,spark,specb",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_leg_gen4_30r",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Legacy 3.0R 2005-2009)",
+    "body": "Gap: 0.043\" (1.1mm). NGK SILFR6A11.",
+    "tags": "2005,2006,2007,2008,2009,3.0r,bl,bp,gap,legacy,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_baja_na",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Baja 2003-2006 NA)",
+    "body": "Gap: 0.044\" (1.1mm). NGK FR5AP-11.",
+    "tags": "2003,2004,2005,2006,baja,gap,na,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_baja_turbo",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Baja 2004-2006 Turbo)",
+    "body": "Gap: 0.031\" (0.8mm). NGK SILFR6A.",
+    "tags": "2004,2005,2006,baja,gap,spark,turbo",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_ea71_81",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Subaru EA71/EA81)",
+    "body": "Gap: 0.041\" (1.0-1.1mm). NGK BP6ES.",
+    "tags": "1970s,1980s,brat,dl,ea71,ea81,gap,gl,leone,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_ea82",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Subaru EA82)",
+    "body": "Gap: 0.044\" (1.1mm). NGK BPR6ES.",
+    "tags": "1980s,ea82,gap,gl,leone,spark,xt",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_xt6",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (XT6 2.7L)",
+    "body": "Gap: 0.044\" (1.1mm). NGK BKR6E-11.",
+    "tags": "1988,1989,1990,1991,er27,gap,spark,xt6",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_svx",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (SVX 1992-1997)",
+    "body": "Gap: 0.044\" (1.1mm). NGK BKR6E-11.",
+    "tags": "1992,1993,1994,1995,1996,1997,eg33,gap,spark,svx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_justy",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Justy 1987-1994)",
+    "body": "Gap: 0.044\" (1.1mm). NGK BPR6ES-11.",
+    "tags": "1987,1988,1989,1990,1991,1992,1993,1994,ef10,ef12,gap,justy,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_fb_engine_na",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Subaru FB20/FB25 NA)",
+    "body": "Gap: 0.043\" (1.1mm). NGK SILZKAR7B11 (Long Reach).",
+    "tags": "2012,2013,2014,2015,2016,2017,2018,2019,2020,crosstrek,fb20,fb25,forester,gap,impreza,legacy,na,outback,spark",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_fa20_na_brz",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (BRZ 2013-2021 FA20)",
+    "body": "Gap: 0.043\" (1.1mm). NGK ILKAR7L11.",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,2021,brz,fa20,gap,na,spark,zc6",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_wrx_va",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (WRX 2015-2021 FA20DIT)",
+    "body": "Gap: 0.024\" (0.6mm). NGK ILKAR8H6.",
+    "tags": "2015,2016,2017,2018,2019,2020,2021,fa20dit,gap,spark,va,wrx",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_ez30_tribeca",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Tribeca 2006-2007 EZ30)",
+    "body": "Gap: 0.044\" (1.1mm). NGK LFR6AIX-11.",
+    "tags": "2006,2007,ez30,gap,spark,tribeca",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_plug_ez36",
+    "category": "Spark Plugs",
+    "title": "Spark Plugs (Subaru EZ36)",
+    "body": "Gap: 0.031\" (0.8mm). NGK SILFR6A.",
+    "tags": "2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,ez36,gap,legacy,outback,spark,tribeca",
+    "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]

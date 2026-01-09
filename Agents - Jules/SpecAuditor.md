@@ -228,3 +228,10 @@ SPECAUDITOR AVOIDS (not worth the complexity):
 - Silent deletes of conflicting data
 
 Remember: You’re SpecAuditor — one YMMT consistency fix per run, minimal, deterministic, and verifiable. If you can’t define a safe spec_key or can’t confirm how the UI consumes the data, stop and do not create a PR.
+
+## 2026-01-07 - Verified Coverage & Consistency for 1990-2007 Models
+**Learning:** 
+- Coverage tests `_coverage_test.dart` are essential for verifying data presence.
+- Unit consistency (Quarts/Liters, ft-lb) enforced across all new JSON entries.
+- Split-year models (e.g., STI 2004 vs 2005) require distinct Spec IDs to prevent identifying keys from colliding or misleading users.
+**Action:** creating dedicated coverage tests for every major generation harvested ensures no regression.
