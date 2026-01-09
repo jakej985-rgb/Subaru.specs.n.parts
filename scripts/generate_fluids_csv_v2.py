@@ -295,6 +295,14 @@ ENGINE_SPECS = {
         "ac": {"qty": "", "spec": "R-134a | R-1234yf"},
         "source_1": "Subaru Forester/Outback FSM", "source_2": "AMSOIL", "confidence": "high"
     },
+    "Electric": {
+        "engine_coolant": {"qty": "Battery: 7.8 qt / 7.4 L | Heater: 4.2 qt / 4.0 L", "spec": "Toyota Genuine Traction Battery Coolant (Blue)"},
+        "automatic_trans": {"qty": "Front eAxle: 4.1 qt / 3.9 L", "spec": "e-Transaxle Fluid TE"},
+        "rear_diff": {"qty": "Rear eAxle: 3.3 qt / 3.1 L", "spec": "e-Transaxle Fluid TE"},
+        "brake_fluid": {"qty": "", "spec": "DOT 3 | DOT 4"},
+        "ac": {"qty": "", "spec": "R-1234yf"},
+        "source_1": "Subaru Solterra FSM", "source_2": "toyota-club.net", "confidence": "high"
+    },
 }
 
 def get_engine_base(engine_code):
@@ -305,6 +313,7 @@ def get_engine_base(engine_code):
         ("EA71", "EA71"), ("EA82T", "EA82T"), ("EA82", "EA82"), ("EA81", "EA81"),
         ("EF12", "EF12"), ("ER27", "ER27"), ("EG33", "EG33"),
         ("FA24", "FA24"), ("FA20", "FA20"), ("FB25", "FB25"), ("FB20", "FB20"),
+        ("Electric", "Electric"),
         ("EZ36", "EZ36"), ("EZ30", "EZ30"),
         ("EJ257", "EJ257"), ("EJ255", "EJ255"), ("EJ207", "EJ207"), ("EJ205", "EJ205"),
         ("EJ253", "EJ253"), ("EJ252", "EJ253"), ("EJ251", "EJ251"), ("EJ25D", "EJ25D"), ("EJ25", "EJ25"),
@@ -331,10 +340,10 @@ def has_at(trim, model, eng): return "STI" not in trim.upper()
 def is_awd(trim, model):
     t = trim.upper()
     if "FWD" in t or "2WD" in t: return False
-    if model in ["SVX", "Legacy", "Forester"]: return True
-    if model == "Impreza" and any(x in t for x in ["WRX", "STI", "RS"]): return True
+    if model in ["SVX", "Legacy", "Forester", "Outback", "Ascent", "Crosstrek", "Baja", "Tribeca", "Solterra", "WRX"]: return True
+    if model == "Impreza" and any(x in t for x in ["WRX", "STI", "RS", "OUTBACK"]): return True
     if model == "Justy": return "4WD" in t or "AWD" in t
-    if model in ["BRAT", "GL", "GL-10", "XT"]: return True
+    if model in ["BRAT", "GL", "GL-10", "XT", "XT6"]: return True
     return True
 
 def create_row(v):

@@ -77,11 +77,28 @@ def main():
     print(f"  Qty format check (has ':' and '/'): {format_ok} fields OK")
     
     # Show EVs with no specs (expected)
+    # Show EVs with no specs (expected)
     evs = [f for f in fluids if not f["engine_oil_qty"]]
     if evs:
         print(f"\nVehicles without engine oil (EVs expected): {len(evs)}")
-        for e in evs[:5]:
-            print(f"  {e['year']} {e['model']} {e['trim']}")
+        
+        solterra_ok = 0
+        for e in evs:
+            is_solterra = "Solterra" in e["model"]
+            # Check for coolant and drive unit fluid (in at_fluid)
+            has_coolant = bool(e["engine_coolant_qty"])
+            has_trans = bool(e["automatic_trans_fluid_qty"])
+            
+            if is_solterra:
+                if has_coolant and has_trans:
+                    solterra_ok += 1
+                else:
+                    print(f"  [WARNING] {e['year']} {e['model']} missing specific EV fluids!")
+            else:
+                print(f"  {e['year']} {e['model']} {e['trim']}")
+
+        if solterra_ok > 0:
+             print(f"  [OK] {solterra_ok} Solterra EVs have correct Coolant & Transaxle/Diff specs.")
     
     print("\n" + "="*50)
     if not missing and combo_errors == 0:

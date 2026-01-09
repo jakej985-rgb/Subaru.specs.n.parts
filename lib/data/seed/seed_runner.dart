@@ -3,7 +3,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/domain/fitment/fitment_key.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+final seedRunnerProvider = Provider<SeedRunner>((ref) {
+  final db = ref.watch(appDbProvider);
+  return SeedRunner(db);
+});
 
 class SeedRunner {
   final AppDatabase db;
