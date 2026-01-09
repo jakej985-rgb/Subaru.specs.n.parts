@@ -4,7 +4,7 @@
     "category": "Tires",
     "title": "WRX 2022 Base Tire Size",
     "body": "235/45R17",
-    "tags": "tires,wrx,2022,base",
+    "tags": "2022,base,tires,wrx",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -12,7 +12,7 @@
     "category": "Tires",
     "title": "WRX 2022 Limited/Premium/GT Tire Size",
     "body": "245/40R18",
-    "tags": "tires,wrx,2022,limited,premium,gt",
+    "tags": "2022,gt,limited,premium,tires,wrx",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -20,7 +20,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (STI 2004)",
     "body": "225/45R17 90W (Bridgestone Potenza RE070)",
-    "tags": "tires,size,sti,gd,2004",
+    "tags": "2004,gd,size,sti,tires",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "2004 Impreza WRX STI FSM"
@@ -30,7 +30,7 @@
     "category": "Tires",
     "title": "Standard Tire Pressure",
     "body": "Front: 33 PSI (228 kPa). Rear: 32 PSI (221 kPa). Common for Impreza/Legacy. WRX/STI often higher (35F/33R). Check door placard.",
-    "tags": "tires,pressure,maintenance,psi",
+    "tags": "maintenance,pressure,psi,sti,tires,wrx",
     "updatedAt": "2026-01-05T14:50:00Z"
   },
   {
@@ -38,7 +38,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Legacy 1990-1994 FWD)",
     "body": "175/70R14",
-    "tags": "tires,size,legacy,fwd,1990,1991,1992,1993,1994",
+    "tags": "1990,1991,1992,1993,1994,fwd,legacy,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -48,7 +48,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Legacy 1990-1994 AWD)",
     "body": "185/70R14",
-    "tags": "tires,size,legacy,awd,1990,1991,1992,1993,1994",
+    "tags": "1990,1991,1992,1993,1994,awd,legacy,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -58,7 +58,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Impreza 1993-2001 FWD)",
     "body": "165/80R13 (Base FWD).",
-    "tags": "tires,size,impreza,fwd,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "tags": "1993,1994,1995,1996,1997,1998,1999,2000,2001,base,fwd,impreza,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -68,7 +68,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Impreza 1993-2001 AWD)",
     "body": "175/70R14 or 185/70R14 (L/LS/Brighton/Outback Sport).",
-    "tags": "tires,size,impreza,awd,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "tags": "1993,1994,1995,1996,1997,1998,1999,2000,2001,awd,impreza,l,outback,size,sport,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -78,7 +78,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Impreza 1998-2001 2.5RS)",
     "body": "205/55R16. (Gold/Silver 5-Spoke or 6-Spoke Wheels).",
-    "tags": "tires,size,impreza,rs,25rs,1998,1999,2000,2001",
+    "tags": "1998,1999,2000,2001,25rs,impreza,rs,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -88,7 +88,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Forester 1998-2002 L)",
     "body": "205/70R15.",
-    "tags": "tires,size,forester,sf,l,1998,1999,2000,2001,2002",
+    "tags": "1998,1999,2000,2001,2002,forester,l,sf,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -98,7 +98,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Forester 1998-2002 S)",
     "body": "215/60R16.",
-    "tags": "tires,size,forester,sf,s,1998,1999,2000,2001,2002",
+    "tags": "1998,1999,2000,2001,2002,forester,s,sf,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -108,7 +108,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Legacy 1995-1999 L/Brighton)",
     "body": "185/70R14.",
-    "tags": "tires,size,legacy,bd,bg,bk,l,brighton,1995,1996,1997,1998,1999",
+    "tags": "1995,1996,1997,1998,1999,bd,bg,bk,brighton,l,legacy,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -118,7 +118,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Legacy 1995-1999 GT/LSi/LS)",
     "body": "195/60R15.",
-    "tags": "tires,size,legacy,bd,bg,bk,gt,lsi,ls,1995,1996,1997,1998,1999",
+    "tags": "1995,1996,1997,1998,1999,bd,bg,bk,gt,legacy,ls,lsi,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -128,7 +128,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Legacy 1995-1999 Outback)",
     "body": "205/70R15 (Outback).",
-    "tags": "tires,size,legacy,outback,bg,bk,1995,1996,1997,1998,1999",
+    "tags": "1995,1996,1997,1998,1999,bg,bk,legacy,outback,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -138,7 +138,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (WRX 2002-2005)",
     "body": "205/55R16.",
-    "tags": "tires,size,wrx,impreza,gd,gg,2002,2003,2004,2005",
+    "tags": "2002,2003,2004,2005,gd,gg,impreza,size,tires,wrx",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -148,7 +148,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (STI 2004-2007)",
     "body": "225/45R17.",
-    "tags": "tires,size,sti,wrx,impreza,ej257,gd,2004,2005,2006,2007",
+    "tags": "2004,2005,2006,2007,ej257,gd,impreza,size,sti,tires,wrx",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -158,7 +158,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Outback 2000-2004)",
     "body": "225/60R16 (or 205/70R15).",
-    "tags": "tires,size,legacy,outback,be,bh,2000,2001,2002,2003,2004",
+    "tags": "2000,2001,2002,2003,2004,be,bh,legacy,outback,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -168,7 +168,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Legacy GT 2000-2004)",
     "body": "205/55R16.",
-    "tags": "tires,size,legacy,gt,be,bh,2000,2001,2002,2003,2004",
+    "tags": "2000,2001,2002,2003,2004,be,bh,gt,legacy,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -178,7 +178,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Forester X/XS 2003-2008)",
     "body": "215/60R16.",
-    "tags": "tires,size,forester,xs,sg,2003,2004,2005,2006,2007,2008",
+    "tags": "2003,2004,2005,2006,2007,2008,forester,sg,size,tires,xs",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -188,7 +188,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Forester XT 2004-2008)",
     "body": "225/50R17.",
-    "tags": "tires,size,forester,xt,sg,2004,2005,2006,2007,2008",
+    "tags": "2004,2005,2006,2007,2008,forester,sg,size,tires,xt",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -198,7 +198,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Impreza TS 2002-2007)",
     "body": "195/60R15.",
-    "tags": "tires,size,impreza,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "tags": "2002,2003,2004,2005,2006,2007,gd,gg,impreza,size,tires,ts",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -208,7 +208,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Impreza RS/2.5i 2002-2007)",
     "body": "205/55R16.",
-    "tags": "tires,size,impreza,rs,gd,gg,2002,2003,2004,2005,2006,2007",
+    "tags": "2002,2003,2004,2005,2006,2007,gd,gg,impreza,rs,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -218,7 +218,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Outback 2005-2009 2.5i)",
     "body": "225/60R16.",
-    "tags": "tires,size,outback,gen3,na,2005,2006,2007,2008,2009",
+    "tags": "2005,2006,2007,2008,2009,gen3,na,outback,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -228,7 +228,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Outback 2005-2009 XT)",
     "body": "225/55R17.",
-    "tags": "tires,size,outback,gen3,xt,2005,2006,2007,2008,2009",
+    "tags": "2005,2006,2007,2008,2009,gen3,outback,size,tires,xt",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -238,7 +238,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Outback 2010-2014)",
     "body": "225/60R17.",
-    "tags": "tires,size,outback,gen4,2010,2011,2012,2013,2014",
+    "tags": "2010,2011,2012,2013,2014,gen4,outback,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -248,7 +248,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Forester 2009-2013 16\")",
     "body": "215/65R16.",
-    "tags": "tires,size,forester,sh,2.5i,2009,2010,2011,2012,2013",
+    "tags": "2.5i,2009,2010,2011,2012,2013,forester,sh,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -258,7 +258,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Forester 2009-2013 17\")",
     "body": "225/55R17.",
-    "tags": "tires,size,forester,sh,premium,limited,xt,2009,2010,2011,2012,2013",
+    "tags": "2009,2010,2011,2012,2013,forester,limited,premium,sh,size,tires,xt",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -268,7 +268,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Impreza 2.5i 2008-2011)",
     "body": "205/55R16.",
-    "tags": "tires,size,impreza,ge,gh,2.5i,2008,2009,2010,2011",
+    "tags": "2.5i,2008,2009,2010,2011,ge,gh,impreza,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -278,7 +278,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (WRX 2008-2014)",
     "body": "2008: 205/50R17 | 2009-2014: 225/45R17.",
-    "tags": "tires,size,wrx,impreza,gh,gr,gv,2008,2009,2010,2011,2012,2013,2014",
+    "tags": "2008,2009,2010,2011,2012,2013,2014,gh,gr,gv,impreza,size,tires,wrx",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -288,7 +288,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (STI 2008-2014)",
     "body": "245/40R18.",
-    "tags": "tires,size,sti,wrx,impreza,gr,gv,2008,2009,2010,2011,2012,2013,2014",
+    "tags": "2008,2009,2010,2011,2012,2013,2014,gr,gv,impreza,size,sti,tires,wrx",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -298,7 +298,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Legacy 2.5i 2005-2009)",
     "body": "205/55R16.",
-    "tags": "tires,size,legacy,bl,bp,2.5i,2005,2006,2007,2008,2009",
+    "tags": "2.5i,2005,2006,2007,2008,2009,bl,bp,legacy,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -308,7 +308,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Legacy GT/3.0R 2005-2009)",
     "body": "215/45R17.",
-    "tags": "tires,size,legacy,gt,3.0r,bl,bp,2005,2006,2007,2008,2009",
+    "tags": "2005,2006,2007,2008,2009,3.0r,bl,bp,gt,legacy,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -318,7 +318,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Legacy Spec.B 2006-2009)",
     "body": "215/45R18.",
-    "tags": "tires,size,legacy,specb,bl,bp,2006,2007,2008,2009",
+    "tags": "2006,2007,2008,2009,bl,bp,legacy,size,specb,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -328,7 +328,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Baja 2003-2006)",
     "body": "225/60R16.",
-    "tags": "tires,size,baja,2003,2004,2005,2006",
+    "tags": "2003,2004,2005,2006,baja,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -338,7 +338,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Subaru 1970s-1980s)",
     "body": "185/70R13. Small DL/GL models used 175/70R13 or 155SR13.",
-    "tags": "tires,size,ea71,ea81,ea82,leone,brat,gl,dl,1970s,1980s",
+    "tags": "1970s,1980s,brat,dl,ea71,ea81,ea82,gl,leone,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -348,7 +348,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (XT6 1988-1991)",
     "body": "205/60R14.",
-    "tags": "tires,size,er27,xt6,xt,1988,1989,1990,1991",
+    "tags": "1988,1989,1990,1991,er27,size,tires,xt,xt6",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -358,7 +358,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (SVX 1992-1997)",
     "body": "225/50R16.",
-    "tags": "tires,size,eg33,svx,1992,1993,1994,1995,1996,1997",
+    "tags": "1992,1993,1994,1995,1996,1997,eg33,size,svx,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -368,7 +368,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Justy 1987-1994)",
     "body": "165/65R13.",
-    "tags": "tires,size,ef10,ef12,justy,1987,1988,1989,1990,1991,1992,1993,1994",
+    "tags": "1987,1988,1989,1990,1991,1992,1993,1994,ef10,ef12,justy,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -378,7 +378,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Forester 2014-2018)",
     "body": "225/60R17 (Base/Premium) or 225/55R18 (Limited/Touring/XT).",
-    "tags": "tires,size,forester,sj,2014,2015,2016,2017,2018",
+    "tags": "2014,2015,2016,2017,2018,base,forester,limited,premium,size,sj,tires,touring,xt",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -388,7 +388,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (WRX 2015-2021)",
     "body": "235/45R17 (Base) or 245/40R18 (Premium/Limited).",
-    "tags": "tires,size,wrx,va,2015,2016,2017,2018,2019,2020,2021",
+    "tags": "2015,2016,2017,2018,2019,2020,2021,base,limited,premium,size,tires,va,wrx",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -398,7 +398,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (STI 2018-2021)",
     "body": "245/35R19.",
-    "tags": "tires,size,sti,va,2018,2019,2020,2021",
+    "tags": "2018,2019,2020,2021,size,sti,tires,va",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -408,7 +408,7 @@
     "category": "Tires",
     "title": "Stock Tire Size (Tribeca 2006-2014)",
     "body": "255/55R18. (Optional 255/50R20 on later models).",
-    "tags": "tires,size,tribeca,2006,2007,2008,2009,2010,2011,2012,2013,2014",
+    "tags": "2006,2007,2008,2009,2010,2011,2012,2013,2014,size,tires,tribeca",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
@@ -418,18 +418,9 @@
     "category": "Tires",
     "title": "Stock Tire Size (Ascent 2019+)",
     "body": "245/60R18 or 245/50R20.",
-    "tags": "tires,size,ascent,2019,2020,2021,2022,2023,2024",
+    "tags": "2019,2020,2021,2022,2023,2024,ascent,size,tires",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
   }
 ]
-
-
-
-
-
-
-
-
-

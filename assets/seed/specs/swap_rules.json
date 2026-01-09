@@ -12,7 +12,7 @@
     "category": "Swap Rules",
     "title": "STI6_R180",
     "body": "Severity: error\nMessage: STI 6MT requires R180 3.90 rear diff.\nCondition: trans == STI_6MT AND rearDiff != R180_390",
-    "tags": "impreza,swap_rule",
+    "tags": "impreza,sti,swap_rule",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {
@@ -20,7 +20,7 @@
     "category": "Swap Rules",
     "title": "TURBO_XMEM",
     "body": "Severity: error\nMessage: Turbo up-pipe/exhaust hits NA crossmember.\nCondition: engine.isTurbo AND crossmember == NA",
-    "tags": "impreza,swap_rule",
+    "tags": "impreza,swap_rule,turbo",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {
@@ -44,7 +44,7 @@
     "category": "Swap Rules",
     "title": "5MT_TORQUE_RISK",
     "body": "Severity: mods\nMessage: 5MT reliability risk at power; consider STI 6MT.\nCondition: engine in {EJ255,EJ257,EJ207} AND trans in {NA_5MT,WRX_5MT_390,WRX_5MT_370}",
-    "tags": "impreza,swap_rule",
+    "tags": "impreza,sti,swap_rule",
     "updatedAt": "2025-12-16T16:27:05Z"
   },
   {

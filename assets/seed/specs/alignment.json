@@ -4,7 +4,7 @@
     "category": "Alignment",
     "title": "Front Camber (Stock)",
     "body": "-0.5° +/- 0.5°",
-    "tags": "alignment,suspension,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+    "tags": "1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,alignment,suspension",
     "updatedAt": "2026-01-05T14:45:00Z"
   },
   {
@@ -12,7 +12,7 @@
     "category": "Alignment",
     "title": "Rear Toe",
     "body": "0 +/- 2mm",
-    "tags": "alignment,suspension,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026",
+    "tags": "1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,alignment,suspension",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -20,7 +20,7 @@
     "category": "Alignment",
     "title": "Front Camber (WRX 02-07)",
     "body": "Factory: -0.3° +/- 0.5°. Adjustable via stock eccentric bolt. Enthusiast target: Max negative (~ -1.3°).",
-    "tags": "alignment,suspension,wrx,gd,gg,gen2,2002,2003,2004,2005,2006,2007",
+    "tags": "2002,2003,2004,2005,2006,2007,alignment,gd,gen2,gg,suspension,wrx",
     "updatedAt": "2026-01-05T13:45:00Z"
   },
   {
@@ -28,7 +28,7 @@
     "category": "Alignment",
     "title": "Front Camber (STI 04-07)",
     "body": "Factory: -0.5° +/- 0.5°. Adjustable via stock eccentric bolt. Enthusiast target: Max negative.",
-    "tags": "alignment,suspension,sti,gd,gen2,2004,2005,2006,2007",
+    "tags": "2004,2005,2006,2007,alignment,gd,gen2,sti,suspension",
     "updatedAt": "2026-01-05T13:45:00Z"
   },
   {
@@ -36,7 +36,7 @@
     "category": "Alignment",
     "title": "Front Toe (GD Chassis)",
     "body": "0mm +/- 3mm. Target: 0mm for tire life.",
-    "tags": "alignment,suspension,wrx,sti,gd,gg,gen2,2002,2003,2004,2005,2006,2007",
+    "tags": "2002,2003,2004,2005,2006,2007,alignment,gd,gen2,gg,sti,suspension,wrx",
     "updatedAt": "2026-01-05T13:45:00Z"
   },
   {
@@ -44,7 +44,7 @@
     "category": "Alignment",
     "title": "Front Caster (GD Chassis)",
     "body": "WRX: ~3.6°. STI: ~4.5° (due to caster-adding control arms/geometry). Non-adjustable stock.",
-    "tags": "alignment,suspension,geometry,wrx,sti,gd,gen2,2002,2003,2004,2005,2006,2007",
+    "tags": "2002,2003,2004,2005,2006,2007,alignment,gd,gen2,geometry,sti,suspension,wrx",
     "updatedAt": "2026-01-05T13:45:00Z"
   },
   {
@@ -52,7 +52,7 @@
     "category": "Alignment",
     "title": "Rear Camber (GD Chassis)",
     "body": "Target: -1.3° to -1.5°. Non-adjustable stock. Deviation indicates bent parts or sag.",
-    "tags": "alignment,suspension,wrx,sti,gd,gg,gen2,rear,2002,2003,2004,2005,2006,2007",
+    "tags": "2002,2003,2004,2005,2006,2007,alignment,gd,gen2,gg,rear,sti,suspension,wrx",
     "updatedAt": "2026-01-05T13:45:00Z"
   },
   {
@@ -60,7 +60,7 @@
     "category": "Alignment",
     "title": "Rear Toe (GD Chassis)",
     "body": "0mm +/- 3mm. Adjustable via rear lateral link cam bolt.",
-    "tags": "alignment,suspension,wrx,sti,gd,gg,gen2,rear,2002,2003,2004,2005,2006,2007",
+    "tags": "2002,2003,2004,2005,2006,2007,alignment,gd,gen2,gg,rear,sti,suspension,wrx",
     "updatedAt": "2026-01-05T13:45:00Z"
   }
 ]

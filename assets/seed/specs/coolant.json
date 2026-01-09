@@ -4,7 +4,7 @@
     "category": "Coolant",
     "title": "Coolant Type",
     "body": "Subaru Super Coolant (Blue)",
-    "tags": "coolant,fluid,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024",
+    "tags": "1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,coolant,fluid,type",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -12,7 +12,7 @@
     "category": "Coolant",
     "title": "Coolant Type (Pre-2009)",
     "body": "Subaru Long Life Coolant (Green). Ethylene Glycol based.",
-    "tags": "coolant,fluid,type,gd,gg,wrx,sti,2002,2003,2004,2005,2006,2007",
+    "tags": "2002,2003,2004,2005,2006,2007,2009,coolant,fluid,gd,gg,sti,type,wrx",
     "updatedAt": "2026-01-08T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -22,7 +22,7 @@
     "category": "Coolant",
     "title": "WRX/STI 2002-2007 Coolant Capacity",
     "body": "7.0 - 7.7 Liters (7.4 - 8.1 Quarts) depending on model.",
-    "tags": "coolant,capacity,gd,wrx,sti,2002,2003,2004,2005,2006,2007",
+    "tags": "2002,2003,2004,2005,2006,2007,capacity,coolant,gd,sti,wrx",
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
@@ -30,7 +30,7 @@
     "category": "Coolant",
     "title": "Coolant Capacity (MT)",
     "body": "7.2 Liters (7.6 Quarts)",
-    "tags": "coolant,capacity,brz,mt,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brz,capacity,coolant,mt",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
@@ -40,7 +40,7 @@
     "category": "Coolant",
     "title": "Coolant Capacity (AT)",
     "body": "7.5 Liters (7.9 Quarts)",
-    "tags": "coolant,capacity,brz,at,2013,2014,2015,2016,2017,2018,2019,2020",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,at,brz,capacity,coolant",
     "updatedAt": "2024-05-24T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
@@ -50,7 +50,7 @@
     "category": "Coolant",
     "title": "Legacy 1990-1994 (EJ22) Coolant Capacity",
     "body": "6.5 Liters (6.9 Quarts).",
-    "tags": "coolant,capacity,legacy,ej22,1990,1991,1992,1993,1994",
+    "tags": "1990,1991,1992,1993,1994,capacity,coolant,ej22,legacy",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -60,7 +60,7 @@
     "category": "Coolant",
     "title": "Legacy 1990-1994 Coolant Type",
     "body": "Regular Green (Ethylene Glycol).",
-    "tags": "coolant,type,legacy,1990,1991,1992,1993,1994",
+    "tags": "1990,1991,1992,1993,1994,coolant,legacy,type",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -70,7 +70,7 @@
     "category": "Coolant",
     "title": "Impreza 1993-2001 Coolant Capacity",
     "body": "6.5 Liters (6.9 Quarts).",
-    "tags": "coolant,capacity,impreza,ej18,ej22,1993,1994,1995,1996,1997,1998,1999,2000,2001",
+    "tags": "1993,1994,1995,1996,1997,1998,1999,2000,2001,capacity,coolant,ej18,ej22,impreza",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -80,7 +80,7 @@
     "category": "Coolant",
     "title": "Forester 1998-2002 Coolant Capacity",
     "body": "6.4 Liters (6.8 Quarts).",
-    "tags": "coolant,capacity,forester,sf,1998,1999,2000,2001,2002",
+    "tags": "1998,1999,2000,2001,2002,capacity,coolant,forester,sf",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -90,7 +90,7 @@
     "category": "Coolant",
     "title": "Legacy 1995-1999 Coolant Capacity",
     "body": "6.0 Liters (6.3 Quarts).",
-    "tags": "coolant,capacity,legacy,bd,bg,bk,1995,1996,1997,1998,1999",
+    "tags": "1995,1996,1997,1998,1999,bd,bg,bk,capacity,coolant,legacy",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -100,7 +100,7 @@
     "category": "Coolant",
     "title": "WRX 2002-2005 Coolant Capacity",
     "body": "7.7 Quarts (7.3L) MT / 8.1 Quarts (7.7L) AT.",
-    "tags": "coolant,capacity,wrx,impreza,ej205,gd,gg,2002,2003,2004,2005",
+    "tags": "2002,2003,2004,2005,capacity,coolant,ej205,gd,gg,impreza,wrx",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -110,7 +110,7 @@
     "category": "Coolant",
     "title": "STI 2004-2007 Coolant Capacity",
     "body": "8.1 Quarts (7.7 Liters).",
-    "tags": "coolant,capacity,sti,wrx,impreza,ej257,gd,2004,2005,2006,2007",
+    "tags": "2004,2005,2006,2007,capacity,coolant,ej257,gd,impreza,sti,wrx",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -120,7 +120,7 @@
     "category": "Coolant",
     "title": "Legacy 2000-2004 (EJ25) Coolant Capacity",
     "body": "6.7 Quarts (6.3 Liters).",
-    "tags": "coolant,capacity,ej25,legacy,be,bh,2000,2001,2002,2003,2004",
+    "tags": "2000,2001,2002,2003,2004,be,bh,capacity,coolant,ej25,legacy",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -130,7 +130,7 @@
     "category": "Coolant",
     "title": "Legacy 2001-2004 (H6) Coolant Capacity",
     "body": "7.7 Quarts (7.3 Liters).",
-    "tags": "coolant,capacity,ez30,h6,legacy,be,bh,2001,2002,2003,2004",
+    "tags": "2001,2002,2003,2004,be,bh,capacity,coolant,ez30,h6,legacy",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -140,7 +140,7 @@
     "category": "Coolant",
     "title": "Forester 2.5X/XS 2003-2008 Coolant Capacity",
     "body": "6.4 Quarts (6.0 Liters).",
-    "tags": "coolant,capacity,ej25,na,forester,sg,2003,2004,2005,2006,2007,2008",
+    "tags": "2003,2004,2005,2006,2007,2008,capacity,coolant,ej25,forester,na,sg",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -150,7 +150,7 @@
     "category": "Coolant",
     "title": "Forester 2.5XT 2004-2008 Coolant Capacity",
     "body": "7.1 Quarts (6.7 Liters).",
-    "tags": "coolant,capacity,ej255,xt,forester,sg,2004,2005,2006,2007,2008",
+    "tags": "2004,2005,2006,2007,2008,capacity,coolant,ej255,forester,sg,xt",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -160,7 +160,7 @@
     "category": "Coolant",
     "title": "Impreza RS/TS/2.5i 2002-2007 Coolant Capacity",
     "body": "6.3 - 7.4 Quarts (6.0-7.0 Liters).",
-    "tags": "coolant,capacity,ej25,na,impreza,rs,ts,gd,gg,2002,2003,2004,2005,2006,2007",
+    "tags": "2002,2003,2004,2005,2006,2007,capacity,coolant,ej25,gd,gg,impreza,na,rs,ts",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -170,7 +170,7 @@
     "category": "Coolant",
     "title": "Outback 2.5i 2005-2009 (EJ25) Coolant Capacity",
     "body": "7.2 Quarts (6.8 Liters).",
-    "tags": "coolant,capacity,ej25,na,outback,gen3,2005,2006,2007,2008,2009",
+    "tags": "2005,2006,2007,2008,2009,capacity,coolant,ej25,gen3,na,outback",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -180,7 +180,7 @@
     "category": "Coolant",
     "title": "Outback 2.5i XT 2005-2009 (EJ255) Coolant Capacity",
     "body": "8.2 Quarts total (approx. 2 gallons for drain & refill).",
-    "tags": "coolant,capacity,ej255,xt,outback,gen3,2005,2006,2007,2008,2009",
+    "tags": "2005,2006,2007,2008,2009,capacity,coolant,ej255,gen3,outback,xt",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -190,7 +190,7 @@
     "category": "Coolant",
     "title": "Outback 2.5i 2009-2014 (EJ25) Coolant Capacity",
     "body": "8.2 Quarts total (approx. 2 gallons for drain & refill).",
-    "tags": "coolant,capacity,ej25,na,outback,gen4,2009,2010,2011,2012,2013,2014",
+    "tags": "2009,2010,2011,2012,2013,2014,capacity,coolant,ej25,gen4,na,outback",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -200,7 +200,7 @@
     "category": "Coolant",
     "title": "Outback 2.5i XT 2009-2014 (EJ255) Coolant Capacity",
     "body": "8.2 Quarts total (approx. 2 gallons for drain & refill).",
-    "tags": "coolant,capacity,ej255,xt,outback,gen4,2009,2010,2011,2012,2013,2014",
+    "tags": "2009,2010,2011,2012,2013,2014,capacity,coolant,ej255,gen4,outback,xt",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -210,7 +210,7 @@
     "category": "Coolant",
     "title": "Forester 2009-2010 (EJ25) Coolant Capacity",
     "body": "8.0 Quarts (approx. 2 gallons). Drain & refill uses ~1.5 gallons.",
-    "tags": "coolant,capacity,ej25,na,xt,forester,sh,2009,2010",
+    "tags": "2009,2010,capacity,coolant,ej25,forester,na,sh,xt",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -220,7 +220,7 @@
     "category": "Coolant",
     "title": "Forester 2011-2013 (FB25) Coolant Capacity",
     "body": "7.7 Quarts total. Drain & refill uses ~1.5 gallons.",
-    "tags": "coolant,capacity,fb25,na,forester,sh,2011,2012,2013",
+    "tags": "2011,2012,2013,capacity,coolant,fb25,forester,na,sh",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -230,7 +230,7 @@
     "category": "Coolant",
     "title": "Impreza 2.5i/WRX 2008-2011 Coolant Capacity",
     "body": "7.2 - 7.5 Quarts (6.8-7.1 Liters).",
-    "tags": "coolant,capacity,ej25,na,xt,impreza,wrx,ge,gh,gr,gv,2008,2009,2010,2011",
+    "tags": "2008,2009,2010,2011,capacity,coolant,ej25,ge,gh,gr,gv,impreza,na,wrx,xt",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -240,7 +240,7 @@
     "category": "Coolant",
     "title": "STI 2008-2014 Coolant Capacity",
     "body": "8.1 Quarts (7.7 Liters).",
-    "tags": "coolant,capacity,ej257,sti,wrx,impreza,gr,gv,2008,2009,2010,2011,2012,2013,2014",
+    "tags": "2008,2009,2010,2011,2012,2013,2014,capacity,coolant,ej257,gr,gv,impreza,sti,wrx",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -250,7 +250,7 @@
     "category": "Coolant",
     "title": "Legacy 2.5i 2005-2009 Coolant Capacity",
     "body": "7.2 Quarts (6.8 Liters).",
-    "tags": "coolant,capacity,ej25,na,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "tags": "2005,2006,2007,2008,2009,bl,bp,capacity,coolant,ej25,legacy,na",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -260,7 +260,7 @@
     "category": "Coolant",
     "title": "Legacy GT/Spec.B 2005-2009 Coolant Capacity",
     "body": "7.7 Quarts (7.3 Liters).",
-    "tags": "coolant,capacity,ej255,gt,specb,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "tags": "2005,2006,2007,2008,2009,bl,bp,capacity,coolant,ej255,gt,legacy,specb",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -270,7 +270,7 @@
     "category": "Coolant",
     "title": "Legacy 3.0R 2005-2009 Coolant Capacity",
     "body": "8.1 Quarts (7.7 Liters).",
-    "tags": "coolant,capacity,ez30d,h6,legacy,bl,bp,2005,2006,2007,2008,2009",
+    "tags": "2005,2006,2007,2008,2009,bl,bp,capacity,coolant,ez30d,h6,legacy",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -280,7 +280,7 @@
     "category": "Coolant",
     "title": "Baja 2003-2006 (NA) Coolant Capacity",
     "body": "7.2 Quarts (6.8 Liters).",
-    "tags": "coolant,capacity,ej25,na,baja,2003,2004,2005,2006",
+    "tags": "2003,2004,2005,2006,baja,capacity,coolant,ej25,na",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -290,7 +290,7 @@
     "category": "Coolant",
     "title": "Baja 2004-2006 (Turbo) Coolant Capacity",
     "body": "7.7 Quarts (7.3 Liters).",
-    "tags": "coolant,capacity,ej25,turbo,baja,2004,2005,2006",
+    "tags": "2004,2005,2006,baja,capacity,coolant,ej25,turbo",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -300,7 +300,7 @@
     "category": "Coolant",
     "title": "Subaru EA71/EA81/EA82 Coolant Capacity",
     "body": "6.3 Quarts (6.0 Liters).",
-    "tags": "coolant,capacity,ea71,ea81,ea82,leone,brat,gl,dl,1970s,1980s",
+    "tags": "1970s,1980s,brat,capacity,coolant,dl,ea71,ea81,ea82,gl,leone",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -310,7 +310,7 @@
     "category": "Coolant",
     "title": "XT6 2.7L (ER27) Coolant Capacity",
     "body": "8.5 Quarts (8.0 Liters).",
-    "tags": "coolant,capacity,er27,h6,xt6,1988,1989,1990,1991",
+    "tags": "1988,1989,1990,1991,capacity,coolant,er27,h6,xt6",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -320,7 +320,7 @@
     "category": "Coolant",
     "title": "SVX 1992-1997 (EG33) Coolant Capacity",
     "body": "10.1 Quarts (9.6 Liters).",
-    "tags": "coolant,capacity,eg33,svx,1992,1993,1994,1995,1996,1997",
+    "tags": "1992,1993,1994,1995,1996,1997,capacity,coolant,eg33,svx",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -330,7 +330,7 @@
     "category": "Coolant",
     "title": "Justy 1987-1994 (EF10/EF12) Coolant Capacity",
     "body": "4.8 Quarts (4.5 Liters).",
-    "tags": "coolant,capacity,ef10,ef12,justy,1987,1988,1989,1990,1991,1992,1993,1994",
+    "tags": "1987,1988,1989,1990,1991,1992,1993,1994,capacity,coolant,ef10,ef12,justy",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -340,7 +340,7 @@
     "category": "Coolant",
     "title": "Forester 2014-2018 (SJ) Coolant Capacity",
     "body": "8.0 Quarts (7.6 Liters).",
-    "tags": "coolant,capacity,fb25,fa20dit,forester,sj,2014,2015,2016,2017,2018",
+    "tags": "2014,2015,2016,2017,2018,capacity,coolant,fa20dit,fb25,forester,sj",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -350,7 +350,7 @@
     "category": "Coolant",
     "title": "WRX 2015-2021 (VA) Coolant Capacity",
     "body": "8.2 Quarts (7.8 Liters).",
-    "tags": "coolant,capacity,fa20dit,wrx,va,2015,2016,2017,2018,2019,2020,2021",
+    "tags": "2015,2016,2017,2018,2019,2020,2021,capacity,coolant,fa20dit,va,wrx",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -360,7 +360,7 @@
     "category": "Coolant",
     "title": "BRZ 2013-2021 (ZC6) Coolant Capacity",
     "body": "7.9 Quarts (7.5 Liters).",
-    "tags": "coolant,capacity,fa20,brz,zc6,86,2013,2014,2015,2016,2017,2018,2019,2020,2021",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,2021,86,brz,capacity,coolant,fa20,zc6",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -370,7 +370,7 @@
     "category": "Coolant",
     "title": "Tribeca 2006-2007 (EZ30) Coolant Capacity",
     "body": "8.5 Quarts (8.0 Liters).",
-    "tags": "coolant,capacity,ez30,tribeca,2006,2007",
+    "tags": "2006,2007,capacity,coolant,ez30,tribeca",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -380,7 +380,7 @@
     "category": "Coolant",
     "title": "Tribeca 2008-2014 (EZ36) Coolant Capacity",
     "body": "10.1 Quarts (9.6 Liters).",
-    "tags": "coolant,capacity,ez36,tribeca,2008,2009,2010,2011,2012,2013,2014",
+    "tags": "2008,2009,2010,2011,2012,2013,2014,capacity,coolant,ez36,tribeca",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -390,7 +390,7 @@
     "category": "Coolant",
     "title": "WRX 2022+ Coolant Capacity (MT)",
     "body": "9.1 Quarts (8.6 Liters)",
-    "tags": "coolant,capacity,fa24,wrx,vb,mt,2022,2023,2024",
+    "tags": "2022,2023,2024,capacity,coolant,fa24,mt,vb,wrx",
     "updatedAt": "2026-01-08T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
@@ -400,7 +400,7 @@
     "category": "Coolant",
     "title": "WRX 2022+ Coolant Capacity (SPT/CVT)",
     "body": "9.4 Quarts (8.9 Liters)",
-    "tags": "coolant,capacity,fa24,wrx,vb,spt,cvt,automatic,2022,2023,2024",
+    "tags": "2022,2023,2024,automatic,capacity,coolant,cvt,fa24,spt,vb,wrx",
     "updatedAt": "2026-01-08T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
