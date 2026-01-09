@@ -12,6 +12,7 @@ class SpecListState {
   final String query;
   final int generation;
   final Vehicle? vehicle;
+  final List<String>? categories;
 
   const SpecListState({
     this.items = const [],
@@ -23,6 +24,7 @@ class SpecListState {
     this.query = '',
     this.generation = 0,
     this.vehicle,
+    this.categories,
   });
 
   SpecListState copyWith({
@@ -35,17 +37,20 @@ class SpecListState {
     String? query,
     int? generation,
     Vehicle? vehicle,
-  }) => SpecListState(
-    items: items ?? this.items,
-    isLoadingInitial: isLoadingInitial ?? this.isLoadingInitial,
-    isLoadingMore: isLoadingMore ?? this.isLoadingMore,
-    hasMore: hasMore ?? this.hasMore,
-    offset: offset ?? this.offset,
-    limit: limit ?? this.limit,
-    query: query ?? this.query,
-    generation: generation ?? this.generation,
-    vehicle: vehicle ?? this.vehicle,
-  );
+    List<String>? categories,
+  }) =>
+      SpecListState(
+        items: items ?? this.items,
+        isLoadingInitial: isLoadingInitial ?? this.isLoadingInitial,
+        isLoadingMore: isLoadingMore ?? this.isLoadingMore,
+        hasMore: hasMore ?? this.hasMore,
+        offset: offset ?? this.offset,
+        limit: limit ?? this.limit,
+        query: query ?? this.query,
+        generation: generation ?? this.generation,
+        vehicle: vehicle ?? this.vehicle,
+        categories: categories ?? this.categories,
+      );
 }
 
 class SpecListController extends StateNotifier<SpecListState> {
@@ -70,6 +75,13 @@ class SpecListController extends StateNotifier<SpecListState> {
     if (state.vehicle != null) {
       // Vehicle-specific specs fetch (currently returns all matches, no pagination support in this method yet)
       results = await _dao.getSpecsForVehicle(state.vehicle!);
+
+      // Filter by categories if present
+      if (state.categories != null && state.categories!.isNotEmpty) {
+        final cats = state.categories!;
+        results.retainWhere((s) => cats.contains(s.category));
+      }
+
       // Filter by query if present (in-memory since getSpecsForVehicle doesn't support query yet)
       if (state.query.isNotEmpty) {
         final q = state.query.toLowerCase();
@@ -101,56 +113,55 @@ class SpecListController extends StateNotifier<SpecListState> {
     );
   }
 
-  Future<void> setQuery(String query) async {
-    state = state.copyWith(query: query);
-    await loadInitial();
-  }
-
-  Future<void> setVehicle(Vehicle? vehicle) async {
-    // Only reload if vehicle actually changes
-    if (state.vehicle == vehicle) return;
-    state = state.copyWith(vehicle: vehicle);
-    await loadInitial();
-  }
-
   Future<void> loadMore() async {
-    if (state.isLoadingInitial || state.isLoadingMore || !state.hasMore) return;
+    if (state.isLoadingMore || !state.hasMore || state.isLoadingInitial) return;
+    if (state.vehicle != null) return; // Vehicle mode doesn't paginate yet
 
-    // No load more for vehicle mode (as we fetch all at once currently)
-    if (state.vehicle != null) return;
-
-    final gen = state.generation;
     state = state.copyWith(isLoadingMore: true);
+    final gen = state.generation;
 
-    late final List<Spec> results;
-    if (state.query.isNotEmpty) {
-      results = await _dao.searchSpecs(
-        state.query,
-        limit: state.limit,
-        offset: state.items.length,
-      );
-    } else {
-      results = await _dao.getSpecsPaged(
-        state.limit,
-        offset: state.items.length,
-      );
-    }
+    final newItems =
+        state.query.isNotEmpty
+            ? await _dao.searchSpecs(
+              state.query,
+              limit: state.limit,
+              offset: state.offset,
+            )
+            : await _dao.getSpecsPaged(state.limit, offset: state.offset);
 
     if (state.generation != gen) return;
 
-    final merged = [...state.items, ...results];
-
     state = state.copyWith(
       isLoadingMore: false,
-      items: merged,
-      offset: merged.length,
-      hasMore: results.length == state.limit,
+      items: [...state.items, ...newItems],
+      offset: state.offset + newItems.length,
+      hasMore: newItems.length == state.limit,
     );
+  }
+
+  void setQuery(String query) {
+    if (state.query == query) return;
+    state = state.copyWith(query: query);
+    loadInitial();
+  }
+
+  void setVehicle(Vehicle? vehicle) {
+    if (state.vehicle == vehicle) return;
+    state = state.copyWith(vehicle: vehicle);
+    loadInitial();
+  }
+
+  void setCategories(List<String> categories) {
+    // Basic equality check for list to avoid reload
+    // Assuming clean immutable lists or just always reloading is safer.
+    // If list content is identical, skip? To simplify, just set.
+    state = state.copyWith(categories: categories);
+    loadInitial();
   }
 }
 
 final specListControllerProvider =
-    StateNotifierProvider<SpecListController, SpecListState>((ref) {
+    StateNotifierProvider.autoDispose<SpecListController, SpecListState>((ref) {
       final db = ref.watch(appDbProvider);
       return SpecListController(db.specsDao);
     });

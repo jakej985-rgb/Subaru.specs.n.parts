@@ -4,7 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 
 class YmmFlowPage extends ConsumerStatefulWidget {
-  const YmmFlowPage({super.key});
+  final List<String>? initialCategories;
+  const YmmFlowPage({super.key, this.initialCategories});
 
   @override
   ConsumerState<YmmFlowPage> createState() => _YmmFlowPageState();
@@ -201,7 +202,10 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                   title: const Text('View Specs'),
                   onTap: () {
                     // Navigate to specs page with selected vehicle for filtering
-                    context.push('/specs', extra: _selectedVehicle);
+                    context.push('/specs', extra: {
+                      'vehicle': _selectedVehicle,
+                      'categories': widget.initialCategories,
+                    });
                   },
                 ),
                 ListTile(

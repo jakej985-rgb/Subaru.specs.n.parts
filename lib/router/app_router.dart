@@ -8,6 +8,7 @@ import 'package:specsnparts/features/browse_ymm/ymm_flow_page.dart';
 import 'package:specsnparts/features/browse_engine/engine_flow_page.dart';
 import 'package:flutter/material.dart';
 import 'package:specsnparts/data/db/app_db.dart';
+import 'package:specsnparts/features/specs/specs_category_page.dart';
 
 // Placeholder Pages (will be replaced by actual implementations)
 class PlaceholderScreen extends StatelessWidget {
@@ -41,13 +42,33 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: 'specs',
             builder: (context, state) {
-              final vehicle = state.extra as Vehicle?;
-              return SpecListPage(vehicle: vehicle);
+              Vehicle? vehicle;
+              List<String>? categories;
+
+              if (state.extra is Vehicle) {
+                vehicle = state.extra as Vehicle;
+              } else if (state.extra is Map<String, dynamic>) {
+                final map = state.extra as Map<String, dynamic>;
+                vehicle = map['vehicle'] as Vehicle?;
+                categories =
+                    (map['categories'] as List<dynamic>?)?.cast<String>();
+              }
+
+              return SpecListPage(vehicle: vehicle, categories: categories);
             },
           ),
           GoRoute(
+            path: 'specs/categories',
+            builder: (context, state) => const SpecsCategoryPage(),
+          ),
+          GoRoute(
             path: 'browse/ymm',
-            builder: (context, state) => const YmmFlowPage(),
+            builder: (context, state) {
+              final extra = state.extra as Map<String, dynamic>?;
+              final categories =
+                  (extra?['categories'] as List<dynamic>?)?.cast<String>();
+              return YmmFlowPage(initialCategories: categories);
+            },
           ),
           GoRoute(
             path: 'browse/engine',

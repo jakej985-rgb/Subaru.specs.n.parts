@@ -6,9 +6,10 @@ import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/specs/spec_list_controller.dart';
 
 class SpecListPage extends ConsumerStatefulWidget {
-  const SpecListPage({super.key, this.vehicle});
+  const SpecListPage({super.key, this.vehicle, this.categories});
 
   final Vehicle? vehicle;
+  final List<String>? categories;
 
   @override
   ConsumerState<SpecListPage> createState() => _SpecListPageState();
@@ -23,13 +24,13 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   void initState() {
     super.initState();
     _controller = ScrollController()..addListener(_onScroll);
-    // Initialize controller with vehicle if present
-    // We use a microtask to avoid building/modifying provider during build
-    if (widget.vehicle != null) {
+    if (widget.vehicle != null || widget.categories != null) {
       Future.microtask(() {
-        ref
-            .read(specListControllerProvider.notifier)
-            .setVehicle(widget.vehicle);
+        final notifier = ref.read(specListControllerProvider.notifier);
+        if (widget.vehicle != null) notifier.setVehicle(widget.vehicle);
+        if (widget.categories != null) {
+          notifier.setCategories(widget.categories!);
+        }
       });
     }
   }
