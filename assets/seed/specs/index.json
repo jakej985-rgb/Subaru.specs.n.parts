@@ -1,0 +1,25 @@
+{
+  "files": [
+    "alignment.json",
+    "battery.json",
+    "brakes.json",
+    "bulbs.json",
+    "coolant.json",
+    "cooling.json",
+    "differential.json",
+    "dimensions.json",
+    "engine.json",
+    "filters.json",
+    "fluids.json",
+    "fuel.json",
+    "maintenance.json",
+    "maintenance_intervals.json",
+    "oil.json",
+    "spark_plugs.json",
+    "swap_rules.json",
+    "tires.json",
+    "torque.json",
+    "transmission.json",
+    "wheels.json"
+  ]
+}

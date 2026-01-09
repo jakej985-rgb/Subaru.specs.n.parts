@@ -68,25 +68,22 @@ class SeedRunner {
 
   Future<void> _seedSpecs() async {
     try {
-      final String manifestContent = await rootBundle.loadString(
-        'AssetManifest.json',
+      final String manifestRaw = await rootBundle.loadString(
+        'assets/seed/specs/index.json',
       );
-      final Map<String, dynamic> manifestMap = json.decode(manifestContent);
-      final specFiles = manifestMap.keys
-          .where(
-            (key) =>
-                key.startsWith('assets/seed/specs/') && key.endsWith('.json'),
-          )
-          .toList();
+      final manifest = jsonDecode(manifestRaw) as Map<String, dynamic>;
+      final files = (manifest['files'] as List).cast<String>();
 
-      if (specFiles.isEmpty) {
-        debugPrint('Warning: No spec files found in assets/seed/specs/');
+      if (files.isEmpty) {
+        debugPrint('Warning: index.json listed 0 files.');
         return;
       }
 
       final List<Spec> allSpecs = [];
-      for (final file in specFiles) {
-        final String response = await rootBundle.loadString(file);
+      for (final file in files) {
+        final String response = await rootBundle.loadString(
+          'assets/seed/specs/$file',
+        );
         final List<Spec> specs = await compute<String, List<Spec>>(
           parseSpecs,
           response,
@@ -95,9 +92,7 @@ class SeedRunner {
       }
 
       await db.specsDao.insertMultiple(allSpecs);
-      debugPrint(
-        'Seeded ${allSpecs.length} specs from ${specFiles.length} files.',
-      );
+      debugPrint('Seeded ${allSpecs.length} specs from ${files.length} files.');
     } catch (e) {
       debugPrint('Error loading specs from split files: $e');
     }
