@@ -506,15 +506,25 @@
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_capacity_wrx_6mt_vb",
+    "category": "Transmission",
+    "title": "WRX 2022+ (6MT) Fluid Capacity",
+    "body": "2.6 Quarts (2.5 Liters)",
+    "tags": "trans,fluid,capacity,manual,6mt,wrx,vb,2022,2023,2024",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_trans_fluid_type_wrx_6mt_vb",
+    "category": "Transmission",
+    "title": "WRX 2022+ (6MT) Fluid Type",
+    "body": "GL-5 75W-90",
+    "tags": "trans,fluid,type,manual,6mt,wrx,vb,2022,2023,2024",
+    "updatedAt": "2026-01-08T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]
-
-
-
-
-
-
-
-
-
-
