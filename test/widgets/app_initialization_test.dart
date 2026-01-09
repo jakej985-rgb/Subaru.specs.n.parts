@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:drift/native.dart';
@@ -16,24 +13,30 @@ class FakeSeedRunner extends SeedRunner {
   Future<void> runSeedIfNeeded() async {
     // Verify loading state is transient by delaying slightly (pumpAndSettle will wait)
     await Future.delayed(const Duration(milliseconds: 100));
-    
+
     // Insert test data directly
-    await db.into(db.vehicles).insert(
-      VehiclesCompanion(
-        id: const Value('test_1'),
-        year: const Value(2024),
-        make: const Value('Subaru'),
-        model: const Value('Impreza'),
-        trim: const Value('Base'),
-        engineCode: const Value('FB20'),
-        updatedAt: Value(DateTime.fromMillisecondsSinceEpoch(1704067200000)),
-      ),
-    );
+    await db
+        .into(db.vehicles)
+        .insert(
+          VehiclesCompanion(
+            id: const Value('test_1'),
+            year: const Value(2024),
+            make: const Value('Subaru'),
+            model: const Value('Impreza'),
+            trim: const Value('Base'),
+            engineCode: const Value('FB20'),
+            updatedAt: Value(
+              DateTime.fromMillisecondsSinceEpoch(1704067200000),
+            ),
+          ),
+        );
   }
 }
 
 void main() {
-  testWidgets('Regression Test: App waits for seeding', (WidgetTester tester) async {
+  testWidgets('Regression Test: App waits for seeding', (
+    WidgetTester tester,
+  ) async {
     // 1. Setup in-memory DB
     final db = AppDatabase(NativeDatabase.memory());
     addTearDown(db.close);
@@ -49,13 +52,15 @@ void main() {
       ),
     );
 
-
     // 3. Wait for initial home screen (this waits for loading to finish)
     // First pump starts the app, which shows loading
     await tester.pump();
-    
+
     // Verify we see loading
-    if (find.text('Updating specifications database...').evaluate().isNotEmpty) {
+    if (find
+        .text('Updating specifications database...')
+        .evaluate()
+        .isNotEmpty) {
       // Wait for the delay
       await tester.pump(const Duration(milliseconds: 500));
       await tester.pumpAndSettle();
@@ -74,4 +79,3 @@ void main() {
     expect(find.text('2024'), findsOneWidget);
   });
 }
-
