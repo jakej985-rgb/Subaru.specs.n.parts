@@ -36,6 +36,9 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
         vehicles,
       )..where((tbl) => tbl.year.equals(year) & tbl.model.equals(model))).get();
 
+  Future<List<Vehicle>> getVehiclesByYear(int year) =>
+      (select(vehicles)..where((tbl) => tbl.year.equals(year))).get();
+
   Future<void> insertVehicle(Vehicle vehicle) =>
       into(vehicles).insert(vehicle, mode: InsertMode.insertOrReplace);
 

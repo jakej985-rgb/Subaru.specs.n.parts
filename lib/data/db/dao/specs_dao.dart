@@ -15,6 +15,9 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
   Future<List<Spec>> getSpecsByCategory(String category) =>
       (select(specs)..where((tbl) => tbl.category.equals(category))).get();
 
+  Future<List<Spec>> getSpecsByCategoriesResult(List<String> categories) =>
+      (select(specs)..where((tbl) => tbl.category.isIn(categories))).get();
+
   Future<List<Spec>> searchSpecs(
     String query, {
     int limit = 50,

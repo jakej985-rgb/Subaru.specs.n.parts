@@ -8,7 +8,9 @@ import 'package:specsnparts/features/browse_ymm/ymm_flow_page.dart';
 import 'package:specsnparts/features/browse_engine/engine_flow_page.dart';
 import 'package:flutter/material.dart';
 import 'package:specsnparts/data/db/app_db.dart';
-import 'package:specsnparts/features/specs/specs_category_page.dart';
+import 'package:specsnparts/features/specs_by_category/specs_by_category_hub_page.dart';
+import 'package:specsnparts/features/specs_by_category/category_year_picker_page.dart';
+import 'package:specsnparts/features/specs_by_category/category_year_results_page.dart';
 
 // Placeholder Pages (will be replaced by actual implementations)
 class PlaceholderScreen extends StatelessWidget {
@@ -59,7 +61,25 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           ),
           GoRoute(
             path: 'specs/categories',
-            builder: (context, state) => const SpecsCategoryPage(),
+            builder: (context, state) => const SpecsByCategoryHubPage(),
+            routes: [
+              GoRoute(
+                path: ':categoryKey/years',
+                builder: (context, state) {
+                  final key = state.pathParameters['categoryKey']!;
+                  return CategoryYearPickerPage(categoryKey: key);
+                },
+              ),
+              GoRoute(
+                path: ':categoryKey/:year',
+                builder: (context, state) {
+                  final key = state.pathParameters['categoryKey']!;
+                  final yearStr = state.pathParameters['year']!;
+                  final year = int.tryParse(yearStr) ?? 0;
+                  return CategoryYearResultsPage(categoryKey: key, year: year);
+                },
+              ),
+            ],
           ),
           GoRoute(
             path: 'browse/ymm',
