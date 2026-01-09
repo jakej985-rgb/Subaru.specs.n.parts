@@ -800,15 +800,7 @@
         "engineCode":  "EJ251 NA",
         "updatedAt":  "2026-01-04T00:00:00Z"
     },
-    {
-        "id":  "v_imp_1999_2_5_rs_us",
-        "year":  1999,
-        "make":  "Subaru",
-        "model":  "Impreza",
-        "trim":  "2.5 RS (US)",
-        "engineCode":  "EJ251 NA",
-        "updatedAt":  "2026-01-09T03:20:00Z"
-    },
+
     {
         "id":  "v_imp_1999_2_5rs_us",
         "year":  1999,
