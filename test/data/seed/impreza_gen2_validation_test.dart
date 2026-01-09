@@ -19,12 +19,12 @@ void main() {
     });
 
     test('WRX Engine Evolution (2.0L vs 2.5L)', () {
-      // 2002-2005 WRX = EJ205 (2.0L Turbo)
+      // 2002-2005 WRX = EJ205 (2.0L Turbo) - USDM specific
       final wrx02 = vehicles.firstWhere(
-        (v) => v['year'] == 2002 && v['trim'].contains('WRX'),
+        (v) => v['year'] == 2002 && v['trim'] == 'WRX (US)',
       );
       final wrx05 = vehicles.firstWhere(
-        (v) => v['year'] == 2005 && v['trim'].contains('WRX'),
+        (v) => v['year'] == 2005 && v['trim'] == 'WRX (US)',
       );
 
       expect(
