@@ -127,6 +127,8 @@
     "updatedAt": "2024-05-25T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual (JDM)"
+  },
+  {
     "id": "s_trans_capacity_legacy_4eat_gen1",
     "category": "Transmission",
     "title": "Legacy 1990-1994 (4EAT) Fluid Capacity",

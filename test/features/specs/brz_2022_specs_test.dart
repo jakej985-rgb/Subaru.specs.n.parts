@@ -29,11 +29,11 @@ void main() {
     ).readAsString();
 
     // 2. Parse Data
-    allVehicles = await parseVehicles(vehiclesJson);
-    final oilSpecs = await parseSpecs(oilJson);
-    final transSpecs = await parseSpecs(transJson);
-    final diffSpecs = await parseSpecs(diffJson);
-    final coolantSpecs = await parseSpecs(coolantJson);
+    allVehicles = parseVehicles(vehiclesJson);
+    final oilSpecs = parseSpecs(oilJson);
+    final transSpecs = parseSpecs(transJson);
+    final diffSpecs = parseSpecs(diffJson);
+    final coolantSpecs = parseSpecs(coolantJson);
 
     allSpecs = [...oilSpecs, ...transSpecs, ...diffSpecs, ...coolantSpecs];
 
@@ -56,9 +56,10 @@ void main() {
     List<Spec> findSpecsForVehicle(Vehicle v, String category) {
       return allSpecs.where((s) {
         if (s.category != category) return false;
-        final tags =
-            s.tags?.split(',').map((e) => e.trim().toLowerCase()).toList() ??
-            [];
+        final tags = s.tags
+            .split(',')
+            .map((e) => e.trim().toLowerCase())
+            .toList();
 
         // Basic matching logic mimicking SpecsDao roughly for this test
         // In real app, it's SQL based. Here we check if tags match key vehicle attributes.
@@ -76,11 +77,11 @@ void main() {
     // 1. Check Oil Specs
     final oilSpecs = findSpecsForVehicle(brz2022, 'Oil');
     final oilCapacity = oilSpecs.firstWhere(
-      (s) => s.title.contains('Capacity') && s.tags!.contains('fa24'),
+      (s) => s.title.contains('Capacity') && s.tags.contains('fa24'),
       orElse: () => throw Exception('Oil Capacity missing'),
     );
     final oilViscosity = oilSpecs.firstWhere(
-      (s) => s.title.contains('Viscosity') && s.tags!.contains('fa24'),
+      (s) => s.title.contains('Viscosity') && s.tags.contains('fa24'),
       orElse: () => throw Exception('Oil Viscosity missing'),
     );
 
@@ -92,7 +93,7 @@ void main() {
     final mtTrans = transSpecs.firstWhere(
       (s) =>
           s.title.contains('Manual Trans Fluid Capacity') &&
-          s.tags!.contains('fa24'),
+          s.tags.contains('fa24'),
       orElse: () => throw Exception('MT Fluid missing'),
     );
     expect(mtTrans.body, contains('2.2 Liters'));
@@ -103,7 +104,7 @@ void main() {
     final diffCap = diffSpecs.firstWhere(
       (s) =>
           s.title.contains('Rear Differential Capacity') &&
-          s.tags!.contains('fa24'),
+          s.tags.contains('fa24'),
       orElse: () => throw Exception('Diff Capacity missing'),
     );
     expect(diffCap.body, contains('1.15 Liters'));
@@ -113,7 +114,7 @@ void main() {
     final coolantSpecs = findSpecsForVehicle(brz2022, 'Coolant');
     final mtCoolant = coolantSpecs.firstWhere(
       (s) =>
-          s.title.contains('Coolant Capacity (MT)') && s.tags!.contains('fa24'),
+          s.title.contains('Coolant Capacity (MT') && s.tags.contains('fa24'),
       orElse: () => throw Exception('MT Coolant missing'),
     );
     expect(mtCoolant.body, contains('7.4 Liters'));

@@ -200,6 +200,8 @@
     "updatedAt": "2026-01-05T00:00:00Z",
     "verified": true,
     "source": "FSM"
+  },
+  {
     "id": "s_oil_capacity_brz_fa24",
     "category": "Oil",
     "title": "Oil Capacity (FA24)",
@@ -219,6 +221,8 @@
     "updatedAt": "2024-05-25T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
     "id": "s_oil_capacity_ej22_legacy_gen1",
     "category": "Oil",
     "title": "Legacy 1990-1994 (EJ22) Oil Capacity",

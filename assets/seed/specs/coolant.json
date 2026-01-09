@@ -54,6 +54,8 @@
     "updatedAt": "2026-01-05T00:00:00Z",
     "verified": true,
     "source": "FSM"
+  },
+  {
     "id": "s_coolant_capacity_brz_mt_fa24",
     "category": "Coolant",
     "title": "Coolant Capacity (MT FA24)",
@@ -72,6 +74,8 @@
     "updatedAt": "2024-05-25T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual (JDM/Global)"
+  },
+  {
     "id": "s_coolant_capacity_legacy_ej22_gen1",
     "category": "Coolant",
     "title": "Legacy 1990-1994 (EJ22) Coolant Capacity",

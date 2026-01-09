@@ -42,7 +42,11 @@ class HomePage extends StatelessWidget {
         () => context.go('/browse/engine'),
       ),
       ('Part Lookup', Icons.search, () => context.go('/parts')),
-      ('Specs by Category', Icons.list_alt, () => context.go('/specs/categories')),
+      (
+        'Specs by Category',
+        Icons.list_alt,
+        () => context.go('/specs/categories'),
+      ),
       ('Settings', Icons.settings, () => context.go('/settings')),
     ];
 

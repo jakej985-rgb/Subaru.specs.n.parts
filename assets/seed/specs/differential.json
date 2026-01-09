@@ -51,6 +51,8 @@
     "verified": true,
     "source": "Owner's Manual (JDM)",
     "notes": "Spec changed to 75W-85 for Gen 2 LSD."
+  },
+  {
     "id": "s_diff_ratio_legacy_gen1_411",
     "category": "Differential",
     "title": "Final Drive Ratio (Legacy 1990-1994 4.11)",

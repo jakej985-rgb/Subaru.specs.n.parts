@@ -38,19 +38,18 @@ class SpecListState {
     int? generation,
     Vehicle? vehicle,
     List<String>? categories,
-  }) =>
-      SpecListState(
-        items: items ?? this.items,
-        isLoadingInitial: isLoadingInitial ?? this.isLoadingInitial,
-        isLoadingMore: isLoadingMore ?? this.isLoadingMore,
-        hasMore: hasMore ?? this.hasMore,
-        offset: offset ?? this.offset,
-        limit: limit ?? this.limit,
-        query: query ?? this.query,
-        generation: generation ?? this.generation,
-        vehicle: vehicle ?? this.vehicle,
-        categories: categories ?? this.categories,
-      );
+  }) => SpecListState(
+    items: items ?? this.items,
+    isLoadingInitial: isLoadingInitial ?? this.isLoadingInitial,
+    isLoadingMore: isLoadingMore ?? this.isLoadingMore,
+    hasMore: hasMore ?? this.hasMore,
+    offset: offset ?? this.offset,
+    limit: limit ?? this.limit,
+    query: query ?? this.query,
+    generation: generation ?? this.generation,
+    vehicle: vehicle ?? this.vehicle,
+    categories: categories ?? this.categories,
+  );
 }
 
 class SpecListController extends StateNotifier<SpecListState> {
@@ -120,14 +119,13 @@ class SpecListController extends StateNotifier<SpecListState> {
     state = state.copyWith(isLoadingMore: true);
     final gen = state.generation;
 
-    final newItems =
-        state.query.isNotEmpty
-            ? await _dao.searchSpecs(
-              state.query,
-              limit: state.limit,
-              offset: state.offset,
-            )
-            : await _dao.getSpecsPaged(state.limit, offset: state.offset);
+    final newItems = state.query.isNotEmpty
+        ? await _dao.searchSpecs(
+            state.query,
+            limit: state.limit,
+            offset: state.offset,
+          )
+        : await _dao.getSpecsPaged(state.limit, offset: state.offset);
 
     if (state.generation != gen) return;
 

@@ -3635,5 +3635,14 @@
         "trim":  "Touring (US)",
         "engineCode":  "FB25 NA",
         "updatedAt":  "2026-01-05T19:08:18Z"
+    },
+    {
+        "id":  "v_brz_2022_limited_us",
+        "year":  2022,
+        "make":  "Subaru",
+        "model":  "BRZ",
+        "trim":  "Limited",
+        "engineCode":  "FA24",
+        "updatedAt":  "2026-01-09T00:00:00Z"
     }
 ]

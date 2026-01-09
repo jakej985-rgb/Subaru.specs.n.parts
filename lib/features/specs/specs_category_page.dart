@@ -2,51 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 enum SpecsCategory {
-  fluids(
-    'Lubrication & Fluids',
-    Icons.water_drop,
-    ['Oil', 'Fluids', 'Coolant'],
-  ),
-  lighting(
-    'Lighting (Bulbs)',
-    Icons.lightbulb,
-    ['Bulbs'],
-  ),
-  maintenance(
-    'Maintenance & Service',
-    Icons.build,
-    ['Maintenance', 'Maintenance Intervals', 'Spark Plugs', 'Cooling'],
-  ),
-  torque(
-    'Torque Specifications',
-    Icons.rotate_right,
-    ['Torque'],
-  ),
-  engine(
-    'Engine Specifications',
-    Icons.engineering,
-    ['Engine'],
-  ),
-  drivetrain(
-    'Drivetrain & Transmission',
-    Icons.settings_input_component,
-    ['Transmission', 'Differential'],
-  ),
-  capacities(
-    'Capacities & Dimensions',
-    Icons.aspect_ratio,
-    ['Dimensions', 'Wheels', 'Tires'],
-  ),
-  filters(
-    'Filters & Wear Items',
-    Icons.filter_alt,
-    ['Filters'],
-  ),
-  notes(
-    'Notes & Warnings',
-    Icons.warning,
-    ['Swap Rules', 'Notes'],
-  );
+  fluids('Lubrication & Fluids', Icons.water_drop, [
+    'Oil',
+    'Fluids',
+    'Coolant',
+  ]),
+  lighting('Lighting (Bulbs)', Icons.lightbulb, ['Bulbs']),
+  maintenance('Maintenance & Service', Icons.build, [
+    'Maintenance',
+    'Maintenance Intervals',
+    'Spark Plugs',
+    'Cooling',
+  ]),
+  torque('Torque Specifications', Icons.rotate_right, ['Torque']),
+  engine('Engine Specifications', Icons.engineering, ['Engine']),
+  drivetrain('Drivetrain & Transmission', Icons.settings_input_component, [
+    'Transmission',
+    'Differential',
+  ]),
+  capacities('Capacities & Dimensions', Icons.aspect_ratio, [
+    'Dimensions',
+    'Wheels',
+    'Tires',
+  ]),
+  filters('Filters & Wear Items', Icons.filter_alt, ['Filters']),
+  notes('Notes & Warnings', Icons.warning, ['Swap Rules', 'Notes']);
 
   final String label;
   final IconData icon;

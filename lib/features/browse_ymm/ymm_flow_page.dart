@@ -202,10 +202,13 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                   title: const Text('View Specs'),
                   onTap: () {
                     // Navigate to specs page with selected vehicle for filtering
-                    context.push('/specs', extra: {
-                      'vehicle': _selectedVehicle,
-                      'categories': widget.initialCategories,
-                    });
+                    context.push(
+                      '/specs',
+                      extra: {
+                        'vehicle': _selectedVehicle,
+                        'categories': widget.initialCategories,
+                      },
+                    );
                   },
                 ),
                 ListTile(
