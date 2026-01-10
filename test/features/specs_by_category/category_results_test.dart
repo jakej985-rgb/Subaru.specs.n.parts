@@ -59,7 +59,10 @@ void main() {
 
     // Verify Content
     expect(find.text('Forester'), findsOneWidget); // Model Group
-    expect(find.text('Base'), findsOneWidget); // Trim Result
+    expect(
+      find.text('BASE'),
+      findsOneWidget,
+    ); // Trim Result (Uppercased in new UI)
     expect(find.text('Test Fluid'), findsOneWidget); // Spec Title
     expect(find.text('1 Liter'), findsOneWidget); // Spec Body
   });

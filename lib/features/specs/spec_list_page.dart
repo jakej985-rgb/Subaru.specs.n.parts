@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/specs/spec_list_controller.dart';
+import 'package:specsnparts/theme/widgets/carbon_surface.dart';
+import 'package:specsnparts/theme/widgets/neon_chip.dart';
+import 'package:specsnparts/theme/tokens.dart';
 
 class SpecListPage extends ConsumerStatefulWidget {
   const SpecListPage({super.key, this.vehicle, this.categories});
@@ -69,8 +72,6 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   @override
   Widget build(BuildContext context) {
     // ⚡ Bolt Optimization: Use select to only watch relevant state fields.
-    // This prevents unnecessary rebuilds when fields like 'query' or 'generation' change
-    // in the state but don't affect the UI structure directly (since query is managed via controller).
     final s = ref.watch(
       specListControllerProvider.select(
         (state) => (
@@ -150,18 +151,30 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                             onPressed: _clearSearch,
                             icon: const Icon(Icons.clear),
                             label: const Text('Clear Search'),
+                            style: OutlinedButton.styleFrom(
+                              foregroundColor: ThemeTokens.neonBlue,
+                              side: const BorderSide(
+                                color: ThemeTokens.neonBlue,
+                              ),
+                            ),
                           ),
                         ],
                       ],
                     ),
                   )
-                : ListView.builder(
+                : ListView.separated(
                     key: const Key('specListView'),
                     controller: _controller,
                     physics: const AlwaysScrollableScrollPhysics(),
                     keyboardDismissBehavior:
                         ScrollViewKeyboardDismissBehavior.onDrag,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 8,
+                    ),
                     itemCount: s.items.length + (s.isLoadingMore ? 1 : 0),
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(height: 8),
                     itemBuilder: (context, index) {
                       if (index >= s.items.length) {
                         return const Padding(
@@ -170,46 +183,95 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                         );
                       }
                       final spec = s.items[index];
-                      return ListTile(
+                      return CarbonSurface(
                         key: Key('spec_row_${spec.id}'),
-                        title: Text(spec.title),
-                        subtitle: Text(spec.category),
-                        trailing: const Icon(Icons.chevron_right),
-                        onTap: () {
-                          showDialog(
-                            context: context,
-                            builder: (context) => AlertDialog(
-                              title: Text(spec.title),
-                              content: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Category: ${spec.category}',
-                                    style: Theme.of(
-                                      context,
-                                    ).textTheme.bodySmall,
-                                  ),
-                                  const SizedBox(height: 8),
-                                  Text(spec.body),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    'Tags: ${spec.tags}',
-                                    style: Theme.of(
-                                      context,
-                                    ).textTheme.bodySmall,
+                        padding: EdgeInsets.zero,
+                        child: InkWell(
+                          onTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                backgroundColor: ThemeTokens.surfaceRaised,
+                                title: Text(
+                                  spec.title,
+                                  style: Theme.of(context).textTheme.titleLarge,
+                                ),
+                                content: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    NeonChip(
+                                      label: spec.category,
+                                      isActive: true,
+                                    ),
+                                    const SizedBox(height: 16),
+                                    Text(
+                                      spec.body,
+                                      style: Theme.of(
+                                        context,
+                                      ).textTheme.bodyMedium,
+                                    ),
+                                    const SizedBox(height: 16),
+                                    Text(
+                                      'Tags: ${spec.tags}',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodySmall
+                                          ?.copyWith(
+                                            color: ThemeTokens.textMuted,
+                                          ),
+                                    ),
+                                  ],
+                                ),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () => Navigator.pop(context),
+                                    child: const Text(
+                                      'Close',
+                                      style: TextStyle(
+                                        color: ThemeTokens.neonBlue,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
-                              actions: [
-                                TextButton(
-                                  onPressed: () => Navigator.pop(context),
-                                  child: const Text('Close'),
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        spec.title,
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .titleMedium
+                                            ?.copyWith(
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                      ),
+                                    ),
+                                    NeonChip(
+                                      label: spec.category,
+                                      isActive: false,
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 8),
+                                Text(
+                                  spec.body,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: Theme.of(context).textTheme.bodyMedium,
                                 ),
                               ],
                             ),
-                          );
-                        },
+                          ),
+                        ),
                       );
                     },
                   ),

@@ -3,6 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:specsnparts/features/specs_by_category/category_year_results_controller.dart';
 import 'package:specsnparts/features/specs_by_category/spec_category_keys.dart';
+import 'package:specsnparts/theme/widgets/trim_header_card.dart';
+import 'package:specsnparts/theme/widgets/carbon_surface.dart';
+import 'package:specsnparts/theme/widgets/neon_divider.dart';
+import 'package:specsnparts/theme/tokens.dart';
 
 class CategoryYearResultsPage extends ConsumerWidget {
   final String categoryKey;
@@ -40,56 +44,128 @@ class CategoryYearResultsPage extends ConsumerWidget {
     }
 
     return ListView.builder(
+      padding: const EdgeInsets.all(16.0),
       itemCount: state.groups.length,
       itemBuilder: (context, index) {
         final group = state.groups[index];
-        return _buildModelGroup(context, group);
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 24.0),
+          child: _buildModelGroup(context, group),
+        );
       },
     );
   }
 
   Widget _buildModelGroup(BuildContext context, VehicleGroup group) {
-    return Card(
-      margin: const EdgeInsets.all(8.0),
-      child: ExpansionTile(
-        initiallyExpanded: true,
-        title: Text(group.model, style: Theme.of(context).textTheme.titleLarge),
-        children: group.results.map((result) {
-          return _buildTrimResult(context, result);
-        }).toList(),
-      ),
+    return TrimHeaderCard(
+      title: group.model,
+      initiallyExpanded: true,
+      children: group.results.map((result) {
+        return _buildTrimResult(context, result);
+      }).toList(),
     );
   }
 
   Widget _buildTrimResult(BuildContext context, VehicleResult result) {
     final hasSpecs = result.specs.isNotEmpty;
     final trimName = result.vehicle.trim ?? 'Base';
+    final engine = result.vehicle.engineCode;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          color: Colors.grey.shade200,
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-          child: Text(trimName, style: Theme.of(context).textTheme.titleMedium),
+        Padding(
+          padding: const EdgeInsets.only(top: 16.0, bottom: 8.0),
+          child: Row(
+            children: [
+              Container(
+                width: 4,
+                height: 16,
+                decoration: BoxDecoration(
+                  color: ThemeTokens.neonBlueDeep,
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                trimName.toUpperCase(),
+                style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                  color: ThemeTokens.neonBlue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              if (engine != null) ...[
+                const SizedBox(width: 8),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 6,
+                    vertical: 2,
+                  ),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: ThemeTokens.textMuted.withOpacity(0.5),
+                    ),
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                  child: Text(
+                    engine,
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: ThemeTokens.textMuted,
+                    ),
+                  ),
+                ),
+              ],
+            ],
+          ),
         ),
         if (!hasSpecs)
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
               'Missing data for this category.',
-              style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey),
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+                color: ThemeTokens.textMuted,
+              ),
             ),
           )
         else
           ...result.specs.map(
-            (spec) => ListTile(
-              title: Text(spec.title),
-              subtitle: Text(spec.body),
-              dense: true,
+            (spec) => Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: CarbonSurface(
+                baseColor: ThemeTokens.surface,
+                opacity: 0.05,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 12,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      spec.title,
+                      style: const TextStyle(
+                        color: ThemeTokens.textSecondary,
+                        fontSize: 12,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      spec.body,
+                      style: const TextStyle(
+                        color: ThemeTokens.textPrimary,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
+        const NeonDivider(verticalPadding: 8),
       ],
     );
   }
