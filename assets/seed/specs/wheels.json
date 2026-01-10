@@ -56,6 +56,14 @@
     "updatedAt": "2024-05-23T00:00:00Z"
   },
   {
+    "id": "s_wheel_lug_socket",
+    "category": "Wheels",
+    "title": "Lug Nut Socket Size",
+    "body": "19mm Hex",
+    "tags": "hex,lugs,socket,sti,wheels,wrx",
+    "updatedAt": "2026-01-10T14:15:00Z"
+  },
+  {
     "id": "s_wheel_size_sti_04",
     "category": "Wheels",
     "title": "Stock Wheel Size (STI 2004)",
@@ -262,10 +270,20 @@
   {
     "id": "s_wheel_torque_sti_gen2",
     "category": "Wheels",
-    "title": "Lug Nut Torque (STI 2004-2007)",
+    "title": "Lug Nut Torque (STI 2005-2007)",
     "body": "65-72 ft-lb (90-100 Nm). Typically torqued to 75-80 ft-lb.",
-    "tags": "2004,2005,2006,2007,gd,impreza,lug,sti,torque,wheel",
-    "updatedAt": "2026-01-07T00:00:00Z",
+    "tags": "2005,2006,2007,gd,impreza,lug,sti,torque,wheel",
+    "updatedAt": "2026-01-10T14:15:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_wheel_torque_sti_04",
+    "category": "Wheels",
+    "title": "Lug Nut Torque (STI 2004)",
+    "body": "65.7 ft-lb (90 Nm). Do not over-torque.",
+    "tags": "2004,gd,impreza,lug,sti,torque,wheel",
+    "updatedAt": "2026-01-10T14:15:00Z",
     "verified": true,
     "source": "Service Manual"
   },

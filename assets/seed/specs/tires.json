@@ -26,6 +26,16 @@
     "source": "2004 Impreza WRX STI FSM"
   },
   {
+    "id": "s_tire_spare_sti_04",
+    "category": "Tires",
+    "title": "Spare Tire Size (STI 2004)",
+    "body": "T135/70D17 (Compact Spare).",
+    "tags": "2004,gd,size,spare,sti,tires",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "2004 Impreza WRX STI FSM"
+  },
+  {
     "id": "s_pressure_tires_std",
     "category": "Tires",
     "title": "Standard Tire Pressure",
