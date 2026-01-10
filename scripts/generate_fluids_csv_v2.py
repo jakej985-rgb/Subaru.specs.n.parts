@@ -303,12 +303,195 @@ ENGINE_SPECS = {
         "ac": {"qty": "", "spec": "R-1234yf"},
         "source_1": "Subaru Solterra FSM", "source_2": "toyota-club.net", "confidence": "high"
     },
+    # ============================================================================
+    # JDM ENGINES
+    # ============================================================================
+    # EN07 (660cc Kei)
+    "EN07": {
+        "engine_oil": {"qty": "w/ filter: 2.7 qt / 2.6 L", "spec": "5W-30 (API SN)"},
+        "engine_coolant": {"qty": "capacity: 4.2 qt / 4.0 L", "spec": "Subaru coolant 50/50"},
+        "manual_trans": {"qty": "capacity: 2.1 qt / 2.0 L", "spec": "75W-90 GL-4", "notes": "front diff shared"},
+        "cvt": {"qty": "drain & fill: 2.5 qt / 2.4 L", "spec": "Subaru CVT Fluid"},
+        "rear_diff": {"qty": "capacity: 0.6 qt / 0.57 L", "spec": "75W-90 GL-5", "notes": "4WD only"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru Kei FSM", "source_2": "JDM specs", "confidence": "medium"
+    },
+    # KF (Daihatsu OEM 660cc)
+    "KF": {
+        "engine_oil": {"qty": "w/ filter: 2.9 qt / 2.7 L", "spec": "0W-20 (API SN)"},
+        "engine_coolant": {"qty": "capacity: 4.0 qt / 3.8 L", "spec": "Toyota/Daihatsu coolant"},
+        "cvt": {"qty": "drain & fill: 2.8 qt / 2.6 L", "spec": "Daihatsu CVT Fluid"},
+        "rear_diff": {"qty": "capacity: 0.6 qt / 0.57 L", "spec": "75W-90 GL-5", "notes": "4WD only"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Daihatsu FSM", "source_2": "JDM specs", "confidence": "medium"
+    },
+    # FB16 (1.6L JDM)
+    "FB16": {
+        "engine_oil": {"qty": "w/ filter: 4.2 qt / 4.0 L", "spec": "0W-20 Synthetic (API SN)"},
+        "engine_coolant": {"qty": "capacity: 6.8 qt / 6.4 L", "spec": "Subaru Super Coolant (blue)"},
+        "cvt": {"qty": "drain & fill: 4.0 qt / 3.8 L | total: 12.0 qt / 11.4 L", "spec": "Subaru CVT Fluid Lineartronic"},
+        "rear_diff": {"qty": "capacity: 0.8 qt / 0.76 L", "spec": "Subaru Gear Oil 75W-90"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru XV FSM", "source_2": "AMSOIL", "confidence": "high"
+    },
+    # CB18 (1.8L Turbo DIT - Levorg/Outback/Forester 2020+)
+    "CB18": {
+        "engine_oil": {"qty": "w/ filter: 5.3 qt / 5.0 L", "spec": "0W-20 Synthetic (API SP)"},
+        "engine_coolant": {"qty": "capacity: 8.0 qt / 7.6 L", "spec": "Subaru Super Coolant (blue)"},
+        "cvt": {"qty": "drain & fill: 4.0 qt / 3.8 L | total: 13.2 qt / 12.5 L", "spec": "Subaru CVT Fluid Lineartronic II"},
+        "rear_diff": {"qty": "capacity: 0.9 qt / 0.85 L", "spec": "Subaru Gear Oil 75W-90"},
+        "ac": {"qty": "", "spec": "R-1234yf"},
+        "source_1": "Subaru Levorg 2nd Gen FSM", "source_2": "Subaru Media", "confidence": "high"
+    },
+    # EJ20G (2.0L JDM Turbo Phase 1)
+    "EJ20G": {
+        "engine_oil": {"qty": "w/ filter: 4.5 qt / 4.3 L", "spec": "5W-30 Synthetic (API SL)"},
+        "engine_coolant": {"qty": "capacity: 6.5 qt / 6.2 L", "spec": "Subaru coolant 50/50"},
+        "manual_trans": {"qty": "capacity: 3.7 qt / 3.5 L", "spec": "75W-90 GL-5", "notes": "front diff shared"},
+        "rear_diff": {"qty": "capacity: 0.8 qt / 0.76 L", "spec": "75W-90 GL-5"},
+        "clutch": {"qty": "capacity: 0.2 qt / 0.19 L", "spec": "DOT 3 | DOT 4"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru JDM WRX FSM", "source_2": "AMSOIL", "confidence": "high"
+    },
+    # EJ20K (2.0L JDM Turbo Phase 1.5)
+    "EJ20K": {
+        "engine_oil": {"qty": "w/ filter: 4.5 qt / 4.3 L", "spec": "5W-30 Synthetic (API SL)"},
+        "engine_coolant": {"qty": "capacity: 7.0 qt / 6.6 L", "spec": "Subaru Super Coolant"},
+        "manual_trans": {"qty": "capacity: 3.8 qt / 3.6 L", "spec": "75W-90 GL-5", "notes": "front diff shared"},
+        "rear_diff": {"qty": "capacity: 0.9 qt / 0.85 L", "spec": "75W-90 GL-5"},
+        "clutch": {"qty": "capacity: 0.2 qt / 0.19 L", "spec": "DOT 4"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru JDM STI FSM", "source_2": "AMSOIL", "confidence": "high"
+    },
+    # EJ206/EJ208 (Twin Turbo Legacy)
+    "EJ206": {
+        "engine_oil": {"qty": "w/ filter: 4.8 qt / 4.5 L", "spec": "5W-30 Synthetic (API SM)"},
+        "engine_coolant": {"qty": "capacity: 7.2 qt / 6.8 L", "spec": "Subaru Super Coolant"},
+        "manual_trans": {"qty": "capacity: 3.8 qt / 3.6 L", "spec": "75W-90 GL-5", "notes": "front diff shared"},
+        "automatic_trans": {"qty": "drain & fill: 4.0 qt / 3.8 L | total: 10.4 qt / 9.8 L", "spec": "Subaru ATF-HP"},
+        "rear_diff": {"qty": "capacity: 0.9 qt / 0.85 L", "spec": "75W-90 GL-5"},
+        "clutch": {"qty": "capacity: 0.2 qt / 0.19 L", "spec": "DOT 4"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru Legacy BE/BH FSM", "source_2": "AMSOIL", "confidence": "high"
+    },
+    "EJ208": {
+        "engine_oil": {"qty": "w/ filter: 4.8 qt / 4.5 L", "spec": "5W-30 Synthetic (API SM)"},
+        "engine_coolant": {"qty": "capacity: 7.2 qt / 6.8 L", "spec": "Subaru Super Coolant"},
+        "manual_trans": {"qty": "capacity: 3.8 qt / 3.6 L", "spec": "75W-90 GL-5", "notes": "front diff shared"},
+        "automatic_trans": {"qty": "drain & fill: 4.0 qt / 3.8 L | total: 10.4 qt / 9.8 L", "spec": "Subaru ATF-HP"},
+        "rear_diff": {"qty": "capacity: 0.9 qt / 0.85 L", "spec": "75W-90 GL-5"},
+        "clutch": {"qty": "capacity: 0.2 qt / 0.19 L", "spec": "DOT 4"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru Legacy BE/BH FSM", "source_2": "AMSOIL", "confidence": "high"
+    },
+    # EJ20X/EJ20Y (Legacy BL/BP)
+    "EJ20X": {
+        "engine_oil": {"qty": "w/ filter: 4.5 qt / 4.3 L", "spec": "5W-30 Synthetic (API SM)"},
+        "engine_coolant": {"qty": "capacity: 7.2 qt / 6.8 L", "spec": "Subaru Super Coolant"},
+        "manual_trans": {"qty": "capacity: 3.8 qt / 3.6 L", "spec": "Subaru Extra-S 75W-90", "notes": "front diff shared"},
+        "automatic_trans": {"qty": "drain & fill: 4.0 qt / 3.8 L | total: 10.4 qt / 9.8 L", "spec": "Subaru ATF-HP"},
+        "rear_diff": {"qty": "capacity: 0.9 qt / 0.85 L", "spec": "Subaru Gear Oil 75W-90"},
+        "clutch": {"qty": "capacity: 0.2 qt / 0.19 L", "spec": "DOT 4"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru Legacy BL/BP FSM", "source_2": "AMSOIL", "confidence": "high"
+    },
+    "EJ20Y": {
+        "engine_oil": {"qty": "w/ filter: 4.5 qt / 4.3 L", "spec": "5W-30 Synthetic (API SM)"},
+        "engine_coolant": {"qty": "capacity: 7.2 qt / 6.8 L", "spec": "Subaru Super Coolant"},
+        "manual_trans": {"qty": "capacity: 4.1 qt / 3.9 L", "spec": "Subaru Extra-S 75W-90", "notes": "6MT; front diff shared"},
+        "rear_diff": {"qty": "capacity: 1.0 qt / 0.95 L", "spec": "Subaru Gear Oil 75W-90"},
+        "clutch": {"qty": "capacity: 0.2 qt / 0.19 L", "spec": "DOT 4"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru Legacy Spec.B FSM", "source_2": "AMSOIL", "confidence": "high"
+    },
+    # EL15 (1.5L JDM Impreza)
+    "EL15": {
+        "engine_oil": {"qty": "w/ filter: 3.8 qt / 3.6 L", "spec": "5W-30 (API SL/SM)"},
+        "engine_coolant": {"qty": "capacity: 5.8 qt / 5.5 L", "spec": "Subaru Super Coolant"},
+        "manual_trans": {"qty": "capacity: 3.2 qt / 3.0 L", "spec": "75W-90 GL-5", "notes": "front diff shared"},
+        "cvt": {"qty": "drain & fill: 3.5 qt / 3.3 L", "spec": "Subaru CVT Fluid"},
+        "rear_diff": {"qty": "capacity: 0.8 qt / 0.76 L", "spec": "75W-90 GL-5"},
+        "clutch": {"qty": "capacity: 0.2 qt / 0.19 L", "spec": "DOT 4"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru JDM Impreza FSM", "source_2": "AMSOIL", "confidence": "medium"
+    },
+    # EJ15/EJ16 (Small displacement JDM)
+    "EJ15": {
+        "engine_oil": {"qty": "w/ filter: 3.8 qt / 3.6 L", "spec": "5W-30 (API SJ)"},
+        "engine_coolant": {"qty": "capacity: 5.6 qt / 5.3 L", "spec": "Subaru coolant 50/50"},
+        "manual_trans": {"qty": "capacity: 3.2 qt / 3.0 L", "spec": "75W-90 GL-5", "notes": "front diff shared"},
+        "automatic_trans": {"qty": "initial fill: 2.6 qt / 2.5 L | total: 9.0 qt / 8.5 L", "spec": "DEXRON III"},
+        "rear_diff": {"qty": "capacity: 0.8 qt / 0.76 L", "spec": "75W-90 GL-5"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru JDM Impreza FSM", "source_2": "AMSOIL", "confidence": "medium"
+    },
+    "EJ16": {
+        "engine_oil": {"qty": "w/ filter: 3.8 qt / 3.6 L", "spec": "5W-30 (API SJ)"},
+        "engine_coolant": {"qty": "capacity: 5.6 qt / 5.3 L", "spec": "Subaru coolant 50/50"},
+        "manual_trans": {"qty": "capacity: 3.2 qt / 3.0 L", "spec": "75W-90 GL-5", "notes": "front diff shared"},
+        "automatic_trans": {"qty": "initial fill: 2.6 qt / 2.5 L | total: 9.0 qt / 8.5 L", "spec": "DEXRON III"},
+        "rear_diff": {"qty": "capacity: 0.8 qt / 0.76 L", "spec": "75W-90 GL-5"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Subaru JDM Impreza FSM", "source_2": "AMSOIL", "confidence": "medium"
+    },
+    # EF10 (1.0L Justy)
+    "EF10": {
+        "engine_oil": {"qty": "w/ filter: 2.8 qt / 2.6 L", "spec": "10W-30 (API SG)"},
+        "engine_coolant": {"qty": "capacity: 4.2 qt / 4.0 L", "spec": "ethylene glycol 50/50"},
+        "manual_trans": {"qty": "capacity: 2.0 qt / 1.9 L", "spec": "80W GL-4", "notes": "front diff shared"},
+        "rear_diff": {"qty": "capacity: 0.6 qt / 0.57 L", "spec": "80W-90 GL-5", "notes": "4WD only"},
+        "ac": {"qty": "", "spec": "R-12"},
+        "source_1": "Subaru Justy FSM", "source_2": "dustysjustys.com", "confidence": "medium"
+    },
+    # EN05 (550cc old Kei)
+    "EN05": {
+        "engine_oil": {"qty": "w/ filter: 2.5 qt / 2.4 L", "spec": "10W-30 (API SF/SG)"},
+        "engine_coolant": {"qty": "capacity: 3.8 qt / 3.6 L", "spec": "ethylene glycol 50/50"},
+        "manual_trans": {"qty": "capacity: 1.8 qt / 1.7 L", "spec": "80W GL-4", "notes": "front diff shared"},
+        "rear_diff": {"qty": "capacity: 0.5 qt / 0.47 L", "spec": "80W-90 GL-5", "notes": "4WD only"},
+        "ac": {"qty": "", "spec": "R-12"},
+        "source_1": "Subaru Rex FSM", "source_2": "JDM specs", "confidence": "low"
+    },
+    # Toyota OEM engines (Trezia)
+    "1NR-FE": {
+        "engine_oil": {"qty": "w/ filter: 3.4 qt / 3.2 L", "spec": "0W-20 (API SN)"},
+        "engine_coolant": {"qty": "capacity: 5.2 qt / 4.9 L", "spec": "Toyota Super Long Life"},
+        "cvt": {"qty": "drain & fill: 3.0 qt / 2.8 L", "spec": "Toyota CVT Fluid FE"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Toyota FSM", "source_2": "AMSOIL", "confidence": "medium"
+    },
+    "1NZ-FE": {
+        "engine_oil": {"qty": "w/ filter: 3.7 qt / 3.5 L", "spec": "0W-20 (API SN)"},
+        "engine_coolant": {"qty": "capacity: 5.4 qt / 5.1 L", "spec": "Toyota Super Long Life"},
+        "cvt": {"qty": "drain & fill: 3.0 qt / 2.8 L", "spec": "Toyota CVT Fluid FE"},
+        "ac": {"qty": "", "spec": "R-134a"},
+        "source_1": "Toyota FSM", "source_2": "AMSOIL", "confidence": "medium"
+    },
 }
+
 
 def get_engine_base(engine_code):
     if not engine_code:
         return ""
     code = engine_code.strip()
+    
+    # JDM-specific direct mappings first
+    jdm_patterns = [
+        ("1NR-FE", "1NR-FE"), ("1NZ-FE", "1NZ-FE"),
+        ("EN07", "EN07"), ("EN05", "EN05"),
+        ("KF", "KF"),
+        ("CB18", "CB18"), ("FB16", "FB16"),
+        ("EJ20G", "EJ20G"), ("EJ20K", "EJ20K"),
+        ("EJ206", "EJ206"), ("EJ208", "EJ208"),
+        ("EJ20X", "EJ20X"), ("EJ20Y", "EJ20Y"),
+        ("EL15", "EL15"), ("EF10", "EF10"),
+        ("EJ15", "EJ15"), ("EJ16", "EJ16"),
+    ]
+    for pattern, result in jdm_patterns:
+        if pattern in code:
+            return result
+    
+    # Standard engine patterns
     patterns = [
         ("EA71", "EA71"), ("EA82T", "EA82T"), ("EA82", "EA82"), ("EA81", "EA81"),
         ("EF12", "EF12"), ("ER27", "ER27"), ("EG33", "EG33"),
@@ -318,7 +501,6 @@ def get_engine_base(engine_code):
         ("EJ257", "EJ257"), ("EJ255", "EJ255"), ("EJ207", "EJ207"), ("EJ205", "EJ205"),
         ("EJ253", "EJ253"), ("EJ252", "EJ253"), ("EJ251", "EJ251"), ("EJ25D", "EJ25D"), ("EJ25", "EJ25"),
         ("EJ22T", "EJ22T"), ("EJ22", "EJ22"), ("EJ18", "EJ18"), ("EJ20", "EJ20"),
-        ("EJ15", "EJ18"), ("EJ16", "EJ18"),
     ]
     for pattern, result in patterns:
         if pattern in code:
@@ -328,6 +510,7 @@ def get_engine_base(engine_code):
                 return "EJ20"
             return result
     return ""
+
 
 def extract_market(trim):
     t = trim.upper()

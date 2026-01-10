@@ -22,7 +22,10 @@ void main() {
       // All Foresters between 2019 and 2024
       final gen5 = vehicles.where(
         (v) =>
-            v['model'] == 'Forester' && v['year'] >= 2019 && v['year'] <= 2024,
+            v['model'] == 'Forester' &&
+            v['year'] >= 2019 &&
+            v['year'] <= 2024 &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
 
       for (final v in gen5) {
@@ -53,7 +56,10 @@ void main() {
 
     test('Sport trim should be NA (FB25)', () {
       final sport19 = vehicles.firstWhere(
-        (v) => v['year'] == 2019 && v['trim'].contains('Sport'),
+        (v) =>
+            v['year'] == 2019 &&
+            v['trim'].contains('Sport') &&
+            v['model'] == 'Forester',
       );
       expect(
         sport19['engineCode'],

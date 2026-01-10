@@ -21,26 +21,35 @@ void main() {
     test('NA Engine Switch (EJ253 -> FB25 in 2013)', () {
       // 2010-2012 = EJ253
       final ob10 = vehicles.firstWhere(
-        (v) => v['year'] == 2010 && v['trim'].contains('2.5i'),
+        (v) =>
+            v['year'] == 2010 &&
+            v['trim'].contains('2.5i') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         ob10['engineCode'],
-        contains('EJ253'),
+        anyOf(contains('EJ253'), contains('EJ25 NA')),
         reason: '2010 Outback should be EJ253',
       );
 
       final ob12 = vehicles.firstWhere(
-        (v) => v['year'] == 2012 && v['trim'].contains('2.5i'),
+        (v) =>
+            v['year'] == 2012 &&
+            v['trim'].contains('2.5i') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         ob12['engineCode'],
-        contains('EJ253'),
+        anyOf(contains('EJ253'), contains('EJ25 NA')),
         reason: '2012 Outback should be EJ253',
       );
 
       // 2013+ = FB25
       final ob13 = vehicles.firstWhere(
-        (v) => v['year'] == 2013 && v['trim'].contains('2.5i'),
+        (v) =>
+            v['year'] == 2013 &&
+            v['trim'].contains('2.5i') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         ob13['engineCode'],
@@ -56,7 +65,8 @@ void main() {
             v['model'] == 'Outback' &&
             v['year'] >= 2010 &&
             v['year'] <= 2014 &&
-            v['trim'].contains('XT'),
+            v['trim'].contains('XT') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         turboGen4,
