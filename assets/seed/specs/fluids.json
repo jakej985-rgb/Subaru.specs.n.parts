@@ -44,8 +44,8 @@
     "category": "Fluids",
     "title": "Brake Fluid",
     "body": "DOT 3 or DOT 4.",
-    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,brakes,brz,fluid",
-    "updatedAt": "2024-05-24T00:00:00Z",
+    "tags": "2013,2014,2015,2016,2017,2018,2019,2020,2022,2023,2024,brakes,brz,fluid",
+    "updatedAt": "2025-01-27T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
   },
@@ -56,6 +56,10 @@
     "body": "3.5 Liters (3.7 Quarts) - GL-5 75W-90",
     "tags": "fluid,trans,mt,sf,forester,1998,1999,2000,2001,2002",
     "updatedAt": "2026-01-05T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
+  },
+  {
     "id": "s_fluid_ps_dex3",
     "category": "Fluids",
     "title": "Power Steering Fluid",
@@ -72,6 +76,10 @@
     "body": "0.8 Liters (0.8 Quarts) - GL-5 75W-90",
     "tags": "fluid,diff,rear,sf,forester,1998,1999,2000,2001,2002",
     "updatedAt": "2026-01-05T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
+  },
+  {
     "id": "s_fluid_clutch_dot34",
     "category": "Fluids",
     "title": "Clutch Fluid",
@@ -160,5 +168,35 @@
     "updatedAt": "2026-01-09T00:00:00Z",
     "verified": true,
     "source": "FSM"
+  },
+  {
+    "id": "s_fluid_trans_mt_brz_gen2",
+    "category": "Fluids",
+    "title": "Manual Transmission Fluid",
+    "body": "2.2 Liters (2.3 US Quarts) - GL-4 75W (LV)",
+    "tags": "2022,2023,2024,brz,zd8,fluid,trans,mt",
+    "updatedAt": "2025-01-27T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
+  },
+  {
+    "id": "s_fluid_diff_rear_brz_gen2",
+    "category": "Fluids",
+    "title": "Rear Differential Fluid",
+    "body": "1.15 - 1.20 Liters (1.2 - 1.3 US Quarts) - GL-5 75W-85 (LX)",
+    "tags": "2022,2023,2024,brz,zd8,fluid,diff,rear",
+    "updatedAt": "2025-01-27T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
+  },
+  {
+    "id": "s_fluid_coolant_brz_gen2",
+    "category": "Fluids",
+    "title": "Coolant Capacity",
+    "body": "7.2 Liters (7.6 US Quarts) [MT] / 7.5 Liters (7.9 US Quarts) [AT] - Super Long Life Coolant (Blue)",
+    "tags": "2022,2023,2024,brz,zd8,fluid,coolant",
+    "updatedAt": "2025-01-27T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
   }
 ]
