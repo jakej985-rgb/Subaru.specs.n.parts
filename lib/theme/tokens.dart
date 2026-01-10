@@ -11,7 +11,7 @@ class ThemeTokens {
   static const Color neonBlue = Color(0xFF1E88FF);
   static const Color neonBlueDeep = Color(0xFF0B4DFF);
 
-  static Color get neonSoft => neonBlue.withOpacity(0.75); // 70-85%
+  static Color get neonSoft => neonBlue.withValues(alpha: 0.75); // 70-85%
 
   // Text
   static const Color textPrimary = Color(0xFFEAF2FF);

@@ -14,8 +14,8 @@ class NeonChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
-        color: isActive ? color.withOpacity(0.1) : ThemeTokens.surface,
-        border: Border.all(color: color.withOpacity(0.3)),
+        color: isActive ? color.withValues(alpha: 0.1) : ThemeTokens.surface,
+        border: Border.all(color: color.withValues(alpha: 0.3)),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Text(

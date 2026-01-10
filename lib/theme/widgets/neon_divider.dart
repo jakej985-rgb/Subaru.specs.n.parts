@@ -15,9 +15,9 @@ class NeonDivider extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              ThemeTokens.divider.withOpacity(0),
-              ThemeTokens.neonBlue.withOpacity(0.5),
-              ThemeTokens.divider.withOpacity(0),
+              ThemeTokens.divider.withValues(alpha: 0),
+              ThemeTokens.neonBlue.withValues(alpha: 0.5),
+              ThemeTokens.divider.withValues(alpha: 0),
             ],
             stops: const [0.0, 0.5, 1.0],
           ),

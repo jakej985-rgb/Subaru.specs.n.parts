@@ -26,7 +26,7 @@ class SpecsByCategoryHubPage extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: ThemeTokens.neonBlue.withOpacity(0.1),
+                    color: ThemeTokens.neonBlue.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Icon(cat.icon, color: ThemeTokens.neonBlue),

@@ -103,7 +103,7 @@ class CategoryYearResultsPage extends ConsumerWidget {
                   ),
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: ThemeTokens.textMuted.withOpacity(0.5),
+                      color: ThemeTokens.textMuted.withValues(alpha: 0.5),
                     ),
                     borderRadius: BorderRadius.circular(4),
                   ),

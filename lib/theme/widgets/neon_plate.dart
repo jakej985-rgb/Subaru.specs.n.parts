@@ -34,7 +34,7 @@ class NeonPlate extends StatelessWidget {
             baseColor: ThemeTokens.surfaceRaised,
             padding: padding ?? const EdgeInsets.all(12),
             border: Border.all(
-              color: ThemeTokens.neonBlue.withOpacity(0.5),
+              color: ThemeTokens.neonBlue.withValues(alpha: 0.5),
               width: 1.5,
             ),
             child: child,
