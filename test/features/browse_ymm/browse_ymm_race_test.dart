@@ -56,6 +56,10 @@ void main() {
 
     // Initial state: Year selection
     await tester.pumpAndSettle(); // Allow years to load
+    // With Carbon UI, "Select Year" might be in a CarbonSurface or formatted differently,
+    // but the text should still be findable.
+    // However, if it's not found, check if it's obscured or if the finder is ambiguous.
+    // In ymm_flow_page.dart, we have: Text('Select Year', style: Theme.of(context).textTheme.titleLarge)
     expect(find.text('Select Year'), findsOneWidget);
     expect(find.text('2020'), findsOneWidget);
     expect(find.text('2021'), findsOneWidget);

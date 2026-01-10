@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:specsnparts/theme/widgets/neon_plate.dart';
+import 'package:specsnparts/theme/tokens.dart';
 
 class HomeMenuCard extends StatelessWidget {
   const HomeMenuCard({
@@ -27,31 +29,30 @@ class HomeMenuCard extends StatelessWidget {
         label: semanticLabel ?? title,
         onTap: onTap,
         child: ExcludeSemantics(
-          child: Card(
-            child: InkWell(
-              onTap: onTap,
-              borderRadius: BorderRadius.circular(12),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      icon,
-                      size: 48,
-                      color: Theme.of(context).colorScheme.primary,
+          child: NeonPlate(
+            onTap: onTap,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(icon, size: 40, color: ThemeTokens.neonBlue),
+                const SizedBox(width: 24),
+                Expanded(
+                  child: Text(
+                    title,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      color: ThemeTokens.textPrimary,
                     ),
-                    const SizedBox(height: 12),
-                    Text(
-                      title,
-                      style: Theme.of(context).textTheme.titleMedium,
-                      textAlign: TextAlign.center,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ],
+                    textAlign: TextAlign.left,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
-              ),
+                const Icon(
+                  Icons.arrow_forward_ios,
+                  size: 20,
+                  color: ThemeTokens.neonBlueDeep,
+                ),
+              ],
             ),
           ),
         ),

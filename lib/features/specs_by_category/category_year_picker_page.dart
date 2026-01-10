@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/specs_by_category/spec_category_keys.dart';
+import 'package:specsnparts/theme/widgets/carbon_surface.dart';
+import 'package:specsnparts/theme/tokens.dart';
 
 // Simple provider to avoid redundant calls
 final distinctYearsProvider = FutureProvider<List<int>>((ref) async {
@@ -35,16 +37,34 @@ class CategoryYearPickerPage extends ConsumerWidget {
             return const Center(child: Text('No vehicle data available'));
           }
           return ListView.separated(
+            padding: const EdgeInsets.all(16),
             itemCount: years.length,
-            separatorBuilder: (context, index) => const Divider(height: 1),
+            separatorBuilder: (context, index) => const SizedBox(height: 8),
             itemBuilder: (context, index) {
               final year = years[index];
-              return ListTile(
-                title: Text(year.toString()),
-                trailing: const Icon(Icons.chevron_right),
-                onTap: () {
-                  context.push('/specs/categories/$categoryKey/$year');
-                },
+              return InkWell(
+                onTap: () =>
+                    context.push('/specs/categories/$categoryKey/$year'),
+                borderRadius: BorderRadius.circular(ThemeTokens.radiusMedium),
+                child: CarbonSurface(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 16,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        year.toString(),
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      const Icon(
+                        Icons.chevron_right,
+                        color: ThemeTokens.textMuted,
+                      ),
+                    ],
+                  ),
+                ),
               );
             },
           );
