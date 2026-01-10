@@ -198,5 +198,45 @@
     "updatedAt": "2025-01-27T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_ac_refrigerant_sti_gd_04_05",
+    "category": "Fluids",
+    "title": "A/C Refrigerant (2004-2005)",
+    "body": "HFC-134a (R134a). Amount: 0.45 - 0.55 kg (1.0 - 1.2 lbs).",
+    "tags": "2004,2005,ac,air,conditioning,gd,refrigerant,sti,wrx",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "verified": true,
+    "source": "2004 Impreza FSM (Section AC-2)"
+  },
+  {
+    "id": "s_ac_compressor_oil_sti_gd",
+    "category": "Fluids",
+    "title": "A/C Compressor Oil",
+    "body": "ZXL 200PG. Amount: Check Service Manual (approx 150cc for new compressor).",
+    "tags": "2004,2005,2006,2007,ac,compressor,fluid,gd,oil,sti,wrx",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "verified": true,
+    "source": "2004 Impreza FSM (Section AC-2)"
+  },
+  {
+    "id": "s_fluid_clutch_capacity_sti_gd",
+    "category": "Fluids",
+    "title": "Clutch Fluid Capacity",
+    "body": "Fill to MAX level on reservoir. Use DOT 3/4.",
+    "tags": "2004,2005,2006,2007,capacity,clutch,fluid,gd,sti,wrx",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "verified": true,
+    "source": "2004 Impreza Owner's Manual"
+  },
+  {
+    "id": "s_fluid_ps_capacity_sti_gd",
+    "category": "Fluids",
+    "title": "Power Steering Fluid Capacity",
+    "body": "0.7 Liters (0.7 Quarts). Fill to range.",
+    "tags": "2004,2005,2006,2007,capacity,fluid,gd,ps,steering,sti,wrx",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "verified": true,
+    "source": "2004 Impreza FSM"
   }
 ]

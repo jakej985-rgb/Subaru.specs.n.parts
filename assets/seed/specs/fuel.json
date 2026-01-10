@@ -236,5 +236,15 @@
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_octane_sti_gd",
+    "category": "Fuel",
+    "title": "Fuel Requirement (STI)",
+    "body": "93 Octane (AKI) Recommended. 91 Octane Minimum.",
+    "tags": "2004,2005,2006,2007,fuel,gas,gd,octane,sti",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "verified": true,
+    "source": "2004 Impreza Owner's Manual"
   }
 ]

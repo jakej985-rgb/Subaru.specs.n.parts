@@ -182,7 +182,7 @@
     "id": "s_trans_capacity_sti_6mt_gen2",
     "category": "Transmission",
     "title": "STI 2004-2007 (6MT) Fluid Capacity",
-    "body": "4.3 Quarts (4.1 Liters). GL-5 75W-90.",
+    "body": "4.3 Quarts (4.1 Liters). GL-5 75W-90. Shared with front differential.",
     "tags": "2004,2005,2006,2007,6mt,capacity,fluid,gl,mt,sti,trans",
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
