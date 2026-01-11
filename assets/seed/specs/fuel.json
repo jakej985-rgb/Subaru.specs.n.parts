@@ -236,5 +236,25 @@
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
+  },
+  {
+    "id": "s_fluid_fuel_tank_sti_04",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity",
+    "body": "15.9 Gallons (60 Liters)",
+    "tags": "2004,capacity,fuel,gd,sti,tank",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fluid_fuel_octane_sti_04",
+    "category": "Fuel",
+    "title": "Recommended Fuel Octane",
+    "body": "91 Octane or higher (93 Recommended)",
+    "tags": "2004,fuel,gd,octane,sti",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
   }
 ]

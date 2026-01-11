@@ -198,5 +198,37 @@
     "updatedAt": "2025-01-27T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_fluid_trans_front_diff_6mt_0405",
+    "category": "Fluids",
+    "title": "Transmission Fluid Capacity (6MT)",
+    "body": "4.1 Liters (4.3 US Quarts) - GL-5 75W-90",
+    "tags": "2004,2005,6mt,capacity,diff,fluid,front,gd,sti,trans",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual",
+    "notes": "Transmission fluid shares sump with Front Differential (common reservoir). 2004-2005 6MT specific capacity."
+  },
+  {
+    "id": "s_fluid_ac_refrigerant_sti_04",
+    "category": "Fluids",
+    "title": "A/C Refrigerant",
+    "body": "HFC-134a (0.45 - 0.55 kg)",
+    "tags": "2004,ac,gd,refrigerant,sti",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_fluid_ac_oil_sti_04",
+    "category": "Fluids",
+    "title": "A/C Compressor Oil",
+    "body": "ZXL 200PG (Compressor Oil)",
+    "tags": "2004,ac,gd,oil,sti",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual",
+    "notes": "DH-PR Compressor"
   }
 ]
