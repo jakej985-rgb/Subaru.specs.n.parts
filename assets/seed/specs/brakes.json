@@ -574,5 +574,47 @@
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_torque_caliper_front_sti_brembo",
+    "category": "Brakes",
+    "title": "Front Caliper Mounting Bolt Torque",
+    "body": "80 ft-lbs (108 Nm)",
+    "tags": "2004,2005,2006,2007,brakes,brembo,caliper,front,gd,sti,torque,wrx",
+    "updatedAt": "2026-01-14T00:00:00Z",
+    "verified": true,
+    "source": "Community Consensus / Service Manual (Corrected)",
+    "notes": "FSM lists 114 ft-lbs (155 Nm), which is widely reported to strip threads. 80 ft-lbs is recommended."
+  },
+  {
+    "id": "s_brake_torque_caliper_rear_sti_brembo",
+    "category": "Brakes",
+    "title": "Rear Caliper Mounting Bolt Torque",
+    "body": "47.9 ft-lbs (65 Nm)",
+    "tags": "2004,2005,2006,2007,brakes,brembo,caliper,gd,rear,sti,torque,wrx",
+    "updatedAt": "2026-01-14T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_brake_torque_bleeder_brembo",
+    "category": "Brakes",
+    "title": "Brembo Bleeder Screw Torque",
+    "body": "13.3 ft-lbs (18 Nm)",
+    "tags": "2004,2005,2006,2007,bleeder,brakes,brembo,gd,sti,torque",
+    "updatedAt": "2026-01-14T00:00:00Z",
+    "verified": true,
+    "source": "FSM",
+    "notes": "Careful: Aluminum threads. Do not over-torque."
+  },
+  {
+    "id": "s_brake_torque_banjo_bolt_gd",
+    "category": "Brakes",
+    "title": "Brake Hose Banjo Bolt Torque",
+    "body": "13 ft-lbs (18 Nm)",
+    "tags": "2002,2003,2004,2005,2006,2007,banjo,brakes,gd,gg,impreza,sti,torque,wrx",
+    "updatedAt": "2026-01-14T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]
