@@ -198,5 +198,25 @@
     "updatedAt": "2025-01-27T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_ac_refrigerant_capacity_gd",
+    "category": "Fluids",
+    "title": "A/C Refrigerant Capacity",
+    "body": "0.45 - 0.55 kg (0.99 - 1.21 lb). HFC-134a (R134a).",
+    "tags": "2002,2003,2004,2005,2006,2007,ac,capacity,fluid,gd,gg,impreza,refrigerant,sti,wrx",
+    "updatedAt": "2026-01-10T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_ac_compressor_oil_type_gd",
+    "category": "Fluids",
+    "title": "A/C Compressor Oil Type",
+    "body": "ZXL 200PG (or PAG 100 equivalent).",
+    "tags": "2002,2003,2004,2005,2006,2007,ac,compressor,fluid,gd,gg,impreza,oil,sti,type,wrx",
+    "updatedAt": "2026-01-10T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   }
 ]
