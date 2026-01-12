@@ -11,8 +11,8 @@
     "id": "s_brake_4pot_front",
     "category": "Brakes",
     "title": "Front Rotors (Subaru 4-Pot)",
-    "body": "Diameter: 294mm. Thickness: 24mm. Vented. Used on 06-07 WRX, 22+ WRX (similar size).",
-    "tags": "2006,2007,2022,2023,2024,2025,2026,4pot,brakes,rotors,wrx",
+    "body": "Diameter: 294mm. Thickness: 24mm. Vented. Fixed 4-piston caliper. (Not for 2022+ WRX).",
+    "tags": "2006,2007,4pot,brakes,rotors,wrx",
     "updatedAt": "2026-01-05T12:00:00Z"
   },
   {
@@ -572,6 +572,46 @@
     "body": "Diameter: 286mm (11.3\"). Vented.",
     "tags": "2018,2019,2020,2021,2022,2023,brakes,crosstrek,gt,rear,rotor",
     "updatedAt": "2026-01-07T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_rotor_wrx_vb",
+    "category": "Brakes",
+    "title": "Front Rotor (WRX 2022+)",
+    "body": "Diameter: 316mm (12.4\"). Thickness: 30mm. Vented. 2-Piston Floating Caliper.",
+    "tags": "2022,2023,2024,brakes,front,rotor,vb,wrx",
+    "updatedAt": "2026-01-10T14:20:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_rotor_wrx_vb",
+    "category": "Brakes",
+    "title": "Rear Rotor (WRX 2022+)",
+    "body": "Diameter: 290mm (11.4\"). Thickness: 18mm. Vented. 1-Piston Floating Caliper.",
+    "tags": "2022,2023,2024,brakes,rear,rotor,vb,wrx",
+    "updatedAt": "2026-01-10T14:20:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_front_caliper_wrx_vb",
+    "category": "Brakes",
+    "title": "Front Caliper Type (WRX 2022+)",
+    "body": "2-Piston Floating.",
+    "tags": "2022,2023,2024,brakes,caliper,front,type,vb,wrx",
+    "updatedAt": "2026-01-10T14:20:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_brake_rear_caliper_wrx_vb",
+    "category": "Brakes",
+    "title": "Rear Caliper Type (WRX 2022+)",
+    "body": "1-Piston Floating with Electric Parking Brake (EPB).",
+    "tags": "2022,2023,2024,brakes,caliper,rear,type,vb,wrx",
+    "updatedAt": "2026-01-10T14:20:00Z",
     "verified": true,
     "source": "Service Manual"
   }
