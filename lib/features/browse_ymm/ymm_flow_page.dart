@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:specsnparts/data/db/app_db.dart';
+import 'package:specsnparts/features/home/garage_providers.dart';
 import 'package:specsnparts/theme/widgets/carbon_surface.dart';
 import 'package:specsnparts/theme/widgets/neon_plate.dart';
 import 'package:specsnparts/theme/tokens.dart';
@@ -277,6 +278,11 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                 ),
                 NeonPlate(
                   onTap: () {
+                    // Save to recents
+                    ref
+                        .read(recentVehiclesProvider.notifier)
+                        .add(_selectedVehicle!);
+
                     // Navigate to specs page with selected vehicle for filtering
                     context.push(
                       '/specs',
@@ -301,34 +307,17 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                 const SizedBox(height: 16),
                 NeonPlate(
                   onTap: () {
-                    showDialog(
-                      context: context,
-                      builder: (ctx) => AlertDialog(
-                        backgroundColor: ThemeTokens.surfaceRaised,
-                        title: const Text('Coming Soon'),
-                        content: const Text(
-                          'Parts filtering is under construction.',
-                        ),
-                        actions: [
-                          TextButton(
-                            onPressed: () => Navigator.pop(ctx),
-                            child: const Text(
-                              'OK',
-                              style: TextStyle(color: ThemeTokens.neonBlue),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
+                    // Navigate to parts page with context
+                    context.push('/parts', extra: _selectedVehicle);
                   },
                   child: Row(
                     children: [
-                      Icon(Icons.build, color: ThemeTokens.textSecondary),
+                      const Icon(Icons.build, color: ThemeTokens.neonBlue),
                       const SizedBox(width: 16),
                       Text(
                         'View Parts',
                         style: Theme.of(context).textTheme.titleMedium
-                            ?.copyWith(color: ThemeTokens.textSecondary),
+                            ?.copyWith(fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),

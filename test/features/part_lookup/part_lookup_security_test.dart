@@ -5,6 +5,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/data/db/dao/parts_dao.dart';
 import 'package:specsnparts/features/part_lookup/part_lookup_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:specsnparts/features/home/garage_providers.dart';
 
 // Reuse Fake implementations to avoid real DB interaction
 class FakePartsDao extends PartsDao {
@@ -36,9 +38,15 @@ void main() {
     final fakeDb = FakeAppDatabase(NativeDatabase.memory());
     addTearDown(() => fakeDb.close());
 
+    SharedPreferences.setMockInitialValues({});
+    final prefs = await SharedPreferences.getInstance();
+
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [appDbProvider.overrideWithValue(fakeDb)],
+        overrides: [
+          appDbProvider.overrideWithValue(fakeDb),
+          sharedPreferencesProvider.overrideWithValue(prefs),
+        ],
         child: const MaterialApp(home: PartLookupPage()),
       ),
     );

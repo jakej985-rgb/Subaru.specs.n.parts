@@ -12,6 +12,8 @@ import 'package:specsnparts/app.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 
 import 'package:specsnparts/data/seed/seed_runner.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:specsnparts/features/home/garage_providers.dart';
 
 class MockSeedRunner extends SeedRunner {
   MockSeedRunner(super.db);
@@ -24,6 +26,9 @@ class MockSeedRunner extends SeedRunner {
 
 void main() {
   testWidgets('App smoke test', (WidgetTester tester) async {
+    SharedPreferences.setMockInitialValues({});
+    final prefs = await SharedPreferences.getInstance();
+
     // Build our app and trigger a frame.
     await tester.pumpWidget(
       ProviderScope(
@@ -33,6 +38,7 @@ void main() {
             final db = ref.watch(appDbProvider);
             return MockSeedRunner(db);
           }),
+          sharedPreferencesProvider.overrideWithValue(prefs),
         ],
         child: const SubaruSpecsApp(),
       ),

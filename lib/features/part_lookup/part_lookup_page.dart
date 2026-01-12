@@ -3,9 +3,13 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
+import 'package:specsnparts/features/part_lookup/part_search_provider.dart';
+import 'package:specsnparts/theme/tokens.dart';
 
 class PartLookupPage extends ConsumerStatefulWidget {
-  const PartLookupPage({super.key});
+  final Vehicle? vehicle;
+
+  const PartLookupPage({super.key, this.vehicle});
 
   @override
   ConsumerState<PartLookupPage> createState() => _PartLookupPageState();
@@ -21,6 +25,8 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
   bool _isLoading = false;
   bool _hasMore = true;
   String _searchQuery = '';
+
+  Vehicle? get _contextVehicle => widget.vehicle;
 
   @override
   void initState() {
@@ -55,8 +61,14 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
         offset: _currentOffset,
       );
 
-      if (!mounted) return;
       if (query != _searchQuery) return;
+
+      // Save valid search to history if it has results or effectively was tried
+      if (results.isNotEmpty) {
+        ref.read(recentPartSearchesProvider.notifier).add(query);
+      }
+
+      if (!mounted) return;
 
       setState(() {
         _results.addAll(results);
@@ -132,6 +144,39 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
       appBar: AppBar(title: const Text('Part Lookup')),
       body: Column(
         children: [
+          if (_contextVehicle != null)
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: ThemeTokens.neonBlue.withValues(alpha: 0.1),
+                  border: Border.all(
+                    color: ThemeTokens.neonBlue.withValues(alpha: 0.3),
+                  ),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.tune,
+                      color: ThemeTokens.neonBlue,
+                      size: 20,
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        'Filtering for ${_contextVehicle!.year} ${_contextVehicle!.model}',
+                        style: const TextStyle(
+                          color: ThemeTokens.neonBlue,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: TextField(
@@ -145,6 +190,7 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                   builder: (context, value, child) {
                     return value.text.isNotEmpty
                         ? IconButton(
+                            key: const Key('clear_search_button'),
                             icon: const Icon(Icons.clear),
                             tooltip: 'Clear search',
                             onPressed: _clearSearch,
@@ -172,6 +218,47 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                           'Start typing to search parts...',
                           style: Theme.of(context).textTheme.titleMedium
                               ?.copyWith(color: Theme.of(context).hintColor),
+                        ),
+                        const SizedBox(height: 24),
+                        const SizedBox(height: 24),
+                        Consumer(
+                          builder: (context, ref, child) {
+                            final recents = ref.watch(
+                              recentPartSearchesProvider,
+                            );
+
+                            // Combine hardcoded suggestions (if no history) with actual history
+                            final terms = recents.isNotEmpty
+                                ? recents
+                                : [
+                                    'Oil Filter',
+                                    'Brake Pad',
+                                    'Spark Plug',
+                                    'Air Filter',
+                                  ];
+
+                            return Wrap(
+                              spacing: 8,
+                              runSpacing: 8,
+                              alignment: WrapAlignment.center,
+                              children: [
+                                for (final term in terms)
+                                  ActionChip(
+                                    label: Text(term),
+                                    onPressed: () {
+                                      _searchController.text = term;
+                                      _search(term);
+                                    },
+                                    avatar: Icon(
+                                      recents.contains(term)
+                                          ? Icons.history
+                                          : Icons.search,
+                                      size: 16,
+                                    ),
+                                  ),
+                              ],
+                            );
+                          },
                         ),
                       ],
                     ),

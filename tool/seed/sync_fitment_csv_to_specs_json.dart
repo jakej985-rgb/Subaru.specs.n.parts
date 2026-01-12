@@ -6,6 +6,7 @@ import 'dart:io';
 import 'package:logging/logging.dart';
 
 final _log = Logger('SyncFitment');
+
 /// Simple CSV parser that handles commas inside double quotes.
 List<Map<String, String>> parseCsv(File file) {
   final lines = file.readAsLinesSync();

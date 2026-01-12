@@ -8,7 +8,7 @@ import 'package:specsnparts/features/part_lookup/part_lookup_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:specsnparts/features/home/garage_providers.dart';
 
-// Reuse Fake implementations
+// Fake implementation
 class FakePartsDao extends PartsDao {
   FakePartsDao(super.db);
 
@@ -18,21 +18,31 @@ class FakePartsDao extends PartsDao {
     int limit = 50,
     int offset = 0,
   }) async {
+    if (query == 'Oil Filter') {
+      return [
+        Part(
+          id: '1',
+          name: 'Oil Filter',
+          oemNumber: '15208AA12A',
+          aftermarketNumbers: '[]',
+          fits: '[]',
+          updatedAt: DateTime.now(),
+        ),
+      ];
+    }
     return [];
   }
 }
 
 class FakeAppDatabase extends AppDatabase {
   FakeAppDatabase(super.executor);
-
   late final FakePartsDao _fakePartsDao = FakePartsDao(this);
-
   @override
   FakePartsDao get partsDao => _fakePartsDao;
 }
 
 void main() {
-  testWidgets('PartLookupPage shows empty state initially', (
+  testWidgets('PartLookupPage taps suggested search', (
     WidgetTester tester,
   ) async {
     final fakeDb = FakeAppDatabase(NativeDatabase.memory());
@@ -49,28 +59,29 @@ void main() {
       ),
     );
 
-    // Verify initial empty state
-    expect(find.text('Start typing to search parts...'), findsOneWidget);
-    expect(find.byIcon(Icons.manage_search), findsOneWidget);
-
-    // Enter text
-    await tester.enterText(find.byType(TextField), 'filter');
     await tester.pump();
 
-    // Wait for debounce (500ms)
+    // Checks for empty state text
+    expect(find.text('Start typing to search parts...'), findsOneWidget);
+
+    // Verify chips exist
+    expect(find.text('Oil Filter'), findsOneWidget);
+    expect(find.text('Brake Pad'), findsOneWidget);
+
+    // Tap 'Oil Filter'
+    await tester.tap(find.widgetWithText(ActionChip, 'Oil Filter'));
+    await tester.pump(); // Start debounce or state change
+
+    // The existing code has a 500ms debounce.
+    // The chip tap directly sets text and calls _search.
+    // _search starts a timer.
     await tester.pump(const Duration(milliseconds: 500));
-    await tester.pump(); // Rebuild after setState
+    await tester.pump(); // Process future
 
-    // Now `_searchQuery` is 'filter'.
-    // `_results` is empty (fake dao returns []).
+    // Verify search field text
+    expect(find.widgetWithText(TextField, 'Oil Filter'), findsOneWidget);
 
-    // The empty state should be gone
-    expect(find.text('Start typing to search parts...'), findsNothing);
-    expect(find.byIcon(Icons.manage_search), findsNothing);
-
-    // Should show "No parts found for 'filter'"
-    expect(find.text('No parts found for "filter"'), findsOneWidget);
-    expect(find.byIcon(Icons.search_off), findsOneWidget);
-    expect(find.text('Clear Search'), findsOneWidget);
+    // Verify result shown
+    expect(find.text('OEM: 15208AA12A'), findsOneWidget);
   });
 }

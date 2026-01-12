@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:flutter/services.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
@@ -224,6 +226,32 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                                   ],
                                 ),
                                 actions: [
+                                  TextButton.icon(
+                                    onPressed: () async {
+                                      await Clipboard.setData(
+                                        ClipboardData(text: spec.body),
+                                      );
+                                      if (context.mounted) {
+                                        Navigator.pop(context);
+                                        ScaffoldMessenger.of(
+                                          context,
+                                        ).showSnackBar(
+                                          const SnackBar(
+                                            content: Text(
+                                              'Copied to clipboard',
+                                            ),
+                                            behavior: SnackBarBehavior.floating,
+                                            duration: Duration(seconds: 2),
+                                          ),
+                                        );
+                                      }
+                                    },
+                                    icon: const Icon(Icons.copy, size: 18),
+                                    label: const Text('Copy'),
+                                    style: TextButton.styleFrom(
+                                      foregroundColor: ThemeTokens.neonBlue,
+                                    ),
+                                  ),
                                   TextButton(
                                     onPressed: () => Navigator.pop(context),
                                     child: const Text(

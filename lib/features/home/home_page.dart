@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:specsnparts/features/home/garage_view.dart';
 import '../../widgets/adaptive_scroll.dart';
 import '../../widgets/home_menu_card.dart';
 
@@ -90,6 +91,11 @@ class HomePage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 18),
+
+              // Your Garage (Recents/Favorites)
+              const GarageView(),
+
+              const SizedBox(height: 8),
 
               // Cards
               for (int i = 0; i < items.length; i++) ...[
