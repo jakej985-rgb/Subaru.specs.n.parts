@@ -36,10 +36,43 @@
   {
     "id": "s_torque_caliper_bracket_sti",
     "category": "Torque",
-    "title": "Caliper Bracket Bolts (Front)",
-    "body": "80 ft-lbs (108 Nm) for STI Brembos.",
-    "tags": "brakes,sti,torque",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "title": "Caliper Bracket Bolts (Front Brembo)",
+    "body": "80 ft-lbs (108 Nm). WARNING: FSM incorrectly states 114 ft-lbs which may strip threads. 80 ft-lbs is the safe consensus value.",
+    "tags": "brakes,brembo,caliper,front,sti,torque",
+    "updatedAt": "2026-01-10T12:00:00Z",
+    "verified": true,
+    "source": "Community Consensus / Service Manual (Corrected)",
+    "notes": "FSM lists 114 ft-lbs (155 Nm) which is known to damage aluminum knuckles/threads. Use 80 ft-lbs (108 Nm)."
+  },
+  {
+    "id": "s_torque_caliper_rear_brembo",
+    "category": "Torque",
+    "title": "Caliper Bracket Bolts (Rear Brembo)",
+    "body": "47.9 ft-lbs (65 Nm).",
+    "tags": "2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,brakes,brembo,caliper,rear,sti,torque",
+    "updatedAt": "2026-01-10T12:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_torque_bleeder_brembo",
+    "category": "Torque",
+    "title": "Brake Bleeder Screw (Brembo)",
+    "body": "13.0 ft-lbs (18 Nm).",
+    "tags": "2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,bleeder,brakes,brembo,sti,torque",
+    "updatedAt": "2026-01-10T12:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_torque_banjo_brembo",
+    "category": "Torque",
+    "title": "Brake Line Banjo Bolt (Brembo)",
+    "body": "13.0 ft-lbs (18 Nm).",
+    "tags": "2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,banjo,brakes,brembo,sti,torque",
+    "updatedAt": "2026-01-10T12:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   },
   {
     "id": "s_torque_spark_plug",
