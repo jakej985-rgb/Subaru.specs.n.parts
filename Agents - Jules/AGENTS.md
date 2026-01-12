@@ -27,6 +27,10 @@ Pick **one agent** that matches the task, follow its Daily Process, and keep PRs
 **Use when:** Something is broken, crashing, incorrect, or flaky; you need a root-cause fix with proof.
 **File:** `Bug Eater🐛.md`
 
+### 🩺 CompileMedic — Compiler / Build Triage
+**Use when:** You have compiler errors, analyzer warnings, or build failures (local or CI).
+**File:** `CompileMedic.md`
+
 ### 🧰 DataSmith — Seed Data Builder + Validator
 **Use when:** Seed data needs cleanup, consistency, missing values, validation, or provenance improvements.
 **File:** `Data Smith.md`
@@ -91,6 +95,7 @@ Pick **one agent** that matches the task, follow its Daily Process, and keep PRs
 
 ## Quick chooser (cheat sheet)
 - Crash / wrong behavior → **BugEater**
+- Compiler/build/analyzer errors → **CompileMedic**
 - Performance/jank/slow queries → **Bolt**
 - Messy or inconsistent seeds → **DataSmith**
 - “What replaces this OEM #?” → **OEM-XRef**

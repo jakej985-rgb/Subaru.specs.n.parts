@@ -44,10 +44,13 @@ dependencies:
   shared_preferences: ^2.3.2
   riverpod: ^3.1.0
   csv: ^6.0.0
+  logging: ^1.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  test: ^1.24.0
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # activated in the `analysis_options.yaml` file located at the root of your
