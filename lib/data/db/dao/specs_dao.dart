@@ -82,7 +82,7 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
     // 2. Post-filter for Trim applicability
     // This logic ensures that if a spec is specific to a trim (e.g. tagged "base" only),
     // it doesn't show up for "limited".
-    return candidates.where((spec) {
+    final filtered = candidates.where((spec) {
       final tagList = spec.tags
           .toLowerCase()
           .split(',')
@@ -129,5 +129,35 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
       // or if we passed the check above, keep it.
       return true;
     }).toList();
+
+    // 3. Sort specs according to SpecHarvester rules
+    filtered.sort(_specComparator);
+
+    return filtered;
+  }
+
+  int _specComparator(Spec a, Spec b) {
+    final catOrder = {
+      'Oil': 0,
+      'Fluids': 1,
+      'Filters': 2,
+      'Spark Plugs': 3,
+      'Cooling': 4,
+      'Brakes': 5,
+      'Wheels': 6,
+      'Suspension': 7,
+      'Drivetrain': 8,
+      'Electrical': 9,
+      'Torque': 10,
+    };
+
+    final indexA = catOrder[a.category] ?? 999;
+    final indexB = catOrder[b.category] ?? 999;
+
+    if (indexA != indexB) {
+      return indexA.compareTo(indexB);
+    }
+
+    return a.title.compareTo(b.title);
   }
 }

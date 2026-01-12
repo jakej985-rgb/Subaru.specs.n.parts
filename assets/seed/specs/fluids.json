@@ -198,5 +198,35 @@
     "updatedAt": "2025-01-27T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_fluid_coolant_sti_gd",
+    "category": "Fluids",
+    "title": "Coolant Capacity (STI)",
+    "body": "7.7 Liters (8.1 US Quarts) - Subaru Long Life Coolant (Green)",
+    "tags": "2004,2005,2006,2007,capacity,coolant,fluid,gd,sti",
+    "updatedAt": "2026-01-10T15:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_fluid_trans_6mt_capacity",
+    "category": "Fluids",
+    "title": "Transmission Fluid Capacity (6MT)",
+    "body": "4.1 Liters (4.3 US Quarts) - GL-5 75W-90",
+    "tags": "2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,6mt,capacity,fluid,sti,trans",
+    "updatedAt": "2026-01-10T15:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_fluid_ps_capacity_gd",
+    "category": "Fluids",
+    "title": "Power Steering Fluid Capacity",
+    "body": "0.7 Liters (0.7 US Quarts) - Dexron III ATF",
+    "tags": "2002,2003,2004,2005,2006,2007,capacity,fluid,gd,power,steering,wrx,sti",
+    "updatedAt": "2026-01-10T15:00:00Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]
