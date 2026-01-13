@@ -1,10 +1,14 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/part_lookup/part_search_provider.dart';
 import 'package:specsnparts/theme/tokens.dart';
+import 'package:specsnparts/theme/widgets/carbon_surface.dart';
+import 'package:specsnparts/theme/widgets/neon_chip.dart';
 
 class PartLookupPage extends ConsumerStatefulWidget {
   final Vehicle? vehicle;
@@ -25,6 +29,7 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
   bool _isLoading = false;
   bool _hasMore = true;
   String _searchQuery = '';
+  bool _sortByOem = false;
 
   Vehicle? get _contextVehicle => widget.vehicle;
 
@@ -59,6 +64,7 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
         query,
         limit: _pageLimit,
         offset: _currentOffset,
+        sortByOem: _sortByOem,
       );
 
       if (query != _searchQuery) return;
@@ -88,7 +94,6 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
   }
 
   Future<void> _loadMore(String query) async {
-    // If the query passed to this function is not the current one, abort.
     if (query != _searchQuery) return;
     if (_isLoading || !_hasMore) return;
 
@@ -113,7 +118,6 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
         return;
       }
 
-      // Optimization: Set loading state immediately to prevent empty list flash
       setState(() {
         _searchQuery = query;
         _results = [];
@@ -138,10 +142,63 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
     });
   }
 
+  void _toggleSort(bool byOem) {
+    if (_sortByOem == byOem) return;
+    setState(() {
+      _sortByOem = byOem;
+    });
+    if (_searchQuery.isNotEmpty) {
+      _search(_searchQuery);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Part Lookup')),
+      appBar: AppBar(
+        title: const Text('Part Lookup'),
+        actions: [
+          PopupMenuButton<bool>(
+            icon: const Icon(Icons.sort),
+            tooltip: 'Sort results',
+            onSelected: _toggleSort,
+            itemBuilder: (context) => [
+              PopupMenuItem(
+                value: false,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.check,
+                      color: !_sortByOem
+                          ? ThemeTokens.neonBlue
+                          : Colors.transparent,
+                      size: 18,
+                    ),
+                    const SizedBox(width: 8),
+                    const Text('Sort by Name'),
+                  ],
+                ),
+              ),
+              PopupMenuItem(
+                value: true,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.check,
+                      color: _sortByOem
+                          ? ThemeTokens.neonBlue
+                          : Colors.transparent,
+                      size: 18,
+                    ),
+                    const SizedBox(width: 8),
+                    const Text('Sort by OEM #'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
       body: Column(
         children: [
           if (_contextVehicle != null)
@@ -181,7 +238,7 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
             padding: const EdgeInsets.all(16.0),
             child: TextField(
               controller: _searchController,
-              maxLength: 100, // Security: Limit input length to prevent DoS
+              maxLength: 100,
               decoration: InputDecoration(
                 labelText: 'Search by Name or OEM Number',
                 border: const OutlineInputBorder(),
@@ -220,14 +277,12 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                               ?.copyWith(color: Theme.of(context).hintColor),
                         ),
                         const SizedBox(height: 24),
-                        const SizedBox(height: 24),
                         Consumer(
                           builder: (context, ref, child) {
                             final recents = ref.watch(
                               recentPartSearchesProvider,
                             );
 
-                            // Combine hardcoded suggestions (if no history) with actual history
                             final terms = recents.isNotEmpty
                                 ? recents
                                 : [
@@ -243,7 +298,7 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                               alignment: WrapAlignment.center,
                               children: [
                                 for (final term in terms)
-                                  ActionChip(
+                                  InputChip(
                                     label: Text(term),
                                     onPressed: () {
                                       _searchController.text = term;
@@ -255,6 +310,16 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                                           : Icons.search,
                                       size: 16,
                                     ),
+                                    onDeleted: recents.contains(term)
+                                        ? () {
+                                            ref
+                                                .read(
+                                                  recentPartSearchesProvider
+                                                      .notifier,
+                                                )
+                                                .remove(term);
+                                          }
+                                        : null,
                                   ),
                               ],
                             );
@@ -264,28 +329,32 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                     ),
                   )
                 : _results.isEmpty && !_isLoading
-                ? Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.search_off,
-                          size: 64,
-                          color: Theme.of(context).hintColor,
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          'No parts found for "$_searchQuery"',
-                          style: Theme.of(context).textTheme.titleMedium
-                              ?.copyWith(color: Theme.of(context).hintColor),
-                        ),
-                        const SizedBox(height: 16),
-                        OutlinedButton.icon(
-                          onPressed: _clearSearch,
-                          icon: const Icon(Icons.clear),
-                          label: const Text('Clear Search'),
-                        ),
-                      ],
+                ? AnimatedOpacity(
+                    opacity: 1.0,
+                    duration: const Duration(milliseconds: 300),
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.search_off,
+                            size: 64,
+                            color: Theme.of(context).hintColor,
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            'No parts found for "$_searchQuery"',
+                            style: Theme.of(context).textTheme.titleMedium
+                                ?.copyWith(color: Theme.of(context).hintColor),
+                          ),
+                          const SizedBox(height: 16),
+                          OutlinedButton.icon(
+                            onPressed: _clearSearch,
+                            icon: const Icon(Icons.clear),
+                            label: const Text('Clear Search'),
+                          ),
+                        ],
+                      ),
                     ),
                   )
                 : ListView.builder(
@@ -303,34 +372,144 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                         );
                       }
                       final part = _results[index];
-                      return ListTile(
-                        title: Text(part.name),
-                        subtitle: Text('OEM: ${part.oemNumber}'),
-                        onTap: () {
-                          showDialog(
-                            context: context,
-                            builder: (context) => AlertDialog(
-                              title: Text(part.name),
-                              content: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('OEM: ${part.oemNumber}'),
-                                  if (part.notes != null) ...[
-                                    const SizedBox(height: 8),
-                                    Text(part.notes!),
-                                  ],
+                      // Parse fits for preview
+                      String? fitsPreview;
+                      try {
+                        final List<dynamic> fits = jsonDecode(part.fits);
+                        if (fits.isNotEmpty && fits[0] != 'All') {
+                          fitsPreview = fits.take(3).join(', ');
+                          if (fits.length > 3) fitsPreview += '...';
+                        }
+                      } catch (_) {}
+
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 4,
+                        ),
+                        child: InkWell(
+                          onTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                title: Text(part.name),
+                                content: SingleChildScrollView(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'OEM: ${part.oemNumber}',
+                                        style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      ..._buildAftermarketNumbers(
+                                        part.aftermarketNumbers,
+                                      ),
+                                      ..._buildFitsChips(part.fits),
+                                      if (part.notes != null) ...[
+                                        const SizedBox(height: 12),
+                                        Text(
+                                          part.notes!,
+                                          style: TextStyle(
+                                            color: ThemeTokens.textMuted,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ],
+                                    ],
+                                  ),
+                                ),
+                                actions: [
+                                  TextButton.icon(
+                                    onPressed: () async {
+                                      await Clipboard.setData(
+                                        ClipboardData(text: part.oemNumber),
+                                      );
+                                      if (context.mounted) {
+                                        Navigator.pop(context);
+                                        ScaffoldMessenger.of(
+                                          context,
+                                        ).showSnackBar(
+                                          const SnackBar(
+                                            content: Text('OEM number copied'),
+                                            behavior: SnackBarBehavior.floating,
+                                            duration: Duration(seconds: 2),
+                                          ),
+                                        );
+                                      }
+                                    },
+                                    icon: const Icon(Icons.copy, size: 18),
+                                    label: const Text('Copy OEM'),
+                                    style: TextButton.styleFrom(
+                                      foregroundColor: ThemeTokens.neonBlue,
+                                    ),
+                                  ),
+                                  TextButton(
+                                    onPressed: () => Navigator.pop(context),
+                                    child: const Text(
+                                      'Close',
+                                      style: TextStyle(
+                                        color: ThemeTokens.neonBlue,
+                                      ),
+                                    ),
+                                  ),
                                 ],
                               ),
-                              actions: [
-                                TextButton(
-                                  onPressed: () => Navigator.pop(context),
-                                  child: const Text('Close'),
+                            );
+                          },
+                          borderRadius: BorderRadius.circular(
+                            ThemeTokens.radiusMedium,
+                          ),
+                          child: CarbonSurface(
+                            padding: const EdgeInsets.all(16),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        part.name,
+                                        style: Theme.of(
+                                          context,
+                                        ).textTheme.titleMedium,
+                                      ),
+                                      const SizedBox(height: 4),
+                                      Text(
+                                        'OEM: ${part.oemNumber}',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .bodySmall
+                                            ?.copyWith(
+                                              color: ThemeTokens.textMuted,
+                                            ),
+                                      ),
+                                      if (fitsPreview != null)
+                                        Text(
+                                          'Fits: $fitsPreview',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodySmall
+                                              ?.copyWith(
+                                                color: ThemeTokens.textMuted,
+                                                fontStyle: FontStyle.italic,
+                                              ),
+                                        ),
+                                    ],
+                                  ),
+                                ),
+                                const Icon(
+                                  Icons.chevron_right,
+                                  color: ThemeTokens.textMuted,
                                 ),
                               ],
                             ),
-                          );
-                        },
+                          ),
+                        ),
                       );
                     },
                   ),
@@ -338,5 +517,82 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
         ],
       ),
     );
+  }
+
+  List<Widget> _buildAftermarketNumbers(String jsonString) {
+    try {
+      final Map<String, dynamic> data = json.decode(jsonString);
+      if (data.isEmpty) return [];
+
+      return [
+        const SizedBox(height: 12),
+        Text(
+          'Aftermarket:',
+          style: TextStyle(fontSize: 12, color: ThemeTokens.textMuted),
+        ),
+        const SizedBox(height: 4),
+        ...data.entries.map(
+          (e) => InkWell(
+            onTap: () async {
+              await Clipboard.setData(ClipboardData(text: '${e.value}'));
+              if (mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Copied ${e.key} number'),
+                    duration: const Duration(seconds: 1),
+                  ),
+                );
+              }
+            },
+            borderRadius: BorderRadius.circular(4),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    '${e.key}: ${e.value}',
+                    style: const TextStyle(fontSize: 14),
+                  ),
+                  const SizedBox(width: 8),
+                  Icon(
+                    Icons.copy,
+                    size: 14,
+                    color: ThemeTokens.textMuted.withValues(alpha: 0.7),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ];
+    } catch (_) {
+      return [];
+    }
+  }
+
+  List<Widget> _buildFitsChips(String jsonString) {
+    try {
+      final List<dynamic> data = json.decode(jsonString);
+      if (data.isEmpty || (data.length == 1 && data[0] == 'All')) {
+        return [];
+      }
+
+      return [
+        const SizedBox(height: 12),
+        Text(
+          'Fits:',
+          style: TextStyle(fontSize: 12, color: ThemeTokens.textMuted),
+        ),
+        const SizedBox(height: 4),
+        Wrap(
+          spacing: 6,
+          runSpacing: 4,
+          children: data.map((e) => NeonChip(label: e.toString())).toList(),
+        ),
+      ];
+    } catch (_) {
+      return [];
+    }
   }
 }

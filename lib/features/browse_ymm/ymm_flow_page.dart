@@ -243,6 +243,39 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                                 style: Theme.of(context).textTheme.titleMedium,
                               ),
                             ),
+                            // Favorite toggle
+                            Consumer(
+                              builder: (context, ref, _) {
+                                final isFav = ref
+                                    .watch(favoriteVehiclesProvider)
+                                    .any(
+                                      (fav) =>
+                                          '${fav.year}|${fav.model}|${fav.trim}' ==
+                                          '${v.year}|${v.model}|${v.trim}',
+                                    );
+                                return InkWell(
+                                  onTap: () {
+                                    ref
+                                        .read(favoriteVehiclesProvider.notifier)
+                                        .toggle(v);
+                                  },
+                                  borderRadius: BorderRadius.circular(16),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(4),
+                                    child: Icon(
+                                      isFav
+                                          ? Icons.favorite
+                                          : Icons.favorite_border,
+                                      color: isFav
+                                          ? Colors.redAccent
+                                          : ThemeTokens.textMuted,
+                                      size: 20,
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                            const SizedBox(width: 8),
                             Icon(
                               Icons.check_circle_outline,
                               color: ThemeTokens.textMuted,

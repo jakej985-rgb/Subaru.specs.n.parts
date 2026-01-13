@@ -1,73 +1,259 @@
 ## IdeaSmith Scope Snapshot
 - Date: 2026-01-12
 - Project: specsnparts
-- Improvement: Implement "Recent Searches", Fix "View Parts", and Add "Settings Tools"
+- Improvement: 20 small, shippable UX improvements
 
-## User Pain Point
-- **Part Lookup:** Users needlessly re-type common searches on mobile.
-- **Browse Flow:** "View Parts" is a dead-end ("Coming Soon") after selecting a vehicle.
-- **Settings:** Users cannot clear their history or see app version info.
+---
 
-## Three Shippable Improvements (Sequential)
-1.  **Part Lookup History:** Add "Recent Searches" chips to the empty state.
-2.  **View Parts Navigation:** Wire `YmmFlowPage` "View Parts" button to `PartLookupPage` (passing vehicle context if possible, or just navigation).
-3.  **Settings Page:** Add "Clear History" actions and "About" section.
+## Improvement #1: Nuclear Reset (Debug)
 
-## In Scope
--   **Part Lookup (`PartLookupPage`):**
-    -   `RecentPartSearches` provider (SharedPrefs, circular buffer map 10).
-    -   Empty state shows "Recent Searches" chips.
-    -   Tap chip -> autofill & search.
--   **YMM Flow (`YmmFlowPage`):**
-    -   Change "View Parts" `onTap` to `context.go('/parts', extra: vehicle)`.
-    -   Update `PartLookupPage` to accept `Vehicle` extra (display "Filtering for [Vehicle]" banner if present).
--   **Settings (`SettingsPage`):**
-    -   "Data Management" Section:
-        -   "Clear Recent Vehicles" button.
-        -   "Clear Search History" button.
-    -   "About" Section:
-        -   App Version (package_info_plus is standard, but maybe hardcode/read from pubspec if adding deps is blocked. *Decision: Hardcode "v1.0.0" for now to avoid dep check delay, unless package_info exists.*).
--   **Data:**
-    -   `RecentPartSearchesNotifier` & `RecentVehiclesNotifier` (expose clear methods).
+### User Pain Point
+- Testing seed data or wiping state requires app uninstall
+- "Clear Data" is piecemeal
 
-## Out of Scope
--   Complex "Vehicle Specific Part Filtering" (just passing the context contextually is enough for now).
--   Cloud sync.
--   New dependencies (use existing).
+### In Scope
+- **UI (`SettingsPage`):** Add "Reset App Data" (red button)
+- Wipes `shared_preferences` AND deletes `db.sqlite`
 
-## Constraints
--   Offline-first.
--   Keep UI consistent (Carbon/Neon theme).
+---
 
-## Interfaces & Contracts
--   **Storage:** `prefs_recent_part_searches_v1`
--   **Router:** `/parts` accepts `extra: Vehicle?`.
+## Improvement #2: Licenses Page
 
-## Acceptance Criteria
-- [x] **Part History:** Recent searches appear, persist, and work on tap. (2026-01-12)
-- [x] **Part Navigation:** "View Parts" in Browse Flow opens Part Lookup (no longer "Coming Soon"). (2026-01-12)
-- [x] **Vehicle Context:** Part Lookup shows which vehicle came from Browse (visual banner only, filtering optional). (2026-01-12)
-- [x] **Settings:** "Clear [Vehicles/Searches]" buttons actually wipe SharedPrefs. (2026-01-12)
-- [x] **Settings:** About section shows version "1.0.0". (2026-01-12)
-- [x] `dart format` / `flutter analyze` pass. (2026-01-12)
+### User Pain Point
+- No attribution for used packages (standard requirement)
 
-## Validation
-- `dart format --output=none --set-exit-if-changed .`
-- `flutter analyze`
-- `flutter test -r expanded`
+### In Scope
+- **UI (`SettingsPage`):** Add "Open Source Licenses" tile
+- Navigates to `LicensePage` (Flutter built-in)
 
-## Manual Verification Steps
-1.  **Search:** Go to Parts -> Search "turbo" -> Clear -> Verify "turbo" in recents.
-2.  **Browse:** Go to Browse YMM -> Select Vehicle -> Tap "View Parts".
-3.  **Context:** Verify Part Lookup opens with banner "Filtering for [Year] [Model]".
-4.  **Settings:** Go to Settings -> Tap "Clear Search History".
-5.  **Verify:** Return to Parts -> Recents should be gone.
+---
 
-## Risks / Edge Cases
--   Passing `Vehicle` object via GoRouter `extra` can be lost on web refresh (acceptable for this scope).
--   Settings "Clear" feedback needs a SnackBar confirmation.
+## Improvement #3: Confirm Clear Data
+
+### User Pain Point
+- Accidental taps on "Clear Recents" wipe data instantly
+
+### In Scope
+- **UI (`SettingsPage`):** Add `showDialog` confirmation before clearing Favorites/Recents
+
+---
+
+## Improvement #4: Swipe Dismiss Recents
+
+### User Pain Point
+- removing recents requires "Clear All"
+- Can't remove just one mistapped vehicle
+
+### In Scope
+- **UI (`GarageView`):** Wrap `_GarageCard` in `Dismissible` (Recents section only)
+- Updates provider on dismiss
+
+---
+
+## Improvement #5: Garage Empty State
+
+### User Pain Point
+- Empty garage is invisible (SizedBox.shrink)
+- New users see a blank gap
+
+### In Scope
+- **UI (`GarageView`):** Show "Your Garage is Empty" card with an icon if both lists empty
+
+---
+
+## Improvement #6: Garage Quick Fluids button
+
+### User Pain Point
+- Most common reason to save vehicle is checking oil/fluids
+- Requires 3 taps (Tap Car -> Specs -> Filter Fluids)
+
+### In Scope
+- **UI (`GarageView`):** Add "Oil & Fluids" text button/icon on the card
+- Deep links to `/specs?category=Fluids` (requires router handling or param)
+
+---
+
+## Improvement #7: Engine List Search
+
+### User Pain Point
+- Engine list is long (EJ, FA, FB, EG, EZ...)
+- Hard to find specific code
+
+### In Scope
+- **UI (`EngineFlowPage`):** Add `SearchBar` above list
+- Filter local list by query
+
+---
+
+## Improvement #8: Engine Family Headers
+
+### User Pain Point
+- Flat list of 50 engines is overwhelming
+- Context missing (FA vs EJ)
+
+### In Scope
+- **UI (`EngineFlowPage`):** Group by first 2 letters (EJ, FA, EZ, etc.)
+- Use sticky headers (or simple headers in ListView)
+
+---
+
+## Improvement #9: YMM Reset Action
+
+### User Pain Point
+- Selecting wrong Year requires Back -> Back -> Back
+- No easy "Start Over"
+
+### In Scope
+- **UI (`YmmFlowPage`):** Add "Reset" text button in AppBar (if selection exists)
+- Clears all state
+
+---
+
+## Improvement #10: Vehicle Detail Chips (YMM)
+
+### User Pain Point
+- "2004 Impreza WRX STI" is shown, but body (Sedan) and market (USDM) hidden
+- Critical for correct fitment
+
+### In Scope
+- **UI (`YmmFlowPage`):** Add chips for `body` and `market` below vehicle title in selection view
+
+---
+
+## Improvement #11: Year Picker Grid Toggle
+
+### User Pain Point
+- List of years (1990-2025) requires lots of scrolling
+- Grid is faster for years
+
+### In Scope
+- **UI (`CategoryYearPickerPage`):** Add ToggleButton in AppBar
+- Switch between `ListView` and `GridView`
+
+---
+
+## Improvement #12: Sort Parts (Name/OEM)
+
+### User Pain Point
+- Parts list defaults to Name
+- Sometimes finding by OEM number sequence is easier
+
+### In Scope
+- **UI (`PartLookupPage`):** Add popup menu filter icon
+- Sort by Name vs Sort by OEM
+
+---
+
+## Improvement #13: Delete Search History Item
+
+### User Pain Point
+- Search history gets cluttered with typos
+- "Clear All" is too aggressive
+
+### In Scope
+- **UI (`PartLookupPage`):** Add small "x" on history chips
+
+---
+
+## Improvement #14: Copy Aftermarket Number
+
+### User Pain Point
+- Can Copy OEM, but not Wix/Fram numbers
+- Manual typing error prone
+
+### In Scope
+- **UI (`PartDialog`):** Wrap aftermarket rows in `InkWell`
+- Tap copy to clipboard
+
+---
+
+## Improvement #15: Part "Fits" Preview
+
+### User Pain Point
+- List item shows name/OEM, but not if it fits specific engines
+- Must open dialog to check "fits"
+
+### In Scope
+- **UI (`PartList`):** Show "Fits: EJ20, EJ25..." (truncated) in subtitle
+
+---
+
+## Improvement #16: Spec List Category Chips
+
+### User Pain Point
+- Spec list is long, mixed categories
+- Search is only filter
+
+### In Scope
+- **UI (`SpecListPage`):** Horizontal scrollable `ChoiceChip` list at top
+- Filters visible specs by category
+
+---
+
+## Improvement #17: Copy All Specs
+
+### User Pain Point
+- Sharing full build info requires one-by-one copy
+- Tedious
+
+### In Scope
+- **UI (`SpecListPage`):** Add "Copy All" icon action
+- Copies all *visible* specs to clipboard formatted text
+
+---
+
+## Improvement #18: Show Spec Source
+
+### User Pain Point
+- "Is this from FSM or ChatGPT?"
+- Trust is low without provenance
+
+### In Scope
+- **UI (`SpecListPage`):** Show "Source: FSM (2004)" in small text on expanded tile or bottom of card
+
+---
+
+## Improvement #19: Scroll to Top
+
+### User Pain Point
+- Long lists (Specs/Parts) are one-way streets
+- Fast scroll up is painful
+
+### In Scope
+- **UI (`SpecListPage`):** FAB appears when scrolled down
+- Tapping scrolls to index 0
+
+---
+
+## Improvement #20: Debug Info (Version Tap)
+
+### User Pain Point
+- "Is my DB updated?" "Which path is used?"
+- Troubleshooting users is hard
+
+### In Scope
+- **UI (`SettingsPage`):** 5 taps on Version -> Show Dialog with DB path, vehicle count, app version
+
+---
 
 ## Completed Log
-- 2026-01-12 — Garage & Recent Vehicles (Recents, Favorites, Persistence) (PR: 💡 IdeaSmith: Garage & Recent Vehicles)
-- 2026-01-12 — Part Lookup History & Navigation (Recents, Context Banner, Browse Integration) (PR: 💡 IdeaSmith: Part Lookup Flow & History)
-- 2026-01-12 — Data Management & About (Settings Page, Clear History Logic) (PR: 💡 IdeaSmith: Settings & Data Management)
+- 2026-01-12 — Garage & Recent Vehicles
+- 2026-01-12 — Part Lookup History & Navigation
+- 2026-01-12 — Data Management & About
+- 2026-01-12 — Browse by Engine Functional
+- 2026-01-12 — Garage Card PARTS Navigation
+- 2026-01-12 — PlaceholderScreen Cleanup
+- 2026-01-12 — Copy OEM Number
+- 2026-01-12 — Aftermarket Numbers + Fits Chips in Part Dialog
+- 2026-01-12 — Part List CarbonSurface Styling
+- 2026-01-12 — Category Specs Long-Press Copy
+- 2026-01-12 — Engine Vehicle Count Badges
+- 2026-01-12 — Year Picker Model Counts
+- 2026-01-12 — Clear Favorites in Settings
+- 2026-01-12 — Engine Badges on Garage Cards
+- 2026-01-12 — Quick Favorite from YMM Flow
+- 2026-01-12 — Category Icons in Results Header
+- 2026-01-12 — Pull-to-Refresh Vehicle Lists
+- 2026-01-12 — Spec Counts in Category Hub
+- 2026-01-12 — All Specs FAB on Home
+- 2026-01-12 — Animated Empty States

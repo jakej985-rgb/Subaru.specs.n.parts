@@ -17,6 +17,7 @@ class FakePartsDao extends PartsDao {
     String query, {
     int limit = 50,
     int offset = 0,
+    bool sortByOem = false,
   }) async {
     if (query == 'Oil Filter') {
       return [
@@ -69,7 +70,7 @@ void main() {
     expect(find.text('Brake Pad'), findsOneWidget);
 
     // Tap 'Oil Filter'
-    await tester.tap(find.widgetWithText(ActionChip, 'Oil Filter'));
+    await tester.tap(find.widgetWithText(InputChip, 'Oil Filter'));
     await tester.pump(); // Start debounce or state change
 
     // The existing code has a 500ms debounce.

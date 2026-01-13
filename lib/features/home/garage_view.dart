@@ -5,6 +5,7 @@ import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/home/garage_providers.dart';
 import 'package:specsnparts/theme/tokens.dart';
 import 'package:specsnparts/theme/widgets/carbon_surface.dart';
+import 'package:specsnparts/theme/widgets/neon_chip.dart';
 
 class GarageView extends ConsumerWidget {
   const GarageView({super.key});
@@ -152,6 +153,10 @@ class _GarageCard extends ConsumerWidget {
                               ?.copyWith(color: ThemeTokens.textMuted),
                           overflow: TextOverflow.ellipsis,
                         ),
+                        if (vehicle.engineCode != null) ...[
+                          const SizedBox(height: 4),
+                          NeonChip(label: vehicle.engineCode!),
+                        ],
                       ],
                     ),
                   ),
@@ -207,27 +212,7 @@ class _GarageCard extends ConsumerWidget {
                   Container(width: 1, height: 20, color: Colors.white10),
                   Expanded(
                     child: InkWell(
-                      onTap: () {
-                        showDialog(
-                          context: context,
-                          builder: (ctx) => AlertDialog(
-                            backgroundColor: ThemeTokens.surfaceRaised,
-                            title: const Text('Coming Soon'),
-                            content: const Text(
-                              'Parts lookup for specific trims coming soon.',
-                            ),
-                            actions: [
-                              TextButton(
-                                onPressed: () => Navigator.pop(ctx),
-                                child: const Text(
-                                  'OK',
-                                  style: TextStyle(color: ThemeTokens.neonBlue),
-                                ),
-                              ),
-                            ],
-                          ),
-                        );
-                      },
+                      onTap: () => context.push('/parts', extra: vehicle),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 12),
                         child: Center(
@@ -237,8 +222,6 @@ class _GarageCard extends ConsumerWidget {
                                 ?.copyWith(
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1,
-                                  color:
-                                      ThemeTokens.textMuted, // Dimmed for now
                                 ),
                           ),
                         ),

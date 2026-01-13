@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:specsnparts/features/home/garage_view.dart';
+import 'package:specsnparts/theme/tokens.dart';
 import '../../widgets/adaptive_scroll.dart';
 import '../../widgets/home_menu_card.dart';
 
@@ -78,6 +79,13 @@ class HomePage extends StatelessWidget {
     // This looks safe.
 
     return Scaffold(
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => context.push('/specs'),
+        icon: const Icon(Icons.list_alt),
+        label: const Text('All Specs'),
+        backgroundColor: ThemeTokens.neonBlue,
+        foregroundColor: ThemeTokens.surface,
+      ),
       body: SafeArea(
         child: AdaptiveScroll(
           estimatedContentHeight: estimatedContentHeight,
@@ -107,6 +115,8 @@ class HomePage extends StatelessWidget {
                 ),
                 if (i != items.length - 1) const SizedBox(height: spacing),
               ],
+              // Extra padding for FAB clearance
+              const SizedBox(height: 80),
             ],
           ),
         ),

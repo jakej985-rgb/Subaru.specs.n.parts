@@ -17,6 +17,7 @@ class FakePartsDao extends PartsDao {
     String query, {
     int limit = 50,
     int offset = 0,
+    bool sortByOem = false,
   }) async {
     return [];
   }

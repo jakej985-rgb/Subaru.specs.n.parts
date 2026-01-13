@@ -6,24 +6,10 @@ import 'package:specsnparts/features/part_lookup/part_lookup_page.dart';
 import 'package:specsnparts/features/specs/spec_list_page.dart';
 import 'package:specsnparts/features/browse_ymm/ymm_flow_page.dart';
 import 'package:specsnparts/features/browse_engine/engine_flow_page.dart';
-import 'package:flutter/material.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/specs_by_category/specs_by_category_hub_page.dart';
 import 'package:specsnparts/features/specs_by_category/category_year_picker_page.dart';
 import 'package:specsnparts/features/specs_by_category/category_year_results_page.dart';
-
-// Placeholder Pages (will be replaced by actual implementations)
-class PlaceholderScreen extends StatelessWidget {
-  final String title;
-  const PlaceholderScreen({super.key, required this.title});
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: Center(child: Text('$title - Coming Soon')),
-    );
-  }
-}
 
 final goRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -39,7 +25,13 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           ),
           GoRoute(
             path: 'parts',
-            builder: (context, state) => const PartLookupPage(),
+            builder: (context, state) {
+              Vehicle? vehicle;
+              if (state.extra is Vehicle) {
+                vehicle = state.extra as Vehicle;
+              }
+              return PartLookupPage(vehicle: vehicle);
+            },
           ),
           GoRoute(
             path: 'specs',

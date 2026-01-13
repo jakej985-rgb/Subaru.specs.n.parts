@@ -54,6 +54,13 @@ class RecentPartSearchesNotifier extends Notifier<List<String>> {
     await _save();
   }
 
+  Future<void> remove(String query) async {
+    final newState = List<String>.from(state);
+    newState.remove(query);
+    state = newState;
+    await _save();
+  }
+
   Future<void> clear() async {
     state = [];
     await _save();

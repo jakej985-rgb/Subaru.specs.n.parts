@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/specs/spec_list_controller.dart';
+import 'package:specsnparts/features/specs_by_category/spec_category_keys.dart';
 import 'package:specsnparts/theme/widgets/carbon_surface.dart';
 import 'package:specsnparts/theme/widgets/neon_chip.dart';
 import 'package:specsnparts/theme/tokens.dart';
@@ -24,6 +25,8 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   late final ScrollController _controller;
   final TextEditingController _searchController = TextEditingController();
   Timer? _debounce;
+  bool _showScrollToTop = false;
+  String? _selectedCategoryFilter;
 
   @override
   void initState() {
@@ -45,6 +48,13 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     final ScrollPosition pos = _controller.position;
     if (pos.pixels >= pos.maxScrollExtent - 200) {
       ref.read(specListControllerProvider.notifier).loadMore();
+    }
+
+    final show = pos.pixels > 500;
+    if (show != _showScrollToTop) {
+      setState(() {
+        _showScrollToTop = show;
+      });
     }
   }
 
@@ -71,6 +81,116 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     ref.read(specListControllerProvider.notifier).setQuery('');
   }
 
+  void _scrollToTop() {
+    _controller.animateTo(
+      0,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.easeOutCubic,
+    );
+  }
+
+  void _copyAllSpecs() async {
+    final state = ref.read(specListControllerProvider);
+    if (state.items.isEmpty) return;
+
+    final buffer = StringBuffer();
+    if (widget.vehicle != null) {
+      buffer.writeln(
+        'Specs for ${widget.vehicle!.year} ${widget.vehicle!.model} ${widget.vehicle!.trim ?? ""}',
+      );
+      buffer.writeln('---');
+    }
+
+    for (final spec in state.items) {
+      buffer.writeln('${spec.title} (${spec.category})');
+      buffer.writeln(spec.body);
+      buffer.writeln('');
+    }
+
+    await Clipboard.setData(ClipboardData(text: buffer.toString()));
+    if (mounted) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('All visible specs copied')));
+    }
+  }
+
+  void _onCategoryFilterChanged(String? categoryKey) {
+    setState(() {
+      _selectedCategoryFilter = categoryKey;
+    });
+
+    final notifier = ref.read(specListControllerProvider.notifier);
+    if (categoryKey == null) {
+      // Clear filter (show all, or reset to widget.categories if any)
+      if (widget.categories != null) {
+        notifier.setCategories(widget.categories!);
+      } else {
+        notifier.setCategories([]);
+      }
+    } else {
+      // Find category config by key
+      final cat = SpecCategoryKey.values.firstWhere(
+        (c) => c.key == categoryKey,
+        orElse: () => SpecCategoryKey.maintenance,
+      );
+      notifier.setCategories(cat.dataCategories);
+    }
+  }
+
+  Widget _buildCategoryFilter() {
+    // Only show if we aren't locked to specific categories by arguments
+    if (widget.categories != null) return const SizedBox.shrink();
+
+    return SizedBox(
+      height: 50,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        itemCount: SpecCategoryKey.values.length + 1, // +1 for "All"
+        separatorBuilder: (context, index) => const SizedBox(width: 8),
+        itemBuilder: (context, index) {
+          if (index == 0) {
+            final isSelected = _selectedCategoryFilter == null;
+            return ChoiceChip(
+              label: const Text('All'),
+              selected: isSelected,
+              onSelected: (_) => _onCategoryFilterChanged(null),
+              backgroundColor: ThemeTokens.surfaceRaised,
+              selectedColor: ThemeTokens.neonBlue.withValues(alpha: 0.2),
+              labelStyle: TextStyle(
+                color: isSelected
+                    ? ThemeTokens.neonBlue
+                    : ThemeTokens.textMuted,
+                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+              ),
+              side: isSelected
+                  ? const BorderSide(color: ThemeTokens.neonBlue)
+                  : BorderSide.none,
+            );
+          }
+
+          final cat = SpecCategoryKey.values[index - 1]; // -1 for offset
+          final isSelected = _selectedCategoryFilter == cat.key;
+          return ChoiceChip(
+            label: Text(cat.title),
+            selected: isSelected,
+            onSelected: (_) => _onCategoryFilterChanged(cat.key),
+            backgroundColor: ThemeTokens.surfaceRaised,
+            selectedColor: ThemeTokens.neonBlue.withValues(alpha: 0.2),
+            labelStyle: TextStyle(
+              color: isSelected ? ThemeTokens.neonBlue : ThemeTokens.textMuted,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+            ),
+            side: isSelected
+                ? const BorderSide(color: ThemeTokens.neonBlue)
+                : BorderSide.none,
+          );
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // ⚡ Bolt Optimization: Use select to only watch relevant state fields.
@@ -86,7 +206,26 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     );
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Specs')),
+      appBar: AppBar(
+        title: const Text('Specs'),
+        actions: [
+          if (s.items.isNotEmpty)
+            IconButton(
+              icon: const Icon(Icons.copy_all),
+              tooltip: 'Copy all visible specs',
+              onPressed: _copyAllSpecs,
+            ),
+        ],
+      ),
+      floatingActionButton: _showScrollToTop
+          ? FloatingActionButton(
+              onPressed: _scrollToTop,
+              mini: true,
+              backgroundColor: ThemeTokens.surfaceRaised,
+              foregroundColor: ThemeTokens.neonBlue,
+              child: const Icon(Icons.keyboard_arrow_up),
+            )
+          : null,
       body: Column(
         children: [
           Padding(
@@ -114,6 +253,8 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
               onChanged: _onSearchChanged,
             ),
           ),
+          _buildCategoryFilter(),
+          if (widget.categories == null) const SizedBox(height: 8),
           Expanded(
             child: s.isLoadingInitial
                 ? const Center(child: CircularProgressIndicator())

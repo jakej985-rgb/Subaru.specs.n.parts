@@ -153,6 +153,11 @@ class FavoriteVehiclesNotifier extends Notifier<List<Vehicle>> {
     await _save();
   }
 
+  Future<void> clear() async {
+    state = [];
+    await _save();
+  }
+
   Future<void> _save() async {
     final ids = state.map(_vehicleToId).toList();
     await _prefs.setString(kPrefsFavoriteVehiclesKey, jsonEncode(ids));
