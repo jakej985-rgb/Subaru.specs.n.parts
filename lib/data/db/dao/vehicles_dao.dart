@@ -108,4 +108,24 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
 
     return Map.fromEntries(results);
   }
+
+  /// Returns a list of vehicles matching the query in model, year, or engineCode.
+  Future<List<Vehicle>> searchVehicles(
+    String query, {
+    int limit = 20,
+    int offset = 0,
+  }) {
+    if (query.length > 100) return Future.value([]);
+
+    return (select(vehicles)
+          ..where(
+            (tbl) =>
+                tbl.model.contains(query) |
+                tbl.year.cast<String>().contains(query) |
+                tbl.engineCode.contains(query) |
+                tbl.trim.contains(query),
+          )
+          ..limit(limit, offset: offset))
+        .get();
+  }
 }

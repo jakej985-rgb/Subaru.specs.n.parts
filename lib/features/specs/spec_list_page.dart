@@ -10,6 +10,8 @@ import 'package:specsnparts/features/specs_by_category/spec_category_keys.dart';
 import 'package:specsnparts/theme/widgets/carbon_surface.dart';
 import 'package:specsnparts/theme/widgets/neon_chip.dart';
 import 'package:specsnparts/theme/tokens.dart';
+import 'package:specsnparts/features/comparison/comparison_provider.dart';
+import 'package:go_router/go_router.dart';
 
 class SpecListPage extends ConsumerStatefulWidget {
   const SpecListPage({super.key, this.vehicle, this.categories});
@@ -215,6 +217,34 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
               tooltip: 'Copy all visible specs',
               onPressed: _copyAllSpecs,
             ),
+          if (widget.vehicle != null)
+            Consumer(
+              builder: (context, ref, child) {
+                final isComparing = ref
+                    .watch(comparisonProvider)
+                    .contains(widget.vehicle!.id);
+                return IconButton(
+                  icon: Icon(
+                    isComparing ? Icons.compare_arrows : Icons.add_chart,
+                    color: isComparing ? ThemeTokens.neonBlue : null,
+                  ),
+                  tooltip: isComparing
+                      ? 'Remove from Comparison'
+                      : 'Add to Comparison',
+                  onPressed: () {
+                    if (isComparing) {
+                      ref
+                          .read(comparisonProvider.notifier)
+                          .remove(widget.vehicle!.id);
+                    } else {
+                      ref
+                          .read(comparisonProvider.notifier)
+                          .add(widget.vehicle!);
+                    }
+                  },
+                );
+              },
+            ),
         ],
       ),
       floatingActionButton: _showScrollToTop
@@ -226,6 +256,7 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
               child: const Icon(Icons.keyboard_arrow_up),
             )
           : null,
+      bottomNavigationBar: _buildComparisonTray(),
       body: Column(
         children: [
           Padding(
@@ -447,6 +478,30 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
           ),
         ],
       ),
+    );
+  }
+
+  Widget? _buildComparisonTray() {
+    return Consumer(
+      builder: (context, ref, child) {
+        final state = ref.watch(comparisonProvider);
+        if (state.vehicles.isEmpty) return const SizedBox.shrink();
+
+        return Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: FloatingActionButton.extended(
+            heroTag: 'comparison_tray',
+            onPressed: () => context.push('/comparison'),
+            backgroundColor: ThemeTokens.surfaceRaised,
+            foregroundColor: ThemeTokens.neonBlue,
+            icon: Badge(
+              label: Text(state.vehicles.length.toString()),
+              child: const Icon(Icons.compare_arrows),
+            ),
+            label: const Text('Compare'),
+          ),
+        );
+      },
     );
   }
 }

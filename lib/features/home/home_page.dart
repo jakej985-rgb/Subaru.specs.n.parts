@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
         headerHeightEstimate +
         (totalCards * scaledCardHeight) +
         ((totalCards - 1) * spacing) +
-        80; // extra breathing room (top/bottom padding of AdaptiveScroll usually 16+16=32, plus internal 8+18 spacing)
+        150; // extra breathing room + search bar height
 
     // Wait, AdaptiveScroll has padding=16.
     // Inside AdaptiveScroll child:
@@ -92,7 +92,50 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const SizedBox(height: 8),
+              // Unified Global Search Trigger
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: InkWell(
+                  onTap: () => context.push('/global-search'),
+                  borderRadius: BorderRadius.circular(12),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      color: ThemeTokens.surfaceRaised,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: ThemeTokens.neonBlue.withValues(alpha: 0.3),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.search,
+                          color: ThemeTokens.neonBlue,
+                          size: 20,
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Text(
+                            'Search models, parts, specs...',
+                            style: TextStyle(
+                              color: ThemeTokens.textMuted.withValues(
+                                alpha: 0.7,
+                              ),
+                              fontSize: 16,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
               const Text(
                 'Subaru Specs & Parts',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),

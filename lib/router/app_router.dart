@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/features/home/home_page.dart';
@@ -10,6 +11,8 @@ import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/specs_by_category/specs_by_category_hub_page.dart';
 import 'package:specsnparts/features/specs_by_category/category_year_picker_page.dart';
 import 'package:specsnparts/features/specs_by_category/category_year_results_page.dart';
+import 'package:specsnparts/features/global_search/global_search_overlay.dart';
+import 'package:specsnparts/features/comparison/comparison_page.dart';
 
 final goRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -85,6 +88,20 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: 'browse/engine',
             builder: (context, state) => const EngineFlowPage(),
+          ),
+          GoRoute(
+            path: 'global-search',
+            pageBuilder: (context, state) => CustomTransitionPage(
+              child: const GlobalSearchOverlay(),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                    return FadeTransition(opacity: animation, child: child);
+                  },
+            ),
+          ),
+          GoRoute(
+            path: 'comparison',
+            builder: (context, state) => const ComparisonPage(),
           ),
         ],
       ),
