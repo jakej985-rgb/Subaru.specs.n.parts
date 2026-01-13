@@ -30,7 +30,7 @@ jobs:
         run: flutter pub get
 
       - name: Verify formatting
-        run: dart format --output=none --set-exit-if-changed .
+        run: dart format --output=none --set-exit-if-changed . || (echo "Run dart format . and commit the result." && exit 1)
 
       - name: Run code generation
         run: dart run build_runner build --delete-conflicting-outputs
