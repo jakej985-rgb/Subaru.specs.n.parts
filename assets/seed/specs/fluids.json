@@ -198,5 +198,25 @@
     "updatedAt": "2025-01-27T00:00:00Z",
     "verified": true,
     "source": "Owner's Manual"
+  },
+  {
+    "id": "s_ac_refrigerant_gd_sti",
+    "category": "Fluids",
+    "title": "A/C Refrigerant (GD STI)",
+    "body": "HFC-134a (0.45 - 0.55 kg)",
+    "tags": "2004,2005,2006,2007,ac,air,conditioning,fluid,gd,refrigerant,sti,wrx",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_ac_compressor_oil_gd_sti",
+    "category": "Fluids",
+    "title": "A/C Compressor Oil (GD STI)",
+    "body": "ZXL 200PG",
+    "tags": "2004,2005,2006,2007,ac,compressor,fluid,gd,oil,sti,wrx",
+    "updatedAt": "2024-05-24T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]

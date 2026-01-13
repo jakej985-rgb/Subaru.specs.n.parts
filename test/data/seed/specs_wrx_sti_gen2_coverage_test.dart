@@ -51,6 +51,7 @@ void main() {
       );
       expect(spec, isNotNull, reason: 'Missing s_trans_capacity_sti_6mt_gen2');
       expect(spec['body'], contains('4.3 Quarts'));
+      expect(spec['body'], contains('Shared with front differential'));
     });
 
     test('Has STI Gen2 (R180) Rear Diff Fluid', () {
@@ -256,6 +257,34 @@ void main() {
         reason: 'Missing s_bulb_headlight_sti_gen2_06_07',
       );
       expect(spec['body'], contains('D2S'));
+    });
+  });
+
+  group('STI Gen 2 (2004-2007) A/C Coverage', () {
+    late List<dynamic> fluidSpecs;
+
+    setUpAll(() {
+      final seedDir = p.join(Directory.current.path, 'assets', 'seed', 'specs');
+      final fluidFile = File(p.join(seedDir, 'fluids.json'));
+      fluidSpecs = json.decode(fluidFile.readAsStringSync());
+    });
+
+    test('Has STI Gen2 A/C Refrigerant (HFC-134a)', () {
+      final spec = fluidSpecs.firstWhere(
+        (s) => s['id'] == 's_ac_refrigerant_gd_sti',
+        orElse: () => null,
+      );
+      expect(spec, isNotNull, reason: 'Missing s_ac_refrigerant_gd_sti');
+      expect(spec['body'], contains('HFC-134a'));
+    });
+
+    test('Has STI Gen2 A/C Compressor Oil (ZXL 200PG)', () {
+      final spec = fluidSpecs.firstWhere(
+        (s) => s['id'] == 's_ac_compressor_oil_gd_sti',
+        orElse: () => null,
+      );
+      expect(spec, isNotNull, reason: 'Missing s_ac_compressor_oil_gd_sti');
+      expect(spec['body'], contains('ZXL 200PG'));
     });
   });
 }
