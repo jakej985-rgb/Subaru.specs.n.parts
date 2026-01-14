@@ -130,4 +130,20 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
       return true;
     }).toList();
   }
+
+  /// Returns spec counts for all categories.
+  Future<Map<String, int>> getSpecCountsByCategory() async {
+    final query = selectOnly(specs)
+      ..addColumns([specs.category, specs.id.count()])
+      ..groupBy([specs.category]);
+
+    final results = await query
+        .map(
+          (row) =>
+              MapEntry(row.read(specs.category)!, row.read(specs.id.count())!),
+        )
+        .get();
+
+    return Map.fromEntries(results);
+  }
 }

@@ -1,12 +1,17 @@
 import 'dart:async';
 
+import 'package:flutter/services.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/specs/spec_list_controller.dart';
+import 'package:specsnparts/features/specs_by_category/spec_category_keys.dart';
 import 'package:specsnparts/theme/widgets/carbon_surface.dart';
 import 'package:specsnparts/theme/widgets/neon_chip.dart';
 import 'package:specsnparts/theme/tokens.dart';
+import 'package:specsnparts/features/comparison/comparison_provider.dart';
+import 'package:go_router/go_router.dart';
 
 class SpecListPage extends ConsumerStatefulWidget {
   const SpecListPage({super.key, this.vehicle, this.categories});
@@ -22,6 +27,8 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   late final ScrollController _controller;
   final TextEditingController _searchController = TextEditingController();
   Timer? _debounce;
+  bool _showScrollToTop = false;
+  String? _selectedCategoryFilter;
 
   @override
   void initState() {
@@ -43,6 +50,13 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     final ScrollPosition pos = _controller.position;
     if (pos.pixels >= pos.maxScrollExtent - 200) {
       ref.read(specListControllerProvider.notifier).loadMore();
+    }
+
+    final show = pos.pixels > 500;
+    if (show != _showScrollToTop) {
+      setState(() {
+        _showScrollToTop = show;
+      });
     }
   }
 
@@ -69,6 +83,116 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     ref.read(specListControllerProvider.notifier).setQuery('');
   }
 
+  void _scrollToTop() {
+    _controller.animateTo(
+      0,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.easeOutCubic,
+    );
+  }
+
+  void _copyAllSpecs() async {
+    final state = ref.read(specListControllerProvider);
+    if (state.items.isEmpty) return;
+
+    final buffer = StringBuffer();
+    if (widget.vehicle != null) {
+      buffer.writeln(
+        'Specs for ${widget.vehicle!.year} ${widget.vehicle!.model} ${widget.vehicle!.trim ?? ""}',
+      );
+      buffer.writeln('---');
+    }
+
+    for (final spec in state.items) {
+      buffer.writeln('${spec.title} (${spec.category})');
+      buffer.writeln(spec.body);
+      buffer.writeln('');
+    }
+
+    await Clipboard.setData(ClipboardData(text: buffer.toString()));
+    if (mounted) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('All visible specs copied')));
+    }
+  }
+
+  void _onCategoryFilterChanged(String? categoryKey) {
+    setState(() {
+      _selectedCategoryFilter = categoryKey;
+    });
+
+    final notifier = ref.read(specListControllerProvider.notifier);
+    if (categoryKey == null) {
+      // Clear filter (show all, or reset to widget.categories if any)
+      if (widget.categories != null) {
+        notifier.setCategories(widget.categories!);
+      } else {
+        notifier.setCategories([]);
+      }
+    } else {
+      // Find category config by key
+      final cat = SpecCategoryKey.values.firstWhere(
+        (c) => c.key == categoryKey,
+        orElse: () => SpecCategoryKey.maintenance,
+      );
+      notifier.setCategories(cat.dataCategories);
+    }
+  }
+
+  Widget _buildCategoryFilter() {
+    // Only show if we aren't locked to specific categories by arguments
+    if (widget.categories != null) return const SizedBox.shrink();
+
+    return SizedBox(
+      height: 50,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        itemCount: SpecCategoryKey.values.length + 1, // +1 for "All"
+        separatorBuilder: (context, index) => const SizedBox(width: 8),
+        itemBuilder: (context, index) {
+          if (index == 0) {
+            final isSelected = _selectedCategoryFilter == null;
+            return ChoiceChip(
+              label: const Text('All'),
+              selected: isSelected,
+              onSelected: (_) => _onCategoryFilterChanged(null),
+              backgroundColor: ThemeTokens.surfaceRaised,
+              selectedColor: ThemeTokens.neonBlue.withValues(alpha: 0.2),
+              labelStyle: TextStyle(
+                color: isSelected
+                    ? ThemeTokens.neonBlue
+                    : ThemeTokens.textMuted,
+                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+              ),
+              side: isSelected
+                  ? const BorderSide(color: ThemeTokens.neonBlue)
+                  : BorderSide.none,
+            );
+          }
+
+          final cat = SpecCategoryKey.values[index - 1]; // -1 for offset
+          final isSelected = _selectedCategoryFilter == cat.key;
+          return ChoiceChip(
+            label: Text(cat.title),
+            selected: isSelected,
+            onSelected: (_) => _onCategoryFilterChanged(cat.key),
+            backgroundColor: ThemeTokens.surfaceRaised,
+            selectedColor: ThemeTokens.neonBlue.withValues(alpha: 0.2),
+            labelStyle: TextStyle(
+              color: isSelected ? ThemeTokens.neonBlue : ThemeTokens.textMuted,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+            ),
+            side: isSelected
+                ? const BorderSide(color: ThemeTokens.neonBlue)
+                : BorderSide.none,
+          );
+        },
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // ⚡ Bolt Optimization: Use select to only watch relevant state fields.
@@ -84,7 +208,55 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
     );
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Specs')),
+      appBar: AppBar(
+        title: const Text('Specs'),
+        actions: [
+          if (s.items.isNotEmpty)
+            IconButton(
+              icon: const Icon(Icons.copy_all),
+              tooltip: 'Copy all visible specs',
+              onPressed: _copyAllSpecs,
+            ),
+          if (widget.vehicle != null)
+            Consumer(
+              builder: (context, ref, child) {
+                final isComparing = ref
+                    .watch(comparisonProvider)
+                    .contains(widget.vehicle!.id);
+                return IconButton(
+                  icon: Icon(
+                    isComparing ? Icons.compare_arrows : Icons.add_chart,
+                    color: isComparing ? ThemeTokens.neonBlue : null,
+                  ),
+                  tooltip: isComparing
+                      ? 'Remove from Comparison'
+                      : 'Add to Comparison',
+                  onPressed: () {
+                    if (isComparing) {
+                      ref
+                          .read(comparisonProvider.notifier)
+                          .remove(widget.vehicle!.id);
+                    } else {
+                      ref
+                          .read(comparisonProvider.notifier)
+                          .add(widget.vehicle!);
+                    }
+                  },
+                );
+              },
+            ),
+        ],
+      ),
+      floatingActionButton: _showScrollToTop
+          ? FloatingActionButton(
+              onPressed: _scrollToTop,
+              mini: true,
+              backgroundColor: ThemeTokens.surfaceRaised,
+              foregroundColor: ThemeTokens.neonBlue,
+              child: const Icon(Icons.keyboard_arrow_up),
+            )
+          : null,
+      bottomNavigationBar: _buildComparisonTray(),
       body: Column(
         children: [
           Padding(
@@ -112,6 +284,8 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
               onChanged: _onSearchChanged,
             ),
           ),
+          _buildCategoryFilter(),
+          if (widget.categories == null) const SizedBox(height: 8),
           Expanded(
             child: s.isLoadingInitial
                 ? const Center(child: CircularProgressIndicator())
@@ -224,6 +398,32 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                                   ],
                                 ),
                                 actions: [
+                                  TextButton.icon(
+                                    onPressed: () async {
+                                      await Clipboard.setData(
+                                        ClipboardData(text: spec.body),
+                                      );
+                                      if (context.mounted) {
+                                        Navigator.pop(context);
+                                        ScaffoldMessenger.of(
+                                          context,
+                                        ).showSnackBar(
+                                          const SnackBar(
+                                            content: Text(
+                                              'Copied to clipboard',
+                                            ),
+                                            behavior: SnackBarBehavior.floating,
+                                            duration: Duration(seconds: 2),
+                                          ),
+                                        );
+                                      }
+                                    },
+                                    icon: const Icon(Icons.copy, size: 18),
+                                    label: const Text('Copy'),
+                                    style: TextButton.styleFrom(
+                                      foregroundColor: ThemeTokens.neonBlue,
+                                    ),
+                                  ),
                                   TextButton(
                                     onPressed: () => Navigator.pop(context),
                                     child: const Text(
@@ -278,6 +478,30 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
           ),
         ],
       ),
+    );
+  }
+
+  Widget? _buildComparisonTray() {
+    return Consumer(
+      builder: (context, ref, child) {
+        final state = ref.watch(comparisonProvider);
+        if (state.vehicles.isEmpty) return const SizedBox.shrink();
+
+        return Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: FloatingActionButton.extended(
+            heroTag: 'comparison_tray',
+            onPressed: () => context.push('/comparison'),
+            backgroundColor: ThemeTokens.surfaceRaised,
+            foregroundColor: ThemeTokens.neonBlue,
+            icon: Badge(
+              label: Text(state.vehicles.length.toString()),
+              child: const Icon(Icons.compare_arrows),
+            ),
+            label: const Text('Compare'),
+          ),
+        );
+      },
     );
   }
 }
