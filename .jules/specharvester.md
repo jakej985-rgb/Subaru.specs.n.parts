@@ -15,3 +15,7 @@
 ## 2026-01-08 - STI 6MT Drain Plug Torque & Gasket Variance
 **Learning:** The Subaru 6MT (TY856) drain plug torque specification is heavily dependent on the gasket type. Aluminum gaskets (silver) require a lower torque of **32.5 ft-lbs (44 Nm)**, while Copper/Metal gaskets (black/copper) require **51.6 ft-lbs (70 Nm)**. Mistaking these can lead to leaks or stripped threads. Early STIs (2004-2007) may use either depending on the specific maintenance kit used.
 **Action:** Created `s_torque_trans_drain_sti_6mt` with explicit notes distinguishing the torque values based on gasket type, ensuring safety for all 6MT owners.
+
+## 2026-01-10 - VB WRX Brake Caliper Confusion
+**Learning:** The 2022+ WRX (VB) uses 316mm front rotors on most trims (Base/Premium/Limited/GT), similar in size to the old "Subaru 4-Pot" brakes or even the 2004 STI Brembos (326mm is close), but the caliper is a **2-piston floating** design, not a 4-piston fixed caliper. Previous data conflated these.
+**Action:** Added specific specs for VB WRX Front/Rear Rotors and Calipers (`s_brake_front_rotor_wrx_vb`, etc.) and clarified the `s_brake_4pot_front` entry to explicitly exclude the 2022+ WRX to prevent user confusion.
