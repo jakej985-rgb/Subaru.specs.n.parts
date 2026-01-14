@@ -38,8 +38,8 @@ jobs:
       - name: Analyze code
         run: flutter analyze
 
-      //- name: Check seed sync
-        run: python3 tool/seed/sync_fitment_csv_to_specs_json.py --check
+      #//- name: Check seed sync
+        run: python3 tool/seed/sync_fitment_csv_to_specs_json.py --check//#
 
       - name: Run tests
         run: flutter test -r expanded -v
