@@ -27,6 +27,7 @@
 *   **Role:** Data Integrity / Synchronization.
 *   **Entry:** Command line (Python).
 *   **Used By:** CI (GitHub Actions) to verify that generated JSON specs match source CSVs (if applicable).
+*   **Note:** `scripts/` folder contains older python scripts that appear unused.
 
 ## ⚙️ CI Workflows
 

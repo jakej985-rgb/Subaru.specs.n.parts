@@ -1,6 +1,7 @@
 # Unused File Candidates 🗑️
 
-This list contains files that appear to be unused based on static analysis (grep, import checks, CI config review).
+This list contains **tracked** files that appear to be unused based on static analysis.
+*Note: Generated/Ignored files (like `build/` or `.g.dart`) are excluded from this list.*
 
 **Recommended Action:** Move to a `legacy/` folder or delete after final verification.
 
@@ -18,7 +19,6 @@ This list contains files that appear to be unused based on static analysis (grep
     *   Not referenced in `.github/workflows/flutter-android.yml`.
     *   Not called by `tool/seed/sync_fitment_csv_to_specs_json.py`.
     *   `grep` search in `lib/` and `tool/` returns 0 results.
-    *   These appear to be one-off data generation scripts used early in development.
 *   **Recommendation:** Archive or Delete.
 
 ## 2. Preview Files (`lib/previews/`)
@@ -37,14 +37,13 @@ This list contains files that appear to be unused based on static analysis (grep
     *   Not imported in `lib/main.dart` or `lib/app.dart`.
     *   Not registered in `lib/router/app_router.dart`.
     *   `grep` search for `package:specsnparts/previews` returns 0 results in `lib/`.
-    *   These likely belonged to a Widgetbook or Storyboard implementation that is no longer active.
-*   **Recommendation:** Verify if a "Storyboard" entry point exists (checked: none found). If not, safe to remove.
+*   **Recommendation:** Verify if a "Storyboard" entry point exists. If not, safe to remove.
 
 ## 3. Tooling Tests (Partial)
 *   **Files:**
     *   `tool/seed/test_sync_fitment.py`
 *   **Confidence:** **8/10**
 *   **Evidence:**
-    *   Not called in `.github/workflows/flutter-android.yml` (only `sync_fitment_csv_to_specs_json.py` is called).
-    *   Might be useful for local testing of the python script, but not part of the automated pipeline.
-*   **Recommendation:** Keep as a dev utility, but mark as "Manual run only".
+    *   Not called in `.github/workflows/flutter-android.yml`.
+    *   Used for manual testing of `sync_fitment_csv_to_specs_json.py`.
+*   **Recommendation:** Keep as a dev utility (manual run only).

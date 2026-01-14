@@ -11,6 +11,7 @@
     ```bash
     dart run build_runner build --delete-conflicting-outputs
     ```
+    *This generates `.g.dart` files required for the database and state management.*
 
 3.  **Start the App:**
     ```bash
@@ -44,8 +45,8 @@
 ### 3. Adding New Specs
 *   **Location:** `assets/seed/specs/`
 *   **Action:** Create or edit a `.json` file (e.g., `fluids.json`).
-*   **Format:** Must strictly follow the existing JSON schema (see `assets/seed/README.md` if available, or mimic existing entries).
-*   **Apply:** Restart the app. `SeedRunner` detects changes (via `version` or hash) and updates the DB.
+*   **Format:** Must strictly follow the existing JSON schema.
+*   **Apply:** Restart the app. `SeedRunner` detects changes and updates the DB.
 
 ## 🛠️ Common Commands
 
@@ -55,3 +56,7 @@
 | **Run Tests** | `flutter test` |
 | **Format Code** | `dart format .` |
 | **Check Seed Sync** | `python3 tool/seed/sync_fitment_csv_to_specs_json.py --check` |
+
+## 📁 Ignored Folders
+*   `build/`: Compiled artifacts.
+*   `projects/repo_scribe/artifacts/GENERATED_AND_IGNORED_FOLDERS.md`: [Read More](./GENERATED_AND_IGNORED_FOLDERS.md)
