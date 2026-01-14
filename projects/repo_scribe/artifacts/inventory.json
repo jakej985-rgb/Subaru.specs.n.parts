@@ -1,0 +1,4712 @@
+[
+  {
+    "path": ".agent",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".agent/rules",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".agent/rules/bolt.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".agent/rules/bug-eater.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".agent/rules/lumen.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".agent/rules/model-warden.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".agent/rules/previewsentry.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".agent/rules/repojanitor.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".agent/rules/spec-havester.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".agent/rules/test-forge.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".github",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".github/workflows",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "CI",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".github/workflows/flutter-android.yml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "CI",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".gitignore",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/bolt.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/bug-eater.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/idea-smith.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/model-warden.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/palette.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/sentinel.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/spec-keeper.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/specauditor.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/specharvester.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/test-forge.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".jules/workflowwrench.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".metadata",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".vscode",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": ".vscode/launch.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "AGENTS.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/AGENTS.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/Bolt\u26a1\ufe0f.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/Bug Eater\ud83d\udc1b.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/CompileMedic.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/Data Smith.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/DocScribe.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/FluidsYMMTFitmentWriter \ud83e\uddea.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/Idea Smith \ud83d\udca1\ud83d\udee0\ufe0f .md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/Lumen.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/MODEL WARDEN \ud83d\uddc2\ufe0f\ud83d\ude97.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/OEM xref.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/PreviewSentry.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/RepoJanitor.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/Schema Mechanic.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/ScopeScribe\ud83e\udded\ud83d\udcdd.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/Search Tuner.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/Spec Keeper \ud83d\udcda\ud83d\udd27 .md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/SpecAuditor.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/SpecHarvester.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/Swap Oracle.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/TEST FORGE\ud83e\uddea\ud83e\ude7a.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/TorqueSaga.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/UX Route Keeper.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/VinWizard.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/Work Flow Wrench.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/WorkFlowMedic.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Agents - Jules/fitment guard.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/AGENTS.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Antigravity",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Antigravity/Bolt\u26a1\ufe0f.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Antigravity/Bug Eater\ud83d\udc1b.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Antigravity/Idea Smith \ud83d\udca1\ud83d\udee0\ufe0f .md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Antigravity/MODEL WARDEN \ud83d\uddc2\ufe0f\ud83d\ude97.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Antigravity/Spec Keeper \ud83d\udcda\ud83d\udd27 .md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Antigravity/TEST FORGE\ud83e\uddea\ud83e\ude7a.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/AGENTS.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/Bolt\u26a1\ufe0f.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/Bug Eater\ud83d\udc1b.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/Data Smith.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/DocScribe.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/Idea Smith \ud83d\udca1\ud83d\udee0\ufe0f .md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/MODEL WARDEN \ud83d\uddc2\ufe0f\ud83d\ude97.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/OEM xref.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/Schema Mechanic.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/Search Tuner.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/Seed Janitor.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/Spec Keeper \ud83d\udcda\ud83d\udd27 .md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/Swap Oracle.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/TEST FORGE\ud83e\uddea\ud83e\ude7a.md",
+    "kind": "file",
+    "status": "untracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/TorqueSaga.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/UX Route Keeper.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/VinWizard.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/Work Flow Wrench.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/YMMT UI Bridge.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/Agents - Jules/fitment guard.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/README.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Project overview and documentation",
+    "confidence": 10,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-ascent-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-baja-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-brat-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-brz-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-crosstrek-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-forester-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-gl-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-impreza-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-justy-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-legacy-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-outback-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-solterra-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-sti-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-svx-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-tribeca-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-wrx-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/coverage/subaru-xt-usdm-coverage.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/deps",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/deps/dependency_update_report.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/impreza_wrx_sti_1993_2007_master.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "Docs/impreza_wrx_sti_1993_2007_seed.csv",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "LICENSE",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "README.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Project overview and documentation",
+    "confidence": 10,
+    "notes": ""
+  },
+  {
+    "path": "analysis_options.yaml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/.gitignore",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/build.gradle.kts",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/debug",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/debug/AndroidManifest.xml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/AndroidManifest.xml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/kotlin",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/kotlin/com",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/kotlin/com/subaruparts",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/kotlin/com/subaruparts/specsnparts",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/kotlin/com/subaruparts/specsnparts/MainActivity.kt",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/drawable",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/drawable-v21",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/drawable-v21/launch_background.xml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/drawable/launch_background.xml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/mipmap-hdpi",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/mipmap-mdpi",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/mipmap-xhdpi",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/mipmap-xxhdpi",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/mipmap-xxxhdpi",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/values",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/values-night",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/values-night/styles.xml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/values/styles.xml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/xml",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/main/res/xml/network_security_config.xml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/profile",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/app/src/profile/AndroidManifest.xml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/build.gradle.kts",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/gradle",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/gradle.properties",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/gradle/wrapper",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/gradle/wrapper/gradle-wrapper.properties",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "android/settings.gradle.kts",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "artifacts",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "artifacts/COMPARE_SCOPE.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "artifacts/IDEASMITH_SCOPE.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "artifacts/VINWIZARD_SCOPE.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "artifacts/lumen_coverage_report.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "artifacts/lumen_resolution_report.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "artifacts/lumen_resolution_v2_report.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "artifacts/lumen_wide_report.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "artifacts/testwarning.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/parts.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/alignment.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/battery.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/brakes.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/bulbs.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/coolant.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/cooling.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/differential.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/dimensions.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/engine.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/engines.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/filters.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/fitment",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/fitment/bulbs.csv",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/fitment/engines.csv",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/fitment/fluids.csv",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/fitment/maintenance.csv",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/fitment/torque_specs.csv",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/fluids.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/fuel.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/index.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/maintenance.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/maintenance_intervals.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/oil.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/spark_plugs.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/swap_rules.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/tires.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/torque.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/torque_specs.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/transmission.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/specs/wheels.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Specification seed data",
+    "confidence": 9,
+    "notes": ""
+  },
+  {
+    "path": "assets/seed/vehicles.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/textures",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "assets/textures/carbon.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "build",
+    "kind": "dir",
+    "status": "ignored",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "devtools_options.yaml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/.gitignore",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Flutter",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Flutter/AppFrameworkInfo.plist",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Flutter/Debug.xcconfig",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Flutter/Release.xcconfig",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcodeproj",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcodeproj/project.pbxproj",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcodeproj/project.xcworkspace",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcodeproj/xcshareddata",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcodeproj/xcshareddata/xcschemes",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcworkspace",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcworkspace/contents.xcworkspacedata",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcworkspace/xcshareddata",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/AppDelegate.swift",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "asset",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "asset",
+    "purpose": "Project overview and documentation",
+    "confidence": 10,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Base.lproj",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Base.lproj/LaunchScreen.storyboard",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Base.lproj/Main.storyboard",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Info.plist",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/Runner/Runner-Bridging-Header.h",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/RunnerTests",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "ios/RunnerTests/RunnerTests.swift",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/app.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "core",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db/app_db.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db/app_db.g.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "generated",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db/dao",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db/dao/parts_dao.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db/dao/parts_dao.g.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "generated",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db/dao/specs_dao.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db/dao/specs_dao.g.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "generated",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db/dao/vehicles_dao.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db/dao/vehicles_dao.g.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "generated",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/db/tables.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/seed",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/data/seed/seed_runner.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "data",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/domain",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/domain/fitment",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/domain/fitment/fitment_key.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/browse_engine",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/browse_engine/engine_flow_page.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/browse_ymm",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/browse_ymm/ymm_flow_page.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/comparison",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/comparison/comparison_page.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/comparison/comparison_provider.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "state",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/global_search",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/global_search/global_search_overlay.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/global_search/global_search_provider.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "state",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/home",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/home/garage_providers.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "state",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/home/garage_view.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/home/home_page.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/part_lookup",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/part_lookup/part_lookup_page.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/part_lookup/part_search_provider.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "state",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/part_lookup/widgets",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/part_lookup/widgets/part_dialog.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/settings",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/settings/settings_page.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/specs",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/specs/spec_list_controller.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/specs/spec_list_page.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/specs_by_category",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/specs_by_category/category_year_picker_page.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/specs_by_category/category_year_results_controller.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/specs_by_category/category_year_results_page.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/specs_by_category/spec_category_keys.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/specs_by_category/specs_by_category_hub_page.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/vin_wizard",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/features/vin_wizard/vin_decoder.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/main.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "core",
+    "purpose": "App entry point",
+    "confidence": 10,
+    "notes": ""
+  },
+  {
+    "path": "lib/previews",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/previews/browse_previews.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/previews/components_previews.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/previews/fitment_previews.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/previews/home_previews.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/previews/part_lookup_previews.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/previews/preview_wrappers.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/previews/settings_previews.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/previews/specs_by_category_previews.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/previews/specs_previews.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/router",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "routing",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/router/app_router.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "routing",
+    "purpose": "Routing configuration",
+    "confidence": 10,
+    "notes": ""
+  },
+  {
+    "path": "lib/theme",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/theme/app_theme.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/theme/neon_shadows.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/theme/tokens.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "app",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/theme/widgets",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/theme/widgets/carbon_surface.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/theme/widgets/neon_chip.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/theme/widgets/neon_divider.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/theme/widgets/neon_plate.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/theme/widgets/trim_header_card.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/widgets",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/widgets/adaptive_scroll.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "lib/widgets/home_menu_card.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "ui",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/artifacts",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/artifacts/ENTRYPOINTS_AND_CALLS.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/artifacts/FILE_INDEX.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/artifacts/FULL_REPO_INVENTORY.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/artifacts/GENERATED_AND_IGNORED_FOLDERS.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/artifacts/ONBOARDING_CHEATSHEET.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/artifacts/UNUSED_FILE_CANDIDATES.md",
+    "kind": "file",
+    "status": "tracked",
+    "type": "docs",
+    "role": "docs",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/artifacts/inventory.csv",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/artifacts/inventory.json",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/docs_generator.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "projects/repo_scribe/inventory_generator.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "pubspec.lock",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "pubspec.yaml",
+    "kind": "file",
+    "status": "tracked",
+    "type": "config",
+    "role": "config",
+    "purpose": "Dart package dependencies and configuration",
+    "confidence": 10,
+    "notes": ""
+  },
+  {
+    "path": "scripts",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "scripts/generate_engines_csv.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "tooling",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "scripts/generate_fluids_csv_v2.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "tooling",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "scripts/generate_jdm_bulbs.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "tooling",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "scripts/generate_jdm_vehicles.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "tooling",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "scripts/generate_torque_specs_csv.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "tooling",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "scripts/lumen_deep_resolver_v2.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "tooling",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "scripts/validate_engines_csv.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "tooling",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/db",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/db/dao",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/db/dao/specs_dao_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/db/dao/vehicles_dao_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/brz_2024_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/brz_full_history_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/forester_classic_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/forester_gen5_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/forester_modern_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/impreza_gen1_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/impreza_gen2_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/legacy_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/outback_gen4_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/outback_modern_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/outback_separation_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/seed_parsing_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_baja_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_comprehensive_audit_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_forester_gen1_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_forester_gen2_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_forester_gen3_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_format_audit_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_impreza_gd_fluids_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_impreza_gen1_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_impreza_gen2_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_impreza_gen3_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_legacy_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_legacy_gen2_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_legacy_gen3_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_legacy_gen4_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_modern_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_outback_gen3_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_outback_gen4_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_sti_2004_wheels_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_subaru_classic_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_wrx_gen2_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/specs_wrx_sti_gen2_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/split_era_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/vehicles_validation_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/data/seed/wrx_2024_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/db_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/browse_ymm",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/browse_ymm/browse_ymm_race_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/browse_ymm/ymm_flow_page_semantics_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/browse_ymm/ymm_flow_page_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/global_search",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/global_search/global_search_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/home",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/home/garage_providers_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/home/home_scroll_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/part_lookup",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/part_lookup/part_lookup_clear_button_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/part_lookup/part_lookup_debounce_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/part_lookup/part_lookup_empty_state_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/part_lookup/part_lookup_security_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/part_lookup/part_lookup_suggestions_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/part_lookup/part_search_provider_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/specs",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/specs/brz_2022_specs_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/specs/coverage_audit_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/specs/spec_list_debounce_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/specs/spec_list_empty_state_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/specs/spec_list_interaction_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/specs/spec_list_pagination_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/specs/specs_coverage_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/specs_by_category",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/specs_by_category/category_results_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/vin_wizard",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/features/vin_wizard/vin_wizard_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/seed_fixtures",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/seed_fixtures/fitment",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/seed_fixtures/fitment/bulbs.small.csv",
+    "kind": "file",
+    "status": "tracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/smoke_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/specs_applicability_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/tool",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/tool/seed_sync_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/widget_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/widgets",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "test",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/widgets/app_initialization_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "test/widgets/home_menu_card_semantics_test.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "test",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "tool",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "tool/seed",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "tooling",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "tool/seed/sync_fitment_csv_to_specs_json.dart",
+    "kind": "file",
+    "status": "tracked",
+    "type": "dart",
+    "role": "tooling",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "tool/seed/sync_fitment_csv_to_specs_json.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "tooling",
+    "purpose": "Syncs CSV fitment data to JSON specs (CI check)",
+    "confidence": 10,
+    "notes": "Critical CI script"
+  },
+  {
+    "path": "tool/seed/test_sync_fitment.py",
+    "kind": "file",
+    "status": "tracked",
+    "type": "script",
+    "role": "tooling",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/.gitignore",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/CMakeLists.txt",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/flutter",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/flutter/CMakeLists.txt",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/flutter/generated_plugin_registrant.cc",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/flutter/generated_plugin_registrant.h",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/flutter/generated_plugins.cmake",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/CMakeLists.txt",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/Runner.rc",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/flutter_window.cpp",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/flutter_window.h",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/main.cpp",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/resource.h",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/resources",
+    "kind": "dir",
+    "status": "untracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/resources/app_icon.ico",
+    "kind": "file",
+    "status": "tracked",
+    "type": "asset",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/runner.exe.manifest",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/utils.cpp",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/utils.h",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/win32_window.cpp",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  },
+  {
+    "path": "windows/runner/win32_window.h",
+    "kind": "file",
+    "status": "tracked",
+    "type": "unknown",
+    "role": "config",
+    "purpose": "Unknown; needs review",
+    "confidence": 5,
+    "notes": ""
+  }
+]
