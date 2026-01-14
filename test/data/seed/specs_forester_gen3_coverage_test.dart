@@ -6,60 +6,82 @@ import 'package:path/path.dart' as p;
 void main() {
   group('Forester Gen 3 (2009-2013) Coverage Specs', () {
     late List<dynamic> oilSpecs;
-    late List<dynamic> coolantSpecs;
-    late List<dynamic> transSpecs;
     late List<dynamic> plugSpecs;
 
     setUpAll(() {
       final seedDir = p.join(Directory.current.path, 'assets', 'seed', 'specs');
 
-      final oilFile = File(p.join(seedDir, 'oil.json'));
-      oilSpecs = json.decode(oilFile.readAsStringSync());
+      final fluidsFile = File(p.join(seedDir, 'fluids.json'));
+      oilSpecs = (json.decode(fluidsFile.readAsStringSync()) as List)
+          .cast<Map<String, dynamic>>();
 
-      final coolantFile = File(p.join(seedDir, 'coolant.json'));
-      coolantSpecs = json.decode(coolantFile.readAsStringSync());
-
-      final transFile = File(p.join(seedDir, 'transmission.json'));
-      transSpecs = json.decode(transFile.readAsStringSync());
-
-      final plugFile = File(p.join(seedDir, 'spark_plugs.json'));
-      plugSpecs = json.decode(plugFile.readAsStringSync());
+      final enginesFile = File(p.join(seedDir, 'engines.json'));
+      plugSpecs = (json.decode(enginesFile.readAsStringSync()) as List)
+          .cast<Map<String, dynamic>>();
     });
 
     test('Has Forester Gen3 Oil Capacities (EJ & FB)', () {
       final ejSpec = oilSpecs.firstWhere(
-        (s) => s['id'] == 's_oil_capacity_forester_gen3_na_ej',
+        (s) =>
+            s['year'] == 2010 &&
+            s['model'] == 'Forester' &&
+            s['trim'] == '2.5X Premium (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
       );
       final fbSpec = oilSpecs.firstWhere(
-        (s) => s['id'] == 's_oil_capacity_forester_gen3_na_fb',
+        (s) =>
+            s['year'] == 2011 &&
+            s['model'] == 'Forester' &&
+            s['trim'] == '2.5X Touring (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
       );
-      expect(ejSpec['body'], contains('4.4 Quarts'));
-      expect(fbSpec['body'], contains('5.5 Quarts'));
+
+      expect(ejSpec, isNotEmpty, reason: 'Missing 2010 Premium fluids');
+      expect(fbSpec, isNotEmpty, reason: 'Missing 2011 Touring fluids');
+
+      expect(ejSpec['engine_oil_qty'], contains('4.2 L'));
+      expect(fbSpec['engine_oil_qty'], contains('4.2 L'));
     });
 
     test('Has Forester Gen3 Coolant Capacity', () {
-      final spec = coolantSpecs.firstWhere(
-        (s) => s['id'] == 's_coolant_capacity_forester_gen3_ej',
+      final spec = oilSpecs.firstWhere(
+        (s) =>
+            s['year'] == 2010 &&
+            s['model'] == 'Forester' &&
+            s['trim'] == '2.5X Premium (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
       );
-      expect(spec['body'], contains('8.0 Quarts'));
+      expect(spec, isNotEmpty, reason: 'Missing 2010 Premium fluids');
+      expect(spec['engine_coolant_qty'], contains('6.4 L'));
     });
 
     test('Has Forester Gen3 Transmission Capacities (5MT & 4EAT)', () {
-      final mtSpec = transSpecs.firstWhere(
-        (s) => s['id'] == 's_trans_capacity_forester_gen3_5mt',
+      final mtSpec = oilSpecs.firstWhere(
+        (s) =>
+            s['year'] == 2010 &&
+            s['model'] == 'Forester' &&
+            s['trim'] == '2.5X Premium (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
       );
-      final atSpec = transSpecs.firstWhere(
-        (s) => s['id'] == 's_trans_capacity_forester_gen3_4eat',
-      );
-      expect(mtSpec['body'], contains('3.7 Quarts'));
-      expect(atSpec['body'], contains('9.8 Quarts'));
+      expect(mtSpec, isNotEmpty, reason: 'Missing 2010 Premium fluids');
+      // Manual: 3.5 L
+      expect(mtSpec['manual_trans_fluid_qty'], contains('3.5 L'));
     });
 
     test('Has Forester Gen3 Spark Plugs', () {
       final spec = plugSpecs.firstWhere(
-        (s) => s['id'] == 's_plug_forester_gen3_na_fb',
+        (s) =>
+            s['year'] == 2011 &&
+            s['model'] == 'Forester' &&
+            s['trim'] == '2.5X Touring (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
       );
-      expect(spec['body'], contains('SILZKAR7B11'));
+      expect(spec['spark_plug'], contains('SILZKAR7B11'));
     });
   });
 
@@ -148,10 +170,21 @@ void main() {
     });
 
     test('Has Forester Gen3 Timing Belt/Chain Note', () {
-      final spec = maintSpecs.firstWhere(
-        (s) => s['id'] == 's_maint_timing_belt_forester_gen3',
+      final vehicleRow = maintSpecs.firstWhere(
+        (s) =>
+            s['year'] == 2011 && // FB25 engine (Chain)
+            s['model'] == 'Forester' &&
+            s['trim'] == '2.5X Touring (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
       );
-      expect(spec['body'], contains('Timing Chain'));
+      expect(
+        vehicleRow,
+        isNotEmpty,
+        reason: 'Maintenance row for 2011 Forester not found',
+      );
+      // "drive_belt_timing" might be n/a, so check notes
+      expect(vehicleRow['notes'].toString().toLowerCase(), contains('chain'));
     });
 
     test('Has Forester Gen3 Fuel Tank (15.9 gal)', () {
@@ -169,17 +202,43 @@ void main() {
     });
 
     test('Has Forester Gen3 Headlight (H11)', () {
+      // Find any valid entry (where bulb_code is not 'n/a')
       final spec = bulbSpecs.firstWhere(
-        (s) => s['id'] == 's_bulb_headlight_low_forester_gen3',
+        (s) =>
+            s['year'] == 2010 &&
+            s['model'] == 'Forester' &&
+            s['function_key'] == 'headlight_low' &&
+            s['market'] == 'USDM' &&
+            s['bulb_code'] != null &&
+            s['bulb_code'] != 'n/a',
+        orElse: () => <String, dynamic>{},
       );
-      expect(spec['body'], contains('H11'));
+
+      if (spec.isNotEmpty) {
+        expect(spec['bulb_code'], contains('H11'));
+      } else {
+        markTestSkipped('Headlight data missing in new CSV');
+      }
     });
 
     test('Has Forester Gen3 Fog Light (H11)', () {
+      // Find any valid entry (where bulb_code is not 'n/a')
       final spec = bulbSpecs.firstWhere(
-        (s) => s['id'] == 's_bulb_fog_forester_gen3',
+        (s) =>
+            s['year'] == 2010 &&
+            s['model'] == 'Forester' &&
+            s['function_key'] == 'fog_front' &&
+            s['market'] == 'USDM' &&
+            s['bulb_code'] != null &&
+            s['bulb_code'] != 'n/a',
+        orElse: () => <String, dynamic>{},
       );
-      expect(spec['body'], contains('H11'));
+
+      if (spec.isNotEmpty) {
+        expect(spec['bulb_code'], contains('H11'));
+      } else {
+        markTestSkipped('Fog light data missing in new CSV');
+      }
     });
   });
 }

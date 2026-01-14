@@ -432,5 +432,23 @@
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
+  },
+  {
+    "id": "s_tire_size_forester_gen2",
+    "category": "Tires",
+    "title": "Stock Tire Size (Forester 2003-2008)",
+    "body": "215/60R16 (Base/X/XS/XT). 17\" Optional.",
+    "tags": "2003,2004,2005,2006,2007,2008,forester,size,tires",
+    "updatedAt": "2026-01-13T00:00:00Z",
+    "verified": true
+  },
+  {
+    "id": "s_tire_size_impreza_gen1_base",
+    "category": "Tires",
+    "title": "Stock Tire Size (Impreza 1993-2001 L)",
+    "body": "175/70R14 or 185/70R14.",
+    "tags": "1993,1994,1995,1996,1997,1998,1999,2000,2001,impreza,size,tires,l,base",
+    "updatedAt": "2026-01-13T00:00:00Z",
+    "verified": true
   }
 ]

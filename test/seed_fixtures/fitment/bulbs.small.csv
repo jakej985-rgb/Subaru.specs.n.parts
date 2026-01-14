@@ -1,0 +1,4 @@
+year,make,model,trim,body,market,function_key,location_hint,tech,bulb_code,base,qty,serviceable,notes,source_1,source_2,confidence
+2024,Subaru,Crosstrek,Limited,SUV,USDM,headlight_low,Headlamp Housing,led,n/a,n/a,2,false,OEM LED,Owner's Manual,,high
+2024,Subaru,Crosstrek,Limited,SUV,USDM,headlight_high,Headlamp Housing,led,n/a,n/a,2,false,OEM LED,Owner's Manual,,high
+2024,Subaru,Crosstrek,Limited,SUV,USDM,map,Front Overhead Console,bulb,168,W2.1x9.5d,2,true,Map light,Owner's Manual,,medium

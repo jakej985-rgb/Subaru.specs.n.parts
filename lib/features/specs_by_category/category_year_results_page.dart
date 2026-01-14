@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:specsnparts/features/specs_by_category/category_year_results_controller.dart';
@@ -27,7 +28,20 @@ class CategoryYearResultsPage extends ConsumerWidget {
     final title = cat?.title ?? 'Results';
 
     return Scaffold(
-      appBar: AppBar(title: Text('$title - $year')),
+      appBar: AppBar(
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (cat != null) ...[
+              Icon(cat.icon, size: 20),
+              const SizedBox(width: 8),
+            ],
+            Flexible(
+              child: Text('$title - $year', overflow: TextOverflow.ellipsis),
+            ),
+          ],
+        ),
+      ),
       body: _buildBody(context, state),
     );
   }
@@ -134,33 +148,48 @@ class CategoryYearResultsPage extends ConsumerWidget {
           ...result.specs.map(
             (spec) => Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
-              child: CarbonSurface(
-                baseColor: ThemeTokens.surface,
-                opacity: 0.05,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 12,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      spec.title,
-                      style: const TextStyle(
-                        color: ThemeTokens.textSecondary,
-                        fontSize: 12,
+              child: InkWell(
+                onLongPress: () async {
+                  await Clipboard.setData(ClipboardData(text: spec.body));
+                  if (context.mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Copied: ${spec.body}'),
+                        behavior: SnackBarBehavior.floating,
+                        duration: const Duration(seconds: 2),
                       ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      spec.body,
-                      style: const TextStyle(
-                        color: ThemeTokens.textPrimary,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
+                    );
+                  }
+                },
+                borderRadius: BorderRadius.circular(8),
+                child: CarbonSurface(
+                  baseColor: ThemeTokens.surface,
+                  opacity: 0.05,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 12,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        spec.title,
+                        style: const TextStyle(
+                          color: ThemeTokens.textSecondary,
+                          fontSize: 12,
+                        ),
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 4),
+                      Text(
+                        spec.body,
+                        style: const TextStyle(
+                          color: ThemeTokens.textPrimary,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

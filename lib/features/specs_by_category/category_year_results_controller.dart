@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 
 import 'package:specsnparts/domain/fitment/fitment_key.dart';
@@ -31,24 +32,25 @@ class VehicleResult {
 }
 
 final categoryYearResultsControllerProvider =
-    StateNotifierProvider.family<
+    NotifierProvider.family<
       CategoryYearResultsController,
       YearResultsState,
       (String, int)
-    >((ref, args) {
-      final (categoryKey, year) = args;
-      return CategoryYearResultsController(ref, categoryKey, year);
-    });
+    >(CategoryYearResultsController.new);
 
-class CategoryYearResultsController extends StateNotifier<YearResultsState> {
-  final Ref ref;
-  final String categoryKey;
-  final int year;
+class CategoryYearResultsController extends Notifier<YearResultsState> {
+  final (String, int) arg;
 
-  CategoryYearResultsController(this.ref, this.categoryKey, this.year)
-    : super(YearResultsState(isLoading: true)) {
-    loadData();
+  CategoryYearResultsController(this.arg);
+
+  @override
+  YearResultsState build() {
+    Future.microtask(() => loadData());
+    return YearResultsState(isLoading: true);
   }
+
+  String get categoryKey => arg.$1;
+  int get year => arg.$2;
 
   Future<void> loadData() async {
     try {
@@ -62,28 +64,22 @@ class CategoryYearResultsController extends StateNotifier<YearResultsState> {
         return;
       }
 
-      // 1. Fetch Values
       final vehicles = await db.vehiclesDao.getVehiclesByYear(year);
       if (vehicles.isEmpty) {
-        state = YearResultsState(groups: []); // Empty state handled by UI
+        state = YearResultsState(groups: []);
         return;
       }
 
-      // 2. Fetch Specs for Category (all years/models to filter in memory)
-      // Optimization: Could filter by Year tag in SQL if we trust tag format consistently.
-      // For now, fetch all for category is safest.
       final allSpecs = await db.specsDao.getSpecsByCategoriesResult(
         cat.dataCategories,
       );
 
-      // 3. Match
       final results = <VehicleResult>[];
       for (final v in vehicles) {
         final specs = _matchSpecs(v, allSpecs);
         results.add(VehicleResult(vehicle: v, specs: specs));
       }
 
-      // 4. Group by Model
       final Map<String, List<VehicleResult>> grouped = {};
       for (final r in results) {
         final model = r.vehicle.model;
@@ -94,7 +90,6 @@ class CategoryYearResultsController extends StateNotifier<YearResultsState> {
           .map((e) => VehicleGroup(model: e.key, results: e.value))
           .toList();
 
-      // Sort groups by Model Name
       groups.sort((a, b) => a.model.compareTo(b.model));
 
       state = YearResultsState(groups: groups);
@@ -106,16 +101,10 @@ class CategoryYearResultsController extends StateNotifier<YearResultsState> {
   List<Spec> _matchSpecs(Vehicle v, List<Spec> candidates) {
     final yearStr = v.year.toString();
     final modelNorm = FitmentKey.norm(v.model);
-    // final trimNorm = v.trim != null ? FitmentKey.norm(v.trim!) : '';
 
     return candidates.where((s) {
-      // 1. Year Match (Tag)
-      // Tags are comma separated string.
       if (!s.tags.contains(yearStr)) return false;
 
-      // 2. Model Match
-      // Check if ANY model alias is present
-      // Aliases logic from SpecsDao
       bool modelMatch = s.tags.contains(modelNorm);
       if (!modelMatch) {
         if (modelNorm.contains('wrx') && s.tags.contains('wrx')) {
@@ -127,16 +116,8 @@ class CategoryYearResultsController extends StateNotifier<YearResultsState> {
         if (modelNorm.contains('outback') && s.tags.contains('outback')) {
           modelMatch = true;
         }
-        // Add other aliases as needed
       }
       if (!modelMatch) return false;
-
-      // 3. Trim Filtering (Negative match)
-      // If spec is tagged "limited" but vehicle is "base", exclude.
-      // Logic: If tags contain any KNOWN TRIM key, check if vehicle has it.
-      // This is simplified. SpecDao has complex logic.
-      // For now, accept broad matches to avoid hiding data (better false positive than false negative?).
-      // User requested "Group by trim".
 
       return true;
     }).toList();

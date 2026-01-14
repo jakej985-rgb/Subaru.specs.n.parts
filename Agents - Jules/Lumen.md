@@ -1,206 +1,298 @@
-Agent name
+Got it — we’ll **standardize `assets/seed/specs/*.json` to the “row format” you pasted** (the one with `year/make/model/trim/body/market/function_key/...`) **AND** we’ll make the agent **auto-fill missing bulb rows** (per vehicle + per function) with `"n/a"` so the UI never has gaps.
 
-Lumen 🔦 — Exterior Lighting Spec Agent
+Below is the **reworked agent spec** (SeedBridge v2). You can paste this straight into your agent runner.
 
-Mission
+---
 
-For every vehicle entry in your seeds (year/make/model/trim/body/market), Lumen will:
+## Agent: **SeedBridge v2** 🌉
 
-Determine which exterior light functions exist (ex: low beam, high beam, DRL, fog, tail, brake, reverse, license plate, etc.).
+**Fitment CSV ➜ Specs JSON (Row Format + Bulb Completion)**
 
-Fill missing bulb spec fields (bulb type / size / base) when the light is replaceable.
+### Mission
 
-If the vehicle uses LEDs or a sealed assembly, record LED (module/assembly) and mark as non-serviceable bulb.
+Convert and sync all spec data stored as CSV fitment tables:
 
-Write results back into your repo in a consistent schema and keep tests passing.
+* **Source:** `assets/seed/specs/fitment/*.csv`
+* **Targets:** `assets/seed/specs/*.json`
 
-Canonical exterior light functions (the “truth list”)
+**Primary goal:** Every output JSON entry should match this exact **row format**:
 
-Use these exact keys everywhere (UI + seeds + DB):
+```json
+{
+  "year": 2024,
+  "make": "Subaru",
+  "model": "Levorg",
+  "trim": "STI Sport (JDM)",
+  "body": "Wagon",
+  "market": "JDM",
+  "function_key": "license_plate",
+  "location_hint": "License Plate Lamp",
+  "tech": "bulb",
+  "bulb_code": "168",
+  "base": "W2.1x9.5d",
+  "qty": 2,
+  "serviceable": true,
+  "notes": "n/a",
+  "source_1": "JDM FSM",
+  "source_2": "JDM specs",
+  "confidence": "medium"
+}
+```
 
-Front
+---
 
-headlight_low
+## Hard Rules (Non-Negotiable)
 
-headlight_high
+✅ **Do**
 
-drl
+* Keep **CSV as source-of-truth** (do not edit CSV).
+* Output JSON must be **an array of row objects** using the same keys as the CSV header.
+* Fill missing values with **`"n/a"`** consistently.
+* Deterministic output (stable sort, idempotent merge).
 
-parking_position_front
+🚫 **Do NOT**
 
-turn_front
+* Change CSV headers/structure.
+* Add new dependencies unless approved.
+* Invent new JSON shapes. **Everything becomes row objects.**
 
-marker_front_side
+---
 
-fog_front
+## Output Contract
 
-cornering_front (optional)
+For each CSV:
 
-mirror_turn (optional)
+`assets/seed/specs/fitment/<name>.csv`
+➡️ Write/overwrite:
+`assets/seed/specs/<name>.json`
 
-fender_repeater (optional)
+Examples:
 
-Rear
+* `bulbs.csv` ➜ `assets/seed/specs/bulbs.json`
+* `fluids.csv` ➜ `assets/seed/specs/fluids.json`
+* `torque.csv` ➜ `assets/seed/specs/torque.json`
 
-tail
+### Migration rule (existing JSON)
 
-brake
+If `<name>.json` exists and is **not** already an array of row objects:
 
-turn_rear
+* Create a one-time backup: `<name>.legacy.json`
+* Overwrite `<name>.json` with the row-object output generated from CSV
 
-reverse
+---
 
-rear_fog (optional, market-dependent)
+## Keying / Merge (No duplicates)
 
-marker_rear_side
+Each JSON row is uniquely identified by:
 
-third_brake
+`year|make|model|trim|body|market|secondary`
 
-license_plate
+**Secondary key selection:**
 
-Other (optional)
+* If CSV contains `function_key` → secondary = `function_key`
+* Else if CSV contains `spec_key` → secondary = `spec_key`
+* Else if CSV contains `part_key` → secondary = `part_key`
+* Else secondary = `"row"`
 
-roof_marker_clearance
+**Bulbs example key:**
+`2024|Subaru|Levorg|STI Sport (JDM)|Wagon|JDM|license_plate`
 
-bed_cargo
+Merge rule:
 
-Output data model (recommended)
+* If the key exists → update row fields from CSV
+* If it doesn’t → insert
+* Never allow two rows with the same key
 
-Create/maintain a single “long-form” lighting table (best for filtering and UI):
+---
 
-assets/seed/spec/exterior_lighting.csv
+## Field Mapping Rules
 
-Columns (minimum):
+### 1) 1:1 column mapping
 
-year,make,model,trim,body,market
+Every CSV column becomes a JSON field with the **same name**.
 
-function_key (from canonical list)
+### 2) Type rules (only where safe)
 
-location_hint (ex: “headlamp housing”, “rear combo lamp”, “bumper”, “trunk lid”)
+* `year` → integer
+* `qty` → integer if numeric, else `"n/a"` (string)
+* `serviceable` → boolean if `true/false` present; if missing → default **true** for bulbs (see below)
+* everything else → string
 
-tech = bulb|led_module|halogen_sealed|hid
+### 3) Missing values normalization
 
-bulb_code (ex: H11, 9005, 7443, 1157, W5W/T10) or blank if not serviceable
+If a cell is blank or missing:
 
-base (optional but useful: PGJ19-2, P43t, W2.1x9.5d, BA15s, etc.)
+* For **strings** → `"n/a"`
+* For **qty** → `"n/a"`
+* For **serviceable** → default:
 
-qty (usually 1 or 2; blank if unknown)
+  * bulbs: `true` (most bulbs are serviceable; unknown shouldn’t block UI)
+  * otherwise: `false` unless CSV says true
 
-serviceable = true|false
+---
 
-notes
+# Bulbs Special Rule: **Populate Missing Bulb Specs**
 
-source_1, source_2
+This is the new part you asked for.
 
-confidence = high|med|low
+### Goal
 
-Why long-form: your UI can show “All lights” and you can also generate a per-vehicle card/table easily.
+For every vehicle in the repo, ensure `assets/seed/specs/bulbs.json` includes a row for **every required bulb function**, even if the CSV doesn’t have it yet. Missing ones get `"n/a"`.
 
-Source rules (NO guessing)
+### Vehicle source
 
-Lumen must follow this source priority order:
+Use the repo’s vehicle list:
 
-Tier A (preferred)
+* **Primary:** `assets/seed/vehicles.json` (or whatever your canonical vehicle seed file is)
 
-Owner’s manual bulb replacement chart/table (best)
+For each vehicle, build:
+`year, make, model, trim, body, market`
 
-FSM lighting section or bulb chart
+If `body`/`market` are missing in vehicles seed:
 
-Tier B
-3. Subaru parts catalog diagrams / OE part listings (to infer bulb vs LED module)
-4. Reputable bulb finders (Sylvania/Philips/OSRAM) only if they list the exact trim/year
+* Attempt to infer from existing bulbs.csv rows for that same `year/make/model/trim`
+* If still unknown → `"n/a"`
 
-Tier C
-5. Forums / random pages → allowed only to resolve conflicts, never as sole source
+---
 
-Verification requirement
+## Bulb Function Catalog (required list)
 
-If confidence=high, must have Tier A OR two independent Tier B sources agreeing.
+SeedBridge must maintain a canonical function list **inside the script** (no new files required). Start with:
 
-If sources conflict, keep field blank (or unknown) and set confidence=low with a note.
+### Exterior (minimum set)
 
-How Lumen decides “what lights exist”
+* `headlight_low`
+* `headlight_high`
+* `parking_light`
+* `turn_signal_front`
+* `turn_signal_rear`
+* `side_marker_front`
+* `side_marker_rear`
+* `brake`
+* `tail`
+* `reverse`
+* `license_plate`
+* `center_high_mount_stop`
+* `fog_light`
+* `drl`
 
-For each YMMT row:
+### Interior (minimum set)
 
-Establish base config: year/make/model/trim/body/market
+* `map_light_front`
+* `dome_front`
+* `dome_rear`
+* `cargo`
+* `glove_box`
+* `vanity_mirror`
+* `door_courtesy`
+* `footwell`
 
-Determine feature presence:
+*(You can expand this list later; the script should be easy to extend.)*
 
-DRL: often standard in many years/markets, but verify (manual or trim feature list)
+---
 
-Fog: trim-dependent (Premium/Limited/etc.)
+## Placeholder row template (when missing)
 
-Rear fog: market-dependent (often not USDM)
+When a vehicle is missing a function_key, insert a row like:
 
-Mirror/fender repeaters: trim + year dependent
+```json
+{
+  "year": <year>,
+  "make": "<make>",
+  "model": "<model>",
+  "trim": "<trim>",
+  "body": "<body>",
+  "market": "<market>",
+  "function_key": "<function_key>",
+  "location_hint": "<default label>",
+  "tech": "bulb",
+  "bulb_code": "n/a",
+  "base": "n/a",
+  "qty": "n/a",
+  "serviceable": true,
+  "notes": "n/a",
+  "source_1": "n/a",
+  "source_2": "n/a",
+  "confidence": "n/a"
+}
+```
 
-If a function doesn’t exist, do not create a record (or create one with tech=none if your UI needs explicit negatives—your choice, but be consistent).
+### Default `location_hint`
 
-Normalization rules (critical)
+The script must provide a mapping `function_key -> label`, e.g.
 
-Store bulb_code in a normalized form:
+* `license_plate` → `License Plate Lamp`
+* `headlight_low` → `Low Beam Headlight`
+* etc…
 
-Examples: H11, 9005, 9012, 7443, 7440, 1156, 1157, W5W, T10, T20
+If no mapping exists: use `function_key` with underscores replaced by spaces (Title Case).
 
-If a source says “LED”, set:
+---
 
-tech=led_module, serviceable=false, bulb_code= blank
+## Sorting Rules (Deterministic)
 
-If the manual says “replace the assembly,” treat as non-serviceable:
+Sort rows by:
 
-tech=led_module (or halogen_sealed / hid if specified)
+1. `year`
+2. `make`
+3. `model`
+4. `trim`
+5. `body`
+6. `market`
+7. `function_key` (if present)
+8. fallback secondary key
 
-Repo workflow (what the agent actually does)
+---
 
-Scan seeds to find missing lighting coverage:
+## Implementation Requirements (Dart)
 
-Identify YMMT rows lacking any exterior_lighting records.
+Create:
 
-Identify missing fields (blank bulb_code, missing fog_front, etc.)
+* `tool/seed/sync_fitment_csv_to_specs_json.dart`
 
-For each missing/blank item:
+Must support:
 
-Find sources using the rules above
+* `--only bulbs` (sync one file)
+* `--dry-run` (no writes; prints summary)
+* `--strict` (fails on duplicate keys or parse errors)
 
-Extract bulb/tech and record source links
+CSV parsing:
 
-Write updates:
+* If repo already depends on a CSV parser, use it.
+* If not, implement a small quote-aware parser (no new deps).
 
-Append/update assets/seed/spec/exterior_lighting.csv
+---
 
-Run checks:
+## Tests
 
-dart format
+Add a test that:
 
-flutter test
+* Uses a tiny fixture `bulbs.csv` with 1 vehicle missing several function keys
+* Runs sync
+* Asserts `bulbs.json` contains:
 
-Any existing seed audits/coverage tests you already have
+  * the original row(s)
+  * plus placeholder rows for the missing functions
+* Asserts stable order
+* Asserts idempotency (run twice → identical output)
 
-If tests fail:
+---
 
-Fix schema issues, duplicates, or formatting—do not “disable tests”
+## Validation Commands
 
-Agent boundaries
+From repo root:
 
-✅ Do:
+* `dart format --output=none --set-exit-if-changed .`
+* `flutter analyze`
+* `flutter test -r expanded`
 
-Add notes + sources for every filled spec
+---
 
-Prefer OEM docs; cross-check before high confidence
+## Done When
 
-Keep commits small and mechanical
+✅ `assets/seed/specs/*.json` are all in the **row format**, and
+✅ `assets/seed/specs/bulbs.json` contains **complete function coverage** per vehicle with `"n/a"` placeholders.
 
-⚠️ Ask first (or default to safe choice if asking isn’t possible):
+---
 
-Adding new dependencies
-
-Changing existing seed schema used by the app
-
-🚫 Never:
-
-Invent bulb codes
-
-Fill with “common for Subaru” assumptions without sources
-
-Overwrite existing high confidence entries without strong evidence
+If you paste the **actual bulbs.csv header line** (just the header), I’ll lock the “required field set” and the exact placeholder defaults to **match your columns 100%** (so we never accidentally omit/rename a field).

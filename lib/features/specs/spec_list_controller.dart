@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/data/db/dao/specs_dao.dart';
 
@@ -52,12 +53,20 @@ class SpecListState {
   );
 }
 
-class SpecListController extends StateNotifier<SpecListState> {
-  SpecListController(this._dao) : super(const SpecListState()) {
-    loadInitial();
-  }
+final specListControllerProvider =
+    NotifierProvider.autoDispose<SpecListController, SpecListState>(
+      SpecListController.new,
+    );
 
-  final SpecsDao _dao;
+class SpecListController extends Notifier<SpecListState> {
+  late final SpecsDao _dao;
+
+  @override
+  SpecListState build() {
+    _dao = ref.read(appDbProvider).specsDao;
+    Future.microtask(() => loadInitial());
+    return const SpecListState();
+  }
 
   Future<void> loadInitial() async {
     final gen = state.generation + 1;
@@ -157,9 +166,3 @@ class SpecListController extends StateNotifier<SpecListState> {
     loadInitial();
   }
 }
-
-final specListControllerProvider =
-    StateNotifierProvider.autoDispose<SpecListController, SpecListState>((ref) {
-      final db = ref.watch(appDbProvider);
-      return SpecListController(db.specsDao);
-    });

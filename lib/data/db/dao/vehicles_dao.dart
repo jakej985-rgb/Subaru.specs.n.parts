@@ -47,4 +47,85 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
       batch.insertAll(vehicles, list, mode: InsertMode.insertOrReplace);
     });
   }
+
+  /// Returns a distinct list of engine codes sorted alphabetically.
+  /// Filters out null/empty engine codes.
+  Future<List<String>> getDistinctEngineCodes() {
+    final query = selectOnly(vehicles, distinct: true)
+      ..addColumns([vehicles.engineCode])
+      ..where(vehicles.engineCode.isNotNull())
+      ..orderBy([
+        OrderingTerm(expression: vehicles.engineCode, mode: OrderingMode.asc),
+      ]);
+
+    return query.map((row) => row.read(vehicles.engineCode)!).get();
+  }
+
+  /// Returns all vehicles with the specified engine code.
+  Future<List<Vehicle>> getVehiclesByEngineCode(String engineCode) => (select(
+    vehicles,
+  )..where((tbl) => tbl.engineCode.equals(engineCode))).get();
+
+  /// Returns engine codes with their vehicle counts.
+  Future<Map<String, int>> getEngineCodesWithCounts() async {
+    final query = selectOnly(vehicles)
+      ..addColumns([vehicles.engineCode, vehicles.id.count()])
+      ..where(vehicles.engineCode.isNotNull())
+      ..groupBy([vehicles.engineCode])
+      ..orderBy([
+        OrderingTerm(expression: vehicles.engineCode, mode: OrderingMode.asc),
+      ]);
+
+    final results = await query
+        .map(
+          (row) => MapEntry(
+            row.read(vehicles.engineCode)!,
+            row.read(vehicles.id.count())!,
+          ),
+        )
+        .get();
+
+    return Map.fromEntries(results);
+  }
+
+  /// Returns vehicle counts for each year.
+  Future<Map<int, int>> getVehicleCountsByYear() async {
+    final query = selectOnly(vehicles)
+      ..addColumns([vehicles.year, vehicles.id.count()])
+      ..groupBy([vehicles.year])
+      ..orderBy([
+        OrderingTerm(expression: vehicles.year, mode: OrderingMode.desc),
+      ]);
+
+    final results = await query
+        .map(
+          (row) => MapEntry(
+            row.read(vehicles.year)!,
+            row.read(vehicles.id.count())!,
+          ),
+        )
+        .get();
+
+    return Map.fromEntries(results);
+  }
+
+  /// Returns a list of vehicles matching the query in model, year, or engineCode.
+  Future<List<Vehicle>> searchVehicles(
+    String query, {
+    int limit = 20,
+    int offset = 0,
+  }) {
+    if (query.length > 100) return Future.value([]);
+
+    return (select(vehicles)
+          ..where(
+            (tbl) =>
+                tbl.model.contains(query) |
+                tbl.year.cast<String>().contains(query) |
+                tbl.engineCode.contains(query) |
+                tbl.trim.contains(query),
+          )
+          ..limit(limit, offset: offset))
+        .get();
+  }
 }

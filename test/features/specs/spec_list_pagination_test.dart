@@ -97,7 +97,7 @@ void main() {
 
     // Scroll to the bottom to trigger load more
     final scrollFinder = find.descendant(
-      of: find.byType(ListView),
+      of: find.byKey(const Key('specListView')),
       matching: find.byType(Scrollable),
     );
     await tester.scrollUntilVisible(
@@ -167,7 +167,7 @@ void main() {
 
     // Scroll to load more search results
     final scrollFinder = find.descendant(
-      of: find.byType(ListView),
+      of: find.byKey(const Key('specListView')),
       matching: find.byType(Scrollable),
     );
     await tester.scrollUntilVisible(

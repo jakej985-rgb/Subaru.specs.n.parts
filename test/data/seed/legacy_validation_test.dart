@@ -152,7 +152,10 @@ void main() {
         (v) => v['year'] == 2012 && v['trim'].contains('2.5GT'),
       );
       final gt13 = vehicles.any(
-        (v) => v['year'] == 2013 && v['trim'].contains('2.5GT'),
+        (v) =>
+            v['year'] == 2013 &&
+            v['trim'].contains('2.5GT') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
 
       expect(gt10, isTrue, reason: '2010 should have 2.5GT');
@@ -192,7 +195,8 @@ void main() {
             v['year'] >= 2015 &&
             v['year'] <= 2019 &&
             v['model'] == 'Legacy' &&
-            (v['trim'].contains('GT') || v['engineCode'].contains('Turbo')),
+            (v['trim'].contains('GT') || v['engineCode'].contains('Turbo')) &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         hasTurbo,
