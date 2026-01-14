@@ -38,9 +38,6 @@ jobs:
       - name: Analyze code
         run: flutter analyze
 
-      #//- name: Check seed sync
-        #//run: python3 tool/seed/sync_fitment_csv_to_specs_json.py --check
-
       - name: Run tests
         run: flutter test -r expanded -v
 
@@ -52,3 +49,7 @@ jobs:
         with:
           name: app-debug
           path: build/app/outputs/flutter-apk/app-debug.apk
+
+
+      - name: Check seed sync
+        run: python3 tool/seed/sync_fitment_csv_to_specs_json.py --check
