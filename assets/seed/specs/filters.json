@@ -452,5 +452,14 @@
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
+  },
+  {
+    "id": "s_filter_oil_forester_gen2",
+    "category": "Filters",
+    "title": "Oil Filter (Forester 2003-2008)",
+    "body": "Part: 15208AA12A / 15208AA100 / 15208AA15A.",
+    "tags": "2003,2004,2005,2006,2007,2008,forester,filter,oil",
+    "updatedAt": "2026-01-13T00:00:00Z",
+    "verified": true
   }
 ]

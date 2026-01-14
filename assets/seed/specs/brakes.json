@@ -576,43 +576,45 @@
     "source": "Service Manual"
   },
   {
-    "id": "s_brake_front_rotor_wrx_vb",
+    "id": "s_brake_torque_caliper_front_sti_brembo",
     "category": "Brakes",
-    "title": "Front Rotor (WRX 2022+)",
-    "body": "Diameter: 316mm (12.4\"). Thickness: 30mm. Vented. 2-Piston Floating Caliper.",
-    "tags": "2022,2023,2024,brakes,front,rotor,vb,wrx",
-    "updatedAt": "2026-01-10T14:20:00Z",
+    "title": "Front Caliper Mounting Bolt Torque",
+    "body": "80 ft-lbs (108 Nm)",
+    "tags": "2004,2005,2006,2007,brakes,brembo,caliper,front,gd,sti,torque,wrx",
+    "updatedAt": "2026-01-14T00:00:00Z",
     "verified": true,
-    "source": "Service Manual"
+    "source": "Community Consensus / Service Manual (Corrected)",
+    "notes": "FSM lists 114 ft-lbs (155 Nm), which is widely reported to strip threads. 80 ft-lbs is recommended."
   },
   {
-    "id": "s_brake_rear_rotor_wrx_vb",
+    "id": "s_brake_torque_caliper_rear_sti_brembo",
     "category": "Brakes",
-    "title": "Rear Rotor (WRX 2022+)",
-    "body": "Diameter: 290mm (11.4\"). Thickness: 18mm. Vented. 1-Piston Floating Caliper.",
-    "tags": "2022,2023,2024,brakes,rear,rotor,vb,wrx",
-    "updatedAt": "2026-01-10T14:20:00Z",
+    "title": "Rear Caliper Mounting Bolt Torque",
+    "body": "47.9 ft-lbs (65 Nm)",
+    "tags": "2004,2005,2006,2007,brakes,brembo,caliper,gd,rear,sti,torque,wrx",
+    "updatedAt": "2026-01-14T00:00:00Z",
     "verified": true,
-    "source": "Service Manual"
+    "source": "FSM"
   },
   {
-    "id": "s_brake_front_caliper_wrx_vb",
+    "id": "s_brake_torque_bleeder_brembo",
     "category": "Brakes",
-    "title": "Front Caliper Type (WRX 2022+)",
-    "body": "2-Piston Floating.",
-    "tags": "2022,2023,2024,brakes,caliper,front,type,vb,wrx",
-    "updatedAt": "2026-01-10T14:20:00Z",
+    "title": "Brembo Bleeder Screw Torque",
+    "body": "13.3 ft-lbs (18 Nm)",
+    "tags": "2004,2005,2006,2007,bleeder,brakes,brembo,gd,sti,torque",
+    "updatedAt": "2026-01-14T00:00:00Z",
     "verified": true,
-    "source": "Service Manual"
+    "source": "FSM",
+    "notes": "Careful: Aluminum threads. Do not over-torque."
   },
   {
-    "id": "s_brake_rear_caliper_wrx_vb",
+    "id": "s_brake_torque_banjo_bolt_gd",
     "category": "Brakes",
-    "title": "Rear Caliper Type (WRX 2022+)",
-    "body": "1-Piston Floating with Electric Parking Brake (EPB).",
-    "tags": "2022,2023,2024,brakes,caliper,rear,type,vb,wrx",
-    "updatedAt": "2026-01-10T14:20:00Z",
+    "title": "Brake Hose Banjo Bolt Torque",
+    "body": "13 ft-lbs (18 Nm)",
+    "tags": "2002,2003,2004,2005,2006,2007,banjo,brakes,gd,gg,impreza,sti,torque,wrx",
+    "updatedAt": "2026-01-14T00:00:00Z",
     "verified": true,
-    "source": "Service Manual"
+    "source": "FSM"
   }
 ]

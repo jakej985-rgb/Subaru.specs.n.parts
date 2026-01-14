@@ -58,7 +58,8 @@ void main() {
         (v) =>
             v['year'] == 2015 &&
             v['model'] == 'WRX' &&
-            v['trim'].contains('STI'),
+            v['trim'].contains('STI') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         sti15['engineCode'],
@@ -67,7 +68,10 @@ void main() {
       );
 
       final sti21 = vehicles.firstWhere(
-        (v) => v['year'] == 2021 && v['trim'].contains('STI'),
+        (v) =>
+            v['year'] == 2021 &&
+            v['trim'].contains('STI') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         sti21['engineCode'],

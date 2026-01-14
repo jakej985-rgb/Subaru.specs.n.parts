@@ -14,16 +14,22 @@ class PartsDao extends DatabaseAccessor<AppDatabase> with _$PartsDaoMixin {
     String query, {
     int limit = 50,
     int offset = 0,
+    bool sortByOem = false,
   }) {
     // Security: Input length limit to prevent DoS via massive regex/contains checks
     if (query.length > 100) return Future.value([]);
 
-    return (select(parts)
-          ..where(
-            (tbl) => tbl.name.contains(query) | tbl.oemNumber.contains(query),
-          )
-          ..limit(limit, offset: offset))
-        .get();
+    final q = select(parts)
+      ..where((tbl) => tbl.name.contains(query) | tbl.oemNumber.contains(query))
+      ..limit(limit, offset: offset);
+
+    if (sortByOem) {
+      q.orderBy([(tbl) => OrderingTerm(expression: tbl.oemNumber)]);
+    } else {
+      q.orderBy([(tbl) => OrderingTerm(expression: tbl.name)]);
+    }
+
+    return q.get();
   }
 
   Future<void> insertPart(Part part) =>

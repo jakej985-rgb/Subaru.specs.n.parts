@@ -2,7 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/app.dart';
 
-void main() {
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:specsnparts/features/home/garage_providers.dart';
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const ProviderScope(child: SubaruSpecsApp()));
+
+  final prefs = await SharedPreferences.getInstance();
+
+  runApp(
+    ProviderScope(
+      overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
+      child: const SubaruSpecsApp(),
+    ),
+  );
 }

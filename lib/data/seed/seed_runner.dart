@@ -134,6 +134,16 @@ List<Vehicle> parseVehicles(String response) {
 
 List<Spec> parseSpecs(String response) {
   final List<dynamic> data = json.decode(response);
+  if (data.isEmpty) return [];
+
+  // Detect format: Fitment Row vs Legacy Spec
+  final first = data.first as Map<String, dynamic>;
+  if (first.containsKey('function_key') || first.containsKey('year')) {
+    // New csv-synced format
+    return _parseFitmentRows(data);
+  }
+
+  // Legacy format
   return data.map((json) {
     final map = json as Map<String, dynamic>;
 
@@ -151,6 +161,153 @@ List<Spec> parseSpecs(String response) {
       updatedAt: DateTime.parse(map['updatedAt']),
     );
   }).toList();
+}
+
+List<Spec> _parseFitmentRows(List<dynamic> data) {
+  final List<Spec> specs = [];
+
+  for (final json in data) {
+    final map = json as Map<String, dynamic>;
+
+    if (map.containsKey('function_key')) {
+      // Tall format (Bulbs, etc.)
+      specs.add(_parseTallRow(map));
+    } else {
+      // Wide format (Fluids, Maintenance, etc.)
+      specs.addAll(_parseWideRow(map));
+    }
+  }
+  return specs;
+}
+
+Spec _parseTallRow(Map<String, dynamic> map) {
+  // Construct a unique ID
+  final String compositeKey = [
+    map['year'],
+    map['make'],
+    map['model'],
+    map['trim'],
+    map['body'],
+    map['market'],
+    map['function_key'],
+    map['location_hint'],
+  ].join('|');
+
+  final id = 'fit_${compositeKey.hashCode}';
+
+  String body = 'n/a';
+  String category = 'Fitment';
+
+  if (map.containsKey('bulb_code')) {
+    category = 'Bulbs';
+    body = map['bulb_code'].toString();
+    if (map['tech'] != null && map['tech'] != 'n/a') {
+      body += ' (${map['tech']})';
+    }
+  } else if (map.containsKey('capacity')) {
+    category = 'Fluids';
+    body = map['capacity'].toString();
+  } else if (map.containsKey('value')) {
+    body = map['value'].toString();
+  } else {
+    body = map.values
+        .firstWhere((v) => v != null, orElse: () => 'n/a')
+        .toString();
+  }
+
+  final String title =
+      map['function_key']?.toString().replaceAll('_', ' ').toUpperCase() ??
+      'UNKNOWN';
+  final String sub = map['location_hint'] ?? '';
+  final String displayTitle = sub.isNotEmpty ? '$title - $sub' : title;
+  final tags = _buildTags(map);
+
+  return Spec(
+    id: id,
+    category: category,
+    title: displayTitle,
+    body: body,
+    tags: tags,
+    updatedAt: DateTime.now(),
+  );
+}
+
+List<Spec> _parseWideRow(Map<String, dynamic> map) {
+  final List<Spec> rowSpecs = [];
+  final ignoreKeys = {
+    'year',
+    'make',
+    'model',
+    'trim',
+    'body',
+    'market',
+    'id',
+    'updatedAt',
+    'notes',
+    'source_1',
+    'source_2',
+    'confidence',
+    'interval_schedule',
+    'function_key',
+    'location_hint',
+  };
+
+  final year = map['year'];
+  final make = map['make'];
+  final model = map['model'];
+  final trim = map['trim'];
+  final bodyAttr = map['body'];
+  final market = map['market'];
+  final tags = _buildTags(map);
+
+  for (final entry in map.entries) {
+    if (ignoreKeys.contains(entry.key)) continue;
+    if (entry.value == null || entry.value == 'n/a') continue;
+
+    final key = entry.key;
+    final value = entry.value.toString();
+
+    final uniqueString = '$year|$make|$model|$trim|$bodyAttr|$market|$key';
+    final id = 'wide_${uniqueString.hashCode}';
+
+    String category = 'Specs';
+    String title = key.replaceAll('_', ' ').toUpperCase();
+
+    if (key.contains('oil') ||
+        key.contains('fluid') ||
+        key.contains('coolant')) {
+      category = 'Fluids';
+    } else if (key.contains('filter') ||
+        key.contains('belt') ||
+        key.contains('plug') ||
+        key.contains('brake_')) {
+      category = 'Maintenance';
+    } else if (key.contains('torque')) {
+      category = 'Torque';
+    }
+
+    rowSpecs.add(
+      Spec(
+        id: id,
+        category: category,
+        title: title,
+        body: value,
+        tags: tags,
+        updatedAt: DateTime.now(),
+      ),
+    );
+  }
+  return rowSpecs;
+}
+
+String _buildTags(Map<String, dynamic> map) {
+  return [
+    map['year'],
+    map['make'],
+    map['model'],
+    map['trim'],
+    map['market'],
+  ].where((e) => e != null && e != 'n/a').join(',');
 }
 
 String _enrichTagsWithYears(String currentTags, String title) {

@@ -75,7 +75,10 @@ void main() {
 
     test('XT Turbo Introduction (2005+)', () {
       final xt05 = vehicles.firstWhere(
-        (v) => v['year'] == 2005 && v['trim'].contains('XT'),
+        (v) =>
+            v['year'] == 2005 &&
+            v['trim'].contains('XT') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         xt05['engineCode'],

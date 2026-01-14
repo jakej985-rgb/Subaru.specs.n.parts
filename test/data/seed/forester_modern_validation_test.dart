@@ -21,7 +21,10 @@ void main() {
     test('Forester XT Engine Transition (EJ255 -> FA20DIT)', () {
       // 2013 XT = EJ255
       final xt13 = vehicles.firstWhere(
-        (v) => v['year'] == 2013 && v['trim'].contains('XT'),
+        (v) =>
+            v['year'] == 2013 &&
+            v['trim'].contains('XT') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         xt13['engineCode'],
@@ -31,7 +34,10 @@ void main() {
 
       // 2014 XT = FA20DIT (First year of SJ)
       final xt14 = vehicles.firstWhere(
-        (v) => v['year'] == 2014 && v['trim'].contains('XT'),
+        (v) =>
+            v['year'] == 2014 &&
+            v['trim'].contains('XT') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         xt14['engineCode'],
@@ -43,7 +49,10 @@ void main() {
     test('NA Engine Transition (EJ253 -> FB25)', () {
       // 2010 2.5X = EJ253
       final na10 = vehicles.firstWhere(
-        (v) => v['year'] == 2010 && v['trim'].contains('2.5X Premium'),
+        (v) =>
+            v['year'] == 2010 &&
+            v['trim'].contains('2.5X Premium') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         na10['engineCode'],
@@ -53,7 +62,10 @@ void main() {
 
       // 2011 2.5X = FB25 (First year of FB)
       final na11 = vehicles.firstWhere(
-        (v) => v['year'] == 2011 && v['trim'].contains('2.5X Touring'),
+        (v) =>
+            v['year'] == 2011 &&
+            v['trim'].contains('2.5X Touring') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         na11['engineCode'],

@@ -4,7 +4,17 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/features/home/home_page.dart';
 
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:specsnparts/features/home/garage_providers.dart';
+
 void main() {
+  late SharedPreferences prefs;
+
+  setUp(() async {
+    SharedPreferences.setMockInitialValues({});
+    prefs = await SharedPreferences.getInstance();
+  });
+
   // Helper to pump the widget with a real router
   Future<void> pumpHomePage(WidgetTester tester) async {
     final router = GoRouter(
@@ -19,12 +29,19 @@ void main() {
         ),
         GoRoute(path: '/parts', builder: (context, state) => Container()),
         GoRoute(path: '/specs', builder: (context, state) => Container()),
+        GoRoute(
+          path: '/specs/categories',
+          builder: (context, state) => Container(),
+        ), // Added missing route
         GoRoute(path: '/settings', builder: (context, state) => Container()),
       ],
     );
 
     await tester.pumpWidget(
-      ProviderScope(child: MaterialApp.router(routerConfig: router)),
+      ProviderScope(
+        overrides: [sharedPreferencesProvider.overrideWithValue(prefs)],
+        child: MaterialApp.router(routerConfig: router),
+      ),
     );
     await tester.pumpAndSettle();
   }

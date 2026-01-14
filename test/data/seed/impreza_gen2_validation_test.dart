@@ -43,7 +43,8 @@ void main() {
         (v) =>
             v['year'] == 2006 &&
             v['trim'].contains('WRX') &&
-            !v['trim'].contains('STI'),
+            !v['trim'].contains('STI') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         wrx06['engineCode'],
@@ -55,7 +56,10 @@ void main() {
     test('STI Introduction (2004)', () {
       // Should NOT exist in 2002 or 2003
       final sti03 = vehicles.any(
-        (v) => v['year'] == 2003 && v['trim'].contains('STI'),
+        (v) =>
+            v['year'] == 2003 &&
+            v['trim'].contains('STI') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(sti03, isFalse, reason: 'STI did not exist in US in 2003');
 
@@ -67,7 +71,11 @@ void main() {
 
       // Verify Engine
       final sti = vehicles.firstWhere(
-        (v) => v['trim'].contains('STI') && v['year'] == 2004,
+        (v) =>
+            v['trim'].contains('STI') &&
+            v['year'] == 2004 &&
+            v['model'] == 'Impreza' &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         sti['engineCode'],
@@ -88,7 +96,10 @@ void main() {
       expect(has25i06, isTrue, reason: '2006 should find "2.5i" trim');
 
       final hasRS06 = vehicles.any(
-        (v) => v['year'] == 2006 && v['trim'].contains('RS'),
+        (v) =>
+            v['year'] == 2006 &&
+            v['trim'].contains('RS') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         hasRS06,

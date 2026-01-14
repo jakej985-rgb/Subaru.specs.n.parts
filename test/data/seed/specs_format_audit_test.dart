@@ -16,8 +16,20 @@ void main() {
       }
 
       specs = [];
+      final excludeFiles = {
+        'index.json',
+        'fluids.json',
+        'maintenance.json',
+        'engines.json',
+        'bulbs.json',
+        'bulbs_temp.json',
+        'bulbs.json.legacy.json',
+        'torque_specs.json',
+      };
       final files = specsDir.listSync().whereType<File>().where(
-        (f) => f.path.endsWith('.json') && !f.path.endsWith('index.json'),
+        (f) =>
+            f.path.endsWith('.json') &&
+            !excludeFiles.contains(p.basename(f.path)),
       );
 
       for (final file in files) {

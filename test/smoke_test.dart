@@ -6,6 +6,9 @@ import 'package:specsnparts/app.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/data/seed/seed_runner.dart';
 
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:specsnparts/features/home/garage_providers.dart';
+
 class NoOpSeedRunner extends SeedRunner {
   NoOpSeedRunner(super.db);
   @override
@@ -24,11 +27,15 @@ void main() {
     final db = AppDatabase(NativeDatabase.memory());
     addTearDown(db.close);
 
+    SharedPreferences.setMockInitialValues({});
+    final prefs = await SharedPreferences.getInstance();
+
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
           appDbProvider.overrideWithValue(db),
           seedRunnerProvider.overrideWith((ref) => NoOpSeedRunner(db)),
+          sharedPreferencesProvider.overrideWithValue(prefs),
         ],
         child: const SubaruSpecsApp(),
       ),

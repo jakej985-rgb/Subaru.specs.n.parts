@@ -34,12 +34,44 @@
     "updatedAt": "2024-01-01T00:00:00Z"
   },
   {
-    "id": "s_torque_caliper_bracket_sti",
+    "id": "s_torque_caliper_mount_front_brembo",
     "category": "Torque",
-    "title": "Caliper Bracket Bolts (Front)",
-    "body": "80 ft-lbs (108 Nm) for STI Brembos.",
-    "tags": "brakes,sti,torque",
-    "updatedAt": "2024-01-01T00:00:00Z"
+    "title": "Front Caliper Mounting Bolts (Brembo)",
+    "body": "80 ft-lbs (108 Nm). WARNING: FSM incorrectly lists 114 ft-lbs; do not use.",
+    "tags": "2004,brakes,brembo,caliper,front,sti,torque",
+    "updatedAt": "2026-01-10T00:00:00Z",
+    "verified": true,
+    "source": "Community Consensus / Service Manual (Corrected)"
+  },
+  {
+    "id": "s_torque_caliper_mount_rear_brembo",
+    "category": "Torque",
+    "title": "Rear Caliper Mounting Bolts (Brembo)",
+    "body": "47.9 ft-lbs (65 Nm).",
+    "tags": "2004,brakes,brembo,caliper,rear,sti,torque",
+    "updatedAt": "2026-01-10T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_torque_brake_banjo_brembo",
+    "category": "Torque",
+    "title": "Brake Line Banjo Bolt (Brembo)",
+    "body": "13 ft-lbs (18 Nm).",
+    "tags": "2004,banjo,brakes,brembo,sti,torque",
+    "updatedAt": "2026-01-10T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
+  },
+  {
+    "id": "s_torque_brake_bleeder_brembo",
+    "category": "Torque",
+    "title": "Brake Caliper Bleeder Screw (Brembo)",
+    "body": "13.3 ft-lbs (18 Nm).",
+    "tags": "2004,bleeder,brakes,brembo,sti,torque",
+    "updatedAt": "2026-01-10T00:00:00Z",
+    "verified": true,
+    "source": "Service Manual"
   },
   {
     "id": "s_torque_spark_plug",

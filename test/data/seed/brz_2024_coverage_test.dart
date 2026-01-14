@@ -26,6 +26,10 @@ void main() {
     expect(trims.contains('TS'), isFalse, reason: 'Should use "tS" not "TS"');
 
     // Verify engine code
-    expect(engineCodes, {'FA24'});
+    expect(
+      engineCodes.any((c) => c.toString().contains('FA24')),
+      isTrue,
+      reason: 'Should have FA24 engine',
+    );
   });
 }

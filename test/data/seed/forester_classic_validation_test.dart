@@ -31,13 +31,17 @@ void main() {
         (v) =>
             v['year'] == 2003 &&
             v['model'] == 'Forester' &&
-            v['trim'].contains('XT'),
+            v['trim'].contains('XT') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
-      expect(xt03, isFalse, reason: 'Forester XT did not exist in 2003');
+      expect(xt03, isFalse, reason: 'Forester XT did not exist in 2003 (USDM)');
 
       // Should exist in 2004 with Turbo
       final xt04 = vehicles.firstWhere(
-        (v) => v['year'] == 2004 && v['trim'].contains('XT'),
+        (v) =>
+            v['year'] == 2004 &&
+            v['trim'].contains('XT') &&
+            !(v['trim'] as String).contains('(JDM)'),
       );
       expect(
         xt04['engineCode'],

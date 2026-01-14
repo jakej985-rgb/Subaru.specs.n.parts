@@ -15,12 +15,51 @@ ENGINES_CSV = REPO_ROOT / "assets" / "seed" / "specs" / "fitment" / "engines.csv
 
 HEADER = [
     "year", "make", "model", "trim", "body", "market",
-    "engine_code", "engine_family", "engine_phase", "displacement",
+    "engine_code", "engine_family", "engine_phase", "displacement", "cyl_config",
     "power", "torque", "induction", "fuel_system", "compression_ratio",
     "bore", "stroke", "head_config", "valvetrain", "timing_drive",
     "redline", "oil_viscosity", "oil_spec", "coolant_spec",
     "spark_plug", "plug_gap", "notes", "source_1", "source_2", "confidence"
 ]
+
+# Helper to infer cylinder configuration when not explicitly provided
+def infer_cyl_config(family):
+    """Return a human readable cylinder/config string based on engine family.
+    Known families:
+    - EA, EJ, EZ, FA, FB, CB: flat (boxer)
+    - EN, KF: flat (boxer) for kei
+    - 1NR, 1NZ: inline (I4)
+    Fallback: unknown
+    """
+    if not family:
+        return "unknown"
+    f = family.upper()
+    
+    # Electric
+    if "EV" in f: return "Electric Motor"
+    
+    # 6-cylinder boxers
+    if f.startswith(("EZ", "EG", "ER")):
+        return "6 cyl boxer"
+        
+    # 4-cylinder boxers
+    if f.startswith(("EA", "EJ", "FA", "FB", "CB", "EL")):
+        return "4 cyl boxer"
+    
+    # 4-cylinder inline
+    if f.startswith(("EN", "1NR", "1NZ")) or "TOYOTA" in f:
+        return "4 cyl inline"
+        
+    # 3-cylinder inline
+    if f.startswith(("EF", "KF", "1KR")):
+        return "3 cyl inline"
+        
+    # 2-cylinder inline
+    if f.startswith("EK"):
+        return "2 cyl inline"
+
+    return "unknown"
+
 
 # Engine specs database - keyed by engine code
 # Format: US / Metric in same cell
@@ -151,8 +190,8 @@ ENGINE_SPECS = {
         "source_1": "Subaru SVX FSM", "source_2": "seccs.org",
         "confidence": "high"
     },
-    # EJ18 (1.8L) - 1993-2001
-    "EJ18": {
+    # EJ18E (1.8L) - 1993-2001
+    "EJ18E": {
         "family": "EJ", "phase": "Phase 1",
         "displacement": "1.8 L / 1820 cc",
         "power": "110 hp / 82.0 kW",
@@ -165,13 +204,13 @@ ENGINE_SPECS = {
         "oil_visc": "5W-30", "oil_spec": "API SJ/SL",
         "coolant": "Subaru coolant 50/50",
         "plug": "NGK BKR5E-11", "gap": "0.043 in / 1.1 mm",
-        "notes": "base Impreza engine",
+        "notes": "base Impreza engine (Phase 1)",
         "source_1": "Subaru Impreza FSM", "source_2": "AMSOIL",
         "confidence": "high"
     },
-    # EJ20 (2.0L Turbo JDM) - 1992+
-    "EJ20": {
-        "family": "EJ", "phase": "Phase 1/2",
+    # EJ20G (2.0L Turbo JDM) - 1992+
+    "EJ20G": {
+        "family": "EJ", "phase": "Phase 1",
         "displacement": "2.0 L / 1994 cc",
         "power": "250 hp / 186.4 kW",
         "torque": "224 lb-ft / 304 Nm",
@@ -183,12 +222,12 @@ ENGINE_SPECS = {
         "oil_visc": "5W-30", "oil_spec": "API SL",
         "coolant": "Subaru Super Coolant",
         "plug": "NGK PFR6B", "gap": "0.031 in / 0.8 mm",
-        "notes": "JDM WRX/STI turbo; multiple variants",
+        "notes": "JDM WRX (early); Closed deck",
         "source_1": "JDM Subaru FSM", "source_2": "AMSOIL",
         "confidence": "medium"
     },
-    # EJ22 (2.2L NA) - 1990-2001
-    "EJ22": {
+    # EJ22E (2.2L NA) - 1990-2001
+    "EJ22E": {
         "family": "EJ", "phase": "Phase 1/2",
         "displacement": "2.2 L / 2212 cc",
         "power": "135 hp / 100.7 kW",
@@ -201,7 +240,7 @@ ENGINE_SPECS = {
         "oil_visc": "5W-30", "oil_spec": "API SJ/SL",
         "coolant": "Subaru coolant 50/50",
         "plug": "NGK BKR5E-11", "gap": "0.043 in / 1.1 mm",
-        "notes": "common NA engine; reliable",
+        "notes": "common NA engine; reliable (EJ22E)",
         "source_1": "Subaru Legacy FSM", "source_2": "AMSOIL",
         "confidence": "high"
     },
@@ -349,152 +388,763 @@ ENGINE_SPECS = {
         "source_1": "Subaru STI FSM", "source_2": "AMSOIL",
         "confidence": "high"
     },
-    # EJ25 generic fallback
-    "EJ25": {
-        "family": "EJ", "phase": "Phase 2",
-        "displacement": "2.5 L / 2457 cc",
-        "power": "170 hp / 126.8 kW",
-        "torque": "170 lb-ft / 230 Nm",
-        "induction": "NA", "fuel_system": "MPFI",
-        "compression": "10.1:1",
-        "bore": "99.5 mm / 3.92 in", "stroke": "79.0 mm / 3.11 in",
-        "head": "SOHC", "valvetrain": "16v", "timing": "belt",
-        "redline": "6000 rpm",
-        "oil_visc": "5W-30", "oil_spec": "API SM/SN",
-        "coolant": "Subaru Super Coolant",
-        "plug": "NGK PZFR5F-11", "gap": "0.043 in / 1.1 mm",
-        "notes": "generic EJ25 NA",
-        "source_1": "Subaru Owner Manual", "source_2": "AMSOIL",
-        "confidence": "medium"
-    },
-    # EZ30 (3.0L H6) - 2001-2009
-    "EZ30": {
+    # EZ30D (3.0L H6) - 2001-2009
+    "EZ30D": {
         "family": "EZ", "phase": "",
         "displacement": "3.0 L / 3000 cc",
-        "power": "212 hp / 158.1 kW",
-        "torque": "210 lb-ft / 285 Nm",
+        "power": "245 hp / 182.7 kW",
+        "torque": "219 lb-ft / 297 Nm",
         "induction": "NA", "fuel_system": "MPFI",
         "compression": "10.7:1",
         "bore": "89.2 mm / 3.51 in", "stroke": "80.0 mm / 3.15 in",
-        "head": "DOHC", "valvetrain": "24v AVCS", "timing": "chain",
-        "redline": "6500 rpm",
-        "oil_visc": "5W-30", "oil_spec": "API SL/SM",
+        "head": "DOHC", "valvetrain": "24v chain", "timing": "chain",
+        "redline": "7000 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SM/SN",
         "coolant": "Subaru Super Coolant",
-        "plug": "NGK PZFR5F-11", "gap": "0.043 in / 1.1 mm",
-        "notes": "H6; timing chain",
-        "source_1": "Subaru Outback H6 FSM", "source_2": "AMSOIL",
+        "plug": "NGK ILFR6B", "gap": "0.031 in / 0.8 mm",
+        "notes": "H6 3.0R; smooth power",
+        "source_1": "Subaru Legacy/Outback FSM", "source_2": "AMSOIL",
         "confidence": "high"
     },
-    # EZ36 (3.6L H6) - 2010+
-    "EZ36": {
+    # EZ36D (3.6L H6) - 2010-2019
+    "EZ36D": {
         "family": "EZ", "phase": "",
         "displacement": "3.6 L / 3630 cc",
-        "power": "256 hp / 190.9 kW",
+        "power": "256 hp / 191.0 kW",
         "torque": "247 lb-ft / 335 Nm",
         "induction": "NA", "fuel_system": "MPFI",
         "compression": "10.5:1",
         "bore": "92.0 mm / 3.62 in", "stroke": "91.0 mm / 3.58 in",
         "head": "DOHC", "valvetrain": "24v Dual AVCS", "timing": "chain",
-        "redline": "6000 rpm",
-        "oil_visc": "0W-20", "oil_spec": "API SN synthetic",
+        "redline": "6400 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SN",
         "coolant": "Subaru Super Coolant",
-        "plug": "NGK DILKAR7C9H", "gap": "0.035 in / 0.9 mm",
-        "notes": "H6; timing chain; Outback/Legacy/Tribeca",
-        "source_1": "Subaru Outback/Tribeca FSM", "source_2": "AMSOIL",
+        "plug": "NGK SILFR6A11", "gap": "0.043 in / 1.1 mm",
+        "notes": "Largest Subaru H6; Tribeca/Outback/Legacy",
+        "source_1": "Subaru FSM", "source_2": "AMSOIL",
         "confidence": "high"
     },
-    # FA20 (2.0L DIT) - 2013+ BRZ, 2015+ WRX
-    "FA20": {
+    # FA20D (2.0L NA) - BRZ/86
+    "FA20D": {
         "family": "FA", "phase": "",
         "displacement": "2.0 L / 1998 cc",
-        "power": "268 hp / 199.9 kW",
+        "power": "205 hp / 152.9 kW",
+        "torque": "156 lb-ft / 212 Nm",
+        "induction": "NA", "fuel_system": "D-4S (DI + MPFI)",
+        "compression": "12.5:1",
+        "bore": "86.0 mm / 3.39 in", "stroke": "86.0 mm / 3.39 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "7400 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SN/RC",
+        "coolant": "Subaru Super Coolant (blue)",
+        "plug": "NGK ZXE27HBR8", "gap": "0.031 in / 0.8 mm",
+        "notes": "Toyota D-4S system; high compression",
+        "source_1": "Subaru BRZ FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # FA20F (2.0L Turbo) - WRX/Forester XT
+    "FA20F": {
+        "family": "FA", "phase": "",
+        "displacement": "2.0 L / 1998 cc",
+        "power": "268 hp / 200.0 kW",
         "torque": "258 lb-ft / 350 Nm",
-        "induction": "Turbo", "fuel_system": "DI",
+        "induction": "Turbo (DIT)", "fuel_system": "DI",
         "compression": "10.6:1",
         "bore": "86.0 mm / 3.39 in", "stroke": "86.0 mm / 3.39 in",
-        "head": "DOHC", "valvetrain": "16v Dual AVCS", "timing": "chain",
-        "redline": "6500 rpm",
-        "oil_visc": "0W-20", "oil_spec": "API SN synthetic",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "6700 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SN",
         "coolant": "Subaru Super Coolant (blue)",
-        "plug": "NGK SILZKAR7B11", "gap": "0.035 in / 0.9 mm",
-        "notes": "FA20DIT turbo (WRX) or FA20D NA (BRZ); square bore/stroke",
-        "source_1": "Subaru WRX/BRZ FSM", "source_2": "AMSOIL",
+        "plug": "NGK ILKAR8H6", "gap": "0.024 in / 0.6 mm",
+        "notes": "Twin-scroll turbo (DIT); WRX S4/Forester XT",
+        "source_1": "Subaru WRX FSM", "source_2": "AMSOIL",
         "confidence": "high"
     },
-    # FA24 (2.4L DIT) - 2020+
-    "FA24": {
+    # FA24D (2.4L NA) - BRZ/GR86 (2022+)
+    "FA24D": {
         "family": "FA", "phase": "",
         "displacement": "2.4 L / 2387 cc",
-        "power": "271 hp / 202.1 kW",
-        "torque": "258 lb-ft / 350 Nm",
-        "induction": "Turbo", "fuel_system": "DI",
+        "power": "228 hp / 170.0 kW",
+        "torque": "184 lb-ft / 249 Nm",
+        "induction": "NA", "fuel_system": "D-4S (DI + MPFI)",
+        "compression": "13.5:1",
+        "bore": "94.0 mm / 3.70 in", "stroke": "86.0 mm / 3.39 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "7500 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SP",
+        "coolant": "Subaru Super Coolant (blue)",
+        "plug": "NGK RUTH", "gap": "",
+        "notes": "2nd Gen BRZ engine",
+        "source_1": "Subaru BRZ FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # FA24F (2.4L Turbo) - Ascent/Legacy/Outback/WRX
+    "FA24F": {
+        "family": "FA", "phase": "",
+        "displacement": "2.4 L / 2387 cc",
+        "power": "260 hp / 193.9 kW",
+        "torque": "277 lb-ft / 376 Nm",
+        "induction": "Turbo (DIT)", "fuel_system": "DI",
         "compression": "10.6:1",
         "bore": "94.0 mm / 3.70 in", "stroke": "86.0 mm / 3.39 in",
-        "head": "DOHC", "valvetrain": "16v Dual AVCS", "timing": "chain",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
         "redline": "6000 rpm",
-        "oil_visc": "0W-20", "oil_spec": "API SP/SN+ synthetic",
+        "oil_visc": "0W-20", "oil_spec": "API SP",
         "coolant": "Subaru Super Coolant (blue)",
-        "plug": "NGK SILZKAR7B11", "gap": "0.035 in / 0.9 mm",
-        "notes": "latest turbo; Outback XT/WRX/Ascent",
-        "source_1": "Subaru WRX/Outback FSM", "source_2": "AMSOIL",
+        "plug": "NGK SILKAR8D6", "gap": "0.024 in / 0.6 mm",
+        "notes": "High torque turbo (DIT); Ascent/Outback XT/WRX",
+        "source_1": "Subaru Ascent FSM", "source_2": "AMSOIL",
         "confidence": "high"
     },
-    # FB20 (2.0L DI) - 2012+
-    "FB20": {
+    # FB20B (2.0L NA Port) - Impreza/Crosstrek (pre-2017/18)
+    "FB20B": {
         "family": "FB", "phase": "",
         "displacement": "2.0 L / 1995 cc",
-        "power": "152 hp / 113.4 kW",
+        "power": "148 hp / 110.4 kW",
         "torque": "145 lb-ft / 197 Nm",
-        "induction": "NA", "fuel_system": "DI",
+        "induction": "NA", "fuel_system": "MPFI",
         "compression": "10.5:1",
         "bore": "84.0 mm / 3.31 in", "stroke": "90.0 mm / 3.54 in",
-        "head": "DOHC", "valvetrain": "16v Dual AVCS", "timing": "chain",
+        "head": "DOHC", "valvetrain": "16v chain", "timing": "chain",
         "redline": "6500 rpm",
-        "oil_visc": "0W-20", "oil_spec": "API SN/SP synthetic",
+        "oil_visc": "0W-20", "oil_spec": "API SN",
         "coolant": "Subaru Super Coolant (blue)",
-        "plug": "NGK SILZKAR7B11", "gap": "0.035 in / 0.9 mm",
-        "notes": "Impreza/Crosstrek; timing chain",
-        "source_1": "Subaru Impreza/Crosstrek FSM", "source_2": "AMSOIL",
+        "plug": "NGK SILZKAR7B11", "gap": "0.043 in / 1.1 mm",
+        "notes": "Port injection FB20",
+        "source_1": "Subaru FSM", "source_2": "AMSOIL",
         "confidence": "high"
     },
-    # FB25 (2.5L DI) - 2011+
-    "FB25": {
+    # FB20D (2.0L NA DI) - Impreza (2017+)/Crosstrek (2018+)
+    "FB20D": {
+        "family": "FB", "phase": "",
+        "displacement": "2.0 L / 1995 cc",
+        "power": "152 hp / 113.3 kW",
+        "torque": "145 lb-ft / 197 Nm",
+        "induction": "NA", "fuel_system": "DI",
+        "compression": "12.5:1",
+        "bore": "84.0 mm / 3.31 in", "stroke": "90.0 mm / 3.54 in",
+        "head": "DOHC", "valvetrain": "16v chain", "timing": "chain",
+        "redline": "6500 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SN/SP",
+        "coolant": "Subaru Super Coolant (blue)",
+        "plug": "NGK SILZKAR7B11", "gap": "0.043 in / 1.1 mm",
+        "notes": "Direct injection FB20",
+        "source_1": "Subaru FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # FB25B (2.5L NA Port) - Forester (2011-2018)/Legacy (2013-2019)
+    "FB25B": {
+        "family": "FB", "phase": "",
+        "displacement": "2.5 L / 2498 cc",
+        "power": "170 hp / 126.8 kW",
+        "torque": "174 lb-ft / 236 Nm",
+        "induction": "NA", "fuel_system": "MPFI",
+        "compression": "10.0:1",
+        "bore": "94.0 mm / 3.70 in", "stroke": "90.0 mm / 3.54 in",
+        "head": "DOHC", "valvetrain": "16v AVCS", "timing": "chain",
+        "redline": "6000 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SN",
+        "coolant": "Subaru Super Coolant (blue)",
+        "plug": "NGK SILZKAR7B11", "gap": "0.035 in / 0.9 mm",
+        "notes": "Port injection FB25",
+        "source_1": "Subaru Forester FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # FB25D (2.5L NA DI) - Forester (2019+)/Legacy (2020+)
+    "FB25D": {
         "family": "FB", "phase": "",
         "displacement": "2.5 L / 2498 cc",
         "power": "182 hp / 135.7 kW",
         "torque": "176 lb-ft / 239 Nm",
         "induction": "NA", "fuel_system": "DI",
-        "compression": "10.3:1",
+        "compression": "12.0:1",
         "bore": "94.0 mm / 3.70 in", "stroke": "90.0 mm / 3.54 in",
         "head": "DOHC", "valvetrain": "16v Dual AVCS", "timing": "chain",
         "redline": "6000 rpm",
         "oil_visc": "0W-20", "oil_spec": "API SN/SP synthetic",
         "coolant": "Subaru Super Coolant (blue)",
         "plug": "NGK SILZKAR7B11", "gap": "0.035 in / 0.9 mm",
-        "notes": "Forester/Outback/Legacy; timing chain",
-        "source_1": "Subaru Forester/Outback FSM", "source_2": "AMSOIL",
+        "notes": "Direct injection FB25",
+        "source_1": "Subaru Forester FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    "Electric": {
+        "family": "EV", "phase": "",
+        "displacement": "0 L / 0 cc",
+        "power": "215 hp / 160 kW",
+        "torque": "249 lb-ft / 337 Nm",
+        "induction": "Electric", "fuel_system": "BEV",
+        "compression": "",
+        "bore": "", "stroke": "",
+        "head": "", "valvetrain": "", "timing": "",
+        "redline": "",
+        "oil_visc": "", "oil_spec": "",
+        "coolant": "Toyota Genuine Traction Battery Coolant (Blue)",
+        "plug": "", "gap": "",
+        "notes": "Dual Motor AWD (StarDrive); 72.8 kWh battery",
+        "source_1": "Subaru Solterra FSM", "source_2": "Subaru Media",
+        "confidence": "high"
+    },
+    # ============================================================================
+    # JDM-SPECIFIC ENGINES
+    # ============================================================================
+    
+    # EN07 (660cc Kei) - Vivio, R1, R2, Pleo, Stella, Sambar
+    "EN07": {
+        "family": "EN", "phase": "",
+        "displacement": "0.66 L / 658 cc",
+        "power": "48 hp / 35.8 kW",
+        "torque": "42 lb-ft / 57 Nm",
+        "induction": "NA", "fuel_system": "MPFI",
+        "compression": "10.0:1",
+        "bore": "56.0 mm / 2.20 in", "stroke": "66.8 mm / 2.63 in",
+        "head": "SOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "7000 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SN",
+        "coolant": "Subaru coolant 50/50",
+        "plug": "NGK BKR6E", "gap": "0.039 in / 1.0 mm",
+        "notes": "Kei-class inline-4; DOHC 16v",
+        "source_1": "Subaru Kei FSM", "source_2": "JDM specs",
+        "confidence": "medium"
+    },
+    # EN07 Supercharged (660cc SC)
+    "EN07S": {
+        "family": "EN", "phase": "",
+        "displacement": "0.66 L / 658 cc",
+        "power": "64 hp / 47.7 kW",
+        "torque": "74 lb-ft / 100 Nm",
+        "induction": "Supercharged", "fuel_system": "MPFI",
+        "compression": "8.5:1",
+        "bore": "56.0 mm / 2.20 in", "stroke": "66.8 mm / 2.63 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "8000 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SN",
+        "coolant": "Subaru coolant 50/50",
+        "plug": "NGK BKR7E", "gap": "0.031 in / 0.8 mm",
+        "notes": "Kei Supercharged; Vivio RX-R, Pleo RS",
+        "source_1": "Subaru Kei FSM", "source_2": "JDM specs",
+        "confidence": "medium"
+    },
+    # EN05 (550cc older Kei)
+    "EN05": {
+        "family": "EN", "phase": "",
+        "displacement": "0.55 L / 544 cc",
+        "power": "42 hp / 31.3 kW",
+        "torque": "35 lb-ft / 47 Nm",
+        "induction": "NA", "fuel_system": "Carb",
+        "compression": "9.5:1",
+        "bore": "56.0 mm / 2.20 in", "stroke": "55.2 mm / 2.17 in",
+        "head": "SOHC", "valvetrain": "8v", "timing": "chain",
+        "redline": "7000 rpm",
+        "oil_visc": "10W-30", "oil_spec": "API SF/SG",
+        "coolant": "ethylene glycol 50/50",
+        "plug": "NGK BPR5ES", "gap": "0.039 in / 1.0 mm",
+        "notes": "Early Kei (pre-1990 regulations)",
+        "source_1": "Subaru Rex FSM", "source_2": "JDM specs",
+        "confidence": "low"
+    },
+    # EF10 (1.0L Justy)
+    "EF10": {
+        "family": "EF", "phase": "",
+        "displacement": "1.0 L / 997 cc",
+        "power": "56 hp / 41.8 kW",
+        "torque": "57 lb-ft / 77 Nm",
+        "induction": "NA", "fuel_system": "Carb",
+        "compression": "9.5:1",
+        "bore": "78.0 mm / 3.07 in", "stroke": "69.4 mm / 2.73 in",
+        "head": "SOHC", "valvetrain": "6v", "timing": "belt",
+        "redline": "6500 rpm",
+        "oil_visc": "10W-30", "oil_spec": "API SG",
+        "coolant": "ethylene glycol 50/50",
+        "plug": "NGK BPR5EY", "gap": "0.039 in / 1.0 mm",
+        "notes": "inline-3; early Justy",
+        "source_1": "Subaru Justy FSM", "source_2": "dustysjustys.com",
+        "confidence": "medium"
+    },
+    # KF (660cc Daihatsu OEM - Sambar, Stella, Pleo 2011+)
+    "KF": {
+        "family": "KF", "phase": "",
+        "displacement": "0.66 L / 658 cc",
+        "power": "52 hp / 38.8 kW",
+        "torque": "44 lb-ft / 60 Nm",
+        "induction": "NA", "fuel_system": "DVVT",
+        "compression": "11.3:1",
+        "bore": "63.0 mm / 2.48 in", "stroke": "70.4 mm / 2.77 in",
+        "head": "DOHC", "valvetrain": "12v", "timing": "chain",
+        "redline": "7000 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SN",
+        "coolant": "Toyota/Daihatsu coolant",
+        "plug": "NGK LKAR7AIX-P", "gap": "0.039 in / 1.0 mm",
+        "notes": "Daihatsu KF; inline-3 DVVT",
+        "source_1": "Daihatsu FSM", "source_2": "JDM specs",
+        "confidence": "medium"
+    },
+    # KF Turbo
+    "KFT": {
+        "family": "KF", "phase": "",
+        "displacement": "0.66 L / 658 cc",
+        "power": "64 hp / 47.7 kW",
+        "torque": "69 lb-ft / 94 Nm",
+        "induction": "Turbo", "fuel_system": "DVVT",
+        "compression": "9.0:1",
+        "bore": "63.0 mm / 2.48 in", "stroke": "70.4 mm / 2.77 in",
+        "head": "DOHC", "valvetrain": "12v", "timing": "chain",
+        "redline": "7000 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SN",
+        "coolant": "Toyota/Daihatsu coolant",
+        "plug": "NGK LKAR8AIX-P", "gap": "0.031 in / 0.8 mm",
+        "notes": "Daihatsu KF Turbo; Stella Custom RS",
+        "source_1": "Daihatsu FSM", "source_2": "JDM specs",
+        "confidence": "medium"
+    },
+    # EL15 (1.5L JDM Impreza)
+    "EL15": {
+        "family": "EL", "phase": "",
+        "displacement": "1.5 L / 1498 cc",
+        "power": "105 hp / 78.3 kW",
+        "torque": "100 lb-ft / 136 Nm",
+        "induction": "NA", "fuel_system": "MPFI",
+        "compression": "10.1:1",
+        "bore": "79.0 mm / 3.11 in", "stroke": "76.4 mm / 3.01 in",
+        "head": "SOHC", "valvetrain": "16v", "timing": "belt",
+        "redline": "6500 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SL/SM",
+        "coolant": "Subaru Super Coolant",
+        "plug": "NGK BKR5E-11", "gap": "0.043 in / 1.1 mm",
+        "notes": "JDM Impreza 1.5i",
+        "source_1": "Subaru JDM FSM", "source_2": "AMSOIL",
+        "confidence": "medium"
+    },
+    # EJ15 (1.5L early JDM)
+    "EJ15": {
+        "family": "EJ", "phase": "Phase 1",
+        "displacement": "1.5 L / 1493 cc",
+        "power": "97 hp / 72.3 kW",
+        "torque": "98 lb-ft / 133 Nm",
+        "induction": "NA", "fuel_system": "MPFI",
+        "compression": "9.7:1",
+        "bore": "87.9 mm / 3.46 in", "stroke": "61.5 mm / 2.42 in",
+        "head": "SOHC", "valvetrain": "16v", "timing": "belt",
+        "redline": "6500 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SJ",
+        "coolant": "Subaru coolant 50/50",
+        "plug": "NGK BKR5E-11", "gap": "0.043 in / 1.1 mm",
+        "notes": "Early JDM Impreza 1.5",
+        "source_1": "Subaru JDM FSM", "source_2": "AMSOIL",
+        "confidence": "medium"
+    },
+    # EJ16 (1.6L JDM)
+    "EJ16": {
+        "family": "EJ", "phase": "Phase 1",
+        "displacement": "1.6 L / 1597 cc",
+        "power": "100 hp / 74.6 kW",
+        "torque": "103 lb-ft / 140 Nm",
+        "induction": "NA", "fuel_system": "MPFI",
+        "compression": "9.8:1",
+        "bore": "87.9 mm / 3.46 in", "stroke": "65.8 mm / 2.59 in",
+        "head": "SOHC", "valvetrain": "16v", "timing": "belt",
+        "redline": "6500 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SJ",
+        "coolant": "Subaru coolant 50/50",
+        "plug": "NGK BKR5E-11", "gap": "0.043 in / 1.1 mm",
+        "notes": "JDM Impreza 1.6",
+        "source_1": "Subaru JDM FSM", "source_2": "AMSOIL",
+        "confidence": "medium"
+    },
+    # FB16 (1.6L JDM Levorg/XV)
+    "FB16": {
+        "family": "FB", "phase": "",
+        "displacement": "1.6 L / 1599 cc",
+        "power": "115 hp / 85.8 kW",
+        "torque": "108 lb-ft / 146 Nm",
+        "induction": "NA", "fuel_system": "MPFI",
+        "compression": "11.0:1",
+        "bore": "78.8 mm / 3.10 in", "stroke": "82.0 mm / 3.23 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "6200 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SN",
+        "coolant": "Subaru Super Coolant (blue)",
+        "plug": "NGK SILZKAR7B11", "gap": "0.043 in / 1.1 mm",
+        "notes": "JDM XV/Impreza 1.6i",
+        "source_1": "Subaru JDM FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # FB16 DIT (1.6L Turbo - Levorg)
+    "FB16T": {
+        "family": "FB", "phase": "",
+        "displacement": "1.6 L / 1599 cc",
+        "power": "170 hp / 126.8 kW",
+        "torque": "184 lb-ft / 250 Nm",
+        "induction": "Turbo (DIT)", "fuel_system": "DI",
+        "compression": "11.0:1",
+        "bore": "78.8 mm / 3.10 in", "stroke": "82.0 mm / 3.23 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "5600 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SN",
+        "coolant": "Subaru Super Coolant (blue)",
+        "plug": "NGK SILZKAR8B11", "gap": "0.031 in / 0.8 mm",
+        "notes": "Levorg 1.6GT DIT; compact turbo",
+        "source_1": "Subaru Levorg FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # CB18 (1.8L Turbo - New Levorg/Outback/Forester 2020+)
+    "CB18": {
+        "family": "CB", "phase": "",
+        "displacement": "1.8 L / 1795 cc",
+        "power": "177 hp / 132.0 kW",
+        "torque": "221 lb-ft / 300 Nm",
+        "induction": "Turbo (DIT)", "fuel_system": "DI (Lean burn)",
+        "compression": "10.4:1",
+        "bore": "80.6 mm / 3.17 in", "stroke": "88.0 mm / 3.46 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "5600 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SP",
+        "coolant": "Subaru Super Coolant (blue)",
+        "plug": "NGK SILZKAR8D7S", "gap": "0.028 in / 0.7 mm",
+        "notes": "New lean-burn DIT; Levorg/Outback/Forester STI Sport",
+        "source_1": "Subaru Levorg 2nd Gen FSM", "source_2": "Subaru Media",
+        "confidence": "high"
+    },
+    # EJ20G (2.0L Turbo Phase 1 - GC8 WRX 1992-1996)
+    "EJ20G": {
+        "family": "EJ", "phase": "Phase 1",
+        "displacement": "2.0 L / 1994 cc",
+        "power": "220 hp / 164.0 kW",
+        "torque": "203 lb-ft / 275 Nm",
+        "induction": "Turbo", "fuel_system": "MPFI",
+        "compression": "8.0:1",
+        "bore": "92.0 mm / 3.62 in", "stroke": "75.0 mm / 2.95 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "belt",
+        "redline": "7500 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SL",
+        "coolant": "Subaru coolant 50/50",
+        "plug": "NGK PFR6B", "gap": "0.031 in / 0.8 mm",
+        "notes": "1st gen WRX turbo; TD05H turbo",
+        "source_1": "Subaru JDM WRX FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # EJ20K (2.0L Turbo Phase 1.5 - GC8 WRX/STI 1996-2000)
+    "EJ20K": {
+        "family": "EJ", "phase": "Phase 1.5",
+        "displacement": "2.0 L / 1994 cc",
+        "power": "280 hp / 208.8 kW",
+        "torque": "260 lb-ft / 353 Nm",
+        "induction": "Turbo", "fuel_system": "MPFI",
+        "compression": "8.0:1",
+        "bore": "92.0 mm / 3.62 in", "stroke": "75.0 mm / 2.95 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "belt",
+        "redline": "8000 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SL",
+        "coolant": "Subaru Super Coolant",
+        "plug": "NGK PFR6B", "gap": "0.031 in / 0.8 mm",
+        "notes": "STI Version III-VI; IHI VF28 turbo; semi-closed deck",
+        "source_1": "Subaru JDM STI FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # EJ206 (2.0L Twin Turbo - Legacy BH/BE)
+    "EJ206": {
+        "family": "EJ", "phase": "Phase 2",
+        "displacement": "2.0 L / 1994 cc",
+        "power": "260 hp / 193.9 kW",
+        "torque": "253 lb-ft / 343 Nm",
+        "induction": "Twin Turbo", "fuel_system": "MPFI",
+        "compression": "8.5:1",
+        "bore": "92.0 mm / 3.62 in", "stroke": "75.0 mm / 2.95 in",
+        "head": "DOHC", "valvetrain": "16v AVCS", "timing": "belt",
+        "redline": "7000 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SM",
+        "coolant": "Subaru Super Coolant",
+        "plug": "NGK PFR6B", "gap": "0.031 in / 0.8 mm",
+        "notes": "Legacy GT-B twin turbo; sequential turbos",
+        "source_1": "Subaru Legacy BE/BH FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # EJ208 (2.0L Twin Turbo Phase 2 - Legacy BH/BE late)
+    "EJ208": {
+        "family": "EJ", "phase": "Phase 2",
+        "displacement": "2.0 L / 1994 cc",
+        "power": "280 hp / 208.8 kW",
+        "torque": "268 lb-ft / 363 Nm",
+        "induction": "Twin Turbo", "fuel_system": "MPFI",
+        "compression": "8.5:1",
+        "bore": "92.0 mm / 3.62 in", "stroke": "75.0 mm / 2.95 in",
+        "head": "DOHC", "valvetrain": "16v AVCS", "timing": "belt",
+        "redline": "7500 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SM",
+        "coolant": "Subaru Super Coolant",
+        "plug": "NGK PFR6B", "gap": "0.031 in / 0.8 mm",
+        "notes": "Legacy B4 RSK twin turbo; revised ECU",
+        "source_1": "Subaru Legacy BE/BH FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # EJ20X (2.0L Single Turbo - Legacy BL/BP)
+    "EJ20X": {
+        "family": "EJ", "phase": "Phase 2",
+        "displacement": "2.0 L / 1994 cc",
+        "power": "250 hp / 186.4 kW",
+        "torque": "243 lb-ft / 330 Nm",
+        "induction": "Turbo", "fuel_system": "MPFI",
+        "compression": "9.0:1",
+        "bore": "92.0 mm / 3.62 in", "stroke": "75.0 mm / 2.95 in",
+        "head": "DOHC", "valvetrain": "16v AVCS", "timing": "belt",
+        "redline": "6500 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SM",
+        "coolant": "Subaru Super Coolant",
+        "plug": "NGK PFR6G", "gap": "0.031 in / 0.8 mm",
+        "notes": "Legacy 2.0GT; single VF38 turbo",
+        "source_1": "Subaru Legacy BL/BP FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # EJ20Y (2.0L Turbo Spec.B - Legacy BL/BP)
+    "EJ20Y": {
+        "family": "EJ", "phase": "Phase 2",
+        "displacement": "2.0 L / 1994 cc",
+        "power": "265 hp / 197.6 kW",
+        "torque": "257 lb-ft / 348 Nm",
+        "induction": "Turbo", "fuel_system": "MPFI",
+        "compression": "9.5:1",
+        "bore": "92.0 mm / 3.62 in", "stroke": "75.0 mm / 2.95 in",
+        "head": "DOHC", "valvetrain": "16v Dual AVCS", "timing": "belt",
+        "redline": "7000 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SM",
+        "coolant": "Subaru Super Coolant",
+        "plug": "NGK PFR6G", "gap": "0.031 in / 0.8 mm",
+        "notes": "Legacy Spec.B; VF44 turbo; 6MT",
+        "source_1": "Subaru Legacy Spec.B FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # EZ30R (3.0L H6 Spec.B - higher power)
+    "EZ30R": {
+        "family": "EZ", "phase": "",
+        "displacement": "3.0 L / 3000 cc",
+        "power": "245 hp / 182.7 kW",
+        "torque": "219 lb-ft / 297 Nm",
+        "induction": "NA", "fuel_system": "MPFI",
+        "compression": "11.0:1",
+        "bore": "89.2 mm / 3.51 in", "stroke": "80.0 mm / 3.15 in",
+        "head": "DOHC", "valvetrain": "24v Dual AVCS", "timing": "chain",
+        "redline": "6800 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SM/SN",
+        "coolant": "Subaru Super Coolant",
+        "plug": "NGK ILFR6B", "gap": "0.031 in / 0.8 mm",
+        "notes": "Legacy 3.0R Spec.B; high compression",
+        "source_1": "Subaru Legacy 3.0R FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # EJ22 Turbo (22B STI)
+    "EJ22T": {
+        "family": "EJ", "phase": "Phase 1",
+        "displacement": "2.2 L / 2212 cc",
+        "power": "280 hp / 208.8 kW",
+        "torque": "267 lb-ft / 362 Nm",
+        "induction": "Turbo", "fuel_system": "MPFI",
+        "compression": "8.0:1",
+        "bore": "96.9 mm / 3.81 in", "stroke": "75.0 mm / 2.95 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "belt",
+        "redline": "8000 rpm",
+        "oil_visc": "5W-30", "oil_spec": "API SL",
+        "coolant": "Subaru Super Coolant",
+        "plug": "NGK PFR6B", "gap": "0.031 in / 0.8 mm",
+        "notes": "22B STI engine; 400 made; closed deck",
+        "source_1": "Subaru 22B FSM", "source_2": "AMSOIL",
+        "confidence": "high"
+    },
+    # 1NR-FE (Toyota - Trezia)
+    "1NR-FE": {
+        "family": "Toyota", "phase": "",
+        "displacement": "1.3 L / 1329 cc",
+        "power": "95 hp / 70.8 kW",
+        "torque": "89 lb-ft / 121 Nm",
+        "induction": "NA", "fuel_system": "Dual VVT-i",
+        "compression": "11.5:1",
+        "bore": "72.5 mm / 2.85 in", "stroke": "80.5 mm / 3.17 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "6400 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SN",
+        "coolant": "Toyota Super Long Life",
+        "plug": "DENSO SC20HR11", "gap": "0.043 in / 1.1 mm",
+        "notes": "Toyota 1NR-FE; Trezia rebadge",
+        "source_1": "Toyota FSM", "source_2": "AMSOIL",
+        "confidence": "medium"
+    },
+    # 1NZ-FE (Toyota - Trezia 1.5)
+    "1NZ-FE": {
+        "family": "Toyota", "phase": "",
+        "displacement": "1.5 L / 1497 cc",
+        "power": "105 hp / 78.3 kW",
+        "torque": "103 lb-ft / 140 Nm",
+        "induction": "NA", "fuel_system": "VVT-i",
+        "compression": "10.5:1",
+        "bore": "75.0 mm / 2.95 in", "stroke": "84.7 mm / 3.33 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "6000 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SN",
+        "coolant": "Toyota Super Long Life",
+        "plug": "DENSO K16R-U11", "gap": "0.043 in / 1.1 mm",
+        "notes": "Toyota 1NZ-FE; Trezia rebadge",
+        "source_1": "Toyota FSM", "source_2": "AMSOIL",
+        "confidence": "medium"
+    },
+    # FB20 Hybrid
+    "FB20H": {
+        "family": "FB", "phase": "",
+        "displacement": "2.0 L / 1995 cc",
+        "power": "148 hp / 110.4 kW",
+        "torque": "145 lb-ft / 197 Nm",
+        "induction": "NA + e-BOXER", "fuel_system": "DI",
+        "compression": "12.5:1",
+        "bore": "84.0 mm / 3.31 in", "stroke": "90.0 mm / 3.54 in",
+        "head": "DOHC", "valvetrain": "16v", "timing": "chain",
+        "redline": "6200 rpm",
+        "oil_visc": "0W-20", "oil_spec": "API SN/SP",
+        "coolant": "Subaru Super Coolant (blue)",
+        "plug": "NGK SILZKAR7B11", "gap": "0.043 in / 1.1 mm",
+        "notes": "e-BOXER hybrid; XV/Forester Advance; +13hp motor",
+        "source_1": "Subaru XV FSM", "source_2": "Subaru Media",
         "confidence": "high"
     },
 }
-
-def get_engine_base(engine_code):
+def get_engine_base(engine_code, model, year_val, trim=""):
     if not engine_code: return ""
     code = engine_code.strip()
+    
+    # Direct mappings for specific codes
+    direct_map = {
+        # Toyota OEM
+        "1NR-FE": "1NR-FE", "1NZ-FE": "1NZ-FE",
+        # Kei engines
+        "EN07": "EN07", "EN05": "EN05",
+        "KF": "KF",
+        # JDM-specific EJ
+        "EJ20G": "EJ20G", "EJ20K": "EJ20K", 
+        "EJ206": "EJ206", "EJ208": "EJ208",
+        "EJ20X": "EJ20X", "EJ20Y": "EJ20Y",
+        # Other JDM
+        "EL15": "EL15", "EF10": "EF10",
+        "EZ30R": "EZ30R",
+        # FA/FB variants
+        "FB16": "FB16", "CB18": "CB18",
+    }
+    for pattern, result in direct_map.items():
+        if pattern in code:
+            return result
+    
+    # Handle Supercharged/Turbo variants
+    if "EN07" in code:
+        if "Supercharged" in code or "SC" in code:
+            return "EN07S"
+        return "EN07"
+    
+    if "KF" in code:
+        if "Turbo" in code:
+            return "KFT"
+        return "KF"
+    
+    if "FB16" in code:
+        if "Turbo" in code or "DIT" in code:
+            return "FB16T"
+        return "FB16"
+    
+    if "FB20" in code:
+        if "Hybrid" in code:
+            return "FB20H"
+    
+    # 5-char codes check for USDM
     patterns = [
         ("EA71", "EA71"), ("EA82T", "EA82T"), ("EA82", "EA82"), ("EA81", "EA81"),
         ("EF12", "EF12"), ("ER27", "ER27"), ("EG33", "EG33"),
-        ("FA24", "FA24"), ("FA20", "FA20"), ("FB25", "FB25"), ("FB20", "FB20"),
-        ("EZ36", "EZ36"), ("EZ30", "EZ30"),
+        ("Electric", "Electric"),
         ("EJ257", "EJ257"), ("EJ255", "EJ255"), ("EJ207", "EJ207"), ("EJ205", "EJ205"),
-        ("EJ253", "EJ253"), ("EJ252", "EJ253"), ("EJ251", "EJ251"), ("EJ25D", "EJ25D"), ("EJ25", "EJ25"),
-        ("EJ22T", "EJ22T"), ("EJ22", "EJ22"), ("EJ18", "EJ18"), ("EJ20", "EJ20"),
-        ("EJ15", "EJ18"), ("EJ16", "EJ18"),
+        ("EJ253", "EJ253"), ("EJ252", "EJ253"), ("EJ251", "EJ251"), ("EJ25D", "EJ25D"), ("EJ25", "EJ253"),
+        ("EJ22T", "EJ22T"), ("EJ22", "EJ22E"), ("EJ18", "EJ18E"),
+        ("EJ15", "EJ15"), ("EJ16", "EJ16"),  # JDM specific, map to themselves
     ]
     for pattern, result in patterns:
         if pattern in code:
-            if pattern == "EJ22" and "Turbo" in code: return "EJ22T"
+            if pattern == "EJ20" and "5" in code: return "EJ205"
+            if pattern == "EJ20" and "7" in code: return "EJ207"
+            if pattern == "EJ20" and "8" in code: return "EJ208"
+            if pattern == "EJ20" and "6" in code: return "EJ206"
+            if pattern == "EJ20" and "X" in code: return "EJ20X"
+            if pattern == "EJ20" and "Y" in code: return "EJ20Y"
+            if pattern == "EJ20" and "K" in code: return "EJ20K"
+            if pattern == "EJ20" and "G" in code: return "EJ20G"
             return result
+    
+    # Handle EJ20 variants based on trim/year
+    if "EJ20" in code:
+        if "Turbo" in code:
+            try:
+                y = int(year_val)
+            except:
+                y = 0
+            if y >= 2000:
+                return "EJ205"  # GD WRX
+            elif y >= 1996:
+                return "EJ20K"  # GC8 late
+            else:
+                return "EJ20G"  # GC8 early
+        return "EJ20G"  # Default turbo
+    
+    # Dynamic 5-char mapping for EZ/FA/FB
+    if "EZ36" in code: return "EZ36D"
+    if "EZ30" in code:
+        if "R" in code or "Spec" in trim.upper():
+            return "EZ30R"
+        return "EZ30D"
+    
+    if "FA20" in code:
+        # FA20F (Turbo) vs FA20D (NA)
+        if "BRZ" in model: return "FA20D"
+        if "WRX" in model or "Forester" in model or "Levorg" in model: return "FA20F"
+        return "FA20D"
+    
+    if "FA24" in code:
+        # FA24F (Turbo) vs FA24D (NA)
+        if "BRZ" in model or "GR86" in model: return "FA24D"
+        return "FA24F"
+    
+    try:
+        y = int(year_val)
+    except:
+        y = 0
+        
+    if "FB20" in code:
+        if "Hybrid" in code:
+            return "FB20H"
+        # FB20B (Port) vs FB20D (DI)
+        if "Crosstrek" in model or "XV" in model:
+            if y >= 2018: return "FB20D"
+            else: return "FB20B"
+        if "Impreza" in model:
+            if y >= 2017: return "FB20D"
+            else: return "FB20B"
+        if "Forester" in model:
+            if y >= 2019: return "FB20D"
+            pass
+        if y >= 2017: return "FB20D"
+        return "FB20B"
+
+    if "FB25" in code:
+        # FB25B (Port) vs FB25D (DI)
+        if "Forester" in model:
+            if y >= 2019: return "FB25D"
+            else: return "FB25B"
+        if "Legacy" in model or "Outback" in model:
+            if y >= 2020: return "FB25D"
+            else: return "FB25B"
+        if "Crosstrek" in model or "XV" in model: return "FB25D"
+        if "Impreza" in model: return "FB25D"
+        if "Exiga" in model: return "FB25B"
+        
+        if y >= 2019: return "FB25D"
+        return "FB25B"
+    
+    if "CB18" in code:
+        return "CB18"
+
     return ""
+
 
 def extract_market(trim):
     t = trim.upper()
@@ -510,7 +1160,7 @@ def create_row(v):
     engine_code_raw = v.get("engineCode", "")
     market = extract_market(trim)
     
-    eng = get_engine_base(engine_code_raw)
+    eng = get_engine_base(engine_code_raw, model, year, trim)
     specs = ENGINE_SPECS.get(eng, {})
     
     row = {
@@ -519,6 +1169,7 @@ def create_row(v):
         "engine_family": specs.get("family", ""),
         "engine_phase": specs.get("phase", ""),
         "displacement": specs.get("displacement", ""),
+        "cyl_config": specs.get("cyl_config", infer_cyl_config(specs.get("family", ""))),
         "power": specs.get("power", ""),
         "torque": specs.get("torque", ""),
         "induction": specs.get("induction", ""),
