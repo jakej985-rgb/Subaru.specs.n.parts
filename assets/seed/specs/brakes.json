@@ -576,48 +576,45 @@
     "source": "Service Manual"
   },
   {
-    "id": "s_brake_front_forester_gen2",
+    "id": "s_brake_torque_caliper_front_sti_brembo",
     "category": "Brakes",
-    "title": "Front Rotor (Forester 2003-2008)",
-    "body": "Diameter: 294mm (11.6\"). Vented.",
-    "tags": "2003,2004,2005,2006,2007,2008,forester,brakes,front,rotor",
-    "updatedAt": "2026-01-13T00:00:00Z",
-    "verified": true
+    "title": "Front Caliper Mounting Bolt Torque",
+    "body": "80 ft-lbs (108 Nm)",
+    "tags": "2004,2005,2006,2007,brakes,brembo,caliper,front,gd,sti,torque,wrx",
+    "updatedAt": "2026-01-14T00:00:00Z",
+    "verified": true,
+    "source": "Community Consensus / Service Manual (Corrected)",
+    "notes": "FSM lists 114 ft-lbs (155 Nm), which is widely reported to strip threads. 80 ft-lbs is recommended."
   },
   {
-    "id": "s_brake_rear_forester_gen2_disc",
+    "id": "s_brake_torque_caliper_rear_sti_brembo",
     "category": "Brakes",
-    "title": "Rear Rotor (Forester 2003-2008 XS/XT)",
-    "body": "Diameter: 266mm (10.5\"). Solid.",
-    "tags": "2003,2004,2005,2006,2007,2008,forester,brakes,rear,rotor,disc",
-    "updatedAt": "2026-01-13T00:00:00Z",
-    "verified": true
+    "title": "Rear Caliper Mounting Bolt Torque",
+    "body": "47.9 ft-lbs (65 Nm)",
+    "tags": "2004,2005,2006,2007,brakes,brembo,caliper,gd,rear,sti,torque,wrx",
+    "updatedAt": "2026-01-14T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
   },
   {
-    "id": "s_brake_rear_forester_gen2_drum",
+    "id": "s_brake_torque_bleeder_brembo",
     "category": "Brakes",
-    "title": "Rear Drum (Forester 2003-2008 X)",
-    "body": "Diameter: 10.0\". Drum.",
-    "tags": "2003,2004,2005,2006,2007,2008,forester,brakes,rear,drum",
-    "updatedAt": "2026-01-13T00:00:00Z",
-    "verified": true
+    "title": "Brembo Bleeder Screw Torque",
+    "body": "13.3 ft-lbs (18 Nm)",
+    "tags": "2004,2005,2006,2007,bleeder,brakes,brembo,gd,sti,torque",
+    "updatedAt": "2026-01-14T00:00:00Z",
+    "verified": true,
+    "source": "FSM",
+    "notes": "Careful: Aluminum threads. Do not over-torque."
   },
   {
-    "id": "s_brake_front_impreza_gen1_l",
+    "id": "s_brake_torque_banjo_bolt_gd",
     "category": "Brakes",
-    "title": "Front Rotor (Impreza 1993-2001 L/Base)",
-    "body": "Diameter: 242mm. Vented.",
-    "tags": "1993,1994,1995,1996,1997,1998,1999,2000,2001,impreza,brakes,front,rotor,l,base",
-    "updatedAt": "2026-01-13T00:00:00Z",
-    "verified": true
-  },
-  {
-    "id": "s_brake_front_impreza_gen1_rs",
-    "category": "Brakes",
-    "title": "Front Rotor (Impreza 1998-2001 2.5RS)",
-    "body": "Diameter: 277mm (10.9\"). Vented.",
-    "tags": "1998,1999,2000,2001,impreza,brakes,front,rotor,rs",
-    "updatedAt": "2026-01-13T00:00:00Z",
-    "verified": true
+    "title": "Brake Hose Banjo Bolt Torque",
+    "body": "13 ft-lbs (18 Nm)",
+    "tags": "2002,2003,2004,2005,2006,2007,banjo,brakes,gd,gg,impreza,sti,torque,wrx",
+    "updatedAt": "2026-01-14T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
   }
 ]
