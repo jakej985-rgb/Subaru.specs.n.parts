@@ -264,5 +264,14 @@
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Catalog"
+  },
+  {
+    "id": "s_battery_forester_gen2",
+    "category": "Battery",
+    "title": "Battery Group Size (Forester 2003-2008)",
+    "body": "Group 35. Min CCA: 550.",
+    "tags": "2003,2004,2005,2006,2007,2008,forester,battery,electrical",
+    "updatedAt": "2026-01-13T00:00:00Z",
+    "verified": true
   }
 ]

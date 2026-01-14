@@ -236,5 +236,14 @@
     "updatedAt": "2026-01-07T00:00:00Z",
     "verified": true,
     "source": "Service Manual"
+  },
+  {
+    "id": "s_fuel_tank_forester_gen2",
+    "category": "Fuel",
+    "title": "Fuel Tank Capacity (Forester 2003-2008)",
+    "body": "15.9 Gallons (60 Liters).",
+    "tags": "2003,2004,2005,2006,2007,2008,forester,capacity,fuel,tank",
+    "updatedAt": "2026-01-13T00:00:00Z",
+    "verified": true
   }
 ]

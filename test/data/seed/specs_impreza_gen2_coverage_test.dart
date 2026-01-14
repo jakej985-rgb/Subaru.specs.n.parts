@@ -145,15 +145,26 @@ void main() {
     });
 
     test('Has Impreza Gen2 Timing Belt (105k)', () {
-      final spec = maintSpecs.firstWhere(
-        (s) => s['id'] == 's_maint_timing_belt_imp_gen2',
+      // Maintenance.json is Wide format (one row per vehicle)
+      final vehicleRow = maintSpecs.firstWhere(
+        (s) =>
+            s['year'] == 2004 &&
+            s['model'] == 'Impreza' &&
+            s['trim'].toString().contains('WRX') &&
+            s['market'] == 'USDM',
         orElse: () => null,
       );
-      expect(spec, isNotNull, reason: 'Missing s_maint_timing_belt_imp_gen2');
-      expect(spec['body'], contains('105,000 Miles'));
+      expect(
+        vehicleRow,
+        isNotNull,
+        reason: 'Maintenance row for 2004 WRX not found in maintenance.json',
+      );
+      // Key is 'drive_belt_timing' in the new sync
+      expect(vehicleRow['drive_belt_timing'], contains('105,000'));
     });
 
     test('Has Impreza Gen2 Fuel Tank (13.2 gal)', () {
+      // ... existing legacy test (fuel.json not touched)
       final spec = fuelSpecs.firstWhere(
         (s) => s['id'] == 's_fuel_tank_imp_gen2',
         orElse: () => null,
@@ -163,6 +174,7 @@ void main() {
     });
 
     test('Has Impreza Gen2 RS Tires (16")', () {
+      // ... existing legacy test (tires.json not touched)
       final spec = tireSpecs.firstWhere(
         (s) => s['id'] == 's_tire_size_imp_gen2_rs',
         orElse: () => null,
@@ -171,13 +183,22 @@ void main() {
       expect(spec['body'], contains('205/55R16'));
     });
 
-    test('Has Impreza Gen2 Headlight (9007)', () {
+    test('Has Impreza Gen2 Headlight (H4/9003)', () {
+      // New format: Search by YMMT
       final spec = bulbSpecs.firstWhere(
-        (s) => s['id'] == 's_bulb_headlight_low_imp_gen2',
+        (s) =>
+            s['year'] == 2004 &&
+            s['model'] == 'Impreza' &&
+            s['trim'].toString().contains('WRX') &&
+            s['function_key'] == 'headlight_low',
         orElse: () => null,
       );
-      expect(spec, isNotNull, reason: 'Missing s_bulb_headlight_imp_gen2');
-      expect(spec['body'], contains('9007'));
+      expect(
+        spec,
+        isNotNull,
+        reason: 'Missing 2004 Impreza WRX headlight_low row',
+      );
+      expect(spec['bulb_code'], contains('H4'));
     });
   });
 }

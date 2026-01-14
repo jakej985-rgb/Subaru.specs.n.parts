@@ -22807,5 +22807,44 @@
     "market": "JDM",
     "id": "v_xv_2025_advance_jdm",
     "updatedAt": "2026-01-10T00:00:00Z"
+  },
+  {
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Outback",
+    "trim": "3.6R (US)",
+    "body": "Crossover",
+    "engineCode": "EZ36 H6",
+    "drivetrain": "AWD",
+    "transmission": "5EAT",
+    "market": "USDM",
+    "id": "v_obk_2012_3_6r_us",
+    "updatedAt": "2026-01-13T00:00:00Z"
+  },
+  {
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Outback",
+    "trim": "3.6R Limited (US)",
+    "body": "Crossover",
+    "engineCode": "EZ36 H6",
+    "drivetrain": "AWD",
+    "transmission": "5EAT",
+    "market": "USDM",
+    "id": "v_obk_2012_3_6r_limited_us",
+    "updatedAt": "2026-01-13T00:00:00Z"
+  },
+  {
+    "year": 2012,
+    "make": "Subaru",
+    "model": "Outback",
+    "trim": "3.6R Premium (US)",
+    "body": "Crossover",
+    "engineCode": "EZ36 H6",
+    "drivetrain": "AWD",
+    "transmission": "5EAT",
+    "market": "USDM",
+    "id": "v_obk_2012_3_6r_premium_us",
+    "updatedAt": "2026-01-13T00:00:00Z"
   }
 ]
