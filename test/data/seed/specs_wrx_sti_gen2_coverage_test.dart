@@ -6,12 +6,17 @@ import 'package:path/path.dart' as p;
 void main() {
   group('STI Gen 2 (2004-2007) Coverage Specs', () {
     late List<Map<String, dynamic>> fluidSpecs;
+    late List<Map<String, dynamic>> torqueSpecs;
 
     setUpAll(() {
       final seedDir = p.join(Directory.current.path, 'assets', 'seed', 'specs');
 
       final fluidsFile = File(p.join(seedDir, 'fluids.json'));
       fluidSpecs = (json.decode(fluidsFile.readAsStringSync()) as List)
+          .cast<Map<String, dynamic>>();
+
+      final torqueFile = File(p.join(seedDir, 'torque_specs.json'));
+      torqueSpecs = (json.decode(torqueFile.readAsStringSync()) as List)
           .cast<Map<String, dynamic>>();
     });
 
@@ -65,6 +70,34 @@ void main() {
       );
       expect(spec, isNotEmpty, reason: 'Missing diff spec');
       expect(spec['rear_diff_fluid_qty'], isNotNull);
+    });
+
+    test('Has 2004 STI 6MT Drain Plug Torque with Gasket Variant', () {
+      final spec = torqueSpecs.firstWhere(
+        (s) =>
+            s['year'] == 2004 &&
+            s['model'] == 'Impreza' &&
+            s['trim'] == 'WRX STI (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
+      );
+      expect(spec, isNotEmpty, reason: 'Missing 2004 STI torque specs');
+      expect(spec['manual_trans_drain_plug'], contains('Aluminum Gasket'));
+      expect(spec['manual_trans_drain_plug'], contains('Copper/Metal Gasket'));
+      expect(spec['notes'], contains('6MT drain torque varies'));
+    });
+
+    test('Has 2004 STI Lug Nut Torque Corrected', () {
+      final spec = torqueSpecs.firstWhere(
+        (s) =>
+            s['year'] == 2004 &&
+            s['model'] == 'Impreza' &&
+            s['trim'] == 'WRX STI (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
+      );
+      expect(spec, isNotEmpty, reason: 'Missing 2004 STI torque specs');
+      expect(spec['wheel_lug_nuts'], contains('65.7 ft-lb'));
     });
   });
 
