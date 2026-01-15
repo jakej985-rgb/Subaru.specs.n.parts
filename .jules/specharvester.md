@@ -19,3 +19,7 @@
 ## 2026-01-10 - VB WRX Brake Caliper Confusion
 **Learning:** The 2022+ WRX (VB) uses 316mm front rotors on most trims (Base/Premium/Limited/GT), similar in size to the old "Subaru 4-Pot" brakes or even the 2004 STI Brembos (326mm is close), but the caliper is a **2-piston floating** design, not a 4-piston fixed caliper. Previous data conflated these.
 **Action:** Added specific specs for VB WRX Front/Rear Rotors and Calipers (`s_brake_front_rotor_wrx_vb`, etc.) and clarified the `s_brake_4pot_front` entry to explicitly exclude the 2022+ WRX to prevent user confusion.
+
+## 2026-01-14 - 2004 STI Torque Specs & Gasket Nuance
+**Learning:** The 2004 STI 6MT drain plug torque is NOT a single value. It depends on the gasket: Aluminum (silver) takes 32.5 ft-lbs (44 Nm), while Copper/Metal (black/copper) takes 51.6 ft-lbs (70 Nm). Also, 2004 STI uses 5x100 hubs with a lower FSM lug torque (65.7 ft-lbs) compared to modern 89 ft-lbs.
+**Action:** Updated `torque_specs.json` for 2004 STI to explicitly call out the gasket-dependent torque for the transmission drain plug and the specific lug nut torque, preventing potential thread damage or leaks.
