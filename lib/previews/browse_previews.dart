@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:specsnparts/features/browse_engine/engine_flow_page.dart';
+import 'package:specsnparts/features/engines/all_engines_page.dart';
 import 'preview_wrappers.dart';
 
-@SubaruPreview(group: 'Browse', name: 'Engine Flow Page', size: Size(390, 844))
-Widget engineFlowPreview() {
-  return const EngineFlowPage();
+@SubaruPreview(group: 'Browse', name: 'All Engines Page', size: Size(390, 844))
+Widget allEnginesPreview() {
+  return const AllEnginesPage();
 }

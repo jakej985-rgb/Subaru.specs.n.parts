@@ -6,7 +6,7 @@ import 'package:specsnparts/features/settings/settings_page.dart';
 import 'package:specsnparts/features/part_lookup/part_lookup_page.dart';
 import 'package:specsnparts/features/specs/spec_list_page.dart';
 import 'package:specsnparts/features/browse_ymm/ymm_flow_page.dart';
-import 'package:specsnparts/features/browse_engine/engine_flow_page.dart';
+import 'package:specsnparts/features/engines/all_engines_page.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/features/specs_by_category/specs_by_category_hub_page.dart';
 import 'package:specsnparts/features/specs_by_category/category_year_picker_page.dart';
@@ -94,7 +94,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           ),
           GoRoute(
             path: 'browse/engine/all',
-            builder: (context, state) => const EngineFlowPage(),
+            builder: (context, state) => const AllEnginesPage(),
           ),
           GoRoute(
             path: 'global-search',
