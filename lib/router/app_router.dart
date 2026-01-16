@@ -13,6 +13,9 @@ import 'package:specsnparts/features/specs_by_category/category_year_picker_page
 import 'package:specsnparts/features/specs_by_category/category_year_results_page.dart';
 import 'package:specsnparts/features/global_search/global_search_overlay.dart';
 import 'package:specsnparts/features/comparison/comparison_page.dart';
+import 'package:specsnparts/features/engines/engine_family_page.dart';
+import 'package:specsnparts/features/engines/engine_motor_page.dart';
+import 'package:specsnparts/features/engines/engine_vehicle_results_page.dart';
 
 final goRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -87,6 +90,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           ),
           GoRoute(
             path: 'browse/engine',
+            redirect: (context, state) => '/engines',
+          ),
+          GoRoute(
+            path: 'browse/engine/all',
             builder: (context, state) => const EngineFlowPage(),
           ),
           GoRoute(
@@ -102,6 +109,33 @@ final goRouterProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: 'comparison',
             builder: (context, state) => const ComparisonPage(),
+          ),
+          // BoxerTree Engine Browser routes
+          GoRoute(
+            path: 'engines',
+            builder: (context, state) => const EngineFamilyPage(),
+            routes: [
+              GoRoute(
+                path: ':family',
+                builder: (context, state) {
+                  final family = state.pathParameters['family']!;
+                  return EngineMotorPage(family: family);
+                },
+                routes: [
+                  GoRoute(
+                    path: ':motor',
+                    builder: (context, state) {
+                      final family = state.pathParameters['family']!;
+                      final motor = state.pathParameters['motor']!;
+                      return EngineVehicleResultsPage(
+                        family: family,
+                        motor: motor,
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ],
           ),
         ],
       ),
