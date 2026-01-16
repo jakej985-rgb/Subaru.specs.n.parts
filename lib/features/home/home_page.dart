@@ -54,8 +54,7 @@ class HomePage extends StatelessWidget {
 
     // Estimate total content height:
     final totalCards = items.length;
-    final estimatedContentHeight =
-        headerHeightEstimate +
+    final estimatedContentHeight = headerHeightEstimate +
         (totalCards * scaledCardHeight) +
         ((totalCards - 1) * spacing) +
         150; // extra breathing room + search bar height
