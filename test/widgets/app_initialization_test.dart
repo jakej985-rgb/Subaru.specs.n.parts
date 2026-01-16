@@ -17,9 +17,7 @@ class FakeSeedRunner extends SeedRunner {
     await Future.delayed(const Duration(milliseconds: 100));
 
     // Insert test data directly
-    await db
-        .into(db.vehicles)
-        .insert(
+    await db.into(db.vehicles).insert(
           VehiclesCompanion(
             id: const Value('test_1'),
             year: const Value(2024),

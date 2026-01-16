@@ -305,4 +305,58 @@ void main() {
       }
     });
   });
+
+  group('STI Gen 2 (2004-2007) Torque Coverage', () {
+    late List<Map<String, dynamic>> torqueSpecs;
+
+    setUpAll(() {
+      final seedDir = p.join(Directory.current.path, 'assets', 'seed', 'specs');
+      final torqueFile = File(p.join(seedDir, 'torque_specs.json'));
+      torqueSpecs = (json.decode(torqueFile.readAsStringSync()) as List)
+          .cast<Map<String, dynamic>>();
+    });
+
+    test('Has STI Gen2 (2004) Corrected Lug Nut Torque', () {
+      final spec = torqueSpecs.firstWhere(
+        (s) =>
+            s['year'] == 2004 &&
+            s['model'] == 'Impreza' &&
+            s['trim'] == 'WRX STI (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
+      );
+      expect(spec, isNotEmpty, reason: 'Missing 2004 STI torque specs');
+      // Should be 90 Nm / 65.7 ft-lb, distinct from the generic 100-120 Nm
+      expect(spec['wheel_lug_nuts'], contains('65.7'));
+    });
+
+    test('Has STI Gen2 (2004) Front Caliper Bolt (Corrected)', () {
+      final spec = torqueSpecs.firstWhere(
+        (s) =>
+            s['year'] == 2004 &&
+            s['model'] == 'Impreza' &&
+            s['trim'] == 'WRX STI (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
+      );
+      expect(spec, isNotEmpty);
+      // Ensure we mention the Front vs Rear split and the safe value
+      expect(spec['brake_caliper_bracket_bolts'], contains('Front:'));
+      expect(spec['brake_caliper_bracket_bolts'], contains('80 ft-lb'));
+    });
+
+    test('Has STI Gen2 (2004) Trans Drain Gasket Note', () {
+      final spec = torqueSpecs.firstWhere(
+        (s) =>
+            s['year'] == 2004 &&
+            s['model'] == 'Impreza' &&
+            s['trim'] == 'WRX STI (US)' &&
+            s['market'] == 'USDM',
+        orElse: () => <String, dynamic>{},
+      );
+      expect(spec, isNotEmpty);
+      expect(spec['manual_trans_drain_plug'], contains('aluminum gasket'));
+      expect(spec['manual_trans_drain_plug'], contains('copper/metal'));
+    });
+  });
 }

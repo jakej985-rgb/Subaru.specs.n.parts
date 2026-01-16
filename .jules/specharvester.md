@@ -19,3 +19,7 @@
 ## 2026-01-10 - VB WRX Brake Caliper Confusion
 **Learning:** The 2022+ WRX (VB) uses 316mm front rotors on most trims (Base/Premium/Limited/GT), similar in size to the old "Subaru 4-Pot" brakes or even the 2004 STI Brembos (326mm is close), but the caliper is a **2-piston floating** design, not a 4-piston fixed caliper. Previous data conflated these.
 **Action:** Added specific specs for VB WRX Front/Rear Rotors and Calipers (`s_brake_front_rotor_wrx_vb`, etc.) and clarified the `s_brake_4pot_front` entry to explicitly exclude the 2022+ WRX to prevent user confusion.
+
+## 2026-01-17 - Torque Data Flattening & FSM Errors
+**Learning:** `torque_specs.json` uses a flat schema where fields like `brake_caliper_bracket_bolts` store single strings. However, vehicles like the STI have distinct Front vs. Rear torque values (e.g., 80 ft-lb vs 47.9 ft-lb). Additionally, the 2004 STI FSM has a dangerous error for front caliper bolts (stating 114 ft-lb, which damages threads).
+**Action:** Adopted a "Front: [val] | Rear: [val]" string format to encode split values within the flat schema. Explicitly noted the FSM error in the `notes` field to protect users from over-torquing.

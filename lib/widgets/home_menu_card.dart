@@ -40,8 +40,8 @@ class HomeMenuCard extends StatelessWidget {
                   child: Text(
                     title,
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      color: ThemeTokens.textPrimary,
-                    ),
+                          color: ThemeTokens.textPrimary,
+                        ),
                     textAlign: TextAlign.left,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,

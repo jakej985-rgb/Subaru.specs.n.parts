@@ -160,10 +160,10 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
           Text(
             'DATA MANAGEMENT',
             style: Theme.of(context).textTheme.labelSmall?.copyWith(
-              color: ThemeTokens.neonBlue,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.2,
-            ),
+                  color: ThemeTokens.neonBlue,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.2,
+                ),
           ),
           const SizedBox(height: 8),
           CarbonSurface(
@@ -211,10 +211,10 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
           Text(
             'ABOUT',
             style: Theme.of(context).textTheme.labelSmall?.copyWith(
-              color: ThemeTokens.neonBlue,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.2,
-            ),
+                  color: ThemeTokens.neonBlue,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1.2,
+                ),
           ),
           const SizedBox(height: 8),
           CarbonSurface(

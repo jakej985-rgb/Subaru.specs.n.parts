@@ -80,8 +80,8 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
   Future<void> _loadVehicles(int year, String model) async {
     final db = ref.read(appDbProvider);
     try {
-      final List<Vehicle> vehicles = await db.vehiclesDao
-          .getVehiclesByYearAndModel(year, model);
+      final List<Vehicle> vehicles =
+          await db.vehiclesDao.getVehiclesByYearAndModel(year, model);
       if (mounted && _selectedModel == model) {
         setState(() {
           _vehicles = vehicles;
@@ -246,13 +246,12 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                             // Favorite toggle
                             Consumer(
                               builder: (context, ref, _) {
-                                final isFav = ref
-                                    .watch(favoriteVehiclesProvider)
-                                    .any(
-                                      (fav) =>
-                                          '${fav.year}|${fav.model}|${fav.trim}' ==
-                                          '${v.year}|${v.model}|${v.trim}',
-                                    );
+                                final isFav =
+                                    ref.watch(favoriteVehiclesProvider).any(
+                                          (fav) =>
+                                              '${fav.year}|${fav.model}|${fav.trim}' ==
+                                              '${v.year}|${v.model}|${v.trim}',
+                                        );
                                 return InkWell(
                                   onTap: () {
                                     ref
@@ -331,7 +330,9 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                       const SizedBox(width: 16),
                       Text(
                         'View Specs',
-                        style: Theme.of(context).textTheme.titleMedium
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium
                             ?.copyWith(fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -349,7 +350,9 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                       const SizedBox(width: 16),
                       Text(
                         'View Parts',
-                        style: Theme.of(context).textTheme.titleMedium
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium
                             ?.copyWith(fontWeight: FontWeight.bold),
                       ),
                     ],

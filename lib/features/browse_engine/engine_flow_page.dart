@@ -92,8 +92,8 @@ class _EngineFlowPageState extends ConsumerState<EngineFlowPage> {
                 Text(
                   'No engine data available',
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: Theme.of(context).hintColor,
-                  ),
+                        color: Theme.of(context).hintColor,
+                      ),
                 ),
               ],
             ),
@@ -146,7 +146,9 @@ class _EngineFlowPageState extends ConsumerState<EngineFlowPage> {
                             ),
                             Text(
                               '${engineCounts[engine]} vehicles',
-                              style: Theme.of(context).textTheme.bodySmall
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall
                                   ?.copyWith(color: ThemeTokens.textMuted),
                             ),
                           ],
@@ -188,8 +190,8 @@ class _EngineFlowPageState extends ConsumerState<EngineFlowPage> {
             Text(
               'No vehicles found with $_selectedEngine',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                color: Theme.of(context).hintColor,
-              ),
+                    color: Theme.of(context).hintColor,
+                  ),
             ),
           ],
         ),
@@ -226,7 +228,9 @@ class _EngineFlowPageState extends ConsumerState<EngineFlowPage> {
                         const SizedBox(height: 4),
                         Text(
                           v.trim ?? 'Base',
-                          style: Theme.of(context).textTheme.bodySmall
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodySmall
                               ?.copyWith(color: ThemeTokens.textMuted),
                         ),
                       ],
