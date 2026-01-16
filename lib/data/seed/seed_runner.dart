@@ -24,7 +24,7 @@ class SeedRunner {
     // Version 12: Modern Era (GR/GV, BRZ, VA, Ascent, FA Series)
     // Version 17: Spec Cleanup (IDs, Units, Categories, Validation)
     // Version 18: Dynamic Tag Expansion (Years from Title)
-    const int kCurrentSeedVersion = 18;
+    const int kCurrentSeedVersion = 20;
     final int lastSeedVersion = prefs.getInt('seed_version') ?? 0;
 
     // Check old flag for legacy migration
@@ -79,20 +79,21 @@ class SeedRunner {
         return;
       }
 
-      final List<Spec> allSpecs = [];
       for (final file in files) {
-        final String response = await rootBundle.loadString(
-          'assets/seed/specs/$file',
-        );
-        final List<Spec> specs = await compute<String, List<Spec>>(
-          parseSpecs,
-          response,
-        );
-        allSpecs.addAll(specs);
+        try {
+          final String response = await rootBundle.loadString(
+            'assets/seed/specs/$file',
+          );
+          final List<Spec> specs = await compute<String, List<Spec>>(
+            parseSpecs,
+            response,
+          );
+          await db.specsDao.insertMultiple(specs);
+          debugPrint('Seeded ${specs.length} specs from $file.');
+        } catch (e) {
+          debugPrint('Error seeding $file: $e');
+        }
       }
-
-      await db.specsDao.insertMultiple(allSpecs);
-      debugPrint('Seeded ${allSpecs.length} specs from ${files.length} files.');
     } catch (e) {
       debugPrint('Error loading specs from split files: $e');
     }
@@ -273,17 +274,47 @@ List<Spec> _parseWideRow(Map<String, dynamic> map) {
     String category = 'Specs';
     String title = key.replaceAll('_', ' ').toUpperCase();
 
-    if (key.contains('oil') ||
+    if (key == 'power' || key == 'torque') {
+      category = 'Engine';
+    } else if (key.contains('torque') ||
+        key.contains('_plug') ||
+        key.contains('_bolt') ||
+        key.contains('lug_nut')) {
+      category = 'Torque';
+    } else if (key.contains('oil') ||
         key.contains('fluid') ||
         key.contains('coolant')) {
       category = 'Fluids';
     } else if (key.contains('filter') ||
         key.contains('belt') ||
-        key.contains('plug') ||
+        key.contains('spark_plug') ||
+        key.contains('plug_gap') ||
         key.contains('brake_')) {
       category = 'Maintenance';
-    } else if (key.contains('torque')) {
-      category = 'Torque';
+    } else if (key.contains('trans_') ||
+        key.contains('clutch_') ||
+        key.contains('cvt_')) {
+      category = 'Transmission';
+    } else if (key.contains('diff_')) {
+      category = 'Differential';
+    } else if (key.contains('wheel_') || key.contains('tire_')) {
+      category = 'Wheels';
+    } else if (key.contains('compression') ||
+        key.contains('displacement') ||
+        key.contains('bore') ||
+        key.contains('stroke') ||
+        key.contains('engine_') ||
+        key.contains('fuel_') ||
+        key.contains('valve_') ||
+        key.contains('cylinders')) {
+      category = 'Engine';
+    } else if (key.contains('weight') ||
+        key.contains('length') ||
+        key.contains('width') ||
+        key.contains('height') ||
+        key.contains('ground_clearance') ||
+        key.contains('wheelbase')) {
+      category = 'Dimensions';
     }
 
     rowSpecs.add(
@@ -301,13 +332,10 @@ List<Spec> _parseWideRow(Map<String, dynamic> map) {
 }
 
 String _buildTags(Map<String, dynamic> map) {
-  return [
-    map['year'],
-    map['make'],
-    map['model'],
-    map['trim'],
-    map['market'],
-  ].where((e) => e != null && e != 'n/a').join(',');
+  return [map['year'], map['make'], map['model'], map['trim'], map['market']]
+      .where((e) => e != null && e != 'n/a')
+      .map((e) => FitmentKey.norm(e.toString()))
+      .join(',');
 }
 
 String _enrichTagsWithYears(String currentTags, String title) {

@@ -16,48 +16,41 @@ class SubaruSpecsApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final init = ref.watch(appInitializationProvider);
+    final router = ref.watch(goRouterProvider);
 
-    return init.when(
-      data: (_) {
-        final router = ref.watch(goRouterProvider);
-        return MaterialApp.router(
-          title: 'Subaru Specs & Parts',
-          theme: AppTheme.darkTheme,
-          routerConfig: router,
-        );
-      },
-      loading: () => MaterialApp(
-        title: 'Subaru Specs & Parts',
-        theme: AppTheme.darkTheme,
-        home: const Scaffold(
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircularProgressIndicator(),
-                SizedBox(height: 16),
-                Text('Updating specifications database...'),
-              ],
-            ),
-          ),
-        ),
-      ),
-      error: (e, st) => MaterialApp(
-        title: 'Subaru Specs & Parts',
-        theme: AppTheme.darkTheme,
-        home: Scaffold(
-          body: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text(
-                'Critical Error initializing database:\n$e',
-                textAlign: TextAlign.center,
-                style: const TextStyle(color: Colors.red),
+    return MaterialApp.router(
+      title: 'Subaru Specs & Parts',
+      theme: AppTheme.darkTheme,
+      routerConfig: router,
+      builder: (context, child) {
+        return init.when(
+          data: (_) => child!,
+          loading: () => const Scaffold(
+            body: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircularProgressIndicator(),
+                  SizedBox(height: 16),
+                  Text('Updating specifications database...'),
+                ],
               ),
             ),
           ),
-        ),
-      ),
+          error: (e, st) => Scaffold(
+            body: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Text(
+                  'Critical Error initializing database:\n$e',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(color: Colors.red),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

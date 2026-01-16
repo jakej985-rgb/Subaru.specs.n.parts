@@ -106,7 +106,7 @@ void main() {
 
     test('Has Forester Gen2 Brakes', () {
       final spec = brakeSpecs.firstWhere(
-        (s) => s['id'] == 's_brake_front_forester_gen2',
+        (s) => s['id'] == 's_brake_front_rotor_for_gen2_na',
         orElse: () => null,
       );
       if (spec != null) {
@@ -118,7 +118,7 @@ void main() {
 
     test('Has Forester Gen2 Battery', () {
       final spec = battSpecs.firstWhere(
-        (s) => s['id'] == 's_battery_forester_gen2',
+        (s) => s['id'] == 's_battery_for_gen2',
         orElse: () => null,
       );
       if (spec != null) {
@@ -159,7 +159,7 @@ void main() {
 
     test('Has Forester Gen2 Oil Filter', () {
       final spec = filterSpecs.firstWhere(
-        (s) => s['id'] == 's_filter_oil_forester_gen2',
+        (s) => s['id'] == 's_filter_oil_for_gen2',
         orElse: () => null,
       );
       if (spec != null) {
@@ -183,7 +183,7 @@ void main() {
 
     test('Has Forester Gen2 Fuel Tank', () {
       final spec = fuelSpecs.firstWhere(
-        (s) => s['id'] == 's_fuel_tank_forester_gen2',
+        (s) => s['id'] == 's_fuel_tank_for_gen2',
         orElse: () => null,
       );
       if (spec != null) {
@@ -195,7 +195,7 @@ void main() {
 
     test('Has Forester Gen2 Tires', () {
       final spec = tireSpecs.firstWhere(
-        (s) => s['id'] == 's_tire_size_forester_gen2',
+        (s) => s['id'] == 's_tire_size_for_gen2_x',
         orElse: () => null,
       );
       if (spec != null) {

@@ -106,7 +106,7 @@ void main() {
 
     test('Has Impreza Gen1 Brakes', () {
       final spec = brakeSpecs.firstWhere(
-        (s) => s['id'] == 's_brake_front_impreza_gen1_rs',
+        (s) => s['id'] == 's_brake_front_rotor_impreza_gen1',
         orElse: () => null,
       );
       if (spec != null) {

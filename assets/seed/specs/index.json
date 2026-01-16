@@ -9,6 +9,7 @@
     "differential.json",
     "dimensions.json",
     "engine.json",
+    "engines.json",
     "filters.json",
     "fluids.json",
     "fuel.json",
@@ -19,6 +20,7 @@
     "swap_rules.json",
     "tires.json",
     "torque.json",
+    "torque_specs.json",
     "transmission.json",
     "wheels.json"
   ]
