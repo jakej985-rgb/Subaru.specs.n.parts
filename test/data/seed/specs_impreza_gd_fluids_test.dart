@@ -17,15 +17,19 @@ void main() {
       coolantSpecs = json.decode(coolantFile.readAsStringSync());
     });
 
-    test('Has Power Steering Fluid Type (Dexron III)', () {
-      final spec = fluidsSpecs.firstWhere(
+    Map<String, dynamic> findSti2004() {
+      return fluidsSpecs.firstWhere(
         (s) =>
             s['year'] == 2004 &&
             s['model'] == 'Impreza' &&
-            s['trim'] == 'WRX STI (US)' &&
+            (s['trim'] == 'WRX STI (US)' || s['trim'] == 'WRX STI Sedan (US)') &&
             s['market'] == 'USDM',
         orElse: () => <String, dynamic>{},
       );
+    }
+
+    test('Has Power Steering Fluid Type (Dexron III)', () {
+      final spec = findSti2004();
       if (spec.isNotEmpty &&
           spec['power_steering_fluid_unit'] != null &&
           spec['power_steering_fluid_unit'] != 'n/a') {
@@ -39,14 +43,7 @@ void main() {
     });
 
     test('Has Clutch Fluid Type (DOT 3/4)', () {
-      final spec = fluidsSpecs.firstWhere(
-        (s) =>
-            s['year'] == 2004 &&
-            s['model'] == 'Impreza' &&
-            s['trim'] == 'WRX STI (US)' &&
-            s['market'] == 'USDM',
-        orElse: () => <String, dynamic>{},
-      );
+      final spec = findSti2004();
       if (spec.isNotEmpty &&
           spec['clutch_hydraulic_fluid_unit'] != null &&
           spec['clutch_hydraulic_fluid_unit'] != 'n/a') {
@@ -58,31 +55,24 @@ void main() {
     });
 
     test('Has Intercooler Spray Tank Capacity (3.8L)', () {
-      final spec = fluidsSpecs.firstWhere(
-        (s) =>
-            s['year'] == 2004 &&
-            s['model'] == 'Impreza' &&
-            s['trim'] == 'WRX STI (US)' &&
-            s['market'] == 'USDM',
-        orElse: () => <String, dynamic>{},
-      );
-      final notes = spec['notes']?.toString().toLowerCase() ?? '';
-      if (notes.contains('intercooler') || notes.contains('spray')) {
-        expect(notes, contains('3.8'));
+      final spec = findSti2004();
+
+      // Check explicit field first
+      if (spec.containsKey('intercooler_spray_fluid_qty')) {
+         expect(spec['intercooler_spray_fluid_qty'], contains('3.8'));
       } else {
-        markTestSkipped('Intercooler spray spec not found in wide JSON');
+        // Fallback to notes check
+        final notes = spec['notes']?.toString().toLowerCase() ?? '';
+        if (notes.contains('intercooler') || notes.contains('spray')) {
+          expect(notes, contains('3.8'));
+        } else {
+          fail('Intercooler spray spec not found in explicit field or notes');
+        }
       }
     });
 
     test('Has Washer Tank Capacity (4.0L)', () {
-      final spec = fluidsSpecs.firstWhere(
-        (s) =>
-            s['year'] == 2004 &&
-            s['model'] == 'Impreza' &&
-            s['trim'] == 'WRX STI (US)' &&
-            s['market'] == 'USDM',
-        orElse: () => <String, dynamic>{},
-      );
+      final spec = findSti2004();
       if (spec.isNotEmpty &&
           spec['washer_fluid_qty'] != null &&
           spec['washer_fluid_qty'] != 'n/a') {
@@ -90,6 +80,22 @@ void main() {
       } else {
         markTestSkipped('Washer tank capacity missing in wide JSON');
       }
+    });
+
+    test('Has Correct Engine Oil Capacity (4.2 qt / 4.0 L)', () {
+      final spec = findSti2004();
+      expect(spec, isNotEmpty, reason: '2004 STI spec not found');
+      // "w/ filter: 4.2 qt / 4.0 L | dry fill: 4.8 qt / 4.5 L"
+      expect(spec['engine_oil_qty'], contains('4.2 qt'));
+      expect(spec['engine_oil_qty'], contains('4.0 L'));
+    });
+
+    test('Has Correct Coolant Capacity (8.1 qt / 7.7 L)', () {
+      final spec = findSti2004();
+      expect(spec, isNotEmpty, reason: '2004 STI spec not found');
+      // "capacity: 8.1 qt / 7.7 L"
+      expect(spec['engine_coolant_qty'], contains('8.1 qt'));
+      expect(spec['engine_coolant_qty'], contains('7.7 L'));
     });
 
     test('Has Legacy Green Coolant Type - s_coolant_type_legacy_green', () {
