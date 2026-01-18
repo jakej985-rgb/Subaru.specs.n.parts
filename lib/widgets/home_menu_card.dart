@@ -6,14 +6,17 @@ class HomeMenuCard extends StatelessWidget {
   const HomeMenuCard({
     super.key,
     required this.title,
-    required this.icon,
+    this.icon,
+    this.customIcon,
     required this.onTap,
     this.height = 120,
     this.semanticLabel,
-  });
+  }) : assert(icon != null || customIcon != null,
+            'Either icon or customIcon must be provided');
 
   final String title;
-  final IconData icon;
+  final IconData? icon;
+  final Widget? customIcon;
   final VoidCallback onTap;
   final double height;
   final String? semanticLabel;
@@ -32,15 +35,20 @@ class HomeMenuCard extends StatelessWidget {
           child: NeonPlate(
             onTap: onTap,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center, // Ensure vertical centering
               children: [
-                Icon(icon, size: 40, color: ThemeTokens.neonBlue),
-                const SizedBox(width: 24),
+                if (customIcon != null)
+                  customIcon!
+                else
+                  Icon(icon, size: 48, color: ThemeTokens.neonBlue), // Larger fallback
+                const SizedBox(width: 32), // Bigger gap
                 Expanded(
                   child: Text(
                     title,
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       color: ThemeTokens.textPrimary,
+                      fontSize: 22, // Ensure good size
                     ),
                     textAlign: TextAlign.left,
                     maxLines: 2,
@@ -49,7 +57,7 @@ class HomeMenuCard extends StatelessWidget {
                 ),
                 const Icon(
                   Icons.arrow_forward_ios,
-                  size: 20,
+                  size: 32, // Larger chevron
                   color: ThemeTokens.neonBlueDeep,
                 ),
               ],

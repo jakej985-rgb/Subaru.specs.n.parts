@@ -2,32 +2,72 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/domain/engines/engine_parse.dart';
 
-/// Index of engine family → list of motors in that family.
-/// Motors are sorted using natural sort (EJ18, EJ20, EJ22, EJ25, EJ205, EJ207...).
-final engineFamilyIndexProvider = FutureProvider<Map<String, List<String>>>((
+class EngineEntry {
+  final String code;
+  final String motor;
+  final int modelCount;
+  final Set<String> trims;
+
+  EngineEntry({
+    required this.code,
+    required this.motor,
+    required this.modelCount,
+    required this.trims,
+  });
+}
+
+final enginesByFamilyProvider = FutureProvider<Map<String, List<EngineEntry>>>((
   ref,
 ) async {
   final db = ref.watch(appDbProvider);
-  final engineCounts = await db.vehiclesDao.getEngineCodesWithCounts();
+  final engineModels = await db.vehiclesDao.getEngineCodesWithModels();
+  final engineTrims = await db.vehiclesDao.getEngineCodesWithTrims();
 
-  // Parse all engine codes and group by family
-  final Map<String, Set<String>> familyToMotors = {};
+  // Group by family
+  final Map<String, List<EngineEntry>> familyGroups = {};
 
-  for (final engineCode in engineCounts.keys) {
+  // We use engineTrims keys as the master list of all engine codes
+  for (final engineCode in engineTrims.keys) {
+    final models = engineModels[engineCode]?.toSet() ?? <String>{};
+    final trims = engineTrims[engineCode]?.toSet() ?? <String>{};
     final key = parseEngineKey(engineCode);
-    familyToMotors.putIfAbsent(key.family, () => <String>{}).add(key.motor);
+
+    familyGroups
+        .putIfAbsent(key.family, () => [])
+        .add(
+          EngineEntry(
+            code: engineCode,
+            motor: key.motor,
+            modelCount: models.length,
+            trims: trims,
+          ),
+        );
   }
 
-  // Sort families by priority, then sort motors within each family
-  final sortedFamilies = familyToMotors.keys.toList()..sort(compareFamilies);
+  // Sort families by priority
+  final sortedFamilies = familyGroups.keys.toList()..sort(compareFamilies);
 
-  final result = <String, List<String>>{};
+  // Sort engines within each family by motor code
+  final result = <String, List<EngineEntry>>{};
   for (final family in sortedFamilies) {
-    final motors = familyToMotors[family]!.toList()..sort(compareMotors);
-    result[family] = motors;
+    final engines = familyGroups[family]!
+      ..sort((a, b) => compareMotors(a.motor, b.motor));
+    result[family] = engines;
   }
 
   return result;
+});
+
+/// Index of engine family → list of motors in that family.
+final engineFamilyIndexProvider = FutureProvider<Map<String, List<String>>>((
+  ref,
+) async {
+  final enginesByFamily = await ref.watch(enginesByFamilyProvider.future);
+  return enginesByFamily.map((family, engines) {
+    final motors = engines.map((e) => e.motor).toSet().toList()
+      ..sort(compareMotors);
+    return MapEntry(family, motors);
+  });
 });
 
 /// Index of motor code → list of raw engine codes in DB that map to this motor.
@@ -54,46 +94,38 @@ final familyMotorCountsProvider = FutureProvider<Map<String, int>>((ref) async {
   return familyIndex.map((family, motors) => MapEntry(family, motors.length));
 });
 
-/// Vehicle count per family (sum of all vehicles using motors in that family).
-final familyVehicleCountsProvider = FutureProvider<Map<String, int>>((
-  ref,
-) async {
+/// Model count per family (distinct model names using motors in that family).
+final familyModelCountsProvider = FutureProvider<Map<String, int>>((ref) async {
   final db = ref.watch(appDbProvider);
-  final engineCounts = await db.vehiclesDao.getEngineCodesWithCounts();
+  final engineModels = await db.vehiclesDao.getEngineCodesWithModels();
 
-  final Map<String, int> familyTotals = {};
+  final Map<String, Set<String>> familyModels = {};
 
-  for (final entry in engineCounts.entries) {
+  for (final entry in engineModels.entries) {
     final key = parseEngineKey(entry.key);
-    familyTotals.update(
-      key.family,
-      (v) => v + entry.value,
-      ifAbsent: () => entry.value,
-    );
+    familyModels.putIfAbsent(key.family, () => <String>{}).addAll(entry.value);
   }
 
-  return familyTotals;
+  return familyModels.map((family, models) => MapEntry(family, models.length));
 });
 
-/// Vehicle count per motor.
-final motorVehicleCountsProvider = FutureProvider<Map<String, int>>((
-  ref,
-) async {
+/// Model count per motor (distinct model names using this motor).
+final motorModelCountsProvider = FutureProvider<Map<String, int>>((ref) async {
   final db = ref.watch(appDbProvider);
-  final engineCounts = await db.vehiclesDao.getEngineCodesWithCounts();
+  final engineModels = await db.vehiclesDao.getEngineCodesWithModels();
   final motorToRaw = await ref.watch(motorToEngineCodesProvider.future);
 
-  final Map<String, int> motorTotals = {};
+  final Map<String, Set<String>> motorModels = {};
 
   for (final motor in motorToRaw.keys) {
-    int count = 0;
+    final Set<String> modelsForMotor = {};
     for (final rawCode in motorToRaw[motor]!) {
-      count += engineCounts[rawCode] ?? 0;
+      modelsForMotor.addAll(engineModels[rawCode] ?? []);
     }
-    motorTotals[motor] = count;
+    motorModels[motor] = modelsForMotor;
   }
 
-  return motorTotals;
+  return motorModels.map((motor, models) => MapEntry(motor, models.length));
 });
 
 /// Provider family to fetch vehicles by motor code.
@@ -135,20 +167,13 @@ final familyTrimsProvider = FutureProvider<Map<String, Set<String>>>((
   ref,
 ) async {
   final db = ref.watch(appDbProvider);
-  final engineCounts = await db.vehiclesDao.getEngineCodesWithCounts();
+  final codeToTrims = await db.vehiclesDao.getEngineCodesWithTrims();
 
   final Map<String, Set<String>> familyTrims = {};
 
-  for (final engineCode in engineCounts.keys) {
-    final key = parseEngineKey(engineCode);
-    final vehicles = await db.vehiclesDao.getVehiclesByEngineCode(engineCode);
-
-    familyTrims.putIfAbsent(key.family, () => <String>{});
-    for (final v in vehicles) {
-      if (v.trim != null) {
-        familyTrims[key.family]!.add(v.trim!);
-      }
-    }
+  for (final entry in codeToTrims.entries) {
+    final key = parseEngineKey(entry.key);
+    familyTrims.putIfAbsent(key.family, () => <String>{}).addAll(entry.value);
   }
 
   return familyTrims;

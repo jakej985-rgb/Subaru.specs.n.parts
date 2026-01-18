@@ -109,6 +109,81 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
     return Map.fromEntries(results);
   }
 
+  /// Returns distinct model counts for each year.
+  Future<Map<int, int>> getYearModelCounts() async {
+    final query =
+        selectOnly(vehicles, distinct: true)..addColumns([
+          vehicles.year,
+          vehicles.model,
+        ]);
+
+    final results = await query.get();
+    final Map<int, int> counts = {};
+    for (final row in results) {
+      final y = row.read(vehicles.year)!;
+      counts[y] = (counts[y] ?? 0) + 1;
+    }
+    return counts;
+  }
+
+  /// Returns trim counts for each model in a given year.
+  Future<Map<String, int>> getModelTrimCounts(int year) async {
+    final query =
+        selectOnly(vehicles)
+          ..addColumns([vehicles.model, vehicles.id.count()])
+          ..where(vehicles.year.equals(year))
+          ..groupBy([vehicles.model]);
+
+    final results = await query.get();
+    final Map<String, int> counts = {};
+    for (final row in results) {
+      counts[row.read(vehicles.model)!] = row.read(vehicles.id.count())!;
+    }
+    return counts;
+  }
+
+  /// Returns engine codes mapped to their distinct trims.
+  Future<Map<String, List<String>>> getEngineCodesWithTrims() async {
+    final query = selectOnly(vehicles, distinct: true)
+      ..addColumns([vehicles.engineCode, vehicles.trim])
+      ..where(vehicles.engineCode.isNotNull() & vehicles.trim.isNotNull())
+      ..orderBy([
+        OrderingTerm(expression: vehicles.engineCode, mode: OrderingMode.asc),
+        OrderingTerm(expression: vehicles.trim, mode: OrderingMode.asc),
+      ]);
+
+    final results = await query.get();
+
+    final Map<String, List<String>> result = {};
+    for (final row in results) {
+      final code = row.read(vehicles.engineCode)!;
+      final trim = row.read(vehicles.trim)!;
+      result.putIfAbsent(code, () => []).add(trim);
+    }
+    return result;
+  }
+
+  /// Returns engine codes mapped to their distinct model names.
+  Future<Map<String, List<String>>> getEngineCodesWithModels() async {
+    final query = selectOnly(vehicles, distinct: true)
+      ..addColumns([vehicles.engineCode, vehicles.model])
+      ..where(vehicles.engineCode.isNotNull() & vehicles.model.isNotNull())
+      ..orderBy([
+        OrderingTerm(expression: vehicles.engineCode, mode: OrderingMode.asc),
+        OrderingTerm(expression: vehicles.model, mode: OrderingMode.asc),
+      ]);
+
+    final results = await query.get();
+
+    final Map<String, List<String>> result = {};
+    for (final row in results) {
+      final code = row.read(vehicles.engineCode)!;
+      final model = row.read(vehicles.model)!;
+      result.putIfAbsent(code, () => []).add(model);
+    }
+    return result;
+  }
+
   /// Returns a list of vehicles matching the query in model, year, or engineCode.
   Future<List<Vehicle>> searchVehicles(
     String query, {

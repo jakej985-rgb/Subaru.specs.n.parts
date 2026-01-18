@@ -14,10 +14,16 @@ import 'package:specsnparts/features/comparison/comparison_provider.dart';
 import 'package:go_router/go_router.dart';
 
 class SpecListPage extends ConsumerStatefulWidget {
-  const SpecListPage({super.key, this.vehicle, this.categories});
+  const SpecListPage({
+    super.key,
+    this.vehicle,
+    this.categories,
+    this.initialCategoryKey,
+  });
 
   final Vehicle? vehicle;
   final List<String>? categories;
+  final String? initialCategoryKey;
 
   @override
   ConsumerState<SpecListPage> createState() => _SpecListPageState();
@@ -34,12 +40,24 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
   void initState() {
     super.initState();
     _controller = ScrollController()..addListener(_onScroll);
-    if (widget.vehicle != null || widget.categories != null) {
+    if (widget.initialCategoryKey != null) {
+      _selectedCategoryFilter = widget.initialCategoryKey;
+    }
+
+    if (widget.vehicle != null ||
+        widget.categories != null ||
+        widget.initialCategoryKey != null) {
       Future.microtask(() {
         final notifier = ref.read(specListControllerProvider.notifier);
         if (widget.vehicle != null) notifier.setVehicle(widget.vehicle);
+
         if (widget.categories != null) {
           notifier.setCategories(widget.categories!);
+        } else if (widget.initialCategoryKey != null) {
+          final cat = SpecCategoryKey.fromKey(widget.initialCategoryKey!);
+          if (cat != null) {
+            notifier.setCategories(cat.dataCategories);
+          }
         }
       });
     }

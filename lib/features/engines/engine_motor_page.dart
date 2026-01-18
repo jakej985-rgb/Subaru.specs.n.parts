@@ -33,7 +33,7 @@ class EngineMotorPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final familyIndexAsync = ref.watch(engineFamilyIndexProvider);
-    final vehicleCountsAsync = ref.watch(motorVehicleCountsProvider);
+    final modelCountsAsync = ref.watch(motorModelCountsProvider);
 
     return Scaffold(
       appBar: AppBar(title: Text('$family Motors'), centerTitle: true),
@@ -62,7 +62,7 @@ class EngineMotorPage extends ConsumerWidget {
             );
           }
 
-          final vehicleCounts = vehicleCountsAsync.value ?? {};
+          final vehicleCounts = modelCountsAsync.value ?? {};
 
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -179,7 +179,7 @@ class EngineMotorPage extends ConsumerWidget {
                                   ),
                                   const SizedBox(height: 4),
                                   Text(
-                                    '$vehicleCount vehicle${vehicleCount == 1 ? '' : 's'}',
+                                    '$vehicleCount model${vehicleCount == 1 ? '' : 's'}',
                                     style: Theme.of(context).textTheme.bodySmall
                                         ?.copyWith(
                                           color: ThemeTokens.textMuted,

@@ -71,7 +71,7 @@ class EngineFamilyPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final familyIndexAsync = ref.watch(engineFamilyIndexProvider);
-    final vehicleCountsAsync = ref.watch(familyVehicleCountsProvider);
+    final modelCountsAsync = ref.watch(familyModelCountsProvider);
     final familyTrimsAsync = ref.watch(familyTrimsProvider);
 
     return Scaffold(
@@ -101,7 +101,7 @@ class EngineFamilyPage extends ConsumerWidget {
           }
 
           final families = familyIndex.keys.toList();
-          final vehicleCounts = vehicleCountsAsync.value ?? {};
+          final modelCounts = modelCountsAsync.value ?? {};
 
           return ListView.separated(
             padding: const EdgeInsets.all(16),
@@ -170,7 +170,7 @@ class EngineFamilyPage extends ConsumerWidget {
 
               final family = families[index - 1]; // Adjust for header
               final motorCount = familyIndex[family]?.length ?? 0;
-              final vehicleCount = vehicleCounts[family] ?? 0;
+              final modelCount = modelCounts[family] ?? 0;
               final color = _getFamilyColor(family);
               final trims = familyTrimsAsync.value?[family] ?? <String>{};
 
@@ -222,7 +222,7 @@ class EngineFamilyPage extends ConsumerWidget {
                                 const SizedBox(width: 12),
                                 _InfoChip(
                                   icon: Icons.directions_car,
-                                  label: '$vehicleCount vehicles',
+                                  label: '$modelCount models',
                                 ),
                               ],
                             ),

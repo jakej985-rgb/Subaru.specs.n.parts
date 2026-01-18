@@ -43,16 +43,20 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Subaru Specs & Parts'), findsOneWidget);
-    expect(find.text('Browse by Year/Make/Model'), findsOneWidget);
+    expect(find.text('Browse Specs'), findsOneWidget);
 
     // Scroll if necessary to find Settings
     final settingsFinder = find.text('Settings');
-    await tester.scrollUntilVisible(
-      settingsFinder,
-      500.0,
-      scrollable: find.byType(Scrollable),
-    );
-
+    final scrollableFinder = find.byType(Scrollable);
+    
+    if (scrollableFinder.evaluate().isNotEmpty) {
+      await tester.scrollUntilVisible(
+        settingsFinder,
+        500.0,
+        scrollable: scrollableFinder,
+      );
+    }
+    
     expect(settingsFinder, findsOneWidget);
 
     // Reset window size

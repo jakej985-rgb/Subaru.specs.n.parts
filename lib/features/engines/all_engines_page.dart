@@ -2,78 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:specsnparts/data/db/app_db.dart';
-import 'package:specsnparts/domain/engines/engine_parse.dart';
+import 'package:specsnparts/features/engines/engine_providers.dart';
 import 'package:specsnparts/features/home/garage_providers.dart';
 import 'package:specsnparts/theme/widgets/carbon_surface.dart';
 import 'package:specsnparts/theme/widgets/market_badge.dart';
 import 'package:specsnparts/theme/tokens.dart';
-
-/// Provider to fetch distinct engine codes with vehicle counts.
-final engineCodesWithCountsProvider = FutureProvider<Map<String, int>>((
-  ref,
-) async {
-  final db = ref.watch(appDbProvider);
-  return db.vehiclesDao.getEngineCodesWithCounts();
-});
-
-/// Provider to group engine codes by family with vehicle counts and trims.
-final enginesByFamilyProvider = FutureProvider<Map<String, List<_EngineEntry>>>(
-  (ref) async {
-    final db = ref.watch(appDbProvider);
-    final engineCounts = await db.vehiclesDao.getEngineCodesWithCounts();
-
-    // Group by family
-    final Map<String, List<_EngineEntry>> familyGroups = {};
-
-    for (final entry in engineCounts.entries) {
-      final engineCode = entry.key;
-      final count = entry.value;
-      final key = parseEngineKey(engineCode);
-
-      // Get trims for this engine code
-      final vehicles = await db.vehiclesDao.getVehiclesByEngineCode(engineCode);
-      final trims = vehicles.map((v) => v.trim).whereType<String>().toSet();
-
-      familyGroups
-          .putIfAbsent(key.family, () => [])
-          .add(
-            _EngineEntry(
-              code: engineCode,
-              motor: key.motor,
-              vehicleCount: count,
-              trims: trims,
-            ),
-          );
-    }
-
-    // Sort families by priority
-    final sortedFamilies = familyGroups.keys.toList()..sort(compareFamilies);
-
-    // Sort engines within each family by motor code
-    final result = <String, List<_EngineEntry>>{};
-    for (final family in sortedFamilies) {
-      final engines = familyGroups[family]!
-        ..sort((a, b) => compareMotors(a.motor, b.motor));
-      result[family] = engines;
-    }
-
-    return result;
-  },
-);
-
-class _EngineEntry {
-  final String code;
-  final String motor;
-  final int vehicleCount;
-  final Set<String> trims;
-
-  _EngineEntry({
-    required this.code,
-    required this.motor,
-    required this.vehicleCount,
-    required this.trims,
-  });
-}
 
 class AllEnginesPage extends ConsumerStatefulWidget {
   const AllEnginesPage({super.key});
@@ -137,7 +70,7 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
   }
 
   Widget _buildEngineList(
-    AsyncValue<Map<String, List<_EngineEntry>>> enginesByFamilyAsync,
+    AsyncValue<Map<String, List<EngineEntry>>> enginesByFamilyAsync,
   ) {
     return enginesByFamilyAsync.when(
       data: (familyGroups) {
@@ -163,127 +96,126 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
           );
         }
 
-        return ListView(
+        // Flatten the data for virtualization
+        final List<_ListItem> items = [];
+        for (final entry in familyGroups.entries) {
+          final family = entry.key;
+          final engines = entry.value;
+          final allTrims = engines.expand((e) => e.trims).toSet();
+
+          items.add(_HeaderItem(family: family, trims: allTrims));
+          for (final engine in engines) {
+            items.add(_EngineItem(engine: engine, family: family));
+          }
+        }
+
+        return ListView.builder(
           padding: const EdgeInsets.all(16),
-          children: [
-            // Engine list grouped by family
-            ...familyGroups.entries.expand((familyEntry) {
-              final family = familyEntry.key;
-              final engines = familyEntry.value;
-              final familyColor = _getFamilyColor(family);
-
-              // Calculate total trims for family badge
-              final allTrims = engines.expand((e) => e.trims).toSet();
-
-              return [
-                // Family header
-                Padding(
-                  padding: const EdgeInsets.only(top: 8, bottom: 8),
-                  child: Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 10,
-                          vertical: 4,
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            final item = items[index];
+            if (item is _HeaderItem) {
+              final familyColor = _getFamilyColor(item.family);
+              return Padding(
+                padding: const EdgeInsets.only(top: 8, bottom: 8),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 4,
+                      ),
+                      decoration: BoxDecoration(
+                        color: familyColor.withValues(alpha: 0.15),
+                        borderRadius: BorderRadius.circular(6),
+                        border: Border.all(
+                          color: familyColor.withValues(alpha: 0.4),
                         ),
-                        decoration: BoxDecoration(
-                          color: familyColor.withValues(alpha: 0.15),
-                          borderRadius: BorderRadius.circular(6),
-                          border: Border.all(
-                            color: familyColor.withValues(alpha: 0.4),
+                      ),
+                      child: Text(
+                        item.family,
+                        style: Theme.of(context).textTheme.titleMedium
+                            ?.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: familyColor,
+                            ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      _getFamilyName(item.family),
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: ThemeTokens.textMuted,
+                      ),
+                    ),
+                    const Spacer(),
+                    MarketBadge.fromTrims(item.trims, compact: true),
+                  ],
+                ),
+              );
+            } else if (item is _EngineItem) {
+              final engine = item.engine;
+              final familyColor = _getFamilyColor(item.family);
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: InkWell(
+                  onTap: () {
+                    setState(() {
+                      _selectedEngine = engine.code;
+                      _vehicles = [];
+                    });
+                    _loadVehicles(engine.code);
+                  },
+                  borderRadius: BorderRadius.circular(ThemeTokens.radiusMedium),
+                  child: CarbonSurface(
+                    padding: const EdgeInsets.all(14),
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            color: familyColor.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Icon(
+                            Icons.settings,
+                            color: familyColor,
+                            size: 18,
                           ),
                         ),
-                        child: Text(
-                          family,
-                          style: Theme.of(context).textTheme.titleMedium
-                              ?.copyWith(
-                                fontWeight: FontWeight.bold,
-                                color: familyColor,
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                engine.code,
+                                style: Theme.of(context).textTheme.titleSmall
+                                    ?.copyWith(fontWeight: FontWeight.w600),
                               ),
+                              Text(
+                                '${engine.modelCount} model${engine.modelCount == 1 ? '' : 's'}',
+                                style: Theme.of(context).textTheme.bodySmall
+                                    ?.copyWith(color: ThemeTokens.textMuted),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 8),
-                      Text(
-                        _getFamilyName(family),
-                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        MarketBadge.fromTrims(engine.trims, compact: true),
+                        const SizedBox(width: 8),
+                        const Icon(
+                          Icons.chevron_right,
                           color: ThemeTokens.textMuted,
+                          size: 20,
                         ),
-                      ),
-                      const Spacer(),
-                      MarketBadge.fromTrims(allTrims, compact: true),
-                    ],
-                  ),
-                ),
-
-                // Engine entries in this family
-                ...engines.map(
-                  (engine) => Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          _selectedEngine = engine.code;
-                          _vehicles = [];
-                        });
-                        _loadVehicles(engine.code);
-                      },
-                      borderRadius: BorderRadius.circular(
-                        ThemeTokens.radiusMedium,
-                      ),
-                      child: CarbonSurface(
-                        padding: const EdgeInsets.all(14),
-                        child: Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(6),
-                              decoration: BoxDecoration(
-                                color: familyColor.withValues(alpha: 0.1),
-                                borderRadius: BorderRadius.circular(6),
-                              ),
-                              child: Icon(
-                                Icons.settings,
-                                color: familyColor,
-                                size: 18,
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    engine.code,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .titleSmall
-                                        ?.copyWith(fontWeight: FontWeight.w600),
-                                  ),
-                                  Text(
-                                    '${engine.vehicleCount} vehicle${engine.vehicleCount == 1 ? '' : 's'}',
-                                    style: Theme.of(context).textTheme.bodySmall
-                                        ?.copyWith(
-                                          color: ThemeTokens.textMuted,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            MarketBadge.fromTrims(engine.trims, compact: true),
-                            const SizedBox(width: 8),
-                            const Icon(
-                              Icons.chevron_right,
-                              color: ThemeTokens.textMuted,
-                              size: 20,
-                            ),
-                          ],
-                        ),
-                      ),
+                      ],
                     ),
                   ),
                 ),
-              ];
-            }),
-          ],
+              );
+            }
+            return const SizedBox.shrink();
+          },
         );
       },
       loading: () => const Center(child: CircularProgressIndicator()),
@@ -419,7 +351,10 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
                   onTap: () {
                     // Save to recents and navigate to specs
                     ref.read(recentVehiclesProvider.notifier).add(v);
-                    context.push('/specs', extra: {'vehicle': v});
+                    context.push(
+                      '/specs',
+                      extra: {'vehicle': v, 'initialCategoryKey': 'engine'},
+                    );
                   },
                   borderRadius: BorderRadius.circular(ThemeTokens.radiusMedium),
                   child: CarbonSurface(
@@ -464,4 +399,18 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
       ],
     );
   }
+}
+
+abstract class _ListItem {}
+
+class _HeaderItem extends _ListItem {
+  final String family;
+  final Set<String> trims;
+  _HeaderItem({required this.family, required this.trims});
+}
+
+class _EngineItem extends _ListItem {
+  final EngineEntry engine;
+  final String family;
+  _EngineItem({required this.engine, required this.family});
 }

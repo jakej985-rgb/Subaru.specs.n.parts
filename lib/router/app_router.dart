@@ -16,6 +16,7 @@ import 'package:specsnparts/features/comparison/comparison_page.dart';
 import 'package:specsnparts/features/engines/engine_family_page.dart';
 import 'package:specsnparts/features/engines/engine_motor_page.dart';
 import 'package:specsnparts/features/engines/engine_vehicle_results_page.dart';
+import 'package:specsnparts/features/home/browse_hub_page.dart';
 
 final goRouterProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -44,6 +45,7 @@ final goRouterProvider = Provider<GoRouter>((ref) {
             builder: (context, state) {
               Vehicle? vehicle;
               List<String>? categories;
+              String? initialCategoryKey;
 
               if (state.extra is Vehicle) {
                 vehicle = state.extra as Vehicle;
@@ -52,9 +54,14 @@ final goRouterProvider = Provider<GoRouter>((ref) {
                 vehicle = map['vehicle'] as Vehicle?;
                 categories = (map['categories'] as List<dynamic>?)
                     ?.cast<String>();
+                initialCategoryKey = map['initialCategoryKey'] as String?;
               }
 
-              return SpecListPage(vehicle: vehicle, categories: categories);
+              return SpecListPage(
+                vehicle: vehicle,
+                categories: categories,
+                initialCategoryKey: initialCategoryKey,
+              );
             },
           ),
           GoRoute(
@@ -78,6 +85,10 @@ final goRouterProvider = Provider<GoRouter>((ref) {
                 },
               ),
             ],
+          ),
+          GoRoute(
+            path: 'browse',
+            builder: (context, state) => const BrowseHubPage(),
           ),
           GoRoute(
             path: 'browse/ymm',

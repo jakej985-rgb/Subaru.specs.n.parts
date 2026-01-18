@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:specsnparts/features/home/garage_providers.dart';
 import 'package:specsnparts/features/home/garage_view.dart';
 import 'package:specsnparts/theme/tokens.dart';
 import '../../widgets/adaptive_scroll.dart';
 import '../../widgets/home_menu_card.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends ConsumerWidget {
   const HomePage({super.key});
 
   static const double cardHeight = 130;
@@ -13,70 +15,32 @@ class HomePage extends StatelessWidget {
   static const double headerHeightEstimate = 70; // title + spacing
 
   @override
-  Widget build(BuildContext context) {
-    // Basic scaling for accessibility/large fonts, if needed.
-    // In a real app, we might check MediaQuery.textScaleFactorOf(context).
-    // For now, we stick to the plan's logic or simple fixed logic.
-    // The plan suggested: final textScale = MediaQuery.textScaleFactorOf(context);
-
-    // textScaler.scale(1) returns the scaled font size for 1.
-    // Effectively we want the factor.
-    // In newer Flutter, textScaleFactor is deprecated for textScaler.
-    // We can assume 1.0 if we want to be simple, or compute ratio.
-    // Let's stick to the plan's logic but adapted for newer Flutter if needed.
-    // Actually, let's just use a safe estimation.
-
-    // Note: MediaQuery.textScaleFactor is deprecated in recent Flutter.
-    // Using textScaler.scale(1) / 1 gives the factor.
+  Widget build(BuildContext context, WidgetRef ref) {
     final double scaleFactor = MediaQuery.textScalerOf(context).scale(1);
-
     final scaledCardHeight = cardHeight * (scaleFactor > 1.2 ? 1.15 : 1.0);
 
     final items = [
       (
-        'Browse by Year/Make/Model',
-        Icons.directions_car,
-        () => context.go('/browse/ymm'),
-      ),
-      (
-        'Browse by Engine',
-        Icons.engineering,
-        () => context.go('/browse/engine'),
+        'Browse Specs',
+        Icons.grid_view,
+        () => context.go('/browse'),
       ),
       ('Part Lookup', Icons.search, () => context.go('/parts')),
-      (
-        'Specs by Category',
-        Icons.list_alt,
-        () => context.go('/specs/categories'),
-      ),
       ('Settings', Icons.settings, () => context.go('/settings')),
     ];
+
+    final favorites = ref.watch(favoriteVehiclesProvider);
+    final recents = ref.watch(recentVehiclesProvider);
+    final double garageHeight = (favorites.isNotEmpty ? 200.0 : 0) + (recents.isNotEmpty ? 200.0 : 0);
 
     // Estimate total content height:
     final totalCards = items.length;
     final estimatedContentHeight =
         headerHeightEstimate +
+        garageHeight +
         (totalCards * scaledCardHeight) +
         ((totalCards - 1) * spacing) +
-        150; // extra breathing room + search bar height
-
-    // Wait, AdaptiveScroll has padding=16.
-    // Inside AdaptiveScroll child:
-    // SizedBox(8)
-    // Text (approx 34 height with font 28)
-    // SizedBox(18)
-    // Cards...
-
-    // So Header area = 8 + 34 + 18 = 60.
-    // Padding = 16 top + 16 bottom = 32.
-    // Total static = 92.
-    // Cards = count * height.
-    // Spacing = (count - 1) * spacing.
-
-    // Re-calculating headerHeightEstimate more precisely or using the constant provided in plan (70) + padding.
-    // Plan said: headerHeightEstimate = 70.
-    // estimatedContentHeight = header + cards + spacing + 32 (breathing room).
-    // This looks safe.
+        250; // extra breathing room + search bar height
 
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(

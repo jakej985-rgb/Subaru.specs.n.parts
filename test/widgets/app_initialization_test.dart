@@ -72,9 +72,12 @@ void main() {
       await tester.pumpAndSettle();
     }
 
-    // 4. Tap "Browse by Year/Make/Model"
-    final browseButton = find.text('Browse by Year/Make/Model');
-    await tester.tap(browseButton);
+    // 4. Tap "Browse Specs" then "Browse by Year/Make/Model"
+    await tester.tap(find.text('Browse Specs'));
+    await tester.pumpAndSettle();
+
+    final browseYmmButton = find.text('Browse by Year/Make/Model');
+    await tester.tap(browseYmmButton);
     await tester.pumpAndSettle();
 
     // 5. Verify we are on "Select Vehicle" screen

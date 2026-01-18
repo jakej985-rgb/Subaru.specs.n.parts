@@ -97,6 +97,13 @@ class _EngineVehicleResultsPageState
 
           final filteredVehicles = _filterVehicles(vehicles);
 
+          // Group by model
+          final Map<String, List<Vehicle>> groupedByModel = {};
+          for (final v in filteredVehicles) {
+            groupedByModel.putIfAbsent(v.model, () => []).add(v);
+          }
+          final sortedModels = groupedByModel.keys.toList()..sort();
+
           return Column(
             children: [
               // Header with motor info
@@ -136,7 +143,7 @@ class _EngineVehicleResultsPageState
                                   ?.copyWith(color: ThemeTokens.textSecondary),
                             ),
                             Text(
-                              '${vehicles.length} compatible vehicle${vehicles.length == 1 ? '' : 's'}',
+                              '${groupedByModel.length} compatible model${groupedByModel.length == 1 ? '' : 's'}',
                               style: Theme.of(context).textTheme.bodySmall
                                   ?.copyWith(color: ThemeTokens.textMuted),
                             ),
@@ -250,7 +257,7 @@ class _EngineVehicleResultsPageState
               ),
               const SizedBox(height: 8),
 
-              // Vehicle list
+              // Vehicle list grouped by model
               Expanded(
                 child: filteredVehicles.isEmpty
                     ? Center(
@@ -262,12 +269,16 @@ class _EngineVehicleResultsPageState
                       )
                     : ListView.separated(
                         padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                        itemCount: filteredVehicles.length,
+                        itemCount: sortedModels.length,
                         separatorBuilder: (context, index) =>
-                            const SizedBox(height: 8),
+                            const SizedBox(height: 12),
                         itemBuilder: (context, index) {
-                          final vehicle = filteredVehicles[index];
-                          return _VehicleCard(vehicle: vehicle);
+                          final model = sortedModels[index];
+                          final modelVehicles = groupedByModel[model]!;
+                          return _ModelGroup(
+                            model: model,
+                            vehicles: modelVehicles,
+                          );
                         },
                       ),
               ),
@@ -281,6 +292,65 @@ class _EngineVehicleResultsPageState
   }
 }
 
+class _ModelGroup extends StatefulWidget {
+  final String model;
+  final List<Vehicle> vehicles;
+
+  const _ModelGroup({required this.model, required this.vehicles});
+
+  @override
+  State<_ModelGroup> createState() => _ModelGroupState();
+}
+
+class _ModelGroupState extends State<_ModelGroup> {
+  bool _isExpanded = false;
+
+  @override
+  Widget build(BuildContext context) {
+    // Collect all markets for this model group
+    final markets = widget.vehicles.map((v) => v.trim);
+
+    return CarbonSurface(
+      padding: EdgeInsets.zero,
+      child: Theme(
+        data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+        child: ExpansionTile(
+          title: Text(
+            widget.model,
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+              fontWeight: FontWeight.bold,
+              color: ThemeTokens.textPrimary,
+            ),
+          ),
+          subtitle: Text(
+            '${widget.vehicles.length} variation${widget.vehicles.length == 1 ? '' : 's'}',
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              color: ThemeTokens.textMuted,
+            ),
+          ),
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              MarketBadge.fromTrims(markets, compact: true),
+              const SizedBox(width: 8),
+              Icon(
+                _isExpanded ? Icons.expand_less : Icons.expand_more,
+                color: ThemeTokens.neonBlue,
+              ),
+            ],
+          ),
+          onExpansionChanged: (expanded) {
+            setState(() => _isExpanded = expanded);
+          },
+          initiallyExpanded: false,
+          childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+          children: widget.vehicles.map((v) => _VehicleCard(vehicle: v)).toList(),
+        ),
+      ),
+    );
+  }
+}
+
 class _VehicleCard extends ConsumerWidget {
   final Vehicle vehicle;
 
@@ -288,83 +358,98 @@ class _VehicleCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return InkWell(
-      onTap: () {
-        // Save to recents and navigate to specs
-        ref.read(recentVehiclesProvider.notifier).add(vehicle);
-        context.push('/specs', extra: {'vehicle': vehicle});
-      },
-      borderRadius: BorderRadius.circular(ThemeTokens.radiusMedium),
-      child: CarbonSurface(
-        padding: const EdgeInsets.all(16),
-        child: Row(
-          children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    '${vehicle.year} ${vehicle.model}',
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    vehicle.trim ?? 'Base',
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: ThemeTokens.textSecondary,
-                    ),
-                  ),
-                  if (vehicle.engineCode != null) ...[
-                    const SizedBox(height: 4),
+    return Padding(
+      padding: const EdgeInsets.only(top: 8),
+      child: InkWell(
+        onTap: () {
+          // Save to recents and navigate to specs
+          ref.read(recentVehiclesProvider.notifier).add(vehicle);
+          context.push(
+            '/specs',
+            extra: {'vehicle': vehicle, 'initialCategoryKey': 'engine'},
+          );
+        },
+        borderRadius: BorderRadius.circular(ThemeTokens.radiusMedium),
+        child: Container(
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: ThemeTokens.surfaceRaised,
+            borderRadius: BorderRadius.circular(ThemeTokens.radiusMedium),
+            border: Border.all(
+              color: ThemeTokens.neonBlue.withValues(alpha: 0.1),
+            ),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                     Text(
-                      vehicle.engineCode!,
-                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: ThemeTokens.textMuted,
-                        fontFamily: 'monospace',
+                      '${vehicle.year} ${vehicle.model}',
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
-                  ],
-                ],
-              ),
-            ),
-            const SizedBox(width: 8),
-            MarketBadge.single(
-              inferMarketFromTrim(vehicle.trim),
-              compact: true,
-              showLabel: true,
-            ),
-
-            // Favorite toggle
-            Consumer(
-              builder: (context, ref, _) {
-                final isFav = ref
-                    .watch(favoriteVehiclesProvider)
-                    .any(
-                      (fav) =>
-                          '${fav.year}|${fav.model}|${fav.trim}' ==
-                          '${vehicle.year}|${vehicle.model}|${vehicle.trim}',
-                    );
-                return InkWell(
-                  onTap: () {
-                    ref.read(favoriteVehiclesProvider.notifier).toggle(vehicle);
-                  },
-                  borderRadius: BorderRadius.circular(16),
-                  child: Padding(
-                    padding: const EdgeInsets.all(4),
-                    child: Icon(
-                      isFav ? Icons.favorite : Icons.favorite_border,
-                      color: isFav ? Colors.redAccent : ThemeTokens.textMuted,
-                      size: 20,
+                    const SizedBox(height: 4),
+                    Text(
+                      vehicle.trim ?? 'Base',
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: ThemeTokens.textSecondary,
+                      ),
                     ),
-                  ),
-                );
-              },
-            ),
-            const SizedBox(width: 8),
-            const Icon(Icons.chevron_right, color: ThemeTokens.textMuted),
-          ],
+                    if (vehicle.engineCode != null) ...[
+                      const SizedBox(height: 4),
+                      Text(
+                        vehicle.engineCode!,
+                        style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                          color: ThemeTokens.textMuted,
+                          fontFamily: 'monospace',
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              MarketBadge.single(
+                inferMarketFromTrim(vehicle.trim),
+                compact: true,
+                showLabel: true,
+              ),
+              const SizedBox(width: 8),
+              // Favorite toggle
+              Consumer(
+                builder: (context, ref, _) {
+                  final favorites = ref.watch(favoriteVehiclesProvider);
+                  final isFav = favorites.any(
+                    (fav) =>
+                        '${fav.year}|${fav.model}|${fav.trim}' ==
+                        '${vehicle.year}|${vehicle.model}|${vehicle.trim}',
+                  );
+                  return InkWell(
+                    onTap: () {
+                      ref.read(favoriteVehiclesProvider.notifier).toggle(vehicle);
+                    },
+                    borderRadius: BorderRadius.circular(16),
+                    child: Padding(
+                      padding: const EdgeInsets.all(4),
+                      child: Icon(
+                        isFav ? Icons.favorite : Icons.favorite_border,
+                        color: isFav ? Colors.redAccent : ThemeTokens.textMuted,
+                        size: 18,
+                      ),
+                    ),
+                  );
+                },
+              ),
+              const Icon(
+                Icons.chevron_right,
+                color: ThemeTokens.textMuted,
+                size: 20,
+              ),
+            ],
+          ),
         ),
       ),
     );
