@@ -162,7 +162,10 @@ Widget allIconsSideBySide() {
               size: 110,
             ),
             const SizedBox(height: 8),
-            const Text('YMM', style: TextStyle(color: ThemeTokens.textSecondary, fontSize: 12)),
+            const Text(
+              'YMM',
+              style: TextStyle(color: ThemeTokens.textSecondary, fontSize: 12),
+            ),
           ],
         ),
         Column(
@@ -173,7 +176,10 @@ Widget allIconsSideBySide() {
               size: 110,
             ),
             const SizedBox(height: 8),
-            const Text('Engine', style: TextStyle(color: ThemeTokens.textSecondary, fontSize: 12)),
+            const Text(
+              'Engine',
+              style: TextStyle(color: ThemeTokens.textSecondary, fontSize: 12),
+            ),
           ],
         ),
         Column(
@@ -184,7 +190,10 @@ Widget allIconsSideBySide() {
               size: 110,
             ),
             const SizedBox(height: 8),
-            const Text('Category', style: TextStyle(color: ThemeTokens.textSecondary, fontSize: 12)),
+            const Text(
+              'Category',
+              style: TextStyle(color: ThemeTokens.textSecondary, fontSize: 12),
+            ),
           ],
         ),
       ],
