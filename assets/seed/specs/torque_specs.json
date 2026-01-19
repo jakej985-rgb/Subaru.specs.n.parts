@@ -21973,15 +21973,15 @@
     "transfer_case_or_center_diff_drain_plug": "n/a",
     "transfer_case_or_center_diff_fill_plug": "n/a",
     "spark_plugs": "capacity: 21 N·m / 15 ft-lb",
-    "wheel_lug_nuts": "capacity: 120 N·m / 89 ft-lb",
-    "brake_caliper_bracket_bolts": "n/a",
+    "wheel_lug_nuts": "capacity: 90 N·m / 65.7 ft-lb",
+    "brake_caliper_bracket_bolts": "Front: 108 N·m / 80 ft-lb | Rear: 65 N·m / 47.9 ft-lb",
     "brake_caliper_slide_pins": "n/a",
-    "brake_bleeder_screws": "capacity: 8.0 N·m / 5.9 ft-lb",
+    "brake_bleeder_screws": "capacity: 18 N·m / 13.3 ft-lb",
     "battery_terminal_clamp": "capacity: 6.0 N·m / 4.4 ft-lb",
-    "notes": "; Front diff shared sump (MT)",
-    "source_1": "Subaru Service Manual",
+    "notes": "Front diff shared sump (MT); Front Caliper bolts: 80 ft-lb (FSM error corrected); Lug nuts: 65.7 ft-lb (04 spec)",
+    "source_1": "Subaru FSM (Corrected via Community Consensus)",
     "source_2": "n/a",
-    "confidence": "medium"
+    "confidence": "high"
   },
   {
     "year": 2004,
@@ -22005,15 +22005,15 @@
     "transfer_case_or_center_diff_drain_plug": "n/a",
     "transfer_case_or_center_diff_fill_plug": "n/a",
     "spark_plugs": "capacity: 21 N·m / 15 ft-lb",
-    "wheel_lug_nuts": "capacity: 120 N·m / 89 ft-lb",
-    "brake_caliper_bracket_bolts": "n/a",
+    "wheel_lug_nuts": "capacity: 90 N·m / 65.7 ft-lb",
+    "brake_caliper_bracket_bolts": "Front: 108 N·m / 80 ft-lb | Rear: 65 N·m / 47.9 ft-lb",
     "brake_caliper_slide_pins": "n/a",
-    "brake_bleeder_screws": "capacity: 8.0 N·m / 5.9 ft-lb",
+    "brake_bleeder_screws": "capacity: 18 N·m / 13.3 ft-lb",
     "battery_terminal_clamp": "capacity: 6.0 N·m / 4.4 ft-lb",
-    "notes": "; Front diff shared sump (MT)",
-    "source_1": "Subaru Service Manual",
+    "notes": "Front diff shared sump (MT); Front Caliper bolts: 80 ft-lb (FSM error corrected); Lug nuts: 65.7 ft-lb (04 spec)",
+    "source_1": "Subaru FSM (Corrected via Community Consensus)",
     "source_2": "n/a",
-    "confidence": "medium"
+    "confidence": "high"
   },
   {
     "year": 2004,
