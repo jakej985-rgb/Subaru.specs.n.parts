@@ -101,10 +101,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Select Vehicle'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text('Select Vehicle'), centerTitle: true),
       body: Stack(
         children: [
           ListView(
@@ -214,7 +211,9 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Icon(
-                                    isFav ? Icons.favorite : Icons.favorite_border,
+                                    isFav
+                                        ? Icons.favorite
+                                        : Icons.favorite_border,
                                     color: isFav
                                         ? Colors.redAccent
                                         : ThemeTokens.textMuted,
@@ -223,10 +222,10 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                                   const SizedBox(width: 4),
                                   Text(
                                     isFav ? 'In Garage' : 'Add to Garage',
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodySmall
-                                        ?.copyWith(color: ThemeTokens.textMuted),
+                                    style: Theme.of(context).textTheme.bodySmall
+                                        ?.copyWith(
+                                          color: ThemeTokens.textMuted,
+                                        ),
                                   ),
                                 ],
                               ),
@@ -239,7 +238,8 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                 }),
               ] else ...[
                 _BackHeader(
-                  title: '${_selectedVehicle!.year} ${_selectedVehicle!.model} Summary',
+                  title:
+                      '${_selectedVehicle!.year} ${_selectedVehicle!.model} Summary',
                   tooltip: 'Back to trims',
                   onBack: () => setState(() => _selectedVehicle = null),
                 ),
@@ -294,7 +294,9 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: ThemeTokens.neonBlue,
                                 foregroundColor: ThemeTokens.surface,
-                                padding: const EdgeInsets.symmetric(vertical: 16),
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 16,
+                                ),
                               ),
                             ),
                           ),
@@ -312,8 +314,12 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                               label: const Text('VIEW PARTS'),
                               style: OutlinedButton.styleFrom(
                                 foregroundColor: ThemeTokens.neonBlue,
-                                side: const BorderSide(color: ThemeTokens.neonBlue),
-                                padding: const EdgeInsets.symmetric(vertical: 16),
+                                side: const BorderSide(
+                                  color: ThemeTokens.neonBlue,
+                                ),
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 16,
+                                ),
                               ),
                             ),
                           ),
@@ -420,10 +426,11 @@ class _FlowCard extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: iconColor,
-                      ),
+                      style: Theme.of(context).textTheme.headlineSmall
+                          ?.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: iconColor,
+                          ),
                     ),
                     const SizedBox(height: 4),
                     Text(
@@ -447,10 +454,7 @@ class _FlowCard extends StatelessWidget {
                   ],
                 ),
               ),
-              if (trailing != null) ...[
-                const SizedBox(width: 8),
-                trailing!,
-              ],
+              if (trailing != null) ...[const SizedBox(width: 8), trailing!],
               const SizedBox(width: 8),
               const Icon(Icons.chevron_right, color: ThemeTokens.textMuted),
             ],

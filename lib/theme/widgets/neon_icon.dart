@@ -2,11 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class NeonIcon extends StatelessWidget {
-  const NeonIcon(
-    this.asset, {
-    super.key,
-    this.size = 40,
-  });
+  const NeonIcon(this.asset, {super.key, this.size = 40});
 
   final String asset;
   final double size;
@@ -28,11 +24,7 @@ class NeonIcon extends StatelessWidget {
           ),
         ),
         // crisp pass
-        ImageIcon(
-          AssetImage(asset),
-          size: size,
-          color: c,
-        ),
+        ImageIcon(AssetImage(asset), size: size, color: c),
       ],
     );
   }

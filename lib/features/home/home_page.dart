@@ -20,18 +20,15 @@ class HomePage extends ConsumerWidget {
     final scaledCardHeight = cardHeight * (scaleFactor > 1.2 ? 1.15 : 1.0);
 
     final items = [
-      (
-        'Browse Specs',
-        Icons.grid_view,
-        () => context.go('/browse'),
-      ),
+      ('Browse Specs', Icons.grid_view, () => context.go('/browse')),
       ('Part Lookup', Icons.search, () => context.go('/parts')),
       ('Settings', Icons.settings, () => context.go('/settings')),
     ];
 
     final favorites = ref.watch(favoriteVehiclesProvider);
     final recents = ref.watch(recentVehiclesProvider);
-    final double garageHeight = (favorites.isNotEmpty ? 200.0 : 0) + (recents.isNotEmpty ? 200.0 : 0);
+    final double garageHeight =
+        (favorites.isNotEmpty ? 200.0 : 0) + (recents.isNotEmpty ? 200.0 : 0);
 
     // Estimate total content height:
     final totalCards = items.length;

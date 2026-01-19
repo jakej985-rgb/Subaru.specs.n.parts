@@ -48,7 +48,7 @@ void main() {
     // Scroll if necessary to find Settings
     final settingsFinder = find.text('Settings');
     final scrollableFinder = find.byType(Scrollable);
-    
+
     if (scrollableFinder.evaluate().isNotEmpty) {
       await tester.scrollUntilVisible(
         settingsFinder,
@@ -56,7 +56,7 @@ void main() {
         scrollable: scrollableFinder,
       );
     }
-    
+
     expect(settingsFinder, findsOneWidget);
 
     // Reset window size
