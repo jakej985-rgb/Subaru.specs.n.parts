@@ -111,11 +111,8 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
 
   /// Returns distinct model counts for each year.
   Future<Map<int, int>> getYearModelCounts() async {
-    final query =
-        selectOnly(vehicles, distinct: true)..addColumns([
-          vehicles.year,
-          vehicles.model,
-        ]);
+    final query = selectOnly(vehicles, distinct: true)
+      ..addColumns([vehicles.year, vehicles.model]);
 
     final results = await query.get();
     final Map<int, int> counts = {};
@@ -128,11 +125,10 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
 
   /// Returns trim counts for each model in a given year.
   Future<Map<String, int>> getModelTrimCounts(int year) async {
-    final query =
-        selectOnly(vehicles)
-          ..addColumns([vehicles.model, vehicles.id.count()])
-          ..where(vehicles.year.equals(year))
-          ..groupBy([vehicles.model]);
+    final query = selectOnly(vehicles)
+      ..addColumns([vehicles.model, vehicles.id.count()])
+      ..where(vehicles.year.equals(year))
+      ..groupBy([vehicles.model]);
 
     final results = await query.get();
     final Map<String, int> counts = {};

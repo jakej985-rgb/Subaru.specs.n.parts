@@ -324,9 +324,9 @@ class _ModelGroupState extends State<_ModelGroup> {
           ),
           subtitle: Text(
             '${widget.vehicles.length} variation${widget.vehicles.length == 1 ? '' : 's'}',
-            style: Theme.of(context).textTheme.bodySmall?.copyWith(
-              color: ThemeTokens.textMuted,
-            ),
+            style: Theme.of(
+              context,
+            ).textTheme.bodySmall?.copyWith(color: ThemeTokens.textMuted),
           ),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
@@ -344,7 +344,9 @@ class _ModelGroupState extends State<_ModelGroup> {
           },
           initiallyExpanded: false,
           childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
-          children: widget.vehicles.map((v) => _VehicleCard(vehicle: v)).toList(),
+          children: widget.vehicles
+              .map((v) => _VehicleCard(vehicle: v))
+              .toList(),
         ),
       ),
     );
@@ -429,7 +431,9 @@ class _VehicleCard extends ConsumerWidget {
                   );
                   return InkWell(
                     onTap: () {
-                      ref.read(favoriteVehiclesProvider.notifier).toggle(vehicle);
+                      ref
+                          .read(favoriteVehiclesProvider.notifier)
+                          .toggle(vehicle);
                     },
                     borderRadius: BorderRadius.circular(16),
                     child: Padding(

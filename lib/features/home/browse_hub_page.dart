@@ -37,10 +37,7 @@ class BrowseHubPage extends StatelessWidget {
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Browse'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const Text('Browse'), centerTitle: true),
       body: ListView.separated(
         padding: const EdgeInsets.all(16),
         itemCount: items.length,
@@ -51,8 +48,9 @@ class BrowseHubPage extends StatelessWidget {
             title: item.$1,
             customIcon: item.$2,
             onTap: item.$3,
-            height: 140, // Slightly taller to accommodate description if we added it, but HomeMenuCard is simple. 
-            // Actually HomeMenuCard doesn't have a description field. 
+            height:
+                140, // Slightly taller to accommodate description if we added it, but HomeMenuCard is simple.
+            // Actually HomeMenuCard doesn't have a description field.
             // I'll keep it consistent with HomePage for now.
           );
         },

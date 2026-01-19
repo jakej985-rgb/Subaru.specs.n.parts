@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NeonOutlineIcon extends StatelessWidget {
-  const NeonOutlineIcon({
-    super.key,
-    required this.painter,
-    this.size = 28,
-  });
+  const NeonOutlineIcon({super.key, required this.painter, this.size = 28});
 
   final CustomPainter painter;
   final double size;
@@ -29,11 +25,17 @@ Paint _stroke(Color c, double w) => Paint()
 
 Paint _glow(Color c, double w, double blurSigma) => Paint()
   ..style = PaintingStyle.stroke
-  ..strokeWidth = w * 1.5 // Multiplier reduced from 2.0
+  ..strokeWidth =
+      w *
+      1.5 // Multiplier reduced from 2.0
   ..strokeCap = StrokeCap.round
   ..strokeJoin = StrokeJoin.round
-  ..color = c.withValues(alpha: 0.60) // Higher opacity to compensate for thinness
-  ..maskFilter = MaskFilter.blur(BlurStyle.normal, blurSigma * 0.4); // Very tight blur
+  ..color = c
+      .withValues(alpha: 0.60) // Higher opacity to compensate for thinness
+  ..maskFilter = MaskFilter.blur(
+    BlurStyle.normal,
+    blurSigma * 0.4,
+  ); // Very tight blur
 
 /// A) Subaru badge: Accurate Pleiades cluster (1 big star, 5 small stars)
 class SubaruBadgePainter extends CustomPainter {
@@ -53,14 +55,14 @@ class SubaruBadgePainter extends CustomPainter {
     // Star coordinates
     final bigStar = Offset(w * 0.38, w * 0.46);
     final bigR = w * 0.08; // Slightly larger for star shape impact
-    
+
     // 5 Small stars
     final smallStars = <Offset>[
       Offset(w * 0.58, w * 0.42),
       Offset(w * 0.68, w * 0.40),
       Offset(w * 0.74, w * 0.48),
       Offset(w * 0.64, w * 0.52),
-      Offset(w * 0.54, w * 0.60)
+      Offset(w * 0.54, w * 0.60),
     ];
     final smallR = w * 0.035;
 
@@ -81,7 +83,7 @@ class SubaruBadgePainter extends CustomPainter {
 
     void draw(Paint p) {
       canvas.drawOval(oval, p);
-      
+
       // Draw big star
       canvas.drawPath(starPath(bigStar, bigR), p);
 
@@ -114,7 +116,11 @@ class BoxerEnginePainter extends CustomPainter {
 
     // Central block (crankcase) - tall rectangle in center
     final block = RRect.fromRectAndRadius(
-      Rect.fromCenter(center: Offset(w * 0.5, w * 0.5), width: w * 0.20, height: w * 0.50),
+      Rect.fromCenter(
+        center: Offset(w * 0.5, w * 0.5),
+        width: w * 0.20,
+        height: w * 0.50,
+      ),
       Radius.circular(w * 0.03),
     );
 
@@ -161,7 +167,7 @@ class BoxerEnginePainter extends CustomPainter {
       canvas.drawCircle(leftPiston2, pistonR, p);
       canvas.drawCircle(rightPiston1, pistonR, p);
       canvas.drawCircle(rightPiston2, pistonR, p);
-      
+
       // Draw piston inner detail (valve/spark plug representation)
       canvas.drawCircle(leftPiston1, pistonInnerR, p);
       canvas.drawCircle(leftPiston2, pistonInnerR, p);
@@ -206,8 +212,16 @@ class CategoryGridPainter extends CustomPainter {
         canvas.drawRRect(c, p);
       }
       // tiny “spec lines” in bottom-right cell
-      canvas.drawLine(Offset(w * 0.62, w * 0.66), Offset(w * 0.82, w * 0.66), p);
-      canvas.drawLine(Offset(w * 0.62, w * 0.74), Offset(w * 0.78, w * 0.74), p);
+      canvas.drawLine(
+        Offset(w * 0.62, w * 0.66),
+        Offset(w * 0.82, w * 0.66),
+        p,
+      );
+      canvas.drawLine(
+        Offset(w * 0.62, w * 0.74),
+        Offset(w * 0.78, w * 0.74),
+        p,
+      );
     }
 
     if (glow) draw(_glow(color, sw, w * 0.04));

@@ -11,8 +11,10 @@ class HomeMenuCard extends StatelessWidget {
     required this.onTap,
     this.height = 120,
     this.semanticLabel,
-  }) : assert(icon != null || customIcon != null,
-            'Either icon or customIcon must be provided');
+  }) : assert(
+         icon != null || customIcon != null,
+         'Either icon or customIcon must be provided',
+       );
 
   final String title;
   final IconData? icon;
@@ -36,12 +38,17 @@ class HomeMenuCard extends StatelessWidget {
             onTap: onTap,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center, // Ensure vertical centering
+              crossAxisAlignment:
+                  CrossAxisAlignment.center, // Ensure vertical centering
               children: [
                 if (customIcon != null)
                   customIcon!
                 else
-                  Icon(icon, size: 48, color: ThemeTokens.neonBlue), // Larger fallback
+                  Icon(
+                    icon,
+                    size: 48,
+                    color: ThemeTokens.neonBlue,
+                  ), // Larger fallback
                 const SizedBox(width: 32), // Bigger gap
                 Expanded(
                   child: Text(
