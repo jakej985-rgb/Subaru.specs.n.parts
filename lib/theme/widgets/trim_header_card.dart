@@ -38,9 +38,9 @@ class TrimHeaderCard extends StatelessWidget {
           title: Text(
             title,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
-              color: ThemeTokens.textPrimary,
-              fontWeight: FontWeight.bold,
-            ),
+                  color: ThemeTokens.textPrimary,
+                  fontWeight: FontWeight.bold,
+                ),
           ),
           subtitle: subtitle != null
               ? Text(
@@ -81,17 +81,17 @@ class TrimHeaderCard extends StatelessWidget {
                 Text(
                   title,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: ThemeTokens.textPrimary,
-                    fontWeight: FontWeight.bold,
-                  ),
+                        color: ThemeTokens.textPrimary,
+                        fontWeight: FontWeight.bold,
+                      ),
                 ),
                 if (subtitle != null) ...[
                   const SizedBox(height: 2),
                   Text(
                     subtitle!,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: ThemeTokens.neonSoft,
-                    ),
+                          color: ThemeTokens.neonSoft,
+                        ),
                   ),
                 ],
               ],

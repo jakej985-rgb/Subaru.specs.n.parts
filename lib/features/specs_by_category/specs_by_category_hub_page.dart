@@ -61,7 +61,9 @@ class SpecsByCategoryHubPage extends ConsumerWidget {
                         if (count > 0)
                           Text(
                             '$count specs',
-                            style: Theme.of(context).textTheme.bodySmall
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodySmall
                                 ?.copyWith(color: ThemeTokens.textMuted),
                           ),
                       ],

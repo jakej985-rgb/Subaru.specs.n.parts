@@ -52,8 +52,8 @@ final goRouterProvider = Provider<GoRouter>((ref) {
               } else if (state.extra is Map<String, dynamic>) {
                 final map = state.extra as Map<String, dynamic>;
                 vehicle = map['vehicle'] as Vehicle?;
-                categories = (map['categories'] as List<dynamic>?)
-                    ?.cast<String>();
+                categories =
+                    (map['categories'] as List<dynamic>?)?.cast<String>();
                 initialCategoryKey = map['initialCategoryKey'] as String?;
               }
 
@@ -94,8 +94,8 @@ final goRouterProvider = Provider<GoRouter>((ref) {
             path: 'browse/ymm',
             builder: (context, state) {
               final extra = state.extra as Map<String, dynamic>?;
-              final categories = (extra?['categories'] as List<dynamic>?)
-                  ?.cast<String>();
+              final categories =
+                  (extra?['categories'] as List<dynamic>?)?.cast<String>();
               return YmmFlowPage(initialCategories: categories);
             },
           ),
@@ -113,8 +113,8 @@ final goRouterProvider = Provider<GoRouter>((ref) {
               child: const GlobalSearchOverlay(),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
-                    return FadeTransition(opacity: animation, child: child);
-                  },
+                return FadeTransition(opacity: animation, child: child);
+              },
             ),
           ),
           GoRoute(
