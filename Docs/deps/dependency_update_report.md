@@ -1,71 +1,37 @@
-# Dependency Update Report
+# Dependency Update Report - 2026-01-16
 
-**Date:** 2026-01-10
-**Agent:** DepGuardian 🛡️
+## Final State
+- **Stability**: All tests passed, analysis clean.
+- **Dependencies**: All dependencies updated to the latest compatible versions within SDK and inter-dependency constraints.
 
-## Environment
-*   **Flutter:** 3.38.5 (stable)
-*   **Dart:** 3.10.4
-*   **OS:** Windows x64
+## Status: COMPLETE ✅
 
-## Summary
-*   ✅ **Safe upgrades applied:** `analyzer`, `ffi`, `code_builder`, `watcher`, `_fe analyzer_shared`.
-*   ✅ **Major upgrades applied:**
-    *   `go_router` (^14.6.0 -> ^17.0.0).
-    *   `flutter_riverpod` & `riverpod` (^2.6.1 -> ^3.1.0).
+### Batch 1: Small Libs (Done)
+- [x] Upgrade `test` to 1.26.3 (Latest compatible with SDK)
+- [x] Upgrade `drift` to 2.30.1
+- [x] Upgrade `drift_flutter` to 0.2.8
+- [x] Upgrade `sqlite3_flutter_libs` to 0.5.41
+- [x] Upgrade `shared_preferences` to 2.5.4
+- [x] Upgrade `logging` to 1.3.0
+- [x] Upgrade `path` to 1.9.1
 
-## Detailed Status
+### Batch 2: Tooling (Done)
+- [x] Upgrade `drift_dev` to 2.30.1
+- [x] Upgrade `build_runner` to 2.10.5
 
-### ✅ Safe Upgrades
-The following packages were updated within their existing constraints:
-*   `_fe_analyzer_shared` (92.0.0)
-*   `analyzer` (9.0.0)
-*   `code_builder` (4.11.1)
-*   `ffi` (2.1.5)
-*   `watcher` (1.2.1)
+### Batch 3: Navigation (Done)
+- [x] `go_router` is at 17.0.1 (Latest compatible)
 
-### ✅ Major Upgrades
-*   **go_router:** Upgraded to `^17.0.0`. Validated with `flutter test` - PASSED.
-*   **Riverpod (`riverpod`, `flutter_riverpod`):** Upgraded to `^3.1.0`.
-    *   **Migration:** Successfully migrated `StateNotifier` usages to `Notifier`.
-    *   **Pattern Shift:**
-        *   `AutoDisposeNotifier` is replaced by `Notifier` (used with `NotifierProvider.autoDispose`).
-        *   `FamilyNotifier` is replaced by `Notifier` with **Constructor Injection** pattern for family arguments.
-    *   **Validation:**
-        *   `flutter analyze`: PASSED (Clean).
-        *   `flutter test`: PASSED (All tests passed).
+### Batch 4: State Management (Done)
+- [x] `riverpod` / `flutter_riverpod` are at 3.1.0 (Latest compatible)
 
-### ❌ Blocked Upgrades
-None specific to this session.
-*   *Note:* Transitive deps like `sqlite3` remain pinned by their parents (`sqlite3_flutter_libs` etc).
+## NEEDS DECISION
+- **sqlite3 3.x**: Blocked by `drift_dev 2.30.1` which requires `sqlite3 ^2.4.6`. Waiting for Drift to support sqlite3 3.x.
+- **test 1.29.x**: Blocked by `flutter_test` from SDK (requires `test_api 0.7.7` vs `0.7.9`).
 
-#### Transitive Blocks
-The following are blocked by other dependencies or require deeper investigation:
-*   `sqlite3` (3.1.2 available, stuck at 2.9.4 due to `sqlite3_flutter_libs`).
-*   `characters`, `matcher`, `test_api` (Locked by `flutter_test` SDK constraints).
-
-## Test/Analyze Status
-*   `flutter analyze`: **PASSED** (No issues found)
-*   `flutter test`: **PASSED** (All tests passed)
-
-## Next Actions
-1.  **Monitor:** Keep an eye on `sqlite3` and `drift` compatibility updates.
-2.  **Refactor:** Consider using `riverpod_generator` in the future to simplify Notifier syntax, but current manual migration is stable.
-
-## Final Outdated Snapshot
-```
-Package Name              Current   Upgradable  Resolvable  Latest   
-
-direct dependencies: all up-to-date.
-
-transitive dependencies: 
-_fe_analyzer_shared       *91.0.0   *91.0.0     *91.0.0     93.0.0   
-analyzer                  *8.4.1    *8.4.1      *8.4.1      10.0.0   
-characters                *1.4.0    *1.4.0      *1.4.0      1.4.1    
-matcher                   *0.12.17  *0.12.17    *0.12.17    0.12.18  
-material_color_utilities  *0.11.1   *0.11.1     *0.11.1     0.13.0   
-sqlite3                   *2.9.4    *2.9.4      *2.9.4      3.1.2    
-test                      *1.26.3   *1.26.3     *1.26.3     1.29.0   
-test_api                  *0.7.7    *0.7.7      *0.7.7      0.7.9    
-test_core                 *0.6.12   *0.6.12     *0.6.12     0.6.15   
-```
+## Detailed Log
+- 2026-01-16 10:15: Initial assessment complete. All tests passing.
+- 2026-01-16 10:20: Batch 1 (Small Libs) complete and verified with tests.
+- 2026-01-16 10:25: Batch 2 (Tooling) complete and verified with tests.
+- 2026-01-16 10:30: Checked Batches 3 & 4; already at latest compatible versions.
+- 2026-01-16 10:35: Attempted `sqlite3 3.x` upgrade; reverted due to `drift_dev` constraint.
