@@ -16,8 +16,8 @@ class ComparisonState {
 
 final comparisonProvider =
     NotifierProvider<ComparisonNotifier, ComparisonState>(
-      ComparisonNotifier.new,
-    );
+  ComparisonNotifier.new,
+);
 
 class ComparisonNotifier extends Notifier<ComparisonState> {
   @override

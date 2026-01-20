@@ -179,9 +179,8 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
               backgroundColor: ThemeTokens.surfaceRaised,
               selectedColor: ThemeTokens.neonBlue.withValues(alpha: 0.2),
               labelStyle: TextStyle(
-                color: isSelected
-                    ? ThemeTokens.neonBlue
-                    : ThemeTokens.textMuted,
+                color:
+                    isSelected ? ThemeTokens.neonBlue : ThemeTokens.textMuted,
                 fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
               ),
               side: isSelected
@@ -238,9 +237,8 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
           if (widget.vehicle != null)
             Consumer(
               builder: (context, ref, child) {
-                final isComparing = ref
-                    .watch(comparisonProvider)
-                    .contains(widget.vehicle!.id);
+                final isComparing =
+                    ref.watch(comparisonProvider).contains(widget.vehicle!.id);
                 return IconButton(
                   icon: Icon(
                     isComparing ? Icons.compare_arrows : Icons.add_chart,
@@ -308,191 +306,203 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
             child: s.isLoadingInitial
                 ? const Center(child: CircularProgressIndicator())
                 : s.items.isEmpty
-                ? Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.search_off,
-                          size: 64,
-                          color: Theme.of(context).hintColor,
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          s.query.isNotEmpty
-                              ? 'No specs found for "${s.query}"'
-                              : 'No specs found',
-                          style: Theme.of(context).textTheme.titleLarge
-                              ?.copyWith(color: Theme.of(context).hintColor),
-                        ),
-                        if (widget.vehicle != null && s.query.isEmpty)
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              'Debug: No matches for ${widget.vehicle!.year} ${widget.vehicle!.model} ${widget.vehicle!.trim ?? ""}',
-                              textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.bodySmall
+                    ? Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.search_off,
+                              size: 64,
+                              color: Theme.of(context).hintColor,
+                            ),
+                            const SizedBox(height: 16),
+                            Text(
+                              s.query.isNotEmpty
+                                  ? 'No specs found for "${s.query}"'
+                                  : 'No specs found',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleLarge
                                   ?.copyWith(
-                                    color: Theme.of(context).colorScheme.error,
-                                  ),
+                                      color: Theme.of(context).hintColor),
                             ),
-                          ),
-                        if (s.query.isNotEmpty) ...[
-                          const SizedBox(height: 16),
-                          OutlinedButton.icon(
-                            onPressed: _clearSearch,
-                            icon: const Icon(Icons.clear),
-                            label: const Text('Clear Search'),
-                            style: OutlinedButton.styleFrom(
-                              foregroundColor: ThemeTokens.neonBlue,
-                              side: const BorderSide(
-                                color: ThemeTokens.neonBlue,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ],
-                    ),
-                  )
-                : ListView.separated(
-                    key: const Key('specListView'),
-                    controller: _controller,
-                    physics: const AlwaysScrollableScrollPhysics(),
-                    keyboardDismissBehavior:
-                        ScrollViewKeyboardDismissBehavior.onDrag,
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 8,
-                    ),
-                    itemCount: s.items.length + (s.isLoadingMore ? 1 : 0),
-                    separatorBuilder: (context, index) =>
-                        const SizedBox(height: 8),
-                    itemBuilder: (context, index) {
-                      if (index >= s.items.length) {
-                        return const Padding(
-                          padding: EdgeInsets.all(16),
-                          child: Center(child: CircularProgressIndicator()),
-                        );
-                      }
-                      final spec = s.items[index];
-                      return CarbonSurface(
-                        key: Key('spec_row_${spec.id}'),
-                        padding: EdgeInsets.zero,
-                        child: InkWell(
-                          onTap: () {
-                            showDialog(
-                              context: context,
-                              builder: (context) => AlertDialog(
-                                backgroundColor: ThemeTokens.surfaceRaised,
-                                title: Text(
-                                  spec.title,
-                                  style: Theme.of(context).textTheme.titleLarge,
+                            if (widget.vehicle != null && s.query.isEmpty)
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Debug: No matches for ${widget.vehicle!.year} ${widget.vehicle!.model} ${widget.vehicle!.trim ?? ""}',
+                                  textAlign: TextAlign.center,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodySmall
+                                      ?.copyWith(
+                                        color:
+                                            Theme.of(context).colorScheme.error,
+                                      ),
                                 ),
-                                content: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    NeonChip(
-                                      label: spec.category,
-                                      isActive: true,
-                                    ),
-                                    const SizedBox(height: 16),
-                                    Text(
-                                      spec.body,
-                                      style: Theme.of(
-                                        context,
-                                      ).textTheme.bodyMedium,
-                                    ),
-                                    const SizedBox(height: 16),
-                                    Text(
-                                      'Tags: ${spec.tags}',
+                              ),
+                            if (s.query.isNotEmpty) ...[
+                              const SizedBox(height: 16),
+                              OutlinedButton.icon(
+                                onPressed: _clearSearch,
+                                icon: const Icon(Icons.clear),
+                                label: const Text('Clear Search'),
+                                style: OutlinedButton.styleFrom(
+                                  foregroundColor: ThemeTokens.neonBlue,
+                                  side: const BorderSide(
+                                    color: ThemeTokens.neonBlue,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ],
+                        ),
+                      )
+                    : ListView.separated(
+                        key: const Key('specListView'),
+                        controller: _controller,
+                        physics: const AlwaysScrollableScrollPhysics(),
+                        keyboardDismissBehavior:
+                            ScrollViewKeyboardDismissBehavior.onDrag,
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 8,
+                        ),
+                        itemCount: s.items.length + (s.isLoadingMore ? 1 : 0),
+                        separatorBuilder: (context, index) =>
+                            const SizedBox(height: 8),
+                        itemBuilder: (context, index) {
+                          if (index >= s.items.length) {
+                            return const Padding(
+                              padding: EdgeInsets.all(16),
+                              child: Center(child: CircularProgressIndicator()),
+                            );
+                          }
+                          final spec = s.items[index];
+                          return CarbonSurface(
+                            key: Key('spec_row_${spec.id}'),
+                            padding: EdgeInsets.zero,
+                            child: InkWell(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => AlertDialog(
+                                    backgroundColor: ThemeTokens.surfaceRaised,
+                                    title: Text(
+                                      spec.title,
                                       style: Theme.of(context)
                                           .textTheme
-                                          .bodySmall
-                                          ?.copyWith(
-                                            color: ThemeTokens.textMuted,
-                                          ),
+                                          .titleLarge,
                                     ),
-                                  ],
-                                ),
-                                actions: [
-                                  TextButton.icon(
-                                    onPressed: () async {
-                                      await Clipboard.setData(
-                                        ClipboardData(text: spec.body),
-                                      );
-                                      if (context.mounted) {
-                                        Navigator.pop(context);
-                                        ScaffoldMessenger.of(
-                                          context,
-                                        ).showSnackBar(
-                                          const SnackBar(
-                                            content: Text(
-                                              'Copied to clipboard',
-                                            ),
-                                            behavior: SnackBarBehavior.floating,
-                                            duration: Duration(seconds: 2),
-                                          ),
-                                        );
-                                      }
-                                    },
-                                    icon: const Icon(Icons.copy, size: 18),
-                                    label: const Text('Copy'),
-                                    style: TextButton.styleFrom(
-                                      foregroundColor: ThemeTokens.neonBlue,
+                                    content: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        NeonChip(
+                                          label: spec.category,
+                                          isActive: true,
+                                        ),
+                                        const SizedBox(height: 16),
+                                        Text(
+                                          spec.body,
+                                          style: Theme.of(
+                                            context,
+                                          ).textTheme.bodyMedium,
+                                        ),
+                                        const SizedBox(height: 16),
+                                        Text(
+                                          'Tags: ${spec.tags}',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodySmall
+                                              ?.copyWith(
+                                                color: ThemeTokens.textMuted,
+                                              ),
+                                        ),
+                                      ],
                                     ),
-                                  ),
-                                  TextButton(
-                                    onPressed: () => Navigator.pop(context),
-                                    child: const Text(
-                                      'Close',
-                                      style: TextStyle(
-                                        color: ThemeTokens.neonBlue,
+                                    actions: [
+                                      TextButton.icon(
+                                        onPressed: () async {
+                                          await Clipboard.setData(
+                                            ClipboardData(text: spec.body),
+                                          );
+                                          if (context.mounted) {
+                                            Navigator.pop(context);
+                                            ScaffoldMessenger.of(
+                                              context,
+                                            ).showSnackBar(
+                                              const SnackBar(
+                                                content: Text(
+                                                  'Copied to clipboard',
+                                                ),
+                                                behavior:
+                                                    SnackBarBehavior.floating,
+                                                duration: Duration(seconds: 2),
+                                              ),
+                                            );
+                                          }
+                                        },
+                                        icon: const Icon(Icons.copy, size: 18),
+                                        label: const Text('Copy'),
+                                        style: TextButton.styleFrom(
+                                          foregroundColor: ThemeTokens.neonBlue,
+                                        ),
                                       ),
-                                    ),
+                                      TextButton(
+                                        onPressed: () => Navigator.pop(context),
+                                        child: const Text(
+                                          'Close',
+                                          style: TextStyle(
+                                            color: ThemeTokens.neonBlue,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
-                            );
-                          },
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
+                                );
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Expanded(
-                                      child: Text(
-                                        spec.title,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .titleMedium
-                                            ?.copyWith(
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                      ),
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Text(
+                                            spec.title,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .titleMedium
+                                                ?.copyWith(
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                          ),
+                                        ),
+                                        NeonChip(
+                                          label: spec.category,
+                                          isActive: false,
+                                        ),
+                                      ],
                                     ),
-                                    NeonChip(
-                                      label: spec.category,
-                                      isActive: false,
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      spec.body,
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium,
                                     ),
                                   ],
                                 ),
-                                const SizedBox(height: 8),
-                                Text(
-                                  spec.body,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: Theme.of(context).textTheme.bodyMedium,
-                                ),
-                              ],
+                              ),
                             ),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
+                          );
+                        },
+                      ),
           ),
         ],
       ),

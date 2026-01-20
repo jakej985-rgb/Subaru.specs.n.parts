@@ -25,13 +25,11 @@ Paint _stroke(Color c, double w) => Paint()
 
 Paint _glow(Color c, double w, double blurSigma) => Paint()
   ..style = PaintingStyle.stroke
-  ..strokeWidth =
-      w *
-      1.5 // Multiplier reduced from 2.0
+  ..strokeWidth = w * 1.5 // Multiplier reduced from 2.0
   ..strokeCap = StrokeCap.round
   ..strokeJoin = StrokeJoin.round
-  ..color = c
-      .withValues(alpha: 0.60) // Higher opacity to compensate for thinness
+  ..color =
+      c.withValues(alpha: 0.60) // Higher opacity to compensate for thinness
   ..maskFilter = MaskFilter.blur(
     BlurStyle.normal,
     blurSigma * 0.4,

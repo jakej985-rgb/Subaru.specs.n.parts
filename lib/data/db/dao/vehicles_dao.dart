@@ -34,7 +34,8 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
   Future<List<Vehicle>> getVehiclesByYearAndModel(int year, String model) =>
       (select(
         vehicles,
-      )..where((tbl) => tbl.year.equals(year) & tbl.model.equals(model))).get();
+      )..where((tbl) => tbl.year.equals(year) & tbl.model.equals(model)))
+          .get();
 
   Future<List<Vehicle>> getVehiclesByYear(int year) =>
       (select(vehicles)..where((tbl) => tbl.year.equals(year))).get();
@@ -63,8 +64,9 @@ class VehiclesDao extends DatabaseAccessor<AppDatabase>
 
   /// Returns all vehicles with the specified engine code.
   Future<List<Vehicle>> getVehiclesByEngineCode(String engineCode) => (select(
-    vehicles,
-  )..where((tbl) => tbl.engineCode.equals(engineCode))).get();
+        vehicles,
+      )..where((tbl) => tbl.engineCode.equals(engineCode)))
+          .get();
 
   /// Returns engine codes with their vehicle counts.
   Future<Map<String, int>> getEngineCodesWithCounts() async {
