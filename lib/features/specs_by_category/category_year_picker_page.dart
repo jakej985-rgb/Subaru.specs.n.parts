@@ -81,16 +81,18 @@ class _CategoryYearPickerPageState
                       children: [
                         Text(
                           year.toString(),
-                          style: Theme.of(context).textTheme.titleLarge
-                              ?.copyWith(
-                                color: ThemeTokens.neonBlue,
-                                fontWeight: FontWeight.bold,
-                              ),
+                          style:
+                              Theme.of(context).textTheme.titleLarge?.copyWith(
+                                    color: ThemeTokens.neonBlue,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                         ),
                         const SizedBox(height: 4),
                         Text(
                           '$count',
-                          style: Theme.of(context).textTheme.bodySmall
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodySmall
                               ?.copyWith(color: ThemeTokens.textMuted),
                         ),
                       ],
@@ -130,7 +132,9 @@ class _CategoryYearPickerPageState
                           ),
                           Text(
                             '$count vehicles',
-                            style: Theme.of(context).textTheme.bodySmall
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodySmall
                                 ?.copyWith(color: ThemeTokens.textMuted),
                           ),
                         ],
