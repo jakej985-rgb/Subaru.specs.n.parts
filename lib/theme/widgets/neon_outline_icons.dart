@@ -25,13 +25,11 @@ Paint _stroke(Color c, double w) => Paint()
 
 Paint _glow(Color c, double w, double blurSigma) => Paint()
   ..style = PaintingStyle.stroke
-  ..strokeWidth =
-      w *
-      1.5 // Multiplier reduced from 2.0
+  ..strokeWidth = w * 1.5 // Multiplier reduced from 2.0
   ..strokeCap = StrokeCap.round
   ..strokeJoin = StrokeJoin.round
-  ..color = c
-      .withValues(alpha: 0.60) // Higher opacity to compensate for thinness
+  ..color =
+      c.withValues(alpha: 0.60) // Higher opacity to compensate for thinness
   ..maskFilter = MaskFilter.blur(
     BlurStyle.normal,
     blurSigma * 0.4,
@@ -45,8 +43,8 @@ class SubaruBadgePainter extends CustomPainter {
   final bool glow;
 
   @override
-  void paint(Canvas canvas, Size s) {
-    final w = s.shortestSide;
+  void paint(Canvas canvas, Size size) {
+    final w = size.shortestSide;
     final sw = w * 0.03; // Ultra-thin stroke
 
     // Oval frame
@@ -98,8 +96,8 @@ class SubaruBadgePainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant SubaruBadgePainter old) =>
-      old.color != color || old.glow != glow;
+  bool shouldRepaint(covariant SubaruBadgePainter oldDelegate) =>
+      oldDelegate.color != color || oldDelegate.glow != glow;
 }
 
 /// B) Boxer engine: Classic Flat-4 Silhouette
@@ -120,8 +118,8 @@ class BoxerEnginePainter extends CustomPainter {
   final bool glow;
 
   @override
-  void paint(Canvas canvas, Size s) {
-    final w = s.shortestSide;
+  void paint(Canvas canvas, Size size) {
+    final w = size.shortestSide;
     final sw = w * 0.03;
 
     // Central block (crankcase) - tall rectangle in center
@@ -305,8 +303,10 @@ class BoxerEnginePainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant BoxerEnginePainter old) =>
-      old.color != color || old.pistonColor != pistonColor || old.glow != glow;
+  bool shouldRepaint(covariant BoxerEnginePainter oldDelegate) =>
+      oldDelegate.color != color ||
+      oldDelegate.pistonColor != pistonColor ||
+      oldDelegate.glow != glow;
 }
 
 /// C) Category grid
@@ -317,8 +317,8 @@ class CategoryGridPainter extends CustomPainter {
   final bool glow;
 
   @override
-  void paint(Canvas canvas, Size s) {
-    final w = s.shortestSide;
+  void paint(Canvas canvas, Size size) {
+    final w = size.shortestSide;
     final sw = w * 0.03; // Ultra-thin stroke
     final r = Radius.circular(w * 0.06);
 
@@ -354,6 +354,6 @@ class CategoryGridPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant CategoryGridPainter old) =>
-      old.color != color || old.glow != glow;
+  bool shouldRepaint(covariant CategoryGridPainter oldDelegate) =>
+      oldDelegate.color != color || oldDelegate.glow != glow;
 }

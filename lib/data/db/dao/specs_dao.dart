@@ -59,35 +59,32 @@ class SpecsDao extends DatabaseAccessor<AppDatabase> with _$SpecsDaoMixin {
     if (trim.contains('crosstrek')) aliases.add('crosstrek');
     if (trim.contains('baja')) aliases.add('baja');
 
-    final candidates =
-        await (select(specs)..where((tbl) {
-              // Must match YEAR
-              Expression<bool> predicate = tbl.tags.contains(year);
+    final candidates = await (select(specs)
+          ..where((tbl) {
+            // Must match YEAR
+            Expression<bool> predicate = tbl.tags.contains(year);
 
-              // Must match Model OR any Alias
-              Expression<bool> modelMatch = tbl.tags.contains(model);
-              for (final alias in aliases) {
-                modelMatch = modelMatch | tbl.tags.contains(alias);
-              }
-              predicate &= modelMatch;
+            // Must match Model OR any Alias
+            Expression<bool> modelMatch = tbl.tags.contains(model);
+            for (final alias in aliases) {
+              modelMatch = modelMatch | tbl.tags.contains(alias);
+            }
+            predicate &= modelMatch;
 
-              if (query != null && query.isNotEmpty) {
-                predicate &=
-                    (tbl.title.contains(query) | tbl.body.contains(query));
-              }
-              return predicate;
-            }))
-            .get();
+            if (query != null && query.isNotEmpty) {
+              predicate &=
+                  (tbl.title.contains(query) | tbl.body.contains(query));
+            }
+            return predicate;
+          }))
+        .get();
 
     // 2. Post-filter for Trim applicability
     // This logic ensures that if a spec is specific to a trim (e.g. tagged "base" only),
     // it doesn't show up for "limited".
     return candidates.where((spec) {
-      final tagList = spec.tags
-          .toLowerCase()
-          .split(',')
-          .map((e) => e.trim())
-          .toSet();
+      final tagList =
+          spec.tags.toLowerCase().split(',').map((e) => e.trim()).toSet();
 
       // Known trim tags to check against
       final knownTrims = [

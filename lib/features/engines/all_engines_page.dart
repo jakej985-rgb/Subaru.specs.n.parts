@@ -88,8 +88,8 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
                 Text(
                   'No engine data available',
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: Theme.of(context).hintColor,
-                  ),
+                        color: Theme.of(context).hintColor,
+                      ),
                 ),
               ],
             ),
@@ -134,19 +134,19 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
                       ),
                       child: Text(
                         item.family,
-                        style: Theme.of(context).textTheme.titleMedium
-                            ?.copyWith(
-                              fontWeight: FontWeight.bold,
-                              color: familyColor,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: familyColor,
+                                ),
                       ),
                     ),
                     const SizedBox(width: 8),
                     Text(
                       _getFamilyName(item.family),
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: ThemeTokens.textMuted,
-                      ),
+                            color: ThemeTokens.textMuted,
+                          ),
                     ),
                     const Spacer(),
                     MarketBadge.fromTrims(item.trims, compact: true),
@@ -190,12 +190,16 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
                             children: [
                               Text(
                                 engine.code,
-                                style: Theme.of(context).textTheme.titleSmall
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleSmall
                                     ?.copyWith(fontWeight: FontWeight.w600),
                               ),
                               Text(
                                 '${engine.modelCount} model${engine.modelCount == 1 ? '' : 's'}',
-                                style: Theme.of(context).textTheme.bodySmall
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodySmall
                                     ?.copyWith(color: ThemeTokens.textMuted),
                               ),
                             ],
@@ -284,8 +288,8 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
             Text(
               'No vehicles found with $_selectedEngine',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                color: Theme.of(context).hintColor,
-              ),
+                    color: Theme.of(context).hintColor,
+                  ),
             ),
           ],
         ),
@@ -316,10 +320,10 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
                   child: Text(
                     _selectedEngine!,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: ThemeTokens.neonBlue,
-                      fontFamily: 'monospace',
-                    ),
+                          fontWeight: FontWeight.bold,
+                          color: ThemeTokens.neonBlue,
+                          fontFamily: 'monospace',
+                        ),
                   ),
                 ),
                 const SizedBox(width: 16),
@@ -327,8 +331,8 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
                   child: Text(
                     '${_vehicles.length} compatible vehicle${_vehicles.length == 1 ? '' : 's'}',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: ThemeTokens.textSecondary,
-                    ),
+                          color: ThemeTokens.textSecondary,
+                        ),
                   ),
                 ),
                 MarketBadge.fromTrims(allTrims),
@@ -372,7 +376,9 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
                               const SizedBox(height: 4),
                               Text(
                                 v.trim ?? 'Base',
-                                style: Theme.of(context).textTheme.bodySmall
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodySmall
                                     ?.copyWith(color: ThemeTokens.textMuted),
                               ),
                             ],

@@ -54,8 +54,8 @@ class EngineMotorPage extends ConsumerWidget {
                   Text(
                     'No motors found in $family family',
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: Theme.of(context).hintColor,
-                    ),
+                          color: Theme.of(context).hintColor,
+                        ),
                   ),
                 ],
               ),
@@ -82,7 +82,9 @@ class EngineMotorPage extends ConsumerWidget {
                         ),
                         child: Text(
                           family,
-                          style: Theme.of(context).textTheme.headlineSmall
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall
                               ?.copyWith(
                                 fontWeight: FontWeight.bold,
                                 color: ThemeTokens.neonBlue,
@@ -96,13 +98,17 @@ class EngineMotorPage extends ConsumerWidget {
                           children: [
                             Text(
                               _getFamilyDescription(family),
-                              style: Theme.of(context).textTheme.bodyMedium
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
                                   ?.copyWith(color: ThemeTokens.textSecondary),
                             ),
                             const SizedBox(height: 4),
                             Text(
                               '${motors.length} motor variants',
-                              style: Theme.of(context).textTheme.bodySmall
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall
                                   ?.copyWith(color: ThemeTokens.textMuted),
                             ),
                           ],
@@ -155,7 +161,9 @@ class EngineMotorPage extends ConsumerWidget {
                               ),
                               child: Text(
                                 motor,
-                                style: Theme.of(context).textTheme.titleMedium
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
                                     ?.copyWith(
                                       fontWeight: FontWeight.bold,
                                       color: ThemeTokens.neonBlue,
@@ -180,7 +188,9 @@ class EngineMotorPage extends ConsumerWidget {
                                   const SizedBox(height: 4),
                                   Text(
                                     '$vehicleCount model${vehicleCount == 1 ? '' : 's'}',
-                                    style: Theme.of(context).textTheme.bodySmall
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodySmall
                                         ?.copyWith(
                                           color: ThemeTokens.textMuted,
                                         ),

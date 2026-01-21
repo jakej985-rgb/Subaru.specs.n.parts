@@ -82,8 +82,8 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
   Future<void> _loadVehicles(int year, String model) async {
     final db = ref.read(appDbProvider);
     try {
-      final List<Vehicle> vehicles = await db.vehiclesDao
-          .getVehiclesByYearAndModel(year, model);
+      final List<Vehicle> vehicles =
+          await db.vehiclesDao.getVehiclesByYearAndModel(year, model);
       if (mounted && _selectedModel == model) {
         setState(() {
           _vehicles = vehicles;
@@ -191,9 +191,7 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                     infoChips: [
                       Consumer(
                         builder: (context, ref, _) {
-                          final isFav = ref
-                              .watch(favoriteVehiclesProvider)
-                              .any(
+                          final isFav = ref.watch(favoriteVehiclesProvider).any(
                                 (fav) =>
                                     '${fav.year}|${fav.model}|${fav.trim}' ==
                                     '${v.year}|${v.model}|${v.trim}',
@@ -222,7 +220,9 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                                   const SizedBox(width: 4),
                                   Text(
                                     isFav ? 'In Garage' : 'Add to Garage',
-                                    style: Theme.of(context).textTheme.bodySmall
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .bodySmall
                                         ?.copyWith(
                                           color: ThemeTokens.textMuted,
                                         ),
@@ -263,13 +263,17 @@ class _YmmFlowPageState extends ConsumerState<YmmFlowPage> {
                       const SizedBox(height: 16),
                       Text(
                         _selectedVehicle!.trim ?? 'Base',
-                        style: Theme.of(context).textTheme.headlineMedium
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineMedium
                             ?.copyWith(fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
                       Text(
                         '${_selectedVehicle!.year} ${_selectedVehicle!.make} ${_selectedVehicle!.model}',
-                        style: Theme.of(context).textTheme.titleMedium
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium
                             ?.copyWith(color: ThemeTokens.textMuted),
                       ),
                       const SizedBox(height: 24),
@@ -426,18 +430,18 @@ class _FlowCard extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: Theme.of(context).textTheme.headlineSmall
-                          ?.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: iconColor,
-                          ),
+                      style:
+                          Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: iconColor,
+                              ),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       subtitle,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: ThemeTokens.textSecondary,
-                      ),
+                            color: ThemeTokens.textSecondary,
+                          ),
                     ),
                     if (infoChips.isNotEmpty) ...[
                       const SizedBox(height: 8),
