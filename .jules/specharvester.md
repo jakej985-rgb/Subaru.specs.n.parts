@@ -19,3 +19,7 @@
 ## 2026-01-10 - VB WRX Brake Caliper Confusion
 **Learning:** The 2022+ WRX (VB) uses 316mm front rotors on most trims (Base/Premium/Limited/GT), similar in size to the old "Subaru 4-Pot" brakes or even the 2004 STI Brembos (326mm is close), but the caliper is a **2-piston floating** design, not a 4-piston fixed caliper. Previous data conflated these.
 **Action:** Added specific specs for VB WRX Front/Rear Rotors and Calipers (`s_brake_front_rotor_wrx_vb`, etc.) and clarified the `s_brake_4pot_front` entry to explicitly exclude the 2022+ WRX to prevent user confusion.
+
+## 2026-05-24 - 2004 STI Fluid & Torque Specificity
+**Learning:** The 2004 STI is a unique transition year. While it has the 6MT and Brembos, it retains the 5x100 bolt pattern. For fluids, the Intercooler Spray tank capacity is specific (4.0qt/3.8L) and requires Distilled Water. The FSM also contains a dangerous error for front caliper torque (114 ft-lbs) which must be corrected to 80 ft-lbs.
+**Action:** Updated `fluids.json` to include IC Spray, Brake Fluid, and Clutch Fluid types for the 2004 STI (both `WRX STI (US)` and `WRX STI Sedan (US)` trims). Verified Torque specs in `torque.json` already contain the safety warning.
