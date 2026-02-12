@@ -616,5 +616,45 @@
     "updatedAt": "2026-01-14T00:00:00Z",
     "verified": true,
     "source": "FSM"
+  },
+  {
+    "id": "s_brake_caliper_front_sti_2004",
+    "category": "Brakes",
+    "title": "Front Caliper Type",
+    "body": "Brembo 4-piston fixed caliper",
+    "tags": "2004,2005,2006,2007,brakes,brembo,caliper,front,gd,sti",
+    "updatedAt": "2025-01-14T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_brake_caliper_rear_sti_2004",
+    "category": "Brakes",
+    "title": "Rear Caliper Type",
+    "body": "Brembo 2-piston fixed caliper",
+    "tags": "2004,2005,2006,2007,brakes,brembo,caliper,gd,rear,sti",
+    "updatedAt": "2025-01-14T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_brake_master_cylinder_sti_2004",
+    "category": "Brakes",
+    "title": "Master Cylinder Bore",
+    "body": "1-1/16 inch (26.99 mm)",
+    "tags": "2004,2005,2006,2007,brakes,cylinder,gd,master,sti",
+    "updatedAt": "2025-01-14T00:00:00Z",
+    "verified": true,
+    "source": "FSM"
+  },
+  {
+    "id": "s_brake_fluid_type_sti_2004",
+    "category": "Brakes",
+    "title": "Brake Fluid Type",
+    "body": "DOT 3 or DOT 4",
+    "tags": "2004,2005,2006,2007,brakes,fluid,gd,sti",
+    "updatedAt": "2025-01-14T00:00:00Z",
+    "verified": true,
+    "source": "Owner's Manual"
   }
 ]
