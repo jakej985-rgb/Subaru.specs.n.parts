@@ -21960,7 +21960,7 @@
     "market": "USDM",
     "engine_oil_drain_plug": "with crush washer: 44 N·m / 32 ft-lb",
     "engine_oil_filter": "capacity: 14 N·m / 10 ft-lb",
-    "manual_trans_drain_plug": "with crush washer: 44 N·m / 32 ft-lb",
+    "manual_trans_drain_plug": "Aluminum Gasket: 44 N·m (32.5 ft-lb) | Copper/Metal Gasket: 70 N·m (51.6 ft-lb)",
     "manual_trans_fill_plug": "with crush washer: 44 N·m / 32 ft-lb",
     "automatic_trans_drain_plug": "n/a",
     "automatic_trans_pan_bolts": "n/a",
@@ -21978,7 +21978,7 @@
     "brake_caliper_slide_pins": "n/a",
     "brake_bleeder_screws": "capacity: 8.0 N·m / 5.9 ft-lb",
     "battery_terminal_clamp": "capacity: 6.0 N·m / 4.4 ft-lb",
-    "notes": "; Front diff shared sump (MT)",
+    "notes": "; Front diff shared sump (MT); Warning: Trans drain plug torque depends on gasket type. Copper/Metal gasket requires higher torque (70Nm) than Aluminum (44Nm).",
     "source_1": "Subaru Service Manual",
     "source_2": "n/a",
     "confidence": "medium"
