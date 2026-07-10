@@ -3,14 +3,14 @@ Version 0.1
 
 ---
 
-### 1. Mission Statement
+# 1. Mission Statement
 
 > Subaru Specs & Garage is an offline-first mobile app that helps Subaru owners manage their vehicles using accurate VIN decoding, factory specifications, maintenance tracking, and customizable vehicle data. The app is designed to be fast, reliable, and useful whether you're doing a simple oil change or building a fully modified project car.
 
 
 ---
 
-### 2. Core Principles
+# 2. Core Principles
 
 
  * ✅ Offline-first
@@ -29,7 +29,7 @@ Version 0.1
 
 ---
 
-### 3. Minimum Viable Product (MVP)
+# 3. Minimum Viable Product (MVP)
 
  * [ ] Add vehicle
 
@@ -53,7 +53,7 @@ Version 0.1
 
 ---
 
-### 4. Data Models
+# 4. Data Models
 
 ```text
 Data Models
@@ -83,7 +83,7 @@ Maintenance Record
 
 ---
 
-### 5. Screen List
+# 5. Screen List
 
 ## Home
 
@@ -117,7 +117,7 @@ edit cars motor/trans
 
 ---
 
-### 6. Features
+# 6. Features
 
 Each feature gets a short description.
 
@@ -137,7 +137,7 @@ Save factory specs separately
 
 ---
 
-### 7. Roadmap
+# 7. Roadmap
 
 Version 1.0
 
