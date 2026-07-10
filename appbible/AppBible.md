@@ -31,21 +31,21 @@ Version 0.1
 
 ### 3. Minimum Viable Product (MVP)
 
- * [] Add vehicle
+ * [ ] Add vehicle
 
- * [] VIN decode
+ * [ ] VIN decode
 
- * [] Manual vehicle entry
+ * [ ] Manual vehicle entry
 
- * [] Garage
+ * [ ] Garage
 
- * [] Vehicle details
+ * [ ] Vehicle details
 
- * [] Maintenance tracking
+ * [ ] Maintenance tracking
 
- * [] Fluid specifications
+ * [ ] Fluid specifications
 
- * [] Settings
+ * [ ] Settings
 
 
 > Everything else waits until after version 1.0.
