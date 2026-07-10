@@ -85,21 +85,18 @@ Maintenance Record
 
 # 5. Screen List
 
-## Home
+### Home
 
-Purpose: * Give the user a quick overview of their selected vehicle. *
+Purpose:
+ * Give the user a quick overview of their selected vehicle. *
 
-  ### Widgets:
+### Widgets:
 
-    * Change vehicle 
-
-    * Current vehicle
-
-    * Mileage
-
-    * Upcoming maintenance
-
-    * Quick actions
+ * Change vehicle 
+ * Current vehicle
+ * Mileage
+ * Upcoming maintenance
+ * Quick actions
 
 
 ## Garage:
