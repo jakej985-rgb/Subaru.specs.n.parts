@@ -120,14 +120,20 @@ Maintenance Record
 ### 5.3 Add Vehicle
 
 #### Purpose:
+ * *This is to add a new vehicle to the garage.Will have 2 ways to add Scan/Type VIN or Year Make Model Trim.Should try to decode VIN to get drivetrain info.*
 
 #### Widgets:
+
+ * VIN decoder
+ * Year Make model Trim dialog 
+ * camera access for vin scanner 
 
 ---
 
 ### 5.4 Vehicle Details
 
 #### Purpose:
+ * *this will list drivetrain specs. like fwd or awd engine trans diffs etc.*
 
 #### Widgets:
 
