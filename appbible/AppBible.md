@@ -13,17 +13,17 @@ Version 0.1
 ### 2. Core Principles
 
 
-✅ Offline-first
+ * ✅ Offline-first
 
-✅ User owns their data
+ * ✅ User owns their data
 
-✅ Factory data is never overwritten
+ * ✅ Factory data is never overwritten
 
-✅ User modifications are tracked separately
+ * ✅ User modifications are tracked separately
 
-✅ Every feature should reduce the number of taps
+ * ✅ Every feature should reduce the number of taps
 
-✅ Speed is more important than flashy animations
+ * ✅ Speed is more important than flashy animations
 
 
 
