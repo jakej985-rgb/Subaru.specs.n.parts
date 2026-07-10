@@ -109,13 +109,61 @@ Maintenance Record
 #### Purpose:
  * *This page is for you to view cars in garage. Also able to view and edit records and engine/drivetrain if you have modified it.*
 
-#### Widgets 
+#### Widgets:
 
  * list all cars
  * view/edit cars motor/trans
  * view/edit records
 
+---
 
+### 5.3 Add Vehicle
+
+#### Purpose:
+
+#### Widgets:
+
+---
+
+### 5.4 Vehicle Details
+
+#### Purpose:
+
+#### Widgets:
+
+---
+
+### 5.5 Maintenance
+
+#### Purpose:
+
+#### Widgets:
+
+---
+
+### 5.6 Fluids
+
+#### Purpose:
+
+#### Widgets:
+
+---
+
+### 5.7 Parts
+
+#### Purpose:
+
+#### Widgets:
+
+---
+
+### 5.8 Settings
+
+#### Purpose:
+
+#### Widgets:
+
+---
 
 ---
 
