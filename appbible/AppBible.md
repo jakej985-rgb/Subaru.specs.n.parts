@@ -52,41 +52,37 @@ Version 0.1
 
 
 ---
-
 # 4. Data Models
 
-#### Vehicle class
+#### Vehicle Class
 
 ```text
-Vehicles Models
-└── Vehicle
-    ├── VIN
-    ├── Nickname
-    ├── Year
-    ├── Make
-    ├── Model
-    ├── Trim
-    ├── Factory Specs
-    ├── Current Specs
-    ├── Maintenance
-    ├── Photos
-    └── Documents
-'''
-
-#### Maintenance class
-
-'''text
-Maintenance Record
-└── Maintenance
-    ├── Date
-    ├── Mileage
-    ├── Category
-    ├── Notes
-    ├── Cost
-    ├── Photos
-    └── Receipts
+Vehicle
+├── VIN
+├── Nickname
+├── Year
+├── Make
+├── Model
+├── Trim
+├── Factory Specs
+├── Current Specs
+├── Maintenance
+├── Photos
+└── Documents
 ```
 
+#### Maintenance Class
+
+```text
+Maintenance Record
+├── Date
+├── Mileage
+├── Category
+├── Notes
+├── Cost
+├── Photos
+└── Receipts
+```
 ---
 
 # 5. Screen List
