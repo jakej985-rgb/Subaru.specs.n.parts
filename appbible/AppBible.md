@@ -87,9 +87,7 @@ Maintenance Record
 
 ## Home
 
-Purpose:
-
-> Give the user a quick overview of their selected vehicle.
+Purpose: > Give the user a quick overview of their selected vehicle.
 
 
 
