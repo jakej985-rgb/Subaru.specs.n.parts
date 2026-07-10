@@ -85,7 +85,7 @@ Maintenance Record
 
 # 5. Screen List
 
-### Home
+### 5.1 Home
 
 #### Purpose:
  * *Give the user a quick overview of their selected vehicle.*
@@ -99,14 +99,16 @@ Maintenance Record
  * Quick actions
 
 
-### Garage:
+### 5.2 Garage:
 
-#### Purpose: 
+#### Purpose:
+ * *This page is for you to view cars in garage. Also able to view and edit records and engine/drivetrain if you have modified it.*
 
-list all cars
+#### Widgets 
 
-view/edit cars motor/trans
-
+ * list all cars
+ * view/edit cars motor/trans
+ * view/edit records
 
 
 
