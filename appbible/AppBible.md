@@ -55,10 +55,31 @@ Everything else waits until after version 1.0.
 
 4. Data Models
 
-This will eventually become our Dart classes.
+Vehicle
 
-We'll design them in plain English first.
+Vehicle
+├── VIN
+├── Nickname
+├── Year
+├── Make
+├── Model
+├── Trim
+├── Factory Specs
+├── Current Specs
+├── Maintenance
+├── Photos
+└── Documents
 
+Maintenance Record
+
+Maintenance
+├── Date
+├── Mileage
+├── Category
+├── Notes
+├── Cost
+├── Photos
+└── Receipts
 
 ---
 
@@ -74,6 +95,8 @@ Purpose:
 
 Widgets:
 
+Change vehicle 
+
 Current vehicle
 
 Mileage
@@ -81,6 +104,14 @@ Mileage
 Upcoming maintenance
 
 Quick actions
+
+
+Garage:
+
+list all cars
+
+edit cars motor/trans
+
 
 
 
