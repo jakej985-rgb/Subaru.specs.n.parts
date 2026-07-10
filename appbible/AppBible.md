@@ -85,6 +85,8 @@ Maintenance Record
 
 # 5. Screen List
 
+---
+
 ### 5.1 Home
 
 #### Purpose:
@@ -98,7 +100,7 @@ Maintenance Record
  * Upcoming maintenance
  * Quick actions
 
---
+---
 
 ### 5.2 Garage:
 
