@@ -53,8 +53,9 @@ Everything else waits until after version 1.0.
 
 ---
 
-4. Data Models
+### 4. Data Models
 
+```text
 Data Models
 └── Vehicle
     ├── VIN
@@ -78,34 +79,7 @@ Maintenance Record
     ├── Cost
     ├── Photos
     └── Receipts
-
-
-
-Vehicle
-
-Vehicle
-├── VIN
-├── Nickname
-├── Year
-├── Make
-├── Model
-├── Trim
-├── Factory Specs
-├── Current Specs
-├── Maintenance
-├── Photos
-└── Documents
-
-Maintenance Record
-
-Maintenance
-├── Date
-├── Mileage
-├── Category
-├── Notes
-├── Cost
-├── Photos
-└── Receipts
+```
 
 ---
 
