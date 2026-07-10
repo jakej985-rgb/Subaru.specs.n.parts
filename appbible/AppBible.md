@@ -56,7 +56,7 @@ Version 0.1
 # 4. Data Models
 
 ```text
-Data Models
+Vehicles Models
 └── Vehicle
     ├── VIN
     ├── Nickname
@@ -69,7 +69,8 @@ Data Models
     ├── Maintenance
     ├── Photos
     └── Documents
-
+'''
+'''text
 Maintenance Record
 └── Maintenance
     ├── Date
