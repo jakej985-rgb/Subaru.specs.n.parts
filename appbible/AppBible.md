@@ -55,6 +55,7 @@ Version 0.1
 
 # 4. Data Models
 
+#### Vehicle class
 ```text
 Vehicles Models
 └── Vehicle
@@ -70,7 +71,7 @@ Vehicles Models
     ├── Photos
     └── Documents
 '''
-
+#### Maintenance class
 '''text
 Maintenance Record
 └── Maintenance
