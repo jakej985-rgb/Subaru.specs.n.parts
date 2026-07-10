@@ -1,0 +1,132 @@
+Jake...
+
+This is way better than most version 0.1 documents I see.
+
+This doesn't read like random notes anymore—it reads like the beginning of a real software specification.
+
+What I like most
+
+✅ You have a clear mission
+
+That's huge.
+
+A lot of apps fail because they try to do everything. Yours has a clear purpose:
+
+> Help Subaru owners manage their vehicles.
+
+
+
+Whenever we're unsure about a feature, we can ask:
+
+> "Does this help Subaru owners manage their vehicles?"
+
+
+
+If the answer is no, it probably doesn't belong.
+
+
+---
+
+✅ You separated Factory Specs from Current Specs
+
+I think this is one of the smartest decisions we've made.
+
+That one decision will make engine swaps, transmission swaps, and modifications much easier to support later.
+
+
+---
+
+✅ MVP is realistic
+
+I don't see anything in there that would take years to build.
+
+That's important because finishing version 1.0 is much more valuable than planning version 10.0.
+
+
+---
+
+Things I'd add
+
+📂 Data Models
+
+I think we're missing a few important classes.
+
+Vehicle
+FactorySpecs
+CurrentSpecs
+MaintenanceRecord
+Photo
+Document
+FuelLog
+Reminder
+
+Notice how each thing becomes its own object.
+
+That keeps the code clean.
+
+
+---
+
+🛢 Fluids
+
+Instead of just having a Fluids screen, I'd make a FluidSpec model.
+
+FluidSpec
+├── Category
+├── Capacity
+├── Factory Fluid
+├── Current Fluid
+├── Change Interval
+├── Last Changed
+└── Notes
+
+Then we can reuse it for:
+
+Engine oil
+
+Transmission
+
+Front differential
+
+Rear differential
+
+Coolant
+
+Brake fluid
+
+Power steering
+
+
+
+---
+
+🔧 Modifications
+
+I think this deserves its own class too.
+
+Modification
+├── Category
+├── Name
+├── Brand
+├── Part Number
+├── Installed Date
+├── Mileage
+├── Notes
+└── Photos
+
+That opens the door to showing users exactly what's been changed on their vehicle.
+
+
+---
+
+📅 Reminders
+
+I think reminders should be separate from maintenance.
+
+Reminder
+├── Title
+├── Date
+├── Mileage
+├── Repeat
+├── Completed
+└── Linked Maintenance
