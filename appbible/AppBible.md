@@ -55,6 +55,35 @@ Everything else waits until after version 1.0.
 
 4. Data Models
 
+classDiagram
+    class Vehicle {
+        +String VIN
+        +String Nickname
+        +Int Year
+        +String Make
+        +String Model
+        +String Trim
+        +String FactorySpecs
+        +String CurrentSpecs
+        +Maintenance MaintenanceHistory
+        +List Photos
+        +List Documents
+    }
+
+    class MaintenanceRecord {
+        +Date Date
+        +Float Mileage
+        +String Category
+        +String Notes
+        +Currency Cost
+        +List Photos
+        +List Receipts
+    }
+
+    Vehicle "1" --o "*" MaintenanceRecord : "Has"
+
+
+
 Vehicle
 
 Vehicle
