@@ -87,10 +87,9 @@ Maintenance Record
 
 ### Home
 
-Purpose:
- * Give the user a quick overview of their selected vehicle. *
+#### Purpose: *Give the user a quick overview of their selected vehicle.*
 
-### Widgets:
+#### Widgets:
 
  * Change vehicle 
  * Current vehicle
@@ -99,9 +98,10 @@ Purpose:
  * Quick actions
 
 
-## Garage:
+### Garage:
 
-Purpose: 
+#### Purpose: 
+
 list all cars
 
 view/edit cars motor/trans
