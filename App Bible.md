@@ -41,7 +41,7 @@ Garage
 
 Vehicle details
 
-Maintenance tracking
+~~Maintenance tracking~~ (Not yet implemented)
 
 Fluid specifications
 
@@ -55,77 +55,87 @@ Everything else waits until after version 1.0.
 
 4. Data Models
 
-This will eventually become our Dart classes.
+The core data models are defined as Drift database tables (SQLite):
+- **Vehicles**: Stores year, make, model, trim, and engineCode.
+- **Specs**: Stores specifications categorized by type (e.g., fluid, torque) with flexible tags (JSON/comma string) to link to specific vehicle configurations.
+- **Parts**: Stores part names, OEM numbers, aftermarket numbers, and fitment details (JSON list).
 
-We'll design them in plain English first.
+*Note: Maintenance tracking tables do not exist yet.*
+
 
 
 ---
 
 5. Screen List
 
-Home
-
-Purpose:
-
+**Home / Garage**
 > Give the user a quick overview of their selected vehicle.
+Widgets: Current vehicle, Mileage, Quick actions. (Maintenance tracking not yet implemented).
 
+**VIN Wizard**
+> Scan or manually enter a VIN to decode vehicle details.
 
+**Parts Lookup**
+> Search for parts by name or OEM number.
 
-Widgets:
+**Specs List & Categories**
+> Browse vehicle specifications (Torque, Fluids, Bulbs, etc.) filtered by vehicle or category.
 
-Current vehicle
+**Browse YMM & Engines**
+> Browse vehicles by Year, Make, Model or through the Engine Family hierarchy (e.g., Boxer Tree).
 
-Mileage
+**Global Search**
+> Search across the entire app for vehicles, parts, and specs.
 
-Upcoming maintenance
+**Comparison**
+> Compare specifications or parts side-by-side.
 
-Quick actions
-
+**Settings**
+> Manage app preferences.
 
 
 ---
 
 6. Features
 
-Each feature gets a short description.
+**VIN Decoder**
+Scan barcode, manual VIN entry, decode online, allow editing after decoding. Saves factory specs separately.
 
-VIN Decoder
+**Garage**
+Manage a list of user vehicles.
 
-Scan barcode
+**Vehicle Specifications (Implemented V1.5)**
+Look up torque specs, fluid capacities, bulb types, and maintenance intervals for specific vehicles.
 
-Manual VIN entry
+**Parts Database (Implemented V1.5)**
+Look up OEM and aftermarket parts and their fitment.
 
-Decode online
+**Engine Browser (Boxer Tree)**
+Explore Subaru engine families, motors, and the vehicles they are found in.
 
-Allow editing after decoding
+**Global Search**
+Quickly find information across the entire application using an overlay search interface.
 
-Save factory specs separately
-
+**Comparison**
+Compare specs side-by-side.
 
 
 ---
 
 7. Roadmap
 
-Version 1.0
+**Version 1.0 (Current MVP Base)**
+- [x] Garage
+- [x] VIN
+- [ ] Maintenance (Not implemented yet)
 
-Garage
+**Version 1.5 (Specs & Parts - Currently Implemented)**
+- [x] Parts database
+- [x] Torque specs (and other specs)
+- [x] Engine Browser
+- [x] Global Search
+- [x] Comparison
 
-VIN
-
-Maintenance
-
-
-Version 1.5
-
-Parts database
-
-Torque specs
-
-
-Version 2.0
-
-Cloud sync
-
-Shared garages
+**Version 2.0**
+- [ ] Cloud sync
+- [ ] Shared garages
