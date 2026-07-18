@@ -27477,7 +27477,11 @@
     "notes": "6MT; front diff shared; washer: 4.0 L | fill to max; Intercooler spray: 3.8 L",
     "source_1": "Subaru STI FSM",
     "source_2": "AMSOIL",
-    "confidence": "high"
+    "confidence": "high",
+    "intercooler_spray_fluid_qty": "capacity: 4.0 qt / 3.8 L (Distilled Water)",
+    "brake_fluid_type": "DOT 3 or DOT 4",
+    "clutch_fluid_type": "DOT 3 or DOT 4",
+    "fuel_tank_capacity": "15.9 gal / 60 L (91+ Octane)"
   },
   {
     "year": 2004,
@@ -27517,7 +27521,11 @@
     "notes": "6MT; front diff shared; washer: fill to max; Intercooler spray: 3.8 L",
     "source_1": "Subaru STI FSM",
     "source_2": "AMSOIL",
-    "confidence": "high"
+    "confidence": "high",
+    "intercooler_spray_fluid_qty": "capacity: 4.0 qt / 3.8 L (Distilled Water)",
+    "brake_fluid_type": "DOT 3 or DOT 4",
+    "clutch_fluid_type": "DOT 3 or DOT 4",
+    "fuel_tank_capacity": "15.9 gal / 60 L (91+ Octane)"
   },
   {
     "year": 2004,
