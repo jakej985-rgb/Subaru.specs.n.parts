@@ -27474,10 +27474,12 @@
     "ac_refrigerant_unit": "R-134a",
     "ac_compressor_oil_qty": "n/a",
     "ac_compressor_oil_unit": "n/a",
-    "notes": "6MT; front diff shared; washer: 4.0 L | fill to max; Intercooler spray: 3.8 L",
+    "notes": "6MT; front diff shared; washer: 4.0 L | fill to max",
     "source_1": "Subaru STI FSM",
     "source_2": "AMSOIL",
-    "confidence": "high"
+    "confidence": "high",
+    "intercooler_spray_fluid_qty": "capacity: 4.0 qt / 3.8 L",
+    "intercooler_spray_fluid_unit": "Distilled Water"
   },
   {
     "year": 2004,
@@ -27514,10 +27516,12 @@
     "ac_refrigerant_unit": "R-134a",
     "ac_compressor_oil_qty": "n/a",
     "ac_compressor_oil_unit": "n/a",
-    "notes": "6MT; front diff shared; washer: fill to max; Intercooler spray: 3.8 L",
+    "notes": "6MT; front diff shared; washer: fill to max",
     "source_1": "Subaru STI FSM",
     "source_2": "AMSOIL",
-    "confidence": "high"
+    "confidence": "high",
+    "intercooler_spray_fluid_qty": "capacity: 4.0 qt / 3.8 L",
+    "intercooler_spray_fluid_unit": "Distilled Water"
   },
   {
     "year": 2004,
