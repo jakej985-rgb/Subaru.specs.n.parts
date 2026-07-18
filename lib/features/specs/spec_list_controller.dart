@@ -39,24 +39,25 @@ class SpecListState {
     int? generation,
     Vehicle? vehicle,
     List<String>? categories,
-  }) => SpecListState(
-    items: items ?? this.items,
-    isLoadingInitial: isLoadingInitial ?? this.isLoadingInitial,
-    isLoadingMore: isLoadingMore ?? this.isLoadingMore,
-    hasMore: hasMore ?? this.hasMore,
-    offset: offset ?? this.offset,
-    limit: limit ?? this.limit,
-    query: query ?? this.query,
-    generation: generation ?? this.generation,
-    vehicle: vehicle ?? this.vehicle,
-    categories: categories ?? this.categories,
-  );
+  }) =>
+      SpecListState(
+        items: items ?? this.items,
+        isLoadingInitial: isLoadingInitial ?? this.isLoadingInitial,
+        isLoadingMore: isLoadingMore ?? this.isLoadingMore,
+        hasMore: hasMore ?? this.hasMore,
+        offset: offset ?? this.offset,
+        limit: limit ?? this.limit,
+        query: query ?? this.query,
+        generation: generation ?? this.generation,
+        vehicle: vehicle ?? this.vehicle,
+        categories: categories ?? this.categories,
+      );
 }
 
 final specListControllerProvider =
     NotifierProvider.autoDispose<SpecListController, SpecListState>(
-      SpecListController.new,
-    );
+  SpecListController.new,
+);
 
 class SpecListController extends Notifier<SpecListState> {
   late final SpecsDao _dao;

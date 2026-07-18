@@ -104,9 +104,9 @@ class CategoryYearResultsPage extends ConsumerWidget {
               Text(
                 trimName.toUpperCase(),
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                  color: ThemeTokens.neonBlue,
-                  fontWeight: FontWeight.bold,
-                ),
+                      color: ThemeTokens.neonBlue,
+                      fontWeight: FontWeight.bold,
+                    ),
               ),
               if (engine != null) ...[
                 const SizedBox(width: 8),

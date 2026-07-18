@@ -100,8 +100,8 @@ class RecentVehiclesNotifier extends Notifier<List<Vehicle>> {
 
 final recentVehiclesProvider =
     NotifierProvider<RecentVehiclesNotifier, List<Vehicle>>(
-      RecentVehiclesNotifier.new,
-    );
+  RecentVehiclesNotifier.new,
+);
 
 // Favorite Vehicles Notifier
 class FavoriteVehiclesNotifier extends Notifier<List<Vehicle>> {
@@ -166,5 +166,5 @@ class FavoriteVehiclesNotifier extends Notifier<List<Vehicle>> {
 
 final favoriteVehiclesProvider =
     NotifierProvider<FavoriteVehiclesNotifier, List<Vehicle>>(
-      FavoriteVehiclesNotifier.new,
-    );
+  FavoriteVehiclesNotifier.new,
+);

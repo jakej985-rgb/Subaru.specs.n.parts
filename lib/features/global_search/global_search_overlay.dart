@@ -122,8 +122,8 @@ class _GlobalSearchOverlayState extends ConsumerState<GlobalSearchOverlay> {
                       ),
                     )
                   : state.isEmpty
-                  ? _buildEmptyState()
-                  : _buildResults(state),
+                      ? _buildEmptyState()
+                      : _buildResults(state),
             ),
           ],
         ),

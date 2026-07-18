@@ -31,12 +31,10 @@ class VehicleResult {
   VehicleResult({required this.vehicle, required this.specs});
 }
 
-final categoryYearResultsControllerProvider =
-    NotifierProvider.family<
-      CategoryYearResultsController,
-      YearResultsState,
-      (String, int)
-    >(CategoryYearResultsController.new);
+final categoryYearResultsControllerProvider = NotifierProvider.family<
+    CategoryYearResultsController,
+    YearResultsState,
+    (String, int)>(CategoryYearResultsController.new);
 
 class CategoryYearResultsController extends Notifier<YearResultsState> {
   final (String, int) arg;

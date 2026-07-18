@@ -32,9 +32,7 @@ final enginesByFamilyProvider = FutureProvider<Map<String, List<EngineEntry>>>((
     final trims = engineTrims[engineCode]?.toSet() ?? <String>{};
     final key = parseEngineKey(engineCode);
 
-    familyGroups
-        .putIfAbsent(key.family, () => [])
-        .add(
+    familyGroups.putIfAbsent(key.family, () => []).add(
           EngineEntry(
             code: engineCode,
             motor: key.motor,

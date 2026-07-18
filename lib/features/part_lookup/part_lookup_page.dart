@@ -272,7 +272,9 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                         const SizedBox(height: 16),
                         Text(
                           'Start typing to search parts...',
-                          style: Theme.of(context).textTheme.titleMedium
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleMedium
                               ?.copyWith(color: Theme.of(context).hintColor),
                         ),
                         const SizedBox(height: 24),
@@ -328,124 +330,128 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                     ),
                   )
                 : _results.isEmpty && !_isLoading
-                ? AnimatedOpacity(
-                    opacity: 1.0,
-                    duration: const Duration(milliseconds: 300),
-                    child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.search_off,
-                            size: 64,
-                            color: Theme.of(context).hintColor,
+                    ? AnimatedOpacity(
+                        opacity: 1.0,
+                        duration: const Duration(milliseconds: 300),
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.search_off,
+                                size: 64,
+                                color: Theme.of(context).hintColor,
+                              ),
+                              const SizedBox(height: 16),
+                              Text(
+                                'No parts found for "$_searchQuery"',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
+                                    ?.copyWith(
+                                        color: Theme.of(context).hintColor),
+                              ),
+                              const SizedBox(height: 16),
+                              OutlinedButton.icon(
+                                onPressed: _clearSearch,
+                                icon: const Icon(Icons.clear),
+                                label: const Text('Clear Search'),
+                              ),
+                            ],
                           ),
-                          const SizedBox(height: 16),
-                          Text(
-                            'No parts found for "$_searchQuery"',
-                            style: Theme.of(context).textTheme.titleMedium
-                                ?.copyWith(color: Theme.of(context).hintColor),
-                          ),
-                          const SizedBox(height: 16),
-                          OutlinedButton.icon(
-                            onPressed: _clearSearch,
-                            icon: const Icon(Icons.clear),
-                            label: const Text('Clear Search'),
-                          ),
-                        ],
-                      ),
-                    ),
-                  )
-                : ListView.builder(
-                    controller: _scrollController,
-                    keyboardDismissBehavior:
-                        ScrollViewKeyboardDismissBehavior.onDrag,
-                    itemCount: _results.length + (_isLoading ? 1 : 0),
-                    itemBuilder: (context, index) {
-                      if (index == _results.length) {
-                        return const Center(
-                          child: Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: CircularProgressIndicator(),
-                          ),
-                        );
-                      }
-                      final part = _results[index];
-                      // Parse fits for preview
-                      String? fitsPreview;
-                      try {
-                        final List<dynamic> fits = jsonDecode(part.fits);
-                        if (fits.isNotEmpty && fits[0] != 'All') {
-                          fitsPreview = fits.take(3).join(', ');
-                          if (fits.length > 3) fitsPreview += '...';
-                        }
-                      } catch (_) {}
-
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 4,
                         ),
-                        child: InkWell(
-                          onTap: () {
-                            showDialog(
-                              context: context,
-                              builder: (context) => PartDialog(part: part),
+                      )
+                    : ListView.builder(
+                        controller: _scrollController,
+                        keyboardDismissBehavior:
+                            ScrollViewKeyboardDismissBehavior.onDrag,
+                        itemCount: _results.length + (_isLoading ? 1 : 0),
+                        itemBuilder: (context, index) {
+                          if (index == _results.length) {
+                            return const Center(
+                              child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: CircularProgressIndicator(),
+                              ),
                             );
-                          },
-                          borderRadius: BorderRadius.circular(
-                            ThemeTokens.radiusMedium,
-                          ),
-                          child: CarbonSurface(
-                            padding: const EdgeInsets.all(16),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        part.name,
-                                        style: Theme.of(
-                                          context,
-                                        ).textTheme.titleMedium,
-                                      ),
-                                      const SizedBox(height: 4),
-                                      Text(
-                                        'OEM: ${part.oemNumber}',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodySmall
-                                            ?.copyWith(
-                                              color: ThemeTokens.textMuted,
-                                            ),
-                                      ),
-                                      if (fitsPreview != null)
-                                        Text(
-                                          'Fits: $fitsPreview',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodySmall
-                                              ?.copyWith(
-                                                color: ThemeTokens.textMuted,
-                                                fontStyle: FontStyle.italic,
-                                              ),
-                                        ),
-                                    ],
-                                  ),
-                                ),
-                                const Icon(
-                                  Icons.chevron_right,
-                                  color: ThemeTokens.textMuted,
-                                ),
-                              ],
+                          }
+                          final part = _results[index];
+                          // Parse fits for preview
+                          String? fitsPreview;
+                          try {
+                            final List<dynamic> fits = jsonDecode(part.fits);
+                            if (fits.isNotEmpty && fits[0] != 'All') {
+                              fitsPreview = fits.take(3).join(', ');
+                              if (fits.length > 3) fitsPreview += '...';
+                            }
+                          } catch (_) {}
+
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 4,
                             ),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
+                            child: InkWell(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => PartDialog(part: part),
+                                );
+                              },
+                              borderRadius: BorderRadius.circular(
+                                ThemeTokens.radiusMedium,
+                              ),
+                              child: CarbonSurface(
+                                padding: const EdgeInsets.all(16),
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            part.name,
+                                            style: Theme.of(
+                                              context,
+                                            ).textTheme.titleMedium,
+                                          ),
+                                          const SizedBox(height: 4),
+                                          Text(
+                                            'OEM: ${part.oemNumber}',
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .bodySmall
+                                                ?.copyWith(
+                                                  color: ThemeTokens.textMuted,
+                                                ),
+                                          ),
+                                          if (fitsPreview != null)
+                                            Text(
+                                              'Fits: $fitsPreview',
+                                              style: Theme.of(context)
+                                                  .textTheme
+                                                  .bodySmall
+                                                  ?.copyWith(
+                                                    color:
+                                                        ThemeTokens.textMuted,
+                                                    fontStyle: FontStyle.italic,
+                                                  ),
+                                            ),
+                                        ],
+                                      ),
+                                    ),
+                                    const Icon(
+                                      Icons.chevron_right,
+                                      color: ThemeTokens.textMuted,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
           ),
         ],
       ),

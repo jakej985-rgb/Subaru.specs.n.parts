@@ -32,8 +32,7 @@ class HomePage extends ConsumerWidget {
 
     // Estimate total content height:
     final totalCards = items.length;
-    final estimatedContentHeight =
-        headerHeightEstimate +
+    final estimatedContentHeight = headerHeightEstimate +
         garageHeight +
         (totalCards * scaledCardHeight) +
         ((totalCards - 1) * spacing) +

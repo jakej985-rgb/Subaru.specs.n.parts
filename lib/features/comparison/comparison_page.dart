@@ -33,21 +33,33 @@ class ComparisonPage extends ConsumerWidget {
                 Expanded(
                   child: ListView(
                     children: [
-                      _buildComparisonSection(ref, 'Engine & Core', [
-                        'Engine Code',
-                        'Cylinders',
-                        'Drivetrain',
-                      ], vehicles),
-                      _buildComparisonSection(ref, 'Fluids & Capacities', [
-                        'Engine Oil',
-                        'Coolant',
-                        'Brake Fluid',
-                      ], vehicles),
-                      _buildComparisonSection(ref, 'Torque Specs', [
-                        'Wheel Lugs',
-                        'Spark Plugs',
-                        'Drain Plug',
-                      ], vehicles),
+                      _buildComparisonSection(
+                          ref,
+                          'Engine & Core',
+                          [
+                            'Engine Code',
+                            'Cylinders',
+                            'Drivetrain',
+                          ],
+                          vehicles),
+                      _buildComparisonSection(
+                          ref,
+                          'Fluids & Capacities',
+                          [
+                            'Engine Oil',
+                            'Coolant',
+                            'Brake Fluid',
+                          ],
+                          vehicles),
+                      _buildComparisonSection(
+                          ref,
+                          'Torque Specs',
+                          [
+                            'Wheel Lugs',
+                            'Spark Plugs',
+                            'Drain Plug',
+                          ],
+                          vehicles),
                     ],
                   ),
                 ),
