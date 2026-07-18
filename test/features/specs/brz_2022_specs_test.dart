@@ -56,10 +56,8 @@ void main() {
     List<Spec> findSpecsForVehicle(Vehicle v, String category) {
       return allSpecs.where((s) {
         if (s.category != category) return false;
-        final tags = s.tags
-            .split(',')
-            .map((e) => e.trim().toLowerCase())
-            .toList();
+        final tags =
+            s.tags.split(',').map((e) => e.trim().toLowerCase()).toList();
 
         // Basic matching logic mimicking SpecsDao roughly for this test
         // In real app, it's SQL based. Here we check if tags match key vehicle attributes.

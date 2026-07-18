@@ -46,8 +46,8 @@ class GlobalSearchState {
 
 final globalSearchProvider =
     NotifierProvider<GlobalSearchNotifier, GlobalSearchState>(
-      GlobalSearchNotifier.new,
-    );
+  GlobalSearchNotifier.new,
+);
 
 class GlobalSearchNotifier extends Notifier<GlobalSearchState> {
   @override

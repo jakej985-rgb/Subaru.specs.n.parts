@@ -78,14 +78,14 @@ class $VehiclesTable extends Vehicles with TableInfo<$VehiclesTable, Vehicle> {
   );
   @override
   List<GeneratedColumn> get $columns => [
-    id,
-    year,
-    make,
-    model,
-    trim,
-    engineCode,
-    updatedAt,
-  ];
+        id,
+        year,
+        make,
+        model,
+        trim,
+        engineCode,
+        updatedAt,
+      ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
@@ -276,15 +276,16 @@ class Vehicle extends DataClass implements Insertable<Vehicle> {
     Value<String?> trim = const Value.absent(),
     Value<String?> engineCode = const Value.absent(),
     DateTime? updatedAt,
-  }) => Vehicle(
-    id: id ?? this.id,
-    year: year ?? this.year,
-    make: make ?? this.make,
-    model: model ?? this.model,
-    trim: trim.present ? trim.value : this.trim,
-    engineCode: engineCode.present ? engineCode.value : this.engineCode,
-    updatedAt: updatedAt ?? this.updatedAt,
-  );
+  }) =>
+      Vehicle(
+        id: id ?? this.id,
+        year: year ?? this.year,
+        make: make ?? this.make,
+        model: model ?? this.model,
+        trim: trim.present ? trim.value : this.trim,
+        engineCode: engineCode.present ? engineCode.value : this.engineCode,
+        updatedAt: updatedAt ?? this.updatedAt,
+      );
   Vehicle copyWithCompanion(VehiclesCompanion data) {
     return Vehicle(
       id: data.id.present ? data.id.value : this.id,
@@ -292,9 +293,8 @@ class Vehicle extends DataClass implements Insertable<Vehicle> {
       make: data.make.present ? data.make.value : this.make,
       model: data.model.present ? data.model.value : this.model,
       trim: data.trim.present ? data.trim.value : this.trim,
-      engineCode: data.engineCode.present
-          ? data.engineCode.value
-          : this.engineCode,
+      engineCode:
+          data.engineCode.present ? data.engineCode.value : this.engineCode,
       updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
     );
   }
@@ -357,10 +357,10 @@ class VehiclesCompanion extends UpdateCompanion<Vehicle> {
     this.engineCode = const Value.absent(),
     required DateTime updatedAt,
     this.rowid = const Value.absent(),
-  }) : id = Value(id),
-       year = Value(year),
-       model = Value(model),
-       updatedAt = Value(updatedAt);
+  })  : id = Value(id),
+        year = Value(year),
+        model = Value(model),
+        updatedAt = Value(updatedAt);
   static Insertable<Vehicle> custom({
     Expression<String>? id,
     Expression<int>? year,
@@ -516,13 +516,13 @@ class $SpecsTable extends Specs with TableInfo<$SpecsTable, Spec> {
   );
   @override
   List<GeneratedColumn> get $columns => [
-    id,
-    category,
-    title,
-    body,
-    tags,
-    updatedAt,
-  ];
+        id,
+        category,
+        title,
+        body,
+        tags,
+        updatedAt,
+      ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
@@ -694,14 +694,15 @@ class Spec extends DataClass implements Insertable<Spec> {
     String? body,
     String? tags,
     DateTime? updatedAt,
-  }) => Spec(
-    id: id ?? this.id,
-    category: category ?? this.category,
-    title: title ?? this.title,
-    body: body ?? this.body,
-    tags: tags ?? this.tags,
-    updatedAt: updatedAt ?? this.updatedAt,
-  );
+  }) =>
+      Spec(
+        id: id ?? this.id,
+        category: category ?? this.category,
+        title: title ?? this.title,
+        body: body ?? this.body,
+        tags: tags ?? this.tags,
+        updatedAt: updatedAt ?? this.updatedAt,
+      );
   Spec copyWithCompanion(SpecsCompanion data) {
     return Spec(
       id: data.id.present ? data.id.value : this.id,
@@ -765,12 +766,12 @@ class SpecsCompanion extends UpdateCompanion<Spec> {
     required String tags,
     required DateTime updatedAt,
     this.rowid = const Value.absent(),
-  }) : id = Value(id),
-       category = Value(category),
-       title = Value(title),
-       body = Value(body),
-       tags = Value(tags),
-       updatedAt = Value(updatedAt);
+  })  : id = Value(id),
+        category = Value(category),
+        title = Value(title),
+        body = Value(body),
+        tags = Value(tags),
+        updatedAt = Value(updatedAt);
   static Insertable<Spec> custom({
     Expression<String>? id,
     Expression<String>? category,
@@ -892,12 +893,12 @@ class $PartsTable extends Parts with TableInfo<$PartsTable, Part> {
   @override
   late final GeneratedColumn<String> aftermarketNumbers =
       GeneratedColumn<String>(
-        'aftermarket_numbers',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      );
+    'aftermarket_numbers',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
   static const VerificationMeta _fitsMeta = const VerificationMeta('fits');
   @override
   late final GeneratedColumn<String> fits = GeneratedColumn<String>(
@@ -929,14 +930,14 @@ class $PartsTable extends Parts with TableInfo<$PartsTable, Part> {
   );
   @override
   List<GeneratedColumn> get $columns => [
-    id,
-    name,
-    oemNumber,
-    aftermarketNumbers,
-    fits,
-    notes,
-    updatedAt,
-  ];
+        id,
+        name,
+        oemNumber,
+        aftermarketNumbers,
+        fits,
+        notes,
+        updatedAt,
+      ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
@@ -1088,9 +1089,8 @@ class Part extends DataClass implements Insertable<Part> {
       oemNumber: Value(oemNumber),
       aftermarketNumbers: Value(aftermarketNumbers),
       fits: Value(fits),
-      notes: notes == null && nullToAbsent
-          ? const Value.absent()
-          : Value(notes),
+      notes:
+          notes == null && nullToAbsent ? const Value.absent() : Value(notes),
       updatedAt: Value(updatedAt),
     );
   }
@@ -1134,15 +1134,16 @@ class Part extends DataClass implements Insertable<Part> {
     String? fits,
     Value<String?> notes = const Value.absent(),
     DateTime? updatedAt,
-  }) => Part(
-    id: id ?? this.id,
-    name: name ?? this.name,
-    oemNumber: oemNumber ?? this.oemNumber,
-    aftermarketNumbers: aftermarketNumbers ?? this.aftermarketNumbers,
-    fits: fits ?? this.fits,
-    notes: notes.present ? notes.value : this.notes,
-    updatedAt: updatedAt ?? this.updatedAt,
-  );
+  }) =>
+      Part(
+        id: id ?? this.id,
+        name: name ?? this.name,
+        oemNumber: oemNumber ?? this.oemNumber,
+        aftermarketNumbers: aftermarketNumbers ?? this.aftermarketNumbers,
+        fits: fits ?? this.fits,
+        notes: notes.present ? notes.value : this.notes,
+        updatedAt: updatedAt ?? this.updatedAt,
+      );
   Part copyWithCompanion(PartsCompanion data) {
     return Part(
       id: data.id.present ? data.id.value : this.id,
@@ -1173,14 +1174,14 @@ class Part extends DataClass implements Insertable<Part> {
 
   @override
   int get hashCode => Object.hash(
-    id,
-    name,
-    oemNumber,
-    aftermarketNumbers,
-    fits,
-    notes,
-    updatedAt,
-  );
+        id,
+        name,
+        oemNumber,
+        aftermarketNumbers,
+        fits,
+        notes,
+        updatedAt,
+      );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -1222,12 +1223,12 @@ class PartsCompanion extends UpdateCompanion<Part> {
     this.notes = const Value.absent(),
     required DateTime updatedAt,
     this.rowid = const Value.absent(),
-  }) : id = Value(id),
-       name = Value(name),
-       oemNumber = Value(oemNumber),
-       aftermarketNumbers = Value(aftermarketNumbers),
-       fits = Value(fits),
-       updatedAt = Value(updatedAt);
+  })  : id = Value(id),
+        name = Value(name),
+        oemNumber = Value(oemNumber),
+        aftermarketNumbers = Value(aftermarketNumbers),
+        fits = Value(fits),
+        updatedAt = Value(updatedAt);
   static Insertable<Part> custom({
     Expression<String>? id,
     Expression<String>? name,
@@ -1334,28 +1335,26 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   List<DatabaseSchemaEntity> get allSchemaEntities => [vehicles, specs, parts];
 }
 
-typedef $$VehiclesTableCreateCompanionBuilder =
-    VehiclesCompanion Function({
-      required String id,
-      required int year,
-      Value<String> make,
-      required String model,
-      Value<String?> trim,
-      Value<String?> engineCode,
-      required DateTime updatedAt,
-      Value<int> rowid,
-    });
-typedef $$VehiclesTableUpdateCompanionBuilder =
-    VehiclesCompanion Function({
-      Value<String> id,
-      Value<int> year,
-      Value<String> make,
-      Value<String> model,
-      Value<String?> trim,
-      Value<String?> engineCode,
-      Value<DateTime> updatedAt,
-      Value<int> rowid,
-    });
+typedef $$VehiclesTableCreateCompanionBuilder = VehiclesCompanion Function({
+  required String id,
+  required int year,
+  Value<String> make,
+  required String model,
+  Value<String?> trim,
+  Value<String?> engineCode,
+  required DateTime updatedAt,
+  Value<int> rowid,
+});
+typedef $$VehiclesTableUpdateCompanionBuilder = VehiclesCompanion Function({
+  Value<String> id,
+  Value<int> year,
+  Value<String> make,
+  Value<String> model,
+  Value<String?> trim,
+  Value<String?> engineCode,
+  Value<DateTime> updatedAt,
+  Value<int> rowid,
+});
 
 class $$VehiclesTableFilterComposer
     extends Composer<_$AppDatabase, $VehiclesTable> {
@@ -1367,39 +1366,39 @@ class $$VehiclesTableFilterComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnFilters<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.id,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<int> get year => $composableBuilder(
-    column: $table.year,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.year,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get make => $composableBuilder(
-    column: $table.make,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.make,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get model => $composableBuilder(
-    column: $table.model,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.model,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get trim => $composableBuilder(
-    column: $table.trim,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.trim,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get engineCode => $composableBuilder(
-    column: $table.engineCode,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.engineCode,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.updatedAt,
+        builder: (column) => ColumnFilters(column),
+      );
 }
 
 class $$VehiclesTableOrderingComposer
@@ -1412,39 +1411,39 @@ class $$VehiclesTableOrderingComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnOrderings<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.id,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<int> get year => $composableBuilder(
-    column: $table.year,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.year,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get make => $composableBuilder(
-    column: $table.make,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.make,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get model => $composableBuilder(
-    column: $table.model,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.model,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get trim => $composableBuilder(
-    column: $table.trim,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.trim,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get engineCode => $composableBuilder(
-    column: $table.engineCode,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.engineCode,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.updatedAt,
+        builder: (column) => ColumnOrderings(column),
+      );
 }
 
 class $$VehiclesTableAnnotationComposer
@@ -1472,122 +1471,115 @@ class $$VehiclesTableAnnotationComposer
       $composableBuilder(column: $table.trim, builder: (column) => column);
 
   GeneratedColumn<String> get engineCode => $composableBuilder(
-    column: $table.engineCode,
-    builder: (column) => column,
-  );
+        column: $table.engineCode,
+        builder: (column) => column,
+      );
 
   GeneratedColumn<DateTime> get updatedAt =>
       $composableBuilder(column: $table.updatedAt, builder: (column) => column);
 }
 
-class $$VehiclesTableTableManager
-    extends
-        RootTableManager<
-          _$AppDatabase,
-          $VehiclesTable,
-          Vehicle,
-          $$VehiclesTableFilterComposer,
-          $$VehiclesTableOrderingComposer,
-          $$VehiclesTableAnnotationComposer,
-          $$VehiclesTableCreateCompanionBuilder,
-          $$VehiclesTableUpdateCompanionBuilder,
-          (Vehicle, BaseReferences<_$AppDatabase, $VehiclesTable, Vehicle>),
-          Vehicle,
-          PrefetchHooks Function()
-        > {
+class $$VehiclesTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $VehiclesTable,
+    Vehicle,
+    $$VehiclesTableFilterComposer,
+    $$VehiclesTableOrderingComposer,
+    $$VehiclesTableAnnotationComposer,
+    $$VehiclesTableCreateCompanionBuilder,
+    $$VehiclesTableUpdateCompanionBuilder,
+    (Vehicle, BaseReferences<_$AppDatabase, $VehiclesTable, Vehicle>),
+    Vehicle,
+    PrefetchHooks Function()> {
   $$VehiclesTableTableManager(_$AppDatabase db, $VehiclesTable table)
-    : super(
-        TableManagerState(
-          db: db,
-          table: table,
-          createFilteringComposer: () =>
-              $$VehiclesTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () =>
-              $$VehiclesTableOrderingComposer($db: db, $table: table),
-          createComputedFieldComposer: () =>
-              $$VehiclesTableAnnotationComposer($db: db, $table: table),
-          updateCompanionCallback:
-              ({
-                Value<String> id = const Value.absent(),
-                Value<int> year = const Value.absent(),
-                Value<String> make = const Value.absent(),
-                Value<String> model = const Value.absent(),
-                Value<String?> trim = const Value.absent(),
-                Value<String?> engineCode = const Value.absent(),
-                Value<DateTime> updatedAt = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => VehiclesCompanion(
-                id: id,
-                year: year,
-                make: make,
-                model: model,
-                trim: trim,
-                engineCode: engineCode,
-                updatedAt: updatedAt,
-                rowid: rowid,
-              ),
-          createCompanionCallback:
-              ({
-                required String id,
-                required int year,
-                Value<String> make = const Value.absent(),
-                required String model,
-                Value<String?> trim = const Value.absent(),
-                Value<String?> engineCode = const Value.absent(),
-                required DateTime updatedAt,
-                Value<int> rowid = const Value.absent(),
-              }) => VehiclesCompanion.insert(
-                id: id,
-                year: year,
-                make: make,
-                model: model,
-                trim: trim,
-                engineCode: engineCode,
-                updatedAt: updatedAt,
-                rowid: rowid,
-              ),
-          withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
-              .toList(),
-          prefetchHooksCallback: null,
-        ),
-      );
+      : super(
+          TableManagerState(
+            db: db,
+            table: table,
+            createFilteringComposer: () =>
+                $$VehiclesTableFilterComposer($db: db, $table: table),
+            createOrderingComposer: () =>
+                $$VehiclesTableOrderingComposer($db: db, $table: table),
+            createComputedFieldComposer: () =>
+                $$VehiclesTableAnnotationComposer($db: db, $table: table),
+            updateCompanionCallback: ({
+              Value<String> id = const Value.absent(),
+              Value<int> year = const Value.absent(),
+              Value<String> make = const Value.absent(),
+              Value<String> model = const Value.absent(),
+              Value<String?> trim = const Value.absent(),
+              Value<String?> engineCode = const Value.absent(),
+              Value<DateTime> updatedAt = const Value.absent(),
+              Value<int> rowid = const Value.absent(),
+            }) =>
+                VehiclesCompanion(
+              id: id,
+              year: year,
+              make: make,
+              model: model,
+              trim: trim,
+              engineCode: engineCode,
+              updatedAt: updatedAt,
+              rowid: rowid,
+            ),
+            createCompanionCallback: ({
+              required String id,
+              required int year,
+              Value<String> make = const Value.absent(),
+              required String model,
+              Value<String?> trim = const Value.absent(),
+              Value<String?> engineCode = const Value.absent(),
+              required DateTime updatedAt,
+              Value<int> rowid = const Value.absent(),
+            }) =>
+                VehiclesCompanion.insert(
+              id: id,
+              year: year,
+              make: make,
+              model: model,
+              trim: trim,
+              engineCode: engineCode,
+              updatedAt: updatedAt,
+              rowid: rowid,
+            ),
+            withReferenceMapper: (p0) => p0
+                .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+                .toList(),
+            prefetchHooksCallback: null,
+          ),
+        );
 }
 
-typedef $$VehiclesTableProcessedTableManager =
-    ProcessedTableManager<
-      _$AppDatabase,
-      $VehiclesTable,
-      Vehicle,
-      $$VehiclesTableFilterComposer,
-      $$VehiclesTableOrderingComposer,
-      $$VehiclesTableAnnotationComposer,
-      $$VehiclesTableCreateCompanionBuilder,
-      $$VehiclesTableUpdateCompanionBuilder,
-      (Vehicle, BaseReferences<_$AppDatabase, $VehiclesTable, Vehicle>),
-      Vehicle,
-      PrefetchHooks Function()
-    >;
-typedef $$SpecsTableCreateCompanionBuilder =
-    SpecsCompanion Function({
-      required String id,
-      required String category,
-      required String title,
-      required String body,
-      required String tags,
-      required DateTime updatedAt,
-      Value<int> rowid,
-    });
-typedef $$SpecsTableUpdateCompanionBuilder =
-    SpecsCompanion Function({
-      Value<String> id,
-      Value<String> category,
-      Value<String> title,
-      Value<String> body,
-      Value<String> tags,
-      Value<DateTime> updatedAt,
-      Value<int> rowid,
-    });
+typedef $$VehiclesTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $VehiclesTable,
+    Vehicle,
+    $$VehiclesTableFilterComposer,
+    $$VehiclesTableOrderingComposer,
+    $$VehiclesTableAnnotationComposer,
+    $$VehiclesTableCreateCompanionBuilder,
+    $$VehiclesTableUpdateCompanionBuilder,
+    (Vehicle, BaseReferences<_$AppDatabase, $VehiclesTable, Vehicle>),
+    Vehicle,
+    PrefetchHooks Function()>;
+typedef $$SpecsTableCreateCompanionBuilder = SpecsCompanion Function({
+  required String id,
+  required String category,
+  required String title,
+  required String body,
+  required String tags,
+  required DateTime updatedAt,
+  Value<int> rowid,
+});
+typedef $$SpecsTableUpdateCompanionBuilder = SpecsCompanion Function({
+  Value<String> id,
+  Value<String> category,
+  Value<String> title,
+  Value<String> body,
+  Value<String> tags,
+  Value<DateTime> updatedAt,
+  Value<int> rowid,
+});
 
 class $$SpecsTableFilterComposer extends Composer<_$AppDatabase, $SpecsTable> {
   $$SpecsTableFilterComposer({
@@ -1598,34 +1590,34 @@ class $$SpecsTableFilterComposer extends Composer<_$AppDatabase, $SpecsTable> {
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnFilters<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.id,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get category => $composableBuilder(
-    column: $table.category,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.category,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get title => $composableBuilder(
-    column: $table.title,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.title,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get body => $composableBuilder(
-    column: $table.body,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.body,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get tags => $composableBuilder(
-    column: $table.tags,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.tags,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.updatedAt,
+        builder: (column) => ColumnFilters(column),
+      );
 }
 
 class $$SpecsTableOrderingComposer
@@ -1638,34 +1630,34 @@ class $$SpecsTableOrderingComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnOrderings<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.id,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get category => $composableBuilder(
-    column: $table.category,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.category,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get title => $composableBuilder(
-    column: $table.title,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.title,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get body => $composableBuilder(
-    column: $table.body,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.body,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get tags => $composableBuilder(
-    column: $table.tags,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.tags,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.updatedAt,
+        builder: (column) => ColumnOrderings(column),
+      );
 }
 
 class $$SpecsTableAnnotationComposer
@@ -1696,112 +1688,105 @@ class $$SpecsTableAnnotationComposer
       $composableBuilder(column: $table.updatedAt, builder: (column) => column);
 }
 
-class $$SpecsTableTableManager
-    extends
-        RootTableManager<
-          _$AppDatabase,
-          $SpecsTable,
-          Spec,
-          $$SpecsTableFilterComposer,
-          $$SpecsTableOrderingComposer,
-          $$SpecsTableAnnotationComposer,
-          $$SpecsTableCreateCompanionBuilder,
-          $$SpecsTableUpdateCompanionBuilder,
-          (Spec, BaseReferences<_$AppDatabase, $SpecsTable, Spec>),
-          Spec,
-          PrefetchHooks Function()
-        > {
+class $$SpecsTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $SpecsTable,
+    Spec,
+    $$SpecsTableFilterComposer,
+    $$SpecsTableOrderingComposer,
+    $$SpecsTableAnnotationComposer,
+    $$SpecsTableCreateCompanionBuilder,
+    $$SpecsTableUpdateCompanionBuilder,
+    (Spec, BaseReferences<_$AppDatabase, $SpecsTable, Spec>),
+    Spec,
+    PrefetchHooks Function()> {
   $$SpecsTableTableManager(_$AppDatabase db, $SpecsTable table)
-    : super(
-        TableManagerState(
-          db: db,
-          table: table,
-          createFilteringComposer: () =>
-              $$SpecsTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () =>
-              $$SpecsTableOrderingComposer($db: db, $table: table),
-          createComputedFieldComposer: () =>
-              $$SpecsTableAnnotationComposer($db: db, $table: table),
-          updateCompanionCallback:
-              ({
-                Value<String> id = const Value.absent(),
-                Value<String> category = const Value.absent(),
-                Value<String> title = const Value.absent(),
-                Value<String> body = const Value.absent(),
-                Value<String> tags = const Value.absent(),
-                Value<DateTime> updatedAt = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => SpecsCompanion(
-                id: id,
-                category: category,
-                title: title,
-                body: body,
-                tags: tags,
-                updatedAt: updatedAt,
-                rowid: rowid,
-              ),
-          createCompanionCallback:
-              ({
-                required String id,
-                required String category,
-                required String title,
-                required String body,
-                required String tags,
-                required DateTime updatedAt,
-                Value<int> rowid = const Value.absent(),
-              }) => SpecsCompanion.insert(
-                id: id,
-                category: category,
-                title: title,
-                body: body,
-                tags: tags,
-                updatedAt: updatedAt,
-                rowid: rowid,
-              ),
-          withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
-              .toList(),
-          prefetchHooksCallback: null,
-        ),
-      );
+      : super(
+          TableManagerState(
+            db: db,
+            table: table,
+            createFilteringComposer: () =>
+                $$SpecsTableFilterComposer($db: db, $table: table),
+            createOrderingComposer: () =>
+                $$SpecsTableOrderingComposer($db: db, $table: table),
+            createComputedFieldComposer: () =>
+                $$SpecsTableAnnotationComposer($db: db, $table: table),
+            updateCompanionCallback: ({
+              Value<String> id = const Value.absent(),
+              Value<String> category = const Value.absent(),
+              Value<String> title = const Value.absent(),
+              Value<String> body = const Value.absent(),
+              Value<String> tags = const Value.absent(),
+              Value<DateTime> updatedAt = const Value.absent(),
+              Value<int> rowid = const Value.absent(),
+            }) =>
+                SpecsCompanion(
+              id: id,
+              category: category,
+              title: title,
+              body: body,
+              tags: tags,
+              updatedAt: updatedAt,
+              rowid: rowid,
+            ),
+            createCompanionCallback: ({
+              required String id,
+              required String category,
+              required String title,
+              required String body,
+              required String tags,
+              required DateTime updatedAt,
+              Value<int> rowid = const Value.absent(),
+            }) =>
+                SpecsCompanion.insert(
+              id: id,
+              category: category,
+              title: title,
+              body: body,
+              tags: tags,
+              updatedAt: updatedAt,
+              rowid: rowid,
+            ),
+            withReferenceMapper: (p0) => p0
+                .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+                .toList(),
+            prefetchHooksCallback: null,
+          ),
+        );
 }
 
-typedef $$SpecsTableProcessedTableManager =
-    ProcessedTableManager<
-      _$AppDatabase,
-      $SpecsTable,
-      Spec,
-      $$SpecsTableFilterComposer,
-      $$SpecsTableOrderingComposer,
-      $$SpecsTableAnnotationComposer,
-      $$SpecsTableCreateCompanionBuilder,
-      $$SpecsTableUpdateCompanionBuilder,
-      (Spec, BaseReferences<_$AppDatabase, $SpecsTable, Spec>),
-      Spec,
-      PrefetchHooks Function()
-    >;
-typedef $$PartsTableCreateCompanionBuilder =
-    PartsCompanion Function({
-      required String id,
-      required String name,
-      required String oemNumber,
-      required String aftermarketNumbers,
-      required String fits,
-      Value<String?> notes,
-      required DateTime updatedAt,
-      Value<int> rowid,
-    });
-typedef $$PartsTableUpdateCompanionBuilder =
-    PartsCompanion Function({
-      Value<String> id,
-      Value<String> name,
-      Value<String> oemNumber,
-      Value<String> aftermarketNumbers,
-      Value<String> fits,
-      Value<String?> notes,
-      Value<DateTime> updatedAt,
-      Value<int> rowid,
-    });
+typedef $$SpecsTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $SpecsTable,
+    Spec,
+    $$SpecsTableFilterComposer,
+    $$SpecsTableOrderingComposer,
+    $$SpecsTableAnnotationComposer,
+    $$SpecsTableCreateCompanionBuilder,
+    $$SpecsTableUpdateCompanionBuilder,
+    (Spec, BaseReferences<_$AppDatabase, $SpecsTable, Spec>),
+    Spec,
+    PrefetchHooks Function()>;
+typedef $$PartsTableCreateCompanionBuilder = PartsCompanion Function({
+  required String id,
+  required String name,
+  required String oemNumber,
+  required String aftermarketNumbers,
+  required String fits,
+  Value<String?> notes,
+  required DateTime updatedAt,
+  Value<int> rowid,
+});
+typedef $$PartsTableUpdateCompanionBuilder = PartsCompanion Function({
+  Value<String> id,
+  Value<String> name,
+  Value<String> oemNumber,
+  Value<String> aftermarketNumbers,
+  Value<String> fits,
+  Value<String?> notes,
+  Value<DateTime> updatedAt,
+  Value<int> rowid,
+});
 
 class $$PartsTableFilterComposer extends Composer<_$AppDatabase, $PartsTable> {
   $$PartsTableFilterComposer({
@@ -1812,39 +1797,39 @@ class $$PartsTableFilterComposer extends Composer<_$AppDatabase, $PartsTable> {
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnFilters<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.id,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get name => $composableBuilder(
-    column: $table.name,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.name,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get oemNumber => $composableBuilder(
-    column: $table.oemNumber,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.oemNumber,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get aftermarketNumbers => $composableBuilder(
-    column: $table.aftermarketNumbers,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.aftermarketNumbers,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get fits => $composableBuilder(
-    column: $table.fits,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.fits,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<String> get notes => $composableBuilder(
-    column: $table.notes,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.notes,
+        builder: (column) => ColumnFilters(column),
+      );
 
   ColumnFilters<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnFilters(column),
-  );
+        column: $table.updatedAt,
+        builder: (column) => ColumnFilters(column),
+      );
 }
 
 class $$PartsTableOrderingComposer
@@ -1857,39 +1842,39 @@ class $$PartsTableOrderingComposer
     super.$removeJoinBuilderFromRootComposer,
   });
   ColumnOrderings<String> get id => $composableBuilder(
-    column: $table.id,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.id,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get name => $composableBuilder(
-    column: $table.name,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.name,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get oemNumber => $composableBuilder(
-    column: $table.oemNumber,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.oemNumber,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get aftermarketNumbers => $composableBuilder(
-    column: $table.aftermarketNumbers,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.aftermarketNumbers,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get fits => $composableBuilder(
-    column: $table.fits,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.fits,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<String> get notes => $composableBuilder(
-    column: $table.notes,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.notes,
+        builder: (column) => ColumnOrderings(column),
+      );
 
   ColumnOrderings<DateTime> get updatedAt => $composableBuilder(
-    column: $table.updatedAt,
-    builder: (column) => ColumnOrderings(column),
-  );
+        column: $table.updatedAt,
+        builder: (column) => ColumnOrderings(column),
+      );
 }
 
 class $$PartsTableAnnotationComposer
@@ -1911,9 +1896,9 @@ class $$PartsTableAnnotationComposer
       $composableBuilder(column: $table.oemNumber, builder: (column) => column);
 
   GeneratedColumn<String> get aftermarketNumbers => $composableBuilder(
-    column: $table.aftermarketNumbers,
-    builder: (column) => column,
-  );
+        column: $table.aftermarketNumbers,
+        builder: (column) => column,
+      );
 
   GeneratedColumn<String> get fits =>
       $composableBuilder(column: $table.fits, builder: (column) => column);
@@ -1925,94 +1910,89 @@ class $$PartsTableAnnotationComposer
       $composableBuilder(column: $table.updatedAt, builder: (column) => column);
 }
 
-class $$PartsTableTableManager
-    extends
-        RootTableManager<
-          _$AppDatabase,
-          $PartsTable,
-          Part,
-          $$PartsTableFilterComposer,
-          $$PartsTableOrderingComposer,
-          $$PartsTableAnnotationComposer,
-          $$PartsTableCreateCompanionBuilder,
-          $$PartsTableUpdateCompanionBuilder,
-          (Part, BaseReferences<_$AppDatabase, $PartsTable, Part>),
-          Part,
-          PrefetchHooks Function()
-        > {
+class $$PartsTableTableManager extends RootTableManager<
+    _$AppDatabase,
+    $PartsTable,
+    Part,
+    $$PartsTableFilterComposer,
+    $$PartsTableOrderingComposer,
+    $$PartsTableAnnotationComposer,
+    $$PartsTableCreateCompanionBuilder,
+    $$PartsTableUpdateCompanionBuilder,
+    (Part, BaseReferences<_$AppDatabase, $PartsTable, Part>),
+    Part,
+    PrefetchHooks Function()> {
   $$PartsTableTableManager(_$AppDatabase db, $PartsTable table)
-    : super(
-        TableManagerState(
-          db: db,
-          table: table,
-          createFilteringComposer: () =>
-              $$PartsTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () =>
-              $$PartsTableOrderingComposer($db: db, $table: table),
-          createComputedFieldComposer: () =>
-              $$PartsTableAnnotationComposer($db: db, $table: table),
-          updateCompanionCallback:
-              ({
-                Value<String> id = const Value.absent(),
-                Value<String> name = const Value.absent(),
-                Value<String> oemNumber = const Value.absent(),
-                Value<String> aftermarketNumbers = const Value.absent(),
-                Value<String> fits = const Value.absent(),
-                Value<String?> notes = const Value.absent(),
-                Value<DateTime> updatedAt = const Value.absent(),
-                Value<int> rowid = const Value.absent(),
-              }) => PartsCompanion(
-                id: id,
-                name: name,
-                oemNumber: oemNumber,
-                aftermarketNumbers: aftermarketNumbers,
-                fits: fits,
-                notes: notes,
-                updatedAt: updatedAt,
-                rowid: rowid,
-              ),
-          createCompanionCallback:
-              ({
-                required String id,
-                required String name,
-                required String oemNumber,
-                required String aftermarketNumbers,
-                required String fits,
-                Value<String?> notes = const Value.absent(),
-                required DateTime updatedAt,
-                Value<int> rowid = const Value.absent(),
-              }) => PartsCompanion.insert(
-                id: id,
-                name: name,
-                oemNumber: oemNumber,
-                aftermarketNumbers: aftermarketNumbers,
-                fits: fits,
-                notes: notes,
-                updatedAt: updatedAt,
-                rowid: rowid,
-              ),
-          withReferenceMapper: (p0) => p0
-              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
-              .toList(),
-          prefetchHooksCallback: null,
-        ),
-      );
+      : super(
+          TableManagerState(
+            db: db,
+            table: table,
+            createFilteringComposer: () =>
+                $$PartsTableFilterComposer($db: db, $table: table),
+            createOrderingComposer: () =>
+                $$PartsTableOrderingComposer($db: db, $table: table),
+            createComputedFieldComposer: () =>
+                $$PartsTableAnnotationComposer($db: db, $table: table),
+            updateCompanionCallback: ({
+              Value<String> id = const Value.absent(),
+              Value<String> name = const Value.absent(),
+              Value<String> oemNumber = const Value.absent(),
+              Value<String> aftermarketNumbers = const Value.absent(),
+              Value<String> fits = const Value.absent(),
+              Value<String?> notes = const Value.absent(),
+              Value<DateTime> updatedAt = const Value.absent(),
+              Value<int> rowid = const Value.absent(),
+            }) =>
+                PartsCompanion(
+              id: id,
+              name: name,
+              oemNumber: oemNumber,
+              aftermarketNumbers: aftermarketNumbers,
+              fits: fits,
+              notes: notes,
+              updatedAt: updatedAt,
+              rowid: rowid,
+            ),
+            createCompanionCallback: ({
+              required String id,
+              required String name,
+              required String oemNumber,
+              required String aftermarketNumbers,
+              required String fits,
+              Value<String?> notes = const Value.absent(),
+              required DateTime updatedAt,
+              Value<int> rowid = const Value.absent(),
+            }) =>
+                PartsCompanion.insert(
+              id: id,
+              name: name,
+              oemNumber: oemNumber,
+              aftermarketNumbers: aftermarketNumbers,
+              fits: fits,
+              notes: notes,
+              updatedAt: updatedAt,
+              rowid: rowid,
+            ),
+            withReferenceMapper: (p0) => p0
+                .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+                .toList(),
+            prefetchHooksCallback: null,
+          ),
+        );
 }
 
-typedef $$PartsTableProcessedTableManager =
-    ProcessedTableManager<
-      _$AppDatabase,
-      $PartsTable,
-      Part,
-      $$PartsTableFilterComposer,
-      $$PartsTableOrderingComposer,
-      $$PartsTableAnnotationComposer,
-      $$PartsTableCreateCompanionBuilder,
-      $$PartsTableUpdateCompanionBuilder,
-      (Part, BaseReferences<_$AppDatabase, $PartsTable, Part>),
-      Part,
-      PrefetchHooks Function()
-    >;
+typedef $$PartsTableProcessedTableManager = ProcessedTableManager<
+    _$AppDatabase,
+    $PartsTable,
+    Part,
+    $$PartsTableFilterComposer,
+    $$PartsTableOrderingComposer,
+    $$PartsTableAnnotationComposer,
+    $$PartsTableCreateCompanionBuilder,
+    $$PartsTableUpdateCompanionBuilder,
+    (Part, BaseReferences<_$AppDatabase, $PartsTable, Part>),
+    Part,
+    PrefetchHooks Function()>;
 
 class $AppDatabaseManager {
   final _$AppDatabase _db;

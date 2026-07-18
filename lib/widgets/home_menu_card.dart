@@ -12,9 +12,9 @@ class HomeMenuCard extends StatelessWidget {
     this.height = 120,
     this.semanticLabel,
   }) : assert(
-         icon != null || customIcon != null,
-         'Either icon or customIcon must be provided',
-       );
+          icon != null || customIcon != null,
+          'Either icon or customIcon must be provided',
+        );
 
   final String title;
   final IconData? icon;
@@ -54,9 +54,9 @@ class HomeMenuCard extends StatelessWidget {
                   child: Text(
                     title,
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      color: ThemeTokens.textPrimary,
-                      fontSize: 22, // Ensure good size
-                    ),
+                          color: ThemeTokens.textPrimary,
+                          fontSize: 22, // Ensure good size
+                        ),
                     textAlign: TextAlign.left,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,

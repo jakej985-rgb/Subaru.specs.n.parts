@@ -65,9 +65,8 @@ class GarageView extends ConsumerWidget {
               separatorBuilder: (context, index) => const SizedBox(width: 12),
               itemBuilder: (context, index) {
                 final v = recents[index];
-                final isFav = ref
-                    .watch(favoriteVehiclesProvider.notifier)
-                    .isFavorite(v);
+                final isFav =
+                    ref.watch(favoriteVehiclesProvider.notifier).isFavorite(v);
                 return _GarageCard(vehicle: v, isFavorite: isFav);
               },
             ),
@@ -136,11 +135,11 @@ class _GarageCard extends ConsumerWidget {
                       children: [
                         Text(
                           vehicle.year.toString(),
-                          style: Theme.of(context).textTheme.titleMedium
-                              ?.copyWith(
-                                color: ThemeTokens.neonBlue,
-                                fontWeight: FontWeight.bold,
-                              ),
+                          style:
+                              Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    color: ThemeTokens.neonBlue,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                         ),
                         Text(
                           '${vehicle.make} ${vehicle.model}',
@@ -149,7 +148,9 @@ class _GarageCard extends ConsumerWidget {
                         ),
                         Text(
                           vehicle.trim ?? 'Base',
-                          style: Theme.of(context).textTheme.bodySmall
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodySmall
                               ?.copyWith(color: ThemeTokens.textMuted),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -199,7 +200,9 @@ class _GarageCard extends ConsumerWidget {
                         child: Center(
                           child: Text(
                             'SPECS',
-                            style: Theme.of(context).textTheme.labelSmall
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelSmall
                                 ?.copyWith(
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1,
@@ -218,7 +221,9 @@ class _GarageCard extends ConsumerWidget {
                         child: Center(
                           child: Text(
                             'PARTS',
-                            style: Theme.of(context).textTheme.labelSmall
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelSmall
                                 ?.copyWith(
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1,

@@ -31,20 +31,15 @@ class VehicleResult {
   VehicleResult({required this.vehicle, required this.specs});
 }
 
-final categoryYearResultsControllerProvider =
-    NotifierProvider.family<
-      CategoryYearResultsController,
-      YearResultsState,
-      (String, int)
-    >(CategoryYearResultsController.new);
+final categoryYearResultsControllerProvider = NotifierProvider.family<
+    CategoryYearResultsController,
+    YearResultsState,
+    (String, int)>(CategoryYearResultsController.new);
 
-class CategoryYearResultsController extends Notifier<YearResultsState> {
-  final (String, int) arg;
-
-  CategoryYearResultsController(this.arg);
-
+class CategoryYearResultsController
+    extends FamilyNotifier<YearResultsState, (String, int)> {
   @override
-  YearResultsState build() {
+  YearResultsState build((String, int) arg) {
     Future.microtask(() => loadData());
     return YearResultsState(isLoading: true);
   }

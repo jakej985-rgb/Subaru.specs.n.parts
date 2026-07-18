@@ -73,5 +73,5 @@ class RecentPartSearchesNotifier extends Notifier<List<String>> {
 
 final recentPartSearchesProvider =
     NotifierProvider<RecentPartSearchesNotifier, List<String>>(
-      RecentPartSearchesNotifier.new,
-    );
+  RecentPartSearchesNotifier.new,
+);

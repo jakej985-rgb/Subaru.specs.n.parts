@@ -92,8 +92,8 @@ class EngineFamilyPage extends ConsumerWidget {
                   Text(
                     'No engine data available',
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: Theme.of(context).hintColor,
-                    ),
+                          color: Theme.of(context).hintColor,
+                        ),
                   ),
                 ],
               ),
@@ -143,7 +143,9 @@ class EngineFamilyPage extends ConsumerWidget {
                             children: [
                               Text(
                                 'All Engines',
-                                style: Theme.of(context).textTheme.titleMedium
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
                                     ?.copyWith(
                                       fontWeight: FontWeight.bold,
                                       color: ThemeTokens.neonBlue,
@@ -152,7 +154,9 @@ class EngineFamilyPage extends ConsumerWidget {
                               const SizedBox(height: 2),
                               Text(
                                 'View all engine codes grouped by family',
-                                style: Theme.of(context).textTheme.bodySmall
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodySmall
                                     ?.copyWith(color: ThemeTokens.textMuted),
                               ),
                             ],
@@ -200,7 +204,9 @@ class EngineFamilyPage extends ConsumerWidget {
                           children: [
                             Text(
                               family,
-                              style: Theme.of(context).textTheme.headlineSmall
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headlineSmall
                                   ?.copyWith(
                                     fontWeight: FontWeight.bold,
                                     color: color,
@@ -209,7 +215,9 @@ class EngineFamilyPage extends ConsumerWidget {
                             const SizedBox(height: 4),
                             Text(
                               _getFamilyDisplayName(family),
-                              style: Theme.of(context).textTheme.bodyMedium
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
                                   ?.copyWith(color: ThemeTokens.textSecondary),
                             ),
                             const SizedBox(height: 8),

@@ -9,7 +9,6 @@ class AppTheme {
       scaffoldBackgroundColor: ThemeTokens.bg,
       primaryColor: ThemeTokens.neonBlue,
       canvasColor: ThemeTokens.bg,
-
       colorScheme: const ColorScheme.dark(
         primary: ThemeTokens.neonBlue,
         secondary: ThemeTokens.neonBlueDeep,
@@ -19,12 +18,10 @@ class AppTheme {
         onSurface: ThemeTokens.textPrimary,
         outline: ThemeTokens.divider,
       ),
-
       dividerTheme: const DividerThemeData(
         color: ThemeTokens.divider,
         thickness: 1,
       ),
-
       appBarTheme: const AppBarTheme(
         backgroundColor: ThemeTokens.surfaceRaised,
         foregroundColor: ThemeTokens.textPrimary,
@@ -32,7 +29,6 @@ class AppTheme {
         centerTitle: true,
         scrolledUnderElevation: 0,
       ),
-
       cardTheme: CardThemeData(
         color: ThemeTokens.surface,
         elevation: 0,
@@ -41,7 +37,6 @@ class AppTheme {
           side: const BorderSide(color: ThemeTokens.divider, width: 1),
         ),
       ),
-
       textTheme: const TextTheme(
         // Screen titles
         titleLarge: TextStyle(
@@ -70,12 +65,10 @@ class AppTheme {
           letterSpacing: 1.0,
         ),
       ),
-
       iconTheme: const IconThemeData(
         color: ThemeTokens.textSecondary,
         size: 24,
       ),
-
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: ThemeTokens.surfaceRaised,

@@ -27,10 +27,10 @@ void main() {
         'torque_specs.json',
       };
       final files = specsDir.listSync().whereType<File>().where(
-        (f) =>
-            f.path.endsWith('.json') &&
-            !excludeFiles.contains(p.basename(f.path)),
-      );
+            (f) =>
+                f.path.endsWith('.json') &&
+                !excludeFiles.contains(p.basename(f.path)),
+          );
 
       for (final file in files) {
         final content = file.readAsStringSync();

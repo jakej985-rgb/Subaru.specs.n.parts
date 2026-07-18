@@ -47,8 +47,8 @@ class _EngineVehicleResultsPageState
       // Search filter
       if (_searchQuery.isNotEmpty) {
         final query = _searchQuery.toLowerCase();
-        final searchTarget = '${v.year} ${v.model} ${v.trim ?? ''}'
-            .toLowerCase();
+        final searchTarget =
+            '${v.year} ${v.model} ${v.trim ?? ''}'.toLowerCase();
         if (!searchTarget.contains(query)) {
           return false;
         }
@@ -83,8 +83,8 @@ class _EngineVehicleResultsPageState
                   Text(
                     'No vehicles found with ${widget.motor}',
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: Theme.of(context).hintColor,
-                    ),
+                          color: Theme.of(context).hintColor,
+                        ),
                   ),
                 ],
               ),
@@ -124,7 +124,9 @@ class _EngineVehicleResultsPageState
                         ),
                         child: Text(
                           widget.motor,
-                          style: Theme.of(context).textTheme.headlineSmall
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall
                               ?.copyWith(
                                 fontWeight: FontWeight.bold,
                                 color: ThemeTokens.neonBlue,
@@ -139,12 +141,16 @@ class _EngineVehicleResultsPageState
                           children: [
                             Text(
                               '${widget.family} Series',
-                              style: Theme.of(context).textTheme.bodyMedium
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
                                   ?.copyWith(color: ThemeTokens.textSecondary),
                             ),
                             Text(
                               '${groupedByModel.length} compatible model${groupedByModel.length == 1 ? '' : 's'}',
-                              style: Theme.of(context).textTheme.bodySmall
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodySmall
                                   ?.copyWith(color: ThemeTokens.textMuted),
                             ),
                           ],
@@ -250,8 +256,8 @@ class _EngineVehicleResultsPageState
                   child: Text(
                     '${filteredVehicles.length} result${filteredVehicles.length == 1 ? '' : 's'}',
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: ThemeTokens.textMuted,
-                    ),
+                          color: ThemeTokens.textMuted,
+                        ),
                   ),
                 ),
               ),
@@ -263,7 +269,9 @@ class _EngineVehicleResultsPageState
                     ? Center(
                         child: Text(
                           'No matching vehicles',
-                          style: Theme.of(context).textTheme.bodyMedium
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium
                               ?.copyWith(color: ThemeTokens.textMuted),
                         ),
                       )
@@ -318,9 +326,9 @@ class _ModelGroupState extends State<_ModelGroup> {
           title: Text(
             widget.model,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
-              fontWeight: FontWeight.bold,
-              color: ThemeTokens.textPrimary,
-            ),
+                  fontWeight: FontWeight.bold,
+                  color: ThemeTokens.textPrimary,
+                ),
           ),
           subtitle: Text(
             '${widget.vehicles.length} variation${widget.vehicles.length == 1 ? '' : 's'}',
@@ -344,9 +352,8 @@ class _ModelGroupState extends State<_ModelGroup> {
           },
           initiallyExpanded: false,
           childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
-          children: widget.vehicles
-              .map((v) => _VehicleCard(vehicle: v))
-              .toList(),
+          children:
+              widget.vehicles.map((v) => _VehicleCard(vehicle: v)).toList(),
         ),
       ),
     );
@@ -390,24 +397,24 @@ class _VehicleCard extends ConsumerWidget {
                     Text(
                       '${vehicle.year} ${vehicle.model}',
                       style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                        fontWeight: FontWeight.w600,
-                      ),
+                            fontWeight: FontWeight.w600,
+                          ),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       vehicle.trim ?? 'Base',
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: ThemeTokens.textSecondary,
-                      ),
+                            color: ThemeTokens.textSecondary,
+                          ),
                     ),
                     if (vehicle.engineCode != null) ...[
                       const SizedBox(height: 4),
                       Text(
                         vehicle.engineCode!,
                         style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                          color: ThemeTokens.textMuted,
-                          fontFamily: 'monospace',
-                        ),
+                              color: ThemeTokens.textMuted,
+                              fontFamily: 'monospace',
+                            ),
                       ),
                     ],
                   ],

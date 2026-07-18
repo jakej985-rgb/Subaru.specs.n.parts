@@ -211,14 +211,13 @@ Spec _parseTallRow(Map<String, dynamic> map) {
   } else if (map.containsKey('value')) {
     body = map['value'].toString();
   } else {
-    body = map.values
-        .firstWhere((v) => v != null, orElse: () => 'n/a')
-        .toString();
+    body =
+        map.values.firstWhere((v) => v != null, orElse: () => 'n/a').toString();
   }
 
   final String title =
       map['function_key']?.toString().replaceAll('_', ' ').toUpperCase() ??
-      'UNKNOWN';
+          'UNKNOWN';
   final String sub = map['location_hint'] ?? '';
   final String displayTitle = sub.isNotEmpty ? '$title - $sub' : title;
   final tags = _buildTags(map);
