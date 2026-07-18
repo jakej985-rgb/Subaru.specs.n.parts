@@ -19,3 +19,7 @@
 ## 2026-01-10 - VB WRX Brake Caliper Confusion
 **Learning:** The 2022+ WRX (VB) uses 316mm front rotors on most trims (Base/Premium/Limited/GT), similar in size to the old "Subaru 4-Pot" brakes or even the 2004 STI Brembos (326mm is close), but the caliper is a **2-piston floating** design, not a 4-piston fixed caliper. Previous data conflated these.
 **Action:** Added specific specs for VB WRX Front/Rear Rotors and Calipers (`s_brake_front_rotor_wrx_vb`, etc.) and clarified the `s_brake_4pot_front` entry to explicitly exclude the 2022+ WRX to prevent user confusion.
+
+2025-05-15 - [2004 WRX STI Fluid Specs]
+Learning: fluids.json contained duplicated trims for 2004 STI ("WRX STI (US)" and "WRX STI Sedan (US)") with incorrect capacities (e.g., Oil 4.5qt vs 4.2qt).
+Action: Synced updates to both trim strings and added previously missing "Fuel" and "Intercooler Spray" capacities. Verified via Python script.
