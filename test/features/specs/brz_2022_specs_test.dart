@@ -2,9 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:specsnparts/data/db/app_db.dart';
 import 'package:specsnparts/data/seed/seed_runner.dart';
 import 'package:drift/native.dart';
-
 import 'dart:io';
-
 import 'package:path/path.dart' as p;
 
 void main() {
@@ -14,10 +12,12 @@ void main() {
 
   setUpAll(() async {
     // 1. Load Seed Data
-    final vehiclesJson = await File(p.join('assets', 'seed', 'vehicles.json'))
-        .readAsString();
-    final oilJson = await File(p.join('assets', 'seed', 'specs', 'oil.json'))
-        .readAsString();
+    final vehiclesJson = await File(
+      p.join('assets', 'seed', 'vehicles.json'),
+    ).readAsString();
+    final oilJson = await File(
+      p.join('assets', 'seed', 'specs', 'oil.json'),
+    ).readAsString();
     final transJson = await File(
       p.join('assets', 'seed', 'specs', 'transmission.json'),
     ).readAsString();

@@ -82,8 +82,9 @@ class _EngineVehicleResultsPageState
                   const SizedBox(height: 16),
                   Text(
                     'No vehicles found with ${widget.motor}',
-                    style: Theme.of(context).textTheme.titleMedium
-                        ?.copyWith(color: Theme.of(context).hintColor),
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      color: Theme.of(context).hintColor,
+                    ),
                   ),
                 ],
               ),
@@ -248,8 +249,9 @@ class _EngineVehicleResultsPageState
                   alignment: Alignment.centerLeft,
                   child: Text(
                     '${filteredVehicles.length} result${filteredVehicles.length == 1 ? '' : 's'}',
-                    style: Theme.of(context).textTheme.bodySmall
-                        ?.copyWith(color: ThemeTokens.textMuted),
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: ThemeTokens.textMuted,
+                    ),
                   ),
                 ),
               ),
@@ -322,8 +324,9 @@ class _ModelGroupState extends State<_ModelGroup> {
           ),
           subtitle: Text(
             '${widget.vehicles.length} variation${widget.vehicles.length == 1 ? '' : 's'}',
-            style: Theme.of(context).textTheme.bodySmall
-                ?.copyWith(color: ThemeTokens.textMuted),
+            style: Theme.of(
+              context,
+            ).textTheme.bodySmall?.copyWith(color: ThemeTokens.textMuted),
           ),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
@@ -386,14 +389,16 @@ class _VehicleCard extends ConsumerWidget {
                   children: [
                     Text(
                       '${vehicle.year} ${vehicle.model}',
-                      style: Theme.of(context).textTheme.titleSmall
-                          ?.copyWith(fontWeight: FontWeight.w600),
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                     const SizedBox(height: 4),
                     Text(
                       vehicle.trim ?? 'Base',
-                      style: Theme.of(context).textTheme.bodySmall
-                          ?.copyWith(color: ThemeTokens.textSecondary),
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: ThemeTokens.textSecondary,
+                      ),
                     ),
                     if (vehicle.engineCode != null) ...[
                       const SizedBox(height: 4),

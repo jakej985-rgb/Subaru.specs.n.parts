@@ -53,8 +53,9 @@ class EngineMotorPage extends ConsumerWidget {
                   const SizedBox(height: 16),
                   Text(
                     'No motors found in $family family',
-                    style: Theme.of(context).textTheme.titleMedium
-                        ?.copyWith(color: Theme.of(context).hintColor),
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      color: Theme.of(context).hintColor,
+                    ),
                   ),
                 ],
               ),

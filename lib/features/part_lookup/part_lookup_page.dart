@@ -407,9 +407,9 @@ class _PartLookupPageState extends ConsumerState<PartLookupPage> {
                                     children: [
                                       Text(
                                         part.name,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .titleMedium,
+                                        style: Theme.of(
+                                          context,
+                                        ).textTheme.titleMedium,
                                       ),
                                       const SizedBox(height: 4),
                                       Text(

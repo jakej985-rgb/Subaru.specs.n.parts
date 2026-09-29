@@ -40,7 +40,8 @@ void main() {
         category: 'Torque',
         title: 'Lug Nut Torque (Modern 5-Lug)',
         body: '89 ft-lbs',
-        tags: 'torque,wheels,lugs,wrx,sti', // Still missing year, should fail/be missing
+        tags:
+            'torque,wheels,lugs,wrx,sti', // Still missing year, should fail/be missing
         updatedAt: DateTime.now(),
       ),
     ]);

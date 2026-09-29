@@ -435,8 +435,9 @@ class _FlowCard extends StatelessWidget {
                     const SizedBox(height: 4),
                     Text(
                       subtitle,
-                      style: Theme.of(context).textTheme.bodyMedium
-                          ?.copyWith(color: ThemeTokens.textSecondary),
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: ThemeTokens.textSecondary,
+                      ),
                     ),
                     if (infoChips.isNotEmpty) ...[
                       const SizedBox(height: 8),
@@ -479,8 +480,9 @@ class _InfoChip extends StatelessWidget {
         const SizedBox(width: 4),
         Text(
           label,
-          style: Theme.of(context).textTheme.bodySmall
-              ?.copyWith(color: ThemeTokens.textMuted),
+          style: Theme.of(
+            context,
+          ).textTheme.bodySmall?.copyWith(color: ThemeTokens.textMuted),
         ),
       ],
     );

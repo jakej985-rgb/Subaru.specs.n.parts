@@ -1334,26 +1334,28 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   List<DatabaseSchemaEntity> get allSchemaEntities => [vehicles, specs, parts];
 }
 
-typedef $$VehiclesTableCreateCompanionBuilder = VehiclesCompanion Function({
-  required String id,
-  required int year,
-  Value<String> make,
-  required String model,
-  Value<String?> trim,
-  Value<String?> engineCode,
-  required DateTime updatedAt,
-  Value<int> rowid,
-});
-typedef $$VehiclesTableUpdateCompanionBuilder = VehiclesCompanion Function({
-  Value<String> id,
-  Value<int> year,
-  Value<String> make,
-  Value<String> model,
-  Value<String?> trim,
-  Value<String?> engineCode,
-  Value<DateTime> updatedAt,
-  Value<int> rowid,
-});
+typedef $$VehiclesTableCreateCompanionBuilder =
+    VehiclesCompanion Function({
+      required String id,
+      required int year,
+      Value<String> make,
+      required String model,
+      Value<String?> trim,
+      Value<String?> engineCode,
+      required DateTime updatedAt,
+      Value<int> rowid,
+    });
+typedef $$VehiclesTableUpdateCompanionBuilder =
+    VehiclesCompanion Function({
+      Value<String> id,
+      Value<int> year,
+      Value<String> make,
+      Value<String> model,
+      Value<String?> trim,
+      Value<String?> engineCode,
+      Value<DateTime> updatedAt,
+      Value<int> rowid,
+    });
 
 class $$VehiclesTableFilterComposer
     extends Composer<_$AppDatabase, $VehiclesTable> {
@@ -1566,24 +1568,26 @@ typedef $$VehiclesTableProcessedTableManager =
       Vehicle,
       PrefetchHooks Function()
     >;
-typedef $$SpecsTableCreateCompanionBuilder = SpecsCompanion Function({
-  required String id,
-  required String category,
-  required String title,
-  required String body,
-  required String tags,
-  required DateTime updatedAt,
-  Value<int> rowid,
-});
-typedef $$SpecsTableUpdateCompanionBuilder = SpecsCompanion Function({
-  Value<String> id,
-  Value<String> category,
-  Value<String> title,
-  Value<String> body,
-  Value<String> tags,
-  Value<DateTime> updatedAt,
-  Value<int> rowid,
-});
+typedef $$SpecsTableCreateCompanionBuilder =
+    SpecsCompanion Function({
+      required String id,
+      required String category,
+      required String title,
+      required String body,
+      required String tags,
+      required DateTime updatedAt,
+      Value<int> rowid,
+    });
+typedef $$SpecsTableUpdateCompanionBuilder =
+    SpecsCompanion Function({
+      Value<String> id,
+      Value<String> category,
+      Value<String> title,
+      Value<String> body,
+      Value<String> tags,
+      Value<DateTime> updatedAt,
+      Value<int> rowid,
+    });
 
 class $$SpecsTableFilterComposer extends Composer<_$AppDatabase, $SpecsTable> {
   $$SpecsTableFilterComposer({
@@ -1776,26 +1780,28 @@ typedef $$SpecsTableProcessedTableManager =
       Spec,
       PrefetchHooks Function()
     >;
-typedef $$PartsTableCreateCompanionBuilder = PartsCompanion Function({
-  required String id,
-  required String name,
-  required String oemNumber,
-  required String aftermarketNumbers,
-  required String fits,
-  Value<String?> notes,
-  required DateTime updatedAt,
-  Value<int> rowid,
-});
-typedef $$PartsTableUpdateCompanionBuilder = PartsCompanion Function({
-  Value<String> id,
-  Value<String> name,
-  Value<String> oemNumber,
-  Value<String> aftermarketNumbers,
-  Value<String> fits,
-  Value<String?> notes,
-  Value<DateTime> updatedAt,
-  Value<int> rowid,
-});
+typedef $$PartsTableCreateCompanionBuilder =
+    PartsCompanion Function({
+      required String id,
+      required String name,
+      required String oemNumber,
+      required String aftermarketNumbers,
+      required String fits,
+      Value<String?> notes,
+      required DateTime updatedAt,
+      Value<int> rowid,
+    });
+typedef $$PartsTableUpdateCompanionBuilder =
+    PartsCompanion Function({
+      Value<String> id,
+      Value<String> name,
+      Value<String> oemNumber,
+      Value<String> aftermarketNumbers,
+      Value<String> fits,
+      Value<String?> notes,
+      Value<DateTime> updatedAt,
+      Value<int> rowid,
+    });
 
 class $$PartsTableFilterComposer extends Composer<_$AppDatabase, $PartsTable> {
   $$PartsTableFilterComposer({

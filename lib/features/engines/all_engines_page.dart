@@ -87,8 +87,9 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
                 const SizedBox(height: 16),
                 Text(
                   'No engine data available',
-                  style: Theme.of(context).textTheme.titleMedium
-                      ?.copyWith(color: Theme.of(context).hintColor),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    color: Theme.of(context).hintColor,
+                  ),
                 ),
               ],
             ),
@@ -143,8 +144,9 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
                     const SizedBox(width: 8),
                     Text(
                       _getFamilyName(item.family),
-                      style: Theme.of(context).textTheme.bodySmall
-                          ?.copyWith(color: ThemeTokens.textMuted),
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                        color: ThemeTokens.textMuted,
+                      ),
                     ),
                     const Spacer(),
                     MarketBadge.fromTrims(item.trims, compact: true),
@@ -281,8 +283,9 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
             const SizedBox(height: 16),
             Text(
               'No vehicles found with $_selectedEngine',
-              style: Theme.of(context).textTheme.titleMedium
-                  ?.copyWith(color: Theme.of(context).hintColor),
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                color: Theme.of(context).hintColor,
+              ),
             ),
           ],
         ),
@@ -323,8 +326,9 @@ class _AllEnginesPageState extends ConsumerState<AllEnginesPage> {
                 Expanded(
                   child: Text(
                     '${_vehicles.length} compatible vehicle${_vehicles.length == 1 ? '' : 's'}',
-                    style: Theme.of(context).textTheme.bodyMedium
-                        ?.copyWith(color: ThemeTokens.textSecondary),
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: ThemeTokens.textSecondary,
+                    ),
                   ),
                 ),
                 MarketBadge.fromTrims(allTrims),

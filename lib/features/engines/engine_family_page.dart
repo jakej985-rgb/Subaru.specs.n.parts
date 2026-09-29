@@ -91,8 +91,9 @@ class EngineFamilyPage extends ConsumerWidget {
                   const SizedBox(height: 16),
                   Text(
                     'No engine data available',
-                    style: Theme.of(context).textTheme.titleMedium
-                        ?.copyWith(color: Theme.of(context).hintColor),
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      color: Theme.of(context).hintColor,
+                    ),
                   ),
                 ],
               ),
@@ -264,8 +265,9 @@ class _InfoChip extends StatelessWidget {
         const SizedBox(width: 4),
         Text(
           label,
-          style: Theme.of(context).textTheme.bodySmall
-              ?.copyWith(color: ThemeTokens.textMuted),
+          style: Theme.of(
+            context,
+          ).textTheme.bodySmall?.copyWith(color: ThemeTokens.textMuted),
         ),
       ],
     );
