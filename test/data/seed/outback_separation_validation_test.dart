@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:path/path.dart' as p;
 
@@ -57,8 +58,7 @@ void main() {
       expect(
         legacyOutbacks,
         isEmpty,
-        reason:
-            'Legacy should not have Outback trims in 2000 (moved to separate model)',
+        reason: 'Legacy should not have Outback trims in 2000 (moved to separate model)',
       );
     });
 

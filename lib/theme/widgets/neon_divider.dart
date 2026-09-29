@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../tokens.dart';
 
 class NeonDivider extends StatelessWidget {

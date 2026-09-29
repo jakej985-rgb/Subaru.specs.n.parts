@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../tokens.dart';
 import 'carbon_surface.dart';
 
@@ -45,9 +46,8 @@ class TrimHeaderCard extends StatelessWidget {
           subtitle: subtitle != null
               ? Text(
                   subtitle!,
-                  style: Theme.of(
-                    context,
-                  ).textTheme.bodySmall?.copyWith(color: ThemeTokens.neonSoft),
+                  style: Theme.of(context).textTheme.bodySmall
+                      ?.copyWith(color: ThemeTokens.neonSoft),
                 )
               : null,
           trailing: trailing,
@@ -89,9 +89,8 @@ class TrimHeaderCard extends StatelessWidget {
                   const SizedBox(height: 2),
                   Text(
                     subtitle!,
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: ThemeTokens.neonSoft,
-                    ),
+                    style: Theme.of(context).textTheme.bodySmall
+                        ?.copyWith(color: ThemeTokens.neonSoft),
                   ),
                 ],
               ],

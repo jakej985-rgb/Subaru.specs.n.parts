@@ -91,8 +91,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
     Navigator.pop(context);
     if (await _confirmAction(
       title: 'Nuclear Reset',
-      content:
-          'This will wipe ALL user data (favorites, recents, history). This cannot be undone.',
+      content: 'This will wipe ALL user data (favorites, recents, history). This cannot be undone.',
       isDestructive: true,
     )) {
       await ref.read(recentVehiclesProvider.notifier).clear();

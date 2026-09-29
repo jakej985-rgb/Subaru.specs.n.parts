@@ -3,6 +3,7 @@
 
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:logging/logging.dart';
 
 final _log = Logger('SyncFitment');

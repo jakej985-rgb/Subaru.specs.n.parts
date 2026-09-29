@@ -399,9 +399,9 @@ class _SpecListPageState extends ConsumerState<SpecListPage> {
                                     const SizedBox(height: 16),
                                     Text(
                                       spec.body,
-                                      style: Theme.of(
-                                        context,
-                                      ).textTheme.bodyMedium,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyMedium,
                                     ),
                                     const SizedBox(height: 16),
                                     Text(

@@ -48,8 +48,7 @@ class BrowseHubPage extends StatelessWidget {
             title: item.$1,
             customIcon: item.$2,
             onTap: item.$3,
-            height:
-                140, // Slightly taller to accommodate description if we added it, but HomeMenuCard is simple.
+            height: 140, // Slightly taller to accommodate description if we added it, but HomeMenuCard is simple.
             // Actually HomeMenuCard doesn't have a description field.
             // I'll keep it consistent with HomePage for now.
           );

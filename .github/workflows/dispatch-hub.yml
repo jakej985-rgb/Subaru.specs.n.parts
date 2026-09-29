@@ -1,0 +1,54 @@
+name: Dispatch M3tal-Hub Release
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'lib/**'
+      - 'web/**'
+      - 'assets/**'
+      - 'pubspec.yaml'
+      - 'pubspec.lock'
+      - 'scripts/**'
+      - '.github/workflows/dispatch-hub.yml'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag or release label (defaults to commit SHA)'
+        required: false
+        default: ''
+
+jobs:
+  dispatch:
+    name: Notify M3tal-Hub of Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate Dispatch Token
+        id: check-token
+        run: |
+          if [ -z "${{ secrets.M3TAL_HUB_TOKEN }}" ]; then
+            echo "::warning ::M3TAL_HUB_TOKEN secret is not configured in repository settings. Skipping automatic dispatch to M3tal-Hub."
+            echo "configured=false" >> $GITHUB_OUTPUT
+          else
+            echo "configured=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Dispatch Release Event to M3tal-Hub
+        if: steps.check-token.outputs.configured == 'true'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.M3TAL_HUB_TOKEN }}
+          repository: jakej985-rgb/M3tal-Hub
+          event-type: app-release
+          client-payload: >-
+            {
+              "app_id": "subaru-specs-n-parts",
+              "repo": "Subaru.specs.n.parts",
+              "ref": "${{ github.sha }}",
+              "version": "${{ github.event.inputs.version || github.ref_name }}"
+            }
+
+      - name: Confirm Dispatch
+        if: steps.check-token.outputs.configured == 'true'
+        run: |
+          echo "Successfully dispatched app-release event for subaru-specs-n-parts to jakej985-rgb/M3tal-Hub."

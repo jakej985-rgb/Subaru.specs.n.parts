@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:drift/native.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -87,8 +88,7 @@ void main() {
 
     // 3. User taps 2021
     await tester.tap(find.text('2021'));
-    await tester
-        .pump(); // setState: _selectedYear = 2021, start async _loadModels(2021)
+    await tester.pump(); // setState: _selectedYear = 2021, start async _loadModels(2021)
 
     // Capture the completer for 2021
     final completer2021 = fakeDb.vehiclesDao._modelsCompleter!;
