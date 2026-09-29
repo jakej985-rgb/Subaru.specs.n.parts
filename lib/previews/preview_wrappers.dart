@@ -324,13 +324,6 @@ Widget subaruPreviewWrapper(Widget child) {
   );
 }
 
-PreviewThemeData subaruPreviewTheme() {
-  return PreviewThemeData(
-    materialLight: AppTheme.darkTheme,
-    materialDark: AppTheme.darkTheme,
-  );
-}
-
 // -----------------------------------------------------------------------------
 // 3. Custom Annotation
 // -----------------------------------------------------------------------------
@@ -342,5 +335,5 @@ final class SubaruPreview extends Preview {
     super.size,
     super.textScaleFactor,
     super.brightness,
-  }) : super(wrapper: subaruPreviewWrapper, theme: subaruPreviewTheme);
+  }) : super(wrapper: subaruPreviewWrapper);
 }
